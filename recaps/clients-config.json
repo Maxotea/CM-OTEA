@@ -1,0 +1,99 @@
+{
+  "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement.",
+  "comptes": [
+    {
+      "blog_id": 5733269,
+      "nom": "OTEA PRODUCTION",
+      "recap_client": false,
+      "note": "Compte de l'agence (Maxime) — couvert par le récap interne, pas de mail client."
+    },
+    {
+      "blog_id": 5733306,
+      "nom": "Gossip Beauty Center by Sarah",
+      "recap_client": true,
+      "email": null,
+      "email_cc": null,
+      "email_confirme": false,
+      "ton": "vouvoiement chaleureux et élégant",
+      "note": "Adresse de Sarah à demander. community.aureal@gmail.com trouvée dans Gmail = collaboratrice CM (répartition des missions), PAS la cliente — à confirmer par Maxime avant tout usage.",
+      "canal": "les deux",
+      "whatsapp": null,
+      "whatsapp_confirme": false
+    },
+    {
+      "blog_id": 6191921,
+      "nom": "Le Loft",
+      "recap_client": true,
+      "email": null,
+      "email_cc": null,
+      "email_confirme": false,
+      "ton": "tutoiement énergique, direct",
+      "note": "Aucune adresse trouvée dans Gmail — à demander.",
+      "canal": "les deux",
+      "whatsapp": null,
+      "whatsapp_confirme": false
+    },
+    {
+      "blog_id": 6563137,
+      "nom": "J Lawson Golf",
+      "recap_client": true,
+      "email": null,
+      "email_cc": null,
+      "email_confirme": false,
+      "email_suggere": "jlawsongolfpro@gmail.com",
+      "ton": "vouvoiement pro, passionné golf, phrases courtes (John est anglophone)",
+      "note": "jlawsongolfpro@gmail.com = John en direct (échange logo 15/07/2026) — haute confiance, en attente de confirmation Maxime.",
+      "canal": "les deux",
+      "whatsapp": null,
+      "whatsapp_confirme": false
+    },
+    {
+      "blog_id": 5733302,
+      "nom": "La Galerie Immobilière",
+      "recap_client": true,
+      "email": null,
+      "email_cc": null,
+      "email_confirme": false,
+      "email_suggere": "sabrina.khalfa@lagalerieimmobiliere.com",
+      "email_cc_suggere": "remi.lerer@lagalerieimmobiliere.com",
+      "ton": "vouvoiement élégant",
+      "note": "Sabrina Khalfa (fondatrice) + Rémi Lerer (directeur associé) trouvés dans Gmail — en attente de confirmation Maxime.",
+      "canal": "les deux",
+      "whatsapp": null,
+      "whatsapp_confirme": false,
+      "whatsapp_suggere_cc": "33645684966",
+      "note_whatsapp": "+33 6 45 68 49 66 = Rémi Lerer (signature mail) — c'est le directeur associé, PAS Sabrina. À confirmer."
+    },
+    {
+      "blog_id": 6572293,
+      "nom": "Pierre Huiban",
+      "recap_client": true,
+      "email": null,
+      "email_cc": null,
+      "email_confirme": false,
+      "ton": "tutoiement direct, énergie brute, LFG",
+      "note": "NE PAS utiliser pierre.huiban@lexisnexisrisk.com (adresse de son employeur) — demander son adresse perso.",
+      "canal": "les deux",
+      "whatsapp": null,
+      "whatsapp_confirme": false
+    },
+    {
+      "blog_id": 4728418,
+      "nom": "Otea Filmakers",
+      "recap_client": false,
+      "note": "Marque vitrine interne — pas de CM géré."
+    },
+    {
+      "blog_id": 6625190,
+      "nom": "Confshine Game",
+      "recap_client": false,
+      "note": "Détecté via list_brands le 29/07/2026 — pas de contenu CM géré. À configurer si ça devient un client."
+    },
+    {
+      "blog_id": 6636615,
+      "nom": "(compte sans nom)",
+      "recap_client": false,
+      "note": "Détecté via list_brands le 29/07/2026 — à identifier."
+    }
+  ]
+}

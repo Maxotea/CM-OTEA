@@ -33,5 +33,15 @@
 - Non applicable : accompagnement à part (pas un client facturé au même titre que les 6 comptes CM classiques). Pas de calcul ROI à produire pour ce compte.
 
 ## Banque photos
-- Emplacement / état : catalogue dans `references/clients/banque-photos-pierre-huiban.md`, classé générique / par sponsor (Kairyn, GX Society, Split Nutrition). Vide pour l'instant, à remplir au fur et à mesure des prises de vue.
-- Preset IA (Higgsfield) : élément de référence à définir si besoin de visuels générés (dernier recours uniquement)
+- Emplacement / état : catalogue dans `references/clients/banque-photos-pierre-huiban.md`, classé générique / par sponsor (Kairyn, GX Society, Split Nutrition). 81 vraies photos dans `medias/pierre-huiban/` (fichiers `Sans titre-NN.jpg`).
+- Preset IA (Higgsfield) : aucun — on utilise les VRAIES photos (personal branding, du vrai obligatoire).
+
+## Branchement des visuels
+- **STATUT : ✅ (23/07/2026)** — 11/11 posts feed avec vraie photo, 0 sans média, **Instagram uniquement**, horaires d'origine conservés (00:30 / 06:00). Vérifié.
+- Méthode : vraies photos locales redimensionnées 1440px → hébergées via [[hebergement-photos-reelles-metricool]] (media_upload → PUT → media_confirm → URL cloudfront) → `schedule_post` `media01`=URL, `instagram:true`, `facebook:false`, `linkedin:false`. Bug +7h corrigé via `bulk_update_post_times`.
+- Mapping photo↔post : 25/07 compétition→85 ; 29/07 setup→51 (b-roll chaussures) ; 01/08 7 incontournables→47 (b-roll corde, neutre) ; 05/08 mental→76 (néon SE DÉPASSER) ; 08/08 5 phrases→62 (rameur) ; 12/08 coach→75 (Pierre+Quentin) ; 15/08 3 raisons coach→53 ; 19/08 rentrée→13 ; 22/08 objectifs→73 (console stats) ; 26/08 communauté→68 ; 29/08 automne→16 (box jump).
+- ⚠️ **À AMÉLIORER** : (1) les posts « Swipez → » sont des **carrousels** — je n'ai attaché qu'**UNE photo de couverture** ; à compléter avec les slides quand elles seront designées. (2) Le post « 7 incontournables » mentionne **Kairyn + GX Society** mais **aucune photo sponsor n'existe** → j'ai mis une photo neutre (corde, sans logo) ; demander à Pierre de vraies photos des produits Kairyn (IGNITE) et du matériel GX Society pour un vrai post sponsorisé.
+
+## Stories quotidiennes août 2026 (28/07/2026)
+- Banque 7 cartes typographiques 9:16 `medias/pierre-huiban/ia-stories/` — DA fiche (Pitch Black #0A0A0A + Rouge #DC2626, uppercase condensé) : lun LUNDI-ON-REPART-LFG, mar PAS-D'EXCUSES, mer LA-DONNÉE-PARLE, jeu ÇA-BRÛLE, ven ENCORE-UNE-SÉANCE, sam SAMEDI-VOLUME, dim RÉCUP. Cartes design (pas de fausses photos) — conforme à la règle « vraies photos only » pour le photographique.
+- **31 stories planifiées ✅** 01→31/08 à **06:00** (son créneau), Instagram uniquement, brouillon, via `bulk_schedule_stories`.
