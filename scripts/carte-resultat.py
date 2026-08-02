@@ -96,7 +96,7 @@ def ajuster(dessin, texte, tracking, taille_max, taille_min, largeur_max):
 
 
 def composer(sortie: Path, surtitre: str, nom: str, score: str, mention: str,
-             detail: str, note: str) -> Path:
+             detail: str, note: str, motif: bool = True) -> Path:
     image = Image.new("RGB", (LARGEUR, HAUTEUR), MARINE)
     dessin = ImageDraw.Draw(image)
 
@@ -107,6 +107,35 @@ def composer(sortie: Path, surtitre: str, nom: str, score: str, mention: str,
             [(0, y), (LARGEUR, y)],
             fill=tuple(int(MARINE[i] + (MARINE_BAS[i] - MARINE[i]) * t) for i in range(3)),
         )
+
+    # Motif de fond : arcs concentriques évoquant un green et sa cible, très
+    # basse opacité. Donne de la profondeur sans emprunter d'image à personne.
+    if motif:
+        calque = Image.new("RGBA", (LARGEUR, HAUTEUR), (0, 0, 0, 0))
+        trace = ImageDraw.Draw(calque)
+        cx, cy = LARGEUR / 2, 615
+        for rayon, epaisseur, alpha in ((470, 3, 26), (370, 2, 20), (275, 2, 15)):
+            trace.ellipse(
+                [cx - rayon, cy - rayon, cx + rayon, cy + rayon],
+                outline=VERT + (alpha,), width=epaisseur,
+            )
+        trace.ellipse([cx - 180, cy - 180, cx + 180, cy + 180], fill=VERT + (12,))
+        image.alpha_composite(calque) if image.mode == "RGBA" else image.paste(
+            Image.alpha_composite(image.convert("RGBA"), calque).convert("RGB"), (0, 0)
+        )
+        dessin = ImageDraw.Draw(image)
+
+        # Vignettage : concentre le regard sur le bloc central.
+        voile = Image.new("RGBA", (LARGEUR, HAUTEUR), (0, 0, 0, 0))
+        vd = ImageDraw.Draw(voile)
+        profondeur = 260
+        for i in range(profondeur):
+            # Le plus sombre au bord, éteint vers le centre — sinon le voile
+            # dessine un cadre net à sa limite intérieure.
+            a = int(70 * ((profondeur - i) / profondeur) ** 2)
+            vd.rectangle([i, i, LARGEUR - i, HAUTEUR - i], outline=(4, 9, 16, a))
+        image.paste(Image.alpha_composite(image.convert("RGBA"), voile).convert("RGB"), (0, 0))
+        dessin = ImageDraw.Draw(image)
 
     marge = 90
     utile = LARGEUR - 2 * marge
@@ -171,11 +200,12 @@ def main() -> int:
     ap.add_argument("--mention", default="")
     ap.add_argument("--detail", default="")
     ap.add_argument("--note", default="")
+    ap.add_argument("--sans-motif", action="store_true", help="fond uni, sans les arcs de green")
     args = ap.parse_args()
 
     chemin = composer(args.sortie, args.surtitre.upper(), args.nom.upper(),
                       args.score, args.mention.upper(), args.detail,
-                      args.note.upper())
+                      args.note.upper(), motif=not args.sans_motif)
     print(f"carte résultat : {chemin}")
     return 0
 
