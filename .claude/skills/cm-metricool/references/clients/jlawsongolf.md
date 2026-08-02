@@ -30,7 +30,17 @@
 - Post du **03/08 12:00** (ancien id 352532618 → nouveau **357057266**, via `bulk_replace_posts`). Brouillon vérifié, IG+FB, heure Paris exacte.
 - Résultat réel : **Shiho Kuwaki** bat Esther Henseleit en playoff (mort subite sur le 18, victoire au 2ᵉ passage) à Royal Lytham, les deux à -5 après 72 trous. Premier majeur et première victoire LPGA Tour.
 - ⚠️ **Le WITB a été abandonné, volontairement.** Le calendrier prévoyait un post « dans son sac ». Aucune source fiable ne donne son sac club par club : seul un agrégateur (golfreviewsguide) liste putter Odyssey White Hot OG 2-Ball + balle Bridgestone Tour B X, page inaccessible en vérification directe et compilée *pendant* le tournoi. Règle « jamais de matériel inventé » → post recentré sur le playoff et la leçon de fitting (régularité du club sous pression). **Ne pas réintroduire de WITB sans source constructeur ou média équipement.**
-- Visuel : IA Higgsfield (scène de links, ajoncs, putt sur le 18 — aucune personne, le post parle d'une joueuse réelle). La banque réelle ne couvre pas l'extérieur parcours et `medias/` est absent de la machine.
+- **Visuel : carte résultat typographique** (choix de Maxime, 02/08). Aucune photo de Kuwaki n'est utilisable : toutes les images de l'épreuve sont des photos d'agence (Getty — Luke Walker, Warren Little), « editorial use only », et il n'existe aucune photo d'elle sous licence libre sur Wikimedia Commons. La règle « jamais de photo d'agence sur un compte commercial » s'applique.
+- Carte régénérable à l'identique :
+  ```
+  python3 scripts/carte-resultat.py carte.jpg \
+    --surtitre "AIG WOMEN'S OPEN 2026 · ROYAL LYTHAM & ST ANNES" \
+    --nom "SHIHO KUWAKI" --score "-5" --mention "VICTOIRE EN PLAYOFF" \
+    --detail "Bat Esther Henseleit au 2e trou de mort subite, après 72 trous à égalité" \
+    --note "PREMIER MAJEUR"
+  ```
+- ⚠️ **La carte a dû être attachée à la main.** L'environnement de la session n'a pas d'accès sortant vers les hôtes d'hébergement (Higgsfield, CloudFront, static.metricool) → impossible de produire l'URL publique qu'exige `media_url`. Le brouillon porte en attendant un visuel IA de links. Depuis une machine avec accès réseau normal, le pipeline `media_upload → PUT → media_confirm → bulk_replace_posts` fonctionne comme d'habitude.
+- Modèle réutilisable pour tout post « résultat de tournoi » : `scripts/carte-resultat.py` (4:5, DA marine/vert/ambre).
 
 ## Stories quotidiennes août 2026 (28/07/2026)
 - Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Vérifiées.
