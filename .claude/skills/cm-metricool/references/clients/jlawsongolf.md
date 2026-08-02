@@ -10,6 +10,10 @@
   - Ex. prestation 500 €/mois → ~3 fittings/mois · 800 €/mois → 5 fittings/mois
 - Typologie : vente unitaire à forte valeur, clientèle qui revient à chaque changement de matériel (LTV : re-fitting tous les 2-3 ans + bouche-à-oreille club)
 
+## Banque photos réelle — 107 fichiers (recomptés le 30/07/2026)
+- Le dossier `medias/jlawson-golf/` contient **107 photos** (69 paysage, 38 verticales), pas 42 : la note ci-dessous date d'un comptage partiel. Statut `en-reserve` dans `recaps/medias-index.json` → vivier où la tâche du lundi puise pour remplacer progressivement les visuels IA (max 4/semaine).
+- Les 38 verticales comblent le « trou » signalé plus bas (verticales 9:16 pour stories) : les stories IA du compte peuvent passer en vraies photos.
+
 ## jlawsongolf (banque validée juillet 2026 — 42 photos)
 - Shooting pro HOMESANFAUTE (mai 2026) : portraits fitteur (bio/coulisses), sessions fitting client (P1/P5), détails clubs/shafts (P1/P2), ambiance studio+écrans (P3/P4)
 - Photos terrain IMG_14xx-16xx : atelier gripping/loft-lie (P3 reels bruts), mur de shafts (P1/P2), clubs finis (P5), écrans de mesure/data (P1/P5)

@@ -2,6 +2,8 @@
 
 ## Identité
 - blogId Metricool : [via list_brands_direct]
+- WhatsApp de validation : [+33XXXXXXXXX — canal principal des comptes rendus hebdo]
+- Email de validation : [prenom@domaine.fr — doublon systématique]
 - Réseaux connectés : [instagram / facebook / tiktok / linkedin / youtube]
 - Secteur / typologie : [ex. barbier, immobilier, B2B…]
 - Ville / zone de chalandise :

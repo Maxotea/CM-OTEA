@@ -5,7 +5,14 @@
       "blog_id": 5733269,
       "nom": "OTEA PRODUCTION",
       "recap_client": false,
-      "note": "Compte de l'agence (Maxime) — couvert par le récap interne, pas de mail client."
+      "note": "Compte de l'agence (Maxime) — couvert par le récap interne, pas de mail client.",
+      "dossier_medias": "medias/otea-production",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 5733306,
@@ -18,7 +25,14 @@
       "note": "Adresse de Sarah à demander. community.aureal@gmail.com trouvée dans Gmail = collaboratrice CM (répartition des missions), PAS la cliente — à confirmer par Maxime avant tout usage.",
       "canal": "les deux",
       "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp_confirme": false,
+      "dossier_medias": "medias/gossip-beauty-center",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 6191921,
@@ -31,7 +45,14 @@
       "note": "Aucune adresse trouvée dans Gmail — à demander.",
       "canal": "les deux",
       "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp_confirme": false,
+      "dossier_medias": "medias/le-loft",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 6563137,
@@ -45,7 +66,14 @@
       "note": "jlawsongolfpro@gmail.com = John en direct (échange logo 15/07/2026) — haute confiance, en attente de confirmation Maxime.",
       "canal": "les deux",
       "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp_confirme": false,
+      "dossier_medias": "medias/jlawson-golf",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 5733302,
@@ -62,7 +90,15 @@
       "whatsapp": null,
       "whatsapp_confirme": false,
       "whatsapp_suggere_cc": "33645684966",
-      "note_whatsapp": "+33 6 45 68 49 66 = Rémi Lerer (signature mail) — c'est le directeur associé, PAS Sabrina. À confirmer."
+      "note_whatsapp": "+33 6 45 68 49 66 = Rémi Lerer (signature mail) — c'est le directeur associé, PAS Sabrina. À confirmer.",
+      "dossier_medias": "medias/la-galerie-immobiliere",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)",
+        "note": "Photos de biens réels = posts feed uniquement, jamais présentées comme un bien à vendre si générique."
+      }
     },
     {
       "blog_id": 6572293,
@@ -75,7 +111,15 @@
       "note": "NE PAS utiliser pierre.huiban@lexisnexisrisk.com (adresse de son employeur) — demander son adresse perso.",
       "canal": "les deux",
       "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp_confirme": false,
+      "dossier_medias": "medias/pierre-huiban",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)",
+        "note": "Personal branding : vraies photos obligatoires, JAMAIS d'IA sur son visage."
+      }
     },
     {
       "blog_id": 4728418,

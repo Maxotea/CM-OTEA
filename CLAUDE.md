@@ -48,6 +48,24 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 - **`reel-script` / `reel-lint`** — l'écriture et la notation des vidéos courtes,
   appelées depuis le statut `Rédaction` / `Tournage`.
 
+## Règles permanentes du CM (non négociables)
+
+Ces deux règles priment sur toute autre considération d'exécution. Elles
+vivaient dans les mémoires Claude, hors du repo — elles sont désormais
+versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
+
+1. **Tout contenu créé dans Metricool reste en BROUILLON** (`draft:true`,
+   jamais `autoPublish`). Maxime valide lui-même dans l'interface. Toute code
+   action qui crée du contenu doit vérifier le `draft` après création.
+   → `.claude/memories/autonomie-decisions-cm.md`
+2. **Aucune image ni vidéo générée par IA dans les stories.** On part des
+   vraies photos de `medias/`, animées en i2v avec un prompt verrouillé sur
+   l'identité, et **on contrôle la dernière frame** contre la photo source
+   avant de brancher quoi que ce soit.
+   → `.claude/memories/stories-vraies-photos-sans-ia.md`
+
+Index complet des mémoires : `.claude/memories/MEMORY.md`.
+
 ## Règles transverses
 
 1. **Ne jamais inventer une valeur de statut, de pilier ou de catégorie.** Les
