@@ -26,6 +26,12 @@
 - Attachement : **Instagram + Facebook**, 18h (posts « résultat tournoi » du dimanche à 12h). ⚠️ Metricool refuse les dates passées → un post daté d'hier ne peut pas être branché.
 - **STATUT BRANCHEMENT : ✅ (22/07/2026)** — 38/39 posts avec média (le seul sans média = 21/07, déjà passé donc non branchable). ~31 posts branchés en rotation + 6 qui avaient déjà de vraies photos (shooting HOMESANFAUTE, non touchés). Mapping : fer→fers/lie/dispersion ; mur-shafts→shaft/Ryan Fox/Toussaint ; balles→balle ; grip→regripping/rentrée sac/checklist ; driver→driver/distance ; wedges→wedges ; launch-monitor→Gears/technologie/FedEx/bilan ; studio→journée studio/index/indoor/prépa/Open France ; parcours→tournois (circuit euro, Solheim, BMW PGA, Albatros).
 
+## Post résultat AIG Women's Open — complété le 02/08/2026
+- Post du **03/08 12:00** (ancien id 352532618 → nouveau **357057266**, via `bulk_replace_posts`). Brouillon vérifié, IG+FB, heure Paris exacte.
+- Résultat réel : **Shiho Kuwaki** bat Esther Henseleit en playoff (mort subite sur le 18, victoire au 2ᵉ passage) à Royal Lytham, les deux à -5 après 72 trous. Premier majeur et première victoire LPGA Tour.
+- ⚠️ **Le WITB a été abandonné, volontairement.** Le calendrier prévoyait un post « dans son sac ». Aucune source fiable ne donne son sac club par club : seul un agrégateur (golfreviewsguide) liste putter Odyssey White Hot OG 2-Ball + balle Bridgestone Tour B X, page inaccessible en vérification directe et compilée *pendant* le tournoi. Règle « jamais de matériel inventé » → post recentré sur le playoff et la leçon de fitting (régularité du club sous pression). **Ne pas réintroduire de WITB sans source constructeur ou média équipement.**
+- Visuel : IA Higgsfield (scène de links, ajoncs, putt sur le 18 — aucune personne, le post parle d'une joueuse réelle). La banque réelle ne couvre pas l'extérieur parcours et `medias/` est absent de la machine.
+
 ## Stories quotidiennes août 2026 (28/07/2026)
 - Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Vérifiées.
 - **31 stories planifiées ✅** 01→31/08 à 10:00, IG+FB, brouillon, via `bulk_schedule_stories`.

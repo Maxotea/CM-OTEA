@@ -8,7 +8,7 @@ Dézipper ce paquet à la racine, puis : `git mv claude .claude && git commit -m
 ## État Metricool (userId 3689627, 9 brands)
 | Compte | blogId | Couvert jusqu'au | Notes |
 |---|---|---|---|
-| jlawsongolf | 6563137 | 23/10 | Posts Open Ryan Fox publiés ; placeholder [VAINQUEURE] AIG Women's Open au 03/08 12:00 À COMPLÉTER dimanche 02/08 soir (résultat réel à vérifier sur le web) |
+| jlawsongolf | 6563137 | 23/10 | Posts Open Ryan Fox publiés ; ✅ placeholder [VAINQUEURE] AIG Women's Open COMPLÉTÉ le 02/08 (Shiho Kuwaki, post 357057266, brouillon) — WITB abandonné faute de source fiable, voir la fiche client |
 | LE LOFT | 6191921 | 23/10 | Nettoyé (posts Hyrox migrés vers pierrehuiban89 en juillet) |
 | Gossip Beauty Center | 5733306 | 23/10 | |
 | La Galerie Immobilière | 5733302 | 23/10 | |
