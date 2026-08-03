@@ -31,10 +31,39 @@
 ## ⚠️ Données factuelles — RIEN de confirmé au 03/08/2026
 Dates d'édition, ville/lieu, fréquence (mensuelle pressentie), jauge (30 vs 80 à trancher), URL d'inscription, handle définitif : **tout est à confirmer**. Les valeurs des gabarits du kit (12 sept., Tête d'Or, 45.7797°N, Camille Roussel, 73 %…) sont **fictives — ne jamais les publier**. Règle : placeholder `[À CONFIRMER : …]` + signalement, jamais d'invention.
 
-## Calendrier — Phase teasing (03/08/2026)
-- **6 posts teasing en brouillon**, lun/mer/ven **08h00**, 10→21/08 : concept, pilier 1, pilier 2, pilier 3, punchline, format-type. Tous avec placeholders là où le factuel manque. Aucun visuel attaché (kit V2.1 côté Maxime/Canva) — gabarits 01, 04, 06 à produire.
-- Pas de stories tant que le compte n'a pas publié ses premiers posts et que les infos d'édition ne sont pas confirmées.
-- Pas de témoignage ni de citation participant : l'événement n'a pas encore eu lieu — rien à citer sans inventer.
+## Calendrier — Phase teasing (démarrage 03/08/2026 au soir) ✅ ACTIF
+**18 brouillons Instagram vérifiés** (`draft:true`, `autoPublish:false`, média présent sur chacun) : 9 posts feed + 9 stories, du 03/08 au 21/08.
+
+### Posts feed — lun/mer/ven (03/08 20h00 puis 08h00)
+| Date | id | Visuel | Angle |
+|---|---|---|---|
+| 03/08 20:00 | 357485089 | f1 aplat Blaze | Ouverture — « Quelque chose démarre » |
+| 05/08 08:00 | 357485140 | f2 fond Encre | Ce que ce n'est pas |
+| 07/08 08:00 | 357485169 | f3 fond Écru | Pour qui ? |
+| 10/08 08:00 | 357484441 | f4 fond Encre | Concept complet |
+| 12/08 08:00 | 357484464 | f5 fond Écru | Pilier 01 — l'effort crée le lien |
+| 14/08 08:00 | 357484489 | f6 aplat Blaze | Pilier 02 — zéro pitch |
+| 17/08 08:00 | 357484523 | f7 fond Écru | Pilier 03 — la régularité paie |
+| 19/08 08:00 | 357484576 | f8 fond Encre | Punchline — 3 cafés ou 1 heure de course |
+| 21/08 08:00 | 357484595 | f9 fond Écru | Le format-type |
+
+### Stories — mêmes jours, 12h00 (03/08 à 20h30)
+9 stories vidéo **toutes différentes** (ids 357483920, …931, …953, …978, …985, …990, 357484000, …019, …034) : Ça démarre · Ni club ni afterwork · Pour les entrepreneurs · On court d'abord · Au 3e km · Zéro pitch · La régularité paie · 5 ou 10 km · Le format.
+- **Cadence 3/semaine assumée** (les jours de post) tant que le compte n'a pas d'audience : la règle « aucune story identique sur 2 semaines » est respectée par construction — les 9 sont uniques sur toute la période.
+
+### Fabrication des visuels — `roi_gen.py`
+- Cartes typographiques PIL en DA stricte : Archivo Expanded 900 (titres, interlettrage −3,5 %) + Space Mono (mentions), 3 familles jamais mélangées (Écru / Encre / aplat Blaze), logo haut-gauche marge 6,5 %, mention mono haut-droite, barre Blaze, grain 26 %, zones libres 200 px haut/bas en story.
+- **Stories = animation ffmpeg** (push-in lent 1→1,06, barre Blaze qui se déploie, fondus) + fond sonore procédural `roi.wav` (cadence de foulée ~168 BPM, oscillateurs purs — zéro sample tiers, zéro modèle génératif, zéro droits).
+- **Zéro IA générative, zéro photo** : conforme à la règle stories, et cohérent avec le brief qui fait de la typo l'identité de la marque. À remplacer par de vraies photos animées dès la première édition (cf. règle générale).
+- Feed 1080×1350, stories 1080×1920, rendus depuis un master 1350 px.
+
+### Pièges rencontrés (à ne pas réapprendre)
+- ⚠️ **`bulk_schedule_posts` ignore `media_url`** → il crée des posts SANS média, or Instagram refuse un post sans média. Utiliser **`bulk_replace_posts`** (qui, lui, envoie bien `media`) ou corriger juste après par un replace. Vérifier systématiquement par listing.
+- Passer `networks: ["instagram"]` explicitement : sans ce paramètre les code actions ajoutent Facebook par défaut (les 6 posts d'origine étaient en IG+FB à tort, corrigés le 03/08).
+
+### Reste à faire
+- Pas de témoignage ni de citation participant : l'événement n'a pas eu lieu — rien à citer sans inventer.
+- Remplacer les placeholders `[À CONFIRMER : …]` dès que Maxime a les infos d'édition (date, ville, lieu, fréquence, jauge, URL).
 
 ## Tarifs / ROI
 - Modèle économique non communiqué (billetterie ? sponsors ?) — pas de module ROI. À revoir quand le brief s'étoffera.
