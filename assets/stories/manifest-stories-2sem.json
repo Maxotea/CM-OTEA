@@ -1,0 +1,47 @@
+{
+  "_doc": "Rotation stories sur 2 semaines (cycle A/B) — règle Maxime du 03/08/2026 : aucune story identique sur 2 semaines consécutives. 14 cartes par compte, cycle A les semaines du 03/08, 17/08, 31/08…, cycle B les semaines du 10/08, 24/08…  Cartes typographiques PIL (zéro IA, zéro photo) régénérables via scripts/carte-story-typo.py.",
+  "jlawson-golf": {
+    "blog_id": 6563137,
+    "networks": ["instagram", "facebook"],
+    "heure": "10:00:00",
+    "style": "jlawson",
+    "slots": {
+      "A-lun": {"titre": "NOUVELLE SEMAINE", "sous": "Un swing mesuré, pas deviné", "note": "Story lundi (A) — Nouvelle semaine"},
+      "A-mar": {"titre": "LE SHAFT", "sous": "Flex, poids, torque : le moteur de ton club", "note": "Story mardi (A) — Le shaft"},
+      "A-mer": {"titre": "FERS SUR MESURE", "sous": "Loft et lie réglés à ta posture", "note": "Story mercredi (A) — Fers sur mesure"},
+      "A-jeu": {"titre": "DRIVER", "sous": "Des fairways, pas seulement de la distance", "note": "Story jeudi (A) — Driver"},
+      "A-ven": {"titre": "RÉSERVE TON FITTING", "sous": "Les créneaux du week-end partent vite", "note": "Story vendredi (A) — Réserve ton fitting"},
+      "A-sam": {"titre": "LA DATA PARLE", "sous": "Chaque club validé au launch monitor", "note": "Story samedi (A) — La data parle"},
+      "A-dim": {"titre": "JOUR DE PARCOURS", "sous": "Le parcours t'attend — bon golf", "note": "Story dimanche (A) — Jour de parcours"},
+      "B-lun": {"titre": "OBJECTIF SEMAINE", "sous": "Un grip à la taille de ta main", "note": "Story lundi (B) — Objectif semaine"},
+      "B-mar": {"titre": "WEDGES", "sous": "Le bounce qui sauve tes approches", "note": "Story mardi (B) — Wedges"},
+      "B-mer": {"titre": "PUTTER", "sous": "Le club que tu joues le plus souvent", "note": "Story mercredi (B) — Putter"},
+      "B-jeu": {"titre": "ANALYSE GEARS", "sous": "Ton swing capturé en 3D", "note": "Story jeudi (B) — Analyse Gears"},
+      "B-ven": {"titre": "DERNIER CALL", "sous": "Un fitting avant le week-end ?", "note": "Story vendredi (B) — Dernier call"},
+      "B-sam": {"titre": "CÔTÉ ATELIER", "sous": "Montage, gripping, loft-lie : fait ici", "note": "Story samedi (B) — Côté atelier"},
+      "B-dim": {"titre": "18 TROUS", "sous": "Profite du parcours, on s'occupe du sac", "note": "Story dimanche (B) — 18 trous"}
+    }
+  },
+  "la-galerie-immobiliere": {
+    "blog_id": 5733302,
+    "networks": ["instagram", "facebook"],
+    "heure": "10:00:00",
+    "style": "galerie",
+    "slots": {
+      "A-lun": {"titre": "BELLE SEMAINE", "sous": "L'art de l'immobilier à Paris & en Île-de-France", "note": "Story lundi (A) — Belle semaine"},
+      "A-mar": {"titre": "LA LUMIÈRE", "sous": "Ce que l'on ressent avant même de visiter", "note": "Story mardi (A) — La lumière"},
+      "A-mer": {"titre": "CHARME DE L'ANCIEN", "sous": "Parquet, moulures, cheminée — l'âme d'un bien", "note": "Story mercredi (A) — Charme de l'ancien"},
+      "A-jeu": {"titre": "VOTRE PROJET", "sous": "Vendre, acheter, estimer : parlons-en", "note": "Story jeudi (A) — Votre projet"},
+      "A-ven": {"titre": "WEEK-END DE VISITES", "sous": "Les belles adresses se découvrent tôt", "note": "Story vendredi (A) — Week-end de visites"},
+      "A-sam": {"titre": "LE BIEN RARE", "sous": "L'étage, la vue, l'adresse — la rareté a ses codes", "note": "Story samedi (A) — Le bien rare"},
+      "A-dim": {"titre": "INSPIRATION", "sous": "Le dimanche, on rêve d'espace", "note": "Story dimanche (A) — Inspiration"},
+      "B-lun": {"titre": "NOUVELLE SEMAINE", "sous": "Chaque projet commence par une écoute", "note": "Story lundi (B) — Nouvelle semaine"},
+      "B-mar": {"titre": "MISE EN VALEUR", "sous": "Préparer un bien avant de le présenter", "note": "Story mardi (B) — Mise en valeur"},
+      "B-mer": {"titre": "L'ADRESSE", "sous": "On achète un bien, on choisit un quartier", "note": "Story mercredi (B) — L'adresse"},
+      "B-jeu": {"titre": "L'ESTIMATION", "sous": "Connaître la juste valeur de votre bien", "note": "Story jeudi (B) — L'estimation"},
+      "B-ven": {"titre": "AVANT DE VISITER", "sous": "Les bonnes questions à se poser", "note": "Story vendredi (B) — Avant de visiter"},
+      "B-sam": {"titre": "PARIS & OUEST", "sous": "Du 16e arrondissement à Puteaux", "note": "Story samedi (B) — Paris & Ouest"},
+      "B-dim": {"titre": "DOUCEUR DU DIMANCHE", "sous": "Prendre le temps de bien choisir", "note": "Story dimanche (B) — Douceur du dimanche"}
+    }
+  }
+}
