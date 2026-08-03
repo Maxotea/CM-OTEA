@@ -62,5 +62,16 @@ Le client a fourni son texte de référence (post AIG Women's Open du 03/08) et 
 - Reconduction de septembre : replanifier les mêmes 14 vidéos (URLs cloudfront dans le manifest des payloads, réutilisables telles quelles) en respectant le cycle A/B.
 - 📌 Ces cartes typo sont l'intérim conforme à la règle « zéro IA dans les stories » : quand `medias/` sera rapatrié, les 38 photos verticales réelles pourront remplacer progressivement les cartes via la tâche du lundi (i2v identité verrouillée + contrôle dernière frame).
 
+## Stories VRAIES PHOTOS (03/08/2026, décision Maxime : « photos transformées en vidéo ») — EN COURS
+- **Fait — slot « Analyse Gears » (jeudi B)** : photo réelle 11 (studio, homme au stick d'alignement, `…mtr_11226288403794074990.jpg`) → crop 9:16 → i2v kling3_0_turbo identité verrouillée (job 413f6f72) → **dernière frame contrôlée visuellement : identique** → 1080×1920 + calque texte « ANALYSE GEARS / TON SWING CAPTURÉ EN 3D » + jl.wav → `https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/91db08d2-78fc-4e1d-b50c-833f14b7a54f.mp4`. Planifiée **13/08 + 27/08 10:00** (ids **357397907, 357397912**, brouillon IG+FB vérifié) ; anciennes cartes 357218703/357219041 supprimées.
+- **Prêt à générer (bloqué par le plafond quotidien Higgsfield `grace_daily_limit_reached` du 03/08)** — crops 9:16 hébergés et confirmés, presignés 24 h :
+  | Photo | media_id crop | Slot cible | Cartes à supprimer |
+  |---|---|---|---|
+  | 03 mur de shafts (John choisit un shaft) | `8160dba4-c7b2-47af-b296-e710a306b634` | mardi (A) — LE SHAFT / « Flex, poids, torque : le moteur de ton club » | 357218610 (04/08), 357218963 (18/08) |
+  | 06 swing sur simulateur, data à l'écran | `4fb51fe1-f79b-40e0-b502-f459b5e3d1af` | samedi (A) — LA DATA PARLE / « Chaque club validé au launch monitor » | 357218645 (08/08), 357219000 (22/08) |
+  | 09 John en conseil client, mur Titleist | `eeeb1120-549b-45af-ad84-884089f1501d` | samedi (B) — CÔTÉ ATELIER / « Montage, gripping, loft-lie : fait ici » | 357218722 (15/08), 357219244 (29/08) |
+- Photo 01 exclue (visuel promo The Open/Royal Birkdale : texte incrusté + droits R&A). Bilan : 4 slots/14 en vraies photos ; les 10 autres gardent leur carte typo en attendant de nouvelles photos.
+- ⚠️ Si les dates 04/08 ou 08/08 sont passées à la reprise, ne remplacer que l'occurrence future du slot.
+
 ## Stories quotidiennes août 2026 (28/07/2026 — REMPLACÉE le 03/08)
 - Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Visuels IA, rotation hebdo — abandonnée au profit de la rotation 2 semaines ci-dessus.

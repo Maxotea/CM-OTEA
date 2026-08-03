@@ -1,8 +1,23 @@
-# Reprise : stories vraies photos animées — état au 03/08/2026 ~14h30
+# Reprise : stories vraies photos animées — état au 03/08/2026 ~17h30
 
-Travail interrompu par la **limite de dépense mensuelle du compte Claude**
-(à relever sur claude.ai/settings/usage). Tout ce qui précède est commité ;
-ce fichier est le plan exact pour reprendre sans réexplorer.
+Interruption n° 2 : **plafond quotidien de générations Higgsfield**
+(`grace_daily_limit_reached`, tous modèles vidéo, crédits OK : 3 110).
+Reprise programmée automatiquement après le reset (send_later ~00h20 UTC le 04/08).
+Tout l'amont est prêt ; ce fichier est le plan exact pour reprendre sans réexplorer.
+
+## ✅ Fait depuis la version précédente (03/08 après-midi)
+- J Lawson photo 11 → story vidéo « Analyse Gears » complète de bout en bout :
+  i2v validé (dernière frame contrôlée), assemblage texte+jl.wav, hébergée
+  (`…/91db08d2-78fc-4e1d-b50c-833f14b7a54f.mp4`), planifiée 13/08 + 27/08 10:00
+  (ids 357397907 / 357397912, brouillon vérifié), cartes 357218703/357219041 supprimées.
+- Photos restantes vérifiées visuellement : 03 ✅ (mur shafts), 06 ✅ (simulateur),
+  09 ✅ (conseil client), 01 ❌ EXCLUE (promo The Open, texte incrusté + droits R&A).
+- Crops 9:16 des 3 retenues hébergés + confirmés (presignés 24 h) :
+  crop03 `8160dba4-c7b2-47af-b296-e710a306b634` → slot mardi (A) LE SHAFT (cartes 357218610, 357218963)
+  crop06 `4fb51fe1-f79b-40e0-b502-f459b5e3d1af` → slot samedi (A) LA DATA PARLE (cartes 357218645, 357219000)
+  crop09 `eeeb1120-549b-45af-ad84-884089f1501d` → slot samedi (B) CÔTÉ ATELIER (cartes 357218722, 357219244)
+- Détail complet (textes des calques, prompts) : fiche
+  `.claude/skills/cm-metricool/references/clients/jlawsongolf.md`, section « Stories VRAIES PHOTOS ».
 
 ## Décision de Maxime (03/08)
 Stories = **vraies photos transformées en vidéo** (pipeline i2v éprouvé),
