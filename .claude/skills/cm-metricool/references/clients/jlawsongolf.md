@@ -42,6 +42,13 @@
 - ⚠️ **La carte a dû être attachée à la main.** L'environnement de la session n'a pas d'accès sortant vers les hôtes d'hébergement (Higgsfield, CloudFront, static.metricool) → impossible de produire l'URL publique qu'exige `media_url`. Le brouillon porte en attendant un visuel IA de links. Depuis une machine avec accès réseau normal, le pipeline `media_upload → PUT → media_confirm → bulk_replace_posts` fonctionne comme d'habitude.
 - Modèle réutilisable pour tout post « résultat de tournoi » : `scripts/carte-resultat.py` (4:5, DA marine/vert/ambre).
 
-## Stories quotidiennes août 2026 (28/07/2026)
-- Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Vérifiées.
-- **31 stories planifiées ✅** 01→31/08 à 10:00, IG+FB, brouillon, via `bulk_schedule_stories`.
+## Stories — rotation 2 semaines, vidéo + fond sonore (03/08/2026) ✅ ACTIF
+- **Règle Maxime (03/08) : aucune story identique sur 2 semaines consécutives.** Rotation de **14 cartes distinctes** en cycle A/B (A = semaines des 03, 17, 31/08 ; B = 10, 24/08). Vérifié par calcul : toute fenêtre glissante de 14 jours contient 14 stories différentes.
+- **28 stories VIDÉO planifiées ✅ 04→31/08 à 10:00** (ids 357218610→357219269), IG+FB, brouillon vérifié par `get_post_raw`. L'ancienne rotation hebdo de 7 visuels IA (28 brouillons) a été supprimée. La story du 03/08 (ancienne, visuel IA fixe) a été laissée en place.
+- **Format : cartes typographiques ANIMÉES 7,5 s avec fond musical** — cartes PIL pures (zéro IA, zéro photo, DA marine/vert/ambre, conforme au précédent Pierre Huiban), musique en **synthèse procédurale** (`scripts/fond-sonore-stories.py` : pulse électronique premium ~100 BPM — aucun sample tiers, aucun modèle génératif, zéro droits). Assemblage ffmpeg image+audio.
+- Source de vérité de la rotation : `assets/stories/manifest-stories-2sem.json` (14 slots : titre, sous-titre, note). Cartes : `assets/stories/jlawson-golf/`. Régénération : `carte-story-typo.py` + `fond-sonore-stories.py` + ffmpeg.
+- Reconduction de septembre : replanifier les mêmes 14 vidéos (URLs cloudfront dans le manifest des payloads, réutilisables telles quelles) en respectant le cycle A/B.
+- 📌 Ces cartes typo sont l'intérim conforme à la règle « zéro IA dans les stories » : quand `medias/` sera rapatrié, les 38 photos verticales réelles pourront remplacer progressivement les cartes via la tâche du lundi (i2v identité verrouillée + contrôle dernière frame).
+
+## Stories quotidiennes août 2026 (28/07/2026 — REMPLACÉE le 03/08)
+- Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Visuels IA, rotation hebdo — abandonnée au profit de la rotation 2 semaines ci-dessus.
