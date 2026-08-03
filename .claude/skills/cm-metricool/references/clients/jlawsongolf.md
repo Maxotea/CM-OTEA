@@ -1,5 +1,17 @@
 # J Lawson Golf — fiche client
 
+## ✍️ Voix éditoriale — LA VOIX DE JOHN (règle client, 03/08/2026)
+Le client a fourni son texte de référence (post AIG Women's Open du 03/08) et demandé que **tous les posts** adoptent ce style. Les 33 brouillons feed (10/08 → 23/10) ont été réécrits en conséquence. Codification :
+- **Première personne du fitteur** : « je », « ce que je retiens », « je mesure », « j'y serai ». Plus de « on » d'agence ni de « le studio vous… » désincarné.
+- **Vouvoiement du lecteur** (« pour vous », « votre swing ») — le tutoiement des anciennes légendes est abandonné.
+- **Phrases courtes, paragraphes d'une à deux lignes.** Constat technique d'abord, enseignement ensuite.
+- **Clôture en maxime sobre** (« Il faut trouver l'objet qui fonctionne pour vous », « Ça ne se devine pas. Ça se mesure ») — plus de CTA criard « 👉 lien en bio ».
+- **Émojis quasi absents** : 🏆 toléré sur les posts résultat, rien d'autre.
+- **Hashtags conservés, 4 par post.**
+- Détails techniques précis bienvenus (bounce, torque, tr/min) — c'est sa crédibilité. Jamais de chiffre inventé : reprendre ceux validés ou rester qualitatif.
+- ⚠️ Les 2 posts déjà validés par Maxime (05 et 07/08, draft:false) sont restés dans l'ancien style — ne pas les toucher.
+- Post de référence : « Ce que je retiens de cette saison de majors féminins : 3 victoires avec des putters "lames" (Nelly Korda x 2 et Shiho Kuwaki) et 2 avec un maillet : Haeran Ryu. Il faut trouver l'objet qui fonctionne pour vous. »
+
 ## J Lawson Golf (source : jlawsongolf.com/rendezvous.html, vérifié juillet 2026)
 - Fitting Driver/bois : 160 € (~1h)
 - Fitting Fers/wedges : 160 € (~1h)
