@@ -21,7 +21,7 @@ Dézipper ce paquet à la racine, puis : `git mv claude .claude && git commit -m
 ## Automatisation comptes rendus hebdo (references/compte-rendu-hebdo-clients.md)
 - Politique validée : WhatsApp canal principal TOUS clients + doublon email. Mode brouillon (jamais d'envoi auto).
 - ❌ La Routine serveur (lundi 9h Paris = cron 0 7 * * 1 UTC en été) N'A PAS PU être créée depuis l'ancienne session → LA CRÉER depuis cette session (create_trigger, connectors Zapier+Gmail).
-- ❌ Coordonnées clients (WhatsApp + email) toujours pas fournies par Maxime → à collecter, puis remplir les champs dans chaque fiche.
+- ✅ Coordonnées clients fournies par Maxime le 03/08/2026 et saisies dans `recaps/clients-config.json` : WhatsApp confirmé pour les 5 comptes, email confirmé pour J Lawson, Le Loft et La Galerie. **Restent manquants : l'email de Gossip et celui de Pierre** (ne jamais utiliser son adresse employeur) → leurs brouillons partiront vers contact@oteaproduction.com avec le bandeau de remplacement.
 
 ## Jeux concours (préparés, en attente d'accord clients)
 Fichier envoyé à Maxime le ~28/07 : 8 concours (lots : fitting 160 €, head spa 60 €, autres à confirmer). Ne rien planifier sans accord écrit du client sur le lot.
