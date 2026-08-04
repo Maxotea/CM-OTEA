@@ -63,6 +63,14 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
    l'identité, et **on contrôle la dernière frame** contre la photo source
    avant de brancher quoi que ce soit.
    → `.claude/memories/stories-vraies-photos-sans-ia.md`
+   - **Exception accordée le 04/08/2026 : Run On Invest.** Le compte n'a aucune
+     photo et l'événement n'a pas encore eu lieu ; Maxime autorise des **photos
+     IA ultra réalistes**. Limite qui reste absolue : **aucune personne réelle
+     identifiable** — on ne génère jamais le visage d'un client, d'un
+     participant ou de Maxime. L'exception ne vaut que pour ce compte.
+3. **Aucune bande son sur les vidéos de story.** Elles partent muettes, Maxime
+   ajoute l'audio dans Instagram au moment de valider.
+   → `.claude/memories/stories-sans-son.md`
 
 Index complet des mémoires : `.claude/memories/MEMORY.md`.
 
