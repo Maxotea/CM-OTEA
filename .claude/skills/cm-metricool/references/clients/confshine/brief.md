@@ -74,10 +74,21 @@ la puissance de sa vision**.
   le 29/07/2026, marqué « pas de contenu CM géré, à configurer si ça devient un client »
   dans `recaps/clients-config.json`. ⚠️ Confirmer qu'il s'agit bien du même ConfShine
   et que le compte doit être repris.
-- Réseaux connectés : ⚠️ à confirmer.
+- Instagram : **@audrey_srour_rozencweig**
+  (https://www.instagram.com/audrey_srour_rozencweig/) — compte transmis par Maxime le
+  04/08/2026. Instagram bloque le fetch direct : bio, nombre d'abonnés, formats et
+  cadence en place n'ont pas pu être relevés, à faire à l'œil.
+  ⚠️ À clarifier : le CM porte-t-il sur ce **compte personnel** (personal branding de
+  la fondatrice) ou sur un compte de marque ConfShine ? Les deux n'ont pas la même
+  ligne, et c'est le nom au dossier qui décide du ton.
+- Autres réseaux connectés : ⚠️ à confirmer.
 - Site web / source officielle des prix : ⚠️ à confirmer.
 - Offres et tarifs : ⚠️ non fournis — indispensables avant tout module ROI.
-- Banque photos : ⚠️ à recevoir.
+- Banque médias : inventaire dans [`banque-medias.md`](banque-medias.md) — rushes de
+  tournage + b-roll iPhone + charte et gabarits réseaux. **Aucun média prêt à publier
+  en l'état.**
+- Rushes nommés « Hermann Deckous » (sessions 28/07 et 03/08) : ⚠️ rôle à confirmer,
+  et articulation avec le compte @audrey_srour_rozencweig.
 
 Compléter avec `_template-nouveau-client.md` (Étape 0 du SKILL.md) dès que ces
 informations sont disponibles.
