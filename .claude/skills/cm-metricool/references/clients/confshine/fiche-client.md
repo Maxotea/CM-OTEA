@@ -57,8 +57,12 @@ Fichier dédié : [`cible-client.md`](cible-client.md).
 
 ## Voix de marque
 
-- **Vouvoiement** — c'est celui de toute la plaquette. ⚠️ À confirmer pour les réseaux,
-  où le compte porte le prénom d'Audrey.
+- **Tutoiement.** ✅ Tranché par Audrey le 04/08/2026 : « j'ai toujours vouvoyé de
+  partout… je crois que le tutoiement accroche plus les gens. Passons au tutoiement. »
+  C'est une rupture volontaire avec son habitude, pas un relâchement : le tutoiement
+  reste soutenu, jamais familier. On ne repasse pas au vouvoiement post par post.
+  ⚠️ **La plaquette commerciale vouvoie encore** — elle devra être alignée, sinon le
+  prospect change d'interlocutrice entre le post et le devis.
 - Niveau de langage : soutenu mais parlé. Phrases courtes. On s'adresse à un pair
   expérimenté, jamais à un débutant.
 - Émojis : très peu, jamais en rafale. La plaquette n'en utilise pas dans le corps.

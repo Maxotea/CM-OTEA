@@ -1,7 +1,12 @@
 # ConfShine — calendrier éditorial septembre 2026
 
 Premier mois. 12 posts feed, cadence lundi / mercredi / vendredi, horaire feed 18 h 00
-(heure de Paris). Rédigé au **vouvoiement**, décision à confirmer par Audrey.
+(heure de Paris).
+
+**Ton : tutoiement.** Tranché par Audrey le 04/08/2026 (« j'ai toujours vouvoyé de
+partout… je crois que le tutoiement accroche plus les gens. Passons au tutoiement »).
+C'est un changement de posture assumé : la plaquette commerciale vouvoie encore, il
+faudra l'aligner (voir `offres-tarifs.md`).
 
 **Statut : proposition à valider. Rien n'est planifié dans Metricool** — la marque
 `Confshine Game` (6625190) n'a aucun réseau connecté à ce jour, et aucun visuel n'a
@@ -16,19 +21,19 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 ### 1 — Mercredi 2/09 · P1 pédagogie · Éloquence
 **Angle : le vrai problème n'est pas de trouver ses mots.**
 
-> Vous ne cherchez pas vos mots. Vous les trouvez très bien.
+> Tu ne cherches pas tes mots. Tu les trouves très bien.
 >
-> Le problème est ailleurs : ce que vous dites ne rend pas encore ce que vous voyez.
-> Votre vision est claire dans votre tête, et elle sort aplatie. Vous entendez la
-> différence en parlant, et c'est exactement ce qui vous frustre.
+> Le problème est ailleurs : ce que tu dis ne rend pas encore ce que tu vois. Ta vision
+> est claire dans ta tête, et elle sort aplatie. Tu entends la différence en parlant, et
+> c'est exactement ce qui te frustre.
 >
-> Ce décalage ne se corrige pas avec du vocabulaire. Il se corrige en travaillant
-> trois choses ensemble : ce que vous pensez au moment de parler, la façon dont vous
-> le structurez, et ce que votre corps raconte pendant ce temps-là.
+> Ce décalage ne se corrige pas avec du vocabulaire. Il se corrige en travaillant trois
+> choses ensemble : ce que tu penses au moment de parler, la façon dont tu le structures,
+> et ce que ton corps raconte pendant ce temps-là.
 >
 > C'est là que tout se joue — et c'est très rarement là qu'on cherche.
 >
-> Dites-moi en commentaire : à quel moment ressentez-vous le plus cet écart ?
+> Dis-moi en commentaire : à quel moment tu ressens le plus cet écart ?
 
 `#prisedeparoleenpublic #leadership #eloquence #communicationauthentique #dirigeant`
 **Visuel** : portrait d'Audrey en situation de prise de parole — à produire.
@@ -40,18 +45,18 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 
 > Septembre ne remet pas les compteurs à zéro. Il remet la pression.
 >
-> Les équipes reviennent, les projets redémarrent, et il faut à nouveau porter,
-> décider, convaincre. Beaucoup abordent ce mois-là avec les mêmes réflexes que
-> l'année précédente, en espérant un résultat différent.
+> Les équipes reviennent, les projets redémarrent, et il faut à nouveau porter, décider,
+> convaincre. Beaucoup abordent ce mois-là avec les mêmes réflexes que l'année
+> précédente, en espérant un résultat différent.
 >
-> Une rentrée se prépare comme une prise de parole : on décide de ce qu'on veut
-> transmettre avant de se retrouver devant les gens.
+> Une rentrée se prépare comme une prise de parole : tu décides de ce que tu veux
+> transmettre avant de te retrouver devant les gens.
 >
-> Prenez vingt minutes cette semaine pour écrire les trois messages que vos équipes
-> doivent avoir compris d'ici décembre. S'ils ne tiennent pas en trois phrases,
-> ils ne passeront pas.
+> Prends vingt minutes cette semaine pour écrire les trois messages que tes équipes
+> doivent avoir compris d'ici décembre. S'ils ne tiennent pas en trois phrases, ils ne
+> passeront pas.
 >
-> Vous voulez travailler ces trois phrases ? Écrivez-moi en message privé.
+> Tu veux travailler ces trois phrases ? Écris-moi en message privé.
 
 `#rentree2026 #leadership #preparationmentale #managementdequipe #prisedeparole`
 **Visuel** : image de rentrée sobre — à produire ou banque libre de droits.
@@ -65,14 +70,14 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 > rejoue partout : des gens compétents qui repartent avec quinze cartes de visite et
 > aucune conversation dont on se souviendra.
 >
-> Une opportunité ne naît pas d'un nombre de mains serrées. Elle naît d'une phrase
-> juste, dite au bon moment, à quelqu'un qui l'attendait sans le savoir.
+> Une opportunité ne naît pas d'un nombre de mains serrées. Elle naît d'une phrase juste,
+> dite au bon moment, à quelqu'un qui l'attendait sans le savoir.
 >
-> Avant votre prochain événement, préparez une seule chose : la réponse à « vous
-> faites quoi ? ». Pas votre métier — ce que vous changez pour les gens. Vingt
-> secondes, et vous n'êtes plus une carte de visite.
+> Avant ton prochain événement, prépare une seule chose : la réponse à « tu fais quoi ? ».
+> Pas ton métier — ce que tu changes pour les gens. Vingt secondes, et tu n'es plus une
+> carte de visite.
 >
-> Quel est le prochain événement où vous serez ? Dites-le en commentaire.
+> C'est quoi, le prochain événement où tu seras ? Dis-le en commentaire.
 
 `#networking #entrepreneuriat #opportunites #leadership #reseauprofessionnel`
 **Visuel** : ambiance salle / événement — b-roll iPhone du Drive, à dérusher.
@@ -84,12 +89,12 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 
 > Trois caméras, un micro, et beaucoup de silences avant la première phrase.
 >
-> Ce qu'on ne voit pas d'une captation : le temps passé à décider quoi dire. La
-> technique se règle en vingt minutes. Le message, lui, se travaille avant.
+> Ce qu'on ne voit pas d'une captation : le temps passé à décider quoi dire. La technique
+> se règle en vingt minutes. Le message, lui, se travaille avant.
 >
-> C'est le même ordre que pour une conférence : d'abord ce que vous voulez laisser
-> à ceux qui écoutent, ensuite la manière de le dire. L'inverse produit des vidéos
-> propres dont personne ne se souvient.
+> C'est le même ordre que pour une conférence : d'abord ce que tu veux laisser à ceux qui
+> écoutent, ensuite la manière de le dire. L'inverse produit des vidéos propres dont
+> personne ne se souvient.
 >
 > Ce qui se prépare dans ces coulisses arrive bientôt ici.
 
@@ -101,24 +106,24 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 ### 5 — Vendredi 11/09 · P5 preuve · Préparation mentale
 **Angle : le parcours d'Audrey comme preuve vécue.**
 
-> Vingt ans dans l'Éducation nationale. Enseignante, puis directrice d'école. Une
-> position solide, un métier utile, une vie qui tenait debout.
+> Vingt ans dans l'Éducation nationale. Enseignante, puis directrice d'école. Une position
+> solide, un métier utile, une vie qui tenait debout.
 >
 > Et une question qui ne partait pas : est-ce que c'est là que je dois être ?
 >
-> Partir n'a pas été un coup de tête. Ça a été des mois à assumer une version de moi
-> que personne autour ne connaissait encore. À croire à ma légitimité avant d'en avoir
-> la preuve.
+> Partir n'a pas été un coup de tête. Ça a été des mois à assumer une version de moi que
+> personne autour ne connaissait encore. À croire à ma légitimité avant d'en avoir la
+> preuve.
 >
-> C'est pour ça que j'accompagne des gens en reconversion sans jamais leur dire que
-> c'est simple. Ce n'est pas simple. C'est faisable — et ça se prépare.
+> C'est pour ça que j'accompagne des gens en reconversion sans jamais leur dire que c'est
+> simple. Ce n'est pas simple. C'est faisable — et ça se prépare.
 >
-> Vous êtes dans ce moment-là ? Écrivez-moi, on en parle.
+> Tu es dans ce moment-là ? Écris-moi, on en parle.
 
 `#reconversionprofessionnelle #legitimite #preparationmentale #alignement #oser`
 **Visuel** : portrait d'Audrey, registre posé — à produire.
-⚠️ À remplacer par un vrai témoignage client dès qu'on en a un : c'est la preuve la
-plus forte, et il n'y en a aucune au dossier aujourd'hui.
+⚠️ À remplacer par un vrai témoignage client dès qu'on en a un : c'est la preuve la plus
+forte, et il n'y en a aucune au dossier aujourd'hui.
 
 ---
 
@@ -128,16 +133,16 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 > On parle beaucoup du syndrome de l'imposteur chez les débutants. On en parle beaucoup
 > moins chez ceux qui ont des résultats.
 >
-> C'est pourtant là qu'il est le plus tenace : plus vous montez, plus l'écart entre ce
-> qu'on attend de vous et ce que vous ressentez de l'intérieur se creuse. Les preuves
-> s'accumulent, le doute reste.
+> C'est pourtant là qu'il est le plus tenace : plus tu montes, plus l'écart entre ce qu'on
+> attend de toi et ce que tu ressens de l'intérieur se creuse. Les preuves s'accumulent,
+> le doute reste.
 >
-> Ce doute ne se raisonne pas. Il se travaille — en préparation mentale, comme un
-> sportif travaille sa gestion de la pression avant une compétition.
+> Ce doute ne se raisonne pas. Il se travaille — en préparation mentale, comme un sportif
+> travaille sa gestion de la pression avant une compétition.
 >
-> Et non, il ne disparaît pas complètement. Il cesse simplement de décider à votre place.
+> Et non, il ne disparaît pas complètement. Il cesse simplement de décider à ta place.
 >
-> Vous vous reconnaissez ? Le commentaire est ouvert.
+> Tu te reconnais ? Le commentaire est ouvert.
 
 `#syndromedelimposteur #preparationmentale #leadership #confianceensoi #dirigeant`
 **Visuel** : carte typographique sobre à la charte 2026.
@@ -149,19 +154,19 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 
 > Un discours qui porte tient en trois mouvements. Pas quinze slides.
 >
-> **1. D'où vous partez.** Une situation que votre auditoire reconnaît immédiatement.
-> S'il ne se reconnaît pas dans les trente premières secondes, vous parlez seul.
+> **1. D'où tu pars.** Une situation que ton auditoire reconnaît immédiatement. S'il ne
+> se reconnaît pas dans les trente premières secondes, tu parles seul.
 >
-> **2. Ce qui bloque.** Nommez précisément l'obstacle. C'est le moment où l'on décide
-> de vous écouter jusqu'au bout.
+> **2. Ce qui bloque.** Nomme précisément l'obstacle. C'est le moment où l'on décide de
+> t'écouter jusqu'au bout.
 >
-> **3. Ce que ça change.** Pas votre solution — ce que la vie de ceux qui écoutent
-> devient une fois l'obstacle levé.
+> **3. Ce que ça change.** Pas ta solution — ce que la vie de ceux qui écoutent devient
+> une fois l'obstacle levé.
 >
-> Testez sur votre prochaine prise de parole : si vous ne pouvez pas remplir ces trois
-> cases, votre message n'est pas encore prêt.
+> Teste sur ta prochaine prise de parole : si tu ne peux pas remplir ces trois cases, ton
+> message n'est pas encore prêt.
 >
-> Enregistrez ce post pour votre prochaine intervention.
+> Enregistre ce post pour ta prochaine intervention.
 
 `#eloquence #storytelling #prisedeparoleenpublic #communication #leadership`
 **Visuel** : carrousel 4 slides aux gabarits réseaux (charte 2026) — à designer.
@@ -173,19 +178,19 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 
 > On ne travaille pas la même chose selon l'endroit où l'on se trouve.
 >
-> **Étoile Montante** — vous posez des bases solides. Vous savez ce que vous valez,
-> vous n'arrivez pas encore à le faire passer.
+> **Étoile Montante** — tu poses des bases solides. Tu sais ce que tu vaux, tu n'arrives
+> pas encore à le faire passer.
 >
-> **Constellation** — vous montez en puissance. Les bases sont là, vous voulez un
-> discours qu'on retient.
+> **Constellation** — tu montes en puissance. Les bases sont là, tu veux un discours qu'on
+> retient.
 >
-> **Cosmos** — vous devenez une référence. Votre parole doit désormais vous ouvrir des
-> portes, pas seulement convaincre la salle.
+> **Cosmos** — tu deviens une référence. Ta parole doit désormais t'ouvrir des portes, pas
+> seulement convaincre la salle.
 >
 > Trois moments différents, trois façons de travailler. Se tromper de palier, c'est
 > travailler ce dont on n'a pas besoin.
 >
-> Vous êtes où, aujourd'hui ? Dites-le moi en message privé, je vous oriente.
+> Tu es où, aujourd'hui ? Dis-le moi en message privé, je t'oriente.
 
 `#accompagnement #leadership #prisedeparole #evolutionprofessionnelle #confshine`
 **Visuel** : visuel 3 paliers aux gabarits réseaux — à designer.
@@ -201,14 +206,14 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 > Je l'entends chaque semaine, de la part de gens dont l'expertise mériterait dix fois
 > plus de visibilité qu'elle n'en a.
 >
-> Se mettre en avant et transmettre une vision ne sont pas la même chose. Le premier
-> parle de vous. Le second parle de ce que vous avez compris et que d'autres cherchent.
+> Se mettre en avant et transmettre une vision ne sont pas la même chose. Le premier parle
+> de toi. Le second parle de ce que tu as compris et que d'autres cherchent.
 >
-> Le jour où vous racontez ce que vous avez appris plutôt que ce que vous avez réussi,
-> la gêne tombe. Et le réseau se construit tout seul, parce que les gens reviennent
-> vers ce qui leur a servi.
+> Le jour où tu racontes ce que tu as appris plutôt que ce que tu as réussi, la gêne
+> tombe. Et le réseau se construit tout seul, parce que les gens reviennent vers ce qui
+> leur a servi.
 >
-> Ce que vous avez compris cette année et que personne ne sait : écrivez-le en commentaire.
+> Ce que tu as compris cette année et que personne ne sait : écris-le en commentaire.
 
 `#reseauprofessionnel #visibilite #authenticite #leadership #transmission`
 **Visuel** : photo de conversation / échange — b-roll Drive à dérusher.
@@ -221,17 +226,17 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 > Ce qui se joue dans les dix minutes avant de prendre la parole décide de la première
 > minute. Et la première minute décide du reste.
 >
-> Trois choses à ne pas faire pendant ces dix minutes : relire vos notes une dernière
-> fois — c'est trop tard, vous ne retiendrez rien et vous vous fragilisez ; regarder la
-> salle se remplir en comptant les gens ; répondre à un message professionnel.
+> Trois choses à ne pas faire pendant ces dix minutes : relire tes notes une dernière fois
+> — c'est trop tard, tu ne retiendras rien et tu te fragilises ; regarder la salle se
+> remplir en comptant les gens ; répondre à un message professionnel.
 >
-> Trois choses à faire : ralentir votre respiration, sentir vos appuis au sol, et
-> vous redire la seule phrase que la salle doit emporter.
+> Trois choses à faire : ralentir ta respiration, sentir tes appuis au sol, et te redire
+> la seule phrase que la salle doit emporter.
 >
-> Ce n'est pas de la relaxation. C'est le moment où vous reprenez la main sur votre
-> propre système nerveux.
+> Ce n'est pas de la relaxation. C'est le moment où tu reprends la main sur ton propre
+> système nerveux.
 >
-> Enregistrez ce post, vous en aurez besoin avant votre prochaine intervention.
+> Enregistre ce post, tu en auras besoin avant ta prochaine intervention.
 
 `#preparationmentale #gestiondustress #prisedeparoleenpublic #confiance #performance`
 **Visuel** : coulisses avant scène — b-roll Drive ou à produire.
@@ -243,15 +248,15 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 
 > Ce qui surprend le plus en première séance : on ne commence pas par parler.
 >
-> On commence par comprendre ce que vous voulez faire bouger. Chez vous, et chez ceux
-> qui vous écoutent. Tant que ce n'est pas posé, travailler la voix ou la posture ne
-> sert à rien — on polit un message qu'on n'a pas encore choisi.
+> On commence par comprendre ce que tu veux faire bouger. Chez toi, et chez ceux qui
+> t'écoutent. Tant que ce n'est pas posé, travailler la voix ou la posture ne sert à rien
+> — on polit un message qu'on n'a pas encore choisi.
 >
 > Ensuite seulement viennent la structure, le corps, le regard, le silence. Et les
 > exercices, beaucoup d'exercices, parce qu'on ne devient pas plus à l'aise en
 > comprenant : on le devient en pratiquant.
 >
-> Curieux de savoir comment ça se passe ? Posez vos questions en commentaire.
+> Curieux de savoir comment ça se passe ? Pose tes questions en commentaire.
 
 `#coaching #accompagnement #eloquence #prisedeparole #confshine`
 **Visuel** : plan de séance / mise en situation — à produire.
@@ -261,19 +266,18 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 ### 12 — Lundi 28/09 · P1 pédagogie · Éloquence
 **Angle : transmettre plutôt qu'informer (porte d'entrée Super Nova).**
 
-> Vous savez énormément de choses. Ça ne suffit pas pour former quelqu'un.
+> Tu sais énormément de choses. Ça ne suffit pas pour former quelqu'un.
 >
-> Un contenu puissant mal structuré reste inaudible. On empile ce qu'on sait, dans
-> l'ordre où on l'a appris, et on s'étonne que rien ne reste.
+> Un contenu puissant mal structuré reste inaudible. On empile ce qu'on sait, dans l'ordre
+> où on l'a appris, et on s'étonne que rien ne reste.
 >
-> Transmettre, c'est faire un choix douloureux : accepter de laisser de côté 80 % de
-> ce que vous maîtrisez pour que les 20 % restants arrivent entiers. C'est le travail
-> le plus difficile que je fais avec ceux qui construisent une formation ou une
-> masterclass.
+> Transmettre, c'est faire un choix douloureux : accepter de laisser de côté 80 % de ce
+> que tu maîtrises pour que les 20 % restants arrivent entiers. C'est le travail le plus
+> difficile que je fais avec ceux qui construisent une formation ou une masterclass.
 >
-> Ce que vous devez couper est presque toujours ce à quoi vous tenez le plus.
+> Ce que tu dois couper est presque toujours ce à quoi tu tiens le plus.
 >
-> Vous construisez un programme en ce moment ? Écrivez-moi.
+> Tu construis un programme en ce moment ? Écris-moi.
 
 `#transmission #formation #masterclass #pedagogie #eloquence`
 **Visuel** : plan de travail, structure écrite — à produire.
@@ -284,15 +288,15 @@ plus forte, et il n'y en a aucune au dossier aujourd'hui.
 
 4 reels/mois inclus. Sujets proposés, dans l'ordre de priorité :
 
-1. **« Votre problème n'est pas de trouver vos mots »** — le message fondateur, en 45 s.
+1. **« Tu ne cherches pas tes mots »** — le message fondateur, en 45 s.
 2. **« Les 10 minutes avant de monter sur scène »** — le plus actionnable, fort potentiel
    d'enregistrement.
 3. **« J'ai quitté l'Éducation nationale après 20 ans »** — le récit de reconversion.
 4. **« Trois erreurs qui rendent un discours inaudible »** — format liste, entrée de gamme.
 
 Chaque script passe par `reel-script` puis `reel-lint` **avant tournage** : pas de lint,
-pas de tournage. La matière brute existe déjà pour les reels 1 et 3 (rushes des 28/07
-et 03/08), sous réserve des droits.
+pas de tournage. La matière brute existe déjà pour les reels 1 et 3 (rushes des 28/07 et
+03/08), sous réserve des droits.
 
 ## Stories
 
@@ -304,17 +308,19 @@ vendredi. À produire une fois les visuels 9:16 disponibles.
 
 Trois verrous, dans l'ordre où il faut les lever :
 
-1. **Aucun réseau connecté à la marque Metricool** `Confshine Game` (6625190) — vérifié
-   le 04/08/2026. Sans connexion, aucune planification n'est possible. C'est Audrey qui
-   doit connecter ses comptes.
+1. **Aucun réseau connecté à la marque Metricool** `Confshine Game` (6625190) — vérifié le
+   04/08/2026. Sans connexion, aucune planification n'est possible. C'est Audrey qui doit
+   connecter ses comptes. ⚠️ Elle parle d'une « nouvelle page » : vérifier s'il s'agit
+   d'un nouveau compte Instagram à créer — dans ce cas c'est lui qu'on connecte, pas
+   @audrey_srour_rozencweig.
 2. **Aucun visuel prêt** : pas de photo publiable, pas de carrousel aux gabarits, pas de
    9:16. Les posts 7 et 8 demandent du design, les autres une image.
-3. **Ton et périmètre non arrêtés** : vouvoiement retenu par défaut, Instagram seul ou
-   Instagram + LinkedIn + TikTok à décider. Le calendrier ci-dessus tient dans les deux
-   cas, seules les légendes changent à la marge sur LinkedIn.
+3. **Périmètre réseaux non arrêté** : Instagram seul, ou Instagram + LinkedIn + TikTok.
+   Le calendrier tient dans les deux cas ; sur LinkedIn, seules les légendes s'ajustent à
+   la marge.
 
-Une fois ces trois points levés : planification via `schedule_post`, puis vérification
-des horaires (bug de fuseau) et re-verrouillage du statut brouillon si nécessaire.
+Une fois ces trois points levés : planification via `schedule_post`, puis vérification des
+horaires (bug de fuseau) et re-verrouillage du statut brouillon si nécessaire.
 
 ## Contrôle qualité
 
@@ -325,5 +331,6 @@ des horaires (bug de fuseau) et re-verrouillage du statut brouillon si nécessai
 - [x] Répartition des piliers conforme : 4/3/2/2/1.
 - [x] Un seul CTA par légende.
 - [x] Volume conforme : 12 posts feed, comme à tous les paliers.
+- [x] Ton conforme : tutoiement sur les 12 légendes.
 - [ ] Visuels — **non conforme**, aucun média attaché : voir les verrous ci-dessus.
 - [ ] Validation client.

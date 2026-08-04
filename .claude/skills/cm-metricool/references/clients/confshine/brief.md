@@ -64,9 +64,8 @@ la puissance de sa vision**.
 
 ## Ligne éditoriale — cadre CM
 
-- Ton : **vouvoiement** — c'est celui de toute la plaquette commerciale. ⚠️ Reste à
-  confirmer pour les réseaux, où le compte est au nom d'Audrey et peut légitimement
-  tutoyer. Une seule règle à trancher, puis on s'y tient.
+- Ton : **tutoiement** ✅ — décidé par Audrey le 04/08/2026. La plaquette commerciale
+  vouvoie encore et devra être alignée. Détail dans [`fiche-client.md`](fiche-client.md).
 - Répartition piliers : quotas cm-metricool par défaut (P1 pédagogie 30 % · P2
   actu/tendances 25 % · P3 coulisses 20 % · P4 saisonnier 15 % · P5 preuve 10 %) —
   ⚠️ à arbitrer avec le client, les 3 piliers de la méthode ci-dessus sont une
@@ -134,9 +133,17 @@ informations sont disponibles.
 
 ## Ce qui reste à débloquer
 
-1. Compte personnel @audrey_srour_rozencweig ou compte de marque ConfShine — et quels
-   réseaux dans le périmètre ?
-2. Le ton sur les réseaux : on garde le vouvoiement de la plaquette, ou on tutoie ?
+1. **La « nouvelle page ».** Le 04/08/2026, Audrey annonce : « Allez nouvelle page,
+   nouvelle com, nouvelle offre, nouveau jeu. Passons au tutoiement. » Trois questions
+   en découlent, et elles conditionnent tout le reste :
+   - *nouvelle page* — un nouveau compte Instagram à créer, ou une remise à plat de
+     @audrey_srour_rozencweig ? C'est ce compte-là qu'on connectera à Metricool.
+   - *nouvelle offre* — la plaquette du 06/04/2026 est-elle en train d'être remplacée ?
+     Si oui, `offres-tarifs.md` devient caduc : ne rien publier de commercial avant de
+     savoir.
+   - *nouveau jeu* — à rapprocher du nom de la marque Metricool, « Confshine **Game** ».
+     Il existe peut-être un produit « jeu » dont on ne sait rien. À creuser.
+2. Périmètre réseaux : Instagram seul, ou Instagram + LinkedIn + TikTok ?
 3. Hermann Deckous et l'événement Gatsby du 28/06 : qui, quoi, et exploitable ou pas ?
 4. Témoignages et appels à l'action du site (page non accessible d'ici).
 5. Le montant du CM mensuel, pour le calcul ROI.
