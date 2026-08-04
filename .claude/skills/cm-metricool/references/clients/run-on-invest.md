@@ -23,13 +23,23 @@
 - Typos (Google Fonts) : **Archivo Expanded 900** (titres capitales, interlettrage −3,5 %, pleine largeur) · **Space Mono** (mentions techniques : horaires, distances, GPS) · Archivo 400/500 (corps).
 - Constantes : logo haut-gauche marge 6,5 % · mentions mono haut-droite · barre Blaze 8 px · grain 26 % · stories : 200 px de zone libre haut et bas.
 
-## ⛔ Confidentialité (brief §6)
+## ⛔ Confidentialité (brief §6) — mise à jour du 04/08/2026
+- ✅ **LIEU DÉVERROUILLÉ par Maxime le 04/08** : la course se déroule à **La Défense**, le temps de networking à la **Plénitude Arena**. Publiable.
 - **Négociations sponsors (« Projet Foulée ») : rien ne se publie** tant qu'un partenariat n'est pas signé ET validé pour annonce.
-- **Arena 2027 (La Défense) : zéro teasing** sans validation explicite de Maxime — ni lieu, ni dates, ni jauge, ni prix.
+- **Toujours verrouillé sur l'Arena** : ni **dates**, ni **jauge**, ni **prix**. Le déverrouillage du 04/08 porte sur le lieu, rien d'autre.
 - Jamais de budgets, jauges prévisionnelles, chiffres financiers.
 
-## ⚠️ Données factuelles — RIEN de confirmé au 03/08/2026
-Dates d'édition, ville/lieu, fréquence (mensuelle pressentie), jauge (30 vs 80 à trancher), URL d'inscription, handle définitif : **tout est à confirmer**. Les valeurs des gabarits du kit (12 sept., Tête d'Or, 45.7797°N, Camille Roussel, 73 %…) sont **fictives — ne jamais les publier**. Règle : placeholder `[À CONFIRMER : …]` + signalement, jamais d'invention.
+## ⚠️ Données factuelles
+- ✅ **Confirmé 04/08** : lieu de la course = La Défense · lieu du networking = Plénitude Arena.
+- ❌ **Toujours à confirmer** : dates d'édition, heure, fréquence (mensuelle pressentie), jauge (30 vs 80 à trancher), URL d'inscription, handle définitif. Placeholder `[À CONFIRMER : …]` obligatoire, jamais d'invention.
+- Les valeurs des gabarits du kit (12 sept., Tête d'Or, 45.7797°N, Camille Roussel, 73 %…) sont **fictives — ne jamais les publier**.
+
+## 🖼️ Visuels : photos IA ultra réalistes autorisées (04/08/2026)
+Maxime autorise les **photos IA ultra réalistes** sur ce compte, **feed et stories**, en remplacement des cartes typographiques.
+- **Limite absolue maintenue : aucune personne réelle identifiable.** Coureurs génériques, plans larges ou de dos, pas de visage reconnaissable en gros plan. On ne génère jamais le visage d'un client, d'un participant ou de Maxime.
+- Direction : La Défense au petit matin — parvis, tours de verre, lumière rasante. Palette compatible kit (Écru/Encre, accent Blaze discret). L'habillage typographique du kit reste posé par-dessus (`scripts/roi-visuels.py`).
+- Stories : photo IA → i2v `kling3_0_turbo` → **muet** (règle stories sans son).
+- L'exception ne vaut que pour ce compte, tant qu'aucune édition n'a eu lieu et qu'il n'existe aucune vraie photo.
 
 ## Calendrier — Phase teasing (démarrage 03/08/2026 au soir) ✅ ACTIF
 **18 brouillons Instagram vérifiés** (`draft:true`, `autoPublish:false`, média présent sur chacun) : 9 posts feed + 9 stories, du 03/08 au 21/08.

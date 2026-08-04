@@ -106,3 +106,16 @@ photo et dont l'événement n'a pas encore eu lieu.
    357484000, …019, …034) et supprimer les anciennes.
 5. Les visuels feed peuvent aussi passer en photo IA si Maxime le souhaite —
    à lui confirmer, la DA typographique du kit reste valable.
+
+## Mise à jour 04/08 (suite) — lieu R.O.I. déverrouillé + IA sur le feed
+- Maxime confirme : **course à La Défense**, **networking à la Plénitude Arena**.
+  Le brief interdisait tout teasing du lieu sans son accord ; c'est son accord.
+  **Restent verrouillés : dates, jauge, prix.**
+- 3 posts feed réécrits avec le lieu (ids **357722958** 04/08 20h, **357722984**
+  07/08, **357723008** 10/08). Le post d'ouverture, dont le créneau du 03/08 20h
+  était passé sans validation, a été **replanifié au 04/08 20h**.
+- Photos IA ultra réalistes autorisées **feed ET stories** sur ROI.
+  Production à faire : ~9 visuels feed 4:5 + 9 stories 9:16 (photo IA → i2v →
+  muet → habillage typo par-dessus), puis remplacement des 18 brouillons.
+  Direction : La Défense au petit matin, parvis et tours, lumière rasante,
+  coureurs de dos ou en plan large. **Aucun visage reconnaissable.**
