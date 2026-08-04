@@ -21,7 +21,11 @@ qui doit guider **toute** la stratégie de contenu.
 |---|---|
 | **1. Préparation mentale** | la posture intérieure, la légitimité, le syndrome de l'imposteur, la clarté avant la prise de parole |
 | **2. Éloquence** | le discours, l'incarnation de la vision, raconter son histoire, convaincre sans manipuler |
-| **3. Création d'opportunités** | l'influence, le réseau de qualité, la visibilité, les opportunités qui viennent naturellement |
+| **3. Opportunité** | l'influence, le réseau de qualité, la visibilité, les opportunités qui viennent naturellement |
+
+Formulations officielles de chaque pilier : [`offres-tarifs.md`](offres-tarifs.md).
+Le troisième s'appelle **« Opportunité »** dans la plaquette client (le brief initial
+disait « création d'opportunités ») — c'est la plaquette qui fait foi.
 
 Résultat visé : une communication qui **inspire confiance**, **fédère naturellement**
 et **accélère** l'évolution personnelle comme professionnelle.
@@ -60,16 +64,47 @@ la puissance de sa vision**.
 
 ## Ligne éditoriale — cadre CM
 
-- Ton : ⚠️ **à confirmer** (tutoiement / vouvoiement). Le brief impose « authentique,
-  impactant, humain » mais ne tranche pas l'adresse.
+- Ton : **vouvoiement** — c'est celui de toute la plaquette commerciale. ⚠️ Reste à
+  confirmer pour les réseaux, où le compte est au nom d'Audrey et peut légitimement
+  tutoyer. Une seule règle à trancher, puis on s'y tient.
 - Répartition piliers : quotas cm-metricool par défaut (P1 pédagogie 30 % · P2
   actu/tendances 25 % · P3 coulisses 20 % · P4 saisonnier 15 % · P5 preuve 10 %) —
   ⚠️ à arbitrer avec le client, les 3 piliers de la méthode ci-dessus sont une
   taxonomie de **fond**, pas la répartition de **format**.
 - Cadence / horaires : ⚠️ à définir.
 
+## Qui porte ConfShine
+
+**Audrey Srour Rozencweig**, présidente de la société **CONFSHINE** (SIREN 985248111)
+depuis le **29/06/2024**. Mentor et coach en préparation mentale, spécialisée sur la
+prise de parole en public.
+
+**Son parcours** — environ vingt ans dans l'Éducation nationale, enseignante puis
+directrice d'école, avant de se reconvertir vers la préparation mentale. Formée à
+l'Académie Puissance Mentale, à l'ennéagramme ; en formation à l'école d'intuition Iris.
+
+**Ses autres engagements** — co-fondatrice de l'association **Audace B612** (2023),
+liée à la **Journée de l'Audace Paris** et à un projet de classes à distance en Afrique
+avec Give Back Charity.
+
+> **Le point le plus exploitable du dossier** : le profil secondaire de la cible — la
+> personne en reconversion qui doit assumer une nouvelle version d'elle-même — c'est
+> **exactement son histoire**. Quitter une carrière installée de vingt ans pour suivre
+> sa voie, c'est la preuve vécue de ce qu'elle vend. C'est le matériau de storytelling
+> le plus fort dont on dispose, et il ne coûte rien à produire.
+
+⚠️ Ces éléments viennent de **recherches web** (Pappers, LinkedIn, TikTok), pas d'une
+source client : **à faire valider par elle** avant toute publication qui s'en sert.
+
 ## Identité — état des informations
 
+- **Offres et prix : ✅ reçus** — plaquette du 06/04/2026 fournie par Audrey le
+  04/08/2026, dépouillée dans [`offres-tarifs.md`](offres-tarifs.md), PDF conservé dans
+  `sources/`. Quatre offres de 2 297 € à 5 797 €. **Seule source de prix autorisée.**
+- **Site : https://www.confshine.com/** — ⚠️ **inaccessible depuis cet environnement**
+  (la politique réseau bloque le domaine, 403 au niveau du proxy). Restent donc à
+  récupérer côté site : **témoignages, chiffres de preuve et appels à l'action**
+  (formulaire, prise de RDV, newsletter).
 - blogId Metricool : compte **« Confshine Game » — 6625190** détecté via `list_brands`
   le 29/07/2026, marqué « pas de contenu CM géré, à configurer si ça devient un client »
   dans `recaps/clients-config.json`. ⚠️ Confirmer qu'il s'agit bien du même ConfShine
@@ -81,14 +116,27 @@ la puissance de sa vision**.
   ⚠️ À clarifier : le CM porte-t-il sur ce **compte personnel** (personal branding de
   la fondatrice) ou sur un compte de marque ConfShine ? Les deux n'ont pas la même
   ligne, et c'est le nom au dossier qui décide du ton.
-- Autres réseaux connectés : ⚠️ à confirmer.
-- Site web / source officielle des prix : ⚠️ à confirmer.
-- Offres et tarifs : ⚠️ non fournis — indispensables avant tout module ROI.
+- Autres comptes repérés en recherche web (⚠️ à confirmer comme périmètre CM) :
+  TikTok **@confshine_audrey_srour**, LinkedIn **audrey-srour-rozencweig**,
+  Facebook **audrey.srour**.
+- Prestation CM mensuelle facturée : ⚠️ à renseigner pour le module ROI.
 - Banque médias : inventaire dans [`banque-medias.md`](banque-medias.md) — rushes de
   tournage + b-roll iPhone + charte et gabarits réseaux. **Aucun média prêt à publier
   en l'état.**
 - Rushes nommés « Hermann Deckous » (sessions 28/07 et 03/08) : ⚠️ rôle à confirmer,
   et articulation avec le compte @audrey_srour_rozencweig.
+- Dossier Drive « CONFSHINE GBO Gatsby 28 juin 26 » : ⚠️ événement à identifier —
+  possiblement lié à Audace B612 / la Journée de l'Audace. Utile comme temps fort et
+  comme preuve sociale si les images sont exploitables.
 
 Compléter avec `_template-nouveau-client.md` (Étape 0 du SKILL.md) dès que ces
 informations sont disponibles.
+
+## Ce qui reste à débloquer
+
+1. Compte personnel @audrey_srour_rozencweig ou compte de marque ConfShine — et quels
+   réseaux dans le périmètre ?
+2. Le ton sur les réseaux : on garde le vouvoiement de la plaquette, ou on tutoie ?
+3. Hermann Deckous et l'événement Gatsby du 28/06 : qui, quoi, et exploitable ou pas ?
+4. Témoignages et appels à l'action du site (page non accessible d'ici).
+5. Le montant du CM mensuel, pour le calcul ROI.
