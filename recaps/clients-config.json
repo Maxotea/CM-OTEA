@@ -87,13 +87,13 @@
       "blog_id": 6625190,
       "nom": "Confshine Game",
       "recap_client": false,
-      "note": "Détecté via list_brands le 29/07/2026 — pas de contenu CM géré. À configurer si ça devient un client."
+      "note": "ConfShine — Audrey Srour Rozencweig. Cadrage en cours, dossier complet dans .claude/skills/cm-metricool/references/clients/confshine/. Vérifié le 04/08/2026 via list_brands : AUCUN réseau connecté (instagram/facebook/tiktok/linkedin/youtube tous null, firstConnectionDate null) — rien ne peut être planifié tant qu'Audrey n'a pas connecté ses comptes. Comptes réels : IG @audrey_srour_rozencweig, TikTok @confshine_audrey_srour, LinkedIn audrey-srour-rozencweig. Passer recap_client à true à la signature."
     },
     {
       "blog_id": 6636615,
-      "nom": "(compte sans nom)",
+      "nom": "Run On Invest",
       "recap_client": false,
-      "note": "Détecté via list_brands le 29/07/2026 — à identifier."
+      "note": "Identifié via list_brands le 04/08/2026 (anciennement « compte sans nom ») — Instagram @runoninvest connecté depuis le 02/08/2026. Pas de contenu CM géré à ce jour : à configurer si ça devient un client."
     }
   ]
 }
