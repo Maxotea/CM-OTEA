@@ -70,6 +70,25 @@ Fichier dédié : [`cible-client.md`](cible-client.md).
 - **3 mots à bannir** : *booster*, *secret*, *technique infaillible*. La cible est
   saturée de développement personnel et repère le vernis marketing immédiatement.
 
+## Direction artistique des publications
+
+Adoptée le 04/08/2026, transposée d'une référence visuelle validée par Maxime : grille
+monochrome, grande typographie capitale posée sur les photos, un mot accentué, une
+italique en contrepoint. Les couleurs sont celles de ConfShine, pas celles de la
+référence.
+
+| | Règle |
+|---|---|
+| **Teinte** | Un seul violet décliné : `#3E2578` clair · `#2C1B57` médian · `#150C2E` sombre. Ivoire `#F3EFE6` pour les vignettes claires. Or `#E8C878` en accent. Vert trèfle `#23805F` en respiration, **une vignette sur neuf maximum**. |
+| **Typo** | Serif à fort contraste **en capitales** pour la phrase (Bodoni 72 / Didot / Playfair). Italique du serif de labeur en contrepoint, **une ligne maximum**. |
+| **Accent** | **Un seul mot en or** par visuel — celui qui fait basculer la phrase. Jamais deux. |
+| **Photos** | Toutes virées vers la même teinte. Visage en bas de cadre, texte en haut. **Jamais de photo brute non traitée.** |
+| **Phrase** | **Deux à quatre mots.** Si ça ne tient pas en trois lignes, ça appartient à la légende, pas au visuel. |
+| **Rythme de grille** | Jamais deux vignettes claires côte à côte, jamais deux reels alignés. La grille se compose par blocs de trois. |
+
+Le compte se juge de loin avant d'être lu : c'est la cohérence des neuf dernières
+vignettes qui décide, pas la qualité d'un post isolé.
+
 ## Interdits
 
 - Réduire ConfShine à « apprendre à parler en public ».
