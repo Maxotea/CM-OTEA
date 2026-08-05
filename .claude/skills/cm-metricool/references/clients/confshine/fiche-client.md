@@ -110,13 +110,19 @@ Défaut proposé : validation par Audrey, sous 72 h, par WhatsApp.
 
 La règle du moteur est explicite : **ne pas produire tant que la banque n'est pas
 publiée sur une URL publique**. Aujourd'hui ConfShine a des rushes de 7 à 13 Go, du
-b-roll iPhone en HEIC, et zéro photo prête à poster. Deux sorties possibles :
+b-roll iPhone en HEIC, et zéro photo prête à poster.
 
-1. **Dérusher l'existant** — il y a de la matière (tournages des 28/07 et 03/08, b-roll
-   iPhone) : extraire les images fixes, convertir, recadrer, publier le dossier.
-2. **Vendre le shooting de constitution (750 €)** — 40 photos classées par pilier. C'est
-   la vente naturelle juste après la signature, et elle finance le temps qu'elle
-   économise ensuite.
+**Contrainte de calendrier (04/08/2026) : aucun shooting possible avant fin août.**
+D'où la séquence retenue, qui découple le démarrage de la séance photo :
 
-Tant que ni l'un ni l'autre n'est fait, chaque post part en brouillon manuel : environ
-une heure perdue par mois, douze sur l'année.
+1. **Août — dérusher l'existant.** Images fixes tirées des tournages des 28/07 et 03/08,
+   b-roll iPhone converti et recadré, plus les visuels typographiques aux gabarits de la
+   charte 2026 (qui ne demandent aucune photo). C'est assez pour tenir le mois. Publier
+   ce lot sur URL publique.
+2. **Fin août — le shooting de constitution (750 €).** 40 photos classées par pilier,
+   et **les quatre reels tournés dans la même demi-journée**. Alimente septembre à
+   décembre.
+
+Sans ce découplage, la proposition s'auto-bloquait : elle vendait un shooting comme
+préalable à un démarrage qui ne pouvait pas attendre. Le shooting reste la vente
+naturelle, mais il n'est plus une condition d'entrée.
