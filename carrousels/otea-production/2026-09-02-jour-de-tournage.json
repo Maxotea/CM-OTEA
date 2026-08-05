@@ -1,0 +1,55 @@
+{
+  "client": "otea-production",
+  "slug": "2026-09-02-jour-de-tournage",
+  "archetype": "A7",
+  "pilier": "P3",
+  "date_time": "2026-09-02T12:00:00",
+  "cible": "Dirigeant qui craint qu'un tournage paralyse ses locaux et mobilise ses équipes toute la journée",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Coulisses",
+      "title": "Ce qui se passe le jour du tournage",
+      "body": "Heure par heure, pour ceux qui redoutent d'immobiliser leurs équipes."
+    },
+    {
+      "kicker": "La crainte",
+      "title": "On va bloquer les bureaux toute la journée",
+      "body": "C'est la première objection que nous entendons. Elle est légitime, et elle se règle au moment de la préparation, pas le jour même."
+    },
+    {
+      "kicker": "Avant votre arrivée",
+      "title": "L'installation est déjà faite",
+      "body": "Nous arrivons en avance. Lumière, son, cadres. Quand vos équipes entrent, il ne reste qu'à tourner."
+    },
+    {
+      "kicker": "Les interviews",
+      "title": "Vingt à trente minutes par personne",
+      "body": "Pas davantage. Chaque intervenant sait quand il passe et repart travailler ensuite. Personne n'attend son tour dans un couloir."
+    },
+    {
+      "kicker": "Les images d'illustration",
+      "title": "Tournées pendant que vous travaillez",
+      "body": "Gestes, ateliers, écrans, échanges. Ce sont ces plans-là qui rendent un film crédible, et ils se tournent sans rien arrêter."
+    },
+    {
+      "kicker": "En fin de journée",
+      "title": "On vérifie avant de plier",
+      "body": "Relecture des rushes sur place. Ce qui manque se retourne immédiatement, plutôt que de découvrir le trou au montage."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Une journée de tournage n'arrête pas une entreprise",
+      "body": "Elle demande environ trente minutes à chaque intervenant, et rien de plus au reste des équipes."
+    },
+    {
+      "cta": true,
+      "kicker": "OTEA Production",
+      "title": "Voyons comment cela se passerait chez vous",
+      "body": "Repérage et cadrage avant toute proposition. Échange sans engagement, lien en bio."
+    }
+  ],
+  "caption": "La première objection à un tournage n'est presque jamais le budget. C'est : on va bloquer les bureaux toute la journée.\n\nAlors voici comment se déroule réellement une journée chez un client. Faites défiler.\n\nEn pratique : environ trente minutes par intervenant, et le reste des équipes continue de travailler.\n\nVoyons ce que cela donnerait chez vous, lien en bio.",
+  "hashtags": ["#tournage", "#videoentreprise", "#productionaudiovisuelle", "#marqueemployeur", "#interview", "#coulisses"],
+  "note": "Publication 12h00, IG + FB + LinkedIn. Visuel de couverture : privilégier une vraie photo du shooting HOMESANFAUTE plutôt que la slide typographique si le rendu s'y prête. Aucun tarif annoncé."
+}

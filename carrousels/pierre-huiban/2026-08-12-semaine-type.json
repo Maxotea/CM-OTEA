@@ -1,0 +1,55 @@
+{
+  "client": "pierre-huiban",
+  "slug": "2026-08-12-semaine-type",
+  "archetype": "A7",
+  "pilier": "P3",
+  "date_time": "2026-08-12T18:00:00",
+  "cible": "Pratiquant Hyrox amateur qui bosse à plein temps, s'entraîne quand il peut, et se demande à quoi ressemble vraiment une semaine de prépa",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Coulisses",
+      "title": "Une semaine de prépa, vraiment",
+      "body": "Pas la version Instagram. Celle qui rentre entre le taf et les enfants."
+    },
+    {
+      "kicker": "Le contexte",
+      "title": "Boulot, famille, entraînement",
+      "body": "Personne ne s'entraîne dans le vide. La vraie contrainte, c'est le créneau, pas la motivation."
+    },
+    {
+      "kicker": "Lundi",
+      "title": "Force lourde",
+      "body": "Jambes et tirage. C'est ce qui tient le sled et le farmers carry quand le cardio est déjà dans le rouge."
+    },
+    {
+      "kicker": "Mardi",
+      "title": "Course, allure cible",
+      "body": "Pas du footing. L'allure que tu veux tenir entre les stations, répétée jusqu'à ce qu'elle devienne confortable."
+    },
+    {
+      "kicker": "Mercredi",
+      "title": "Compromis",
+      "body": "Le seul jour où tu apprends à courir avec les jambes détruites. C'est la séance qu'on saute le plus, et celle qui fait le chrono."
+    },
+    {
+      "kicker": "Jeudi et vendredi",
+      "title": "Stations faibles, puis intensité",
+      "body": "On travaille ce qui coûte le plus, jamais ce qui fait plaisir. Puis une séance courte et dure."
+    },
+    {
+      "kicker": "Week-end",
+      "title": "Volume, puis rien",
+      "body": "Une longue le samedi. Le dimanche, récup complète. Pas de séance bonus, pas de rattrapage. C'est la partie la plus dure à respecter."
+    },
+    {
+      "cta": true,
+      "kicker": "Road to Stockholm",
+      "title": "Sept jours. Aucun jour magique.",
+      "body": "Ce qui construit un chrono, c'est ce que tu répètes quand personne ne regarde. Abonne-toi, on continue. LFG."
+    }
+  ],
+  "caption": "On me demande souvent à quoi ressemble une semaine de prépa Hyrox quand tu bosses à plein temps.\n\nLa voilà. Pas la version Instagram. Celle qui rentre entre le taf, la maison et les enfants. Swipe.\n\nLa séance que tout le monde saute, c'est celle du mercredi. C'est aussi celle qui fait le chrono le jour J.\n\nLFG.",
+  "hashtags": ["#hyrox", "#hyroxfrance", "#roadtostockholm", "#hyroxtraining", "#lfg"],
+  "note": "Aucun chrono, aucun volume chiffré, aucun nom de coach cité : la structure de semaine doit être confirmée par Pierre avant publication, et les chiffres ajoutés seulement s'il les fournit. Aucun sponsor mentionné dans ce carrousel."
+}

@@ -1,0 +1,55 @@
+{
+  "client": "gossip-beauty-center",
+  "slug": "2026-08-19-erreurs-cheveux-ete",
+  "archetype": "A2",
+  "pilier": "P1",
+  "date_time": "2026-08-19T18:00:00",
+  "cible": "Femme qui rentre de vacances avec des cheveux ternes, secs ou décolorés par le soleil, et qui pense qu'il n'y a rien à faire avant la repousse",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Cheveux",
+      "title": "5 erreurs qui abîment vos cheveux en été",
+      "body": "Et celles que l'on peut encore rattraper en septembre."
+    },
+    {
+      "kicker": "Erreur 1",
+      "title": "Attacher les cheveux mouillés",
+      "body": "Le cheveu humide est fragile. Serré dans un élastique, il casse à l'endroit du pli. C'est de là que viennent la plupart des cassures de l'été."
+    },
+    {
+      "kicker": "Erreur 2",
+      "title": "Rincer plus tard",
+      "body": "Le sel et le chlore continuent d'agir tant qu'ils restent dans la fibre. Un rinçage à l'eau claire en sortant, même rapide, limite déjà beaucoup."
+    },
+    {
+      "kicker": "Erreur 3",
+      "title": "Multiplier les shampooings",
+      "body": "Cheveux poisseux, on lave davantage, on dessèche encore plus. Mieux vaut un shampooing doux et un soin, que trois lavages en trois jours."
+    },
+    {
+      "kicker": "Erreur 4",
+      "title": "Oublier de protéger les longueurs",
+      "body": "On protège sa peau, jamais ses cheveux. Pourtant ce sont les longueurs, les plus anciennes, qui encaissent le soleil sans pouvoir se réparer seules."
+    },
+    {
+      "kicker": "Erreur 5",
+      "title": "Attendre pour couper",
+      "body": "Une pointe fourchue remonte le long de la fibre. Un centimètre retiré en septembre évite d'en perdre cinq en janvier."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Rincer, espacer, nourrir, couper",
+      "body": "Aucun de ces gestes ne demande de produit rare. Seulement un peu de régularité."
+    },
+    {
+      "cta": true,
+      "kicker": "Gossip Beauty Center, Argenteuil",
+      "title": "Faisons le point sur vos longueurs",
+      "body": "Diagnostic, soin adapté et remise en forme des pointes. Écrivez-nous en message privé, nous vous dirons ce dont vos cheveux ont besoin."
+    }
+  ],
+  "caption": "Vos cheveux ont pris le soleil, le sel et le chlore pendant deux mois. La bonne nouvelle : la plupart des dégâts de l'été se rattrapent en septembre.\n\nCinq erreurs que nous voyons chaque année à la rentrée, et le geste qui corrige chacune. Faites défiler.\n\nLa cinquième est celle qui coûte le plus de longueur sur l'année.\n\nÉcrivez-nous en message privé pour un diagnostic.",
+  "hashtags": ["#soincheveux", "#argenteuil", "#coiffure", "#cheveuxabimes", "#rentree", "#institutdebeaute"],
+  "note": "Aucun prix, aucun nom de produit, aucune allégation de résultat : conseils d'entretien uniquement. Vouvoiement élégant conforme à la fiche."
+}

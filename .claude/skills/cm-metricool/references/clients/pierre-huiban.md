@@ -45,3 +45,11 @@
 ## Stories quotidiennes août 2026 (28/07/2026)
 - Banque 7 cartes typographiques 9:16 `medias/pierre-huiban/ia-stories/` — DA fiche (Pitch Black #0A0A0A + Rouge #DC2626, uppercase condensé) : lun LUNDI-ON-REPART-LFG, mar PAS-D'EXCUSES, mer LA-DONNÉE-PARLE, jeu ÇA-BRÛLE, ven ENCORE-UNE-SÉANCE, sam SAMEDI-VOLUME, dim RÉCUP. Cartes design (pas de fausses photos) — conforme à la règle « vraies photos only » pour le photographique.
 - **31 stories planifiées ✅** 01→31/08 à **06:00** (son créneau), Instagram uniquement, brouillon, via `bulk_schedule_stories`.
+
+## Carrousel hebdo (créneau du mercredi, 18h, Instagram)
+- **Typologie** : personal branding athlète → la preuve est la donnée et la constance, jamais la promesse. **Cible** : communauté Hyrox France (pratiquants amateurs qui bossent à plein temps) et marques cherchant un athlète authentique. Jargon Hyrox assumé, tutoiement, aucune mise en scène.
+- **Archétypes prioritaires** : A7 (coulisses), A2 (erreurs), A1 (méthode), A5 (guide de choix). A6 (décryptage chiffré) dès que Pierre fournit ses vrais chronos et volumes — **ne jamais fabriquer un chiffre**.
+- **DA carrousel** (`scripts/themes.json` → `pierre-huiban`) : Pitch Black #0A0A0A, texte blanc, accent Rouge Sang #DC2626, capitales, stats en mono. Cartes typographiques uniquement — conforme à la règle « vraies photos only » pour le photographique, on ne fabrique aucune image de lui.
+- **Planifiés (spec dans `carrousels/pierre-huiban/`)** : 12/08 A7 « Une semaine de prépa, vraiment » · 19/08 A2 « 5 erreurs qui te coûtent des minutes » · 26/08 A1 « Sled push : la station qui casse ta course » · 02/09 A5 « Quelle station bosser en priorité ».
+- **Ce que ça résout** : la fiche signalait que les posts « Swipez → » n'avaient qu'une photo de couverture, sans slides. Le format carrousel est désormais outillé — les anciens posts « Swipez » peuvent être repris avec ce moteur.
+- **Vigilance** : **tout le contenu technique doit être relu par Pierre avant publication** — c'est son expertise, pas la nôtre. Aucun chrono, aucune charge en kilos, aucune date de Mondiaux cités sans vérification. Aucun sponsor mentionné dans ces quatre carrousels : un carrousel sponsorisé exige les handles exacts, les règles de tag contractuelles et de vraies photos produit, tout cela encore manquant.

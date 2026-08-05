@@ -1,0 +1,152 @@
+{
+  "_doc": "Direction artistique des carrousels, un thème par compte. Dérivée de l'élément de référence Higgsfield de chaque marque (voir la fiche client). Ne pas modifier une DA sans mettre à jour la fiche : la régularité visuelle est ce qui fait reconnaître le compte dans le fil. Champs : bg fond, fg texte principal, muted texte secondaire, accent couleur d'accent, cta_bg/cta_fg fond et texte de la slide CTA, font_family famille de polices par ordre de préférence (le script retombe sur les polices système), uppercase_titles titres en capitales, rule filet décoratif, networks réseaux du compte pour la planification, heure créneau de publication (Paris).",
+  "le-loft": {
+    "nom": "Le Loft",
+    "networks": [
+      "instagram"
+    ],
+    "heure": "18:00",
+    "bg": "#14110F",
+    "fg": "#F5EFE6",
+    "muted": "#B9AC9B",
+    "accent": "#C89B4B",
+    "cta_bg": "#C89B4B",
+    "cta_fg": "#14110F",
+    "font_family": [
+      "Avenir Next",
+      "Helvetica Neue",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "uppercase_titles": true,
+    "rule": true,
+    "note": "Masculin premium : noir mat, laiton, lumière chaude. Ton tutoiement énergique."
+  },
+  "gossip-beauty-center": {
+    "nom": "Gossip Beauty Center by Sarah",
+    "networks": [
+      "instagram",
+      "facebook"
+    ],
+    "heure": "18:00",
+    "bg": "#F7EFE9",
+    "fg": "#3F2E2A",
+    "muted": "#8A736B",
+    "accent": "#C9A227",
+    "cta_bg": "#3F2E2A",
+    "cta_fg": "#F7EFE9",
+    "font_family": [
+      "Avenir Next",
+      "Helvetica Neue",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "uppercase_titles": false,
+    "rule": true,
+    "note": "Institut féminin chaleureux : crème, rose poudré, laiton. Vouvoiement élégant. Aucune allégation médicale."
+  },
+  "jlawsongolf": {
+    "nom": "J Lawson Golf",
+    "networks": [
+      "instagram",
+      "facebook"
+    ],
+    "heure": "18:00",
+    "bg": "#0F1B2B",
+    "fg": "#F2F5F7",
+    "muted": "#8FA3B5",
+    "accent": "#4CAF7D",
+    "cta_bg": "#4CAF7D",
+    "cta_fg": "#0F1B2B",
+    "font_family": [
+      "Helvetica Neue",
+      "Arial",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "mono_family": [
+      "SF Mono",
+      "Menlo",
+      "DejaVu Sans Mono",
+      "Liberation Mono"
+    ],
+    "uppercase_titles": true,
+    "rule": true,
+    "note": "Tech premium : bleu marine, vert, métal noir mat. Les chiffres en police mono (signal data)."
+  },
+  "la-galerie-immobiliere": {
+    "nom": "La Galerie Immobilière",
+    "networks": [
+      "instagram",
+      "facebook"
+    ],
+    "heure": "18:00",
+    "bg": "#EFE9E1",
+    "fg": "#2E2A26",
+    "muted": "#7C7268",
+    "accent": "#B08D57",
+    "cta_bg": "#2E2A26",
+    "cta_fg": "#EFE9E1",
+    "font_family": [
+      "Didot",
+      "Georgia",
+      "Liberation Serif",
+      "DejaVu Serif"
+    ],
+    "uppercase_titles": false,
+    "rule": true,
+    "note": "Prestige parisien : beige, taupe, doré, vert sauge. Sérif assumé, vouvoiement élégant."
+  },
+  "otea-production": {
+    "nom": "OTEA PRODUCTION",
+    "networks": [
+      "instagram",
+      "facebook",
+      "linkedin"
+    ],
+    "heure": "12:00",
+    "bg": "#201E1E",
+    "fg": "#F1F1F1",
+    "muted": "#ACC1C0",
+    "accent": "#FF5800",
+    "cta_bg": "#FF5800",
+    "cta_fg": "#201E1E",
+    "font_family": [
+      "Forma DJR Display",
+      "Helvetica Neue",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "uppercase_titles": true,
+    "rule": false,
+    "note": "Charte Brandbook 2026 : orange #FF5800, noir #201E1E, blanc #F1F1F1, vert d'eau #ACC1C0. B2B, publication 12h."
+  },
+  "pierre-huiban": {
+    "nom": "Pierre Huiban",
+    "networks": [
+      "instagram"
+    ],
+    "heure": "18:00",
+    "bg": "#0A0A0A",
+    "fg": "#FFFFFF",
+    "muted": "#9A9A9A",
+    "accent": "#DC2626",
+    "cta_bg": "#DC2626",
+    "cta_fg": "#0A0A0A",
+    "font_family": [
+      "Anton",
+      "Impact",
+      "Liberation Sans Narrow",
+      "DejaVu Sans"
+    ],
+    "mono_family": [
+      "JetBrains Mono",
+      "Menlo",
+      "DejaVu Sans Mono",
+      "Liberation Mono"
+    ],
+    "uppercase_titles": true,
+    "rule": false,
+    "note": "Pitch Black + Rouge Sang, Anton uppercase, stats en mono. Énergie brute, aucune mise en scène."
+  }
+}
