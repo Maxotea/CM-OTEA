@@ -48,6 +48,22 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 - **`reel-script` / `reel-lint`** — l'écriture et la notation des vidéos courtes,
   appelées depuis le statut `Rédaction` / `Tournage`.
 
+## Les comptes rendus clients (dossier `recaps/`)
+
+Deux livrables distincts, tous deux pilotés par `recaps/clients-config.json` :
+
+| Livrable | Quand | Contenu |
+|---|---|---|
+| Récap hebdo | chaque lundi | ce qui **va** être publié — titres et horaires |
+| Compte rendu mensuel | début de mois | ce qui **a** été publié — **légende intégrale**, lien public, doublons et erreurs |
+
+Norme du compte rendu mensuel : `recaps/FORMAT-compte-rendu-mensuel.md`. Il se produit pour
+**tous** les comptes `recap_client: true`, y compris ceux où rien n'a été publié.
+
+**Règle absolue sur les destinataires** : l'adresse ne va dans le champ destinataire que si
+`email_confirme: true`. Sinon le brouillon se crée sans destinataire, adresse pressentie en tête du
+corps. Ne jamais envoyer automatiquement.
+
 ## Règles transverses
 
 1. **Ne jamais inventer une valeur de statut, de pilier ou de catégorie.** Les

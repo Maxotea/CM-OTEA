@@ -1,4 +1,5 @@
 {
+  "_doc_compte_rendu_mensuel": "DEUX livrables distincts s'appuient sur ce fichier. (1) Le récap HEBDO du lundi : ce qui VA être publié, titres et horaires suffisent. (2) Le COMPTE RENDU MENSUEL, début de mois, pour tous les comptes recap_client=true sans exception y compris ceux où rien n'a été publié : ce qui A été publié, avec la LÉGENDE INTÉGRALE de chaque publication, son lien public, ses erreurs et ses doublons. Norme complète et checklist : recaps/FORMAT-compte-rendu-mensuel.md. Un titre seul ne permet aucun retour client — c'est la raison d'être du format détaillé.",
   "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement.",
   "comptes": [
     {
@@ -91,9 +92,9 @@
     },
     {
       "blog_id": 6636615,
-      "nom": "(compte sans nom)",
+      "nom": "Run On Invest",
       "recap_client": false,
-      "note": "Détecté via list_brands le 29/07/2026 — à identifier."
+      "note": "Identifié le 05/08/2026 : Instagram @runoninvest. Projet événementiel porté par Maxime lui-même (course pro 5/10/21,5 km + networking investisseurs, La Défense, T3-T4 2027) — pas un client CM, donc pas de compte rendu client. 2 contenus au 04/08 dont 1 brouillon avec placeholders."
     }
   ]
 }
