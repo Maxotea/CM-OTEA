@@ -104,6 +104,10 @@ source client : **à faire valider par elle** avant toute publication qui s'en s
   (la politique réseau bloque le domaine, 403 au niveau du proxy). Restent donc à
   récupérer côté site : **témoignages, chiffres de preuve et appels à l'action**
   (formulaire, prise de RDV, newsletter).
+  **Il y a bien des retours clients sur le site** (confirmé par Maxime le 04/08/2026) :
+  ils n'ont pas pu être lus d'ici, il les faut en copie. C'est la matière la plus
+  rentable du dossier — déjà écrite, jamais utilisée sur les réseaux. À demander avec
+  l'accord d'Audrey pour les republier, et le prénom + la fonction de chaque personne.
 - blogId Metricool : compte **« Confshine Game » — 6625190** détecté via `list_brands`
   le 29/07/2026, marqué « pas de contenu CM géré, à configurer si ça devient un client »
   dans `recaps/clients-config.json`. ⚠️ Confirmer qu'il s'agit bien du même ConfShine

@@ -122,8 +122,10 @@ Chaque post porte aussi son pilier de méthode ConfShine (mental / éloquence / 
 
 `#reconversionprofessionnelle #legitimite #preparationmentale #alignement #oser`
 **Visuel** : portrait d'Audrey, registre posé — à produire.
-⚠️ À remplacer par un vrai témoignage client dès qu'on en a un : c'est la preuve la plus
-forte, et il n'y en a aucune au dossier aujourd'hui.
+⚠️ **À remplacer par un vrai témoignage client.** Maxime a confirmé le 04/08/2026 qu'il
+y en a sur confshine.com. Le site est inaccessible depuis cet environnement (403 au
+niveau du proxy) : les textes doivent être fournis en copie. Dès qu'ils sont là, ce post
+passe en témoignage et le récit de reconversion d'Audrey se replace ailleurs dans le mois.
 
 ---
 
