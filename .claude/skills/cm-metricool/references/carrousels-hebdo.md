@@ -224,3 +224,11 @@ héberger les slides.
 
 Le garde-fou ne change pas : tout arrive en **brouillon**, et c'est Maxime qui valide dans
 Metricool. L'automatisation supprime la manipulation, pas la validation.
+
+⚠️ **Régénérer le token Metricool casse la connexion Zapier.** Zapier stocke l'ancien token :
+toutes les actions Metricool passant par lui tombent en erreur — récap hebdo, stories,
+lecture des posts programmés, pas seulement les carrousels. Le symptôme est trompeur, Zapier
+renvoie un « Code execution hit an error » opaque plutôt qu'un 401 lisible. Après toute
+rotation, reconnecter la connexion Metricool dans Zapier, puis vérifier par un
+`list_scheduled_posts` sur un compte avant de considérer le système rétabli. Mettre aussi à
+jour le secret `METRICOOL_TOKEN` côté GitHub : les deux chemins utilisent le même token.
