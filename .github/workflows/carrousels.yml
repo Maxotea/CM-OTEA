@@ -14,6 +14,9 @@ on:
       semaine:
         description: "Date du mercredi visé (YYYY-MM-DD). Vide = le prochain mercredi."
         required: false
+      client:
+        description: "Ne traiter qu'un compte (ex. le-loft). Vide = les six."
+        required: false
       dry_run:
         description: "Ne rien publier, seulement afficher ce qui serait fait"
         type: boolean
@@ -54,6 +57,7 @@ jobs:
         run: |
           python3 scripts/publier.py \
             --semaine "${{ steps.semaine.outputs.date }}" \
+            ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Conserver les slides rendues

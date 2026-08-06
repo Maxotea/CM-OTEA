@@ -91,9 +91,24 @@ def heberger(chemins):
 
 
 def normaliser(url):
-    """Fait recopier le média par Metricool sur son CDN. C'est ce qui rend l'hébergement jetable."""
-    return _req(f"{NORMALIZE}?{urllib.parse.urlencode({'url': url})}",
-                headers={"X-Mc-Auth": os.environ["METRICOOL_TOKEN"]})
+    """Fait recopier le média par Metricool sur son CDN, et retourne l'URL à utiliser.
+
+    La forme exacte de la réponse n'est pas documentée : on accepte une chaîne nue comme un
+    objet, et on retombe sur l'URL d'origine plutôt que de glisser un dict dans `media`, ce
+    qui produirait un post accepté mais sans image.
+    """
+    rep = _req(f"{NORMALIZE}?{urllib.parse.urlencode({'url': url})}",
+               headers={"X-Mc-Auth": os.environ["METRICOOL_TOKEN"]})
+    if isinstance(rep, str):
+        return rep
+    if isinstance(rep, dict):
+        for cle in ("data", "url", "result"):
+            val = rep.get(cle)
+            if isinstance(val, str) and val.startswith("http"):
+                return val
+            if isinstance(val, dict) and isinstance(val.get("url"), str):
+                return val["url"]
+    return url
 
 
 def poste_du_jour(blog_id, date_iso):
@@ -123,10 +138,13 @@ def publier(spec_path, dry_run=False):
     remplaces = poste_du_jour(blog_id, spec["date_time"])
     if dry_run:
         print(f"[dry-run] {client} {spec['date_time']} — {len(slides)} slides, "
+              f"réseaux {'+'.join(manifest['networks'])}, "
               f"{len(remplaces)} post(s) feed à remplacer")
+        for p in remplaces:
+            print(f"           └ supprimerait {p['id']} : {p.get('text', '')[:60]}…")
         return
 
-    urls = [normaliser(u).get("data", u) for u in heberger(slides)]
+    urls = [normaliser(u) for u in heberger(slides)]
 
     corps = {
         "text": legende,
@@ -154,6 +172,9 @@ def main():
     ap.add_argument("--semaine", required=True,
                     help="date du mercredi, format YYYY-MM-DD (les specs sont nommées ainsi)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft. "
+                                     "À utiliser pour le premier run réel : on vérifie sur un "
+                                     "compte avant d'écrire sur les six.")
     args = ap.parse_args()
 
     requis = ["METRICOOL_USER_ID", "METRICOOL_TOKEN"] + ([] if args.dry_run else ["IMGBB_API_KEY"])
@@ -161,9 +182,10 @@ def main():
     if absents:
         raise SystemExit(f"secrets manquants : {', '.join(absents)}")
 
-    specs = sorted((ROOT / "carrousels").glob(f"*/{args.semaine}-*.json"))
+    motif = f"{args.client or '*'}/{args.semaine}-*.json"
+    specs = sorted((ROOT / "carrousels").glob(motif))
     if not specs:
-        raise SystemExit(f"aucun carrousel pour le {args.semaine}")
+        raise SystemExit(f"aucun carrousel pour {motif}")
 
     echecs = 0
     for s in specs:
