@@ -22,6 +22,12 @@ Horaire : celui du compte (18 h en B2C, 12 h en B2B). Si un événement majeur t
 le carrousel glisse au jeudi plutôt que d'être supprimé — c'est le format qui travaille le plus,
 on ne le sacrifie pas.
 
+**Vérifier la cadence réelle du compte avant d'appliquer la règle.** Tous les comptes ne publient
+pas le mercredi : La Galerie Immobilière sort ses posts feed le vendredi à 12h30, le carrousel s'y
+**ajoute** au lieu de remplacer. C'est acceptable sur un forfait haut de gamme, pas sur un palier
+d'entrée où le volume est le mécanisme qui protège la marge. Un coup d'œil au planning du compte
+avant le premier carrousel évite de découvrir l'écart après coup.
+
 ## 2. Anatomie : 8 slides, jamais plus
 
 L'API Metricool accepte jusqu'à 10 médias (`media01` … `media10`). On plafonne à **8** : au-delà,

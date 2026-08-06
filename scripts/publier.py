@@ -134,21 +134,40 @@ def normaliser(url):
     return url
 
 
-def poste_du_jour(blog_id, date_iso):
+def posts_du_jour(blog_id, date_iso):
+    jour = date_iso[:10]
+    return metricool("/scheduler/posts", blogId=blog_id,
+                     start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
+
+
+def deja_planifie(posts, date_iso, legende):
+    """Le carrousel est-il déjà en place ? Compare l'horaire et le texte exact.
+
+    Sans ce garde-fou, relancer une semaine déjà traitée crée un doublon — et pire, le
+    carrousel précédent, étant lui-même un POST en brouillon, serait ensuite supprimé par
+    poste_du_jour(). Le cron du lundi repasse sur le même mercredi : la question n'est pas
+    théorique.
+    """
+    attendu = " ".join(legende.split())
+    return any(p.get("publicationDate", {}).get("dateTime") == date_iso
+               and " ".join((p.get("text") or "").split()) == attendu
+               for p in posts)
+
+
+def poste_du_jour(posts):
     """Le post feed simple déjà planifié ce jour-là — celui que le carrousel remplace.
 
-    Ne retient QUE le type POST. Un REEL coûte un tournage et un montage : il ne se
-    remplace pas par un carrousel généré, et une story ne consomme pas le quota feed.
+    Ne retient QUE le type POST à média unique. Un REEL coûte un tournage et un montage,
+    une story ne consomme pas le quota feed, et un post à plusieurs médias est déjà un
+    carrousel — aucun des trois ne se remplace par des slides générées.
     Ne retient que les brouillons non validés : ce que le client a validé lui appartient.
     """
-    jour = date_iso[:10]
-    posts = metricool("/scheduler/posts", blogId=blog_id,
-                      start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
     return [p for p in posts
             if p.get("instagramData", {}).get("type") == "POST"
             and p.get("providers", [{}])[0].get("status") == "PENDING"
             and p.get("draft") is True
-            and p.get("autoPublish") is False]
+            and p.get("autoPublish") is False
+            and len(p.get("media") or []) <= 1]
 
 
 def publier(spec_path, dry_run=False):
@@ -164,7 +183,12 @@ def publier(spec_path, dry_run=False):
     if manquantes:
         raise SystemExit(f"{slug} : slides absentes {manquantes} — lancer scripts/carrousel.py d'abord")
 
-    remplaces = poste_du_jour(blog_id, spec["date_time"])
+    posts = posts_du_jour(blog_id, spec["date_time"])
+    if deja_planifie(posts, spec["date_time"], legende):
+        print(f"= {client} {spec['date_time']} — déjà planifié, ignoré")
+        return
+
+    remplaces = poste_du_jour(posts)
     if dry_run:
         print(f"[dry-run] {client} {spec['date_time']} — {len(slides)} slides, "
               f"réseaux {'+'.join(manifest['networks'])}, "
