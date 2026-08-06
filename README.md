@@ -26,3 +26,39 @@ Le rendu part dans `medias/<client>/carrousels/<slug>/` (dossier ignoré par git
 
 ## Ajouter un client
 Dupliquer `references/clients/_template-nouveau-client.md`, remplir, créer si besoin sa `banque-photos-[client].md`, et ajouter sa DA de carrousel dans `scripts/themes.json`.
+
+## Répartition Drive / GitHub
+
+Deux stockages, deux rôles. Les confondre crée des copies qui divergent.
+
+| | Rôle | Qui y écrit |
+|---|---|---|
+| **Boîte de dépôt Drive** (une par client, partagée avec lui) | Médias bruts : photos et vidéos prises au téléphone | Le client, et Maxime |
+| **Ce dépôt GitHub** | Code, contenus rédigés, manifestes, DA, fiches clients | Maxime et Claude |
+
+`scripts/drive_sync.py` fait le pont, **dans un seul sens** : il lit la boîte du client, repère
+ce qui est nouveau, l'héberge et met à jour `photos/<client>.json`. Il ne crée, ne renomme et ne
+supprime jamais rien côté Drive — c'est la boîte du client, pas la nôtre. Il tourne chaque matin
+à 7 h, et à la demande (workflow « Boîtes de dépôt Drive »).
+
+La déduplication se fait **par empreinte du contenu**, pas par nom de fichier : une même photo
+envoyée deux fois depuis un téléphone n'entre qu'une fois dans le manifeste.
+
+Un média fraîchement récupéré arrive avec un `sujet` et un `pilier` **vides**. C'est volontaire :
+savoir qu'une photo montre les bacs de coiffure et non le hammam demande un œil, pas un script.
+**Un média non qualifié ne doit jamais être attaché automatiquement à un post.**
+
+⚠️ **Ne pas synchroniser le dépôt entier vers le Drive.** Une copie de ce dépôt existe dans le
+Drive depuis juillet 2026, `.git` compris : elle donne l'illusion d'être à jour alors qu'elle
+ignore tout ce qui a été fait depuis. Le Drive porte les médias, GitHub porte le reste.
+
+### Mettre en place la boîte d'un nouveau client
+
+1. Créer un dossier Drive au nom du client, ne contenant **que** ses médias.
+2. Le partager : « Tous les utilisateurs disposant du lien — Lecteur », puis le donner au client.
+3. Créer `photos/<client>.json` avec `client`, `drive_folder` (l'identifiant du dossier) et
+   `photos: []`.
+4. Lancer le workflow « Boîtes de dépôt Drive » en `dry_run` pour vérifier la lecture.
+
+Secret nécessaire : `GOOGLE_API_KEY` — une clé API Google avec l'API Drive activée. Elle suffit
+à lire un dossier partagé par lien ; aucun compte de service à créer.
