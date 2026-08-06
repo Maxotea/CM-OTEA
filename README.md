@@ -58,7 +58,12 @@ ignore tout ce qui a été fait depuis. Le Drive porte les médias, GitHub porte
 2. Le partager : « Tous les utilisateurs disposant du lien — Lecteur », puis le donner au client.
 3. Créer `photos/<client>.json` avec `client`, `drive_folder` (l'identifiant du dossier) et
    `photos: []`.
-4. Lancer le workflow « Boîtes de dépôt Drive » en `dry_run` pour vérifier la lecture.
+4. Demander à Claude de lister le dossier : il ajoute les nouveaux fichiers au manifeste.
+5. Lancer le workflow « Boîtes de dépôt Drive » en `dry_run` pour vérifier la récupération.
 
-Secret nécessaire : `GOOGLE_API_KEY` — une clé API Google avec l'API Drive activée. Elle suffit
-à lire un dossier partagé par lien ; aucun compte de service à créer.
+**Aucune clé Google n'est nécessaire**, et c'est délibéré : l'API Drive de Google Cloud impose
+d'attacher une facturation. Le travail est donc coupé en deux — Claude **repère** les nouveaux
+fichiers via le connecteur Drive déjà connecté, l'action les **récupère** par le lien public du
+dossier partagé. Aucune des deux moitiés n'a besoin d'identifiants Google.
+
+Seul secret utilisé : `IMGBB_API_KEY`, le même que pour les slides.
