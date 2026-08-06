@@ -1,0 +1,56 @@
+name: Boîtes de dépôt Drive
+
+# Récupère ce que les clients déposent dans leur dossier Drive partagé, et met le manifeste
+# du dépôt à jour. Sens unique, Drive → dépôt : le script ne touche jamais au dossier du client.
+
+on:
+  schedule:
+    # Tous les jours à 5h00 UTC (7h00 à Paris) : le dépôt est prêt avant la journée de travail,
+    # et bien avant l'action carrousels du lundi.
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+    inputs:
+      client:
+        description: "Un seul compte (ex. gossip-beauty-center). Vide = tous."
+        required: false
+      dry_run:
+        description: "Lister ce qui serait récupéré, sans héberger ni commiter"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  synchroniser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Synchroniser
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+        run: |
+          python3 scripts/drive_sync.py \
+            ${{ inputs.client && inputs.client || '--tous' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commiter les manifestes modifiés
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- photos/; then
+            echo "Aucun nouveau média — rien à commiter."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add photos/
+          git commit \
+            -m "Récupère les nouveaux médias déposés par les clients dans le Drive" \
+            -m "Les entrées ajoutées ont un sujet et un pilier vides : elles demandent une qualification à l'œil avant de servir dans un post. Un média non qualifié ne doit jamais être attaché automatiquement."
+          git push
