@@ -112,14 +112,20 @@ def normaliser(url):
 
 
 def poste_du_jour(blog_id, date_iso):
-    """Le post feed déjà planifié ce jour-là — celui que le carrousel remplace."""
+    """Le post feed simple déjà planifié ce jour-là — celui que le carrousel remplace.
+
+    Ne retient QUE le type POST. Un REEL coûte un tournage et un montage : il ne se
+    remplace pas par un carrousel généré, et une story ne consomme pas le quota feed.
+    Ne retient que les brouillons non validés : ce que le client a validé lui appartient.
+    """
     jour = date_iso[:10]
     posts = metricool("/scheduler/posts", blogId=blog_id,
                       start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
     return [p for p in posts
-            if p.get("instagramData", {}).get("type") != "STORY"
+            if p.get("instagramData", {}).get("type") == "POST"
             and p.get("providers", [{}])[0].get("status") == "PENDING"
-            and p.get("draft") is True]
+            and p.get("draft") is True
+            and p.get("autoPublish") is False]
 
 
 def publier(spec_path, dry_run=False):
@@ -170,7 +176,8 @@ def publier(spec_path, dry_run=False):
 def main():
     ap = argparse.ArgumentParser(description="Publie les carrousels d'une semaine.")
     ap.add_argument("--semaine", required=True,
-                    help="date du mercredi, format YYYY-MM-DD (les specs sont nommées ainsi)")
+                    help="date du mercredi (YYYY-MM-DD). Un préfixe vaut lot : 2026-08 traite "
+                         "tous les mercredis d'août")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft. "
                                      "À utiliser pour le premier run réel : on vérifie sur un "

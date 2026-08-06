@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       semaine:
-        description: "Date du mercredi visé (YYYY-MM-DD). Vide = le prochain mercredi."
+        description: "Mercredi visé (YYYY-MM-DD), ou un préfixe : 2026-08 = tout août. Vide = prochain mercredi."
         required: false
       client:
         description: "Ne traiter qu'un compte (ex. le-loft). Vide = les six."
