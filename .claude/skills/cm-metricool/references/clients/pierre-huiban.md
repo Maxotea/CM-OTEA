@@ -3,7 +3,8 @@
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)
-- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne Road to Stockholm (Mondiaux Hyrox 2026)
+- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne **Road to Hong Kong** (Mondiaux Hyrox 2027)
+- S'entraîne avec son **binôme Antoine** — [@antoine_bhna](https://www.instagram.com/antoine_bhna/). À citer et à taguer dans tout contenu d'entraînement à deux ; ne rien affirmer sur une inscription en catégorie Doubles tant que Pierre ne l'a pas confirmé.
 - Ville / zone de chalandise : n/a (personal branding, pas de zone de chalandise)
 - Site web / source officielle : n/a — vérifier si un site/linktree existe
 
@@ -26,7 +27,10 @@
 - Cadence actuelle observée : reels/posts lifestyle Hyrox, horaires 00h30/06h00 (à confirmer si voulu, ces horaires semblent atypiques pour du lifestyle sport — à vérifier avec l'utilisateur)
 
 ## Saisonnalité & temps forts
-- Road to Stockholm : Mondiaux Hyrox 2026 (vérifier dates exactes par recherche web le moment venu)
+- **Road to Hong Kong — PUMA HYROX World Championships, 10 au 13 juin 2027, AsiaWorld-Expo (Hong Kong).** Vérifié par recherche web le 06/08/2026 (annonce officielle, presse HK). Premiers Mondiaux organisés en Asie-Pacifique.
+  - ⚠️ **Stockholm, c'était juin 2026 — c'est passé.** Toute mention de « Road to Stockholm » est une coquille : la campagne en cours vise Hong Kong. Corrigé partout le 06/08/2026 (fiche + 4 carrousels + brouillons Metricool).
+  - Échéance longue : ~10 mois d'arc narratif à partir d'août 2026. C'est ce qui rend le compte à rebours (J-XX) exploitable comme fil rouge, en cohérence avec les compteurs J-XX déjà dans sa ligne éditoriale.
+  - Seuls les meilleurs athlètes se qualifient (≈ 0,5 % de la communauté mondiale). **Ne jamais présenter Pierre comme qualifié** tant qu'il ne l'a pas annoncé lui-même : « Road to » est un objectif, pas un statut.
 - Contenus déjà en brouillon : famille/double vie, setup d'entraînement, mindset, coach (Quentin), objectifs fin 2026
 
 ## Tarifs vérifiés — pour le module ROI
@@ -52,4 +56,5 @@
 - **DA carrousel** (`scripts/themes.json` → `pierre-huiban`) : Pitch Black #0A0A0A, texte blanc, accent Rouge Sang #DC2626, capitales, stats en mono. Cartes typographiques uniquement — conforme à la règle « vraies photos only » pour le photographique, on ne fabrique aucune image de lui.
 - **Planifiés (spec dans `carrousels/pierre-huiban/`)** : 12/08 A7 « Une semaine de prépa, vraiment » · 19/08 A2 « 5 erreurs qui te coûtent des minutes » · 26/08 A1 « Sled push : la station qui casse ta course » · 02/09 A5 « Quelle station bosser en priorité ».
 - **Ce que ça résout** : la fiche signalait que les posts « Swipez → » n'avaient qu'une photo de couverture, sans slides. Le format carrousel est désormais outillé — les anciens posts « Swipez » peuvent être repris avec ce moteur.
+- **Slide CTA** : le kicker de la slide 8 porte la campagne — « **Road to Hong Kong** » sur les quatre, depuis la correction du 06/08/2026. Hashtag de campagne `#roadtohongkong`.
 - **Vigilance** : **tout le contenu technique doit être relu par Pierre avant publication** — c'est son expertise, pas la nôtre. Aucun chrono, aucune charge en kilos, aucune date de Mondiaux cités sans vérification. Aucun sponsor mentionné dans ces quatre carrousels : un carrousel sponsorisé exige les handles exacts, les règles de tag contractuelles et de vraies photos produit, tout cela encore manquant.
