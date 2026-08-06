@@ -219,8 +219,12 @@ fait recopier le média par Metricool sur son propre CDN. L'URL source n'a donc 
 vivre que le temps de l'appel — inutile de maintenir un hébergement permanent.
 
 Secrets attendus par l'action : `METRICOOL_USER_ID`, `METRICOOL_TOKEN` (plan Advanced
-minimum, en-tête `X-Mc-Auth` — jamais `Authorization: Bearer`, c'est un 401) et de quoi
-héberger les slides.
+minimum, en-tête `X-Mc-Auth` — jamais `Authorization: Bearer`, c'est un 401) et `IMGBB_API_KEY`.
+
+Sur l'hébergement : Metricool exige une URL publique **qui n'expire pas** — une URL signée ou
+temporaire est ignorée sans message d'erreur. C'est ce qui disqualifie les liens présignés et
+impose un hébergeur d'images. `heberger()` dans `scripts/publier.py` est le seul point de
+contact : basculer vers un bucket S3/R2 ne touche que cette fonction.
 
 Le garde-fou ne change pas : tout arrive en **brouillon**, et c'est Maxime qui valide dans
 Metricool. L'automatisation supprime la manipulation, pas la validation.
