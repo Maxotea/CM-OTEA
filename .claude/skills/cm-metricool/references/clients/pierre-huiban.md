@@ -3,7 +3,7 @@
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)
-- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne Road to Stockholm (Mondiaux Hyrox 2026)
+- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne Road to Hong Kong (Mondiaux Hyrox 2027)
 - Ville / zone de chalandise : n/a (personal branding, pas de zone de chalandise)
 - Site web / source officielle : n/a — vérifier si un site/linktree existe
 
@@ -26,7 +26,8 @@
 - Cadence actuelle observée : reels/posts lifestyle Hyrox, horaires 00h30/06h00 (à confirmer si voulu, ces horaires semblent atypiques pour du lifestyle sport — à vérifier avec l'utilisateur)
 
 ## Saisonnalité & temps forts
-- Road to Stockholm : Mondiaux Hyrox 2026 (vérifier dates exactes par recherche web le moment venu)
+- **Road to Hong Kong** : Mondiaux Hyrox 2027, AsiaWorld-Expo, 10-13 juin 2027 (vérifié par recherche web le 06/08/2026 — annoncé pendant les Mondiaux de Stockholm).
+- ⚠️ **Stockholm, c'est fini** : les Mondiaux 2026 ont eu lieu du 18 au 21 juin 2026. Le hashtag `#roadtostockholm` est périmé depuis. Une campagne datée se revérifie à chaque trimestre — celle-ci est restée dans la fiche deux mois de trop et s'est retrouvée dans quatre carrousels avant qu'un correctif manuel dans Metricool ne la rattrape.
 - Contenus déjà en brouillon : famille/double vie, setup d'entraînement, mindset, coach (Quentin), objectifs fin 2026
 
 ## Tarifs vérifiés — pour le module ROI

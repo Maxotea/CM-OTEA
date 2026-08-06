@@ -140,18 +140,19 @@ def posts_du_jour(blog_id, date_iso):
                      start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
 
 
-def deja_planifie(posts, date_iso, legende):
-    """Le carrousel est-il déjà en place ? Compare l'horaire et le texte exact.
+def carrousels_existants(posts, date_iso):
+    """Les carrousels déjà posés sur ce créneau : même horaire, plusieurs médias.
 
-    Sans ce garde-fou, relancer une semaine déjà traitée crée un doublon — et pire, le
-    carrousel précédent, étant lui-même un POST en brouillon, serait ensuite supprimé par
-    poste_du_jour(). Le cron du lundi repasse sur le même mercredi : la question n'est pas
-    théorique.
+    La clé est l'horaire, PAS le texte. Une première version comparait la légende exacte :
+    il suffisait qu'un humain corrige un mot dans Metricool pour que l'ancien carrousel
+    devienne invisible, et la republication en créait un second. C'est arrivé — un hashtag
+    de campagne périmé corrigé à la main, et deux carrousels identiques sur le même créneau.
+
+    Un créneau ne porte qu'un carrousel : c'est ça, l'invariant à tenir.
     """
-    attendu = " ".join(legende.split())
-    return any(p.get("publicationDate", {}).get("dateTime") == date_iso
-               and " ".join((p.get("text") or "").split()) == attendu
-               for p in posts)
+    return [p for p in posts
+            if p.get("publicationDate", {}).get("dateTime") == date_iso
+            and len(p.get("media") or []) > 1]
 
 
 def poste_du_jour(posts):
@@ -184,8 +185,7 @@ def publier(spec_path, dry_run=False, remplacer=False):
         raise SystemExit(f"{slug} : slides absentes {manquantes} — lancer scripts/carrousel.py d'abord")
 
     posts = posts_du_jour(blog_id, spec["date_time"])
-    existants = [p for p in posts
-                 if deja_planifie([p], spec["date_time"], legende)]
+    existants = carrousels_existants(posts, spec["date_time"])
     if existants and not remplacer:
         print(f"= {client} {spec['date_time']} — déjà planifié, ignoré")
         return
