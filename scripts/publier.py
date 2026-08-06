@@ -5,7 +5,7 @@
     python3 scripts/publier.py --semaine 2026-08-12 --dry-run
 
 Conçu pour tourner dans GitHub Actions, pas dans une session Claude : la politique
-réseau des sessions distantes bloque app.metricool.com et upload.higgsfield.ai, un
+réseau des sessions distantes bloque app.metricool.com et les hébergeurs d'images, un
 runner Actions ne les bloque pas.
 
 Attaque l'API Metricool en direct plutôt que de passer par Zapier. Deux conséquences
@@ -16,10 +16,11 @@ qui justifient à elles seules le détour :
 
 Secrets attendus dans l'environnement :
   METRICOOL_USER_ID, METRICOOL_TOKEN   (Metricool, plan Advanced minimum)
-  HIGGSFIELD_API_KEY                   (hébergement des slides)
+  IMGBB_API_KEY                        (hébergement des slides, gratuit)
 """
 
 import argparse
+import base64
 import json
 import os
 import sys
@@ -61,28 +62,32 @@ def metricool(path, method="GET", body=None, **query):
 def heberger(chemins):
     """Rend chaque slide accessible par une URL publique. Retourne les URLs, dans l'ordre.
 
-    Passe par Higgsfield, déjà utilisé pour les stories : presigned PUT puis confirmation.
-    L'URL n'a besoin de vivre que jusqu'à l'appel de `normaliser` ci-dessous, Metricool
-    recopiant ensuite le média sur son propre CDN.
+    Metricool exige une URL publique **qui n'expire pas** : une URL signée ou temporaire est
+    ignorée silencieusement. D'où le passage par un hébergeur d'images plutôt que par un lien
+    présigné. En pratique l'URL ne sert qu'une fois, `normaliser` ci-dessous faisant recopier
+    le fichier sur le CDN de Metricool.
 
-    ⚠️ Les deux chemins REST ci-dessous n'ont pas pu être vérifiés depuis la session qui a
-    écrit ce fichier (upload.higgsfield.ai y est bloqué par la politique réseau). À valider
-    au premier run de l'action, ou à remplacer par un bucket S3/R2 : seule cette fonction
-    change, elle est le seul point de contact avec l'hébergeur.
+    Implémentation : imgbb, gratuit, une clé suffit (https://api.imgbb.com/). C'est le seul
+    point de contact avec l'hébergeur — pour basculer sur un bucket S3/R2 ou un dépôt public,
+    seule cette fonction change.
     """
-    key = os.environ["HIGGSFIELD_API_KEY"]
-    auth = {"Authorization": f"Bearer {key}"}
-    payload = {"files": [{"filename": p.name, "content_type": "image/png"} for p in chemins]}
-    uploads = _req("https://api.higgsfield.ai/v1/media/upload", "POST", payload, auth)["uploads"]
-
-    for p, up in zip(chemins, uploads):
-        req = urllib.request.Request(up["upload_url"], data=p.read_bytes(),
-                                     method="PUT", headers={"Content-Type": "image/png"})
-        urllib.request.urlopen(req, timeout=120).read()
-
-    _req("https://api.higgsfield.ai/v1/media/confirm", "POST",
-         {"type": "image", "media_ids": [u["media_id"] for u in uploads]}, auth)
-    return [u["url"] for u in uploads]
+    key = os.environ["IMGBB_API_KEY"]
+    urls = []
+    for p in chemins:
+        corps = urllib.parse.urlencode({
+            "key": key,
+            "name": p.stem,
+            "image": base64.b64encode(p.read_bytes()).decode(),
+        }).encode()
+        req = urllib.request.Request(
+            "https://api.imgbb.com/1/upload", data=corps, method="POST",
+            headers={"Content-Type": "application/x-www-form-urlencoded"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            rep = json.loads(r.read().decode())
+        if not rep.get("success"):
+            raise RuntimeError(f"hébergement de {p.name} refusé : {rep}")
+        urls.append(rep["data"]["url"])
+    return urls
 
 
 def normaliser(url):
@@ -151,7 +156,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    requis = ["METRICOOL_USER_ID", "METRICOOL_TOKEN"] + ([] if args.dry_run else ["HIGGSFIELD_API_KEY"])
+    requis = ["METRICOOL_USER_ID", "METRICOOL_TOKEN"] + ([] if args.dry_run else ["IMGBB_API_KEY"])
     absents = [v for v in requis if not os.environ.get(v)]
     if absents:
         raise SystemExit(f"secrets manquants : {', '.join(absents)}")

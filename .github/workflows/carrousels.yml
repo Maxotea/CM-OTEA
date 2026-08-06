@@ -50,7 +50,7 @@ jobs:
         env:
           METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
           METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
-          HIGGSFIELD_API_KEY: ${{ secrets.HIGGSFIELD_API_KEY }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
         run: |
           python3 scripts/publier.py \
             --semaine "${{ steps.semaine.outputs.date }}" \
