@@ -1,0 +1,55 @@
+{
+  "client": "la-galerie-immobiliere",
+  "slug": "2026-08-19-vendre-ou-louer",
+  "archetype": "A5",
+  "pilier": "P1",
+  "date_time": "2026-08-19T18:00:00",
+  "cible": "Propriétaire d'un bien devenu vacant, qui hésite entre le vendre et le mettre en location, et n'a personne pour poser la question correctement",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Arbitrage",
+      "title": "Vendre ou louer : comment trancher",
+      "body": "Quatre questions, dans cet ordre. La réponse apparaît d'elle-même."
+    },
+    {
+      "kicker": "Le vrai sujet",
+      "title": "Ce n'est pas une question de rendement",
+      "body": "C'est une question de projet. Le rendement n'arbitre que si l'on sait déjà ce que l'on veut faire des dix prochaines années."
+    },
+    {
+      "kicker": "Question 1",
+      "title": "Avez-vous besoin du capital ?",
+      "body": "Si la vente finance un autre achat, un projet ou une transmission, la question est déjà tranchée. Tout le reste devient secondaire."
+    },
+    {
+      "kicker": "Question 2",
+      "title": "Le bien se loue-t-il facilement ici ?",
+      "body": "Un bien recherché à la location se loue vite et bien. Un bien atypique peut rester vacant, et une vacance coûte davantage qu'un loyer modéré."
+    },
+    {
+      "kicker": "Question 3",
+      "title": "Quel budget de travaux dans cinq ans ?",
+      "body": "Un bien loué s'use et doit rester aux normes. Cette dépense future se compare au produit de la vente aujourd'hui, pas au loyer du mois."
+    },
+    {
+      "kicker": "Question 4",
+      "title": "Avez-vous envie d'être bailleur ?",
+      "body": "Gestion, impayés, relances, entretien. La question paraît triviale, elle explique pourtant la majorité des ventes décidées après deux ans de location."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Le projet d'abord, le calcul ensuite",
+      "body": "Capital, marché local, travaux à venir, envie de gérer. Quatre réponses honnêtes suffisent à décider."
+    },
+    {
+      "cta": true,
+      "kicker": "La Galerie Immobilière",
+      "title": "Posons ces questions ensemble",
+      "body": "Transaction, location, gestion. Nous vous disons ce que votre bien permet réellement, avant toute décision. Écrivez-nous en message privé."
+    }
+  ],
+  "caption": "Un bien devenu vacant, et cette question qui revient chaque soir : le vendre ou le louer ?\n\nElle ne se tranche pas avec une calculette. Quatre questions, dans cet ordre, et la réponse apparaît. Faites défiler.\n\nLa quatrième est celle que personne n'ose se poser. Elle explique pourtant la plupart des ventes décidées après deux ans de location.\n\nÉcrivez-nous en message privé.",
+  "hashtags": ["#immobilierparis", "#investissementlocatif", "#hautsdeseine", "#gestionlocative", "#patrimoine", "#immobilierprestige"],
+  "note": "Aucune donnée fiscale, aucun rendement chiffré, aucun taux : sur ces sujets, orienter vers un professionnel du chiffre. L'agence propose transaction, location et gestion, les trois sont mentionnées."
+}

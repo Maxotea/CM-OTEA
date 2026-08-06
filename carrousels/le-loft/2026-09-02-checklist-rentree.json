@@ -1,0 +1,55 @@
+{
+  "client": "le-loft",
+  "slug": "2026-09-02-checklist-rentree",
+  "archetype": "A8",
+  "pilier": "P4",
+  "date_time": "2026-09-02T18:00:00",
+  "cible": "Homme qui reprend le bureau la semaine suivante, revient de vacances avec des cheveux abîmés, et veut être présentable pour la rentrée",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Rentrée",
+      "title": "La checklist avant le premier lundi",
+      "body": "Cinq points à régler cette semaine, pas la veille au soir."
+    },
+    {
+      "kicker": "Point 1",
+      "title": "Rattrape ce que l'été a fait",
+      "body": "Sel, chlore et soleil ont asséché tes longueurs. Un soin avant la coupe, sinon tu coupes des cheveux cassants et ça se voit."
+    },
+    {
+      "kicker": "Point 2",
+      "title": "Reprends une forme nette, pas une coupe courte",
+      "body": "L'erreur de rentrée classique : tout raccourcir d'un coup. Une remise en forme tient mieux trois semaines qu'une coupe radicale."
+    },
+    {
+      "kicker": "Point 3",
+      "title": "Reprends la ligne de barbe",
+      "body": "Deux mois sans structure, elle a débordé sur le cou et les pommettes. C'est ce détail qui change une tête de vacances en tête de rentrée."
+    },
+    {
+      "kicker": "Point 4",
+      "title": "Cale ton rythme tout de suite",
+      "body": "Un créneau fixe toutes les quatre semaines, posé maintenant. Ceux qui attendent de voir sont ceux qui repassent en novembre."
+    },
+    {
+      "kicker": "Point 5",
+      "title": "Pense aux enfants avant la ruée",
+      "body": "La semaine de la rentrée, tout le monde s'y prend en même temps. Coupe enfant à partir de 20 euros, tarif étudiant 22 euros."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Soin, forme, ligne, rythme, enfants",
+      "body": "Une seule visite suffit pour les quatre premiers. Le cinquième s'anticipe d'une semaine."
+    },
+    {
+      "cta": true,
+      "kicker": "Le Loft, Puteaux",
+      "title": "Prends ton créneau avant la ruée",
+      "body": "Ouvert 7j/7 de 10h à 20h, même le dimanche. 33 rue Godefroy, Puteaux. Book ton rdv, lien en bio."
+    }
+  ],
+  "caption": "La rentrée, ce n'est pas la veille au soir. Ceux qui arrivent le dimanche 6 à 19h en espérant un créneau, on les connaît.\n\nCinq points à régler cette semaine. Swipe.\n\nLe 4 est celui qui change tout : un créneau fixe posé maintenant, et tu ne cours plus après jusqu'à Noël.\n\nBook ton rdv, lien en bio.",
+  "hashtags": ["#rentree", "#barbierputeaux", "#coupehomme", "#ladefense", "#barbershop", "#coiffeurhomme"],
+  "note": "Tarifs enfant à partir de 20 euros et étudiant 22 euros : vérifiés Planity juillet 2026, fiche client. Ouverture 7j/7 10h-20h vérifiée. Aucune promotion annoncée, le salon n'en fait pas."
+}
