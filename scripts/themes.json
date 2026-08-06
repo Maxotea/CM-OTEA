@@ -29,12 +29,12 @@
       "facebook"
     ],
     "heure": "18:00",
-    "bg": "#F7EFE9",
-    "fg": "#3F2E2A",
-    "muted": "#8A736B",
-    "accent": "#C9A227",
-    "cta_bg": "#3F2E2A",
-    "cta_fg": "#F7EFE9",
+    "bg": "#0A0A0A",
+    "fg": "#F7C9DE",
+    "muted": "#C9A66B",
+    "accent": "#E4017C",
+    "cta_bg": "#E4017C",
+    "cta_fg": "#0A0A0A",
     "font_family": [
       "Avenir Next",
       "Helvetica Neue",
@@ -43,7 +43,7 @@
     ],
     "uppercase_titles": false,
     "rule": true,
-    "note": "Institut féminin chaleureux : crème, rose poudré, laiton. Vouvoiement élégant. Aucune allégation médicale."
+    "note": "Charte officielle Gossip (fournie par Maxime le 06/08/2026) : rose vif #E4017C, magenta #B2005F, rose poudré #F7C9DE, or #C9A66B, noir #0A0A0A. Base noire car c'est la seule qui rend toutes les autres lisibles — rose vif sur rose pâle ne fait que 3,13:1. Magenta #B2005F réservé aux aplats, jamais au texte sur noir (2,88:1). Vouvoiement élégant, aucune allégation médicale."
   },
   "jlawsongolf": {
     "nom": "J Lawson Golf",
