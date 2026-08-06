@@ -72,7 +72,7 @@ jobs:
         if: inputs.photos != ''
         env:
           IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
-        run: python3 scripts/photos.py "${{ inputs.photos }}" ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: python3 scripts/drive_sync.py "${{ inputs.photos }}" ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Conserver les slides rendues
         if: always()

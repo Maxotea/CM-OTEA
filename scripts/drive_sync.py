@@ -1,26 +1,28 @@
 #!/usr/bin/env python3
-"""Synchronise la boîte de dépôt Drive d'un client vers le dépôt.
+"""Récupère les médias déposés par un client dans son dossier Drive partagé.
 
     python3 scripts/drive_sync.py gossip-beauty-center
     python3 scripts/drive_sync.py --tous --dry-run
 
-Le principe : chaque client a UN dossier Drive partagé avec lui, dans lequel il dépose ses
-photos et vidéos depuis son téléphone. Ce script le lit, repère ce qui est nouveau, héberge les
-fichiers et tient à jour le manifeste du dépôt. Le client n'a rien à installer, rien à nommer.
+Le travail est coupé en deux, et c'est ce qui rend la chaîne gratuite :
 
-Sens unique, Drive → dépôt. Le script ne crée, ne renomme et ne supprime jamais rien côté Drive :
-c'est la boîte du client, pas la nôtre. Le dépôt reste la source de vérité de ce qui est publié ;
-le Drive n'est qu'une porte d'entrée.
+  1. REPÉRAGE — Claude liste le dossier Drive du client via le connecteur Drive déjà connecté,
+     et ajoute les nouveaux fichiers au manifeste `photos/<client>.json` (drive_id + nom).
+     Aucune clé d'API Google n'est nécessaire : le connecteur est authentifié.
 
-Déduplication par empreinte du contenu, pas par nom. Un même fichier déposé deux fois — ce qui
-arrive tout le temps quand on envoie depuis un téléphone — n'entre qu'une fois dans le manifeste,
-et le doublon est signalé. C'est exactement ce qui nous a fait cataloguer deux fois la même photo
-sous deux sujets différents.
+  2. RÉCUPÉRATION — ce script, dans GitHub Actions. Il télécharge chaque entrée non traitée
+     par le lien public du fichier, la dédoublonne, l'héberge, et complète le manifeste.
+     Là non plus, aucune clé Google : un dossier partagé « tous ceux qui ont le lien » se
+     télécharge sans authentification.
 
-Secrets attendus :
-  GOOGLE_API_KEY   clé API Google avec l'API Drive activée — suffit pour lire un dossier
-                   partagé par lien, aucun compte de service à créer
-  IMGBB_API_KEY    hébergement (le même que pour les slides)
+Sens unique, Drive → dépôt. Le script ne crée, ne renomme et ne supprime jamais rien côté
+Drive : c'est la boîte du client, pas la nôtre.
+
+Déduplication par empreinte du contenu, jamais par nom. Un même fichier déposé deux fois — ce
+qui arrive constamment quand on envoie depuis un téléphone — n'entre qu'une fois. C'est
+exactement ce qui nous a fait cataloguer deux fois la même photo sous deux sujets différents.
+
+Secret attendu : IMGBB_API_KEY, le même que pour les slides.
 """
 
 import argparse
@@ -28,140 +30,107 @@ import hashlib
 import json
 import os
 import sys
-import urllib.parse
 import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from publier import _req, heberger  # noqa: E402
+from publier import heberger  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PHOTOS = ROOT / "photos"
-LISTE = "https://www.googleapis.com/drive/v3/files"
-FICHIER = "https://www.googleapis.com/drive/v3/files/{}?alt=media&key={}"
+LIEN = "https://drive.google.com/uc?export=download&id={}"
 
-# Ce qu'on accepte dans une boîte de dépôt client. Le reste est ignoré sans bruit : les clients
-# y laissent des captures d'écran, des PDF de devis, des .DS_Store.
 EXTENSIONS = {"image/jpeg": "jpg", "image/png": "png", "image/heic": "heic",
               "video/mp4": "mp4", "video/quicktime": "mov"}
 
 
-def lister(dossier_id, cle):
-    """Liste récursivement les médias d'un dossier Drive public. Retourne des dicts plats."""
-    trouves, a_voir = [], [dossier_id]
-    while a_voir:
-        parent = a_voir.pop()
-        page = None
-        while True:
-            params = {
-                "q": f"'{parent}' in parents and trashed = false",
-                "key": cle,
-                "fields": "nextPageToken,files(id,name,mimeType,size,modifiedTime)",
-                "pageSize": "200",
-            }
-            if page:
-                params["pageToken"] = page
-            rep = _req(f"{LISTE}?{urllib.parse.urlencode(params)}")
-            for f in rep.get("files", []):
-                if f["mimeType"] == "application/vnd.google-apps.folder":
-                    a_voir.append(f["id"])
-                elif f["mimeType"] in EXTENSIONS:
-                    trouves.append(f)
-            page = rep.get("nextPageToken")
-            if not page:
-                break
-    return trouves
-
-
-def telecharger(file_id, cle):
-    req = urllib.request.Request(FICHIER.format(file_id, cle),
-                                 headers={"User-Agent": "Mozilla/5.0"})
+def telecharger(drive_id):
+    """Récupère un fichier d'un dossier Drive partagé par lien. Aucune authentification."""
+    req = urllib.request.Request(LIEN.format(drive_id), headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=180) as r:
         octets = r.read()
-        ctype = r.headers.get("Content-Type", "")
-    if not ctype.split(";")[0] in EXTENSIONS:
-        raise RuntimeError(f"Drive a renvoyé « {ctype} » — dossier probablement non partagé")
-    return octets
+        ctype = r.headers.get("Content-Type", "").split(";")[0]
+    if ctype not in EXTENSIONS:
+        raise RuntimeError(
+            f"Drive a renvoyé « {ctype or 'rien' } » et non un média — le dossier n'est "
+            f"probablement plus partagé « tous ceux qui ont le lien ».")
+    return octets, EXTENSIONS[ctype]
 
 
-def synchroniser(client, cle_drive, dry_run=False):
+def synchroniser(client, dry_run=False):
     manifeste = PHOTOS / f"{client}.json"
     spec = json.loads(manifeste.read_text(encoding="utf-8"))
-    dossier_id = spec.get("drive_folder")
-    if not dossier_id:
-        raise SystemExit(f"{client} : aucun drive_folder dans le manifeste")
+    medias = spec["photos"]
 
-    connus = {p["empreinte"]: p for p in spec["photos"] if p.get("empreinte")}
-    par_id = {p["drive_id"]: p for p in spec["photos"]}
+    connus = {m["empreinte"]: m for m in medias if m.get("empreinte")}
+    a_traiter = [m for m in medias if not m.get("empreinte")]
+    if not a_traiter:
+        print(f"{client} : rien de nouveau ({len(connus)} média(s) déjà récupéré(s))")
+        return 0
+
     cible = ROOT / "medias" / client / "photos"
     cible.mkdir(parents=True, exist_ok=True)
 
-    nouveaux, doublons, inchanges = [], [], 0
-    for f in lister(dossier_id, cle_drive):
-        if f["id"] in par_id and par_id[f["id"]].get("empreinte"):
-            inchanges += 1
+    prets, doublons, echecs = [], [], 0
+    for m in a_traiter:
+        try:
+            octets, ext = telecharger(m["drive_id"])
+        except Exception as exc:
+            echecs += 1
+            print(f"  ✗ {m.get('drive_nom', m['drive_id'])} : {exc}", file=sys.stderr)
             continue
-        octets = telecharger(f["id"], cle_drive)
         empreinte = hashlib.sha256(octets).hexdigest()[:16]
         if empreinte in connus:
-            doublons.append((f["name"], connus[empreinte]["nom"]))
+            doublons.append((m, connus[empreinte]))
             continue
-        chemin = cible / f"{empreinte}.{EXTENSIONS[f['mimeType']]}"
+        chemin = cible / f"{empreinte}.{ext}"
         chemin.write_bytes(octets)
-        entree = {
-            "nom": empreinte,
-            "drive_id": f["id"],
-            "drive_nom": f["name"],
-            "empreinte": empreinte,
-            "type": EXTENSIONS[f["mimeType"]],
-            "sujet": None,          # à qualifier à la main : c'est un travail d'œil, pas de script
-            "pilier": None,
-            "url": None,
-        }
-        connus[empreinte] = entree
-        nouveaux.append((entree, chemin))
+        m.update(empreinte=empreinte, type=ext)
+        connus[empreinte] = m
+        prets.append((m, chemin))
+        print(f"  + {m.get('drive_nom', m['drive_id'])} → {empreinte}.{ext} "
+              f"({len(octets) // 1024} Ko)")
 
-    print(f"{client} : {inchanges} déjà connus, {len(nouveaux)} nouveaux, "
-          f"{len(doublons)} doublon(s)")
-    for nom, deja in doublons:
-        print(f"  = {nom} — contenu identique à « {deja} », ignoré")
-    for entree, _ in nouveaux:
-        print(f"  + {entree['drive_nom']} → {entree['nom']}.{entree['type']} (à qualifier)")
+    for m, deja in doublons:
+        print(f"  = {m.get('drive_nom', m['drive_id'])} — contenu identique à "
+              f"« {deja.get('drive_nom', deja['empreinte'])} », écarté")
+    # Un doublon n'a pas à encombrer le manifeste : on le retire plutôt que de le garder vide.
+    spec["photos"] = [m for m in medias if m not in [d for d, _ in doublons]]
 
-    if dry_run or not nouveaux:
+    if echecs:
+        raise SystemExit(f"{client} : {echecs} échec(s) — manifeste non modifié.")
+    if dry_run:
+        print(f"[dry-run] {client} : {len(prets)} nouveau(x), {len(doublons)} doublon(s). "
+              f"Rien n'a été hébergé ni écrit.")
         return 0
 
-    images = [(e, c) for e, c in nouveaux if e["type"] in ("jpg", "png")]
+    images = [(m, c) for m, c in prets if m["type"] in ("jpg", "png")]
     if images:
-        for entree, url in zip((e for e, _ in images), heberger([c for _, c in images])):
-            entree["url"] = url
-    spec["photos"].extend(e for e, _ in nouveaux)
+        for m, url in zip((m for m, _ in images), heberger([c for _, c in images])):
+            m["url"] = url
     manifeste.write_text(json.dumps(spec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"  → manifeste mis à jour, {len(images)} image(s) hébergée(s)")
-    return len(nouveaux)
+    print(f"  → {len(images)} image(s) hébergée(s), manifeste à jour")
+    if any(m.get("sujet") is None for m in spec["photos"]):
+        print("  ⚠ des médias n'ont ni sujet ni pilier : à qualifier avant tout usage")
+    return len(prets)
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Synchronise les boîtes de dépôt Drive.")
+    ap = argparse.ArgumentParser(description="Récupère les médias déposés dans le Drive.")
     ap.add_argument("client", nargs="?")
     ap.add_argument("--tous", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    cle = os.environ.get("GOOGLE_API_KEY")
-    if not cle:
-        raise SystemExit("secret manquant : GOOGLE_API_KEY")
     if not args.dry_run and not os.environ.get("IMGBB_API_KEY"):
         raise SystemExit("secret manquant : IMGBB_API_KEY")
 
-    clients = ([p.stem for p in sorted(PHOTOS.glob("*.json"))]
-               if args.tous else [args.client])
-    if not clients or clients == [None]:
+    clients = ([p.stem for p in sorted(PHOTOS.glob("*.json"))] if args.tous
+               else ([args.client] if args.client else []))
+    if not clients:
         raise SystemExit("préciser un client ou --tous")
 
-    total = 0
-    for c in clients:
-        total += synchroniser(c, cle, args.dry_run)
+    total = sum(synchroniser(c, args.dry_run) for c in clients)
     print(f"\n{total} nouveau(x) média(s) au total.")
     return 0
 

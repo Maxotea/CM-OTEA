@@ -33,7 +33,6 @@ jobs:
 
       - name: Synchroniser
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
         run: |
           python3 scripts/drive_sync.py \
