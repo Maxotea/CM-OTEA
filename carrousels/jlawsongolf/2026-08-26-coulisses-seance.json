@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Coulisses",
-      "title": "Une séance de fitting, minute par minute",
+      "title": "Une séance de fitting, **minute par minute**",
       "body": "Une heure. Voilà exactement ce qui s'y passe."
     },
     {
       "kicker": "Idée reçue",
       "title": "Il faut bien jouer pour être fitté",
-      "body": "C'est l'inverse. Plus votre swing est irrégulier, plus un matériel mal adapté amplifie l'erreur. Le fitting sert d'abord à ceux qui cherchent."
+      "body": "**C'est l'inverse**. Plus votre swing est irrégulier, plus un matériel mal adapté amplifie l'erreur. Le fitting sert d'abord à ceux qui cherchent."
     },
     {
       "kicker": "10 premières minutes",
       "title": "On parle avant de frapper",
-      "body": "Votre parcours habituel, vos manques, ce que vous ratez le plus souvent. Sans ça, on mesure sans savoir ce qu'on cherche."
+      "body": "Votre parcours habituel, vos manques, ce que vous ratez le plus souvent. Sans ça, on mesure **sans savoir ce qu'on cherche**."
     },
     {
       "kicker": "Puis 15 minutes",
       "title": "On mesure votre matériel actuel",
-      "body": "Loft, lie, longueur, grip. On établit le point de départ. Impossible de mesurer un progrès sans référence de départ."
+      "body": "Loft, lie, longueur, grip. On établit le point de départ. Impossible de mesurer un progrès **sans référence de départ**."
     },
     {
       "kicker": "Puis 25 minutes",
       "title": "On teste, on change une variable à la fois",
-      "body": "Un shaft, puis un autre. Une longueur, puis une autre. Le launch monitor tranche, pas la sensation seule."
+      "body": "Un shaft, puis un autre. Une longueur, puis une autre. **Le launch monitor tranche**, pas la sensation seule."
     },
     {
       "kicker": "Dernières minutes",
       "title": "On vous remet vos chiffres",
-      "body": "Vitesse, angle de départ, dispersion. Vous repartez avec vos données, que vous achetiez ici ou ailleurs."
+      "body": "Vitesse, angle de départ, dispersion. Vous repartez avec vos données, **que vous achetiez ici ou ailleurs**."
     },
     {
       "kicker": "À retenir",
       "title": "Une heure, des mesures, aucune obligation",
-      "body": "Le fitting n'est pas un acte d'achat. C'est un diagnostic, et il vous appartient."
+      "body": "Le fitting n'est pas un acte d'achat. **C'est un diagnostic**, et il vous appartient."
     },
     {
       "cta": true,
       "kicker": "J Lawson Golf",
       "title": "Réservez votre créneau",
-      "body": "Fitting driver, fers ou putter : 160 euros, environ une heure. Analyse Gears full corps : 260 euros. Lien en bio."
+      "body": "Fitting driver, fers ou putter : **160 euros**, environ une heure. Analyse Gears full corps : 260 euros. Lien en bio."
     }
   ],
   "caption": "La question qui revient le plus souvent en message privé : faut-il bien jouer pour venir se faire fitter ?\n\nNon. C'est même l'inverse. Et pour lever le doute, voici une séance complète, minute par minute. Faites défiler.\n\nÀ la fin, vous repartez avec vos chiffres. Que vous achetiez ici ou ailleurs.\n\nRéservez votre créneau, lien en bio.",
-  "hashtags": ["#golffitting", "#clubfitting", "#launchmonitor", "#golffrance", "#golfeur", "#fitting"],
+  "hashtags": [
+    "#golffitting",
+    "#clubfitting",
+    "#launchmonitor",
+    "#golffrance",
+    "#golfeur",
+    "#fitting"
+  ],
   "note": "Tarifs vérifiés juillet 2026, source jlawsongolf.com. Le découpage horaire correspond à une séance d'environ une heure annoncée sur le site. Faire confirmer le déroulé par John avant publication."
 }

@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Barbe",
-      "title": "5 erreurs qui flinguent ta barbe",
+      "title": "**5 erreurs** qui flinguent ta barbe",
       "body": "Tu fais tout bien et elle pique quand même. Voilà pourquoi."
     },
     {
       "kicker": "Erreur 1",
       "title": "Tu tailles sur barbe mouillée",
-      "body": "Le poil mouillé s'allonge. Tu coupes ce que tu crois voir, ça remonte en séchant, et tu te retrouves 5 mm trop court."
+      "body": "Le poil mouillé s'allonge. Tu coupes ce que tu crois voir, **ça remonte en séchant**, et tu te retrouves 5 mm trop court."
     },
     {
       "kicker": "Erreur 2",
       "title": "Tu suis la ligne de ta mâchoire",
-      "body": "La bonne ligne de cou est deux doigts au-dessus de la pomme d'Adam. Plus haut, ton visage se raccourcit tout de suite."
+      "body": "La bonne ligne de cou est **deux doigts au-dessus de la pomme d'Adam**. Plus haut, ton visage se raccourcit tout de suite."
     },
     {
       "kicker": "Erreur 3",
       "title": "Tu sautes l'huile",
-      "body": "Ce qui pique, c'est rarement le poil. C'est la peau dessous, sèche et irritée. Deux gouttes après la douche, ça règle 80 pour cent du sujet."
+      "body": "Ce qui pique, c'est rarement le poil. **C'est la peau dessous**, sèche et irritée. Deux gouttes après la douche, ça règle 80 pour cent du sujet."
     },
     {
       "kicker": "Erreur 4",
       "title": "Tu ne brosses jamais",
-      "body": "Le brossage redresse le poil et répartit l'huile. Sans lui, ta barbe pousse en épis et paraît clairsemée là où elle ne l'est pas."
+      "body": "Le brossage redresse le poil et répartit l'huile. Sans lui, ta barbe **pousse en épis** et paraît clairsemée là où elle ne l'est pas."
     },
     {
       "kicker": "Erreur 5",
       "title": "Tu attends trop entre deux passages",
-      "body": "Au-delà de six semaines, la forme se perd et il faut raccourcir davantage pour rattraper. Toutes les quatre semaines, tu ne perds jamais de longueur."
+      "body": "Au-delà de six semaines, la forme se perd et il faut raccourcir davantage pour rattraper. **Toutes les quatre semaines**, tu ne perds jamais de longueur."
     },
     {
       "kicker": "À retenir",
       "title": "Barbe sèche, ligne basse, huile, brosse, 4 semaines",
-      "body": "Cinq réflexes. Aucun ne prend plus de deux minutes par jour."
+      "body": "**Cinq réflexes**. Aucun ne prend plus de deux minutes par jour."
     },
     {
       "cta": true,
       "kicker": "Le Loft, Puteaux",
       "title": "Passe la faire remettre en forme",
-      "body": "Barbe soignée, formules coupe et barbe à partir de 48 euros. Ouvert 7j/7, 10h-20h, 33 rue Godefroy. 4,9 sur 5, plus de 300 avis. Book ton rdv en bio."
+      "body": "Barbe soignée, formules coupe et barbe **à partir de 48 euros**. Ouvert 7j/7, 10h-20h, 33 rue Godefroy. **4,9 sur 5**, plus de 300 avis. Book ton rdv en bio."
     }
   ],
   "caption": "Ta barbe pique et tu ne sais pas pourquoi ? Dans 4 cas sur 5, ce n'est pas le poil, c'est la peau en dessous.\n\nOn a mis les 5 erreurs qu'on voit passer tous les jours au fauteuil, et la correction pour chacune. Swipe, ça se règle en deux minutes par jour.\n\nLa cinquième, c'est celle qui coûte le plus de longueur.\n\nBook ton rdv, lien en bio.",
-  "hashtags": ["#barbierputeaux", "#barbeentretenue", "#labarbe", "#barbershopparis", "#ladefense", "#soinhomme"],
+  "hashtags": [
+    "#barbierputeaux",
+    "#barbeentretenue",
+    "#labarbe",
+    "#barbershopparis",
+    "#ladefense",
+    "#soinhomme"
+  ],
   "note": "Tarif coupe et barbe 48 euros, note 4,9 sur 5 et horaires : vérifiés Planity juillet 2026, fiche client. Revérifier avant publication si la fiche a plus de 3 mois."
 }

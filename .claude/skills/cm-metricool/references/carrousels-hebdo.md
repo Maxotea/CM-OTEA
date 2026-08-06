@@ -44,6 +44,27 @@ le taux de complétion s'effondre et il reste une marge si une slide doit être 
 Format : **1080 × 1350 px (4:5)**. C'est le ratio qui occupe le plus de surface dans le fil.
 Marge de sécurité de 90 px sur tous les bords : Instagram rogne les coins sur certains appareils.
 
+### L'accentuation : ce qui fait lire une slide en diagonale
+
+Dans chaque slide, **un à deux groupes de mots passent en gras et en couleur d'accent**. On les
+balise `**ainsi**` dans le spec, le moteur s'occupe du reste.
+
+Ce n'est pas de la décoration. Une slide non accentuée se lit entièrement ou pas du tout ; une
+slide accentuée se lit en deux temps — l'œil accroche d'abord le mot décisif, puis revient lire
+la phrase s'il est intéressé. C'est ce deuxième temps qu'on gagne.
+
+Ce qu'on accentue, dans cet ordre de priorité :
+
+1. **Le chiffre ou la quantité** — « 5 erreurs », « à partir de 48 euros », « toutes les quatre
+   semaines », « 4,9 sur 5 ». C'est ce qui rend une affirmation vérifiable.
+2. **Le mot qui renverse** — la contre-intuition de la slide : « c'est la peau dessous »,
+   « coiffé, pas trempé », « ça remonte en séchant ».
+3. **Rien d'autre.** Deux groupes maximum par slide, le script refuse au-delà : tout accentuer
+   revient à ne rien accentuer.
+
+Sur la slide CTA, le fond **est** la couleur d'accent : l'accentuation s'y fait au gras seul,
+sans changement de couleur, sinon le mot disparaît.
+
 Trois règles de lisibilité qui ne se négocient pas :
 
 - Un contraste texte/fond d'au moins 4,5:1 — la moitié de l'audience lit dehors, en plein soleil.
@@ -141,8 +162,9 @@ Structure d'un spec :
   "date_time": "2026-08-12T18:00:00",
   "cible": "Homme 25-45 ans, actif La Défense, se rase seul et rate sa barbe",
   "slides": [
-    {"kicker": "BARBE", "title": "5 erreurs qui ruinent ta barbe", "body": "", "cover": true},
-    {"kicker": "ERREUR 1", "title": "Tu tailles sur barbe mouillée", "body": "Le poil s'allonge..."}
+    {"kicker": "BARBE", "title": "**5 erreurs** qui ruinent ta barbe", "body": "", "cover": true},
+    {"kicker": "ERREUR 1", "title": "Tu tailles sur barbe mouillée",
+     "body": "Le poil s'allonge, **ça remonte en séchant**, et tu perds 5 mm."}
   ],
   "caption": "…",
   "hashtags": ["#barbierputeaux", "…"]
@@ -182,6 +204,7 @@ résolveur se trompant régulièrement de compte.
 - [ ] 8 slides maximum, ordre vérifié après upload
 - [ ] La couverture tient sa promesse — ce qui est annoncé est bien livré à l'intérieur
 - [ ] Une seule idée par slide
+- [ ] **Une à deux accentuations par slide**, portant le chiffre ou le mot qui renverse
 - [ ] Slide 7 lisible seule (c'est elle qu'on sauvegarde)
 - [ ] Un seul CTA, et il pointe vers l'offre du client
 - [ ] Ton, interdits et vocabulaire conformes à la fiche client

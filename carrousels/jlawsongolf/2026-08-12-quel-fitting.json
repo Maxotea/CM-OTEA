@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Guide",
-      "title": "Par quel fitting commencer ?",
+      "title": "**Par quel fitting** commencer ?",
       "body": "Driver, fers, putter. Trois réponses selon ce qui vous coûte des coups."
     },
     {
       "kicker": "Le problème",
       "title": "On commence toujours par le driver",
-      "body": "C'est le club le plus spectaculaire. Ce n'est presque jamais celui qui fait perdre le plus de coups sur une carte."
+      "body": "C'est le club le plus spectaculaire. Ce n'est **presque jamais** celui qui fait perdre le plus de coups sur une carte."
     },
     {
       "kicker": "Cas 1",
       "title": "Vous perdez des balles sur les départs",
-      "body": "Commencez par le driver. Longueur, loft et surtout shaft. C'est là que la dispersion se gagne, avant même la distance."
+      "body": "Commencez par le driver. Longueur, loft et **surtout shaft**. C'est là que la dispersion se gagne, avant même la distance."
     },
     {
       "kicker": "Cas 2",
       "title": "Vous êtes court ou long d'un club sur les approches",
-      "body": "Commencez par les fers. Loft, lie et longueur mal réglés créent des écarts constants que la technique ne rattrape pas."
+      "body": "Commencez par les fers. Loft, lie et longueur mal réglés créent des écarts constants **que la technique ne rattrape pas**."
     },
     {
       "kicker": "Cas 3",
       "title": "Vous prenez trois putts trop souvent",
-      "body": "Commencez par le putter. Longueur, poids et alignement. C'est le fitting le moins vendu et celui qui se rentabilise le plus vite en coups."
+      "body": "Commencez par le putter. Longueur, poids et alignement. C'est le fitting **le moins vendu** et celui qui se rentabilise le plus vite en coups."
     },
     {
       "kicker": "Cas 4",
       "title": "Vous ne savez pas d'où vient le problème",
-      "body": "L'analyse technique Gears mesure le corps entier avant le matériel. On regarde le mouvement, puis on choisit les clubs."
+      "body": "L'analyse technique Gears mesure **le corps entier avant le matériel**. On regarde le mouvement, puis on choisit les clubs."
     },
     {
       "kicker": "À retenir",
       "title": "Regardez votre carte, pas votre sac",
-      "body": "Le club à fitter en premier est celui qui apparaît le plus souvent dans vos coups perdus."
+      "body": "Le club à fitter en premier est celui qui apparaît le plus souvent dans **vos coups perdus**."
     },
     {
       "cta": true,
       "kicker": "J Lawson Golf",
       "title": "Réservez votre séance",
-      "body": "Fitting driver, fers ou putter : 160 euros, environ une heure. Analyse technique Gears full corps : 260 euros, environ une heure trente. Lien en bio."
+      "body": "Fitting driver, fers ou putter : **160 euros**, environ une heure. Analyse technique Gears full corps : **260 euros**, environ une heure trente. Lien en bio."
     }
   ],
   "caption": "La première question de tous les golfeurs : par quel fitting commencer ? La réponse n'est pas dans votre sac, elle est sur votre carte de score.\n\nQuatre cas de figure, une recommandation pour chacun. Faites défiler.\n\nLe cas 3 est celui que l'on sous-estime le plus. Le putter représente une part énorme de vos coups, et presque personne ne le fait ajuster.\n\nRéservez votre séance, lien en bio.",
-  "hashtags": ["#fitting", "#golffitting", "#golffrance", "#clubfitting", "#golfeur", "#materielgolf"],
+  "hashtags": [
+    "#fitting",
+    "#golffitting",
+    "#golffrance",
+    "#clubfitting",
+    "#golfeur",
+    "#materielgolf"
+  ],
   "note": "Tarifs 160 euros et 260 euros vérifiés sur jlawsongolf.com/rendezvous.html en juillet 2026. Revérifier avant publication. Phrases courtes, vouvoiement, aucun résultat de tournoi cité : ce carrousel est intemporel."
 }

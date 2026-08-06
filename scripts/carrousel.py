@@ -97,38 +97,74 @@ def font(families, size, bold=False):
 
 # ---------------------------------------------------------------- texte
 
-def wrap(draw, text, fnt, max_w):
-    lines, line = [], ""
-    for word in text.split():
-        trial = f"{line} {word}".strip()
-        if draw.textlength(trial, font=fnt) <= max_w or not line:
-            line = trial
+def tokeniser(text):
+    """Découpe un texte balisé `**ainsi**` en mots, chacun marqué accentué ou non.
+
+    L'accentuation est ce qui permet de lire une slide en diagonale : l'œil accroche le
+    chiffre et le mot décisif avant de lire la phrase. Sans elle, une slide se lit
+    entièrement ou pas du tout.
+    """
+    tokens, fin_espace = [], True
+    for i, segment in enumerate(text.split("**")):
+        emph = i % 2 == 1
+        debut_espace = segment[:1].isspace() if segment else True
+        mots = segment.split()
+        for j, mot in enumerate(mots):
+            # Un mot qui suit immédiatement une balise, sans espace, lui reste collé :
+            # sinon la ponctuation se détache — « séchant , et » au lieu de « séchant, et ».
+            colle = bool(tokens) and j == 0 and not (fin_espace or debut_espace)
+            tokens.append((mot, emph, colle))
+        if mots:
+            fin_espace = segment[-1:].isspace()
+    return tokens
+
+
+def wrap_tokens(draw, tokens, f_norm, f_emph, max_w):
+    lignes, ligne, largeur = [], [], 0
+    espace = draw.textlength(" ", font=f_norm)
+    for mot, emph, colle in tokens:
+        w = draw.textlength(mot, font=f_emph if emph else f_norm)
+        supp = w if (not ligne or colle) else w + espace
+        # Un mot collé ne peut pas ouvrir une ligne : il partirait de sa ponctuation.
+        if largeur + supp > max_w and ligne and not colle:
+            lignes.append(ligne)
+            ligne, largeur = [(mot, emph, False)], w
         else:
-            lines.append(line)
-            line = word
-    if line:
-        lines.append(line)
-    return lines
+            ligne.append((mot, emph, colle))
+            largeur += supp
+    if ligne:
+        lignes.append(ligne)
+    return lignes
 
 
 def block(draw, text, families, sizes, max_w, bold=False, leading=1.24):
     """Rend un bloc à la plus grande taille qui tient, sans jamais passer sous le plancher."""
     start, floor = sizes
+    tokens = tokeniser(text)
     size = start
     while True:
-        fnt = font(families, size, bold)
-        lines = wrap(draw, text, fnt, max_w)
+        f_norm = font(families, size, bold)
+        f_emph = font(families, size, True)          # l'accent passe en gras s'il ne l'est pas déjà
+        lignes = wrap_tokens(draw, tokens, f_norm, f_emph, max_w)
         if size <= floor:
-            return fnt, lines, int(size * leading)
+            return (f_norm, f_emph), lignes, int(size * leading)
         # 4 lignes max pour un titre, 6 pour un corps : au-delà, la slide dit deux choses
-        if len(lines) <= (4 if bold else 6):
-            return fnt, lines, int(size * leading)
+        if len(lignes) <= (4 if bold else 6):
+            return (f_norm, f_emph), lignes, int(size * leading)
         size -= 2
 
 
-def draw_lines(draw, lines, x, y, fnt, lh, fill):
-    for ln in lines:
-        draw.text((x, y), ln, font=fnt, fill=fill)
+def draw_lines(draw, lignes, x, y, fonts, lh, fill, fill_emph):
+    f_norm, f_emph = fonts
+    espace = draw.textlength(" ", font=f_norm)
+    for ligne in lignes:
+        cx = x
+        for i, (mot, emph, colle) in enumerate(ligne):
+            if i and not colle:
+                cx += espace
+            f = f_emph if emph else f_norm
+            draw.text((cx, y), mot, font=f, fill=fill_emph if emph else fill)
+            cx += draw.textlength(mot, font=f)
         y += lh
     return y
 
@@ -161,6 +197,10 @@ def render_slide(slide, theme, index, total, slug):
     body = slide.get("body", "")
     kicker = (slide.get("kicker") or "").upper()
 
+    # Sur la slide CTA le fond EST la couleur d'accent : y colorer un mot le rendrait
+    # invisible. L'accentuation s'y fait au gras seul.
+    fill_emph = fg if is_cta else accent
+
     sizes = SZ_COVER_TITLE if is_cover else SZ_TITLE
     tf, tlines, tlh = block(d, title, fam, sizes, CONTENT_W, bold=True, leading=1.12)
     bf, blines, blh = (None, [], 0)
@@ -192,9 +232,10 @@ def render_slide(slide, theme, index, total, slug):
             d.rectangle([MARGIN, y - 22, MARGIN + 96, y - 18], fill=accent)
             y += rule_h - 22
 
-    y = draw_lines(d, tlines, MARGIN, y, tf, tlh, fg)
+    y = draw_lines(d, tlines, MARGIN, y, tf, tlh, fg, fill_emph)
     if blines:
-        y = draw_lines(d, blines, MARGIN, y + body_gap, bf, blh, muted if not is_cta else fg)
+        y = draw_lines(d, blines, MARGIN, y + body_gap, bf,
+                       blh, fg if is_cta else muted, fill_emph)
 
     nf = font(fam, SZ_NUM[0], bold=False)
     if not is_cta:
@@ -228,7 +269,14 @@ def validate(spec, themes, path):
     for i, s in enumerate(slides, 1):
         if not s.get("title"):
             errs.append(f"slide {i} : titre manquant")
-        words = len(f"{s.get('title', '')} {s.get('body', '')}".split())
+        brut = f"{s.get('title', '')} {s.get('body', '')}"
+        if brut.count("**") % 2:
+            errs.append(f"slide {i} : balise ** non refermée")
+        groupes = brut.count("**") // 2
+        if groupes > 2:
+            errs.append(f"slide {i} : {groupes} groupes accentués — maximum 2. "
+                        f"Tout accentuer revient à ne rien accentuer")
+        words = len(brut.replace("**", " ").split())
         if words > 40:
             errs.append(f"slide {i} : {words} mots (maximum 40)")
     texts = [spec.get("caption", "")] + [

@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Méthode",
-      "title": "De l'idée au film livré : les 5 étapes",
+      "title": "De l'idée au film livré : **les 5 étapes**",
       "body": "Ce que nous faisons, ce que vous faites, et quand."
     },
     {
       "kicker": "Étape 1",
       "title": "Le cadrage",
-      "body": "Une heure d'échange pour définir l'objectif, la cible et le message unique. Votre rôle ici est le plus important de tout le projet."
+      "body": "Une heure d'échange pour définir l'objectif, la cible et le message unique. Votre rôle ici est **le plus important de tout le projet**."
     },
     {
       "kicker": "Étape 2",
       "title": "L'écriture et le découpage",
-      "body": "Intention, séquences, plans, intervenants. Vous validez un document avant que la moindre caméra sorte de son sac."
+      "body": "Intention, séquences, plans, intervenants. Vous validez un document **avant que la moindre caméra sorte de son sac**."
     },
     {
       "kicker": "Étape 3",
       "title": "La préparation",
-      "body": "Repérages, planning de la journée, personnes à mobiliser, autorisations. C'est cette étape invisible qui fait tenir un tournage dans le temps prévu."
+      "body": "Repérages, planning de la journée, personnes à mobiliser, autorisations. C'est **cette étape invisible** qui fait tenir un tournage dans le temps prévu."
     },
     {
       "kicker": "Étape 4",
       "title": "Le tournage",
-      "body": "Une demi-journée ou une journée sur place. Votre équipe continue de travailler, nous nous adaptons à votre activité, pas l'inverse."
+      "body": "Une demi-journée ou une journée sur place. Votre équipe **continue de travailler**, nous nous adaptons à votre activité, pas l'inverse."
     },
     {
       "kicker": "Étape 5",
       "title": "Le montage et les déclinaisons",
-      "body": "Une première version, un tour de retours, la version finale. Puis les formats courts et verticaux tirés du même tournage."
+      "body": "Une première version, **un tour de retours**, la version finale. Puis les formats courts et verticaux tirés du même tournage."
     },
     {
       "kicker": "À retenir",
       "title": "Vous intervenez à trois moments",
-      "body": "Le cadrage, la validation du découpage, les retours sur le montage. Le reste est notre travail."
+      "body": "Le cadrage, la validation du découpage, les retours sur le montage. **Le reste est notre travail**."
     },
     {
       "cta": true,
       "kicker": "OTEA Production",
       "title": "Commençons par le cadrage",
-      "body": "Un échange d'une heure, sans engagement, pour savoir si une vidéo sert vraiment votre objectif. Lien en bio."
+      "body": "Un échange d'une heure, **sans engagement**, pour savoir si une vidéo sert vraiment votre objectif. Lien en bio."
     }
   ],
   "caption": "La première question d'un dirigeant qui n'a jamais commandé de vidéo n'est pas le prix. C'est : combien de temps cela va me prendre, à moi ?\n\nRéponse : trois moments. Le reste est notre travail. Faites défiler pour voir les cinq étapes.\n\nL'étape 3 est celle que personne ne voit et qui explique qu'un tournage tienne dans la journée prévue.\n\nParlons de votre projet, lien en bio.",
-  "hashtags": ["#videoentreprise", "#productionaudiovisuelle", "#tournage", "#communication", "#videomarketing", "#pme"],
+  "hashtags": [
+    "#videoentreprise",
+    "#productionaudiovisuelle",
+    "#tournage",
+    "#communication",
+    "#videomarketing",
+    "#pme"
+  ],
   "note": "Aucun délai en jours ni tarif annoncé : les fourchettes de devis ne sont pas encore renseignées dans la fiche. À enrichir dès que Maxime les fournit. Publication 12h00, IG + FB + LinkedIn."
 }
