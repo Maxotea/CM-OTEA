@@ -83,8 +83,12 @@ def heberger(chemins):
 
     Metricool exige une URL publique **qui n'expire pas** : une URL signée ou temporaire est
     ignorée silencieusement. D'où le passage par un hébergeur d'images plutôt que par un lien
-    présigné. En pratique l'URL ne sert qu'une fois, `normaliser` ci-dessous faisant recopier
-    le fichier sur le CDN de Metricool.
+    présigné.
+
+    ⚠️ Vérifié au premier run réussi : Metricool **conserve l'URL source** dans le post, il ne
+    recopie pas le fichier sur son CDN. L'hébergement n'est donc pas jetable — imgbb doit rester
+    accessible jusqu'à la publication effective du post. C'est le seul point de fragilité
+    externe du système ; si ça devient gênant, basculer cette fonction sur un bucket maîtrisé.
 
     Implémentation : imgbb, gratuit, une clé suffit (https://api.imgbb.com/). C'est le seul
     point de contact avec l'hébergeur — pour basculer sur un bucket S3/R2 ou un dépôt public,
@@ -110,7 +114,7 @@ def heberger(chemins):
 
 
 def normaliser(url):
-    """Fait recopier le média par Metricool sur son CDN, et retourne l'URL à utiliser.
+    """Fait valider le média par Metricool, et retourne l'URL à utiliser.
 
     La forme exacte de la réponse n'est pas documentée : on accepte une chaîne nue comme un
     objet, et on retombe sur l'URL d'origine plutôt que de glisser un dict dans `media`, ce

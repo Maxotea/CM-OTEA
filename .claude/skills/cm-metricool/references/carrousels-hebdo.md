@@ -214,17 +214,28 @@ Attaquer l'API Metricool en direct plutôt que Zapier fait disparaître deux pla
 le décalage horaire de +7 h (artefact de l'intégration Zapier, donc plus de
 `bulk_update_post_times` ni de `bulk_set_draft` derrière) et le rate limit à ~6 créations.
 
-Le point qui rend l'hébergement jetable : `GET /api/actions/normalize/image/url?url=...`
-fait recopier le média par Metricool sur son propre CDN. L'URL source n'a donc besoin de
-vivre que le temps de l'appel — inutile de maintenir un hébergement permanent.
+Sur l'hébergement, une croyance à corriger : `GET /api/actions/normalize/image/url?url=...`
+valide le média mais **ne le recopie pas** sur le CDN de Metricool. Vérifié sur le premier
+carrousel réellement planifié — le post conserve les URLs `i.ibb.co` de l'hébergeur. Il faut
+donc que l'hébergement reste accessible **jusqu'à la publication effective**, pas seulement le
+temps de la planification. C'est le seul point de fragilité externe du système.
 
 Secrets attendus par l'action : `METRICOOL_USER_ID`, `METRICOOL_TOKEN` (plan Advanced
 minimum, en-tête `X-Mc-Auth` — jamais `Authorization: Bearer`, c'est un 401) et `IMGBB_API_KEY`.
 
-Sur l'hébergement : Metricool exige une URL publique **qui n'expire pas** — une URL signée ou
-temporaire est ignorée sans message d'erreur. C'est ce qui disqualifie les liens présignés et
-impose un hébergeur d'images. `heberger()` dans `scripts/publier.py` est le seul point de
-contact : basculer vers un bucket S3/R2 ne touche que cette fonction.
+Metricool exige une URL publique **qui n'expire pas** — une URL signée ou temporaire est ignorée
+sans message d'erreur. C'est ce qui disqualifie les liens présignés et impose un hébergeur
+d'images. `heberger()` dans `scripts/publier.py` est le seul point de contact : basculer vers un
+bucket S3/R2 ne touche que cette fonction.
+
+**Ce qui est vérifié en production** (premier run réussi, La Galerie Immobilière, 06/08/2026) :
+
+- Un carrousel de 8 slides part en un seul appel, les slides arrivent **dans l'ordre**.
+- **Aucun décalage horaire** : demandé 18h00, planifié 18h00. Le bug +7h était bien un artefact
+  de Zapier — plus besoin de `bulk_update_post_times` ni de `bulk_set_draft`.
+- Le post arrive en brouillon, `autoPublish: false`, sur les réseaux du compte.
+- `hasMedia` reste trompeur : pour compter réellement les slides, passer par `get_post_raw`
+  (paramètres `blog_id` et `post_id`, en serpent — pas `blogId`).
 
 Le garde-fou ne change pas : tout arrive en **brouillon**, et c'est Maxime qui valide dans
 Metricool. L'automatisation supprime la manipulation, pas la validation.
