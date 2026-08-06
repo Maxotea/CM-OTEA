@@ -170,7 +170,7 @@ def poste_du_jour(posts):
             and len(p.get("media") or []) <= 1]
 
 
-def publier(spec_path, dry_run=False):
+def publier(spec_path, dry_run=False, remplacer=False):
     spec = json.loads(spec_path.read_text(encoding="utf-8"))
     client, slug = spec["client"], spec["slug"]
     blog_id = BLOG_IDS[client]
@@ -184,11 +184,16 @@ def publier(spec_path, dry_run=False):
         raise SystemExit(f"{slug} : slides absentes {manquantes} — lancer scripts/carrousel.py d'abord")
 
     posts = posts_du_jour(blog_id, spec["date_time"])
-    if deja_planifie(posts, spec["date_time"], legende):
+    existants = [p for p in posts
+                 if deja_planifie([p], spec["date_time"], legende)]
+    if existants and not remplacer:
         print(f"= {client} {spec['date_time']} — déjà planifié, ignoré")
         return
+    if existants and any(p.get("autoPublish") for p in existants):
+        print(f"! {client} {spec['date_time']} — déjà validé par le client, laissé intact")
+        return
 
-    remplaces = poste_du_jour(posts)
+    remplaces = poste_du_jour(posts) + existants
     if dry_run:
         print(f"[dry-run] {client} {spec['date_time']} — {len(slides)} slides, "
               f"réseaux {'+'.join(manifest['networks'])}, "
@@ -226,6 +231,10 @@ def main():
                     help="date du mercredi (YYYY-MM-DD). Un préfixe vaut lot : 2026-08 traite "
                          "tous les mercredis d'août")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--remplacer", action="store_true",
+                    help="recrée un carrousel déjà planifié — à utiliser quand seules les "
+                         "slides changent, la légende restant identique. Ne touche jamais un "
+                         "carrousel déjà validé par le client.")
     ap.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft. "
                                      "À utiliser pour le premier run réel : on vérifie sur un "
                                      "compte avant d'écrire sur les six.")
@@ -244,7 +253,7 @@ def main():
     echecs = 0
     for s in specs:
         try:
-            publier(s, args.dry_run)
+            publier(s, args.dry_run, args.remplacer)
         except Exception as exc:
             echecs += 1
             print(f"✗ {s.name} : {exc}", file=sys.stderr)

@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Guide",
-      "title": "Quel soin visage pour quelle peau ?",
+      "title": "Quel soin visage pour **quelle peau** ?",
       "body": "Quatre situations. Vous êtes probablement dans l'une d'elles."
     },
     {
       "kicker": "Avant de choisir",
       "title": "Une peau change avec la saison",
-      "body": "Celle de septembre n'est pas celle de juin. C'est pour cela qu'un diagnostic précède toujours le soin, plutôt que l'inverse."
+      "body": "Celle de septembre **n'est pas celle de juin**. C'est pour cela qu'un diagnostic précède toujours le soin, plutôt que l'inverse."
     },
     {
       "kicker": "Situation 1",
       "title": "Elle tiraille et manque d'éclat",
-      "body": "Une peau déshydratée, très fréquente après l'été. Le soin cherche le confort et la souplesse, pas le décapage."
+      "body": "Une peau déshydratée, très fréquente après l'été. Le soin cherche le confort et la souplesse, **pas le décapage**."
     },
     {
       "kicker": "Situation 2",
       "title": "Elle brille dès le milieu de journée",
-      "body": "Zone médiane du visage plus grasse que le reste. On travaille le nettoyage et l'équilibre, sans assécher, sinon la brillance revient plus forte."
+      "body": "Zone médiane du visage plus grasse que le reste. On travaille le nettoyage et l'équilibre, sans assécher, sinon **la brillance revient plus forte**."
     },
     {
       "kicker": "Situation 3",
       "title": "Elle réagit à tout",
-      "body": "Rougeurs, sensations d'échauffement, inconfort après un produit nouveau. Le soin se fait minimaliste, avec très peu de gestes et beaucoup de douceur."
+      "body": "Rougeurs, sensations d'échauffement, inconfort après un produit nouveau. Le soin se fait minimaliste, avec **très peu de gestes** et beaucoup de douceur."
     },
     {
       "kicker": "Situation 4",
       "title": "Le teint est terne, sans problème précis",
-      "body": "La peau va bien, elle est simplement fatiguée. C'est la meilleure candidate à un soin éclat avant un événement."
+      "body": "La peau va bien, elle est **simplement fatiguée**. C'est la meilleure candidate à un soin éclat avant un événement."
     },
     {
       "kicker": "À retenir",
       "title": "Décrivez ce que vous ressentez, pas ce que vous croyez avoir",
-      "body": "Tiraillements, brillance, réactions, teint terne : ces quatre mots suffisent à orienter le soin."
+      "body": "Tiraillements, brillance, réactions, teint terne : **ces quatre mots suffisent** à orienter le soin."
     },
     {
       "cta": true,
       "kicker": "Gossip Beauty Center, Argenteuil",
       "title": "Un diagnostic, puis le bon soin",
-      "body": "Institut exclusivement féminin. Écrivez-nous en message privé en décrivant votre peau, nous vous orientons avant même de venir."
+      "body": "Institut **exclusivement féminin**. Écrivez-nous en message privé en décrivant votre peau, nous vous orientons avant même de venir."
     }
   ],
   "caption": "Un soin visage, cela ne se choisit pas dans une liste. Cela se choisit à partir de ce que votre peau vous fait ressentir.\n\nQuatre situations, décrites simplement. Faites défiler, vous êtes probablement dans l'une d'elles.\n\nEt si vous hésitez entre deux, décrivez-nous simplement ce que vous ressentez en fin de journée. C'est souvent le meilleur indice.\n\nÉcrivez-nous en message privé.",
-  "hashtags": ["#soinvisage", "#argenteuil", "#institutdebeaute", "#peau", "#beautenaturelle", "#entrefemmes"],
+  "hashtags": [
+    "#soinvisage",
+    "#argenteuil",
+    "#institutdebeaute",
+    "#peau",
+    "#beautenaturelle",
+    "#entrefemmes"
+  ],
   "note": "Vocabulaire volontairement sensoriel, aucune allégation médicale ni promesse de résultat, aucun nom de pathologie. Aucun tarif cité. Si le Mawlid tombe le 26/08, ce carrousel glisse au jeudi 27/08 pour laisser la journée au message de vœux sobre prévu par la fiche."
 }

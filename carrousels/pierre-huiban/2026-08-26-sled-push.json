@@ -9,47 +9,53 @@
     {
       "cover": true,
       "kicker": "Sled push",
-      "title": "La station qui casse ta course",
+      "title": "La station qui **casse ta course**",
       "body": "Quatre réglages. Aucun ne demande d'être plus fort."
     },
     {
       "kicker": "Le constat",
       "title": "Ce n'est pas un problème de force",
-      "body": "Des gars qui poussent lourd en salle se font démonter ici. Le sled ne récompense pas la force, il récompense la position."
+      "body": "Des gars qui poussent lourd en salle se font démonter ici. Le sled ne récompense pas la force, **il récompense la position**."
     },
     {
       "kicker": "Réglage 1",
       "title": "Les bras tendus, verrouillés",
-      "body": "Bras pliés, tu pousses avec les épaules et tu brûles tes bras pour les stations suivantes. Tendus, tu transmets, tu ne travailles pas."
+      "body": "Bras pliés, tu pousses avec les épaules et tu brûles tes bras pour les stations suivantes. Tendus, **tu transmets, tu ne travailles pas**."
     },
     {
       "kicker": "Réglage 2",
       "title": "Le corps en ligne, incliné",
-      "body": "Une seule ligne des mains aux chevilles. Le dos rond, c'est de la force perdue dans le mouvement au lieu d'aller dans le sled."
+      "body": "Une seule ligne **des mains aux chevilles**. Le dos rond, c'est de la force perdue dans le mouvement au lieu d'aller dans le sled."
     },
     {
       "kicker": "Réglage 3",
       "title": "Des petits pas, tout le temps",
-      "body": "Grandes enjambées, le sled s'arrête entre chaque poussée et il faut le relancer. Relancer coûte trois fois plus cher que maintenir."
+      "body": "Grandes enjambées, le sled s'arrête entre chaque poussée et il faut le relancer. Relancer coûte **trois fois plus cher** que maintenir."
     },
     {
       "kicker": "Réglage 4",
       "title": "Respire pendant, pas après",
-      "body": "Tout le monde bloque sa respiration sur la longueur entière. Tu arrives au bout en apnée et le kilomètre suivant est fichu."
+      "body": "Tout le monde bloque sa respiration sur la longueur entière. Tu arrives au bout en apnée et **le kilomètre suivant est fichu**."
     },
     {
       "kicker": "À retenir",
       "title": "Bras tendus, corps en ligne, petits pas, respiration",
-      "body": "Quatre réglages. Tu peux tous les tester à ta prochaine séance, sans changer une seule charge."
+      "body": "Quatre réglages. Tu peux tous les tester à ta prochaine séance, **sans changer une seule charge**."
     },
     {
       "cta": true,
       "kicker": "Road to Stockholm",
       "title": "Teste-les cette semaine",
-      "body": "Puis dis-moi lequel change le plus pour toi. Je réponds à tout le monde en commentaire. LFG."
+      "body": "Puis dis-moi lequel change le plus pour toi. Je réponds à tout le monde **en commentaire**. LFG."
     }
   ],
   "caption": "Le sled push, c'est la station qui casse le plus de courses. Et ce n'est pas un problème de force.\n\nQuatre réglages, testables à ta prochaine séance, sans toucher à une seule charge. Swipe.\n\nLe 3 est celui qui change tout : relancer un sled arrêté coûte trois fois plus cher que le maintenir en mouvement.\n\nDis-moi lequel change le plus pour toi. LFG.",
-  "hashtags": ["#hyrox", "#sledpush", "#hyroxfrance", "#hyroxtraining", "#lfg"],
+  "hashtags": [
+    "#hyrox",
+    "#sledpush",
+    "#hyroxfrance",
+    "#hyroxtraining",
+    "#lfg"
+  ],
   "note": "Contenu technique à faire valider par Pierre avant publication. Aucune charge en kilos citée : les poids officiels varient selon les catégories, ne pas les annoncer sans vérification. Aucun sponsor mentionné."
 }

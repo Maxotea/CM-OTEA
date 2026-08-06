@@ -21,6 +21,10 @@ on:
         description: "Ne rien publier, seulement afficher ce qui serait fait"
         type: boolean
         default: false
+      remplacer:
+        description: "Recréer les carrousels déjà planifiés (quand seules les slides changent)"
+        type: boolean
+        default: false
 
 jobs:
   publier:
@@ -58,6 +62,7 @@ jobs:
           python3 scripts/publier.py \
             --semaine "${{ steps.semaine.outputs.date }}" \
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
+            ${{ inputs.remplacer && '--remplacer' || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Conserver les slides rendues

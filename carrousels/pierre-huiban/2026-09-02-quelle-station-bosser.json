@@ -9,47 +9,54 @@
     {
       "cover": true,
       "kicker": "Rentrée",
-      "title": "Quelle station tu dois bosser en priorité",
+      "title": "Quelle station tu dois bosser **en priorité**",
       "body": "Pas celle que tu préfères. Celle qui te coûte."
     },
     {
       "kicker": "La règle",
       "title": "Tu t'entraînes sur ce que tu aimes",
-      "body": "Tout le monde le fait. Résultat : tu progresses là où tu étais déjà bon et tu prends la même claque au même endroit."
+      "body": "Tout le monde le fait. Résultat : tu progresses là où tu étais déjà bon et tu prends **la même claque au même endroit**."
     },
     {
       "kicker": "Si tu exploses au cardio",
       "title": "Le compromis avant tout",
-      "body": "Course, station, course, sans pause. Ce n'est pas ta VMA le problème, c'est ta capacité à repartir avec les jambes vides."
+      "body": "Course, station, course, sans pause. Ce n'est pas ta VMA le problème, c'est ta capacité à **repartir avec les jambes vides**."
     },
     {
       "kicker": "Si tu bloques sur le sled",
       "title": "Force de jambes et position",
-      "body": "Poussées lourdes sur distance courte, plus le travail de position. Deux séances par semaine suffisent à changer la donne."
+      "body": "Poussées lourdes sur distance courte, plus le travail de position. **Deux séances par semaine** suffisent à changer la donne."
     },
     {
       "kicker": "Si les wall balls te tuent",
       "title": "Volume sous fatigue",
-      "body": "C'est la dernière station, tu l'abordes toujours cassé. Alors ne les travaille jamais frais. Toujours en fin de séance."
+      "body": "C'est la dernière station, tu l'abordes toujours cassé. Alors ne les travaille **jamais frais**. Toujours en fin de séance."
     },
     {
       "kicker": "Si tu perds sur la fin",
       "title": "Le mental et le pacing",
-      "body": "Souvent tu n'es pas moins entraîné, tu es juste parti trop vite. Travaille l'allure cible, pas le fond."
+      "body": "Souvent tu n'es pas moins entraîné, tu es **juste parti trop vite**. Travaille l'allure cible, pas le fond."
     },
     {
       "kicker": "À retenir",
       "title": "Prends ton dernier chrono, trouve où tu as perdu",
-      "body": "La station à travailler est écrite dedans. Elle n'est jamais celle que tu aurais choisie."
+      "body": "La station à travailler est écrite dedans. Elle n'est **jamais celle que tu aurais choisie**."
     },
     {
       "cta": true,
       "kicker": "Road to Stockholm",
       "title": "Balance-moi ton point faible",
-      "body": "En commentaire. Je te dis par quoi commencer. Rentrée, on repart. LFG."
+      "body": "En commentaire. Je te dis **par quoi commencer**. Rentrée, on repart. LFG."
     }
   ],
   "caption": "Rentrée. Tout le monde reprend, et tout le monde retourne s'entraîner sur ce qu'il fait déjà bien.\n\nQuatre profils, quatre priorités. Trouve le tien. Swipe.\n\nLa méthode la plus simple : reprends ton dernier chrono et regarde où tu as perdu. La réponse est écrite dedans, et ce n'est jamais celle que tu aurais choisie.\n\nBalance-moi ton point faible en commentaire. LFG.",
-  "hashtags": ["#hyrox", "#hyroxfrance", "#hyroxtraining", "#rentree", "#roadtostockholm", "#lfg"],
+  "hashtags": [
+    "#hyrox",
+    "#hyroxfrance",
+    "#hyroxtraining",
+    "#rentree",
+    "#roadtostockholm",
+    "#lfg"
+  ],
   "note": "Aucun chrono, aucun poids, aucune date de compétition cités. Les dates des Mondiaux Hyrox 2026 doivent être vérifiées par recherche web avant tout carrousel de compte à rebours. Aucun sponsor mentionné."
 }
