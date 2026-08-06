@@ -196,3 +196,31 @@ reporting mensuel :
 
 Un carrousel qui bat les autres se **recycle** : même structure, sujet voisin, quatre à six semaines
 plus tard. C'est le gisement de contenu le moins cher du système.
+
+## 11. Automatisation hebdomadaire
+
+Deux boucles, séparées parce qu'elles n'ont pas les mêmes contraintes.
+
+**La rédaction** — a besoin de jugement et de recherche web (dates, prix, actualité du secteur).
+Elle tourne dans une session Claude hebdomadaire : écrire les 6 specs de la semaine suivante,
+vérifier les faits, ouvrir une pull request. Une session Claude distante ne peut pas publier :
+sa politique réseau bloque `app.metricool.com` et les hébergeurs d'images.
+
+**La publication** — a besoin de réseau, pas de jugement. Elle tourne dans GitHub Actions
+(`.github/workflows/carrousels.yml`, chaque lundi), qui n'a aucune restriction d'egress :
+rendu des slides, hébergement, planification en brouillon via `scripts/publier.py`.
+
+Attaquer l'API Metricool en direct plutôt que Zapier fait disparaître deux plaies connues :
+le décalage horaire de +7 h (artefact de l'intégration Zapier, donc plus de
+`bulk_update_post_times` ni de `bulk_set_draft` derrière) et le rate limit à ~6 créations.
+
+Le point qui rend l'hébergement jetable : `GET /api/actions/normalize/image/url?url=...`
+fait recopier le média par Metricool sur son propre CDN. L'URL source n'a donc besoin de
+vivre que le temps de l'appel — inutile de maintenir un hébergement permanent.
+
+Secrets attendus par l'action : `METRICOOL_USER_ID`, `METRICOOL_TOKEN` (plan Advanced
+minimum, en-tête `X-Mc-Auth` — jamais `Authorization: Bearer`, c'est un 401) et de quoi
+héberger les slides.
+
+Le garde-fou ne change pas : tout arrive en **brouillon**, et c'est Maxime qui valide dans
+Metricool. L'automatisation supprime la manipulation, pas la validation.

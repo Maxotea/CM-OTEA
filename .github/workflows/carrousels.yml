@@ -1,0 +1,65 @@
+name: Carrousels hebdo
+
+# Rend et planifie en brouillon le carrousel du mercredi de chaque client.
+# Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
+# bloque app.metricool.com et l'hébergeur d'images, un runner Actions ne les bloque pas.
+
+on:
+  schedule:
+    # Chaque lundi 6h00 UTC, soit 8h00 à Paris en heure d'été — deux jours d'avance
+    # sur la publication du mercredi, de quoi valider tranquillement dans Metricool.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      semaine:
+        description: "Date du mercredi visé (YYYY-MM-DD). Vide = le prochain mercredi."
+        required: false
+      dry_run:
+        description: "Ne rien publier, seulement afficher ce qui serait fait"
+        type: boolean
+        default: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Déterminer la semaine
+        id: semaine
+        run: |
+          if [ -n "${{ inputs.semaine }}" ]; then
+            echo "date=${{ inputs.semaine }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "date=$(date -d 'next Wednesday' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Valider les specs
+        run: python3 scripts/carrousel.py carrousels/ --check
+
+      - name: Rendre les slides
+        run: python3 scripts/carrousel.py carrousels/
+
+      - name: Planifier dans Metricool
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+          HIGGSFIELD_API_KEY: ${{ secrets.HIGGSFIELD_API_KEY }}
+        run: |
+          python3 scripts/publier.py \
+            --semaine "${{ steps.semaine.outputs.date }}" \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Conserver les slides rendues
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: carrousels-${{ steps.semaine.outputs.date }}
+          path: medias/*/carrousels/
+          retention-days: 30
