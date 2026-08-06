@@ -11,20 +11,42 @@
 
 | Couleur | Hex | Usage dans les carrousels |
 |---|---|---|
-| Rose vif | `#E4017C` | kickers, mots accentués, fond de la slide CTA |
-| Magenta | `#B2005F` | aplats et surfaces uniquement — **jamais du texte sur noir** (2,88:1) |
-| Rose poudré | `#F7C9DE` | titres sur fond noir |
-| Or | `#C9A66B` | texte secondaire, numéros de slide |
-| Noir | `#0A0A0A` | fond des slides de contenu, texte sur la slide CTA |
+| Rose vif | `#E4017C` | aplat de la slide CTA — c'est la couleur des murs du salon |
+| Magenta | `#B2005F` | kickers, texte secondaire, mots accentués (4,70:1 sur rose poudré) |
+| Rose poudré | `#F7C9DE` | fond des slides de contenu |
+| Or | `#C9A66B` | photos et décors uniquement — **jamais du texte** (1,57:1 sur rose poudré) |
+| Noir | `#0A0A0A` | titres et corps de texte, texte de la slide CTA |
 
-**Pourquoi une base noire** plutôt que le rose poudré : c'est la seule qui rend toutes les autres
-lisibles. Rose vif sur rose poudré ne fait que **3,13:1**, très en dessous du seuil de 4,5:1 —
-inutilisable pour du texte. Sur noir : rose poudré 13,5:1, or 8,6:1, rose vif 4,3:1 (suffisant,
-l'accentuation étant en gras et en grande taille).
+## Le lieu réel (photos reçues le 06/08/2026, dossier Drive du client)
 
-⚠️ **Ne jamais déduire une DA de mots d'ambiance.** La première version des carrousels avait été
-construite sur « crème, beige, laiton » lus dans cette fiche : elle ne contenait aucune des
-couleurs de la marque. Une charte se demande, elle ne se devine pas.
+Les photos du salon corrigent une erreur d'appréciation : **Gossip est un lieu clair et rose, pas
+un lieu sombre.**
+
+- **Murs rose vif** `#E4017C` environ, à moulures et panneaux — c'est la signature visuelle du lieu
+- **Sol bois clair**, presque blond
+- **Mobilier beige et bouclette** — fauteuils, tables cannelées, assises texturées
+- **Appliques et socles dorés**, néons LED blancs en arcs autour des miroirs
+- **Vasques blanches**, robinetterie noire (le noir n'est qu'un détail, jamais une surface)
+- **Hammam en travertin beige** et laiton, lumière chaude sous banquette — pas de pierre noire
+- Enseigne « GOSSIP Beauty Center » rétroéclairée sur mur rose
+
+**Conséquence pour toute génération IA** : rose vif dominant sur les murs, bois clair au sol,
+textiles beige et crème, or brossé, blanc, lumière abondante. **Jamais de fond noir, jamais de
+marbre sombre, jamais d'ambiance tamisée façon spa hôtelier** — c'était le contresens de la
+première banque.
+
+**Priorité absolue aux vraies photos.** Le salon est photogénique et les images existent
+désormais : l'IA redevient ce qu'elle doit être, un dernier recours pour les sujets abstraits.
+
+## Contrastes utilisables (mesurés)
+
+Rose vif sur rose poudré ne fait que **3,13:1** — illisible, donc l'accentuation des carrousels
+passe en magenta `#B2005F` (4,70:1). L'or `#C9A66B` sur rose poudré tombe à 1,57:1 : réservé aux
+photos, jamais au texte. Sur rose poudré, le noir donne 13,5:1.
+
+⚠️ **Ne jamais déduire une DA de mots d'ambiance.** La première banque avait été construite sur
+« crème, beige, laiton » lus dans cette fiche, la deuxième sur une base noire déduite de la charte
+seule. Ni l'une ni l'autre ne ressemblait au salon. Une DA se fonde sur des photos du lieu.
 
 ## Visuels IA (Higgsfield)
 - **Élément de référence : `Gossip-Studio`** (id `9c0e5746-c1ab-4d0c-8b1e-3e5a3763992f`). DA : institut féminin chaleureux/lumineux — rose poudré, beige, crème, laiton doré, fleurs roses (pivoine, rose, orchidée), marbre crème, touches orientales pour le hammam (seau laiton, savon noir, zellige). **Jamais de visage.** Réutiliser `<<<9c0e5746-c1ab-4d0c-8b1e-3e5a3763992f>>>`.
@@ -41,8 +63,8 @@ couleurs de la marque. Une charte se demande, elle ne se devine pas.
 ## Carrousel hebdo (créneau du mercredi, 18h, Instagram + Facebook)
 - **Typologie** : récurrence forte + forfaits à panier élevé → raisonner LTV, preuve par la régularité et la douceur. **Cible** : femme d'Argenteuil et alentours, souvent jamais venue en institut, qui craint de se tromper ou d'être jugée. Aucun jargon, vocabulaire sensoriel.
 - **Archétypes prioritaires** : A7 (coulisses, lève la barrière d'entrée), A2 (erreurs), A5 (guide de choix), A8 (checklist saisonnière). A3 (avant/après) seulement avec accord écrit et sans allégation de résultat.
-- **DA carrousel** (`scripts/themes.json` → `gossip-beauty-center`) : fond noir #0A0A0A, titres rose poudré #F7C9DE, texte secondaire or #C9A66B, accent rose vif #E4017C, slide CTA en aplat rose vif sur texte noir. Titres en bas-de-casse. Voir la charte officielle plus haut.
-- ⚠️ **Écart assumé avec les visuels IA** : l'élément `Gossip-Studio` produit des images crème et beige, les carrousels sont sur fond noir. Ce n'est pas une incohérence — un carrousel typographique est un format à part, et le contraste avec les photos claires du fil le fait ressortir. Si Sarah préfère l'inverse, une base rose poudré est possible, mais alors l'accent doit passer en magenta #B2005F (4,70:1) : le rose vif y est illisible.
+- **DA carrousel** (`scripts/themes.json` → `gossip-beauty-center`) : fond rose poudré #F7C9DE, titres noirs #0A0A0A, texte secondaire et accentuation magenta #B2005F, slide CTA en aplat rose vif #E4017C sur texte noir — le rose du mur du salon. Titres en bas-de-casse.
+- ⚠️ **L'élément `Gossip-Studio` est périmé** : il produit des images crème et beige qui ne ressemblent pas au salon. À refaire à partir des vraies photos avant toute nouvelle génération.
 - **Planifiés (spec dans `carrousels/gossip-beauty-center/`)** : 12/08 A7 « Le hammam étape par étape » (porte aussi le rappel mensuel « lieu 100 % féminin ») · 19/08 A2 « 5 erreurs qui abîment vos cheveux en été » · 26/08 A5 « Quel soin visage pour quelle peau » · 02/09 A8 « Cinq rendez-vous pour la rentrée ».
 - **Réserve de sujets** : « Ce que le massage fait vraiment » (A7) · « Coloration : 5 idées reçues » (A4) · préparation des fêtes (A8, novembre) · Ramadan ~fév-mars 2027 : contenus douceur et patience, **jamais de récupération commerciale**, dates à revérifier par recherche web.
 - **Vigilance** : **aucun tarif n'est vérifié pour ce compte** → ne jamais citer de prix dans un carrousel tant que la liste ou le lien Planity n'a pas été fourni. Aucune allégation médicale ni promesse de résultat. Si le Mawlid tombe le 26/08, le carrousel glisse au jeudi 27/08 et la journée reste au message de vœux sobre.
