@@ -25,6 +25,9 @@ on:
         description: "Recréer les carrousels déjà planifiés (quand seules les slides changent)"
         type: boolean
         default: false
+      photos:
+        description: "Ingérer les photos Drive de ce compte (ex. gossip-beauty-center). Vide = ne rien ingérer."
+        required: false
 
 jobs:
   publier:
@@ -64,6 +67,12 @@ jobs:
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.remplacer && '--remplacer' || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Ingérer les photos client depuis le Drive
+        if: inputs.photos != ''
+        env:
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+        run: python3 scripts/photos.py "${{ inputs.photos }}" ${{ inputs.dry_run && '--dry-run' || '' }}
 
       - name: Conserver les slides rendues
         if: always()
