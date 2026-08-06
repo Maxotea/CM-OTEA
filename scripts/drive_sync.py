@@ -102,7 +102,7 @@ def synchroniser(client, dry_run=False):
     if dry_run:
         print(f"[dry-run] {client} : {len(prets)} nouveau(x), {len(doublons)} doublon(s). "
               f"Rien n'a été hébergé ni écrit.")
-        return 0
+        return len(prets)
 
     images = [(m, c) for m, c in prets if m["type"] in ("jpg", "png")]
     if images:
@@ -131,7 +131,8 @@ def main():
         raise SystemExit("préciser un client ou --tous")
 
     total = sum(synchroniser(c, args.dry_run) for c in clients)
-    print(f"\n{total} nouveau(x) média(s) au total.")
+    verbe = "à récupérer" if args.dry_run else "récupéré(s)"
+    print(f"\n{total} nouveau(x) média(s) {verbe} au total.")
     return 0
 
 
