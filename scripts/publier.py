@@ -25,6 +25,7 @@ import json
 import os
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -44,12 +45,30 @@ BLOG_IDS = {
 
 
 def _req(url, method="GET", body=None, headers=None):
+    """Appel HTTP. Retourne un objet si la réponse est du JSON, la chaîne brute sinon.
+
+    Tous les endpoints Metricool ne répondent pas en JSON : `normalize/image/url` renvoie
+    l'URL en texte brut. Exiger du JSON partout fait échouer la planification sur un
+    « Expecting value » incompréhensible.
+
+    Sur erreur HTTP, le corps de la réponse est remonté dans le message : sans lui, un 4xx
+    de Metricool ne dit rien et coûte un run entier pour être diagnostiqué.
+    """
     data = json.dumps(body).encode() if body is not None else None
     h = {"Content-Type": "application/json", **(headers or {})}
     req = urllib.request.Request(url, data=data, method=method, headers=h)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        raw = r.read().decode()
-    return json.loads(raw) if raw.strip() else {}
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            raw = r.read().decode().strip()
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode(errors="replace")[:400]
+        raise RuntimeError(f"HTTP {exc.code} sur {url.split('?')[0]} — {detail}") from None
+    if not raw:
+        return {}
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        return raw
 
 
 def metricool(path, method="GET", body=None, **query):
@@ -203,7 +222,8 @@ def main():
             print(f"✗ {s.name} : {exc}", file=sys.stderr)
         time.sleep(1)
 
-    print(f"\n{len(specs) - echecs}/{len(specs)} carrousels publiés en brouillon.")
+    verbe = "vérifiés (rien n'a été écrit)" if args.dry_run else "publiés en brouillon"
+    print(f"\n{len(specs) - echecs}/{len(specs)} carrousels {verbe}.")
     return 1 if echecs else 0
 
 
