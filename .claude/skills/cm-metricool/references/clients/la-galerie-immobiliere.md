@@ -86,11 +86,20 @@ Sources : quatre baromètres de prix en ligne, relevés de juillet 2026.
 #immobilierputeaux #prixaumetrecarre #hautsdeseine #marcheimmobilier #estimation #immobilierprestige
 ```
 
-Média : reprendre celui déjà attaché au brouillon du 07/08
-(`https://static.metricool.com/zapier/202607/5733302-file-5314915366995617872.png`). IG + FB,
-brouillon, `autoPublish` à faux. **Une fois le 14/08 créé, le brouillon du 07/08 (id 351958147)
-n'a plus d'objet et peut être supprimé.** Chiffres à revérifier si la publication glisse d'un mois :
-un relevé de juillet ne se cite plus en octobre.
+**Créé le 07/08/2026 — post `359378283`**, 14/08 à 12h30, IG + FB, brouillon (`draft` vrai,
+`autoPublish` faux), vérifié par `list_scheduled_posts` : heure exacte, pas de décalage de fuseau.
+Média repris du brouillon du 07/08
+(`https://static.metricool.com/zapier/202607/5733302-file-5314915366995617872.png`) — **à regarder
+avant validation** : s'il porte un indice de swipe, il vient du lot carrousel et doit être remplacé
+par un visuel de la banque IA (`bureau-estimation` colle au sujet).
+
+À noter au passage : `bulk_replace_posts` **ne décale pas l'heure**. Le bug +7h documenté plus haut
+est un artefact de l'action Zapier `schedule_post` ; les code actions maison écrivent en
+Europe/Paris natif, sans `bulk_update_post_times` ni `bulk_set_draft` derrière.
+
+**Le brouillon du 07/08 (id 351958147) n'a plus d'objet et peut être supprimé** — laissé en place,
+c'est le compte du client. Chiffres à revérifier si la publication glisse d'un mois : un relevé de
+juillet ne se cite plus en octobre.
 
 ## Carrousel hebdo (créneau du mercredi, 18h, Instagram + Facebook)
 - **Typologie** : très forte valeur unitaire, décision longue → la preuve est la maîtrise du détail. **Cible** : propriétaire ou acquéreur sur Paris 16e / Puteaux / Hauts-de-Seine, qui engage un patrimoine et craint surtout de se tromper. Jargon économique toléré, jamais technique.
