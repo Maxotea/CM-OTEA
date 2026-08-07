@@ -27,6 +27,71 @@
 - **31 stories planifiées ✅** 01→31/08 à 10:00, IG+FB, brouillon, via `bulk_schedule_stories`.
 - ⚠️ **10 stories « Sabrina » sans média** (28/07→29/09, 18h, hebdo — ids 326979151/160/173/175/177, 326980004/005/007/011/020) : contenus face-cam du calendrier initial (adresses de Sabrina, anecdote terrain, équipe, marché immo…). **NE PAS brancher en IA** (personne réelle) ni supprimer : à TOURNER avec Sabrina (vidéos verticales), puis héberger via [[hebergement-photos-reelles-metricool]]. Sans danger en attendant : elles sont en brouillon.
 
+## ⚠️ Posts « Swipez → » du lot de juillet : une couverture, pas de slides (constaté 07/08/2026)
+
+Le lot planifié en juillet contient des légendes écrites **pour un carrousel** (« Swipez pour
+découvrir → », « en quelques slides ») posées sur des posts qui n'ont **qu'un seul média**, parfois
+aucun. À la lecture, le post promet une suite qui n'existe pas — c'est exactement ce qui a fait dire
+à Maxime « on dirait qu'il manque une partie ». Le moteur de carrousels n'existait pas encore à la
+date de ce lot. Même défaut déjà relevé sur Pierre Huiban (voir sa fiche).
+
+**Tous en brouillon : rien n'est jamais parti en ligne.** Inventaire au 07/08/2026 :
+
+| Date | Post | Médias | Ce qu'il faut |
+|---|---|---|---|
+| ~~07/08 12:30~~ | « Tendances prix été 2026 — les chiffres clés » | 1 | **traité** → refait pour le 14/08, voir plus bas |
+| 02/10 12:30 | « De la première visite à la signature » | 1 | vrai récit client → accord du client, ou basculer en carrousel A1 |
+| 09/10 12:30 | « 5 mythes sur l'estimation » | 1 | carrousel A4 — sujet déjà outillé, à écrire dans `carrousels/` |
+| 13/10 18:00 | REEL « Découvrez un autre métier » | 0 | **placeholder `[collaborateur]`** → nommer la personne, puis tourner |
+| 16/10 12:30 | « 5 choses à savoir sur [Prénom] » | 1 | **placeholder non rempli** + photo de la personne → demander à Sabrina |
+| 30/10 12:30 | « Acheteur : avantages fin d'année » | 1 | carrousel A8 |
+| 06/11 12:30 | « Nos clients en parlent » | 0 | vrais témoignages → demander à Sabrina |
+| 20/11 12:30 | « L'équipe — qui fait quoi ? » | 0 | vraies photos d'équipe → demander à Sabrina |
+
+**Règle qui en découle : sur ce compte, le vendredi 12h30 est un post feed SIMPLE.** Le carrousel,
+c'est le mercredi 18h (section suivante). Une légende du vendredi ne doit donc jamais contenir
+« Swipez », « slides » ni « faites défiler ». `scripts/audit_posts.py` vérifie ce point.
+
+### Post du 07/08 refait pour le 14/08 12:30 (créneau vendredi qui était vide)
+
+Le créneau du 07/08 était déjà passé au moment du constat, et le 14/08 n'avait aucun post feed.
+Chiffres **relevés le 07/08/2026** sur quatre baromètres publics — appartements Puteaux
+**7 376 €/m²** et fourchette **5 262 → 9 664 €/m²** (SeLoger, juillet 2026) · maisons 8 364 €/m² ·
+12 mois : appartements **-0,1 %**, maisons **-0,6 %** · moyenne tous biens selon la source :
+**7 163 €** (PAP, 1er juillet 2026), 7 407 € (MeilleursAgents), **7 633 €** (RealAdvisor, juillet
+2026). L'écart entre baromètres, 470 €/m², vaut ~33 000 € sur 70 m².
+
+Les baromètres sont **nommés ici mais pas dans la légende** : MeilleursAgents et PAP captent les
+mêmes requêtes « estimation gratuite » que l'agence, autant ne pas leur envoyer d'attention. La
+légende dit « quatre baromètres de prix en ligne, relevés de juillet 2026 », la source vérifiable
+reste dans cette fiche.
+
+```
+Cet été, le mètre carré à Puteaux se négocie autour de 7 376 euros pour un appartement. Le chiffre est juste. Il ne dit presque rien de votre bien.
+
+Trois enseignements des relevés de juillet 2026.
+
+1. Le marché ne bouge plus. Sur douze mois, les appartements varient de -0,1 %, les maisons de -0,6 %. À l'échelle d'un marché, c'est l'immobilité.
+
+2. L'écart, lui, reste considérable. Toujours à Puteaux, toujours cet été : de 5 262 à 9 664 euros le mètre carré selon le bien.
+
+3. Les baromètres en ligne ne s'accordent pas. De 7 163 à 7 633 euros selon la source, au même mois. Sur un appartement de 70 mètres carrés, ce seul écart déplace le prix affiché de près de 33 000 euros.
+
+La conséquence tient en une phrase : quand la moyenne stagne, ce n'est plus le marché qui porte le prix, c'est la place de votre bien dans la fourchette.
+
+Écrivez-nous en message privé pour savoir où se situe le vôtre.
+
+Sources : quatre baromètres de prix en ligne, relevés de juillet 2026.
+
+#immobilierputeaux #prixaumetrecarre #hautsdeseine #marcheimmobilier #estimation #immobilierprestige
+```
+
+Média : reprendre celui déjà attaché au brouillon du 07/08
+(`https://static.metricool.com/zapier/202607/5733302-file-5314915366995617872.png`). IG + FB,
+brouillon, `autoPublish` à faux. **Une fois le 14/08 créé, le brouillon du 07/08 (id 351958147)
+n'a plus d'objet et peut être supprimé.** Chiffres à revérifier si la publication glisse d'un mois :
+un relevé de juillet ne se cite plus en octobre.
+
 ## Carrousel hebdo (créneau du mercredi, 18h, Instagram + Facebook)
 - **Typologie** : très forte valeur unitaire, décision longue → la preuve est la maîtrise du détail. **Cible** : propriétaire ou acquéreur sur Paris 16e / Puteaux / Hauts-de-Seine, qui engage un patrimoine et craint surtout de se tromper. Jargon économique toléré, jamais technique.
 - **Archétypes prioritaires** : A2 (erreurs, le plus performant sur cette cible), A5 (arbitrage), A8 (saisonnier), A7 (coulisses de l'expertise). **A6 (décryptage chiffré : taux, prix au m², DPE) uniquement après recherche web datée et sourcée.**

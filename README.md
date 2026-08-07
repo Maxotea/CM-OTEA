@@ -24,6 +24,18 @@ python3 scripts/carrousel.py carrousels/ --check      # valide tout sans rien é
 
 Le rendu part dans `medias/<client>/carrousels/<slug>/` (dossier ignoré par git) avec les slides numérotées dans l'ordre, la légende, et un `manifest.json` qui alimente `media01`…`media0N` de `schedule_post`.
 
+## Relire ce qui est déjà planifié
+
+```bash
+python3 scripts/audit_posts.py                              # les six comptes, 120 jours
+python3 scripts/audit_posts.py --client le-loft --jours 180
+```
+
+Signale deux défauts que la vignette du calendrier Metricool ne montre pas : une légende qui
+promet des slides (« Swipez → ») sur un post qui n'en a qu'une, et un placeholder `[VAINQUEUR]`
+jamais rempli. Les deux sont arrivés, les deux ont été découverts à l'œil des semaines plus tard.
+Tourne chaque lundi avec l'action « Carrousels hebdo », sans jamais la faire échouer.
+
 ## Ajouter un client
 Dupliquer `references/clients/_template-nouveau-client.md`, remplir, créer si besoin sa `banque-photos-[client].md`, et ajouter sa DA de carrousel dans `scripts/themes.json`.
 
