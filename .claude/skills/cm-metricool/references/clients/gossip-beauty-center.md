@@ -73,6 +73,28 @@ profondeur de champ courte, étalonnage brochure d'hôtel. Jamais de visage, jam
 
 Préfixe : `https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/`
 
+### Les mêmes en vidéo (07/08/2026)
+
+Les 8 visuels sont animés en `kling3_0_turbo`, **9:16, 1080×1920, 5 s, caméra verrouillée** — le prompt
+répète « NO zoom, NO pan, NO push-in, NO dolly ». C'est la leçon de juillet : sur « Instant massage »
+un push-in avait fait sortir le texte du cadre. Seule la vie ambiante bouge (lumière, reflets, fleurs).
+URLs dans `photos/gossip-beauty-center-bascule-luxe.json` → `visuels[].video_url`.
+
+⚠️ **Le fondu de 0,6 s vers l'outro de marque n'est pas encore monté.** Les vidéos font 5 s, pas les
+~9,5 s du pipeline complet. L'outro (logo GOSSIP sur satin rosé, 5 s) est dans le Drive du client.
+
+⚠️ **Kling ne sort pas de 4:5.** Les visuels sont en 4:5 pour le feed, les vidéos en 9:16 : il y a donc
+recadrage. Cohérent pour reels et stories, à revoir si la destination est le post feed — il faudrait
+alors un `reframe` des images avant animation, ou un autre modèle.
+
+### Deux pièges relevés sur Higgsfield (07/08/2026)
+
+- **Le workspace doit être sélectionné.** `list_workspaces` renvoyait `is_selected: false` et toute
+  génération échouait sur « Out of credits » alors que le solde était de 2 853 crédits. `select_workspace`
+  règle le problème.
+- **« Out of credits » ment aussi sur la concurrence.** Au-delà de ~4 jobs vidéo simultanés, l'API
+  renvoie la même erreur de crédits. Procéder par vagues de 4 et attendre.
+
 ⚠️ **L'affectation visuel ↔ sujet est provisoire et demande un œil.** Elle a été posée à l'aveugle
 (V1 accueil, V2 massage, V3 hammam, V4 coiffure, V6 cocooning, V7 produits-cheveux,
 V8 octobre-rose, V9 soin-visage) : le sujet réel de chaque photo n'a pas été vérifié. À corriger
@@ -88,9 +110,14 @@ dès que quelqu'un a regardé les 8 rendus.
 - **BASCULE VERS LA BANQUE LUXE : ⏳ EN ATTENTE (07/08/2026)** — les 32 posts feed qui portent
   encore un visuel IA sont listés avec leur nouvelle URL dans
   `photos/gossip-beauty-center-bascule-luxe.json`. À rejouer avec `bulk_update_post_media`
-  (`blog_id` + `updates`). Les 4 carrousels (8 slides sur `i.ibb.co`) et les 31 stories vidéo
-  **ne sont pas concernés** — les stories sont déjà montées sur les vraies photos du lieu.
+  (`blog_id` + `updates`). Les 4 carrousels (8 slides sur `i.ibb.co`) **ne sont pas concernés**.
   ⚠️ Un seul des 32 n'est pas en brouillon : `358852794` (10/08 18h, `autoPublish` actif).
+- **STORIES ENCORE EN VISUEL IA : ⏳ EN ATTENTE (07/08/2026)** — vérifié par extension du média :
+  **27 des 31 stories sont déjà en `.mp4`** sur vraies photos, **4 sont restées en `.png`**, et ce
+  sont exactement les mercredis « Côté coiffure » que la reprise de juillet avait sautés :
+  `356675985` (05/08, **déjà publiée**, hors bascule), `358851197` (12/08, `autoPublish` actif),
+  `354380180` (19/08, brouillon), `354380616` (26/08, brouillon). Cibles dans
+  `stories_encore_en_image` du même fichier.
 
 ## Stories quotidiennes (créées 27/07/2026)
 - **Banque de 7 stories 9:16** dans `medias/gossip-beauty-center/ia/stories/` — DA Gossip-Studio, texte info incrusté sur le visuel (vérifié sans coquille) : lundi `story-lundi-semaine` (BELLE SEMAINE + liste services), mardi `story-hammam` (LE RITUEL HAMMAM), mercredi `story-coiffure` (CÔTÉ COIFFURE — Coupe·Couleur·Soin), jeudi `story-massage` (INSTANT MASSAGE), vendredi `story-weekend-resa` (PENSEZ AU WEEK-END), samedi `story-feminin` (UN LIEU 100% FÉMININ), dimanche `story-dimanche` (DOUCEUR DU DIMANCHE).
