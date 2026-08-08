@@ -82,8 +82,9 @@ relève la traite exactement comme un fichier Drive. Les deux canaux cohabitent.
 ## Garde-fous
 
 - Un ✅ sur un texte à placeholders (`[VAINQUEUR]`…) ou sur un post **sans média** est
-  **bloqué et signalé**, pas publié : compléter, puis re-valider (le média peut être
-  attaché après coup — la relève suivante publiera).
+  **retenu**, pas publié : l'accord du client reste acquis (`en_attente` dans le
+  journal), la relève retente à chaque passage et publie dès que le texte est complété
+  ou le visuel attaché dans Metricool. Rien d'autre à faire côté client.
 - **La « mise à jour » de l'API Metricool crée une nouvelle entrée** (nouvel id, même
   uuid) et laisse l'ancien brouillon en place — constaté au premier test réel (OTEA,
   08/08/2026). Le script vérifie donc l'état réel du créneau avant et après chaque
