@@ -1,0 +1,54 @@
+{
+  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review, drive_fichier = identifiant Drive du fichier de la semaine EN COURS — mis à jour chaque lundi par la session Claude après dépôt dans le Drive du client, c'est lui que le workflow relit plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx.",
+  "comptes": [
+    {
+      "slug": "gossip-beauty-center",
+      "blog_id": 5733306,
+      "nom": "Gossip Beauty Center",
+      "prefixe": "GBC",
+      "actif": true,
+      "drive_fichier": null
+    },
+    {
+      "slug": "le-loft",
+      "blog_id": 6191921,
+      "nom": "Le Loft",
+      "prefixe": "LL",
+      "actif": true,
+      "drive_fichier": null
+    },
+    {
+      "slug": "jlawsongolf",
+      "blog_id": 6563137,
+      "nom": "J Lawson Golf",
+      "prefixe": "JLG",
+      "actif": true,
+      "drive_fichier": null
+    },
+    {
+      "slug": "la-galerie-immobiliere",
+      "blog_id": 5733302,
+      "nom": "La Galerie Immobilière",
+      "prefixe": "LGI",
+      "actif": true,
+      "drive_fichier": null
+    },
+    {
+      "slug": "pierre-huiban",
+      "blog_id": 6572293,
+      "nom": "Pierre Huiban",
+      "prefixe": "PH",
+      "actif": true,
+      "drive_fichier": null
+    },
+    {
+      "slug": "otea-production",
+      "blog_id": 5733269,
+      "nom": "OTEA PRODUCTION",
+      "prefixe": "OP",
+      "actif": false,
+      "drive_fichier": null,
+      "note": "Compte de l'agence — Maxime valide directement dans Metricool, pas de fichier client."
+    }
+  ]
+}
