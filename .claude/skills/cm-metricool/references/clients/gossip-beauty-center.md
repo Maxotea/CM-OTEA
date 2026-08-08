@@ -107,6 +107,16 @@ dès que quelqu'un a regardé les 8 rendus.
   à ne plus attacher.
 - Attachement : **Instagram + Facebook**, 18h. `schedule_post` + `media01`=URL, `draft:true`, `autoPublish:false` → corriger heure (`bulk_update_post_times` à 18:00, change les IDs) → supprimer l'ancien. ⚠️ Rate limit Zapier après ~6 créations : procéder par vagues de 6 avec pause ~90s ; ~1 création/vague échoue avec `followUpQuestion` (résolveur de compte) → refaire avec instruction compte explicite ; les suppressions échouent parfois « Code execution error » mais suppriment quand même (vérifier via list). ⚠️ Le champ `hasMedia` de list_scheduled_posts est trompeur (indiquait true alors que media vide) → vérifier via `get_post_raw`.
 - **STATUT BRANCHEMENT : ✅ TERMINÉ (22/07/2026)** — 64 posts feed branchés en rotation, vérif finale = 0 post sans média.
+- ⚠️⚠️ **`bulk_update_post_media` NE FONCTIONNE PAS.** Le `PUT /scheduler/posts/{id}` de Metricool
+  répond **200 et ignore silencieusement le champ `media`** — vérifié en comparant avant/après, aussi
+  bien sur une URL cloudfront que sur une URL `i.ibb.co` déjà connue de Metricool. Ce n'est donc ni
+  l'hôte, ni le drapeau `saveExternalMediaFiles`. **Toujours vérifier par `get_post_raw` après coup :
+  sans cela on rapporte 32 succès sur 32 non-opérations.** Deux autres pièges du même PUT : renvoyer
+  les `providers` avec leurs champs `status`/`detailedStatus` donne un 500 « Type definition error :
+  PublicationStatusCode », et un corps partiel donne un 400 sur `text`/`publicationDate`/`providers`.
+- ✅ **La voie qui marche : `bulk_replace_posts`** — recrée le post avec le nouveau média puis supprime
+  l'ancien. ⚠️ Elle force `draft:true` et `autoPublish:false` : un post en publication automatique
+  perdrait son déclenchement, à traiter à part.
 - **BASCULE VERS LA BANQUE LUXE : ⏳ EN ATTENTE (07/08/2026)** — les 32 posts feed qui portent
   encore un visuel IA sont listés avec leur nouvelle URL dans
   `photos/gossip-beauty-center-bascule-luxe.json`. À rejouer avec `bulk_update_post_media`

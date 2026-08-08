@@ -3,7 +3,7 @@
   "client": "gossip-beauty-center",
   "blog_id": "5733306",
   "date": "2026-08-07",
-  "statut": "EN ATTENTE",
+  "statut": "EN COURS — 6 faits, 24 restants",
   "visuels": {
     "V1": {
       "source_drive": "image00002 (HD)",
@@ -64,7 +64,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14525970038611108765.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14525970038611108765.png",
+      "statut": "HORS PERIMETRE — date deja passee"
     },
     {
       "post_id": "352385638",
@@ -73,7 +74,8 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2449069421252751805.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2449069421252751805.png",
+      "statut": "HORS PERIMETRE — date deja passee"
     },
     {
       "post_id": "358852794",
@@ -82,7 +84,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": false,
-      "ancien_media": "https://static.metricool.com/common/202608/5733306-mtr_8066276886204391867.png"
+      "ancien_media": "https://static.metricool.com/common/202608/5733306-mtr_8066276886204391867.png",
+      "statut": "A TRAITER A PART — autoPublish actif, bulk_replace_posts le passerait en brouillon"
     },
     {
       "post_id": "352387770",
@@ -91,7 +94,9 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-15076287382568237210.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-15076287382568237210.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359736471
     },
     {
       "post_id": "352389359",
@@ -100,7 +105,9 @@
       "sujet": "coiffure",
       "visuel": "V4",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6406803316736036344.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6406803316736036344.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737258
     },
     {
       "post_id": "352389397",
@@ -109,7 +116,9 @@
       "sujet": "cocooning",
       "visuel": "V6",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-11006994014580738450.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-11006994014580738450.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737271
     },
     {
       "post_id": "352391801",
@@ -118,7 +127,9 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-1428950671760351779.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-1428950671760351779.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737280
     },
     {
       "post_id": "352393783",
@@ -127,7 +138,9 @@
       "sujet": "cocooning",
       "visuel": "V6",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6829657938783543723.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6829657938783543723.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737291
     },
     {
       "post_id": "352393800",
@@ -136,7 +149,8 @@
       "sujet": "produits-cheveux",
       "visuel": "V7",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14206794336245276463.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14206794336245276463.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352393821",
@@ -145,7 +159,9 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5548889162096888237.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5548889162096888237.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737296
     },
     {
       "post_id": "352395663",
@@ -154,7 +170,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16822801000119623328.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16822801000119623328.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352395692",
@@ -163,7 +180,8 @@
       "sujet": "coiffure",
       "visuel": "V4",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16452501522709958112.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16452501522709958112.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352395698",
@@ -172,7 +190,8 @@
       "sujet": "coiffure",
       "visuel": "V4",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8531875422604542130.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8531875422604542130.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352395704",
@@ -181,7 +200,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8251962599419752019.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8251962599419752019.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352395714",
@@ -190,7 +210,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-3031722724201374554.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-3031722724201374554.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352395727",
@@ -199,7 +220,8 @@
       "sujet": "cocooning",
       "visuel": "V6",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-7752346412386492648.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-7752346412386492648.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398137",
@@ -208,7 +230,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-17610195761480910576.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-17610195761480910576.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398150",
@@ -217,7 +240,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-18210417420943530877.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-18210417420943530877.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398161",
@@ -226,7 +250,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8845846792978976796.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8845846792978976796.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398173",
@@ -235,7 +260,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14402807515008267470.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14402807515008267470.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398187",
@@ -244,7 +270,8 @@
       "sujet": "soin-visage",
       "visuel": "V9",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-296700448960773670.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-296700448960773670.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352398198",
@@ -253,7 +280,8 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9372693867474126003.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9372693867474126003.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400008",
@@ -262,7 +290,8 @@
       "sujet": "coiffure",
       "visuel": "V4",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5145351870684384941.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5145351870684384941.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400023",
@@ -271,7 +300,8 @@
       "sujet": "octobre-rose",
       "visuel": "V8",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9973900326379750885.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9973900326379750885.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400032",
@@ -280,7 +310,8 @@
       "sujet": "massage",
       "visuel": "V2",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-10922811701296901518.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-10922811701296901518.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400044",
@@ -289,7 +320,8 @@
       "sujet": "octobre-rose",
       "visuel": "V8",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12992206339867831382.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12992206339867831382.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400055",
@@ -298,7 +330,8 @@
       "sujet": "produits-cheveux",
       "visuel": "V7",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-4424173554232883886.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-4424173554232883886.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352400066",
@@ -307,7 +340,8 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12398003226668985597.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12398003226668985597.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352401122",
@@ -316,7 +350,8 @@
       "sujet": "accueil",
       "visuel": "V1",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2913593068463413880.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2913593068463413880.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352401134",
@@ -325,7 +360,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12173616072510710369.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12173616072510710369.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352401145",
@@ -334,7 +370,8 @@
       "sujet": "hammam",
       "visuel": "V3",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16036715032533706581.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16036715032533706581.png",
+      "statut": "EN ATTENTE"
     },
     {
       "post_id": "352401153",
@@ -343,7 +380,8 @@
       "sujet": "cocooning",
       "visuel": "V6",
       "brouillon": true,
-      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6737333385805004967.png"
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6737333385805004967.png",
+      "statut": "EN ATTENTE"
     }
   ],
   "video": {
@@ -400,5 +438,6 @@
         "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4"
       }
     ]
-  }
+  },
+  "_methode": "IMPORTANT : bulk_update_post_media NE MARCHE PAS. Le endpoint PUT de Metricool renvoie 200 et ignore silencieusement le champ media — verifie par comparaison avant/apres, sur une URL cloudfront comme sur une URL imgbb. La seule voie est bulk_replace_posts : recreer le post avec le nouveau media puis supprimer l'ancien. Attention, cette action force draft:true et autoPublish:false — un post en publication automatique perdrait son declenchement."
 }
