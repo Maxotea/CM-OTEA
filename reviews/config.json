@@ -46,9 +46,9 @@
       "blog_id": 5733269,
       "nom": "OTEA PRODUCTION",
       "prefixe": "OP",
-      "actif": false,
+      "actif": true,
       "drive_fichier": null,
-      "note": "Compte de l'agence — Maxime valide directement dans Metricool, pas de fichier client."
+      "note": "Compte de l'agence — activé temporairement pour le test réel de la chaîne (branche de test). Sur main : actif false, Maxime valide directement dans Metricool."
     }
   ]
 }
