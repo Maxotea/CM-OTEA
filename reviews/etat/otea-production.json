@@ -21,6 +21,16 @@
         "heure": null,
         "post_id": 356689507,
         "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "OP-07": {
+        "decision": "OK",
+        "hash": "c00d5fa0ad6531d9",
+        "quand": "2026-08-08T14:32:03",
+        "commentaire": null,
+        "legende_modifiee": true,
+        "heure": "12:30",
+        "post_id": 359735766,
+        "resultat": "publication programmée (version 359735766, ancien brouillon 355355797 retiré)"
       }
     }
   }
