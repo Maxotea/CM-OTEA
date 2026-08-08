@@ -524,7 +524,8 @@ def appliquer_compte(compte, dry_run=False):
         return {}
 
     etat = charger_etat(slug)
-    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0, "sans_decision": 0}
+    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
+                 "sans_decision": 0, "en_attente": 0}
     posts_cache = {}
     touches = False
 
@@ -565,8 +566,9 @@ def appliquer_compte(compte, dry_run=False):
                 continue
 
             cle = empreinte(decision, legende, heure)
-            if journal.get(ref, {}).get("hash") == cle:
-                continue  # déjà appliqué à l'identique
+            deja = journal.get(ref, {})
+            if deja.get("hash") == cle and not deja.get("en_attente"):
+                continue  # déjà appliqué à l'identique — sauf ✅ retenu, qui se retente
 
             entree = {"decision": decision, "hash": cle,
                       "quand": datetime.now().isoformat(timespec="seconds"),
@@ -604,15 +606,19 @@ def appliquer_compte(compte, dry_run=False):
                     entree["resultat"] = "déjà validé directement dans Metricool — rien à faire"
                     print(f"  = {ref} : {entree['resultat']}")
                 elif PLACEHOLDER.search(texte_final):
-                    entree["resultat"] = ("✅ client mais texte à placeholders — publication BLOQUÉE, "
-                                          "compléter le texte puis re-valider")
-                    compteurs["erreurs"] += 1
-                    print(f"  ⚠ {ref} : {entree['resultat']}")
+                    # ✅ retenu, pas refusé : l'accord du client reste acquis, la relève
+                    # retente à chaque passage et publie dès que le texte est complété.
+                    entree["resultat"] = ("✅ retenu — texte à placeholders, publication en attente : "
+                                          "compléter le texte et la relève suivante publiera")
+                    entree["en_attente"] = True
+                    compteurs["en_attente"] += 1
+                    print(f"  ⏳ {ref} : {entree['resultat']}")
                 elif not post.get("media"):
-                    entree["resultat"] = ("✅ client mais aucun média attaché — publication BLOQUÉE, "
-                                          "attacher le visuel dans Metricool puis valider à la main")
-                    compteurs["erreurs"] += 1
-                    print(f"  ⚠ {ref} : {entree['resultat']}")
+                    entree["resultat"] = ("✅ retenu — aucun média attaché, publication en attente : "
+                                          "ajouter le visuel dans Metricool et la relève suivante publiera")
+                    entree["en_attente"] = True
+                    compteurs["en_attente"] += 1
+                    print(f"  ⏳ {ref} : {entree['resultat']}")
                 elif dry_run:
                     detail = [d for d, actif in (("légende", legende_modifiee),
                                                  (f"heure → {heure}", heure_modifiee)) if actif]
@@ -685,7 +691,8 @@ def main():
         for cle, valeur in appliquer_compte(compte, args.dry_run).items():
             totaux[cle] = totaux.get(cle, 0) + valeur
     print(f"\nBilan : {totaux.get('publies', 0)} publié(s), {totaux.get('a_corriger', 0)} à corriger, "
-          f"{totaux.get('refuses', 0)} refusé(s), {totaux.get('sans_decision', 0)} sans décision, "
+          f"{totaux.get('refuses', 0)} refusé(s), {totaux.get('en_attente', 0)} ✅ en attente "
+          f"(média/placeholders), {totaux.get('sans_decision', 0)} sans décision, "
           f"{totaux.get('erreurs', 0)} erreur(s)."
           + ("" if args.dry_run else " Détail durable : reviews/etat/."))
     return 1 if totaux.get("erreurs") else 0
