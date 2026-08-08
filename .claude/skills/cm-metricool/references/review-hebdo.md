@@ -84,6 +84,13 @@ relève la traite exactement comme un fichier Drive. Les deux canaux cohabitent.
 - Un ✅ sur un texte à placeholders (`[VAINQUEUR]`…) ou sur un post **sans média** est
   **bloqué et signalé**, pas publié : compléter, puis re-valider (le média peut être
   attaché après coup — la relève suivante publiera).
+- **La « mise à jour » de l'API Metricool crée une nouvelle entrée** (nouvel id, même
+  uuid) et laisse l'ancien brouillon en place — constaté au premier test réel (OTEA,
+  08/08/2026). Le script vérifie donc l'état réel du créneau avant et après chaque
+  écriture : il ne ré-écrit jamais si la version publiable existe déjà (sinon double
+  publication), et retire l'ancien brouillon devenu périmé une fois la nouvelle version
+  confirmée. C'est le **seul** cas de suppression automatique, strictement borné à
+  l'entrée périmée d'un post que le client vient de valider.
 - Un post déjà validé directement dans Metricool (`autoPublish`) n'est jamais retouché —
   même règle que `publier.py` : ce que le client a validé lui appartient.
 - Idempotence par `reviews/etat/<client>.json` : une décision déjà appliquée à

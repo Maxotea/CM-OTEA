@@ -418,22 +418,61 @@ def corps_de(post, texte, date_time, publier_auto):
 def passer_en_publication(blog_id, post, texte, date_time):
     """Applique texte/horaire et sort le post du brouillon. Retourne (résultat, post_id).
 
-    D'abord une mise à jour en place ; si l'API la refuse, suppression PUIS recréation —
-    l'ordre inverse de publier.py, et c'est voulu : publier.py manipule des brouillons, où
-    un doublon est bénin ; ici le post recréé part en publication automatique, un doublon
-    publierait DEUX fois chez le client. Mieux vaut un trou signalé qu'un doublon publié.
+    ⚠️ Constaté au premier test réel (post 355355797 → 359735766, OTEA, 08/08/2026) : le
+    PUT de l'API ne modifie PAS l'entrée existante — il crée une NOUVELLE entrée de
+    planning (nouvel id, même uuid) avec les nouvelles valeurs, et laisse l'ancien
+    brouillon en place. D'où la marche en trois temps, chacun vérifié sur l'état réel :
+
+      1. la version publiable existe-t-elle déjà ? (un run précédent a pu la poser sans
+         finir son ménage) — si oui, ne PAS ré-écrire : un second PUT publierait en double ;
+      2. sinon PUT, puis relire le jour pour trouver la version réellement en place ;
+      3. ménage : retirer l'ancien id s'il est resté en brouillon, et les éventuels
+         doublons publiables identiques. Seul cas de suppression automatique du système,
+         strictement borné : l'entrée périmée d'un post que le client vient de valider —
+         sans ce ménage, la review suivante re-proposerait un post déjà validé.
+
+    Si l'API refuse le PUT : suppression puis recréation. L'ordre (inverse de publier.py)
+    est voulu : ici le post recréé part en publication automatique, un doublon publierait
+    DEUX fois chez le client. Mieux vaut un trou signalé qu'un doublon publié.
     """
-    try:
-        metricool(f"/scheduler/posts/{post['id']}", "PUT",
-                  corps_de(post, texte, date_time, True), blogId=blog_id)
-        return "publication programmée (mise à jour en place)", post["id"]
-    except RuntimeError as exc:
-        print(f"    (mise à jour refusée — {exc} — suppression puis recréation)")
-    metricool(f"/scheduler/posts/{post['id']}", "DELETE", blogId=blog_id)
-    cree = metricool("/scheduler/posts", "POST",
-                     corps_de(post, texte, date_time, True), blogId=blog_id)
-    nouveau = cree.get("data", {}).get("id")
-    return f"publication programmée (recréé, nouvel id {nouveau})", nouveau
+    ancien_id = post["id"]
+    jour = date_time[:10]
+
+    def etat_du_jour():
+        posts_jour = metricool("/scheduler/posts", blogId=blog_id,
+                               start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
+        publiables = [p for p in posts_jour
+                      if p.get("autoPublish") and not p.get("draft")
+                      and p.get("publicationDate", {}).get("dateTime") == date_time
+                      and normaliser_texte(p.get("text")) == normaliser_texte(texte)]
+        reste = any(p.get("id") == ancien_id and p.get("draft") for p in posts_jour)
+        return publiables, reste
+
+    publiables, reste = etat_du_jour()
+    if not publiables:
+        try:
+            metricool(f"/scheduler/posts/{ancien_id}", "PUT",
+                      corps_de(post, texte, date_time, True), blogId=blog_id)
+        except RuntimeError as exc:
+            print(f"    (mise à jour refusée — {exc} — suppression puis recréation)")
+            metricool(f"/scheduler/posts/{ancien_id}", "DELETE", blogId=blog_id)
+            cree = metricool("/scheduler/posts", "POST",
+                             corps_de(post, texte, date_time, True), blogId=blog_id)
+            nouveau = cree.get("data", {}).get("id")
+            return f"publication programmée (recréé, nouvel id {nouveau})", nouveau
+        publiables, reste = etat_du_jour()
+    if not publiables:
+        raise RuntimeError(f"aucune version publiable en place après la mise à jour du "
+                           f"post {ancien_id} — vérifier dans Metricool")
+
+    version = publiables[0]
+    for doublon in publiables[1:]:
+        metricool(f"/scheduler/posts/{doublon['id']}", "DELETE", blogId=blog_id)
+    if reste and version["id"] != ancien_id:
+        metricool(f"/scheduler/posts/{ancien_id}", "DELETE", blogId=blog_id)
+        return (f"publication programmée (version {version['id']}, ancien brouillon "
+                f"{ancien_id} retiré)"), version["id"]
+    return f"publication programmée (version {version['id']})", version["id"]
 
 
 def retrouver_post(posts, original):
