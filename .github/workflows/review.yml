@@ -1,0 +1,131 @@
+name: Review hebdo client
+
+# Le fichier Excel de validation hebdomadaire, dans les deux sens :
+#   - generer (lundi matin) : lit les brouillons de la semaine dans Metricool et écrit un
+#     fichier par client dans reviews/a-envoyer/ — la session Claude du lundi le dépose
+#     ensuite dans le Drive du client et met reviews/config.json à jour ;
+#   - appliquer (3 fois par jour) : relit chaque fichier par son export public, pousse les
+#     corrections du client dans Metricool et passe les lignes ✅ en publication automatique.
+# Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
+# bloque app.metricool.com et les exports Drive, un runner Actions ne les bloque pas.
+
+on:
+  schedule:
+    # Lundi 6h30 UTC (8h30 à Paris en heure d'été) : après l'action « Carrousels hebdo »
+    # de 6h00, pour que le carrousel du mercredi figure dans le fichier envoyé au client.
+    - cron: "30 6 * * 1"
+    # Trois relèves par jour (6h30, 12h30, 18h30 à Paris en heure d'été) : une validation
+    # du soir est appliquée avant le créneau de 9h00 du lendemain, une validation du matin
+    # avant le post de 18h00.
+    - cron: "30 4,10,16 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Que faire"
+        type: choice
+        options: [generer, appliquer]
+        required: true
+      semaine:
+        description: "generer : lundi visé (YYYY-MM-DD). Vide = semaine en cours."
+        required: false
+      client:
+        description: "Un seul compte (ex. le-loft). Vide = tous les comptes actifs."
+        required: false
+      dry_run:
+        description: "Montrer ce qui serait fait, sans rien écrire nulle part"
+        type: boolean
+        default: false
+
+# Les deux jobs commitent dans le dépôt : on les sérialise pour éviter les pushs concurrents.
+concurrency: review-hebdo
+
+permissions:
+  contents: write
+
+jobs:
+  generer:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.mode == 'generer') ||
+      github.event.schedule == '30 6 * * 1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install openpyxl
+
+      - name: Générer les fichiers de la semaine
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+        run: |
+          python3 scripts/review.py generer \
+            ${{ inputs.semaine && format('--semaine {0}', inputs.semaine) || '' }} \
+            ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commiter les fichiers générés
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- reviews/ && [ -z "$(git status --porcelain reviews/)" ]; then
+            echo "Aucun fichier généré — rien à commiter."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reviews/
+          git commit \
+            -m "Génère les fichiers de review de la semaine" \
+            -m "À déposer dans le Drive de chaque client (session Claude du lundi), qui note leur identifiant dans reviews/config.json."
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
+
+      - name: Conserver les fichiers en artefact
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviews-a-envoyer
+          path: reviews/a-envoyer/
+          retention-days: 30
+
+  appliquer:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.mode == 'appliquer') ||
+      github.event.schedule == '30 4,10,16 * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install openpyxl
+
+      - name: Appliquer les décisions clients
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+        run: |
+          python3 scripts/review.py appliquer \
+            ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commiter le journal des décisions
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- reviews/etat/ && [ -z "$(git status --porcelain reviews/etat/)" ]; then
+            echo "Aucune décision nouvelle — rien à commiter."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reviews/etat/
+          git commit \
+            -m "Applique les décisions de la review client" \
+            -m "Journal par compte dans reviews/etat/ — matière du récap du lundi."
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push

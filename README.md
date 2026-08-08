@@ -9,6 +9,8 @@ Skill Claude Code d'automatisation du community management (Metricool via Zapier
 - `.claude/skills/cm-metricool/references/clients/` — une fiche par client (+ banques photos)
 - `carrousels/<client>/*.json` — les specs de carrousels, un fichier par semaine et par compte
 - `scripts/carrousel.py` + `scripts/themes.json` — le générateur de slides et la DA de chaque compte
+- `scripts/review.py` + `reviews/` — la review hebdo client : le fichier Excel de validation et son aller-retour avec Metricool
+- `.claude/skills/cm-metricool/references/review-hebdo.md` — le circuit complet de la review
 
 ## Utilisation
 Ouvrir ce repo dans Claude Code (le skill se charge automatiquement depuis `.claude/skills/`), connecter le Zapier MCP, puis : « routine hebdo », « planifie le trimestre pour [client] », « onboarde [nouveau client] »…
@@ -67,3 +69,29 @@ fichiers via le connecteur Drive déjà connecté, l'action les **récupère** p
 dossier partagé. Aucune des deux moitiés n'a besoin d'identifiants Google.
 
 Seul secret utilisé : `IMGBB_API_KEY`, le même que pour les slides.
+
+## La review hebdo client (Excel ↔ Metricool)
+
+Le client valide sa semaine dans un fichier type Excel : légendes corrigibles dans les
+cases, une décision par ligne (`✅ OK pour publier` · `✏️ À corriger` · `⛔ Ne pas
+publier`), un commentaire libre. Ses ✅ passent les brouillons Metricool en **publication
+automatique** — modifications comprises — sans autre geste. Un post sans décision ne part
+jamais ; jamais de suppression automatique.
+
+```bash
+pip install openpyxl
+python3 scripts/review.py generer   --semaine 2026-08-10 --dry-run   # ce qui serait couvert
+python3 scripts/review.py appliquer --client le-loft --dry-run       # ce qui serait appliqué
+```
+
+L'action « Review hebdo client » orchestre les deux sens : `generer` le lundi à 6h30 UTC
+(après les carrousels), `appliquer` trois fois par jour. Même découpe que la chaîne
+photos, dans l'autre sens aussi : la **session** du lundi dépose le fichier dans le Drive
+du client (connecteur, conversion en Google Sheet) et note son identifiant dans
+`reviews/config.json` ; l'**action** relit le fichier par son export public — aucune clé
+Google. Un retour par mail se dépose tel quel dans `reviews/retours/`. Journal des
+décisions appliquées (idempotence + matière du récap) : `reviews/etat/`. Circuit complet,
+garde-fous et rôle de la session : `.claude/skills/cm-metricool/references/review-hebdo.md`.
+
+Mettre en route un nouveau client : l'ajouter à `reviews/config.json` (slug, blog_id,
+prefixe, `actif: true`) — le reste suit le lundi suivant.

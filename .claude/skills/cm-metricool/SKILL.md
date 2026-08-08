@@ -18,8 +18,9 @@ description: Workflow complet de community management multi-comptes — génère
 1. Pour CHAQUE marque : `list_scheduled_posts` sur les 14 prochaines semaines → mesurer l'horizon couvert.
 2. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
 3. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
-4. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
-5. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
+4. **Review client** : déposer le fichier de validation de chaque client (généré le matin par l'action « Review hebdo client ») dans son Drive, noter son identifiant dans `reviews/config.json`, mettre le lien dans le récap ; redescendre `reviews/etat/` (publiés, à corriger, refusés, bloqués) dans le compte-rendu. Procédure complète : `references/review-hebdo.md`.
+5. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
+6. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
 
 **Capture de trend à tout moment** : quand l'utilisateur signale une trend (message, vocal transcrit, lien, description), immédiatement : 1) l'évaluer avec les critères de bonnes-pratiques-cm.md, 2) proposer son adaptation pour chaque compte pertinent (script/légende prêts), 3) planifier les posts validés via bulk_schedule_posts dans la semaine (les trends se périment en jours), 4) si c'est un enseignement durable (« ce format marche »), l'ajouter à la mémoire et aux bonnes pratiques.
 
@@ -89,6 +90,16 @@ Scripts de reels : passer par le skill `reel-script` (hook chiffré, 3 étapes, 
 ## Étape 7 — Boucle post-événement
 
 Le lendemain d'un événement : rechercher le résultat réel sur le web, donner à l'utilisateur le texte final complété. Pour éditer un brouillon existant : supprimer/recréer via schedule_post (le texte n'est pas éditable directement), ou utiliser les code actions personnalisés pour la date et le statut brouillon.
+
+## Validation client — la review hebdo (fichier Excel ↔ Metricool)
+
+Le client valide sa semaine dans un fichier type Excel déposé chaque lundi dans son Drive :
+il corrige les légendes dans les cases, choisit ✅ / ✏️ / ⛔ par ligne ; ses décisions sont
+relevées trois fois par jour par l'action « Review hebdo client », qui pousse les
+modifications dans Metricool et passe les ✅ en publication automatique. Un post sans
+décision ne part jamais ; jamais de suppression automatique. Rôle de la session le lundi
+(dépôt Drive, `reviews/config.json`, exploitation de `reviews/etat/` dans le récap) et
+garde-fous : `references/review-hebdo.md`.
 
 ## Étape 8 — Calcul ROI pour le client (justifier la prestation)
 
