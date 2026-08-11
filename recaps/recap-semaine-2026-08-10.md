@@ -5,15 +5,41 @@ Le CR est parti avec un jour de retard : la routine du lundi n'a pas tourné.*
 
 ## Ce qui a été produit
 
-| Client | Canal | Livrable | État |
+| Client | Canal | Fichier de validation | État |
 |---|---|---|---|
-| J Lawson Golf | email | Brouillon Gmail + fichier de validation joint | ⏳ à envoyer |
-| La Galerie Immobilière | email | Brouillon Gmail + fichier de validation joint | ⏳ à envoyer |
-| Le Loft | email | Brouillon Gmail (pas de fichier — 1 seule ligne à valider) | ⏳ à envoyer |
-| Gossip Beauty Center | WhatsApp | Lien pré-rempli — `whatsapp-semaine-2026-08-10.md` | ⏳ à envoyer |
-| Pierre Huiban | WhatsApp | Lien pré-rempli — `whatsapp-semaine-2026-08-10.md` | ⏳ à envoyer |
+| J Lawson Golf | email | ✅ joint | envoyé le 11/08 à 09h27 |
+| La Galerie Immobilière | email | ✅ joint | envoyé le 11/08 à 09h27 |
+| Le Loft | email | ✅ joint (2ᵉ mail correctif) | 1ᵉʳ mail envoyé, correctif en brouillon |
+| Gossip Beauty Center | WhatsApp | ❌ **non livré** | message envoyé, fichier manquant |
+| Pierre Huiban | WhatsApp | ❌ **non livré** | message envoyé, fichier manquant |
 
-**Rien n'a été envoyé.** Les cinq messages attendent ta relecture et ton clic.
+## 🔴 Erreur constatée le 11/08 : 3 clients sur 5 n'ont pas reçu le fichier
+
+Le CR est parti sans le fichier de validation pour trois clients. Deux causes distinctes :
+
+1. **Le Loft — erreur de jugement de ma part.** J'avais volontairement écarté le fichier
+   au motif qu'une seule ligne était à valider, et le mail annonçait même l'envoi « à
+   partir de lundi prochain ». C'était une mauvaise décision : le fichier doit partir
+   pour tous les clients, chaque semaine. **Corrigé** — un second mail avec la pièce
+   jointe attend en brouillon.
+
+2. **Gossip et Pierre — limite structurelle, non corrigée.** Ces deux clients passent par
+   WhatsApp faute d'adresse email, et un lien `wa.me` ne peut pas porter de pièce jointe.
+   Deux tentatives de contournement ont échoué :
+   - le dépôt Drive via le connecteur renvoie `Invalid conversion requested` sur un xlsx ;
+   - même en cas de succès, les dossiers Drive des deux clients sont partagés en
+     `anyone: reader`. Le client pourrait ouvrir le fichier mais **pas le remplir**, ce
+     qui casse la boucle de validation. Je n'ai pas d'outil pour passer un partage en
+     éditeur.
+
+   **Ce qu'il faut pour débloquer, par ordre de préférence :**
+   a. **Leur adresse email** — le fichier part alors en pièce jointe comme pour les
+      autres. C'est la solution propre, et elle prend une minute.
+   b. À défaut : passer leurs dossiers Drive en « tous les utilisateurs disposant du
+      lien : éditeur », puis déposer le fichier à la main et noter son identifiant dans
+      `reviews/config.json` → `drive_fichier`.
+
+   En attendant, leurs fichiers sont prêts dans `reviews/a-envoyer/`.
 
 ## 🔴 Le vrai sujet de la semaine : les brouillons qui bloquent
 
@@ -47,11 +73,14 @@ tourne.
    dans `reviews/retours/<slug>-2026-08-10.xlsx`, commit + push, et la relève l'applique.
 2. **Canal par client** : email pour les trois clients à adresse confirmée, WhatsApp pour
    les deux dont on n'a que le numéro. Plus de destinataire en `[À RENSEIGNER]`.
-3. **Proportionnalité** : pas de fichier Excel pour Le Loft, qui n'a qu'une seule ligne à
-   valider — un mail court avec la question directe fait le travail.
-4. **Transparence sur les créneaux perdus** : chaque CR nomme les publications qui ne sont
+3. **Transparence sur les créneaux perdus** : chaque CR nomme les publications qui ne sont
    pas parties, avec leur date. C'est le point qui fait comprendre au client pourquoi sa
    validation compte.
+
+**Règle à ne plus enfreindre** : le fichier de validation part pour **tous** les clients
+actifs de `reviews/config.json`, chaque semaine, quel que soit le nombre de lignes à
+valider. Pas d'arbitrage au cas par cas — c'est le rituel qui crée l'habitude côté client,
+et un client qui ne le reçoit pas une semaine ne le cherchera pas la suivante.
 
 ## ⚠️ À trancher
 
