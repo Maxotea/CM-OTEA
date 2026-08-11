@@ -102,3 +102,52 @@ et un client qui ne le reçoit pas une semaine ne le cherchera pas la suivante.
 
 Les stories de tous les comptes s'arrêtent au **31/08** → reconduction septembre à prévoir
 avant la mi-août (~15 min en bulk).
+
+---
+
+## 🔄 Changement de règle, 11/08 : le CR passe à la semaine suivante
+
+Décision de Maxime : **le compte rendu et son fichier de validation portent désormais sur
+la semaine d'après, plus jamais sur celle qui commence.** Un client ne valide pas le lundi
+matin ce qui sort le lundi midi — il répond le soir ou le lendemain, et le créneau est
+passé. La semaine du 10/08 en est la démonstration : J Lawson à 10 brouillons sur 10 avec
+trois créneaux perdus, La Galerie à 8 sur 9.
+
+Désormais le client a **sept jours pleins** pour trancher, et les publications du lundi
+partent à l'heure.
+
+**Appliqué dans le code** (commit `a3cb267`) :
+
+- `scripts/review.py` → `semaine_lundi()` sans argument vise le lundi **suivant**, quel que
+  soit le jour où il tourne. Vérifié sur les sept jours de la semaine.
+- `appliquer` n'est pas touché : il lit la semaine dans l'onglet `_tech` du fichier, donc il
+  traite toujours la bonne, même en retard.
+- `--semaine` explicite reste prioritaire, avec son recalage sur le lundi.
+- Doctrine réécrite dans `review-hebdo.md`, en-têtes de `review.yml` et `reviews/config.json`.
+
+**Fichiers de la semaine du 17/08 générés et vérifiés** (Action `review.yml`, run 17) :
+six comptes, chaque ligne rattachée à son `post_id` Metricool.
+
+| Client | Lignes à valider | Fichier |
+|---|---|---|
+| Gossip Beauty Center | 10 | `gossip-beauty-center-2026-08-17.xlsx` |
+| Le Loft | 10 | `le-loft-2026-08-17.xlsx` |
+| J Lawson Golf | 10 | `jlawsongolf-2026-08-17.xlsx` |
+| Pierre Huiban | 9 | `pierre-huiban-2026-08-17.xlsx` |
+| La Galerie Immobilière | 8 | `la-galerie-immobiliere-2026-08-17.xlsx` |
+| Otea Filmakers (banc d'essai) | 3 | `otea-filmakers-2026-08-17.xlsx` |
+
+### Où en est l'envoi du nouveau CR
+
+| Client | Fichier 10/08 (semaine en cours) | Fichier 17/08 (nouvelle règle) |
+|---|---|---|
+| J Lawson Golf | ✅ envoyé 09h27 | ⏳ brouillon neutralisé — pièce jointe à refaire |
+| La Galerie Immobilière | ✅ envoyé 09h27 | ⏳ à faire |
+| Le Loft | ✅ envoyé 09h50 | ⏳ à faire |
+| Gossip Beauty Center | ❌ canal WhatsApp | ❌ bloqué — même cause |
+| Pierre Huiban | ❌ canal WhatsApp | ❌ bloqué — même cause |
+
+**Incident à signaler** : le premier brouillon 17/08 de J Lawson a été créé avec une pièce
+jointe corrompue — le fichier base64 s'est tronqué à la recopie. Le brouillon a été
+neutralisé (objet préfixé « NE PAS ENVOYER », pièce jointe retirée) avant tout envoi.
+Le fichier sain est dans `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx`.
