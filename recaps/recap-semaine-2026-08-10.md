@@ -141,13 +141,19 @@ six comptes, chaque ligne rattachée à son `post_id` Metricool.
 
 | Client | Fichier 10/08 (semaine en cours) | Fichier 17/08 (nouvelle règle) |
 |---|---|---|
-| J Lawson Golf | ✅ envoyé 09h27 | ⏳ brouillon neutralisé — pièce jointe à refaire |
-| La Galerie Immobilière | ✅ envoyé 09h27 | ⏳ à faire |
-| Le Loft | ✅ envoyé 09h50 | ⏳ à faire |
+| J Lawson Golf | ✅ envoyé 09h27 | ✅ brouillon prêt, pièce jointe vérifiée |
+| La Galerie Immobilière | ✅ envoyé 09h27 | ✅ brouillon prêt, pièce jointe vérifiée |
+| Le Loft | ✅ envoyé 09h50 | ✅ brouillon prêt, pièce jointe vérifiée |
 | Gossip Beauty Center | ❌ canal WhatsApp | ❌ bloqué — même cause |
 | Pierre Huiban | ❌ canal WhatsApp | ❌ bloqué — même cause |
 
+Les trois brouillons du 17/08 attendent la relecture de Maxime. Rien n'est envoyé.
+
 **Incident à signaler** : le premier brouillon 17/08 de J Lawson a été créé avec une pièce
 jointe corrompue — le fichier base64 s'est tronqué à la recopie. Le brouillon a été
-neutralisé (objet préfixé « NE PAS ENVOYER », pièce jointe retirée) avant tout envoi.
-Le fichier sain est dans `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx`.
+neutralisé (objet préfixé « NE PAS ENVOYER », pièce jointe retirée) avant tout envoi, puis
+**refait avec le fichier sain et vérifié**.
+
+Parade retenue pour la suite : un seul fichier par tour, relu juste avant d'être attaché, et
+contrôle de la fin du blob base64 contre celle du fichier source. Les trois pièces jointes
+du 17/08 ont été vérifiées ainsi.
