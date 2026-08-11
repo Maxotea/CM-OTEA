@@ -5,8 +5,8 @@
     python3 scripts/review.py appliquer [--client le-loft] [--dry-run]
 
 Le circuit complet est décrit dans .claude/skills/cm-metricool/references/review-hebdo.md.
-En résumé : `generer` lit les brouillons de la semaine dans Metricool et écrit un fichier
-Excel par client dans reviews/a-envoyer/ ; la session Claude du lundi le dépose dans le
+En résumé : `generer` lit les brouillons de la semaine PROCHAINE dans Metricool et écrit un
+fichier Excel par client dans reviews/a-envoyer/ ; la session Claude du lundi le dépose dans le
 Drive du client (converti en Google Sheet) et note son identifiant dans reviews/config.json ;
 le client coche ✅ / ✏️ / ⛔ ligne par ligne, corrige les légendes ; `appliquer`, plusieurs
 fois par jour, relit le fichier par son export public, pousse les modifications dans
@@ -71,7 +71,13 @@ PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]")
 # ---------------------------------------------------------------- lecture Metricool
 
 def semaine_lundi(texte=None):
-    """Le lundi de la semaine visée. Sans argument : la semaine en cours."""
+    """Le lundi de la semaine visée. Sans argument : la semaine PROCHAINE.
+
+    Le client reçoit son fichier pour la semaine d'après, jamais pour celle qui commence :
+    personne ne valide le lundi matin des publications qui sortent le lundi midi. En visant
+    la semaine suivante, il dispose de sept jours pleins pour trancher, et les créneaux du
+    lundi partent à l'heure.
+    """
     if texte:
         d = date.fromisoformat(texte)
         if d.weekday() != 0:
@@ -79,7 +85,7 @@ def semaine_lundi(texte=None):
             print(f"(la date donnée n'est pas un lundi — semaine du {d} retenue)")
         return d
     aujourd_hui = date.today()
-    return aujourd_hui - timedelta(days=aujourd_hui.weekday())
+    return aujourd_hui + timedelta(days=7 - aujourd_hui.weekday())
 
 
 def posts_semaine(blog_id, lundi):
@@ -665,8 +671,8 @@ def charger_comptes(filtre=None):
 def main():
     ap = argparse.ArgumentParser(description="Review hebdo client — fichier Excel ↔ Metricool.")
     sous = ap.add_subparsers(dest="commande", required=True)
-    g = sous.add_parser("generer", help="écrit le fichier Excel de la semaine par client")
-    g.add_argument("--semaine", help="lundi visé (YYYY-MM-DD). Vide = semaine en cours")
+    g = sous.add_parser("generer", help="écrit le fichier Excel de la semaine prochaine par client")
+    g.add_argument("--semaine", help="lundi visé (YYYY-MM-DD). Vide = semaine PROCHAINE")
     a = sous.add_parser("appliquer", help="lit les retours clients et pousse dans Metricool")
     for p in (g, a):
         p.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft")

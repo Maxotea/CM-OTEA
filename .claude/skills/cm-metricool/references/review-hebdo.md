@@ -1,21 +1,42 @@
 # La review hebdo client — fichier Excel ↔ Metricool
 
 Chaque lundi, le client reçoit un fichier type Excel listant ses publications de la
-semaine. Il corrige les légendes directement dans les cases, ajuste une heure, commente,
-et décide ligne par ligne : ✅, ✏️ ou ⛔. Ses décisions sont relevées plusieurs fois par
-jour et appliquées automatiquement dans Metricool — modifications poussées, puis passage
-du brouillon à la **publication automatique**. Ce qu'il n'a pas validé ne part jamais.
+**semaine suivante**. Il corrige les légendes directement dans les cases, ajuste une heure,
+commente, et décide ligne par ligne : ✅, ✏️ ou ⛔. Ses décisions sont relevées plusieurs
+fois par jour et appliquées automatiquement dans Metricool — modifications poussées, puis
+passage du brouillon à la **publication automatique**. Ce qu'il n'a pas validé ne part
+jamais.
+
+## Une semaine d'avance — la règle qui commande tout le reste
+
+Le fichier envoyé le lundi couvre la semaine **d'après**, jamais celle qui commence.
+Personne ne valide le lundi à 8h30 un post qui sort le lundi à midi : le client est au
+travail, il répond le soir ou le lendemain, et le créneau est déjà passé. C'est exactement
+ce qui s'est produit la semaine du 10/08 — J Lawson à 10 brouillons sur 10 et trois
+créneaux perdus, La Galerie à 8 sur 9.
+
+En visant la semaine suivante, le client dispose de **sept jours pleins** pour trancher, et
+les publications du lundi partent à l'heure. Une validation tardive coûte alors un délai,
+plus une publication.
+
+Conséquence pratique : le lundi, deux semaines coexistent — celle qui se publie (déjà
+validée la semaine passée) et celle qui se valide. Le compte rendu au client parle des
+deux : ce qui sort cette semaine, et ce qu'il doit valider pour la suivante.
 
 ## Le circuit
 
 | Quand (UTC) | Qui | Quoi |
 |---|---|---|
 | Lundi 6h00 | Action « Carrousels hebdo » | plante le carrousel du mercredi (existant) |
-| Lundi 6h30 | Action « Review hebdo client » — job `generer` | lit les brouillons de la semaine dans Metricool, écrit `reviews/a-envoyer/<client>-<lundi>.xlsx`, commit + artefact |
+| Lundi 6h30 | Action « Review hebdo client » — job `generer` | lit les brouillons de la **semaine prochaine** dans Metricool, écrit `reviews/a-envoyer/<client>-<lundi+7>.xlsx`, commit + artefact |
 | Lundi matin | Session Claude — routine hebdo | dépose chaque fichier dans le Drive du client, note son identifiant dans `reviews/config.json`, met le lien dans le récap |
-| En semaine | Le client | corrige, commente, décide |
+| Du lundi au dimanche | Le client | corrige, commente, décide — il a la semaine entière |
 | 4h30 · 10h30 · 16h30 | Action — job `appliquer` | relit chaque fichier par son export public, applique dans Metricool, journalise dans `reviews/etat/` |
 | Lundi suivant | Session Claude | lit `reviews/etat/` pour le récap : parti, à corriger, refusé, bloqué |
+
+`generer` sans `--semaine` vise le lundi suivant, quel que soit le jour où il tourne.
+`appliquer` n'est pas concerné : il lit la semaine dans l'onglet `_tech` du fichier, donc
+il traite toujours la bonne, même en retard.
 
 Même partage des rôles que la chaîne photos : **la session fait la moitié authentifiée**
 (connecteur Drive, récap Gmail), **l'action fait la moitié réseau** (Metricool, export
@@ -69,6 +90,13 @@ Ce que fait `appliquer` de chaque décision :
 5. Dans le récap du lundi : le lien du Sheet + une phrase d'explication, au ton du client
    (`recaps/clients-config.json`). Le xlsx peut aussi partir en pièce jointe du brouillon
    Gmail (`create_draft`, champ `attachments`). Ne JAMAIS envoyer automatiquement.
+
+   **Le fichier part pour tous les clients actifs, chaque semaine**, quel que soit le
+   nombre de lignes à valider — pas d'arbitrage au cas par cas. C'est le rituel qui crée
+   l'habitude ; un client qui ne le reçoit pas une semaine ne le cherchera pas la suivante.
+   Un canal WhatsApp ne peut pas porter de pièce jointe : pour un client sans adresse
+   email, il faut le dépôt Drive, **partagé en éditeur** (le partage lecteur ne suffit pas,
+   le client doit pouvoir écrire dans les cases).
 6. Redescendre `reviews/etat/*.json` dans le compte-rendu : publiés, ✏️ à retravailler
    (avec les commentaires), ⛔ à retirer à la main, blocages (placeholders non complétés,
    média manquant), lignes retouchées sans décision.

@@ -1,9 +1,10 @@
 name: Review hebdo client
 
 # Le fichier Excel de validation hebdomadaire, dans les deux sens :
-#   - generer (lundi matin) : lit les brouillons de la semaine dans Metricool et écrit un
-#     fichier par client dans reviews/a-envoyer/ — la session Claude du lundi le dépose
-#     ensuite dans le Drive du client et met reviews/config.json à jour ;
+#   - generer (lundi matin) : lit les brouillons de la semaine PROCHAINE dans Metricool et
+#     écrit un fichier par client dans reviews/a-envoyer/ — la session Claude du lundi le
+#     dépose ensuite dans le Drive du client et met reviews/config.json à jour. Une semaine
+#     d'avance, parce qu'un client ne valide pas le lundi matin ce qui sort le lundi midi ;
 #   - appliquer (3 fois par jour) : relit chaque fichier par son export public, pousse les
 #     corrections du client dans Metricool et passe les lignes ✅ en publication automatique.
 # Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
@@ -13,6 +14,7 @@ on:
   schedule:
     # Lundi 6h30 UTC (8h30 à Paris en heure d'été) : après l'action « Carrousels hebdo »
     # de 6h00, pour que le carrousel du mercredi figure dans le fichier envoyé au client.
+    # Le fichier produit couvre la semaine suivante : le client a sept jours pour trancher.
     - cron: "30 6 * * 1"
     # Trois relèves par jour (6h30, 12h30, 18h30 à Paris en heure d'été) : une validation
     # du soir est appliquée avant le créneau de 9h00 du lendemain, une validation du matin
@@ -26,7 +28,7 @@ on:
         options: [generer, appliquer]
         required: true
       semaine:
-        description: "generer : lundi visé (YYYY-MM-DD). Vide = semaine en cours."
+        description: "generer : lundi visé (YYYY-MM-DD). Vide = semaine prochaine."
         required: false
       client:
         description: "Un seul compte (ex. le-loft). Vide = tous les comptes actifs."

@@ -1,4 +1,5 @@
 {
+  "_doc_semaine": "Le fichier généré couvre la semaine PROCHAINE, jamais celle qui commence : un client ne valide pas le lundi matin ce qui sort le lundi midi. `generer` sans --semaine vise donc le lundi suivant. Le nom du fichier porte le lundi de la semaine COUVERTE (a-envoyer/<slug>-<lundi+7>.xlsx), pas la date de génération.",
   "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review, drive_fichier = identifiant Drive du fichier de la semaine EN COURS — mis à jour chaque lundi par la session Claude après dépôt dans le Drive du client, c'est lui que le workflow relit plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx.",
   "comptes": [
     {
