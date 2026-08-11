@@ -50,6 +50,10 @@ Ce que fait `appliquer` de chaque décision :
 
 ## Côté session Claude — le lundi
 
+Cette étape fait partie de la routine du CR client : la séquence opératoire complète est
+dans `recaps/routine-cr-client.md`, le modèle du mail dans `recaps/modele-mail-review.md`.
+Le détail technique :
+
 1. Vérifier que le job `generer` a tourné (sinon : workflow « Review hebdo client »,
    mode `generer`), puis `git pull` pour récupérer `reviews/a-envoyer/`.
 2. Pour chaque client actif de `reviews/config.json` : déposer son fichier dans sa boîte
