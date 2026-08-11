@@ -40,7 +40,8 @@
       "nom": "Pierre Huiban",
       "prefixe": "PH",
       "actif": true,
-      "drive_fichier": null
+      "drive_fichier": "1W3yYOz-CAlALkL66UpfcAX-gq95yJNvA",
+      "note": "Déposé le 11/08/2026 dans son dossier Drive (1fT8yQUWSPjqtgbEmuyxEMqWusAh9gVqB), semaine du 17/08. Déposé en xlsx brut : l'API refuse la conversion en Google Sheet (Invalid conversion requested). ⚠️ Le dossier est partagé en 'anyone: reader' — Pierre peut ouvrir le fichier mais PAS le remplir. Passer le partage en ÉDITEUR pour que la boucle de validation fonctionne."
     },
     {
       "slug": "otea-production",
