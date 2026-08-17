@@ -3,62 +3,72 @@
 *Session automatisée du lundi (routine `recaps/routine-cr-client.md`) — première semaine où
 la review hebdo est lancée sur les clients réels, pas seulement sur les comptes banc d'essai.*
 
+## ⚠️ Le point bloquant à traiter en premier
+
+Les fichiers déposés sont partagés en **« tous les utilisateurs disposant du lien :
+lecteur »** (hérité du dossier). Conséquence : **le client peut ouvrir son tableau mais ne
+peut ni corriger une légende ni cocher une décision.** Le circuit est donc à moitié
+ouvert — la relève automatique sait lire les fichiers, mais il n'y aura rien à lire.
+
+À faire sur **chacun** des trois fichiers ci-dessous, avant d'envoyer quoi que ce soit :
+passer le partage en **« tous les utilisateurs disposant du lien : éditeur »**, ou inviter
+directement l'adresse du client. La session ne peut pas le faire : l'outil de partage
+disponible n'accorde des droits qu'à une adresse nominative, et aucune adresse client
+n'est confirmée dans `clients-config.json`.
+
 ## Bilan de la review hebdo de la semaine passée (10/08 → 16/08)
 
-`reviews/etat/` est encore vide : le job `appliquer` n'a rien eu à journaliser, parce
-qu'aucun fichier de review n'avait été déposé chez un client réel la semaine dernière
-(seuls Pierre Huiban et Otea Filmakers avaient un fichier, en banc d'essai). Rien à
-redescendre ici cette semaine — c'est normal, pas un incident.
+`reviews/etat/` est vide : le job `appliquer` n'a rien eu à journaliser, aucun fichier
+n'ayant été déposé chez un client réel la semaine dernière (seuls Pierre Huiban et Otea
+Filmakers en avaient un, en banc d'essai). Rien à redescendre — c'est normal, pas un
+incident.
 
 ## Ce qui a été fait ce lundi
 
-1. Le carrousel du mercredi (action « Carrousels hebdo ») et le job `generer` de la
-   review ont tourné avec ~40-50 min de retard sur leur horaire habituel ; le job
+1. Le carrousel du mercredi et le job `generer` ont tourné avec ~40-50 min de retard ;
    `generer` n'étant pas encore passé au moment de la session, il a été redéclenché
-   manuellement — les 6 fichiers `reviews/a-envoyer/*-2026-08-17.xlsx` sont bien
-   commités sur `main`.
-2. **Gossip Beauty Center** : fichier déposé dans son dossier Drive, converti en
-   Google Sheet, vérifié ligne par ligne (GBC-01 à GBC-10, contenu intact). Brouillon
-   Gmail préparé (`modele-mail-review.md`, ton vouvoiement chaleureux), pièce jointe
-   xlsx incluse. **Champ « À » laissé vide** : `email_confirme` est à `false` dans
-   `clients-config.json`, pas d'adresse de Sarah confirmée par Maxime. **Rien n'a été
-   envoyé.**
-3. **Le Loft, J Lawson Golf, La Galerie Immobilière** : ⚠️ **pas déposés cette
-   semaine.** Deux problèmes techniques distincts rencontrés côté connecteur Google
-   Drive pendant la session :
-   - Le fichier Le Loft se dépose bien en brut (xlsx tel quel, vérifié octet pour
-     octet), mais la conversion automatique en Google Sheet échoue systématiquement
-     (`invalid argument`) — cause non identifiée, à creuser.
-   - Les fichiers J Lawson Golf et La Galerie Immobilière n'ont pas pu être transmis
-     de façon fiable par la session (contenu tronqué ou corrompu à l'upload, détecté
-     avant tout dépôt réel — aucun fichier corrompu n'est resté dans leur Drive).
-   Aucun brouillon Gmail n'a donc été préparé pour ces trois comptes cette semaine
-   (pas de lien de tableau à donner). `reviews/config.json` n'a pas été modifié pour
-   eux : leur `drive_fichier` reste à `null`, donc la relève ne les traite pas cette
-   semaine — sans danger, mais ils ne reçoivent pas leur review.
-4. **Pierre Huiban, Otea Filmakers** (banc d'essai) : non retouchés cette semaine —
-   leur `drive_fichier` pointe encore sur le fichier du 10/08. Le fichier de Pierre
-   Huiban a par ailleurs un partage incomplet (lecture publique seule, pas d'édition)
-   constaté en vérifiant ses permissions — à corriger avant de compter dessus.
-5. `reviews/config.json` (mise à jour Gossip Beauty Center uniquement) commité et
-   poussé sur la branche `claude/stoic-curie-dhh9q7`, PR ouverte — **à merger sans
-   attendre**, sinon les relèves de la journée (Metricool) ne verront pas le nouveau
-   fichier Gossip.
+   manuellement. Les 6 fichiers `reviews/a-envoyer/*-2026-08-17.xlsx` sont commités sur
+   `main`.
+2. **Trois comptes déposés et vérifiés à l'octet près** (taille du fichier sur Drive
+   comparée au fichier du dépôt) :
+
+   | Compte | Forme | Taille | `drive_fichier` |
+   |---|---|---|---|
+   | Gossip Beauty Center | Google Sheet | — | `1F9M0NiPqEVVOcOeET4HxSgoMgVDm8BAQKNG-P6MieD8` |
+   | Le Loft | xlsx brut | 11 127 o | `15D50Eg9nnCvGcZpC3_nAi4GQzGBkXA3F` |
+   | La Galerie Immobilière | xlsx brut | 9 987 o | `10OK72RQ65kfXOtSH-8BhPeRdi09aSynx` |
+
+   Le dépôt en **xlsx brut n'est pas un pis-aller** : `telecharger_review`
+   (`scripts/review.py:276`) gère explicitement les deux formes et bascule sur le lien de
+   téléchargement direct quand le fichier n'est pas un Sheet. La conversion Sheets échoue
+   de façon reproductible sur le fichier Le Loft (`invalid argument`) — cause non
+   identifiée, à creuser à froid.
+3. **J Lawson Golf : toujours pas déposé.** Le transfert du contenu binaire vers le
+   connecteur Drive échoue de façon répétée sur ce fichier précis. Chaque échec a été
+   détecté avant tout dépôt — **aucun fichier corrompu n'est arrivé dans son Drive**, et
+   son `drive_fichier` reste à `null` (la relève l'ignore, sans danger). Son fichier
+   `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx` est commité sur `main` : il suffit de le
+   glisser à la main dans son dossier Drive.
+4. **Brouillon Gmail** préparé pour Gossip Beauty Center (modèle
+   `modele-mail-review.md`, ton vouvoiement chaleureux, pièce jointe xlsx). **Champ « À »
+   laissé vide** — `email_confirme` est `false`. **Rien n'a été envoyé.** Pas de brouillon
+   pour Le Loft ni La Galerie : leurs liens viennent d'être créés et le partage en écriture
+   n'est pas encore posé.
+5. **Pierre Huiban, Otea Filmakers** (banc d'essai) : non retouchés, leur `drive_fichier`
+   pointe encore sur le fichier du 10/08.
 
 ## À faire
 
-- **Merger la PR** portant la mise à jour de `reviews/config.json` (Gossip Beauty
-  Center).
-- **Confirmer l'adresse email de Sarah** (Gossip Beauty Center) pour pouvoir remplir
-  le champ « À » du brouillon avant de l'envoyer.
-- **Déposer manuellement** les fichiers Le Loft / J Lawson Golf / La Galerie
-  Immobilière (`reviews/a-envoyer/*-2026-08-17.xlsx`, déjà commités sur `main`) dans
-  le Drive de chaque client, le temps de fiabiliser le dépôt automatique.
-- **Relire et envoyer** le brouillon Gmail Gossip Beauty Center une fois l'adresse
-  confirmée.
-- Investiguer l'échec de conversion Sheets sur le fichier Le Loft avant de refaire un
-  essai la semaine prochaine.
+1. **Ouvrir les droits d'édition** sur les trois fichiers déposés (point bloquant ci-dessus).
+2. **Merger la PR** portant `reviews/config.json` — les relèves (3×/jour) lisent ce fichier
+   sur `main`.
+3. **Déposer à la main** `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx` dans le Drive de
+   J Lawson Golf, puis noter son identifiant dans `reviews/config.json`.
+4. **Confirmer les adresses email** (au minimum celle de Sarah) pour pouvoir remplir le
+   champ « À » et envoyer.
+5. Investiguer à froid l'échec de conversion Sheets (Le Loft) et l'échec de transfert
+   (J Lawson Golf). Piste de fond : donner au runner GitHub Actions de quoi déposer
+   directement dans Drive, pour que le binaire ne transite plus par la session.
 
-Pas de bilan chiffré Metricool (portée/interactions) dans ce récap : cette session
-s'est concentrée sur le lancement de la review hebdo, pas sur le pull complet des
-statistiques par compte.
+Pas de bilan chiffré Metricool (portée/interactions) dans ce récap : la session s'est
+concentrée sur le lancement de la review hebdo.
