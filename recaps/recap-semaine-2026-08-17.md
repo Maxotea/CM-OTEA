@@ -10,7 +10,7 @@ lecteur »** (hérité du dossier). Conséquence : **le client peut ouvrir son t
 peut ni corriger une légende ni cocher une décision.** Le circuit est donc à moitié
 ouvert — la relève automatique sait lire les fichiers, mais il n'y aura rien à lire.
 
-À faire sur **chacun** des trois fichiers ci-dessous, avant d'envoyer quoi que ce soit :
+À faire sur **chacun** des quatre fichiers ci-dessous, avant d'envoyer quoi que ce soit :
 passer le partage en **« tous les utilisateurs disposant du lien : éditeur »**, ou inviter
 directement l'adresse du client. La session ne peut pas le faire : l'outil de partage
 disponible n'accorde des droits qu'à une adresse nominative, et aucune adresse client
@@ -29,13 +29,14 @@ incident.
    `generer` n'étant pas encore passé au moment de la session, il a été redéclenché
    manuellement. Les 6 fichiers `reviews/a-envoyer/*-2026-08-17.xlsx` sont commités sur
    `main`.
-2. **Trois comptes déposés et vérifiés à l'octet près** (taille du fichier sur Drive
-   comparée au fichier du dépôt) :
+2. **Les quatre comptes clients sont déposés et vérifiés à l'octet près** (taille du
+   fichier sur Drive comparée au fichier du dépôt) :
 
    | Compte | Forme | Taille | `drive_fichier` |
    |---|---|---|---|
    | Gossip Beauty Center | Google Sheet | — | `1F9M0NiPqEVVOcOeET4HxSgoMgVDm8BAQKNG-P6MieD8` |
    | Le Loft | xlsx brut | 11 127 o | `15D50Eg9nnCvGcZpC3_nAi4GQzGBkXA3F` |
+   | J Lawson Golf | xlsx brut | 11 090 o | `1-plYyTwVrRJem_Gl9OcWETzihv5g6ZQ9` |
    | La Galerie Immobilière | xlsx brut | 9 987 o | `10OK72RQ65kfXOtSH-8BhPeRdi09aSynx` |
 
    Le dépôt en **xlsx brut n'est pas un pis-aller** : `telecharger_review`
@@ -43,32 +44,26 @@ incident.
    téléchargement direct quand le fichier n'est pas un Sheet. La conversion Sheets échoue
    de façon reproductible sur le fichier Le Loft (`invalid argument`) — cause non
    identifiée, à creuser à froid.
-3. **J Lawson Golf : toujours pas déposé.** Le transfert du contenu binaire vers le
-   connecteur Drive échoue de façon répétée sur ce fichier précis. Chaque échec a été
-   détecté avant tout dépôt — **aucun fichier corrompu n'est arrivé dans son Drive**, et
-   son `drive_fichier` reste à `null` (la relève l'ignore, sans danger). Son fichier
-   `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx` est commité sur `main` : il suffit de le
-   glisser à la main dans son dossier Drive.
-4. **Brouillon Gmail** préparé pour Gossip Beauty Center (modèle
+3. **Brouillon Gmail** préparé pour Gossip Beauty Center (modèle
    `modele-mail-review.md`, ton vouvoiement chaleureux, pièce jointe xlsx). **Champ « À »
    laissé vide** — `email_confirme` est `false`. **Rien n'a été envoyé.** Pas de brouillon
-   pour Le Loft ni La Galerie : leurs liens viennent d'être créés et le partage en écriture
-   n'est pas encore posé.
-5. **Pierre Huiban, Otea Filmakers** (banc d'essai) : non retouchés, leur `drive_fichier`
+   pour les trois autres : leurs liens viennent d'être créés et, surtout, le partage en
+   écriture n'est pas encore posé (voir le point bloquant ci-dessus).
+4. **Pierre Huiban, Otea Filmakers** (banc d'essai) : non retouchés, leur `drive_fichier`
    pointe encore sur le fichier du 10/08.
 
 ## À faire
 
-1. **Ouvrir les droits d'édition** sur les trois fichiers déposés (point bloquant ci-dessus).
+1. **Ouvrir les droits d'édition** sur les quatre fichiers déposés (point bloquant
+   ci-dessus). C'est le seul geste qui reste entre le client et son tableau.
 2. **Merger la PR** portant `reviews/config.json` — les relèves (3×/jour) lisent ce fichier
    sur `main`.
-3. **Déposer à la main** `reviews/a-envoyer/jlawsongolf-2026-08-17.xlsx` dans le Drive de
-   J Lawson Golf, puis noter son identifiant dans `reviews/config.json`.
-4. **Confirmer les adresses email** (au minimum celle de Sarah) pour pouvoir remplir le
+3. **Confirmer les adresses email** (au minimum celle de Sarah) pour pouvoir remplir le
    champ « À » et envoyer.
-5. Investiguer à froid l'échec de conversion Sheets (Le Loft) et l'échec de transfert
-   (J Lawson Golf). Piste de fond : donner au runner GitHub Actions de quoi déposer
-   directement dans Drive, pour que le binaire ne transite plus par la session.
+4. Investiguer à froid l'échec de conversion Sheets (Le Loft). Piste de fond : donner au
+   runner GitHub Actions de quoi déposer directement dans Drive, pour que le binaire ne
+   transite plus par la session — le dépôt de J Lawson Golf a demandé plusieurs tentatives
+   avant de passer.
 
 Pas de bilan chiffré Metricool (portée/interactions) dans ce récap : la session s'est
 concentrée sur le lancement de la review hebdo.
