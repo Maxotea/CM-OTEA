@@ -37,34 +37,34 @@
 ## 🖼️ Visuels : photos IA ultra réalistes autorisées (04/08/2026)
 Maxime autorise les **photos IA ultra réalistes** sur ce compte, **feed et stories**, en remplacement des cartes typographiques.
 - **Limite absolue maintenue : aucune personne réelle identifiable.** Coureurs génériques, plans larges ou de dos, pas de visage reconnaissable en gros plan. On ne génère jamais le visage d'un client, d'un participant ou de Maxime.
-- Direction : La Défense au petit matin — parvis, tours de verre, lumière rasante. Palette compatible kit (Écru/Encre, accent Blaze discret). L'habillage typographique du kit reste posé par-dessus (`scripts/roi-visuels.py`).
+- Direction : La Défense au petit matin — parvis, tours de verre, lumière rasante. Palette compatible kit (Écru/Encre, accent Blaze discret). L'habillage typographique du kit reste posé par-dessus (`scripts/roi-photo-habillage.py` — feed et calque story).
 - Stories : photo IA → i2v `kling3_0_turbo` → **muet** (règle stories sans son).
 - L'exception ne vaut que pour ce compte, tant qu'aucune édition n'a eu lieu et qu'il n'existe aucune vraie photo.
 
-## Calendrier — Phase teasing (démarrage 03/08/2026 au soir) ✅ ACTIF
-**18 brouillons Instagram vérifiés** (`draft:true`, `autoPublish:false`, média présent sur chacun) : 9 posts feed + 9 stories, du 03/08 au 21/08.
+## Calendrier — état réel au 19/08/2026 ⚠️
 
-### Posts feed — lun/mer/ven (03/08 20h00 puis 08h00)
-| Date | id | Visuel | Angle |
-|---|---|---|---|
-| 03/08 20:00 | 357485089 | f1 aplat Blaze | Ouverture — « Quelque chose démarre » |
-| 05/08 08:00 | 357485140 | f2 fond Encre | Ce que ce n'est pas |
-| 07/08 08:00 | 357485169 | f3 fond Écru | Pour qui ? |
-| 10/08 08:00 | 357484441 | f4 fond Encre | Concept complet |
-| 12/08 08:00 | 357484464 | f5 fond Écru | Pilier 01 — l'effort crée le lien |
-| 14/08 08:00 | 357484489 | f6 aplat Blaze | Pilier 02 — zéro pitch |
-| 17/08 08:00 | 357484523 | f7 fond Écru | Pilier 03 — la régularité paie |
-| 19/08 08:00 | 357484576 | f8 fond Encre | Punchline — 3 cafés ou 1 heure de course |
-| 21/08 08:00 | 357484595 | f9 fond Écru | Le format-type |
+**Le teasing d'août est épuisé.** Les 18 brouillons du 03 au 17/08 n'ont jamais
+été validés dans l'interface : leurs créneaux sont passés, Metricool les a
+retirés. Il ne reste que 4 brouillons, tous en photo IA :
 
-### Stories — mêmes jours, 12h00 (03/08 à 20h30)
-9 stories vidéo **toutes différentes** (ids 357483920, …931, …953, …978, …985, …990, 357484000, …019, …034) : Ça démarre · Ni club ni afterwork · Pour les entrepreneurs · On court d'abord · Au 3e km · Zéro pitch · La régularité paie · 5 ou 10 km · Le format.
-- **Cadence 3/semaine assumée** (les jours de post) tant que le compte n'a pas d'audience : la règle « aucune story identique sur 2 semaines » est respectée par construction — les 9 sont uniques sur toute la période.
+| Date | id | Type |
+|---|---|---|
+| 19/08 12:00 | 363855795 | Story photo IA — « 5 ou 10 km. Ton rythme. » (muette) |
+| 19/08 18:00 | 363855131 | Feed — « Trois cafés. Ou une heure de course. » |
+| 21/08 12:00 | 363855807 | Story photo IA — « Le format » (muette) |
+| 21/08 08:00 | 363855142 | Feed — « Le format, simple. » |
 
-### Fabrication des visuels — `roi_gen.py`
+Le créneau feed du 19/08 08:00 était déjà passé : replanifié à 18:00 le jour même.
+
+**À décider avec Maxime :** relancer une vague en septembre. 7 des 9 photos IA
+générées le 19/08 (La Défense au petit matin) sont inutilisées et prêtes.
+Habillage typographique : `scripts/roi-photo-habillage.py` (feed 1080×1350 +
+calque story 1080×1920, mention « LA DÉFENSE » en haut à droite).
+
+### Fabrication des visuels — `scripts/roi-visuels.py` (cartes typo) et `scripts/roi-photo-habillage.py` (photos IA)
 - Cartes typographiques PIL en DA stricte : Archivo Expanded 900 (titres, interlettrage −3,5 %) + Space Mono (mentions), 3 familles jamais mélangées (Écru / Encre / aplat Blaze), logo haut-gauche marge 6,5 %, mention mono haut-droite, barre Blaze, grain 26 %, zones libres 200 px haut/bas en story.
-- **Stories = animation ffmpeg** (push-in lent 1→1,06, barre Blaze qui se déploie, fondus) + fond sonore procédural `roi.wav` (cadence de foulée ~168 BPM, oscillateurs purs — zéro sample tiers, zéro modèle génératif, zéro droits).
-- **Zéro IA générative, zéro photo** : conforme à la règle stories, et cohérent avec le brief qui fait de la typo l'identité de la marque. À remplacer par de vraies photos animées dès la première édition (cf. règle générale).
+- **Stories = animation ffmpeg** (push-in lent 1→1,06, barre Blaze qui se déploie, fondus), **sans aucune bande son** — `-an` obligatoire au montage (`.claude/memories/stories-sans-son.md`). Le `roi.wav` procédural de la première version n'est plus utilisé.
+- Les cartes typo restent valables comme famille de visuels. Depuis le 04/08 elles cohabitent avec les **photos IA** autorisées sur ce compte (voir plus haut). À remplacer par de vraies photos dès la première édition.
 - Feed 1080×1350, stories 1080×1920, rendus depuis un master 1350 px.
 
 ### Pièges rencontrés (à ne pas réapprendre)

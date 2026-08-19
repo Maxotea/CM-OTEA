@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Visuels Run On Invest — DA typographique du kit V2.1.
 
+⚠️ RÈGLE DU 04/08/2026 : les stories partent MUETTES. `wav()` et le `-map 1:a`
+   de `build()` sont conservés pour l'historique et pour d'éventuels formats
+   longs, mais toute story livrée dans Metricool doit être rendue avec `-an`.
+   Voir `.claude/memories/stories-sans-son.md`.
+   Pour l'habillage sur photo IA : `scripts/roi-photo-habillage.py`.
+
 Génère les cartes feed (1080x1350) et les stories animées (1080x1920 + son)
 du compte R.O.I. Zéro IA générative, zéro photo, zéro sample tiers :
 tout est dessiné en PIL et animé/sonorisé en ffmpeg + oscillateurs purs.

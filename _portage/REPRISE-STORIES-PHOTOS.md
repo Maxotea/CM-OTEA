@@ -1,4 +1,4 @@
-# Stories vraies photos animées — état au 04/08/2026 02h30
+# Stories vraies photos animées — état au 19/08/2026
 
 ## ✅ J Lawson Golf : terminé (4 slots sur 14)
 Les 4 photos réelles exploitables du compte sont passées en stories vidéo,
@@ -59,36 +59,63 @@ Higgsfield donc images IA ; 01 = visuel promo The Open (texte incrusté, droits 
 puis `bulk_schedule_stories` de la version muette + `bulk_delete_posts` de
 l'ancienne (bien moins verbeux que `bulk_replace_posts`).
 
-### ✅ Fait — J Lawson, 5 vidéos / 10 stories
-| Vidéo | Nouveau media_id muet | Dates | Nouveaux ids |
+### ✅ DÉMUTAGE TERMINÉ — tous comptes, vérifié le 19/08/2026
+
+Balayage complet des 10 comptes Metricool. Chaque vidéo de story programmée
+a été contrôlée à l'`ffprobe` (`audio=0` exigé), pas seulement supposée.
+
+| Compte | blogId | Stories à venir | Verdict |
 |---|---|---|---|
-| Le shaft (photo) | `c42ca037-0252-435f-9ce5-47daf70678f9` | 04 · 18/08 | 357720588 · 357720590 |
-| La data parle (photo) | `52d09b09-ad2f-4b1d-9872-5341362dbe4b` | 08 · 22/08 | 357720598 · 357720611 |
-| Côté atelier (photo) | `2b35934e-deb7-40f5-906a-fb2dabf2cc10` | 15 · 29/08 | 357720619 · 357720629 |
-| Analyse Gears (photo) | `1e56a55c-8b79-4ed2-96ef-54aa2774ff19` | 13 · 27/08 | 357720638 · 357720649 |
-| Fers sur mesure (carte) | `fd54ea6e-b22b-4370-91d4-34575a598161` | 05 · 19/08 | 357720654 · 357720661 |
+| J Lawson Golf | 6563137 | 43 (19/08→30/09) | ✅ 43 muettes |
+| La Galerie Immobilière | 5733302 | 13 (19→31/08) + PNG sept. | ✅ 13 remplacées |
+| OTEA PRODUCTION | 5733269 | 13 (19→31/08) | ✅ 6 remplacées, 7 déjà muettes |
+| Run On Invest | 6636615 | 2 (19 + 21/08) | ✅ muettes dès l'origine (photos IA) |
+| Le Loft | 6191921 | 13 | ✅ aucun flux audio |
+| Gossip Beauty Center | 5733306 | 13 | ✅ aucun flux audio |
+| Pierre Huiban | 6572293 | 13 | ✅ stories en PNG, pas de vidéo |
+| Otea Filmakers | 4728418 | 0 | — |
+| Confshine Game | 6625190 | 0 | — |
+| ExpliqueMoi | 6704763 | 0 | — |
 
-Anciennes versions sonores supprimées (357633119/132/162/181/211/226,
-357397907/912, 357218619, 357218975).
+**Deux surprises qui ont coûté du travail non prévu — à retenir :**
+1. **OTEA PRODUCTION portait bien du son.** Ce fichier affirmait l'inverse
+   (« leurs stories datent de sessions antérieures au fond sonore »). Faux :
+   les 3 cartes photo composées le 29/07 (Coulisses `b7f45530`, Parlons projet
+   `da10744b`, Captation `1fe49bcf`) avaient une piste. Les 4 cartes IA, non.
+   → **Ne jamais conclure sans `ffprobe`.**
+2. **Les stories de septembre de J Lawson étaient invisibles** dans la fenêtre
+   de listing initiale (19/08→01/09). 30 stories de plus, créées le 04/08,
+   dont 18 cartes pointaient encore sur les médias sonores.
+   → **Toujours balayer jusqu'à la fin du calendrier, pas 15 jours.**
 
-### ⏳ Reste à démuter — J Lawson, 9 cartes (~18 brouillons), blog 6563137
-`ed2311d9-5fe7-4af6-8596-891d3b2dab50` Driver 06+20/08 ·
-`19ce8fd8-f990-45d7-a4c0-b07409a3cc04` Réserve ton fitting 07+21/08 ·
-`a0648150-258b-4544-bbf4-3bc53dcc04a4` Jour de parcours 09+23/08 ·
-`accd29a4-ef41-40cf-8776-38c6cccbcc93` Objectif semaine 10+24/08 ·
-`5b62a0ca-bf04-429e-bc7f-cb0089c977f9` Wedges 11+25/08 ·
-`30429e4b-5c29-4687-b00e-994e5f151d3d` Putter 12+26/08 ·
-`33f90c29-393e-450f-92a8-d74188d3f1cc` Dernier call 14+28/08 ·
-`52e4808b-0937-4b48-adb0-d789d9ea1681` 18 trous 16/08 ·
-`b227dee8-906a-4db0-a507-8b0c7c361b9c` Nouvelle semaine 17/08.
-⚠️ Vérifier aussi les 30 et 31/08 (hors de la fenêtre déjà listée).
+#### Correspondance médias muets — J Lawson (réutilisables tels quels)
+Photos : `c42ca037` Le shaft · `fd54ea6e` Fers sur mesure · `52d09b09` La data
+parle · `1e56a55c` Analyse Gears · `2b35934e` Côté atelier.
+Cartes : `9c7aaa64` Driver · `08546cef` Réserve ton fitting · `6e0255a9` Jour de
+parcours · `06321768` Objectif semaine · `491d044f` Wedges · `627412c5` Putter ·
+`1638ebdf` Dernier call · `36467b17` 18 trous · `526845eb` Nouvelle semaine.
 
-### ⏳ Reste à démuter — La Galerie, 14 cartes (28 brouillons), blog 5733302
-Toutes portent `lg.wav`. Même procédure.
+#### Correspondance médias muets — OTEA PRODUCTION
+`85fc08f7` Coulisses · `422579cc` Parlons projet · `dcaa7c92` Captation
+événement. (Les 4 cartes IA — Le conseil, Inspiration, Belle semaine, Idée
+vidéo — étaient déjà muettes, inchangées.)
 
-### ⏳ À vérifier — Pierre Huiban, Le Loft, Gossip, OTEA
-Leurs stories datent de sessions antérieures au fond sonore : contrôler par
-`ffprobe` si un flux audio existe avant d'engager le travail.
+#### Correspondance médias muets — La Galerie (19→31/08, dans l'ordre)
+`b9a05073` · `f900db6b` · `93487272` · `83cbee6d` · `202cc2ed` · `93a618a4` ·
+`01b9a000` · `9f221602` · `baae616a` · `3c78c8c1` · `8d5175ed` · `19abe707` ·
+`38e3a858`.
+
+### Procédure de démutage (si une nouvelle vidéo sonore apparaît)
+1. `ffprobe -v error -select_streams a -show_entries stream=index -of csv=p=0 f.mp4 | wc -l`
+   → doit rendre `0`.
+2. `media_upload` **avant** la commande sandbox (la sandbox meurt ~10 s après).
+3. Dans **une seule** commande : `curl` la source → `ffmpeg -i in -an -c copy out`
+   (pas de ré-encodage) → `ffprobe` de contrôle → `curl -f -X PUT`.
+   ≤ 5 URL présignées par commande (limite de 16 000 caractères).
+4. `media_confirm` en lot, puis `bulk_schedule_stories` (≤ 7 par appel) et
+   `bulk_delete_posts` des anciennes — bien moins verbeux que `bulk_replace_posts`.
+5. Vérifier par `summarize_scheduled_posts` : une story par jour, aucun trou,
+   aucun doublon, `draft:true` partout.
 
 ## Règle 2 : Run On Invest peut utiliser des photos IA ultra réalistes
 Autorisation de Maxime du 04/08. **Limite absolue conservée : aucune personne
@@ -96,16 +123,23 @@ réelle identifiable** — on ne génère jamais le visage d'un client, d'un
 participant ou de Maxime. L'exception ne vaut que pour ROI, qui n'a aucune
 photo et dont l'événement n'a pas encore eu lieu.
 
-### À produire (remplace les 9 stories cartes typo actuelles, blog 6636615)
-1. Générer des **photos IA ultra réalistes** de coureurs en ville au petit matin,
-   plans larges ou de dos, cadrage 9:16 — pas de visage reconnaissable en gros plan.
-   DA du kit : lumière naturelle, palette Écru/Encre, accent Blaze discret.
-2. i2v (kling3_0_turbo) pour l'animation, **sans son**.
-3. Habillage typographique ROI par-dessus (`scripts/roi-visuels.py` fournit la DA).
-4. Remplacer les 9 stories actuelles (357483920, …931, …953, …978, …985, …990,
-   357484000, …019, …034) et supprimer les anciennes.
-5. Les visuels feed peuvent aussi passer en photo IA si Maxime le souhaite —
-   à lui confirmer, la DA typographique du kit reste valable.
+### ✅ Fait le 19/08 — 9 photos IA générées, 4 brouillons en ligne
+9 photos `soul_2` 9:16 « La Défense au petit matin » (parvis, tours de verre,
+lumière rasante, coureurs de dos ou en plan large, **aucun visage
+reconnaissable**), planches-contact contrôlées visuellement une par une.
+
+Brouillons R.O.I. actuellement programmés — **c'est tout ce qui reste** :
+| Date | id | Type |
+|---|---|---|
+| 19/08 12:00 | 363855795 | Story photo IA, muette |
+| 19/08 18:00 | 363855131 | Feed photo IA (créneau 08:00 périmé → replanifié) |
+| 21/08 12:00 | 363855807 | Story photo IA, muette |
+| 21/08 08:00 | 363855142 | Feed photo IA |
+
+⚠️ **Le teasing d'août est épuisé au 21/08.** Aucun des posts du 03→17/08 n'a
+été validé dans l'interface : leurs créneaux sont passés, ils ont disparu.
+Il reste 7 photos IA inutilisées, prêtes pour une reprise en septembre.
+Habillage : `scripts/roi-photo-habillage.py`.
 
 ## Mise à jour 04/08 (suite) — lieu R.O.I. déverrouillé + IA sur le feed
 - Maxime confirme : **course à La Défense**, **networking à la Plénitude Arena**.

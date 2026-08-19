@@ -89,3 +89,26 @@ Les 8 cartes typographiques de ces slots ont été supprimées (357218703, 35721
 
 ## Stories quotidiennes août 2026 (28/07/2026 — REMPLACÉE le 03/08)
 - Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Visuels IA, rotation hebdo — abandonnée au profit de la rotation 2 semaines ci-dessus.
+
+## 🔇 Stories muettes — septembre traité le 19/08/2026
+Le premier passage de démutage ne couvrait qu'août. **30 stories de septembre**
+(créées le 04/08, ids `3578629xx`–`3578641xx`) étaient hors de la fenêtre de
+listing : 18 d'entre elles pointaient encore sur les médias sonores.
+
+- Les 12 stories **photo** de septembre pointaient déjà sur les médias muets
+  (`c42ca037` Le shaft, `fd54ea6e` Fers sur mesure, `52d09b09` La data parle,
+  `1e56a55c` Analyse Gears, `2b35934e` Côté atelier) — vérifiées, non touchées.
+- Les 18 stories **cartes** ont été redéposées muettes aux mêmes dates
+  (IG+FB, 10:00, brouillon), anciennes supprimées.
+
+Médias muets de référence, réutilisables tels quels :
+`9c7aaa64` Driver · `08546cef` Réserve ton fitting · `6e0255a9` Jour de parcours ·
+`06321768` Objectif semaine · `491d044f` Wedges · `627412c5` Putter ·
+`1638ebdf` Dernier call · `36467b17` 18 trous · `526845eb` Nouvelle semaine.
+
+Vérifié par listing : **30 stories pour les 30 jours de septembre**, une par
+jour, aucun trou, aucun doublon, `draft:true` partout. Août (13 stories) idem.
+
+⚠️ Leçon : lister le calendrier **jusqu'à sa fin**, pas sur quinze jours.
+Le calque typo des stories photo est versionné dans
+`scripts/jlawson-photo-story.py`.

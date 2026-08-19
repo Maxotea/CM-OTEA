@@ -25,3 +25,15 @@ superpose mal aux usages de la plateforme.
 ## Périmètre
 Tous les comptes, sans exception : J Lawson, La Galerie, Run On Invest,
 Pierre Huiban, Le Loft, Gossip, OTEA.
+
+## État au 19/08/2026 : conforme partout
+Les 10 comptes ont été balayés et chaque vidéo de story programmée vérifiée à
+l'`ffprobe`. Détail des médias et de la procédure :
+`_portage/REPRISE-STORIES-PHOTOS.md`.
+
+**Deux pièges vérifiés à la dure :**
+- Ne jamais déduire qu'un compte est muet parce que ses stories « sont
+  anciennes ». OTEA PRODUCTION portait du son sur ses 3 cartes photo. Seul
+  `ffprobe` tranche.
+- Lister le calendrier **jusqu'au bout**, pas sur 15 jours : J Lawson avait 30
+  stories de septembre hors de la première fenêtre, dont 18 encore sonores.

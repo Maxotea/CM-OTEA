@@ -31,3 +31,28 @@
 ## Stories quotidiennes août 2026 (28/07/2026 — REMPLACÉE le 03/08)
 - Banque 7 stories 9:16 `medias/la-galerie-immobiliere/ia/stories/` (lun belle-semaine, mar lumière, mer charme-ancien, jeu votre-projet, ven week-end-visites, sam bien-rare, dim inspiration). Visuels IA, rotation hebdo — abandonnée au profit de la rotation 2 semaines ci-dessus.
 - ⚠️ **10 stories « Sabrina » sans média** (28/07→29/09, 18h, hebdo — ids 326979151/160/173/175/177, 326980004/005/007/011/020) : contenus face-cam du calendrier initial (adresses de Sabrina, anecdote terrain, équipe, marché immo…). **NE PAS brancher en IA** (personne réelle) ni supprimer : à TOURNER avec Sabrina (vidéos verticales), puis héberger via [[hebergement-photos-reelles-metricool]]. Sans danger en attendant : elles sont en brouillon.
+
+## 🔇 Stories muettes — 19/08/2026
+Les 13 stories vidéo du 19 au 31/08 portaient le fond sonore `lg.wav`. Elles ont
+été redéposées **muettes** (`ffmpeg -an -c copy`, aucun ré-encodage : l'image est
+strictement identique), en brouillon IG+FB à 10:00, aux mêmes dates.
+
+| Date | Libellé | Nouveau média (muet) | Nouvel id |
+|---|---|---|---|
+| 19/08 | Story mercredi (A) — Charme de l'ancien | `b9a05073-4b2d-4a6a-9144-5eecfddf99c0` | 363859179 |
+| 20/08 | Story jeudi (A) — Votre projet | `f900db6b-fd28-455e-9b89-0f03c11f69b0` | 363859185 |
+| 21/08 | Story vendredi (A) — Week-end de visites | `93487272-2385-4924-8c46-ea0161fce385` | 363859189 |
+| 22/08 | Story samedi (A) — Le bien rare | `83cbee6d-a5f4-4a6e-9955-928078530c98` | 363859196 |
+| 23/08 | Story dimanche (A) — Inspiration | `202cc2ed-d8cb-48f3-ae59-cb88d4a5244f` | 363859200 |
+| 24/08 | Story lundi (B) — Nouvelle semaine | `93a618a4-d892-4bb5-9182-38f22c66ab67` | 363859204 |
+| 25/08 | Story mardi (B) — Mise en valeur | `01b9a000-e435-44e3-9483-46b3843c4b48` | 363859208 |
+| 26/08 | Story mercredi (B) — L'adresse | `9f221602-ac01-4079-9164-7bf467cf7f13` | 363859313 |
+| 27/08 | Story jeudi (B) — L'estimation | `baae616a-3f15-4979-8c36-21ebe7a27960` | 363859319 |
+| 28/08 | Story vendredi (B) — Avant de visiter | `3c78c8c1-2fd1-4bbd-8818-f9bdb182d7b8` | 363859326 |
+| 29/08 | Story samedi (B) — Paris & Ouest | `8d5175ed-09ba-409c-9723-2535550a4178` | 363859333 |
+| 30/08 | Story dimanche (B) — Douceur du dimanche | `19abe707-62fb-44f5-8b68-a8b731ed5b70` | 363859340 |
+| 31/08 | Story lundi (A) — Belle semaine | `38e3a858-4c48-4be8-9114-b0691b409dbc` | 363859343 |
+
+Anciennes cartes sonores supprimées : 357220114, …123, …132, …138, …146, …154,
+…168, …174, …179, 357220313, …317, …322, …330. Les stories de septembre sont des
+PNG : pas de son, rien à faire. Règle : `.claude/memories/stories-sans-son.md`.
