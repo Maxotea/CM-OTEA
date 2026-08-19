@@ -7,7 +7,7 @@
       "nom": "Gossip Beauty Center",
       "prefixe": "GBC",
       "actif": true,
-      "drive_fichier": null
+      "drive_fichier": "1G_lPZ9v4IcSNsa5Cu4j7LWAWhJq-O5g0OiUjbnAEXuE"
     },
     {
       "slug": "le-loft",
@@ -15,7 +15,7 @@
       "nom": "Le Loft",
       "prefixe": "LL",
       "actif": true,
-      "drive_fichier": null
+      "drive_fichier": "1vgrvKnMAJ-E1NFP5j4DBgLEk3r9rs1uy4aoyhvXcvy0"
     },
     {
       "slug": "jlawsongolf",
@@ -23,7 +23,7 @@
       "nom": "J Lawson Golf",
       "prefixe": "JLG",
       "actif": true,
-      "drive_fichier": null
+      "drive_fichier": "11G2OzagThFgkYBlShahM5455dUlsFAhoEr4bwgCpyYE"
     },
     {
       "slug": "la-galerie-immobiliere",
@@ -31,7 +31,7 @@
       "nom": "La Galerie Immobilière",
       "prefixe": "LGI",
       "actif": true,
-      "drive_fichier": null
+      "drive_fichier": "1yYEap8xmIpVfuxkayGfRBprXNyNM9snS6sIP9K9imjw"
     },
     {
       "slug": "pierre-huiban",
@@ -39,7 +39,7 @@
       "nom": "Pierre Huiban",
       "prefixe": "PH",
       "actif": true,
-      "drive_fichier": "1rdvmgjGXBIgEZF2N6MphHofwFWOJp4tBSq2cDi3AAWM"
+      "drive_fichier": "1c-KLO-EcrP1IUKV9YplxVF-HJlELTc1ne8zwWECrjBU"
     },
     {
       "slug": "otea-production",
@@ -56,8 +56,8 @@
       "nom": "Otea Filmakers",
       "prefixe": "OF",
       "actif": true,
-      "drive_fichier": "1rjAxBrj0F-neg5QupXMmFzQDMNFzUJd1Jj6dM76ivfQ",
-      "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet, dépôt du 08/08/2026, semaine du 10/08). Le partage « tous les utilisateurs disposant du lien » doit être actif sur le fichier pour que la relève puisse le lire."
+      "drive_fichier": "1wwAKMLIPnDUNPh6fBX-NlVeVIsddKuJWMNW9FEp5cWI",
+      "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). Le partage « tous les utilisateurs disposant du lien » doit être actif sur chaque nouveau fichier pour que la relève puisse le lire."
     }
   ]
 }
