@@ -87,6 +87,27 @@ def _bloc(d, W, H, y_logo, y0, lines, kick, s, ft):
     d.text((m, by + int(W * 0.038)), kick, font=mo(int(W * 0.022)), fill=E)
 
 
+def scrim(W, H, grad_h, grad_max, flat_h):
+    """Voile Encre : dégradé bas + palier plat + voile haut pour le logo.
+
+    Le palier plat (alpha 100, fondu sur 150 px) est ce qui garantit la
+    lisibilité du titre même sur une photo claire — le dégradé seul ne
+    suffisait pas sur les plans de verre en plein jour."""
+    sc = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sd = ImageDraw.Draw(sc)
+    hgt = int(H * grad_h)
+    for i in range(hgt):
+        sd.line([(0, H - hgt + i), (W, H - hgt + i)],
+                fill=N + (int(grad_max * (i / hgt) ** 1.25),))
+    fl = int(H * flat_h); fe = 150
+    for i in range(fl):
+        a = 100 if i > fe else int(100 * i / fe)
+        sd.line([(0, H - fl + i), (W, H - fl + i)], fill=N + (a,))
+    hat = int(H * 0.16)
+    for i in range(hat):
+        sd.line([(0, i), (W, i)], fill=N + (int(130 * (1 - i / hat) ** 1.4),))
+    return sc
+
+
 def feed(src, dst, lines, kick, W=1080, H=1350):
     """Photo IA recadrée + voile Encre + habillage. Sortie JPG aplatie."""
     im = Image.open(src).convert("RGB")
@@ -96,14 +117,7 @@ def feed(src, dst, lines, kick, W=1080, H=1350):
     t = (im.height - H) // 2
     im = im.crop((l, t, l + W, t + H)).convert("RGBA")
 
-    sc = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sd = ImageDraw.Draw(sc)
-    hgt = int(H * 0.55)                                   # voile bas
-    for i in range(hgt):
-        sd.line([(0, H - hgt + i), (W, H - hgt + i)], fill=N + (int(225 * (i / hgt) ** 1.5),))
-    hat = int(H * 0.16)                                   # voile haut (logo)
-    for i in range(hat):
-        sd.line([(0, i), (W, i)], fill=N + (int(130 * (1 - i / hat) ** 1.4),))
-    im = Image.alpha_composite(im, sc)
+    im = Image.alpha_composite(im, scrim(W, H, 0.62, 238, 0.52))
 
     d = ImageDraw.Draw(im)
     m = int(W * 0.065)
@@ -120,13 +134,7 @@ def story(dst, lines, kick, W=1080, H=1920):
     """Calque PNG transparent 9:16 à superposer sur la vidéo i2v.
 
     Zones libres du kit respectées : logo à y=250, bloc titre calé sur 1450."""
-    im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); sd = ImageDraw.Draw(im)
-    hg = int(H * 0.46)
-    for i in range(hg):
-        sd.line([(0, H - hg + i), (W, H - hg + i)], fill=N + (int(220 * (i / hg) ** 1.5),))
-    for i in range(340):
-        sd.line([(0, i), (W, i)], fill=N + (int(140 * (1 - i / 340) ** 1.4),))
-
+    im = scrim(W, H, 0.50, 232, 0.42)
     d = ImageDraw.Draw(im)
     m = int(W * 0.065)
     s, ft = _fit(d, lines, W - 2 * m, int(W * 0.115))
@@ -134,19 +142,50 @@ def story(dst, lines, kick, W=1080, H=1920):
     im.save(dst)
 
 
-# --- Contenu produit le 19/08/2026 ------------------------------------------
-FEED = [("o/p1.png", "o/rf1.jpg", ["TROIS CAFÉS.", "OU UNE HEURE", "DE COURSE."],
-         "ON COURT D'ABORD. ON PARLE ENSUITE."),
-        ("o/p2.png", "o/rf2.jpg", ["LE FORMAT,", "SIMPLE."],
-         "COURSE & NETWORKING — ENTREPRENEURS")]
-STORY = [("o/o1.png", ["5 OU 10 KM.", "TON RYTHME."], "CE N'EST PAS UNE COURSE"),
-         ("o/o2.png", ["LE", "FORMAT"], "COURSE, PUIS ÉCHANGE")]
+# --- Vague 24/08 -> 11/09 (produite le 19/08/2026) --------------------------
+# n : (photo, lignes feed, accroche feed, lignes story, accroche story)
+SPEC = {
+ 1: ("b", ["ON COURT À", "LA DÉFENSE"], "5 OU 10 KM À TON RYTHME",
+          ["LA", "DÉFENSE"], "LE PARVIS AVANT TOUT LE MONDE"),
+ 2: ("d", ["CE N'EST PAS", "UN CLUB DE", "RUNNING."], "NI UN AFTERWORK.",
+          ["NI CLUB.", "NI AFTERWORK."], "UNE HEURE D'EFFORT PARTAGÉ"),
+ 3: ("e", ["POUR", "QUI ?"], "ENTREPRENEURS & INDÉPENDANTS",
+          ["AUCUN", "NIVEAU", "REQUIS"], "5 KM, C'EST DÉJÀ ASSEZ"),
+ 4: ("g", ["PERSONNE", "NE VEND", "EN MONTÉE."], "ZÉRO PITCH",
+          ["ZÉRO", "PITCH"], "C'EST LA RÈGLE"),
+ 5: ("f", ["AU 3E KM,", "PLUS PERSONNE", "NE JOUE", "UN RÔLE."], "L'EFFORT CRÉE LE LIEN",
+          ["AU 3E KM"], "L'EFFORT CRÉE LE LIEN"),
+ 6: ("c", ["PUIS ON SE", "POSE À LA", "PLÉNITUDE", "ARENA."], "LA MOITIÉ LA PLUS IMPORTANTE",
+          ["PUIS ON", "SE POSE"], "PLÉNITUDE ARENA"),
+ 7: ("h", ["LA", "RÉGULARITÉ", "PAIE."], "UN RENDEZ-VOUS QUI REVIENT",
+          ["REVENIR."], "SIX SORTIES, ET TU AS UN RÉSEAU"),
+ 8: ("j", ["TON", "RYTHME.", "PAS LE", "LEUR."], "AUCUN CHRONO, AUCUN CLASSEMENT",
+          ["TON", "RYTHME"], "AUCUN CHRONO, AUCUN CLASSEMENT"),
+ 9: ("k", ["ON COURT", "D'ABORD.", "ON PARLE", "ENSUITE."], "COURSE & NETWORKING — ENTREPRENEURS",
+          ["TU", "VIENS ?"], "ÉCRIS-NOUS EN MESSAGE PRIVÉ"),
+}
+
+# Photos IA sources (Higgsfield soul_2, 9:16, « La Défense au petit matin »).
+# Le nom de fichier contient le job_id, réutilisable tel quel en i2v.
+PHOTOS = {
+ "b": "hf_20260819_061202_7a4cbd5c-5e4d-4a2b-94f7-1a96527ac368",
+ "c": "hf_20260819_061209_5ae1591b-c2f4-4f81-8136-37ef6dd7653f",
+ "d": "hf_20260819_062155_d7f350d9-ae44-4f74-902e-039c6c66404d",
+ "e": "hf_20260819_062203_ab8461bc-f68b-41fa-96fa-4689a2c12734",
+ "f": "hf_20260819_062210_d92d19d2-2b71-42ff-bc10-2b6882de0063",
+ "g": "hf_20260819_062216_9d594010-ca3c-4346-a997-52822c3be685",
+ "h": "hf_20260819_062225_e79651fd-40dc-49c5-8b78-27c25a59a608",
+ "j": "hf_20260819_093549_af7695fd-3b2b-46f7-a4a9-b9d0035cd182",
+ "k": "hf_20260819_093549_43d3c644-db6d-4dc0-912b-95a7f1ed1dc8",
+}
+CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/"
 
 if __name__ == "__main__":
-    what = sys.argv[1] if len(sys.argv) > 1 else "all"
-    if what in ("all", "feed"):
-        for src, dst, lines, kick in FEED:
-            feed(src, dst, lines, kick)
-    if what in ("all", "story"):
-        for dst, lines, kick in STORY:
-            story(dst, lines, kick)
+    mode = sys.argv[1] if len(sys.argv) > 1 else "all"
+    todo = [int(x) for x in sys.argv[2:]] or sorted(SPEC)
+    for n in todo:
+        ph, fl, fk, sl, sk = SPEC[n]
+        if mode in ("all", "feed"):
+            feed("r/%s.png" % ph, "o/f%d.jpg" % n, fl, fk)
+        if mode in ("all", "story"):
+            story("o/s%d.png" % n, sl, sk)

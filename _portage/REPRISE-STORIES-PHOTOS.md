@@ -123,23 +123,34 @@ réelle identifiable** — on ne génère jamais le visage d'un client, d'un
 participant ou de Maxime. L'exception ne vaut que pour ROI, qui n'a aucune
 photo et dont l'événement n'a pas encore eu lieu.
 
-### ✅ Fait le 19/08 — 9 photos IA générées, 4 brouillons en ligne
-9 photos `soul_2` 9:16 « La Défense au petit matin » (parvis, tours de verre,
-lumière rasante, coureurs de dos ou en plan large, **aucun visage
-reconnaissable**), planches-contact contrôlées visuellement une par une.
+### ✅ Fait le 19/08 — relance complète jusqu'au 11/09
+13 photos IA `soul_2` générées au total (« La Défense au petit matin »), 9
+retenues, 9 animations i2v `kling3_0_turbo`, 18 brouillons Instagram en ligne.
 
-Brouillons R.O.I. actuellement programmés — **c'est tout ce qui reste** :
-| Date | id | Type |
-|---|---|---|
-| 19/08 12:00 | 363855795 | Story photo IA, muette |
-| 19/08 18:00 | 363855131 | Feed photo IA (créneau 08:00 périmé → replanifié) |
-| 21/08 12:00 | 363855807 | Story photo IA, muette |
-| 21/08 08:00 | 363855142 | Feed photo IA |
+- **22 brouillons R.O.I.** au total : les 4 rescapés d'août + 9 posts feed et
+  9 stories du 24/08 au 11/09 (lun/mer/ven, feed 08:00, story 12:00).
+- Détail complet (ids, mapping photo↔date, textes) :
+  `.claude/skills/cm-metricool/references/clients/run-on-invest.md`.
+- Habillage versionné : `scripts/roi-photo-habillage.py` (contient la vague).
 
-⚠️ **Le teasing d'août est épuisé au 21/08.** Aucun des posts du 03→17/08 n'a
-été validé dans l'interface : leurs créneaux sont passés, ils ont disparu.
-Il reste 7 photos IA inutilisées, prêtes pour une reprise en septembre.
-Habillage : `scripts/roi-photo-habillage.py`.
+**Trois choses apprises, à ne pas réapprendre :**
+1. **Le voile Encre du dégradé seul ne suffit pas** sur une photo claire — le
+   titre devenait illisible sur le plan de verre de la Plénitude Arena. Il faut
+   le palier plat (alpha 100, fondu 150 px) ajouté dans `scrim()`.
+2. **La sandbox est recyclée entre deux appels MCP**, même rapprochés : un fichier
+   généré à l'appel N n'existe plus à l'appel N+1. Solution retenue : héberger le
+   générateur (`media_upload` d'un `.py` → URL cloudfront permanente) et le
+   `curl` au début de chaque commande, qui régénère ce dont elle a besoin puis
+   enchaîne le PUT dans la **même** commande.
+3. **CloudFront met le `.py` en cache** : re-PUT sur la même URL présignée ne
+   suffit pas, l'ancienne version continue d'être servie. Passer les valeurs qui
+   changent par la ligne de commande plutôt que de repousser le script.
+
+**Contrôle de la dernière frame — 1 rejet sur 9.** La photo g (coureur seul sur
+l'esplanade) a produit une vidéo où le coureur sort du cadre : la story se
+terminait sur une place vide. Régénérée avec un prompt qui verrouille le cadrage
+(« stays in frame, running in place, camera does not move »), conforme au second
+essai.
 
 ## Mise à jour 04/08 (suite) — lieu R.O.I. déverrouillé + IA sur le feed
 - Maxime confirme : **course à La Défense**, **networking à la Plénitude Arena**.

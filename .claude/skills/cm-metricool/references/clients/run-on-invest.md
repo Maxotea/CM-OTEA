@@ -41,25 +41,58 @@ Maxime autorise les **photos IA ultra réalistes** sur ce compte, **feed et stor
 - Stories : photo IA → i2v `kling3_0_turbo` → **muet** (règle stories sans son).
 - L'exception ne vaut que pour ce compte, tant qu'aucune édition n'a eu lieu et qu'il n'existe aucune vraie photo.
 
-## Calendrier — état réel au 19/08/2026 ⚠️
+## Calendrier — relance jusqu'au 11/09/2026 ✅
 
-**Le teasing d'août est épuisé.** Les 18 brouillons du 03 au 17/08 n'ont jamais
-été validés dans l'interface : leurs créneaux sont passés, Metricool les a
-retirés. Il ne reste que 4 brouillons, tous en photo IA :
+**22 brouillons Instagram** vérifiés (`draft:true`, `autoPublish:false`, média sur
+chacun, `networks:["instagram"]`). Tout en **photo IA ultra réaliste**, stories
+**muettes**.
 
+### Ce qui restait d'août
 | Date | id | Type |
 |---|---|---|
-| 19/08 12:00 | 363855795 | Story photo IA — « 5 ou 10 km. Ton rythme. » (muette) |
-| 19/08 18:00 | 363855131 | Feed — « Trois cafés. Ou une heure de course. » |
-| 21/08 12:00 | 363855807 | Story photo IA — « Le format » (muette) |
-| 21/08 08:00 | 363855142 | Feed — « Le format, simple. » |
+| 19/08 12:00 | 363855795 | Story — 5 ou 10 km |
+| 19/08 18:00 | 363855131 | Feed — Trois cafés réseau |
+| 21/08 08:00 | 363855142 | Feed — Le format, simple |
+| 21/08 12:00 | 363855807 | Story — Le format |
 
-Le créneau feed du 19/08 08:00 était déjà passé : replanifié à 18:00 le jour même.
+⚠️ Les 18 brouillons du 03 au 17/08 n'ont jamais été validés dans l'interface :
+leurs créneaux sont passés et Metricool les a retirés. Le compte n'a donc encore
+rien publié.
 
-**À décider avec Maxime :** relancer une vague en septembre. 7 des 9 photos IA
-générées le 19/08 (La Défense au petit matin) sont inutilisées et prêtes.
-Habillage typographique : `scripts/roi-photo-habillage.py` (feed 1080×1350 +
-calque story 1080×1920, mention « LA DÉFENSE » en haut à droite).
+### Relance 24/08 → 11/09 — 9 posts + 9 stories
+Cadence **lun / mer / ven**, feed à 08:00, story à 12:00. Arc éditorial : le lieu,
+ce que ce n'est pas, pour qui, zéro pitch, l'effort crée le lien, la Plénitude
+Arena, la régularité, ton rythme, l'appel.
+
+| Date | Feed (08:00) | Story (12:00) | Photo |
+|---|---|---|---|
+| lun 24/08 | 363926254 — On court à La Défense | 363926606 — La Défense | b |
+| mer 26/08 | 363926264 — Ni club ni afterwork | 363926612 — Ni club. Ni afterwork. | d |
+| ven 28/08 | 363926278 — Pour qui ? | 363926621 — Aucun niveau requis | e |
+| lun 31/08 | 363926290 — Zéro pitch | 363926629 — Zéro pitch | g |
+| mer 02/09 | 363926298 — Au 3e km | 363926644 — Au 3e km | f |
+| ven 04/09 | 363926447 — Plénitude Arena | 363926748 — Puis on se pose | c |
+| lun 07/09 | 363926469 — La régularité paie | 363926753 — Revenir | h |
+| mer 09/09 | 363926476 — Ton rythme | 363926756 — Ton rythme | j |
+| ven 11/09 | 363926490 — Tu viens ? | 363926765 — Tu viens ? | k |
+
+- **9 visuels distincts**, aucun réemploi : la règle « aucune story identique sur
+  14 jours » est respectée par construction.
+- Placeholders `[À CONFIRMER : …]` restants sur 5 posts (date de première sortie,
+  horaire du temps d'échange, fréquence, date + lien d'inscription).
+- Chaîne de fabrication : photo IA `soul_2` 9:16 → habillage
+  `scripts/roi-photo-habillage.py` → pour les stories i2v `kling3_0_turbo`
+  (5 s, prompt verrouillé sur le cadrage) → **contrôle de la dernière frame** →
+  overlay ffmpeg `-an`. Les 9 dernières frames ont été contrôlées visuellement ;
+  une (photo g) a dû être régénérée, le coureur sortait du cadre et la story se
+  terminait sur une place vide.
+
+### ⚠️ À trancher : mention « contenu généré par IA »
+Les visuels sont des photos IA photoréalistes. Meta demande une déclaration pour
+ce type de contenu ; le champ `instagramData.isAiGenerated` des 18 brouillons est
+actuellement à `false` et les code actions ne l'exposent pas. À décider avec
+Maxime avant validation — le cocher dans l'interface au moment de valider est le
+plus simple.
 
 ### Fabrication des visuels — `scripts/roi-visuels.py` (cartes typo) et `scripts/roi-photo-habillage.py` (photos IA)
 - Cartes typographiques PIL en DA stricte : Archivo Expanded 900 (titres, interlettrage −3,5 %) + Space Mono (mentions), 3 familles jamais mélangées (Écru / Encre / aplat Blaze), logo haut-gauche marge 6,5 %, mention mono haut-droite, barre Blaze, grain 26 %, zones libres 200 px haut/bas en story.
