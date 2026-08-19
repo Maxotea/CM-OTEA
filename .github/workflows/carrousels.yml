@@ -6,9 +6,11 @@ name: Carrousels hebdo
 
 on:
   schedule:
-    # Chaque lundi 6h00 UTC, soit 8h00 à Paris en heure d'été — deux jours d'avance
-    # sur la publication du mercredi, de quoi valider tranquillement dans Metricool.
-    - cron: "0 6 * * 1"
+    # Chaque vendredi 4h30 UTC (6h30 à Paris en heure d'été) : « next Wednesday » calculé
+    # un vendredi tombe sur le mercredi de la semaine SUIVANTE — le carrousel est donc
+    # planté avant le generer de la review (5h00), et figure dans le fichier de
+    # validation que le client reçoit le lundi.
+    - cron: "30 4 * * 5"
   workflow_dispatch:
     inputs:
       semaine:

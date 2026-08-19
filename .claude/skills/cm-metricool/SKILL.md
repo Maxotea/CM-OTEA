@@ -18,7 +18,7 @@ description: Workflow complet de community management multi-comptes — génère
 1. Pour CHAQUE marque : `list_scheduled_posts` sur les 14 prochaines semaines → mesurer l'horizon couvert.
 2. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
 3. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
-4. **Review client** : déposer le fichier de validation de chaque client (généré le matin par l'action « Review hebdo client ») dans son Drive, noter son identifiant dans `reviews/config.json`, préparer le brouillon Gmail du CR avec le lien (modèle : `recaps/modele-mail-review.md`) ; redescendre `reviews/etat/` (publiés, à corriger, refusés, en attente) dans le compte-rendu. Séquence du lundi : `recaps/routine-cr-client.md` ; détail technique : `references/review-hebdo.md`.
+4. **Review client** : le cycle est automatisé depuis le 19/08/2026 — le vendredi matin, l'action « Review hebdo client » génère les fichiers de la semaine suivante et la routine « Review — préparation du vendredi » les dépose dans le dossier Drive permanent de chaque client (`reviews/config.json`) avec les brouillons Gmail ; le lundi matin, la routine d'envoi expédie le mail (si opt-in) ; le CR redescend `reviews/etat/` (publiés, à corriger, refusés, en attente). Séquence complète : `recaps/routine-cr-client.md` ; détail technique : `references/review-hebdo.md`.
 5. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
 6. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
 
@@ -93,13 +93,14 @@ Le lendemain d'un événement : rechercher le résultat réel sur le web, donner
 
 ## Validation client — la review hebdo (fichier Excel ↔ Metricool)
 
-Le client valide sa semaine dans un fichier type Excel déposé chaque lundi dans son Drive :
-il corrige les légendes dans les cases, choisit ✅ / ✏️ / ⛔ par ligne ; ses décisions sont
+Le client valide sa semaine dans un fichier type Excel déposé chaque vendredi dans son
+dossier Drive permanent (toujours le même lien pour lui) ; le mail part le lundi matin.
+Il corrige les légendes dans les cases, choisit ✅ / ✏️ / ⛔ par ligne ; ses décisions sont
 relevées trois fois par jour par l'action « Review hebdo client », qui pousse les
 modifications dans Metricool et passe les ✅ en publication automatique. Un post sans
-décision ne part jamais ; jamais de suppression automatique. Rôle de la session le lundi
-(dépôt Drive, `reviews/config.json`, exploitation de `reviews/etat/` dans le récap) et
-garde-fous : `references/review-hebdo.md`.
+décision ne part jamais ; jamais de suppression automatique. Rôle des routines du
+vendredi et du lundi (dépôt Drive, `reviews/config.json`, envoi opt-in, exploitation de
+`reviews/etat/` dans le récap) et garde-fous : `references/review-hebdo.md`.
 
 ## Étape 8 — Calcul ROI pour le client (justifier la prestation)
 

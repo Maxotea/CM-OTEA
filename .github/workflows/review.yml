@@ -1,9 +1,10 @@
 name: Review hebdo client
 
 # Le fichier Excel de validation hebdomadaire, dans les deux sens :
-#   - generer (lundi matin) : lit les brouillons de la semaine dans Metricool et écrit un
-#     fichier par client dans reviews/a-envoyer/ — la session Claude du lundi le dépose
-#     ensuite dans le Drive du client et met reviews/config.json à jour ;
+#   - generer (vendredi matin) : lit les brouillons de la SEMAINE SUIVANTE dans Metricool
+#     et écrit un fichier par client dans reviews/a-envoyer/ — la routine Claude du
+#     vendredi le dépose ensuite dans le dossier Drive permanent du client (l'ancien passe
+#     en Archives) et met reviews/config.json à jour ; le mail part le lundi matin ;
 #   - appliquer (3 fois par jour) : relit chaque fichier par son export public, pousse les
 #     corrections du client dans Metricool et passe les lignes ✅ en publication automatique.
 # Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
@@ -11,9 +12,12 @@ name: Review hebdo client
 
 on:
   schedule:
-    # Lundi 6h30 UTC (8h30 à Paris en heure d'été) : après l'action « Carrousels hebdo »
-    # de 6h00, pour que le carrousel du mercredi figure dans le fichier envoyé au client.
-    - cron: "30 6 * * 1"
+    # Vendredi 5h00 UTC (7h00 à Paris en heure d'été) : après l'action « Carrousels
+    # hebdo » de 4h30, pour que le carrousel du mercredi suivant figure dans le fichier
+    # envoyé au client. La cible est le lundi SUIVANT (voir l'étape « Déterminer la
+    # semaine visée ») ; la routine Claude du vendredi (6h00 UTC) dépose ensuite les
+    # fichiers dans les dossiers Drive permanents.
+    - cron: "0 5 * * 5"
     # Trois relèves par jour (6h30, 12h30, 18h30 à Paris en heure d'été) : une validation
     # du soir est appliquée avant le créneau de 9h00 du lendemain, une validation du matin
     # avant le post de 18h00.
@@ -46,7 +50,7 @@ jobs:
   generer:
     if: >-
       (github.event_name == 'workflow_dispatch' && inputs.mode == 'generer') ||
-      github.event.schedule == '30 6 * * 1'
+      github.event.schedule == '0 5 * * 5'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -57,13 +61,26 @@ jobs:
 
       - run: pip install openpyxl
 
+      # Planifié (vendredi) : le lundi SUIVANT. Lancé à la main : la semaine demandée,
+      # ou la semaine en cours si le champ est vide.
+      - name: Déterminer la semaine visée
+        id: semaine
+        run: |
+          if [ -n "${{ inputs.semaine }}" ]; then
+            echo "date=${{ inputs.semaine }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "date=$(date -u -d 'next Monday' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          else
+            echo "date=" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Générer les fichiers de la semaine
         env:
           METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
           METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
         run: |
           python3 scripts/review.py generer \
-            ${{ inputs.semaine && format('--semaine {0}', inputs.semaine) || '' }} \
+            ${{ steps.semaine.outputs.date && format('--semaine {0}', steps.semaine.outputs.date) || '' }} \
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
@@ -79,7 +96,7 @@ jobs:
           git add reviews/
           git commit \
             -m "Génère les fichiers de review de la semaine" \
-            -m "À déposer dans le Drive de chaque client (session Claude du lundi), qui note leur identifiant dans reviews/config.json."
+            -m "À déposer dans le dossier Drive permanent de chaque client (routine Claude du vendredi), qui note leur identifiant dans reviews/config.json."
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
 

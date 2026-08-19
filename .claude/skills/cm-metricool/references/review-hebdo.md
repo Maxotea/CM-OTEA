@@ -6,16 +6,17 @@ et décide ligne par ligne : ✅, ✏️ ou ⛔. Ses décisions sont relevées p
 jour et appliquées automatiquement dans Metricool — modifications poussées, puis passage
 du brouillon à la **publication automatique**. Ce qu'il n'a pas validé ne part jamais.
 
-## Le circuit
+## Le circuit (cycle vendredi → lundi, depuis le 19/08/2026)
 
 | Quand (UTC) | Qui | Quoi |
 |---|---|---|
-| Lundi 6h00 | Action « Carrousels hebdo » | plante le carrousel du mercredi (existant) |
-| Lundi 6h30 | Action « Review hebdo client » — job `generer` | lit les brouillons de la semaine dans Metricool, écrit `reviews/a-envoyer/<client>-<lundi>.xlsx`, commit + artefact |
-| Lundi matin | Session Claude — routine hebdo | dépose chaque fichier dans le Drive du client, note son identifiant dans `reviews/config.json`, met le lien dans le récap |
-| En semaine | Le client | corrige, commente, décide |
+| Vendredi 4h30 | Action « Carrousels hebdo » | plante le carrousel du mercredi SUIVANT |
+| Vendredi 5h00 | Action « Review hebdo client » — job `generer` | lit les brouillons du lundi SUIVANT dans Metricool, écrit `reviews/a-envoyer/<client>-<lundi>.xlsx`, commit + artefact |
+| Vendredi 6h00 | Routine Claude « Review — préparation du vendredi » | dépose chaque fichier dans le **dossier Drive permanent** du client (l'ancien part en `Archives/`), note l'identifiant dans `reviews/config.json`, prépare les brouillons Gmail |
+| Lundi 6h00 | Routine Claude « Review — envoi du lundi » | envoie le mail (seulement si `envoi_review_auto` + `email_confirme`), sinon signale les brouillons à envoyer |
+| En semaine | Le client | corrige, commente, décide — toujours au même lien (son dossier) |
 | 4h30 · 10h30 · 16h30 | Action — job `appliquer` | relit chaque fichier par son export public, applique dans Metricool, journalise dans `reviews/etat/` |
-| Lundi suivant | Session Claude | lit `reviews/etat/` pour le récap : parti, à corriger, refusé, bloqué |
+| Lundi 7h00 | Routine Claude « CR client Publi Hebdo » | lit `reviews/etat/` pour le récap : parti, à corriger, refusé, bloqué |
 
 Même partage des rôles que la chaîne photos : **la session fait la moitié authentifiée**
 (connecteur Drive, récap Gmail), **l'action fait la moitié réseau** (Metricool, export
@@ -48,32 +49,37 @@ Ce que fait `appliquer` de chaque décision :
   **jamais de suppression automatique** ;
 - vide → rien. Un post sans décision ne part jamais.
 
-## Côté session Claude — le lundi
+## Côté sessions Claude — le vendredi et le lundi
 
-Cette étape fait partie de la routine du CR client : la séquence opératoire complète est
-dans `recaps/routine-cr-client.md`, le modèle du mail dans `recaps/modele-mail-review.md`.
-Le détail technique :
+La séquence opératoire complète des deux routines est dans `recaps/routine-cr-client.md`,
+le modèle du mail dans `recaps/modele-mail-review.md`. Le détail technique :
 
-1. Vérifier que le job `generer` a tourné (sinon : workflow « Review hebdo client »,
-   mode `generer`), puis `git pull` pour récupérer `reviews/a-envoyer/`.
-2. Pour chaque client actif de `reviews/config.json` : déposer son fichier dans sa boîte
-   Drive via le connecteur Google Drive — `create_file` avec `base64Content` (le xlsx),
+1. **Vendredi** — vérifier que le job `generer` a tourné (sinon : workflow « Review hebdo
+   client », mode `generer` — planifié, il vise le lundi suivant tout seul), puis
+   `git pull` pour récupérer `reviews/a-envoyer/`.
+2. Pour chaque client actif de `reviews/config.json` : déposer son fichier dans son
+   **dossier permanent** (`drive_dossier`) via le connecteur Google Drive — `create_file`
+   avec `base64Content` (le xlsx),
    `contentMimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`,
-   `parentId` = le `drive_folder` de `photos/<client>.json`. Laisser la conversion par
-   défaut : le fichier devient un **Google Sheet**, éditable au téléphone sans rien
-   installer.
-3. Vérifier le partage du fichier : la relève (lecture) passe par l'export public — le
-   partage par lien du dossier suffit ; le client doit en plus pouvoir **écrire** :
-   « tous les utilisateurs disposant du lien : éditeur » sur le fichier, ou invitation
-   directe de son adresse.
-4. Écrire l'identifiant du fichier créé dans `reviews/config.json` → `drive_fichier` du
-   client, commit + push. C'est **lui** que le workflow relit trois fois par jour ; un
-   identifiant périmé est sans danger (semaine passée rejouée à vide), un identifiant
-   absent = client non relevé.
-5. Dans le récap du lundi : le lien du Sheet + une phrase d'explication, au ton du client
-   (`recaps/clients-config.json`). Le xlsx peut aussi partir en pièce jointe du brouillon
-   Gmail (`create_draft`, champ `attachments`). Ne JAMAIS envoyer automatiquement.
-6. Redescendre `reviews/etat/*.json` dans le compte-rendu : publiés, ✏️ à retravailler
+   `parentId` = `drive_dossier`. Laisser la conversion par défaut : le fichier devient un
+   **Google Sheet**, éditable au téléphone sans rien installer. Puis déplacer l'ancien
+   `drive_fichier` vers `drive_archives` (`update_file`, champ `parentId`).
+3. Le partage vit sur le **dossier**, réglé une fois pour toutes : « tous les
+   utilisateurs disposant du lien : éditeur ». Tout fichier déposé dedans en hérite —
+   lecture pour la relève (export public), écriture pour le client. Contrôle :
+   `get_file_permissions` du nouveau fichier doit montrer une entrée `type: anyone`.
+4. Écrire l'identifiant du nouveau fichier dans `reviews/config.json` → `drive_fichier`
+   du client, commit + PR + merge dans la foulée. C'est **lui** que le workflow relit
+   trois fois par jour ; un identifiant périmé est sans danger (semaine passée rejouée à
+   vide), un identifiant absent = client non relevé.
+5. Préparer le brouillon Gmail au ton du client (`recaps/clients-config.json`), sans
+   pièce jointe (le client télécharge depuis le tableau : Fichier → Télécharger →
+   Microsoft Excel).
+6. **Lundi 6h00 UTC** — la routine d'envoi expédie le mail des comptes où
+   `envoi_review_auto` ET `email_confirme` sont vrais (seule exception au « ne jamais
+   envoyer automatiquement », décidée par Maxime le 19/08/2026) et liste les autres
+   brouillons pour envoi manuel.
+7. **Lundi 7h00 UTC** — le CR redescend `reviews/etat/*.json` : publiés, ✏️ à retravailler
    (avec les commentaires), ⛔ à retirer à la main, blocages (placeholders non complétés,
    média manquant), lignes retouchées sans décision.
 
