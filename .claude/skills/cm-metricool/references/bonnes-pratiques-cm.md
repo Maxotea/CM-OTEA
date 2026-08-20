@@ -26,3 +26,35 @@
 - Chercher sur le web les formats/sons/mèmes qui tournent CETTE semaine (par plateforme)
 - Filtre : n'adapter une trend que si elle peut porter le message du client sans le dénaturer
 - Vitesse : une trend se joue en jours — proposer l'adaptation dans la routine du lundi/jeudi, tourner dans la semaine
+
+## Contrôle qualité d'une voix client (ajouté le 19/08/2026, après 3 retours clients le même jour)
+
+Trois comptes ont remonté le même type de problème le 19/08 : J Lawson (« les
+textes ne me vont pas », résiliation annoncée), Pierre Huiban (« ça ne me
+ressemble pas » + fautes), La Galerie (« pas à leur couleur »). Ce qui les relie :
+**on a déduit une identité au lieu de la relever.**
+
+### Avant la première production sur un compte
+- La ligne éditoriale se construit à partir de textes que le client a **écrits
+  lui-même**. Pas de son secteur, pas de son positionnement.
+- La charte graphique se relève à la source : codes couleurs, police, logo
+  vectoriel, **fournis par le client**. Une DA « déduite du positionnement » est
+  une DA inventée, et ça se voit.
+- Faire valider la ligne et la DA **avant** de produire, pas après.
+
+### Après toute réécriture de voix
+Écrire la règle dans la fiche ne prouve rien. Contrôler **poste par poste** :
+- marqueurs de la voix présents (ex. la première personne si c'est la règle) ;
+- comptage des hashtags ;
+- recherche des formules bannies (« lien en bio », « on » d'agence…) ;
+- **chaque chiffre cité existe dans la grille tarifaire vérifiée** — un tarif
+  inventé est ce qui décrédibilise le plus vite auprès d'un professionnel.
+
+### Relecture des visuels porteurs de texte
+Les carrousels et cartes typo échappent à la relecture des légendes. Ils doivent
+être relus slide par slide, et sur le fond technique autant que sur
+l'orthographe : une formule fausse sur le geste sportif (« le sled ne se pousse
+pas ») discrédite plus qu'une faute d'accord.
+
+⚠️ Un carrousel publié n'est plus corrigeable : ses images sont figées. La
+relecture se fait **avant** planification.

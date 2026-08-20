@@ -45,3 +45,42 @@
 ## Stories quotidiennes août 2026 (28/07/2026)
 - Banque 7 cartes typographiques 9:16 `medias/pierre-huiban/ia-stories/` — DA fiche (Pitch Black #0A0A0A + Rouge #DC2626, uppercase condensé) : lun LUNDI-ON-REPART-LFG, mar PAS-D'EXCUSES, mer LA-DONNÉE-PARLE, jeu ÇA-BRÛLE, ven ENCORE-UNE-SÉANCE, sam SAMEDI-VOLUME, dim RÉCUP. Cartes design (pas de fausses photos) — conforme à la règle « vraies photos only » pour le photographique.
 - **31 stories planifiées ✅** 01→31/08 à **06:00** (son créneau), Instagram uniquement, brouillon, via `bulk_schedule_stories`.
+
+## 🔴 RETOUR CLIENT 19/08/2026 — fautes + « ça ne me ressemble pas »
+
+### 1. Les fautes — carrousel « Cinq erreurs… » du 19/08 (id 363944373)
+⚠️ **Déjà publié** : instagram.com/p/DcOk-T3im0Y — les slides sont hébergées sur
+i.ibb.co, on ne peut pas les corriger a posteriori dans un post en ligne.
+
+| Slide | Texte publié | Problème |
+|---|---|---|
+| 1 | « Aucune n'a à voir avec ta condition physique. » | Il manque le *rien* : « n'a **rien** à voir avec ». |
+| 3 | « Le sled ne se pousse pas, il s'appuie. » | **Contresens technique.** Le sled push *est* une poussée. Un pratiquant Hyrox voit tout de suite que ce n'est pas écrit par quelqu'un qui pratique. |
+| 4 | « Faire du wall ball frais, tout le monde sait. » | Phrase incomplète : « tout le monde **sait le faire** ». |
+
+### 2. Le vrai problème : la ligne éditoriale est fausse depuis l'onboarding
+Pierre a envoyé une capture de sa propre story comme référence. Sa voix réelle :
+- **il écrit en anglais** ;
+- première personne, récit du quotidien (« Today, I went for a track session ») ;
+- **chaleureux et généreux** — il remercie, il met les autres en valeur
+  (« You kids are absolute magic. Thank you for the energy ») ;
+- émojis assumés (🔊 ❤️ 🙏) ;
+- propos rassembleur : le sport qui fait tomber les barrières sociales.
+
+Ce que la fiche a codé et ce qu'on publie pour lui :
+- **en français** ;
+- « rage silencieuse », « LFG » en signature, impératif, « Pas d'excuses »,
+  « Dis-moi en commentaire » ;
+- registre coach-motivation agressif.
+
+**Ce n'est pas un défaut d'exécution, c'est la ligne qui est fausse.** Elle a été
+déduite à l'onboarding, jamais validée avec lui. Tant qu'elle n'est pas refaite
+avec Pierre, tout ce qu'on produit continuera de « ne pas lui ressembler ».
+
+⛔ **Ne pas relancer de production sur ce compte** avant d'avoir tranché avec lui :
+langue (anglais / français / les deux), registre, et place du « LFG ».
+
+### Leçon
+Une ligne éditoriale de personal branding ne se déduit pas d'un secteur. Elle se
+construit à partir des textes que la personne a **déjà écrits elle-même**, et se
+fait valider avant la première production.

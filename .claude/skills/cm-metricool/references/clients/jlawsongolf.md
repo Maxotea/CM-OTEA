@@ -112,3 +112,42 @@ jour, aucun trou, aucun doublon, `draft:true` partout. Août (13 stories) idem.
 ⚠️ Leçon : lister le calendrier **jusqu'à sa fin**, pas sur quinze jours.
 Le calque typo des stories photo est versionné dans
 `scripts/jlawson-photo-story.py`.
+
+## 🔴 RETOUR CLIENT 19/08/2026 — il veut arrêter l'accompagnement
+**« Les textes ne lui vont pas. »** Audit fait le jour même. Il a raison, et le
+problème n'est pas l'absence de règle : **la règle existait et n'a pas été tenue.**
+
+La section « ✍️ Voix éditoriale » ci-dessus affirme que « les 33 brouillons feed
+ont été réécrits en conséquence » le 03/08. C'est faux. Un contrôle des posts
+programmés montre un mélange : certains sont bien dans sa voix (ex. 31/08
+« Je vous prépare un mois de contenu spécial »), beaucoup ne le sont pas.
+
+### Écarts constatés, pièce par pièce
+| Post | Écart |
+|---|---|
+| 24/08 (357245277) | Aucun « je ». Et surtout **« un réglage à 40 € »** — ce tarif n'existe pas, sa grille est 160 € / 260 €. **Chiffre inventé**, ce que la fiche interdit explicitement. |
+| 28/08 (357245346) | Aucun « je ». « Le check-up de rentrée » = un produit qui n'est pas à son catalogue. |
+| 26/08 (358746274) | **« Réservez votre créneau, lien en bio »** — le CTA nommément banni par la règle. **6 hashtags** au lieu de 4. |
+| 03/09 (357867252) | « **On** mesure. **On** teste. **On** règle. » — le « on » d'agence explicitement proscrit. 5 hashtags. Pas de média. |
+| 08/09 (357866239) | Aucun « je ». 5 hashtags. Pas de média. |
+| 24/09 + 02/10 | La même promesse « +14 mètres au driver » sur deux posts à huit jours d'écart. Chiffre non sourcé. |
+
+### Corrigé le 19/08
+- **24/08 → 364309059**, **28/08 → 364309069** : réécrits à la première personne,
+  tarif inventé supprimé, 4 hashtags. Anciens supprimés.
+- 26/08 (carrousel 8 slides) : texte corrigé prêt, **non appliqué** — l'action
+  `update_post_text_only` échoue et `bulk_replace_posts` ne prend qu'un média,
+  elle détruirait les 7 autres slides. **À corriger à la main dans Metricool.**
+
+### Reste à faire
+- Passe complète sur les ~25 posts feed restants (sept. → 23/10) : première
+  personne, 4 hashtags, zéro CTA « lien en bio », zéro chiffre non sourcé.
+- 4 posts sans média (03/09, 08/09, 17/09, 24/09) : Instagram refusera de publier.
+- 3 posts avec placeholder `[VAINQUEUR]` / `[RÉSULTAT]` non résolu.
+- Dédoublonner la promesse « +14 mètres ».
+
+### Leçon
+Écrire la règle dans la fiche ne suffit pas. Toute réécriture de voix doit se
+terminer par un **contrôle poste par poste** : présence du « je », comptage des
+hashtags, recherche des CTA bannis, et vérification que chaque chiffre cité
+existe dans la grille tarifaire vérifiée.

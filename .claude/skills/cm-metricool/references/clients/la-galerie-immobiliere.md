@@ -56,3 +56,38 @@ strictement identique), en brouillon IG+FB à 10:00, aux mêmes dates.
 Anciennes cartes sonores supprimées : 357220114, …123, …132, …138, …146, …154,
 …168, …174, …179, 357220313, …317, …322, …330. Les stories de septembre sont des
 PNG : pas de son, rien à faire. Règle : `.claude/memories/stories-sans-son.md`.
+
+## 🔴 RETOUR CLIENT 19/08/2026 — couleurs et format des stories
+
+Deux reproches, tous les deux fondés.
+
+### 1. « Les stories ne sont pas à leur couleur »
+Contrôle du rendu : le fond dominant des cartes est **crème/beige** (#ECE4D7,
+#EFE7DC, #F3EDE4 relevés sur une frame). Cette palette ne vient **pas** de leur
+charte : elle vient de l'élément IA `LaGalerie-Studio` que j'ai créé
+(« beige/taupe/doré/vert sauge »), lui-même déduit du positionnement prestige.
+
+⚠️ **La charte réelle de l'agence n'a jamais été relevée.** Cette fiche ne
+contient aucun code couleur de marque, aucune police officielle — uniquement une
+DA inventée. Le site `lagalerieimmobiliere.com` est bloqué par le proxy réseau,
+je n'ai pas pu la vérifier depuis l'environnement.
+
+**À obtenir de Sabrina avant toute reprise :** codes couleurs, police(s), logo
+en fichier vectoriel. Tant qu'on ne les a pas, on continuera à côté.
+
+### 2. « Ce n'est pas comme les autres comptes, c'est juste du texte »
+Exact, et c'était documenté comme un pis-aller : format « cartes typographiques
+ANIMÉES », c'est-à-dire une vidéo dont le seul contenu est du texte sur aplat.
+La fiche justifiait ça par « 0 vraie photo disponible ».
+
+Sauf que le compte a **6 visuels IA d'ambiance** dans sa banque
+(salon haussmannien, façade, cuisine, terrasse, bureau, clés) — utilisés en feed,
+jamais en story. Même sans photo de bien réel, on pouvait faire beaucoup mieux
+que du texte sur fond crème.
+
+### Ce qu'il faut refaire
+1. Récupérer la charte réelle (bloquant).
+2. Repasser les stories sur un fond visuel — visuels d'ambiance existants en
+   attendant, vraies photos de biens dès que Sabrina en fournit.
+3. Tourner enfin les 10 stories « Sabrina » face-cam en attente depuis le 28/07 :
+   c'est le contenu qui différencierait vraiment ce compte.
