@@ -87,3 +87,35 @@ print(ImageFont.truetype(chemin, 100).get_variation_axes())
 Et le corollaire : un **contrôle visuel d'au moins un rendu final** avant de
 brancher une vague entière. Le contrôle avait bien eu lieu, mais sur la
 lisibilité du voile — pas sur la typographie.
+
+## L'audit de sécurité de publication, sur tous les comptes, sur tout l'horizon
+
+Trois publications sont parties seules en deux jours (Pierre le 20/08 à 06:00,
+Run On Invest le 20/08 à 10:00, et 4 stories du LOFT étaient armées pour les
+20–23/08) parce que le contrôle `autoPublish` portait à chaque fois sur la vague
+qu'on venait de produire, jamais sur le compte entier.
+
+**Réflexe désormais obligatoire, au début et à la fin de toute intervention :**
+
+```
+code_action_metricoolcliapi__audit_publication_safety
+  blog_ids : [4728418,5733269,5733302,5733306,6191921,6563137,6572293,6625190,6636615,6704763]
+  start    : aujourd'hui
+  end      : aujourd'hui + 12 mois
+```
+
+Elle ne renvoie que les publications fautives — `autoPublish:true`, ou
+`draft:false`, ou sans média — donc la sortie reste lisible même sur dix comptes.
+Pour corriger : **`bulk_set_autopublish`** (`blog_id`, `post_ids` JSON,
+`auto_publish`), qui force aussi `draft:true`.
+
+Deux pièges que ça évite :
+
+1. **La fenêtre trop courte.** Sur La Galerie, un contrôle au 31/10 donnait
+   « 10 publications à risque » ; en poussant au 31/12 il y en avait **18**.
+2. **Le compte qu'on ne traite pas.** Le LOFT n'était pas au programme du jour ;
+   il portait 4 posts armés pour publier tout seuls dans les trois jours.
+
+Un post `draft:true` **et** `autoPublish:true` ne part pas tout de suite — mais
+il part à la seconde où quelqu'un décoche « brouillon » dans l'interface. Les
+deux drapeaux se corrigent ensemble.

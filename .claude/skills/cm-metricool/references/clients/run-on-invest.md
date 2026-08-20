@@ -145,3 +145,29 @@ dense, le défaut est nettement moins visible qu'en feed.
 dans la mauvaise graisse. Et un contrôle visuel d'**un** rendu final aurait suffi
 à voir le problème — le contrôle avait porté sur la lisibilité du voile, pas sur
 la typo elle-même.
+
+### 🔤 Suite du bug typo — 20/08/2026 : deux visuels avaient été oubliés
+La correction du 20/08 portait sur les **9 visuels de la vague septembre**
+(24, 26, 28, 31/08 · 02, 04, 07, 09, 11/09). Deux autres visuels, plus anciens,
+n'en faisaient pas partie et sont restés en Thin :
+
+| Publication | Visuel | État |
+|---|---|---|
+| **20/08 10:00** — « Trois cafés réseau. Ou une heure de course. » | Thin | ⚠️ **déjà publié** — `instagram.com/p/DcQSlhHCM8L/` |
+| **21/08 08:00** — « Le format, simple. » | Thin | ✅ **corrigé et rebranché** (nouveau média `62ec6204`) |
+
+Le post du 20/08 était en `draft:false` + `autoPublish:true` : il est parti seul
+ce matin, avec le titre filiforme. **Le supprimer et le republier est une
+décision de Maxime**, pas une décision d'exécution — on efface des vues et des
+interactions déjà acquises.
+
+La photo source du 21/08 n'était référencée nulle part. Elle a été retrouvée en
+comparant la bande de pixels au-dessus du voile entre le JPG en ligne et les
+générations du 19/08 : `hf_20260819_061155_74804825-391b-4bf0-927e-79b4a0767335`
+(écart 3,0 contre 39+ pour la meilleure des autres). Elle rejoint la liste des
+sources dans `scripts/roi-photo-habillage.py`.
+
+**Leçon :** quand on corrige un défaut de fabrication, corriger *tous* les
+visuels du compte, pas seulement ceux de la vague en cours. La liste des
+9 visuels venait du script ; les deux visuels manquants venaient d'une vague
+antérieure qui n'était pas dans le script.

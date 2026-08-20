@@ -166,3 +166,15 @@ draft:true partout sauf 363944431 (déjà publiée, hors de portée).`
   restent en ligne : slides hébergées sur i.ibb.co, non corrigeables a posteriori.
   Seule option : supprimer et republier — décision de Maxime.
 - Les **handles Instagram exacts** des sponsors, toujours non vérifiés.
+
+### ⚠️ Une 5e story a échappé au verrouillage — publiée le 20/08 à 06:00
+Le passage du 19/08 avait neutralisé 4 stories en `autoPublish:true`. Une
+cinquième (`363944431`) est passée entre les mailles : elle est partie seule ce
+matin à 06:00, avec un visuel du **28/07** — donc de l'ancienne ligne, celle que
+Pierre a rejetée. `instagram.com/stories/pierrehuiban89/3967631015874705336`
+
+Une story expire en 24 h, donc l'exposition est limitée et il n'y a rien à
+défaire. Ce qu'il faut en retenir : **le contrôle `autoPublish` doit porter sur
+tout le calendrier du compte, pas sur les seules publications qu'on est en train
+de retoucher.** Le compte est vérifié depuis : `16 publications · draft:true
+partout · autoPublish:false partout · noMedia 0`.
