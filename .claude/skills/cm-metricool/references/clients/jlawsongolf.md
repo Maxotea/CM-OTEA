@@ -151,3 +151,75 @@ programmés montre un mélange : certains sont bien dans sa voix (ex. 31/08
 terminer par un **contrôle poste par poste** : présence du « je », comptage des
 hashtags, recherche des CTA bannis, et vérification que chaque chiffre cité
 existe dans la grille tarifaire vérifiée.
+
+## ✅ PASSE COMPLÈTE DU 20/08/2026 — les 32 posts feed sont conformes
+Reprise du calendrier **21/08 → 23/10** (32 posts feed + 42 stories). Contrôle
+post par post contre la règle « voix de John », pas de déclaration sur parole.
+
+### Ce qui a été corrigé
+| Post | Écart | Correction |
+|---|---|---|
+| 21/08 driver | « c'est souvent 10 mètres de plus » — chiffre non sourcé, pas de « je » | « je récupère souvent de la distance sans changer une seule pièce du club » |
+| 26/08 carrousel | « Réservez votre créneau, lien en bio » + 6 hashtags | CTA banni supprimé, clôture en maxime, 4 hashtags |
+| 02/09 carrousel | « Prenez rendez-vous, lien en bio » + 6 hashtags | idem — **les 8 slides sont intactes** |
+| 03/09 | « **On** mesure. **On** teste. **On** règle. » + 5 hashtags + sans média | réécrit en « je », 4 hashtags, photo studio attachée |
+| 04/09 | « −6 points d'index » non sourcé | promesse chiffrée retirée, récit conservé |
+| 07/09 · 09/09 · 16/09 · 25/09 · 30/09 | aucune première personne | recalés sur « je » |
+| 08/09 | pas de « je », 5 hashtags, sans média | réécrit, photo atelier attachée |
+| 17/09 | « 400 shafts au mur » — **doublon avec le 18/09**, 5 hashtags, sans média | ré-angle sur le point de flexion et la façon de charger le club |
+| 24/09 | « +14 m » + « six points d'index » + « dispersion divisée par deux » — trois chiffres non sourcés — et **doublon du 02/10** | entièrement ré-angle sur l'Open de France, zéro chiffre |
+| 02/10 | « +14 mètres de carry » non sourcé | garde les trois réglages, remplace le chiffre par « je l'ai mesuré avant et après » |
+| 07/10 | « la moitié des golfeurs joue trop fin » — statistique inventée | « beaucoup de golfeurs… sans le savoir » |
+| 09/10 | « le bilan de fin de saison » = produit hors catalogue | ramené à « une séance au studio » |
+| 14/10 | délais fournisseurs présentés comme un fait général | attribué à lui : « hors saison, je récupère les shafts plus vite » |
+| 16/10 · 23/10 | « 90 minutes » donné comme la durée d'une séance | corrigé sur la grille réelle : **1 h fitting (160 €) / 1 h 30 Gears (260 €)**, et les deux posts Toussaint ont été différenciés |
+| 19/10 · 21/10 | pas de « je », sans média | réécrits, photos attachées |
+| 23/09 | « Viktor Hovland en tête d'affiche » — plateau annoncé, non vérifiable | mention retirée |
+| 21/09 · 28/09 · 05/10 · 14/09 | placeholders `[VAINQUEUR]` / `[RÉSULTAT]` / `[WITB]` flous | reformulés avec la date de complétion **et** l'exigence de source (« uniquement si une source constructeur ou un média équipement le publie, sinon supprimer ce paragraphe ») — cf. la leçon Kuwaki plus haut |
+
+### Les 7 posts sans média sont branchés
+Instagram refuse un post sans visuel : les 7 brouillons concernés (03, 08, 17,
+24/09 et 19, 21, 23/10) portent désormais une **vraie photo du compte**
+(shooting HOMESANFAUTE / atelier), choisie après contrôle visuel de chaque
+image, pas au hasard :
+
+| Date | Photo | Sujet |
+|---|---|---|
+| 03/09 | `202607/…mtr_9796660200785221361.jpg` | John à l'atelier, club en main |
+| 08/09 | `202608/…mtr_2368656243603853072.jpg` | portrait studio |
+| 17/09 | `202607/…mtr_12764512827799543594.jpeg` | mur de shafts + écran |
+| 24/09 | `202608/…mtr_4850984026945789902.jpg` | John avec un client devant les sacs |
+| 19/10 | `202607/…mtr_772896934238071130.jpg` | portrait extérieur, fin de journée |
+| 21/10 | `202607/…mtr_6326575259361033427.jpeg` | simulateur, frappe devant l'écran de mesure |
+| 23/10 | `202607/…mtr_15004927010967591954.jpeg` | séance de fitting client |
+
+⚠️ Ce sont des photos **déjà parues** en juillet-août. C'est un pis-aller
+assumé : mieux vaut une photo revue à deux mois qu'un post qu'Instagram
+refuse. À remplacer dès que `medias/jlawson-golf/` (107 photos) sera rapatrié —
+le dossier est vide dans cet environnement.
+
+**Photos exclues du vivier après contrôle visuel :** les visuels promo The Open
+/ Royal Birkdale et AIG Women's Open (texte incrusté + droits R&A), et les
+photos d'agence de joueurs pros. Règle « jamais de photo d'agence sur un compte
+commercial ».
+
+### Vérifié par listing après coup
+`74 posts · 32 feed · 42 stories · draft:true partout · autoPublish:false
+partout · noMedia:0 · un seul post par créneau, aucun doublon.`
+
+### Outillage : deux code actions créées le 20/08
+`update_post_text_only` échoue systématiquement (erreur 500). Deux actions
+maison la remplacent :
+- **`dump_post_texts`** (blogId, start, end, kind) — les textes complets, sans
+  les tableaux média. Indispensable pour auditer une voix.
+- **`retext_posts`** (blog_id, items) — réécrit **uniquement** le texte, média
+  intact (carrousels compris). Le secret : l'API renvoie des champs qu'elle
+  refuse en écriture (`PublicationStatusCode`) → il faut retirer `creationDate`,
+  `uuid`, `creatorUser*`, `hasNotReadNotes` et ne garder que `network` dans
+  chaque `providers[]` avant le PUT.
+- **`media_inventory`** (blogId, start, end) — quels posts n'ont pas de média,
+  et quelle URL sert combien de fois. C'est ce qui a révélé les 7 posts nus.
+
+⚠️ **Piège `bulk_update_post_media` :** elle **crée un nouveau post** au lieu de
+modifier l'existant. Il faut supprimer l'ancien derrière, sinon le créneau se
+retrouve en double. Vérifié : 81 posts après, 74 après nettoyage.
