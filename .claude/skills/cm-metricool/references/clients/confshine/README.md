@@ -14,3 +14,11 @@
 Prospect / client en cours de cadrage : la fiche d'onboarding complète
 (blogId, réseaux, cadence, tarifs, banque photos) reste **à remplir** à partir de
 `../_template-nouveau-client.md`. Les manques sont listés en bas de `brief.md`.
+
+## Projet Claude
+
+Le dossier à déposer dans la base de connaissances du projet Claude « ConfShine » se
+régénère avec `sh build-dossier.sh` — il assemble les fiches ci-dessus en un seul
+document. Les fiches restent la source de vérité : ne jamais éditer le document
+assemblé, le régénérer. Les instructions à coller dans le champ « instructions » du
+projet sont dans `instructions-projet-claude.md`.
