@@ -7,11 +7,26 @@
 - Ville / zone de chalandise : n/a (personal branding, pas de zone de chalandise)
 - Site web / source officielle : n/a — vérifier si un site/linktree existe
 
-## Ligne éditoriale
-- Ton : tutoiement, énergie brute, "LFG" comme signature récurrente, pas de mise en scène, pas de bullshit
-- Cible : communauté Hyrox France, marques cherchant un athlète sponsorisé authentique
-- Différenciateur n°1 : la rage silencieuse — intensité brute plutôt que discours marketing ; la donnée (chronos, compteurs J-XX, volumes) comme preuve plutôt que promesse
-- Piliers de contenu : dépassement de soi, double vie (commercial + athlète + papa), coulisses d'entraînement, LFG comme fil rouge non expliqué
+## Ligne éditoriale — RÉÉCRITE LE 20/08/2026
+⛔ **L'ancienne ligne est morte.** Elle disait « tutoiement, énergie brute, LFG
+comme signature, rage silencieuse ». Pierre l'a rejetée le 19/08 (« ça ne me
+ressemble pas ») en envoyant une capture de sa propre story. Détail du diagnostic
+plus bas ; ce qui suit est la ligne en vigueur.
+
+- **Langue : anglais.** C'est la langue dans laquelle il écrit lui-même.
+- **Ton : première personne, récit du quotidien, chaleureux et généreux.** Il
+  remercie, il met les autres en valeur, il admet ce qu'il a mal fait.
+- **Émojis assumés** : 🔊 ❤️ 🙏 — pas de décoration, ils portent l'intention.
+- **Interdits absolus** : « LFG », « Pas d'excuses », « Balance-moi », l'impératif
+  sec, le registre coach-motivation. Aucun de ces mots ne doit revenir.
+- **Fin de post** : une invitation ouverte et un remerciement, jamais un ordre.
+  Modèle : « Tell me which one changed the most for you. I read everything 🙏 ».
+- Cible : communauté Hyrox (France et au-delà), marques cherchant un athlète
+  sponsorisé authentique.
+- Piliers : dépassement de soi, double vie (commercial + athlète + papa),
+  coulisses d'entraînement, Road to Hong Kong.
+- Direction artistique : **inchangée** (Pitch Black #0A0A0A + Rouge Sang #DC2626,
+  capitales). Il n'a jamais reproché la DA. Ne pas la refaire sans lui demander.
 - Direction artistique (si supports visuels type carrousels/covers) : Pitch Black #0A0A0A + Rouge Sang #DC2626, typo display Anton (UPPERCASE), corps Inter, stats en JetBrains Mono
 - Interdits : jamais de sponsoring déguisé non assumé, jamais de prix/partenariat inventé
 

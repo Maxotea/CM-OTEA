@@ -110,3 +110,38 @@ plus simple.
 
 ## Tarifs / ROI
 - Modèle économique non communiqué (billetterie ? sponsors ?) — pas de module ROI. À revoir quand le brief s'étoffera.
+
+## 🔤 BUG TYPO CORRIGÉ — 20/08/2026 : les 9 visuels feed étaient en Thin
+Les titres de la vague septembre ne sortaient **pas** en Archivo Expanded Black
+mais en **Thin ultra-large** : filiformes, et illisibles sur les plans clairs
+(l'arche de la Grande Arche, notamment).
+
+**Cause :** dans `scripts/roi-photo-habillage.py`, `af()` appelait
+`set_variation_by_axes([w, g])` avec `w=125, g=900` en croyant l'ordre
+`[Width, Weight]`. L'ordre réel du fichier Archivo est **`[Weight, Width]`** —
+vérifié à l'exécution :
+
+```python
+ImageFont.truetype("archivo.ttf", 100).get_variation_axes()
+# [{'name': b'Weight', 'minimum': 100, 'default': 600, 'maximum': 900},
+#  {'name': b'Width',  'minimum': 62,  'default': 100, 'maximum': 125}]
+```
+On écrivait donc en **graisse 125** (Thin) et largeur 125 (clampée). Corrigé en
+`[g, w]`. Le même bug existait dans `scripts/pierre-carousel.py` : corrigé aussi.
+
+**Les 9 visuels feed ont été régénérés et rebranchés** (24, 26, 28, 31/08 et
+02, 04, 07, 09, 11/09). Contrôle visuel refait : titre noir expansé, contraste
+correct sur les fonds clairs.
+
+⚠️ **Les 10 overlays de story gardent le défaut.** Ils sont **encodés dans les
+mp4 déjà montés** : les corriger suppose de repartir des vidéos i2v brutes, qui
+n'existent plus que sous forme composée. Il faudrait **relancer les 9 générations
+kling3_0_turbo** — c'est une dépense de crédits, donc une décision de Maxime, pas
+une décision d'exécution. Le titre y est plus petit et posé sur un voile plus
+dense, le défaut est nettement moins visible qu'en feed.
+
+**Leçon générale :** ne jamais supposer l'ordre des axes d'une police variable.
+`get_variation_axes()` prend deux secondes et évite de livrer une vague entière
+dans la mauvaise graisse. Et un contrôle visuel d'**un** rendu final aurait suffi
+à voir le problème — le contrôle avait porté sur la lisibilité du voile, pas sur
+la typo elle-même.

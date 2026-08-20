@@ -58,3 +58,32 @@ pas ») discrédite plus qu'une faute d'accord.
 
 ⚠️ Un carrousel publié n'est plus corrigeable : ses images sont figées. La
 relecture se fait **avant** planification.
+
+## Contrôles à faire sur chaque compte, pas seulement sur celui qu'on traite
+Le 20/08/2026, en reprenant Pierre Huiban, quatre stories ont été trouvées en
+**`draft:false` + `autoPublish:true`** : elles allaient publier toutes seules un
+contenu que le client venait de rejeter, et l'une d'elles était déjà partie.
+
+Trois contrôles, systématiques, sur **tous** les comptes :
+1. **`draft:true` et `autoPublish:false` partout.** Un `summarize_scheduled_posts`
+   suffit : `counts.drafts` doit égaler `counts.total`.
+2. **`noMedia:0`.** Instagram refuse un post sans visuel : un brouillon nu ne
+   publiera jamais, même validé.
+3. **Aucun doublon de créneau.** Plusieurs actions Metricool (`bulk_update_post_media`
+   notamment) **créent un nouveau post** au lieu de modifier l'existant. Il faut
+   supprimer l'ancien et recompter derrière.
+
+## Ne jamais supposer l'ordre des axes d'une police variable
+`set_variation_by_axes()` prend une **liste positionnelle**, dans l'ordre déclaré
+par le fichier — pas dans l'ordre du nom de fichier. `Archivo[wdth,wght].ttf`
+expose en réalité `[Weight, Width]`. Une inversion produit un rendu propre mais
+faux : neuf visuels R.O.I. ont été livrés en Thin au lieu de Black sans que rien
+ne signale d'erreur.
+
+```python
+print(ImageFont.truetype(chemin, 100).get_variation_axes())
+```
+
+Et le corollaire : un **contrôle visuel d'au moins un rendu final** avant de
+brancher une vague entière. Le contrôle avait bien eu lieu, mais sur la
+lisibilité du voile — pas sur la typographie.
