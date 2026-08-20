@@ -129,3 +129,70 @@ dessin ou une photo.
 
 ⚠️ Reste à confirmer auprès de Sabrina : les codes exacts (relevés à l'écran, donc
 approchés à un ou deux points près) et le nom de la police.
+
+---
+
+## ✅ STORIES REFAITES À LEUR CHARTE — 20/08/2026 (décision Maxime)
+
+Maxime a tranché le 20/08 : *« Je déduis depuis leur Instagram »* — on relève les
+couleurs dominantes de leurs publications existantes et on s'aligne dessus,
+plutôt que d'attendre une charte de Sabrina. C'est fait, sur les **21 stories**
+programmées du 20/08 au 29/09.
+
+### Ce qui a changé sur chaque carte
+| | Avant | Après |
+|---|---|---|
+| Fond | #ECE4D7 crème pâle | **#D4BBA5** sable chaud (le leur) |
+| Titre | serif **capitales** | serif Playfair Display **bas-de-casse**, #292527 |
+| Filet | trait droit vectoriel | **filet tracé à main levée** |
+| Illustration | aucune | **un doodle au trait** par carte (loupe, maison, spirale, clé, pelote…) |
+| Pied | absent | `puteaux · paris ouest` |
+
+Les deux reproches de Sabrina étaient liés : la couleur *et* « ce n'est que du
+texte ». Le doodle répond au second. Le format reste une **carte fixe** — pas de
+vidéo : la règle « aucune image ni vidéo générée par IA dans les stories » tient,
+et les 6 visuels d'ambiance IA du compte n'ont donc **pas** été recyclés ici.
+
+### Les 20 cartes (CDN Higgsfield, `…/user_2zae6klRfE97hlBWhyQP6j7d9cR/<id>.png`)
+`projet bfef88b4` · `visites 79a26fd1` · `rare 4d5030b5` · `inspiration 0debc35c` ·
+`semaine 51c945c6` · `valeur 4a1b1929` · `adresse beff1dd5` · `estimation 59f00560` ·
+`avant daa0ac7b` · `ouest a8b43cac` · `douceur 3fd963ca` · `belle 06dc0b0b` ·
+`rentree aed6ecc0` · `taux 8e2f35d6` · `ancien afdbb47d` · `dpe bd21ffb9` ·
+`patrimoine 345199d7` · `gratuite 85048480` · `reperage 336d7ee1` · `fetes e6df5bdf`
+
+La carte `visites` sert deux fois (21/08 et 05/09), d'où 20 cartes pour 21 stories.
+
+Générateur : `lg.py`, hébergé à
+`https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7abe8946-e8eb-49aa-9ea4-b29394ff8ecd.py`
+(`python3 lg.py <clé…>` → `o/lg-<clé>.png`).
+
+### 🚨 18 posts en autoPublish sans média — neutralisés
+Le compte portait **18 publications `autoPublish:true` avec `hasMedia:false`** :
+14 REELs et 4 posts, du 25/08 au 27/11. Elles étaient en brouillon, donc rien ne
+serait parti tout de suite — mais le jour où Sabrina ou Maxime décoche « brouillon »,
+elles publiaient une coquille vide. Toutes repassées à `autoPublish:false`.
+
+Ces 18 slots attendent les **rushes de Sabrina** : ce sont les formats parlés
+(visite filmée, témoignage client, bilan de marché). Rien à produire de notre côté
+tant que la vidéo n'est pas là.
+
+Nouvelle code action créée pour ça : **`bulk_set_autopublish`**
+(params `blog_id`, `post_ids` JSON, `auto_publish`). Elle force aussi `draft:true`
+au passage. Comme toutes les écritures Metricool, un PUT réussi renvoie le post
+sous un **nouvel id**.
+
+### Vérification finale (20/08/2026)
+`60 publications · 21 stories · 25 posts · 14 REELs · draft:true partout ·
+autoPublish:false partout · aucun créneau en double · noMedia 18 = les 18 slots
+vidéo en attente de rushes`
+
+⚠️ **Leçon de méthode :** la première vérification portait sur 20/08 → 31/10 et
+concluait « 10 posts en autoPublish ». En élargissant à 31/12 on en trouvait
+**8 de plus** en novembre. Toujours vérifier jusqu'au bout du calendrier, pas
+jusqu'au bout de la vague qu'on traite.
+
+### Ce qui reste ouvert
+- Faire valider les **codes couleur** par Sabrina : ils sont relevés à l'écran,
+  donc justes à un ou deux points près, et le nom exact de la police n'est pas
+  confirmé (Playfair Display est une approximation très proche).
+- 3 posts portent encore un placeholder (`[Prénom]`, témoignage à recueillir).
