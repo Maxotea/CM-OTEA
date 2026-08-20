@@ -37,10 +37,14 @@ LIEU = "LA DÉFENSE"            # déverrouillé par Maxime le 04/08/2026
 
 
 def af(s, w=125, g=900):
-    """Archivo variable, axe wdth=125 (Expanded), wght=900."""
+    """Archivo variable : wdth=125 (Expanded), wght=900.
+
+    ⚠️ L'ordre des axes du fichier Archivo est **[Weight, Width]**, pas
+    l'inverse — vérifié le 20/08/2026 avec `ImageFont.get_variation_axes()`.
+    Passer [w, g] écrivait donc en graisse 125 (Thin) au lieu de 900."""
     f = ImageFont.truetype(FD + "/archivo.ttf", s)
     try:
-        f.set_variation_by_axes([w, g])
+        f.set_variation_by_axes([g, w])
     except Exception:
         pass
     return f

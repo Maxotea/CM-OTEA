@@ -84,3 +84,70 @@ langue (anglais / français / les deux), registre, et place du « LFG ».
 Une ligne éditoriale de personal branding ne se déduit pas d'un secteur. Elle se
 construit à partir des textes que la personne a **déjà écrits elle-même**, et se
 fait valider avant la première production.
+
+## ✅ LIGNE REFAITE EN ANGLAIS — 20/08/2026 (décision Maxime)
+Maxime a tranché : **anglais, son ton réel**. Tout le compte a été repris sur la
+capture qu'il a envoyée — anglais, première personne, récit, gratitude, émojis
+assumés. **« LFG », « Pas d'excuses », « Balance-moi », « Dis-moi en
+commentaire » ont disparu du compte.**
+
+### 🚨 Ce qu'il faut regarder en premier : 4 stories étaient en publication auto
+`363944431` (20/08), `363944089` (21/08), `363943901` (22/08), `363943845`
+(23/08) étaient en **`draft:false` + `autoPublish:true`**. Elles allaient partir
+toutes seules, avec les cartes « PAS D'EXCUSES » que Pierre venait de rejeter.
+
+- Les 3 à venir ont été repassées en brouillon immédiatement.
+- **`363944431` (20/08 06:00) était déjà passée** — impossible de la rattraper,
+  Metricool refuse d'éditer une date écoulée.
+- ⚠️ Règle 1 du CLAUDE.md : *tout contenu reste en brouillon*. Un contrôle
+  `draft`/`autoPublish` doit être fait **sur chaque compte**, pas seulement sur
+  celui qu'on est en train de traiter.
+
+### Les 5 posts feed, réécrits
+| Date | Sujet | Ce qui change |
+|---|---|---|
+| 22/08 | Three goals for the end of 2026 | anglais ; « Swipez → » retiré (le post n'a **qu'une seule image**, la promesse de swipe était fausse) |
+| 26/08 | The sled that ends most races | anglais ; « Dis-moi lequel… LFG » → « If it helps you, tell me. I'd love to know 🙏 » |
+| 29/08 | What's coming this autumn | anglais ; « Swipez → » retiré (une seule image) |
+| 02/09 | September — four profiles | anglais ; « Balance-moi ton point faible. LFG » → « Tell me what your weak station is — I read everything 🙏 » |
+| 09/09 | Road to Hong Kong | anglais ; « LFG. » final → « Thank you for the energy ❤️🙏 » |
+
+### Les 24 slides de carrousel, régénérées
+Les slides étaient en **français** avec l'ancien registre. Les 3 carrousels
+(26/08, 02/09, 09/09) ont été refaits, 8 slides chacun, en anglais.
+
+**Le gabarit visuel n'a pas été touché** — c'est délibéré. Pierre n'a jamais
+reproché la DA, il a reproché les textes. Redessiner la DA sans la lui faire
+valider serait refaire exactement l'erreur d'origine. Le gabarit a donc été
+relevé au pixel sur les slides existantes et reproduit à l'identique :
+fond `#0A0A0A`, accent `#DC2626`, corps `#9A9A9A`, surtitre rouge interlettré,
+titre capitales blanc puis rouge, pied « n/8 » + « SWIPE → », dernière slide
+inversée en rouge. Générateur versionné : `scripts/pierre-carousel.py`.
+
+### Les 7 cartes de story, régénérées en anglais
+Le texte des cartes est **incrusté dans l'image** : réécrire la légende ne
+suffisait pas. Les 7 cartes ont été refaites, même DA, textes chaleureux :
+
+| Jour | Avant (FR) | Après (EN) |
+|---|---|---|
+| lundi | Lundi. On repart. LFG | A NEW WEEK — *One session at a time.* |
+| mardi | Pas d'excuses | SHOW UP ANYWAY — *Some days the session is average. It still counts.* |
+| mercredi | La donnée parle | THE DATA DOESN'T LIE |
+| jeudi | Ça brûle ? | IT BURNS A LITTLE |
+| vendredi | Encore une séance | ONE MORE SESSION |
+| samedi | Samedi = volume | VOLUME DAY |
+| dimanche | Récup | REST IS TRAINING TOO — *Thank you for this week.* |
+
+Les 11 stories du 21 au 31/08 pointent dessus, rotation par jour de semaine.
+
+### Vérifié après coup
+`17 posts sur 20/08 → 30/09 · 5 feed · 12 stories · noMedia:0 · aucun doublon ·
+draft:true partout sauf 363944431 (déjà publiée, hors de portée).`
+
+### Ce qui reste ouvert
+- Faire **valider la nouvelle ligne par Pierre lui-même** avant de reprendre la
+  production. On a corrigé sur la base de sa capture, pas sur une validation.
+- Les **fautes du carrousel du 19/08 déjà publié** (`instagram.com/p/DcOk-T3im0Y`)
+  restent en ligne : slides hébergées sur i.ibb.co, non corrigeables a posteriori.
+  Seule option : supprimer et republier — décision de Maxime.
+- Les **handles Instagram exacts** des sponsors, toujours non vérifiés.
