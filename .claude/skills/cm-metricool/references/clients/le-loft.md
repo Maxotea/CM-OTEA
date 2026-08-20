@@ -37,3 +37,118 @@
 - Les 7 visuels IA de la rotation passés en **vidéo 5 s** (i2v `kling3_0_turbo`, caméra verrouillée, textes incrustés vérifiés nets sur les 7 — voir [[hebergement-photos-reelles-metricool]] pour le pipeline). Sources publiques `d8j0ntlcm91z4.../hf_20260730_11*.mp4`, réutilisables telles quelles.
 - **28 stories d'août en vidéo ✅** (27 remplacements + la story manquante du **jeudi 06/08 recréée**, id 356530482 — à supprimer si son absence était volontaire). Brouillon, Instagram uniquement. Les 3 stories validées par Maxime (02, 04, 07/08) restent en visuel fixe, non touchées. Vérifié : 31/31 jours couverts, 0 doublon.
 - ⚠️ **Les 21 vraies photos du salon restent inexploitées pour les stories** : elles montrent de vraies personnes (barbiers, clients) → **interdiction d'i2v générative sur les visages**. Deux options propres : (a) cartes PIL fixes via `scripts/carte-story.py` ; (b) animer uniquement les photos SANS visage (vues salon 94/100/102, détails head spa). À trancher avec Maxime.
+
+---
+
+## 🔴 AUDIT DU 20/08/2026 — William veut arrêter, et les faits lui donnent raison
+
+Message de William reçu le 20/08 à 11:05 : il arrête à la fin du mois. Trois
+reproches, plus le prix. **Les trois sont vérifiés et fondés.** Ce qui suit est
+l'état réel du compte, relevé dans Metricool, pas une reformulation du reproche.
+
+### Reproche 1 — « 80 % des posts sont des photos qui ne sont pas prises chez moi »
+
+Exact. Contrôle visuel des publications du feed sur la période qu'il juge
+(20/07 → 19/08) :
+
+| Date | Sujet | Visuel réellement publié |
+|---|---|---|
+| 22/07 | Barbe été | **photo IA — avec un visage d'homme** qui n'est ni un client ni un barbier du Loft |
+| 24/07 | Avis 4,9/5 | visuel IA (outils sur marbre) |
+| 31/07 | 120 m² | visuel IA (fauteuil, lumière bleue) — ne ressemble pas au salon |
+| 05/08 | Soin visage | visuel IA (flacons, nature morte générique) |
+| 10/08 | Cuir chevelu | visuel IA (bac head spa, vapeur) |
+| 12/08 | Barbe qui pique | carrousel 100 % typographique |
+| 19/08 | Coupe depuis 2 ans | carrousel 100 % typographique |
+
+Soit **zéro photo réelle du salon sur tout le mois**. Le post du 22/07 viole en
+plus la règle inscrite dans cette fiche depuis juillet — *« Jamais de visage »* :
+un faux visage IA présenté comme le salon sur un compte commercial réel.
+
+Et pendant ce temps : **les 21 vraies photos du shooting pro, livrées le
+15/07, n'ont jamais été utilisées.** Elles sont toujours `en-reserve` dans
+`recaps/medias-index.json`, un mois plus tard. La fiche le signalait déjà au
+30/07 (« INEXPLOITÉES à ce jour ») — le signal a été écrit, jamais traité.
+
+### Reproche 2 — « ou des photos de l'équipe qui ont déjà été postées »
+
+Exact aussi, et c'est structurel. Le feed tourne sur une **rotation de 9 visuels
+IA** rebranchés sur 39 posts (documenté plus haut : « 39 posts branchés en
+rotation »). Neuf images pour trente-neuf publications : la répétition n'est pas
+un accident, elle est dans la méthode.
+
+### Reproche 3 — « rien vu passer du modèle femme de juillet, ni de post avec Anthony »
+
+Confirmé côté outil : aucun fichier de ce shooting n'existe dans le dépôt ni
+dans l'index médias. Les 21 photos indexées sont les barbiers, l'équipe et les
+vues du salon — pas de modèle femme, pas de séquence Anthony.
+⚠️ **À vérifier auprès de Maxime : ces rushes ont-ils été livrés ?** S'ils l'ont
+été et ne sont jamais arrivés jusqu'ici, c'est une rupture dans la chaîne
+d'ingestion, pas un oubli de production.
+
+### Le volume réellement publié
+
+Sur 31 jours (20/07 → 19/08), côté feed :
+
+- **9 publications parties**, dont **un doublon** — le reel « Découvrez notre
+  nouvel espace » publié deux fois, le 20/07 et le 21/07. Donc **8 contenus
+  uniques**.
+- **5 posts produits et jamais partis**, restés en brouillon non validé :
+  bronzage 27/07, reel 04/08, août 07/08, **VIP 15 août** (périmé), coupes
+  rentrée 17/08.
+- Plusieurs stories dans le même cas (01, 08, 17, 18/08).
+
+Autrement dit : **un tiers de la production est mort en brouillon.** La règle
+« tout reste en brouillon, le client valide » est saine, mais elle n'a de sens
+que si quelqu'un relance. Personne ne relançait. C'est ça que William ressent
+comme « des réseaux si peu alimentés » — le travail existait, il ne sortait pas.
+
+⚠️ **La prestation mensuelle contractée n'est pas renseignée** dans cette fiche
+(champ « Prestation CM mensuelle : [à renseigner] », toujours vide). On ne peut
+donc pas dire objectivement si 8 posts/mois est au-dessus ou en dessous de
+l'engagement. **À combler en priorité** — pour ce client et pour tous les autres.
+
+### 9 publications d'un AUTRE client garées dans ce compte
+
+Le calendrier du Loft contenait **9 publications appartenant à Pierre Huiban** —
+Hyrox, stations, sled push, « réunion comité de direction Europe », hashtags
+`#LFG #LexisNexis` — datées du 17/06 au 15/07. Jamais publiées (brouillon), mais
+présentes dans le calendrier que le client peut ouvrir.
+
+IDs : `327013311, 327013312, 327013313, 327013314, 327013315, 327013317,
+327013318, 327013326, 327013327`.
+
+⛔ **Leur suppression a été bloquée par le garde-fou de sécurité de la session.**
+Elles sont toujours là. À supprimer manuellement, ou lors d'une session avec la
+permission de suppression groupée.
+
+### Ce qui est récupérable tout de suite
+
+Les 7 stories vidéo d'août ont été fabriquées **à partir des vraies photos** et
+sont hébergées publiquement. Leur première image est la photo source, en
+1080×1920 : vrais barbiers, vraie équipe, vrai néon LF, vrai salon. Elles sont
+donc réutilisables immédiatement pour refaire le feed en attendant les
+originaux — recadrage 4:5 possible sans perte de largeur.
+
+Les originaux 2832×4240 restent sur le poste de Maxime (`medias/` est dans
+`.gitignore`, donc absent de la session distante) : la refonte propre suppose
+qu'ils soient poussés.
+
+### Ce qui est corrigé à ce stade
+
+- Les 4 posts armés en `autoPublish:true` + `draft:false` pour les 20→23/08 ont
+  été neutralisés le 20/08 (voir `bonnes-pratiques-cm.md`).
+- Compte vérifié : **40 publications, brouillon partout, autoPublish nulle part**,
+  3 posts sans média (19, 21, 23/10).
+
+### La leçon, et elle vaut pour tout le portefeuille
+
+Le compte a été monté sur des visuels IA « en attendant les vraies photos ».
+Les vraies photos sont arrivées le 15/07. Le provisoire n'a jamais été remplacé,
+et un signal explicite écrit dans cette fiche le 30/07 est resté sans suite
+pendant trois semaines.
+
+**Règle qui en découle : dès que de vraies photos existent pour un compte
+commercial, les visuels IA sont retirés du calendrier — pas mis en réserve,
+retirés.** Un visuel IA sur un commerce réel n'est acceptable que tant qu'il
+n'existe strictement aucune alternative, et jamais avec un visage.
