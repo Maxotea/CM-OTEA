@@ -91,3 +91,41 @@ que du texte sur fond crème.
    attendant, vraies photos de biens dès que Sabrina en fournit.
 3. Tourner enfin les 10 stories « Sabrina » face-cam en attente depuis le 28/07 :
    c'est le contenu qui différencierait vraiment ce compte.
+
+## 🎨 CHARTE RELEVÉE le 19/08/2026 (source : leurs propres publications)
+Le site étant bloqué par le proxy, la charte a été relevée sur les visuels
+**qu'ils ont publiés eux-mêmes** avant notre prise en charge — gabarit de série
+« 5 choses à savoir sur… » (post 326876565, 21/05/2026, carrousel 8 slides).
+
+| Rôle | Valeur | Note |
+|---|---|---|
+| Fond de marque | **#D4BBA5** | Sable chaud / taupe rosé. 55 % des pixels sur l'ensemble du carrousel. C'est LA couleur du compte. |
+| Texte | **#292527** | Charbon chaud, presque noir. |
+| Nuance claire | #DCC8B4 | Variante du fond. |
+| Nuance sombre | #B2997C | Sable foncé, ombres et filets. |
+
+**Typographie :** un serif à fort contraste pour les titres (type Playfair
+Display), en bas-de-casse — pas de capitales.
+
+**Signature visuelle, c'est le point important :** des **illustrations dessinées
+à la main**, trait noir fin — note de musique, pelote, clés, maison, flèches,
+points de suite. C'est ce qui donne au compte son côté chaleureux et humain.
+Plus une **photo détourée** de la personne, posée en bas de la carte.
+
+### Écart avec ce qu'on produisait
+| | Eux | Nous |
+|---|---|---|
+| Fond | #D4BBA5 sable chaud | #ECE4D7 crème pâle — **trop clair, trop froid** |
+| Titres | serif bas-de-casse | serif capitales |
+| Illustration | doodles au trait, omniprésents | **aucune** |
+| Photo | portrait détouré | aucune |
+| Registre | chaleureux, humain, un peu joueur | prestige austère |
+
+J'avais construit une DA « immobilier de prestige » déduite de leur
+positionnement (« L'art de l'immobilier »). Leur identité réelle est beaucoup
+plus chaleureuse et illustrée. D'où les deux reproches d'un coup : la couleur
+**et** le fait que ce ne soit « que du texte » — chez eux, il y a toujours un
+dessin ou une photo.
+
+⚠️ Reste à confirmer auprès de Sabrina : les codes exacts (relevés à l'écran, donc
+approchés à un ou deux points près) et le nom de la police.
