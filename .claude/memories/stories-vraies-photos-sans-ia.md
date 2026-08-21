@@ -1,6 +1,6 @@
 ---
 name: stories-vraies-photos-sans-ia
-description: "Règle Maxime : stories en VRAIES photos animées par mouvement de caméra ffmpeg, jamais d'IA générative"
+description: "Règle Maxime : stories en VRAIES photos du client, animées en i2v. Les images 100 % IA restent interdites sur un compte qui a des photos."
 metadata: 
   node_type: memory
   type: feedback
@@ -22,3 +22,31 @@ Secours si un visage se déforme malgré le prompt renforcé : mouvement de cam�
 **Fait au 01/08/2026** : Le Loft = 28 stories d'août ✅ et OTEA = 13 stories ✅, toutes en vraies photos **réellement animées** (i2v vérifié frame par frame). Gossip = 27 stories déjà sur ses vraies photos du lieu. **Reste : les 4 mercredis « Côté coiffure » de Gossip, encore sur un visuel IA — aucune photo de la partie coiffure dans le dossier client, à demander à Maxime.**
 
 **Complément 03/08/2026 — J Lawson & La Galerie (+ 2 nouvelles règles Maxime)** : (1) **aucune story identique sur 2 semaines consécutives** → rotation de 14 cartes en cycle A/B (manifest `assets/stories/manifest-stories-2sem.json`) ; (2) **fond musical sur toutes les nouvelles stories, adapté à la typologie du client** → les stories deviennent des VIDÉOS 7,5 s (l'API Metricool ne sait pas ajouter de musique à une image). Les deux comptes tournaient encore 100 % en visuels IA : remplacés par des **cartes typographiques PIL** (même statut conforme que les cartes Pierre Huiban — pas des images IA, pas de fausses photos) + **musique en synthèse procédurale** (`scripts/fond-sonore-stories.py`, oscillateurs purs : zéro modèle génératif, zéro sample tiers, zéro droits — Higgsfield interdit son modèle musique hors pipeline jeu, et les photos/musiques « libres » invérifiables sont exclues sur un compte commercial). 28 stories vidéo/compte, 04→31/08, brouillon. Intérim en attendant les vraies photos de `medias/`.
+
+
+---
+
+## ⚖️ RÈGLE REPRÉCISÉE LE 21/08/2026 — ce qui est interdit, ce qui ne l'est pas
+
+Le titre de cette mémoire (« sans IA ») était trompeur et m'a fait produire les
+stories de La Galerie en `zoompan` ffmpeg le 21/08, alors que Maxime avait
+**déjà refusé le simple zoom** le 01/08. Deux interdits distincts étaient
+confondus sous un seul mot. Maxime a tranché :
+
+| | Statut |
+|---|---|
+| **Animer une vraie photo du client en i2v** | ✅ **méthode standard, tous comptes** |
+| Mouvement de caméra ffmpeg `zoompan` seul | ⚠️ **secours uniquement**, si un visage se déforme malgré le prompt renforcé |
+| **Image 100 % générée par IA** sur un compte qui a de vraies photos | ⛔ **interdit** |
+| Image 100 % IA sur un compte **sans aucune banque photo** | ✅ compte par compte (Run On Invest, 04/08) |
+| Générer le visage d'une **personne réelle identifiable** | ⛔ **interdit, sans exception** |
+
+**Pourquoi les deux interdits ne sont pas le même :** ce que William du Loft a
+reproché le 21/08 — « 80 % des posts sont des photos qui ne sont pas prises chez
+moi (ia ou je sais pas) » — c'est le **contenu** : un lieu qui n'est pas le sien,
+présenté comme le sien. Animer SA photo ne pose pas ce problème : le lieu et les
+gens restent les siens, seul le mouvement est calculé.
+
+Les garde-fous techniques ne bougent pas : prompt verrouillé sur l'identité,
+contrôle de la dernière frame contre la photo source avant de brancher, texte
+incrusté en ffmpeg après coup (jamais passé dans le modèle), et **sortie muette**.
