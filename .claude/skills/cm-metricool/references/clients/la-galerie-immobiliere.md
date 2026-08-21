@@ -196,3 +196,54 @@ jusqu'au bout de la vague qu'on traite.
   donc justes à un ou deux points près, et le nom exact de la police n'est pas
   confirmé (Playfair Display est une approximation très proche).
 - 3 posts portent encore un placeholder (`[Prénom]`, témoignage à recueillir).
+
+---
+
+## 🎬 STORIES EN VIDÉO SUR DE VRAIES PHOTOS — 21/08/2026
+
+La correction du 20/08 n'avait traité que la moitié du reproche de Sabrina. Elle
+disait deux choses : « les storys ne sont pas à leur couleur » **et** « ce n'est
+pas comme les autres comptes avec des vidéos et juste un texte ». La couleur
+était réglée, le format non : les cartes restaient fixes et purement typo.
+
+**Les 20 stories du 21/08 au 29/09 sont maintenant des vidéos 5 s**, construites
+comme celles de Run On Invest : une image représentative qui bouge lentement,
+avec l'habillage de la marque par-dessus.
+
+### La composition
+| | |
+|---|---|
+| Fond | sable **#D4BBA5** |
+| Image | une **vraie photo d'un de leurs biens**, dans une fenêtre 940×900, travelling avant très lent (zoom 1,00 → 1,09 sur 5 s) |
+| Titre | Playfair Display bas-de-casse **#292527** |
+| Filet | tracé à main levée, leur signature graphique |
+| Pied | `puteaux · paris ouest` |
+| Son | **aucun**, règle `stories-sans-son.md` |
+
+### ⚠️ Zéro IA, et c'est structurel
+Le mouvement est un **travelling ffmpeg `zoompan`** : ce sont les pixels de la
+photo d'origine qui bougent, il n'y a aucun modèle génératif dans la chaîne.
+La règle `stories-vraies-photos-sans-ia.md` tient donc entièrement. **Run On
+Invest reste la seule exception i2v du portefeuille**, et après le retour de
+William du Loft le 21/08 il n'était pas question d'en ouvrir une deuxième.
+
+### D'où viennent les photos
+Des **mandats publiés sur leur propre site**
+(`lagalerieimmobiliere.com/bien-immobilier/…`) : 30 photos relevées sur trois
+annonces en ligne (Suresnes, Nanterre, Colombes). Ce sont leurs biens, leurs
+photos, prises par eux. Jamais de banque d'images, jamais une photo d'un autre
+compte du portefeuille.
+
+⚠️ **La numérotation `01`..`30` du script dépend des annonces en ligne.** Quand
+un bien est vendu et retiré du site, l'ordre change et le mapping de `SPEC` ne
+pointe plus sur la bonne photo. À revérifier à l'œil avant toute regénération.
+
+Générateur versionné : `scripts/lg-story-video.py` (`python3 lgv.py <clé…>`).
+
+### Vérification (21/08/2026)
+`59 publications · 20 stories toutes en vidéo · draft:true partout ·
+autoPublish:false partout · noMedia 18 = les slots vidéo en attente des rushes
+de Sabrina`
+
+La carte `projet` du 20/08 n'a pas été utilisée : cette story était déjà passée
+quand la vague vidéo a été produite.
