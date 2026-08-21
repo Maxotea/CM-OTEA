@@ -1,5 +1,5 @@
 {
-  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx.",
+  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
   "comptes": [
     {
       "slug": "gossip-beauty-center",
@@ -9,7 +9,7 @@
       "actif": true,
       "drive_dossier": "1bbO5_SNq8EsFePBoRQvW8fm2KfJNvh18",
       "drive_archives": "1XIjGnrY38hPinOKLC9lDoGr-j-LIQQZh",
-      "drive_fichier": "1G_lPZ9v4IcSNsa5Cu4j7LWAWhJq-O5g0OiUjbnAEXuE",
+      "drive_fichier": "1dPQ_sY2Z1MiyLdhcdEcqsyx8Umtay039h-IdPRRf9eM",
       "note": "Le dossier vit dans le dossier photos partagé du client : la lecture par lien est héritée (la relève fonctionne), mais le droit d'ÉCRITURE par lien reste à activer une fois sur le dossier Validation hebdo."
     },
     {
@@ -20,7 +20,7 @@
       "actif": true,
       "drive_dossier": "1pqpmlG9ussUd2wYiVLMXOxMcwJCwIuOl",
       "drive_archives": "1c0SvqIhlcDM8EoC3b6qGulzDkNf-V8iP",
-      "drive_fichier": "1vgrvKnMAJ-E1NFP5j4DBgLEk3r9rs1uy4aoyhvXcvy0"
+      "drive_fichier": "1tyOi9H4oeKwCFPQUufA7cL76vPMvk6IpXdOn-MD4fVY"
     },
     {
       "slug": "jlawsongolf",
@@ -30,7 +30,7 @@
       "actif": true,
       "drive_dossier": "1Q8KPPL1S2mrJ6afLObZoD3sokPULdcNG",
       "drive_archives": "1fbD-vdIeCEltDGWvEGRkzXy4_HMvF2XH",
-      "drive_fichier": "11G2OzagThFgkYBlShahM5455dUlsFAhoEr4bwgCpyYE"
+      "drive_fichier": "1EF0C-Xu5gSnUhNFRQl8dQMmXWX4diW71ZLjNtCoYtaE"
     },
     {
       "slug": "la-galerie-immobiliere",
@@ -40,7 +40,7 @@
       "actif": true,
       "drive_dossier": "1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34YrLO",
       "drive_archives": "1sQVmOw2WVIXNOeVpEMI5WPYG3XHRJAml",
-      "drive_fichier": "1yYEap8xmIpVfuxkayGfRBprXNyNM9snS6sIP9K9imjw"
+      "drive_fichier": "1U1jhb1QwfXCrZc5DORmlIk-vr24VkeEzKRhdsy-km4k"
     },
     {
       "slug": "pierre-huiban",
@@ -50,7 +50,7 @@
       "actif": true,
       "drive_dossier": "1VGThaVWofkwv3sUqZQo-R0_sST5nvytB",
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
-      "drive_fichier": "1c-KLO-EcrP1IUKV9YplxVF-HJlELTc1ne8zwWECrjBU"
+      "drive_fichier": "1uME6QRUAVW1XUD8VFzbeoHrWTEgOKrGBWHaL-TcC9FM"
     },
     {
       "slug": "otea-production",
@@ -71,8 +71,8 @@
       "actif": true,
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
-      "drive_fichier": "1wwAKMLIPnDUNPh6fBX-NlVeVIsddKuJWMNW9FEp5cWI",
-      "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). Le partage « tous les utilisateurs disposant du lien » doit être actif sur le dossier Validation hebdo pour que la relève puisse lire le fichier."
+      "drive_fichier": "1iYYrlIr3CnyG2iqIQ-0iTV5cwS2t2KFFGY29cY84xME",
+      "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). BLOQUANT au 21/08/2026 : le dossier Validation hebdo n'a AUCUNE permission « tous les utilisateurs disposant du lien » (vérifié par get_file_permissions), la relève ne peut donc pas lire le fichier et le job appliquer sort en erreur à chaque passage depuis le 19/08. Réglage à faire une fois par Maxime sur le dossier : Partager → Accès général → Tous les utilisateurs disposant du lien → Éditeur."
     }
   ]
 }
