@@ -1,37 +1,53 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""La Galerie Immobilière — stories vidéo 1080×1920, muettes.
+"""La Galerie Immobilière — stories vidéo 1080×1920 plein cadre, muettes.
 
 Répond aux deux reproches de Sabrina du 19/08/2026 :
 
-  1. « les storys ne sont pas à leur couleur »  → fond sable #D4BBA5, titre
-     serif bas-de-casse #292527, relevés sur leurs propres publications.
+  1. « les storys ne sont pas à leur couleur »  → sable #D4BBA5, titre serif
+     bas-de-casse #292527, filet à main levée, relevés sur leurs publications.
   2. « ce n'est pas comme les autres comptes avec des vidéos et juste un
-     texte » → une **vraie photo de leurs biens** occupe la carte et bouge
-     réellement, comme sur le compte Run On Invest.
+     texte » → une **vraie photo de leurs biens, animée, occupe tout le cadre**,
+     comme sur le compte Run On Invest.
 
-## Méthode : i2v sur leurs vraies photos
+## Ce que la version précédente ratait (mesuré le 21/08/2026)
 
-Version du 21/08/2026. La première version animait la photo avec un simple
-`zoompan` ffmpeg : Maxime avait **déjà refusé ce procédé le 01/08** (« pas des
-images animées mais juste des zooms »). Le mouvement vient donc d'un vrai
-image-to-video (`kling3_0_turbo`, 16:9, 5 s), lancé une fois par photo, et
-dont le mp4 est récupéré ici puis habillé.
+La première mouture logeait la vidéo dans une fenêtre de 940×529, soit **24 %
+de la surface**, sur une carte de texte. Mesures comparées à une story Run On
+Invest :
 
-Ce qui est conforme à `.claude/memories/stories-vraies-photos-sans-ia.md` :
-  - la **photo source est réelle** et appartient au client (mandats publiés
-    sur lagalerieimmobiliere.com) ; le modèle ne fabrique pas le lieu, il ne
-    fait que le mettre en mouvement ;
-  - **aucune personne identifiable** dans le lot (intérieurs et extérieurs) ;
-  - la **dernière frame est contrôlée** contre la photo source avant de
-    brancher quoi que ce soit ;
-  - le **texte n'entre jamais dans le modèle** : il est incrusté après coup,
-    en ffmpeg, à partir d'un calque PNG.
+| | Run On Invest | v1 La Galerie |
+|---|---|---|
+| lignes de l'image qui bougent | 100 % | 24 % |
+| écart moyen entre la 1re et la dernière frame | 18,2 | 1,0 |
+
+Ce n'était pas une vidéo, c'était une carte typo avec une vignette qui frémit.
+En prime, le modèle sortait du 1176×784 (3:2) forcé dans une fenêtre 16:9 :
+l'image était **étirée de 18 %**.
+
+## La méthode, et le piège à ne pas refaire
+
+⛔ **Ne jamais lancer l'i2v en 9:16 depuis une photo paysage.** Testé : le
+modèle **réinvente la pièce**. Écart de 58,8 contre la vraie photo, et aucun
+recadrage de l'original ne correspond. C'est exactement ce que William du Loft
+a reproché le 21/08 (« des photos qui ne sont pas prises chez moi »).
+
+✅ **Recadrer d'abord en 9:16 dans PIL, animer ensuite** (ce que prescrivait
+déjà `.claude/memories/stories-vraies-photos-sans-ia.md`). Mesuré sur la même
+photo : écart de 4,12 sur la première frame, 6,02 sur la dernière, contre 4,0
+entre deux frames d'une même vidéo. C'est leur photo, elle bouge, rien n'est
+inventé.
+
+Le recadrage se fait avec `scripts/lg-crop-9-16.py`, l'animation en
+`kling3_0_turbo` 9:16 5 s (7,5 crédits par plan), caméra verrouillée.
 
 ⚠️ **Muet.** `-an` obligatoire (`.claude/memories/stories-sans-son.md`).
 
+Les photos viennent des **mandats publiés sur leur propre site**
+(lagalerieimmobiliere.com/bien-immobilier/…) : leurs biens, leurs photos.
+
 Usage (sandbox Higgsfield) :
-    python3 lg-story-video.py visites rare adresse    # -> o/lg-<clé>.mp4
+    python3 lg-story-video.py visites rare adresse   # -> o/lg-<clé>.mp4
 """
 import math
 import os
@@ -46,10 +62,12 @@ SABLE = (212, 187, 165)          # #D4BBA5 — la couleur du compte
 ENCRE = (41, 37, 39)             # #292527
 SOMBRE = (178, 153, 124)         # #B2997C
 
-# Fenêtre vidéo : 16:9, le format sorti par le modèle. Le reste de la hauteur
-# est du sable, où vient le texte.
-PX, PY, PW, PH = 70, 430, 940, 529
-Y_TITRE = 1090
+# Le voile sable qui porte le texte : transparent au-dessus de Y_VOILE0,
+# opaque à partir de Y_VOILE1. L'image reste pleine largeur et visible sur
+# les 60 % du haut.
+Y_VOILE0, Y_VOILE1 = 1150, 1330
+ALPHA_VOILE = 245
+Y_TITRE = 1360
 DUREE = 5.0
 
 FD = "f"
@@ -60,13 +78,30 @@ MONO = FD + "/mono.ttf"
 MONO_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
             "spacemono/SpaceMono-Regular.ttf")
 
-# Les deux lots i2v générés le 21/08/2026. La clé de SPEC porte le préfixe du
-# lot (A ou B) suivi de l'identifiant du job.
-LOTS = {
-    "A": ("https://d8j0ntlcm91z4.cloudfront.net/"
-          "user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_093630_"),
-    "B": ("https://d8j0ntlcm91z4.cloudfront.net/"
-          "user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_093655_"),
+CDN = ("https://d8j0ntlcm91z4.cloudfront.net/"
+       "user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_")
+
+# Photo du site (numérotée par lg-crop-9-16.py) -> plan i2v 9:16 correspondant.
+PLANS = {
+    "01": "161732_e126fa6e-2008-452e-9f7b-57f87b60b3a8",
+    "02": "161732_d49f24ca-df96-44e6-9391-93e9a13295cc",
+    "04": "161732_f1c081eb-eb94-4e14-a396-9f32018abfac",
+    "06": "161732_14bd054d-0bda-4318-ab38-63b8afe81b55",
+    "07": "161732_5dc1a48d-b7f8-422a-951d-01e70aeda6d6",
+    "08": "161732_66768aff-6a84-4bc5-898a-b12d2ca2d3f9",
+    "09": "161732_aa2d8c02-5670-472a-8f06-aa3a79e93961",
+    "10": "161732_70c5ba27-20d1-4eb3-8297-904389a45f9b",
+    "11": "161732_564f82a9-fa35-49c3-99d0-ad42a0ad3aec",
+    "12": "142523_93b5998a-4acc-481d-99c0-e236590da8ce",
+    "13": "161733_852ec55a-885d-4ef6-9170-0365e2c75400",
+    "15": "161732_865a72e8-0159-4223-a3cc-e09532d69e43",
+    "17": "161732_a1684a36-d00c-42dc-90dd-7beb1c0dc685",
+    "18": "161754_e64055db-afcd-425b-9319-d2c3788e6f73",
+    "20": "161754_455e0a26-f981-4967-862b-a3cb2c1f1de3",
+    "24": "161754_6f0a451b-307a-4d5b-aaa6-81122c978bcf",
+    "27": "161754_e1283828-a603-4f86-9d86-4a9a8a12aa14",
+    "28": "161754_186d95af-24d1-4e9b-8739-76fdc02d4dbc",
+    "30": "161754_4cd3b0cd-431a-47cd-b7e9-5cf5a50e7358",
 }
 
 
@@ -102,13 +137,17 @@ def wrap(d, txt, font, maxw):
 
 
 def calque(chemin, titre, sous_titre):
-    """Calque PNG transparent : cadre de la fenêtre, titre, filet, pied."""
+    """Calque PNG : voile sable dégradé, titre, filet, sous-titre, pied."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
 
-    # filet fin autour de la fenêtre vidéo, pour l'asseoir sur le sable
-    d.rectangle([PX - 1, PY - 1, PX + PW, PY + PH],
-                outline=SOMBRE + (150,), width=2)
+    for y in range(Y_VOILE0, H):
+        if y < Y_VOILE1:
+            t = (y - Y_VOILE0) / float(Y_VOILE1 - Y_VOILE0)
+            a = int(ALPHA_VOILE * t * t)      # montée douce, pas de ligne dure
+        else:
+            a = ALPHA_VOILE
+        d.line([(0, y), (W, y)], fill=SABLE + (a,))
 
     marge = 90
     maxw = W - 2 * marge
@@ -146,15 +185,12 @@ def calque(chemin, titre, sous_titre):
     im.save(chemin)
 
 
-def build(cle, job, titre, sous_titre):
-    src = "o/_%s.mp4" % cle
+def build(cle, photo, titre, sous_titre):
+    src = "o/_%s.mp4" % photo
     if not os.path.exists(src):
-        urllib.request.urlretrieve(LOTS[job[0]] + job[1:] + ".mp4", src)
+        urllib.request.urlretrieve(CDN + PLANS[photo] + ".mp4", src)
     calque("o/_t.png", titre, sous_titre)
-    fil = ("[0:v]scale=%d:%d,fps=25[p];"
-           "color=c=0xD4BBA5:s=%dx%d:r=25[bg];"
-           "[bg][p]overlay=%d:%d[b1];"
-           "[b1][1:v]overlay=0:0[v]" % (PW, PH, W, H, PX, PY))
+    fil = ("[0:v]scale=%d:%d,fps=25[p];[p][1:v]overlay=0:0[v]" % (W, H))
     subprocess.run([
         "ffmpeg", "-loglevel", "error", "-y",
         "-i", src,
@@ -168,35 +204,33 @@ def build(cle, job, titre, sous_titre):
     ], check=True)
 
 
-# --- Les 20 stories : clé → (lot+job i2v, titre, sous-titre) ----------------
-# Chaque job part d'une photo d'un bien réel du portefeuille, publiée sur leur
-# site (Suresnes, Nanterre, Colombes). Jamais de banque d'images.
+# --- Les 20 stories : clé → (photo du site, titre, sous-titre) --------------
 SPEC = {
- "visites":     ("A74a4573d-359a-4f46-8e0a-c0d7df7a12ca", "week-end de visites",    "Les portes s'ouvrent, on vous accompagne."),
- "rare":        ("Acfc2402f-2abe-4e48-a01e-eddcd3063a5a", "le bien rare",           "Il ne reste jamais longtemps."),
- "inspiration": ("A94f66fa3-bd7c-4914-9285-2e6b1c0b67d0", "inspiration",            "Ce qu'on aime chez nous."),
- "semaine":     ("Ad75f1f01-18f1-47b6-a709-2cc6ddcc30bb", "nouvelle semaine",       "On est là du lundi au samedi."),
- "valeur":      ("A8980943a-9a0f-4c39-8a19-294d296bae9b", "mise en valeur",         "Un bien bien présenté se vend mieux."),
- "adresse":     ("Abaaaef20-ab72-4619-b2a3-f0ad23448f9c", "l'adresse compte",       "Puteaux, Suresnes, Nanterre, Colombes."),
- "estimation":  ("A2602eb34-c85f-4c71-89f8-3ac9703dae59", "l'estimation",           "Le bon prix, dès le premier jour."),
- "avant":       ("A74569906-3b75-49c2-ae6b-289743f95466", "avant de visiter",       "Trois questions à se poser."),
- "ouest":       ("A8b273207-e9c6-4fe3-bb5a-02cc8cb35337", "paris ouest",            "Notre terrain de jeu depuis le début."),
- "douceur":     ("A2d6f0bbd-f598-40b1-ba16-e3728da74102", "douceur du dimanche",    "Prenez le temps. Nous aussi."),
- "belle":       ("A3f283d52-387d-4ce9-933a-8d7f6069290c", "belle semaine",          "À très vite à l'agence."),
- "rentree":     ("A00516aa6-5bec-4136-a442-7c273a9133b8", "bonne rentrée",          "L'agence est ouverte, comme toujours."),
- "taux":        ("B23939ee1-98c2-452b-a596-77d028ac0e63", "les taux ont bougé",     "Votre budget aussi. On refait le point."),
- "ancien":      ("B4a089bca-cfc4-474e-92a1-a39fb660c866", "le charme de l'ancien",  "Ce qui ne se refabrique pas."),
- "dpe":         ("B091eac2f-6d5a-4883-a7b1-31b031211a0e", "votre dpe, on le relit", "La classe a peut-être changé."),
- "patrimoine":  ("B7f653565-c3cb-4dbf-876a-17c621df3fb8", "journées du patrimoine", "Les portes s'ouvrent ce week-end."),
- "gratuite":    ("Bef2568e4-740a-4905-a1de-94c5898ea87b", "estimation gratuite",    "Sans engagement, évidemment."),
- "fetes":       ("Bb946c729-4e1a-4f4c-8fdd-f1b2e07a9697", "vendre avant les fêtes", "C'est maintenant que ça se joue."),
- "visites2":    ("B36fee8d3-27b0-4530-9215-8fc289c8bcb1", "week-end de visites",    "Deux jours pour se projeter."),
- "reperage":    ("A74a4573d-359a-4f46-8e0a-c0d7df7a12ca", "repérage de quartier",   "On vous dit tout, même les défauts."),
+ "visites":     ("12", "week-end de visites",    "Les portes s'ouvrent, on vous accompagne."),
+ "rare":        ("13", "le bien rare",           "Il ne reste jamais longtemps."),
+ "inspiration": ("15", "inspiration",            "Ce qu'on aime chez nous."),
+ "semaine":     ("11", "nouvelle semaine",       "On est là du lundi au samedi."),
+ "valeur":      ("27", "mise en valeur",         "Un bien bien présenté se vend mieux."),
+ "adresse":     ("09", "l'adresse compte",       "Puteaux, Suresnes, Nanterre, Colombes."),
+ "estimation":  ("28", "l'estimation",           "Le bon prix, dès le premier jour."),
+ "avant":       ("24", "avant de visiter",       "Trois questions à se poser."),
+ "ouest":       ("30", "paris ouest",            "Notre terrain de jeu depuis le début."),
+ "douceur":     ("17", "douceur du dimanche",    "Prenez le temps. Nous aussi."),
+ "belle":       ("20", "belle semaine",          "À très vite à l'agence."),
+ "rentree":     ("01", "bonne rentrée",          "L'agence est ouverte, comme toujours."),
+ "taux":        ("08", "les taux ont bougé",     "Votre budget aussi. On refait le point."),
+ "ancien":      ("06", "le charme de l'ancien",  "Ce qui ne se refabrique pas."),
+ "dpe":         ("02", "votre dpe, on le relit", "La classe a peut-être changé."),
+ "patrimoine":  ("10", "journées du patrimoine", "Les portes s'ouvrent ce week-end."),
+ "gratuite":    ("04", "estimation gratuite",    "Sans engagement, évidemment."),
+ "reperage":    ("12", "repérage de quartier",   "On vous dit tout, même les défauts."),
+ "fetes":       ("18", "vendre avant les fêtes", "C'est maintenant que ça se joue."),
+ "visites2":    ("07", "week-end de visites",    "Deux jours pour se projeter."),
 }
 
 if __name__ == "__main__":
     boot()
     for cle in sys.argv[1:]:
-        job, titre, sous_titre = SPEC[cle]
-        build(cle, job, titre, sous_titre)
+        photo, titre, sous_titre = SPEC[cle]
+        build(cle, photo, titre, sous_titre)
         print("ok", cle)

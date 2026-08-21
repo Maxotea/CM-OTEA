@@ -199,79 +199,89 @@ jusqu'au bout de la vague qu'on traite.
 
 ---
 
-## 🎬 STORIES EN VIDÉO SUR DE VRAIES PHOTOS — 21/08/2026
+## 🎬 STORIES EN VIDÉO PLEIN CADRE — 21/08/2026
 
-La correction du 20/08 n'avait traité que la moitié du reproche de Sabrina. Elle
-disait deux choses : « les storys ne sont pas à leur couleur » **et** « ce n'est
-pas comme les autres comptes avec des vidéos et juste un texte ». La couleur
-était réglée, le format non : les cartes restaient fixes et purement typo.
+Sabrina disait deux choses le 19/08 : « les storys ne sont pas à leur couleur »
+**et** « ce n'est pas comme les autres comptes avec des vidéos et juste un
+texte ». La couleur a été réglée le 20/08. Le format a demandé **trois
+versions** dans la journée du 21/08, et les deux premières étaient ratées.
 
-**Les 20 stories du 21/08 au 29/09 sont maintenant des vidéos 5 s**, construites
-comme celles de Run On Invest : une vraie photo d'un de leurs biens, **réellement
-animée**, avec l'habillage de la marque par-dessus.
+### Ce qui n'allait pas, mesuré
+
+| | Run On Invest | v1 `zoompan` | v2 fenêtre 16:9 | **v3 plein cadre** |
+|---|---|---|---|---|
+| lignes de l'image qui bougent | 100 % | 24 % | 24 % | **68 %** |
+| mouvement moyen sur la story | 18,2 | 1,0 | 1,0 | **2,5** |
+| surface occupée par la vidéo | plein cadre | 24 % | 24 % | **60 %, pleine largeur** |
+
+- **v1** animait la photo au `zoompan` ffmpeg. Maxime avait **déjà refusé ce
+  procédé le 01/08** (« pas des images animées mais juste des zooms »).
+- **v2** passait en vrai i2v mais logeait la vidéo dans une fenêtre de 940×529
+  sur une carte de texte : une vignette qui frémit, pas une vidéo. En prime le
+  modèle sortait du 1176×784 (3:2) forcé dans du 16:9, donc **l'image était
+  étirée de 18 %**.
+- **v3** est la bonne : la vidéo occupe toute la largeur sur les 60 % du haut,
+  le texte est posé en bas sur un voile sable dégradé.
+
+### La méthode, et le piège à ne jamais refaire
+
+⛔ **Ne jamais lancer l'i2v en 9:16 depuis une photo paysage.** Testé et
+mesuré : le modèle **réinvente la pièce**. Écart de 58,8 contre la vraie photo,
+et aucun recadrage de l'original ne correspond. C'est exactement ce que William
+du Loft a reproché le même jour (« des photos qui ne sont pas prises chez moi »).
+
+✅ **Recadrer d'abord en 9:16 dans PIL, animer ensuite.** C'est ce que
+prescrivait déjà `.claude/memories/stories-vraies-photos-sans-ia.md`, et que la
+v2 avait court-circuité. Mesuré sur la même photo : **4,1** d'écart sur la
+première image, **6,0** sur la dernière, contre 4,0 entre deux images d'une même
+vidéo. C'est leur photo, elle bouge, rien n'est inventé.
+
+Caméra verrouillée : ce sont la lumière, les rideaux et le feuillage derrière
+les fenêtres qui bougent, pas le cadre. Une variante travelling avant a été
+testée (mouvement 58, soit 3× Run On Invest) : **écartée par Maxime**, parce
+qu'en avançant le modèle extrapole ce que la photo ne montrait pas et que le
+contrôle de dernière frame ne vaut plus rien.
 
 ### La composition
 | | |
 |---|---|
-| Fond | sable **#D4BBA5** |
-| Image | une **vraie photo d'un de leurs biens**, animée en i2v, dans une fenêtre 16:9 de 940×529 |
-| Titre | Playfair Display bas-de-casse **#292527** |
+| Vidéo | vraie photo d'un de leurs biens, recadrée 9:16, animée en i2v, **plein cadre 1080×1920** |
+| Voile | sable **#D4BBA5** en dégradé, transparent à y=1150, opaque à y=1330 |
+| Titre | Playfair Display bas-de-casse **#292527**, y=1360 |
 | Filet | tracé à main levée, leur signature graphique |
 | Pied | `puteaux · paris ouest` |
 | Son | **aucun**, règle `stories-sans-son.md` |
 
-### Le mouvement : i2v, pas un zoom
-Première version produite le matin du 21/08 avec un simple `zoompan` ffmpeg.
-**C'était une erreur** : Maxime avait déjà refusé ce procédé le 01/08 (« pas des
-images animées mais juste des zooms »). Le titre trompeur de la mémoire
-`stories-vraies-photos-sans-ia.md` m'avait fait confondre deux interdits
-distincts. Règle reprécisée le 21/08 et appliquée ici :
-
-- ✅ **animer une vraie photo du client en i2v** = méthode standard, tous comptes ;
-- ⛔ **image 100 % générée par IA** sur un compte qui a de vraies photos = interdit,
-  c'est ce que William du Loft a reproché le même jour ;
-- ⚠️ `zoompan` = secours seulement, si un visage se déforme.
-
-Ici le risque de déformation est nul : ce sont des intérieurs et des extérieurs,
-aucune personne dans le cadre. La dernière frame a quand même été contrôlée
-contre la photo source (job `baaaef20`, story `adresse`) : même pièce, même
-escalier, mêmes fenêtres, aucun morphing.
-
-Modèle `kling3_0_turbo`, 16:9, 5 s, `use_unlim:false`, 7,5 crédits par
-génération. 19 photos importées via `media_import_url`, 19 jobs, deux lots :
-`hf_20260821_093630_*` (lot A) et `hf_20260821_093655_*` (lot B). `reperage`
-réutilise le job de `visites` avec un autre titre.
+### La chaîne
+1. `scripts/lg-crop-9-16.py <NN…>` relève la photo sur leur site et la recadre
+   en 9:16 (864×1536), sans texte.
+2. i2v `kling3_0_turbo`, `aspect_ratio: "9:16"`, 5 s, **7,5 crédits par plan**.
+   Sortie native 720×1280. 19 plans générés le 21/08.
+3. `scripts/lg-story-video.py <clé…>` récupère le plan, l'upscale en 1080×1920
+   et incruste le calque texte. Le texte ne passe **jamais** dans le modèle.
 
 ### D'où viennent les photos
 Des **mandats publiés sur leur propre site**
 (`lagalerieimmobiliere.com/bien-immobilier/…`) : 30 photos relevées sur trois
-annonces en ligne (Suresnes, Nanterre, Colombes). Ce sont leurs biens, leurs
-photos, prises par eux. Jamais de banque d'images, jamais une photo d'un autre
-compte du portefeuille.
+annonces (Suresnes, Nanterre, Colombes). Leurs biens, leurs photos. Jamais de
+banque d'images, jamais la photo d'un autre compte du portefeuille.
 
-⚠️ **Le mapping photo → job i2v est figé dans `SPEC`.** Les jobs sont des URLs
-permanentes : tant qu'on ne relance pas de génération, le script est
-reproductible. Si une photo doit être remplacée (bien vendu, retiré du site), il
-faut refaire un i2v et mettre à jour l'identifiant de job.
-
-Générateur versionné : `scripts/lg-story-video.py`
-(`python3 lg-story-video.py <clé…>`, à lancer dans la sandbox Higgsfield).
+⚠️ La numérotation `01`..`30` dépend des annonces en ligne : si un bien est
+vendu et retiré, l'ordre change et le mapping de `SPEC` ne pointe plus sur la
+bonne photo. À revérifier à l'œil avant toute regénération.
 
 ### ⚠️ Le piège des accents
-La première passe i2v a été produite avec un script dont les titres et
-sous-titres avaient été saisis **sans accents** (« bonne rentree », « presente »,
-« des le premier jour »). Sur ce compte précisément, qui reproche déjà un manque
-de soin, c'était inacceptable. Les 20 vidéos ont été **entièrement régénérées**
-avec les accents. Playfair Display et Space Mono couvrent tout le français, y
-compris le point médian du pied de page : vérifié glyphe par glyphe avant
-regénération (`ImageFont.getmask(c).getbbox()`).
-
-Ne jamais saisir un texte client sans accents « pour éviter un problème
-d'encodage » : héberger le script en gzip+base64 et le décoder dans la sandbox
-règle le problème sans toucher au texte.
+La v2 avait été produite avec des titres **sans accents** (« bonne rentree »,
+« presente », « des le premier jour »). Sur ce compte précisément, qui reproche
+déjà un manque de soin, c'était inacceptable. Corrigé : Playfair Display et
+Space Mono couvrent tout le français, point médian du pied compris, vérifié
+glyphe par glyphe (`ImageFont.getmask(c).getbbox()`). Ne jamais saisir un texte
+client sans accents « pour éviter un problème d'encodage » : héberger le script
+en gzip+base64 et le décoder dans la sandbox règle le problème sans toucher au
+texte.
 
 ### Vérification (21/08/2026)
-`59 publications · 20 stories toutes en vidéo i2v · draft:true partout ·
+`59 publications · 20 stories toutes en vidéo plein cadre · draft:true partout ·
 autoPublish:false partout · noMedia 18 = les slots REEL en attente des rushes
 de Sabrina`
 
