@@ -28,6 +28,12 @@ La séquence de la session (toujours commencer par `git pull`) :
    existent pour chaque compte actif de `reviews/config.json`. Sinon, lancer le workflow
    « Review hebdo client » en mode `generer` (le déclenchement planifié vise le lundi
    suivant tout seul ; à la main, remplir `semaine`) et attendre le commit.
+   **Puis vérifier la santé des relèves de la semaine écoulée** : lister les runs de
+   `review.yml` et lire les logs des jobs `appliquer` en échec. Le job sort en erreur dès
+   qu'un seul compte est illisible — un compte dont le partage par lien n'est pas actif
+   met donc tout le workflow au rouge à chaque passage, et personne ne regarde les Actions
+   au fil de l'eau. C'est ici, une fois par semaine, que ce voyant se lit ; toute relève
+   rouge va dans le rapport final avec le compte et la cause.
 2. **Pour chaque client actif** :
    - Déposer son xlsx dans son dossier permanent : `create_file` avec `parentId` =
      `drive_dossier`, `base64Content` du xlsx, `contentMimeType` xlsx, conversion par
