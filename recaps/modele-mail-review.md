@@ -19,7 +19,24 @@ Voici vos {N} publications prévues cette semaine sur vos réseaux. Trois minute
 pour tout valider :
 
 👉 **Ouvrir votre tableau de validation** : {LIEN_SHEET}
-*(en HTML : bouton sombre, libellé « 👉 Ouvrir votre tableau de validation »)*
+
+*En HTML : bouton sombre, libellé « 👉 Ouvrir votre tableau de validation ». Attention —
+Gmail **supprime la propriété raccourcie `background`** d'un style en ligne mais garde
+`background-color` et l'attribut `bgcolor`. Un `<a style="background:#1a1a1a;color:#fff">`
+arrive donc en texte blanc sur fond blanc : bouton invisible. Toujours écrire le bouton
+en cellule de tableau, ceinture et bretelles :*
+
+```html
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:28px 0">
+  <tr><td bgcolor="#1a1a1a" style="background-color:#1a1a1a;border-radius:8px">
+    <a href="{LIEN_SHEET}" style="display:inline-block;padding:14px 26px;color:#ffffff;text-decoration:none;font-weight:600">👉 Ouvrir votre tableau de validation</a>
+  </td></tr>
+</table>
+```
+
+*Même règle pour l'encadré gris de fin. Après création, relire le brouillon avec
+`list_drafts` en vue complète : si `bgcolor` a disparu du HTML rendu, le bouton est
+illisible et il faut le refaire.*
 
 Comment ça marche :
 1. Relisez chaque ligne — vous pouvez corriger la légende directement dans la case, et
