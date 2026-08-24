@@ -59,9 +59,12 @@ La séquence de la session (toujours commencer par `git pull`) :
 
 1. `git pull`, lire `reviews/config.json` et `clients-config.json`.
 2. Pour chaque client actif de la review :
-   - `envoi_review_auto` **et** `email_confirme` vrais → **envoyer** le mail
-     (`send_message`, composé depuis `modele-mail-review.md` avec le lien du
-     `drive_fichier` courant), puis supprimer le brouillon du vendredi devenu redondant.
+   - `envoi_review_auto` **et** `email_confirme` vrais → **envoyer le brouillon du
+     vendredi lui-même** : `send_message` avec son `draftId`, rien d'autre. Le client
+     reçoit exactement ce qui a été relu vendredi, et le brouillon disparaît de la liste
+     du même coup — pas de recomposition, pas de mise à la corbeille. Ne recomposer
+     depuis `modele-mail-review.md` que si le brouillon a disparu ; contrôler alors que
+     le lien pointe bien sur le `drive_fichier` courant.
    - Sinon → ne rien envoyer : vérifier que le brouillon du vendredi existe toujours et
      le lister dans le rapport comme « à envoyer par Maxime ».
 3. C'est la SEULE exception à la règle « ne jamais envoyer automatiquement », décidée par
