@@ -287,3 +287,48 @@ de Sabrina`
 
 La carte `projet` du 20/08 n'a pas été utilisée : cette story était déjà passée
 quand la vague vidéo a été produite.
+
+
+---
+
+## 🔁 RETOUR EN ARRIÈRE DU CALENDRIER — 24/08/2026
+
+Maxime : « tu avais fait de superbes stories en réutilisant les photos de biens
+immobiliers, refais la même chose, car là ça ne fonctionne plus du tout et je ne
+comprends pas pourquoi ».
+
+### Ce que le calendrier contenait vraiment
+
+Quatorze stories du 24 au 30/08, deux par jour (10h et 16h), qui n'étaient pas
+celles produites le 21/08. Inspection des médias branchés :
+
+| Créneau | Ce qui était branché | Problème |
+|---|---|---|
+| 10h | carte **typographique grise**, titre en capitales centrées, aucune photo | c'est exactement le reproche de Sabrina du 19/08 (« juste un texte »), et ce n'est pas leur sable |
+| 16h | **photo de banque d'images** (les libellés disent « banque · agence », « banque · cuisine »), **928×1152** | ce n'est pas un de leurs biens, et le format n'est pas 9:16 : la story serait rognée ou bandée |
+
+Les cinq stories du 31/08 au 12/09 produites le 21/08 étaient intactes et au bon
+format : la régression ne portait que sur la semaine du 24 au 30.
+
+### Ce qui a été refait
+
+Les 14 créneaux sont rebranchés sur le format validé : **vraie photo d'un de
+leurs biens, recadrée 9:16, animée en i2v, plein cadre, voile sable en bas avec
+le titre**. La ligne éditoriale des libellés existants a été conservée, seul le
+visuel change.
+
+**Zéro crédit dépensé** : les 19 plans i2v du 21/08 sont réutilisés. Quatorze
+photos distinctes, aucune ne repasse deux fois sur les trois semaines, et aucune
+ne double les cinq déjà en ligne du 31/08 au 12/09.
+
+Les clés sont `n24a`…`n30b` dans `scripts/lg-story-video.py`.
+
+### ⚠️ Une publication partait toute seule
+L'audit a remonté le post **365814170** du 25/08 à 18h (Facebook) en
+`draft:false` / `autoPublish:true`. Neutralisé le 24/08. **Toujours relancer
+`audit_publication_safety` après une intervention d'un autre outil sur le
+calendrier** : ce post n'existait pas au passage du 21/08.
+
+### Vérification (24/08/2026)
+`62 publications · 62 en brouillon · 0 en autoPublish · noMedia 17 = les slots
+REEL en attente des rushes de Sabrina`

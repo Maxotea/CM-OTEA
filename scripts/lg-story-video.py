@@ -226,6 +226,25 @@ SPEC = {
  "reperage":    ("12", "repérage de quartier",   "On vous dit tout, même les défauts."),
  "fetes":       ("18", "vendre avant les fêtes", "C'est maintenant que ça se joue."),
  "visites2":    ("07", "week-end de visites",    "Deux jours pour se projeter."),
+
+ # --- Vague du 24 au 30/08, deux stories par jour (10h et 16h) -------------
+ # Elle remplace des cartes typo grises et des photos de banque qui avaient
+ # été branchées à la place des biens de La Galerie. Chaque plan est distinct
+ # des cinq déjà en ligne du 31/08 au 12/09, aucune photo ne repasse deux fois.
+ "n24a": ("11", "dernière ligne droite",   "Septembre arrive, on prépare votre projet."),
+ "n24b": ("09", "l'agence vous accueille", "Poussez la porte, on prend le temps."),
+ "n25a": ("13", "le marché redémarre",     "Septembre concentre les acquéreurs sérieux."),
+ "n25b": ("27", "votre projet s'étudie",   "On regarde les chiffres avec vous."),
+ "n26a": ("28", "préparer son bien",       "Quelques gestes changent tout avant les visites."),
+ "n26b": ("15", "le salon qui donne envie", "C'est la pièce qui décide, souvent."),
+ "n27a": ("04", "estimation gratuite",     "Sans engagement, évidemment."),
+ "n27b": ("02", "les clés de votre prochain chez-vous", "On vous accompagne jusqu'à la remise."),
+ "n28a": ("24", "le charme de l'ancien",   "Ce qui ne se refabrique pas."),
+ "n28b": ("30", "puteaux, votre quartier", "Notre terrain de jeu depuis le début."),
+ "n29a": ("10", "puteaux en famille",      "Écoles, parcs, transports : on connaît."),
+ "n29b": ("18", "le cœur de la maison",    "La cuisine, là où tout se passe."),
+ "n30a": ("17", "le calme du dimanche",    "Prenez le temps. Nous aussi."),
+ "n30b": ("12", "inspiration",             "La terrasse de fin d'été."),
 }
 
 if __name__ == "__main__":
