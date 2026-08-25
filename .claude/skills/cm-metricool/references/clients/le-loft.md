@@ -226,3 +226,42 @@ brouillon, à l'heure de Paris exacte, et accepte les sept médias d'un carrouse
 ⚠️ Sept publications du 26/08 au 02/09 sont en `draft:false` / `autoPublish:true`.
 Elles ne viennent pas de cette intervention : c'est la signature d'une
 validation faite dans l'interface. À confirmer avec Maxime si ce n'est pas lui.
+
+
+### 🎨 Version Canva restylable — 25/08/2026
+
+Maxime a trouvé la première version « trop mainstream, basique, sans
+originalité » et a demandé le carrousel dans Canva pour le retravailler. Le
+problème de fond : dans la version Metricool, **le texte est incrusté dans le
+pixel**, donc rien n'est restylable. La version Canva sépare les couches.
+
+| | |
+|---|---|
+| Design | `DAHTTxdmbK0`, « Le Loft, carrousel il est parti sans payer » |
+| Édition | https://www.canva.com/d/Vhf-e_sCZONE3z3 |
+| Lecture | https://www.canva.com/d/iiYWzOHlM2ZEXjX |
+| Structure | 7 pages 1080×1350. Par page : la photo en fond plein cadre, deux voiles noirs (transition + fond de texte), un filet doré, un titre et un corps de texte |
+| Titre | 72 px gras **#CEAA69** |
+| Corps | 32 px italique **#F0E6D8** |
+
+Les photos sont les **mêmes vraies photos du salon**, mais **nues** : recadrées
+4:5, sans texte ni voile incrustés. Elles sont dans la bibliothèque Canva sous
+`Loft 1 equipe salon` à `Loft 7 equipe chute`. Tout est déplaçable, recolorable,
+remplaçable.
+
+⚠️ **`generate-design` ne produit qu'une seule page**, même pour un carrousel de
+sept planches demandé explicitement. Il a aussi posé un fond généré par IA sur
+la page 1, contraire à la règle du compte. La méthode fiable est de créer le
+design puis d'ajouter les pages une à une avec `add_page`, `insert_fill`,
+`insert_shape` et `add_text`, puis de styler avec `format_text` dans un second
+appel (le `locator_id` n'existe qu'après création du texte).
+
+⚠️ **Deux photos étaient interverties.** Le mapping story vers thème du 31/07
+donnait `97e07089` pour le soin visage : c'est faux, c'est le barbier qui pointe
+l'objectif, et le soin visage est `692cb848`. Corrigé dans le design. À
+répercuter si ce mapping est réutilisé ailleurs.
+
+À revoir à l'œil : la photo de la planche 2 (« il a commencé par la coupe »)
+montre un barbier avec un téléphone, pas un geste de coupe. Elle vient du bas du
+cadre 9:16 de la story « rasage à l'ancienne ». Si une vraie photo de coupe
+existe dans `medias/le-loft/`, elle sera meilleure.
