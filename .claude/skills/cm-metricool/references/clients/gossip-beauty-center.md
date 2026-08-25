@@ -1,5 +1,24 @@
 # Gossip Beauty Center by Sarah (Argenteuil) — fiche client
 
+> ## ⛔ COMPTE DÉSACTIVÉ — 25/08/2026
+>
+> Maxime a demandé la désactivation du compte le 25/08/2026. **Ne plus produire
+> de contenu, ne plus programmer, ne plus brancher de média, ne plus générer de
+> compte rendu client.** Le compte est sorti du récap du lundi et de la
+> détection de nouveaux médias (`recaps/clients-config.json`, `actif: false`).
+>
+> **Ce qui restait dans Metricool au moment de la désactivation :** 39 contenus
+> du 25/08 au 23/10, dont 32 posts feed et 7 stories. **Tous en brouillon, aucun
+> en publication automatique** : rien ne partira tout seul, il n'y avait donc
+> pas d'urgence à purger. Quatre posts sans média et quatre carrousels encore
+> à la maquette (`[CARROUSEL - contenu à mettre en page]`) faisaient partie du
+> lot. **Ces brouillons n'ont pas été supprimés** : la suppression est
+> irréversible et Maxime ne l'a pas demandée. À trancher avec lui.
+>
+> La fiche ci-dessous est conservée telle quelle : elle sert si le compte
+> revient, et elle contient des règles qui ont demandé du travail (calendrier
+> hégirien, salon exclusivement féminin, ton).
+
 ## Gossip Beauty Center by Sarah (Argenteuil) — profil éditorial validé juillet 2026
 - Prestations : coiffure, spa, bien-être, hammam, massage. Tarifs : NON vérifiés — à demander (lien Planity ou liste) avant tout calcul ROI.
 - Ton : classe à prix abordable — vouvoiement élégant, chaleureux, jamais de promo inventée.

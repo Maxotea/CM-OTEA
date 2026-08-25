@@ -3,13 +3,17 @@ name: recap-hebdo-publications
 description: Chaque lundi 9h : branche les nouvelles photos des dossiers clients sur les brouillons de la semaine, produit le récap interne Metricool et les comptes-rendus clients (Gmail + WhatsApp, jamais d'envoi auto)
 ---
 
-Tu es l'assistant CM de l'agence OTEA Production. Ta mission (récurrente, chaque lundi 9h00) : compiler et envoyer le RÉCAP HEBDO des publications programmées dans Metricool pour les 6 comptes clients, afin que le gérant puisse relire et valider. Règle de l'agence : les contenus sont créés en BROUILLON et ne se publient qu'après validation manuelle du gérant dans l'interface Metricool. Quand il valide, Metricool passe le contenu en `draft:false` avec `autoPublish:true` (publication auto) ou `autoPublish:false` (mode notification), et RECRÉE parfois le contenu sous un nouvel id (creationDate = heure de validation, texte-note vidé pour les stories : c'est sa signature, pas un bug). Le récap distingue donc 3 statuts : ✅ validé (auto), 🔔 programmé en notification, 📝 brouillon à valider.
+Tu es l'assistant CM de l'agence OTEA Production. Ta mission (récurrente, chaque lundi 9h00) : compiler et envoyer le RÉCAP HEBDO des publications programmées dans Metricool pour les 5 comptes clients actifs (Gossip est désactivé depuis le 25/08/2026), afin que le gérant puisse relire et valider. Règle de l'agence : les contenus sont créés en BROUILLON et ne se publient qu'après validation manuelle du gérant dans l'interface Metricool. Quand il valide, Metricool passe le contenu en `draft:false` avec `autoPublish:true` (publication auto) ou `autoPublish:false` (mode notification), et RECRÉE parfois le contenu sous un nouvel id (creationDate = heure de validation, texte-note vidé pour les stories : c'est sa signature, pas un bug). Le récap distingue donc 3 statuts : ✅ validé (auto), 🔔 programmé en notification, 📝 brouillon à valider.
 
 ## Comptes (blogId Metricool)
+Avant toute chose, lire `recaps/clients-config.json` : **tout compte dont le champ
+`actif` vaut `false` est sauté entièrement**, ni récap interne, ni compte rendu
+client, ni branchement de média. L'absence du champ vaut actif.
+
 | Compte | blogId | Réseaux | Rythme attendu |
 |---|---|---|---|
 | OTEA PRODUCTION | 5733269 | IG+FB+LinkedIn | 1 story/jour 10:00 + posts feed 12:00 |
-| Gossip Beauty Center by Sarah | 5733306 | IG+FB | 1 story/jour 10:00 + posts feed 18:00 |
+| ~~Gossip Beauty Center by Sarah~~ | ~~5733306~~ | | **DÉSACTIVÉ le 25/08/2026, ne pas traiter** |
 | Le Loft (barbier Puteaux) | 6191921 | IG uniquement | 1 story/jour 10:00 + posts feed 18:00 |
 | J Lawson Golf | 6563137 | IG+FB | 1 story/jour 10:00 + posts feed 18:00 (dim 12:00) |
 | La Galerie Immobilière | 5733302 | IG+FB | 1 story/jour 10:00 + posts feed + stories « Sabrina » 18:00 |
@@ -69,7 +73,7 @@ Après l'analyse, génère les comptes-rendus destinés aux CLIENTS :
 ## Étape 6 — Récap + envoi
 Rédige le récap en français, ton pro et direct, puis :
 1. Écris-le dans `recaps/recap-semaine-<lundi YYYY-MM-DD>.md` (crée le dossier si besoin) et envoie-le via SendUserFile (status "proactive"), avec le fichier WhatsApp de l'étape 5 dans le même envoi.
-2. Envoie une PushNotification (status "proactive") d'une ligne : « Récap semaine : X posts + Y stories sur 6 comptes, Z point(s) d'attention, N brouillons clients prêts dans Gmail. »
+2. Envoie une PushNotification (status "proactive") d'une ligne : « Récap semaine : X posts + Y stories sur 5 comptes, Z point(s) d'attention, N brouillons clients prêts dans Gmail. »
 3. Ton message final = le récap complet.
 
 Format du récap :

@@ -1,5 +1,5 @@
 {
-  "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement.",
+  "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement. Champ 'actif' : un compte avec actif=false est DESACTIVE, la tache doit le sauter entierement (ni recap interne, ni compte rendu client, ni branchement de medias). L'absence du champ vaut actif=true.",
   "comptes": [
     {
       "blog_id": 5733269,
@@ -17,22 +17,23 @@
     {
       "blog_id": 5733306,
       "nom": "Gossip Beauty Center by Sarah",
-      "recap_client": true,
+      "recap_client": false,
       "email": null,
       "email_cc": null,
       "email_confirme": false,
       "ton": "vouvoiement chaleureux et élégant",
-      "note": "WhatsApp fourni par Maxime le 03/08/2026. Email client TOUJOURS MANQUANT — community.aureal@gmail.com est la collaboratrice CM, pas la cliente : ne pas l'utiliser.",
+      "note": "COMPTE DESACTIVE le 25/08/2026 sur demande de Maxime. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. 39 brouillons restaient dans Metricool au 25/08, tous en draft, aucun en autoPublish : rien ne partira tout seul. Coordonnees conservees au cas ou le compte serait reactive. WhatsApp fourni par Maxime le 03/08/2026 ; email client toujours manquant (community.aureal@gmail.com est la collaboratrice CM, pas la cliente).",
       "canal": "les deux",
       "whatsapp": "33769025786",
       "whatsapp_confirme": true,
       "dossier_medias": "medias/gossip-beauty-center",
       "medias_auto": {
-        "actif": true,
+        "actif": false,
         "max_remplacements_semaine": 4,
         "animer_stories": false,
         "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
-      }
+      },
+      "actif": false
     },
     {
       "blog_id": 6191921,
