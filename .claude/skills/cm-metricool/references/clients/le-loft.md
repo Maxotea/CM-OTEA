@@ -152,3 +152,77 @@ pendant trois semaines.
 commercial, les visuels IA sont retirés du calendrier — pas mis en réserve,
 retirés.** Un visuel IA sur un commerce réel n'est acceptable que tant qu'il
 n'existe strictement aucune alternative, et jamais avec un visage.
+
+
+---
+
+## 🎭 CARROUSEL « FAUX DRAMA » — 25/08/2026
+
+Maxime a envoyé la trend de **@teamoperou14_** (restaurant péruvien, Paris 14e)
+et demandé de la reprendre pour Le Loft, en mettant en avant **le soin barbier
+mais surtout le côté bien-être, head spa compris**.
+
+### La mécanique de la trend, relevée sur le post source
+Six planches. Une fausse accusation publique en capitales sur la première
+(« VOUS ÊTES PARTIES SANS PAYER ! »), puis le prétexte sert à dérouler toute la
+carte plat par plat, et la dernière planche révèle la blague : « IL N'Y A JAMAIS
+EU DE SOFIA ET INÈS. On voulait juste trouver une excuse pour vous montrer nos
+plats. » Le ressort est l'appât : on lit par curiosité de ragot, on reste pour
+le produit.
+
+### L'adaptation
+Sept planches. Un client fictif est accusé d'être parti sans payer, et la liste
+de ce qu'il a « pris » est le parcours complet du salon. La montée porte sur le
+bien-être : la coupe et la barbe sont expédiées en deux planches, **le head spa
+occupe le centre**, le soin visage suit, et la chute nomme l'offre entière.
+
+| # | Photo | Titre |
+|---|---|---|
+| 1 | équipe dans le salon | il est parti sans payer |
+| 2 | barbier, geste précis | il a commencé par la coupe |
+| 3 | taille de barbe | puis il a pris la barbe |
+| 4 | **le bac head spa** | **et là, il a demandé le head spa** |
+| 5 | soin visage, masque | il a enchaîné sur le soin visage |
+| 6 | barbier face objectif | il est reparti comme ça |
+| 7 | équipe, vue large | ce client n'a jamais existé |
+
+**Aucun nom inventé.** Le post source nommait deux clientes ; ici le client
+reste anonyme. Sur un commerce de quartier, un prénom sur une accusation de vol,
+même démentie à la planche 7, peut être attribué à un habitué réel.
+
+### D'où viennent les photos
+`medias/le-loft/` est ignoré par git et absent des conteneurs de session. Les
+21 vraies photos du shooting du 15/07 **restent accessibles autrement** : les
+sept stories vidéo d'août branchées sur le compte sont ces mêmes photos animées
+en i2v, hébergées sur CloudFront. On extrait la première frame, et **on recadre
+le bas en 4:5** parce que le texte des stories est incrusté en haut du cadre
+9:16. Contrôle OCR du haut de chaque planche avant de brancher : aucun titre de
+story ne doit survivre au recadrage.
+
+Le mapping story vers thème a été retrouvé en lisant le texte incrusté à l'OCR,
+pas en faisant confiance aux noms de fichiers.
+
+### La composition
+| | |
+|---|---|
+| Format | 1080×1350, le 4:5 du feed |
+| Voile | noir #0E0E0E en dégradé, transparent à y=600, opaque à y=830 |
+| Titre | Playfair Display bas-de-casse passé en capitales, doré **#CEAA69**, interlettré |
+| Filet | doré, la signature graphique du compte |
+| Corps | Libre Baskerville italique crème **#F0E6D8** |
+
+Script : `scripts/loft-carrousel-trend.py`.
+
+### Vérification (25/08/2026)
+Post **366400245**, vendredi 28/08 à 18h, Instagram seul, `draft:true`,
+`autoPublish:false`, 7 médias. Accents contrôlés à l'OCR sur les sept planches.
+
+⚠️ `schedule_post` a refusé la création trois fois de suite (« You need to
+include at least one provider »), en booléens comme en chaînes. C'est le
+résolveur Zapier qui perd les indicateurs de réseau. **Passer par
+`bulk_schedule_posts` puis `set_post_media_list`** : cette chaîne crée en
+brouillon, à l'heure de Paris exacte, et accepte les sept médias d'un carrousel.
+
+⚠️ Sept publications du 26/08 au 02/09 sont en `draft:false` / `autoPublish:true`.
+Elles ne viennent pas de cette intervention : c'est la signature d'une
+validation faite dans l'interface. À confirmer avec Maxime si ce n'est pas lui.
