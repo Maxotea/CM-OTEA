@@ -73,6 +73,9 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
    Prompt i2v **verrouillé sur l'identité** et **contrôle de la dernière frame**
    contre la photo source avant de brancher quoi que ce soit.
    → `.claude/memories/stories-vraies-photos-sans-ia.md`
+   → Chaîne complète validée le 25/08/2026 (crop 9:16 → i2v → plein cadre
+     1080×1920 → texte en overlay → muette → brouillon) :
+     `.claude/memories/story-video-plein-cadre.md`
    - **Limite absolue, quel que soit le compte : aucune personne réelle
      identifiable générée.** On ne fabrique jamais le visage d'un client, d'un
      participant ou de Maxime.

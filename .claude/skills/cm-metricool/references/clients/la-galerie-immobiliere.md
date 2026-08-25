@@ -332,3 +332,25 @@ calendrier** : ce post n'existait pas au passage du 21/08.
 ### Vérification (24/08/2026)
 `62 publications · 62 en brouillon · 0 en autoPublish · noMedia 17 = les slots
 REEL en attente des rushes de Sabrina`
+
+
+---
+
+## ✅ PROCESS VALIDÉ — 25/08/2026
+
+Maxime : « c'est parfait pour la galerie immobilière, garder ce process ».
+
+Le format story de ce compte est **figé** : vraie photo d'un de leurs biens,
+recadrée 9:16 dans PIL, animée en i2v caméra verrouillée, **plein cadre
+1080×1920**, voile sable dégradé en bas avec le titre en Playfair Display, pied
+`puteaux · paris ouest`, **muette**, branchée en brouillon puis auditée. Ne pas
+proposer autre chose sans qu'il le demande.
+
+La chaîne réutilisable, avec ses trois pièges mesurés et les pièges d'outillage
+Metricool, est écrite dans `.claude/memories/story-video-plein-cadre.md` pour
+qu'elle s'applique par défaut sur tous les comptes, pas seulement ici.
+
+Un détail corrigé au passage : l'index des mémoires annonçait encore « animer
+les photos par mouvement de caméra ffmpeg, jamais d'i2v ». C'est cette ligne qui
+avait produit la v1 en `zoompan` le 21/08. Elle dit maintenant l'inverse, qui
+est la règle réelle depuis le 21/08.

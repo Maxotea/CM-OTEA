@@ -63,6 +63,15 @@ Pour CHAQUE post non-reel (photo simple, carrousel), choisir le visuel dans cet 
 
 Les reels restent tournés avec de vraies vidéos (script reel-script + B-roll listé depuis la banque).
 
+**Stories : format figé.** Une story se produit toujours de la même façon, sur
+tout compte qui a de vraies photos : vraie photo du client recadrée 9:16 dans
+PIL, animée en i2v caméra verrouillée (`kling3_0_turbo`, 5 s, 7,5 crédits),
+composée **plein cadre 1080×1920** avec le texte incrusté en ffmpeg par-dessus,
+**muette**, branchée en brouillon puis vérifiée à `audit_publication_safety`.
+Jamais une carte typographique seule, jamais une photo de banque, jamais une
+vidéo logée dans une vignette, jamais un `zoompan` seul. Process complet et
+pièges mesurés : `.claude/memories/story-video-plein-cadre.md`.
+
 ## Étape 5 — Écriture
 
 Scripts de reels : passer par le skill `reel-script` (hook chiffré, 3 étapes, cliffhanger, ≤175 mots), puis `reel-lint` avant tournage. Légendes : hook + valeur + 1 seul CTA + 4-6 hashtags niche. Toujours finir la légende par le pont vers l'offre du client (fitting, RDV, visite…).
