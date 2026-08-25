@@ -39,6 +39,10 @@ La séquence de la session (toujours commencer par `git pull`) :
      `drive_dossier`, `base64Content` du xlsx, `contentMimeType` xlsx, conversion par
      défaut (le fichier devient un Google Sheet, éditable au téléphone). Titre :
      « Validation hebdo — <Nom> — semaine du <JJ-MM> ».
+     **Avant de déposer, vérifier qu'un fichier de la semaine visée n'est pas déjà dans
+     le dossier** (`search_files` sur le titre) : un tableau peut avoir été préparé à
+     l'avance, à la demande de Maxime. Dans ce cas, ne pas en déposer un second —
+     reprendre l'identifiant existant pour la suite de la séquence.
    - Déplacer l'ancien fichier (le `drive_fichier` actuel) vers `drive_archives` :
      `update_file` avec `parentId` = `drive_archives`. Ne JAMAIS le supprimer.
    - Noter le nouvel identifiant dans `reviews/config.json` → `drive_fichier`.
