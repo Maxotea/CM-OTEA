@@ -34,7 +34,7 @@ Les outils Metricool passent par Zapier. Toujours appeler `Zapier:list_enabled_z
 |---|---|---|---|
 | jlawsongolf | 6563137 | Instagram, Facebook | Fitting de clubs de golf |
 | LE LOFT | 6191921 | Instagram | Barbier |
-| ~~Gossip Beauty Center~~ | ~~5733306~~ | | **DÉSACTIVÉ le 25/08/2026** : ne rien produire ni programmer sans un feu vert explicite de Maxime |
+| ~~Gossip Beauty Center~~ | ~~5733306~~ | | **DÉSACTIVÉ le 28/08/2026** : ne rien produire ni programmer sans un feu vert explicite de Maxime |
 | La Galerie Immobilière | 5733302 | IG, FB, TikTok | Immobilier |
 | OTEA PRODUCTION | 5733269 | IG, FB, TikTok, YT, LinkedIn | Production vidéo |
 | Otea Filmakers | 4728418 | IG, FB, TikTok, LinkedIn | Production vidéo |

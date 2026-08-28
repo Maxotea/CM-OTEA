@@ -336,7 +336,7 @@ REEL en attente des rushes de Sabrina`
 
 ---
 
-## ✅ PROCESS VALIDÉ — 25/08/2026
+## ✅ PROCESS VALIDÉ — 28/08/2026
 
 Maxime : « c'est parfait pour la galerie immobilière, garder ce process ».
 
@@ -354,3 +354,38 @@ Un détail corrigé au passage : l'index des mémoires annonçait encore « anim
 les photos par mouvement de caméra ffmpeg, jamais d'i2v ». C'est cette ligne qui
 avait produit la v1 en `zoompan` le 21/08. Elle dit maintenant l'inverse, qui
 est la règle réelle depuis le 21/08.
+
+
+---
+
+## 📭 MAIL DE VALIDATION MANQUANT — 28/08/2026
+
+Maxime : « je n'ai pas reçu le mail récap pour La Galerie, c'est normal ? »
+
+Non, et il ne l'avait pas raté : **le brouillon n'a jamais été créé**. La
+génération du vendredi 28/08 à 06h26 a produit cinq brouillons Gmail (J Lawson,
+Le Loft, Pierre Huiban, Otea Filmakers, Gossip) et **aucun pour La Galerie**.
+
+### La cause, vérifiée dans Drive
+Le tableau de validation de La Galerie pour la semaine du 31/08 **existait déjà**
+depuis le **mardi 25/08 à 15h02**, créé par une exécution antérieure. Les six
+autres tableaux, eux, datent tous du 28/08 au matin. La génération du 28/08 a
+donc trouvé le tableau en place et sauté le compte, mail compris.
+
+**L'idempotence est calée sur l'existence du tableau, pas sur celle du
+brouillon.** Un tableau produit hors du cycle habituel fait donc disparaître le
+mail sans aucune erreur visible. À corriger dans le générateur : vérifier le
+brouillon séparément du tableau.
+
+### Ce qui a été fait
+Le tableau était complet et exploitable (6 publications, LGI-01 à LGI-06, du
+31/08 au 05/09). Le brouillon manquant a été recréé à la main, à Sabrina avec
+Rémi en copie, sur le même modèle que les cinq autres.
+
+Tableau : https://docs.google.com/spreadsheets/d/1UFOJ-xNx8r-_7NXovCXpPHBzZ5iz2MiaSdgHK-J0RzU/edit
+Dossier : https://drive.google.com/drive/folders/1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34YrLO
+
+⚠️ **Le générateur de tableaux ne lit pas `recaps/clients-config.json`.** Gossip
+a reçu son tableau et son brouillon le 28/08 au matin alors que le compte devait
+être désactivé. La désactivation posée dans ce dépôt ne couvre donc que la tâche
+du lundi, pas ce système. À propager.

@@ -1,8 +1,8 @@
 # Gossip Beauty Center by Sarah (Argenteuil) — fiche client
 
-> ## ⛔ COMPTE DÉSACTIVÉ — 25/08/2026
+> ## ⛔ COMPTE DÉSACTIVÉ — 28/08/2026
 >
-> Maxime a demandé la désactivation du compte le 25/08/2026. **Ne plus produire
+> Maxime a demandé la désactivation du compte le 28/08/2026. **Ne plus produire
 > de contenu, ne plus programmer, ne plus brancher de média, ne plus générer de
 > compte rendu client.** Le compte est sorti du récap du lundi et de la
 > détection de nouveaux médias (`recaps/clients-config.json`, `actif: false`).

@@ -156,7 +156,7 @@ n'existe strictement aucune alternative, et jamais avec un visage.
 
 ---
 
-## 🎭 CARROUSEL « FAUX DRAMA » — 25/08/2026
+## 🎭 CARROUSEL « FAUX DRAMA » — 28/08/2026
 
 Maxime a envoyé la trend de **@teamoperou14_** (restaurant péruvien, Paris 14e)
 et demandé de la reprendre pour Le Loft, en mettant en avant **le soin barbier
@@ -213,7 +213,7 @@ pas en faisant confiance aux noms de fichiers.
 
 Script : `scripts/loft-carrousel-trend.py`.
 
-### Vérification (25/08/2026)
+### Vérification (28/08/2026)
 Post **366400245**, vendredi 28/08 à 18h, Instagram seul, `draft:true`,
 `autoPublish:false`, 7 médias. Accents contrôlés à l'OCR sur les sept planches.
 
@@ -228,7 +228,7 @@ Elles ne viennent pas de cette intervention : c'est la signature d'une
 validation faite dans l'interface. À confirmer avec Maxime si ce n'est pas lui.
 
 
-### 🎨 Version Canva restylable — 25/08/2026
+### 🎨 Version Canva restylable — 28/08/2026
 
 Maxime a trouvé la première version « trop mainstream, basique, sans
 originalité » et a demandé le carrousel dans Canva pour le retravailler. Le

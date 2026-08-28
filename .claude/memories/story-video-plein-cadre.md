@@ -5,10 +5,10 @@ metadata:
   node_type: memory
   type: process
   originSessionId: 5d260eaa-a401-5488-9c85-8ed7413f4910
-  modified: 2026-08-25T00:00:00.000Z
+  modified: 2026-08-28T00:00:00.000Z
 ---
 
-**Maxime a validé ce process le 25/08/2026** (« c'est parfait pour la galerie
+**Maxime a validé ce process le 28/08/2026** (« c'est parfait pour la galerie
 immobilière, garder ce process »). C'est désormais **la façon par défaut de
 produire une story**, sur La Galerie et sur tout compte qui possède de vraies
 photos. Ne pas repartir d'un autre format sans qu'il le demande.
@@ -52,7 +52,7 @@ ou rien.
 01/08 (« pas des images animées mais juste des zooms »). Secours **uniquement**
 si un visage se déforme malgré le prompt renforcé.
 
-⚠️ **Le travelling avant a été écarté par Maxime** (25/08) alors qu'il donnait
+⚠️ **Le travelling avant a été écarté par Maxime** (28/08) alors qu'il donnait
 3× le mouvement de Run On Invest : en avançant, le modèle extrapole ce que la
 photo ne montrait pas, et le contrôle de dernière frame ne vaut plus rien.
 Caméra fixe.
