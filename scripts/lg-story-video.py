@@ -65,9 +65,18 @@ SOMBRE = (178, 153, 124)         # #B2997C
 # Le voile sable qui porte le texte : transparent au-dessus de Y_VOILE0,
 # opaque à partir de Y_VOILE1. L'image reste pleine largeur et visible sur
 # les 60 % du haut.
-Y_VOILE0, Y_VOILE1 = 1150, 1330
-ALPHA_VOILE = 245
-Y_TITRE = 1360
+Y_VOILE0, Y_VOILE1 = 980, 1200
+ALPHA_VOILE = 255
+Y_TITRE = 1260
+
+# Le médaillon : leur logo rond, disque noir à lettrage blanc, relevé sur leur
+# site. C'est la version la plus lisible sur photo : la variante beige a du
+# blanc sur beige, illisible en petit (luminance moyenne mesurée 192 contre 36).
+LOGO_URL = ("https://lagalerieimmobiliere.com/wp-content/uploads/2021/12/"
+            "rond-logo3.webp.png")
+LOGO = FD + "/lg-rond.png"
+LOGO_D = 168                     # diamètre du médaillon
+LOGO_Y = 108                     # marge haute
 DUREE = 5.0
 
 FD = "f"
@@ -108,7 +117,7 @@ PLANS = {
 def boot():
     os.makedirs(FD, exist_ok=True)
     os.makedirs("o", exist_ok=True)
-    for chemin, url in ((SERIF, SERIF_URL), (MONO, MONO_URL)):
+    for chemin, url in ((SERIF, SERIF_URL), (MONO, MONO_URL), (LOGO, LOGO_URL)):
         if not os.path.exists(chemin):
             urllib.request.urlretrieve(url, chemin)
 
@@ -136,8 +145,25 @@ def wrap(d, txt, font, maxw):
     return out
 
 
+def medaillon(im):
+    """Pose leur logo rond en haut, cerclé de sable.
+
+    Le cercle sable n'est pas décoratif : le logo est un disque noir, il
+    disparaîtrait sur une photo sombre sans ce liseré.
+    """
+    logo = Image.open(LOGO).convert("RGBA").resize((LOGO_D, LOGO_D),
+                                                   Image.LANCZOS)
+    cx, cy = W // 2, LOGO_Y + LOGO_D // 2
+    r = LOGO_D // 2
+    anneau = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(anneau).ellipse(
+        [cx - r - 4, cy - r - 4, cx + r + 4, cy + r + 4], fill=SABLE + (255,))
+    im.alpha_composite(anneau)
+    im.paste(logo, (cx - r, cy - r), logo)
+
+
 def calque(chemin, titre, sous_titre):
-    """Calque PNG : voile sable dégradé, titre, filet, sous-titre, pied."""
+    """Calque PNG : médaillon, voile sable, titre, filet, sous-titre, pied."""
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
 
@@ -151,10 +177,10 @@ def calque(chemin, titre, sous_titre):
 
     marge = 90
     maxw = W - 2 * marge
-    taille = 78
+    taille = 96
     ft = sf(taille)
     lignes = wrap(d, titre.lower(), ft, maxw)
-    while len(lignes) > 2 and taille > 52:
+    while len(lignes) > 2 and taille > 64:
         taille -= 6
         ft = sf(taille)
         lignes = wrap(d, titre.lower(), ft, maxw)
@@ -170,18 +196,26 @@ def calque(chemin, titre, sous_titre):
     d.line(pts, fill=ENCRE, width=3, joint="curve")
 
     if sous_titre:
-        fs = sf(31, 400)
-        yy = y + 78
-        for ligne in wrap(d, sous_titre, fs, maxw):
+        # le sous-titre rétrécit plutôt que de mordre sur le pied de page
+        ts = 38
+        fs = sf(ts, 400)
+        lg = wrap(d, sous_titre, fs, maxw)
+        while len(lg) > 3 and ts > 30:
+            ts -= 2
+            fs = sf(ts, 400)
+            lg = wrap(d, sous_titre, fs, maxw)
+        yy = y + 84
+        for ligne in lg:
             d.text((marge, yy), ligne, font=fs, fill=ENCRE)
-            yy += 44
+            yy += int(ts * 1.42)
 
-    fp = ImageFont.truetype(MONO, 23)
+    fp = ImageFont.truetype(MONO, 26)
     x = marge
     for ch in "puteaux · paris ouest":
         d.text((x, H - 132), ch, font=fp, fill=SOMBRE)
         x += d.textlength(ch, font=fp) + 3
 
+    medaillon(im)
     im.save(chemin)
 
 
