@@ -279,6 +279,24 @@ SPEC = {
  "n29b": ("18", "le cœur de la maison",    "La cuisine, là où tout se passe."),
  "n30a": ("17", "le calme du dimanche",    "Prenez le temps. Nous aussi."),
  "n30b": ("12", "inspiration",             "La terrasse de fin d'été."),
+
+# --- Vague du 29/08 au 13/09, habillage logo + texte agrandi (28/08/2026) ----
+# Une seule photo par story, aucune répétition sur la vague.
+    "d2908b": ("18", "le cœur de la maison",   "La cuisine, là où tout se passe."),
+    "d3108":  ("20", "belle semaine",          "À très vite à l'agence."),
+    "d0109":  ("01", "bonne rentrée",          "L'agence est ouverte, comme toujours."),
+    "d0209":  ("28", "en ligne ou sur place",  "Un algorithme connaît votre quartier, pas votre bien."),
+    "d0309":  ("15", "la lumière",             "Le critère qu'on sous-estime le plus."),
+    "d0409":  ("13", "cinq tendances",         "Le marché de Puteaux à la rentrée."),
+    "d0509":  ("12", "week-end de visites",    "Les portes s'ouvrent, on vous accompagne."),
+    "d0609":  ("17", "inspiration",            "Le calme du dimanche."),
+    "d0709":  ("08", "les taux ont bougé",     "Votre budget aussi. On refait le point."),
+    "d0809":  ("09", "les taux, où en est-on", "On regarde le marché avec vous."),
+    "d0909":  ("02", "votre dpe, on le relit", "La classe a peut-être changé."),
+    "d1009":  ("24", "une façade raconte tout", "On lit un bien avant même d'entrer."),
+    "d1109":  ("11", "pourquoi sabrina",       "Cinq raisons de lui confier votre projet."),
+    "d1209":  ("06", "le charme de l'ancien",  "Ce qui ne se refabrique pas."),
+    "d1309":  ("30", "repérage de quartier",   "Avant les Journées du Patrimoine."),
 }
 
 if __name__ == "__main__":

@@ -389,3 +389,52 @@ Dossier : https://drive.google.com/drive/folders/1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34Yr
 a reçu son tableau et son brouillon le 28/08 au matin alors que le compte devait
 être désactivé. La désactivation posée dans ce dépôt ne couvre donc que la tâche
 du lundi, pas ce système. À propager.
+
+
+---
+
+## 🔁 VAGUE RELOOKÉE — 28/08/2026
+
+Maxime : « rajouter le logo, et que le texte soit plus visible ».
+
+### Ce qui change dans l'habillage
+| | Avant | Après |
+|---|---|---|
+| Logo | absent | médaillon rond en haut au centre, 168 px, cerclé de sable |
+| Voile sable | démarre à y=1150, alpha 245 | démarre à **y=980**, **alpha 255** |
+| Titre | 78 px | **96 px** |
+| Sous-titre | 31 px | **38 px**, rétrécit seul plutôt que de mordre sur le pied |
+| Pied | 23 px | 26 px |
+
+Le contraste n'était pas en cause : le sable et l'encre sont à 7,7 pour 1. Le
+problème était la taille et la place.
+
+### Le logo
+Relevé sur leur site. Deux versions existent : `rond-logo2.png`, disque beige à
+lettrage blanc, et `rond-logo3.webp.png`, disque noir à lettrage blanc.
+**C'est la version noire qui est utilisée** : la beige est du blanc sur beige,
+luminance moyenne mesurée 192 contre 36, illisible en médaillon. Le liseré sable
+autour n'est pas décoratif, sans lui le disque noir disparaît sur une photo
+sombre.
+
+### Les 15 stories refaites
+Du 29/08 au 13/09, une photo différente par story, aucune répétition, **zéro
+crédit** (les 19 plans i2v du 21/08 sont réutilisés). Clés `d2908b` à `d1309`
+dans `scripts/lg-story-video.py`.
+
+Les trois stories des 29 et 30/08 déjà validées par Maxime en publication
+automatique **n'ont pas été touchées** : les modifier aurait effacé sa
+validation.
+
+### ⚠️ Neuf stories étaient reparties en photo de banque
+Les créneaux des 02, 03, 04, 06, 07, 09, 10, 11 et 13/09 (identifiants
+`3676891xx`) étaient branchés sur des **PNG fixes** dont les libellés portent la
+mention « banque · … ». C'est le même symptôme que la régression du 24/08 :
+quelque chose écrit sur ce calendrier entre deux passages, avec exactement les
+visuels que Sabrina a reprochés le 19/08. Ces neuf créneaux sont maintenant en
+vidéo plein cadre sur leurs biens.
+
+### Vérification (28/08/2026)
+`25 publications · 22 brouillons · 3 en publication automatique (les validations
+de Maxime des 29 et 30/08) · 2 sans média = les deux REELs en attente des rushes
+de Sabrina`
