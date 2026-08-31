@@ -84,6 +84,10 @@ LOGO_URL = ("https://lagalerieimmobiliere.com/wp-content/uploads/2021/12/"
 LOGO = "f/lg-rond.png"
 LOGO_D = 190                     # diamètre du médaillon
 LOGO_Y = 300                     # sous la zone recouverte par l'interface
+# Coin haut-droite (demandé le 31/08/2026). En x, on s'aligne sur la marge du
+# texte (90 px) plutôt que de coller au bord : le bord droit est là où le
+# pouce se pose, et le liseré sable serait rogné à l'affichage.
+LOGO_X = W - 90 - LOGO_D         # 800 -> 990
 DUREE = 5.0
 
 FD = "f"
@@ -157,14 +161,14 @@ def wrap(d, txt, font, maxw):
 
 
 def medaillon(im):
-    """Pose leur logo rond en haut, cerclé de sable.
+    """Pose leur logo rond en haut à droite, cerclé de sable.
 
     Le cercle sable n'est pas décoratif : le logo est un disque noir, il
     disparaîtrait sur une photo sombre sans ce liseré.
     """
     logo = Image.open(LOGO).convert("RGBA").resize((LOGO_D, LOGO_D),
                                                    Image.LANCZOS)
-    cx, cy = W // 2, LOGO_Y + LOGO_D // 2
+    cx, cy = LOGO_X + LOGO_D // 2, LOGO_Y + LOGO_D // 2
     r = LOGO_D // 2
     anneau = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(anneau).ellipse(

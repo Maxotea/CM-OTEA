@@ -465,6 +465,11 @@ littéralement cachés derrière l'interface.
 Les quinze vidéos de la vague 29/08 → 13/09 ont été refabriquées et
 rebranchées avec cette mise en page.
 
+**Puis le médaillon est passé en haut à droite** (demandé le 31/08). En x il
+s'aligne sur la marge du texte, 90 px, et pas sur le bord : le bord droit est
+là où le pouce se pose pour faire défiler, et le liseré sable se ferait rogner
+à l'affichage. Position finale : **x 800 → 990, y 300 → 490**.
+
 ## ⚠️ RÉÉCRITURE EN AUTO-PUBLISH — 31/08/2026
 
 Troisième occurrence du processus qui réécrit ce calendrier entre deux
