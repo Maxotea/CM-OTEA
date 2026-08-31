@@ -94,23 +94,62 @@ Les deux leviers, dans cet ordre :
 2. **Rendre le travail visible.** Le compte rendu mensuel avec les chiffres
    est ce qui transforme « il poste des trucs » en « il pilote mon compte ».
 
-## 6. Grille proposée
+## 6. Grille retenue (révisée à la baisse le 31/08/2026)
 
-Trois formules. Les volumes sont des volumes **publiés**, pas produits : c'est
-ce que le client voit et ce sur quoi il juge.
+Maxime a maintenu que 690 / 1 290 / 1 890 restait trop élevé pour sa
+clientèle. Décision prise, grille refaite. La règle appliquée : **le volume
+descend avec le prix.** Baisser le tarif en gardant 45 contenus par mois
+serait donner la marge, pas gagner des clients.
+
+Les volumes sont des volumes **publiés**, pas produits.
 
 | | ESSENTIEL | SIGNATURE | CROISSANCE |
 |---|---|---|---|
-| **Prix HT / mois** | **690 €** | **1 290 €** | **1 890 €** |
+| **Prix HT / mois** | **390 €** | **690 €** | **1 190 €** |
 | Réseaux | 1 (Instagram) | 2 (Instagram + Facebook) | 2 à 3 |
-| Contenus publiés / mois | 12 | 20 | 30 |
-| dont stories vidéo animées | 4 | 8 | 12 |
+| Contenus publiés / mois | 8 | 14 | 20 |
+| dont stories vidéo animées | 2 | 5 | 8 |
 | Reels | non | 1 | 2 |
-| Calendrier calé sur leur actualité | oui | oui | oui |
+| Calendrier calé sur leur actualité | non, calendrier type | oui | oui |
 | Validation avant publication | oui | oui | oui |
-| Compte rendu | mensuel | mensuel chiffré | mensuel chiffré + point trimestriel |
+| Compte rendu | mensuel simple | mensuel chiffré | mensuel chiffré + point trimestriel |
 | Tournage sur place | option | option | 1 demi-journée / trimestre |
-| Position dans le marché | haut de la bande 300-800 | bas de la bande 1200-2000 | haut de la bande 1200-2000 |
+| Position dans le marché | bande 300-800 | bande 300-800, haut | bas de la bande 800-1800 |
+
+### Le contrôle qui compte : le prix à la pièce
+
+| Formule | Contenus publiés | Prix à la pièce |
+|---|---:|---:|
+| ESSENTIEL | 8 | **49 €** |
+| SIGNATURE | 14 | **49 €** |
+| CROISSANCE | 20 | **60 €** |
+| *Aujourd'hui, Le Loft à 1 200 € pour 46 produits* | *46* | *26 €* |
+
+C'est le résultat contre-intuitif de l'opération : **en baissant le prix
+affiché et le volume en même temps, la valeur à la pièce passe de 26 € à
+49 €.** L'affichage devient accessible, la rentabilité s'améliore. C'est
+exactement l'inverse de ce que produirait une simple remise.
+
+### Le budget temps, la vraie contrainte
+
+Au TJM marché de 400 €, chaque formule doit tenir dans :
+
+| Formule | Temps maximum par mois |
+|---|---|
+| ESSENTIEL 390 € | **1 jour** |
+| SIGNATURE 690 € | **1,7 jour** |
+| CROISSANCE 1 190 € | **3 jours** |
+
+Au-delà, la formule est vendue à perte, quel que soit le prix affiché. C'est
+le seul chiffre à surveiller.
+
+### Le plancher
+
+Le bas de la fourchette du TJM community manager freelance français est de
+**250 € HT**. Une mission qui prend une journée et demie ne peut donc pas se
+vendre en dessous de **375 €**. **ESSENTIEL à 390 € est le plancher.** En
+dessous, ce n'est plus une remise commerciale, c'est du travail vendu sous le
+prix plancher du métier.
 
 Options hors forfait : demi-journée de tournage, campagne ponctuelle
 (ouverture, lancement, recrutement), refonte complète d'un compte.
@@ -120,19 +159,20 @@ client qui conclut que ça ne marche pas.
 
 ## 7. Ce que ça change pour les comptes en cours
 
-Si Le Loft est bien à 1 200 €, il est **à la formule SIGNATURE moins 90 €**
-tout en recevant plus du double du volume prévu. Deux sorties possibles :
+Bonne surprise : **la nouvelle grille ne force aucune renégociation.**
 
-- **Aligner sans changer le prix** : ramener le volume à 20 contenus publiés,
-  tous issus de ses vraies photos. Même facture, moins de temps, un client qui
-  se reconnaît enfin dans son compte. C'est la réponse au reproche du 21/08.
-- **Aligner le prix sur le volume réel** : passer à CROISSANCE à 1 890 €. À ne
-  tenter qu'une fois le reproche sur les photos réglé, pas avant.
+Si Le Loft est bien à 1 200 €, il est à 10 € de la formule CROISSANCE à
+1 190 €. Le prix ne bouge pas. Ce qui bouge, c'est le volume : **on passe de
+46 contenus produits à 20 publiés**, tous issus de ses vraies photos. Même
+facture, deux fois moins de temps chez toi, et le reproche du 21/08 sur les
+photos qui ne sont pas prises chez lui disparaît de lui-même.
 
-La première est la bonne à court terme.
+Pour les autres comptes, la grille sert de référence à la prochaine
+échéance. Rien à annoncer tant qu'une mission tourne.
 
 ## Décision
 
-Les chiffres sont là, l'arbitrage est le tien. Ce qui est solide :
-la prestation livrée relève de la bande 1 200 à 2 000 €, et à 26 € la pièce
-elle est aujourd'hui vendue au tarif d'entrée de gamme.
+Les prix sont ceux que tu as demandés. Le point non négociable n'est pas le
+tarif, c'est le **budget temps** : 1 jour, 1,7 jour, 3 jours. Une formule qui
+déborde de son budget temps est vendue à perte, et c'est la seule chose qui
+peut faire couler la boîte.

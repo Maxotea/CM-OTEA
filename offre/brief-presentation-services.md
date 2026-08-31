@@ -127,8 +127,8 @@ Composition : trois colonnes, titres en accent chaud.
 
 > **Ce qui sort réellement**
 >
-> **20** contenus publiés par mois sur la formule Signature.
-> **8** stories vidéo fabriquées depuis vos propres photos.
+> **14** contenus publiés par mois sur la formule Signature.
+> **5** stories vidéo fabriquées depuis vos propres photos.
 > **1** compte rendu chiffré, le premier lundi du mois.
 > **0** publication partie sans votre validation.
 
@@ -143,18 +143,18 @@ Tableau à trois colonnes. La colonne du milieu est mise en avant, encadrée
 d'un filet accent, avec la mention « le plus choisi ».
 
 > **ESSENTIEL**
-> **690 € / mois**
-> 1 réseau · 12 contenus publiés par mois · 4 stories vidéo · calendrier
+> **390 € / mois**
+> 1 réseau · 8 contenus publiés par mois · 2 stories vidéo · calendrier
 > mensuel · compte rendu mensuel
 >
 > **SIGNATURE**
-> **1 290 € / mois**
-> 2 réseaux · 20 contenus publiés par mois · 8 stories vidéo · 1 reel ·
+> **690 € / mois**
+> 2 réseaux · 14 contenus publiés par mois · 5 stories vidéo · 1 reel ·
 > calendrier calé sur votre actualité · compte rendu mensuel chiffré
 >
 > **CROISSANCE**
-> **1 890 € / mois**
-> 2 à 3 réseaux · 30 contenus publiés par mois · 12 stories vidéo · 2 reels ·
+> **1 190 € / mois**
+> 2 à 3 réseaux · 20 contenus publiés par mois · 8 stories vidéo · 2 reels ·
 > une demi-journée de tournage par trimestre · compte rendu chiffré et point
 > trimestriel
 
@@ -176,7 +176,7 @@ Sous le tableau, en petit :
 > vaut douze passages par an. Quelques nouveaux clients fidélisés couvrent
 > l'année.
 >
-> **Une prestation à forte valeur.** Un fitting de golf à 160 €. Huit
+> **Une prestation à forte valeur.** Un fitting de golf à 160 €. Cinq
 > rendez-vous dans le mois et la formule Signature est remboursée.
 >
 > **Une agence immobilière.** Un seul mandat rentré par les réseaux couvre
