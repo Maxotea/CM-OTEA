@@ -438,3 +438,54 @@ vidéo plein cadre sur leurs biens.
 `25 publications · 22 brouillons · 3 en publication automatique (les validations
 de Maxime des 29 et 30/08) · 2 sans média = les deux REELs en attente des rushes
 de Sabrina`
+
+## 🔒 ZONE SÛRE INSTAGRAM — 31/08/2026
+
+Reproche de Maxime : « on ne voit pas assez bien le logo, il est caché
+derrière ». Ce n'était pas un problème de taille ni de contraste, mais de
+position.
+
+L'interface Instagram recouvre le haut et le bas d'une story : barre de
+progression, avatar et nom du compte en haut, barre « Envoyer un message » en
+bas. Sur un cadre 1080×1920, cela fait environ **250 px en haut et 250 px en
+bas**. Le médaillon était posé à y=108, donc sous la barre de progression, et
+le pied de page à y=1788, donc sous la barre de message. Les deux étaient
+littéralement cachés derrière l'interface.
+
+**Règle : rien d'important en dehors de la bande 250 → 1670.**
+
+| | avant | après |
+|---|---|---|
+| médaillon | 108 → 276 (Ø 168) | **300 → 490** (Ø 190) |
+| voile sable | 940 | 880 |
+| titre | 1210 | 1150 |
+| pied de page | 1788 | **1636 → 1666** |
+| pire cas bas du sous-titre | 1667 | 1607 |
+
+Les quinze vidéos de la vague 29/08 → 13/09 ont été refabriquées et
+rebranchées avec cette mise en page.
+
+## ⚠️ RÉÉCRITURE EN AUTO-PUBLISH — 31/08/2026
+
+Troisième occurrence du processus qui réécrit ce calendrier entre deux
+sessions (24/08, puis 02 → 13/09, puis celle-ci). Cette fois c'est plus grave
+que des photos de banque.
+
+Trois posts ont été **créés le 31/08 à 09h39** sous le compte
+`contact@oteaproduction.com`, en `draft:false` et `autoPublish:true` :
+
+| id | date | ce que c'était |
+|---|---|---|
+| 368695206 | 31/08 10h00 | story, sans libellé, partait **21 minutes plus tard** |
+| 368695464 | 02/09 10h00 | story « estimation en ligne vs sur place » |
+| 368695384 | 02/09 18h00 | post carrousel estimation |
+
+Ils remplaçaient mes brouillons 367901967 et 367901986, et pointaient sur les
+vidéos de la vague précédente, celles au logo caché. Les trois ont été
+repassés en brouillon avant l'heure de tir, puis les deux stories rebranchées
+sur les nouvelles vidéos.
+
+Cela viole la règle non négociable n°1 : tout contenu créé dans Metricool
+reste en brouillon, Maxime valide lui-même dans l'interface. Tant que la
+source de ces écritures n'est pas identifiée, **passer un
+`audit_publication_safety` sur 5733302 au début de chaque session**.

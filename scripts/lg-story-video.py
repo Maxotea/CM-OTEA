@@ -65,27 +65,38 @@ SOMBRE = (178, 153, 124)         # #B2997C
 # Le voile sable qui porte le texte : transparent au-dessus de Y_VOILE0,
 # opaque à partir de Y_VOILE1. L'image reste pleine largeur et visible sur
 # les 60 % du haut.
-Y_VOILE0, Y_VOILE1 = 980, 1200
+# ⚠️ Zone sûre Instagram : l'interface recouvre le haut (barre de progression,
+# avatar, nom du compte) et le bas (barre « Envoyer un message »). Sur 1920 de
+# haut, cela fait environ 250 px en haut et 250 px en bas. Rien d'important ne
+# doit sortir de la bande 250 → 1670, sinon c'est caché à l'écran.
+ZONE_HAUT, ZONE_BAS = 250, 1670
+
+Y_VOILE0, Y_VOILE1 = 880, 1100
 ALPHA_VOILE = 255
-Y_TITRE = 1260
+Y_TITRE = 1150
+Y_PIED = 1636
 
 # Le médaillon : leur logo rond, disque noir à lettrage blanc, relevé sur leur
 # site. C'est la version la plus lisible sur photo : la variante beige a du
 # blanc sur beige, illisible en petit (luminance moyenne mesurée 192 contre 36).
 LOGO_URL = ("https://lagalerieimmobiliere.com/wp-content/uploads/2021/12/"
             "rond-logo3.webp.png")
-LOGO = FD + "/lg-rond.png"
-LOGO_D = 168                     # diamètre du médaillon
-LOGO_Y = 108                     # marge haute
+LOGO = "f/lg-rond.png"
+LOGO_D = 190                     # diamètre du médaillon
+LOGO_Y = 300                     # sous la zone recouverte par l'interface
 DUREE = 5.0
 
 FD = "f"
 SERIF = FD + "/playfair.ttf"
-SERIF_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
-             "playfairdisplay/PlayfairDisplay%5Bwght%5D.ttf")
+# ⚠️ L'URL raw.githubusercontent de Playfair renvoie 404. Ces deux liens
+# gstatic sont ceux résolus via l'API Google Fonts, et ceux qui ont servi à
+# la vague du 28/08 : ne pas les changer, sinon la typo saute d'une story à
+# l'autre.
+SERIF_URL = ("https://fonts.gstatic.com/s/playfairdisplay/v40/"
+             "nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiukDQ.ttf")
 MONO = FD + "/mono.ttf"
-MONO_URL = ("https://raw.githubusercontent.com/google/fonts/main/ofl/"
-            "spacemono/SpaceMono-Regular.ttf")
+MONO_URL = ("https://fonts.gstatic.com/s/spacemono/v14/"
+            "i7dPIFZifjKcF5UAWdDRUEZ2RFq7AwU.ttf")
 
 CDN = ("https://d8j0ntlcm91z4.cloudfront.net/"
        "user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_")
@@ -204,7 +215,7 @@ def calque(chemin, titre, sous_titre):
             ts -= 2
             fs = sf(ts, 400)
             lg = wrap(d, sous_titre, fs, maxw)
-        yy = y + 84
+        yy = y + 72
         for ligne in lg:
             d.text((marge, yy), ligne, font=fs, fill=ENCRE)
             yy += int(ts * 1.42)
@@ -212,7 +223,7 @@ def calque(chemin, titre, sous_titre):
     fp = ImageFont.truetype(MONO, 26)
     x = marge
     for ch in "puteaux · paris ouest":
-        d.text((x, H - 132), ch, font=fp, fill=SOMBRE)
+        d.text((x, Y_PIED), ch, font=fp, fill=SOMBRE)
         x += d.textlength(ch, font=fp) + 3
 
     medaillon(im)
