@@ -38,22 +38,23 @@
     {
       "blog_id": 6191921,
       "nom": "Le Loft",
-      "recap_client": true,
+      "recap_client": false,
       "email": "lestudio92800@gmail.com",
       "email_cc": null,
       "email_confirme": true,
       "ton": "tutoiement énergique, direct",
-      "note": "Email et WhatsApp fournis par Maxime le 03/08/2026.",
+      "note": "CONTRAT TERMINE le 31/08/2026 : William a mis fin au contrat. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. 37 brouillons restaient dans Metricool du 31/08 au 31/12, tous en draft, aucun en autoPublish : rien ne partira tout seul. Coordonnees conservees au cas ou le compte reviendrait. Email et WhatsApp fournis par Maxime le 03/08/2026.",
       "canal": "les deux",
       "whatsapp": "33616071506",
       "whatsapp_confirme": true,
       "dossier_medias": "medias/le-loft",
       "medias_auto": {
-        "actif": true,
+        "actif": false,
         "max_remplacements_semaine": 4,
         "animer_stories": false,
         "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
-      }
+      },
+      "actif": false
     },
     {
       "blog_id": 6563137,

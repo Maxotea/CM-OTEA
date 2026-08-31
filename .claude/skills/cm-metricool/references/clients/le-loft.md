@@ -1,5 +1,33 @@
 # Le Loft (Puteaux) — fiche client
 
+> ## ⛔ CONTRAT TERMINÉ — 31/08/2026
+>
+> **William a mis fin au contrat.** Ne plus produire de contenu, ne plus
+> programmer, ne plus brancher de média, ne plus générer de compte rendu
+> client. Le compte est sorti du récap du lundi et de la détection de
+> nouveaux médias (`recaps/clients-config.json`, `actif: false`).
+>
+> **État de Metricool à l'arrêt :** 37 contenus restants du 31/08 au 31/12,
+> **tous en brouillon, aucun en publication automatique**. Rien ne partira
+> tout seul. Trois d'entre eux sont sans média (19, 21 et 23/10). **Rien n'a
+> été supprimé** : la suppression est irréversible et Maxime ne l'a pas
+> demandée.
+>
+> **Ce qui reste en suspens et devient sans objet :** le carrousel « faux
+> drama » du 28/08 (post 366400245) dont les planches 5 et 6 sont inversées,
+> la réponse WhatsApp à William jamais envoyée, les 9 posts Pierre Huiban
+> égarés dans ce calendrier (`327013311` à `327013327`), et la refonte en
+> vraies photos qui attendait le push de `medias/le-loft/`.
+>
+> **Ce qu'il faut en retenir.** Le 21/08, William écrivait : « 80 % des posts
+> sont des photos qui ne sont pas prises chez moi ». Dix jours plus tard, il
+> arrête. Le grief documenté porte sur la pertinence du contenu, pas sur le
+> prix. C'est la seule lecture appuyée sur des traces ; s'il a donné une autre
+> raison de vive voix, elle n'est pas consignée ici.
+>
+> La fiche ci-dessous est conservée : elle sert si le compte revient, et les
+> tarifs Planity relevés en juillet ont demandé du travail.
+
 ## Profil et tarifs VÉRIFIÉS juillet 2026 (Planity : planity.com/le-loft-92800-puteaux)
 - Positionnement : "le barbier le plus complet de France" — 120 m², 7j/7 10h-20h, 4,9/5 (302 avis), 33 rue Godefroy, Puteaux. À côté de La Défense.
 - blogId : 6191921 · Instagram UNIQUEMENT (@le_loft_barbier). Ton : tutoiement énergique, punchy ("Book ton rdv"), masculin ouvert (head spa mixte, kids). Horaire posts : 18h.

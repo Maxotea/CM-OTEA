@@ -14,7 +14,7 @@ auto-publish après validation).
 |---|---:|---:|---:|
 | J Lawson Golf | 49 | 7 | 14 % |
 | Gossip Beauty Center (arrêté le 28/08) | 48 | 19 | 40 % |
-| Le Loft | 46 | 26 | 57 % |
+| Le Loft *(contrat terminé le 31/08)* | 46 | 26 | 57 % |
 | La Galerie Immobilière | 46 | 14 | 30 % |
 | Pierre Huiban | 40 | 12 | 30 % |
 | Run On Invest | 26 | 22 | 85 % |
@@ -55,7 +55,9 @@ l'actualité du secteur, compte rendu mensuel) tombe dans la dernière ligne :
 ## 3. Le prix à la pièce, le calcul qui tranche
 
 Seul chiffre de facturation connu : **1 200 €/mois pour Le Loft**, issu de nos
-échanges, jamais consigné ici. À confirmer.
+échanges, jamais consigné ici. ⚠️ **Le contrat a pris fin le 31/08/2026.** Le
+calcul ci-dessous reste valable comme constat sur ce qui a été livré jusque-là,
+mais il n'y a plus de tarif de référence en cours dans le portefeuille.
 
 | | Contenus | Prix à la pièce |
 |---|---:|---:|
@@ -157,22 +159,62 @@ Options hors forfait : demi-journée de tournage, campagne ponctuelle
 Engagement conseillé : 3 mois. En dessous, aucun compte ne bouge, et c'est le
 client qui conclut que ça ne marche pas.
 
-## 7. Ce que ça change pour les comptes en cours
+## 7. Ce que change la fin du contrat Le Loft (31/08/2026)
 
-Bonne surprise : **la nouvelle grille ne force aucune renégociation.**
+Deux comptes perdus en quatre jours : Gossip le 28/08, Le Loft le 31/08. Cela
+compte davantage que le niveau de prix, et cela mérite d'être regardé en face.
 
-Si Le Loft est bien à 1 200 €, il est à 10 € de la formule CROISSANCE à
-1 190 €. Le prix ne bouge pas. Ce qui bouge, c'est le volume : **on passe de
-46 contenus produits à 20 publiés**, tous issus de ses vraies photos. Même
-facture, deux fois moins de temps chez toi, et le reproche du 21/08 sur les
-photos qui ne sont pas prises chez lui disparaît de lui-même.
+### Ce que disent les traces
 
-Pour les autres comptes, la grille sert de référence à la prochaine
-échéance. Rien à annoncer tant qu'une mission tourne.
+Le 21/08, William écrit : « 80 % des posts sont des photos qui ne sont pas
+prises chez moi ». Dix jours plus tard, il arrête. **Le seul grief consigné
+porte sur la pertinence du contenu, pas sur le prix.** S'il a donné une autre
+raison de vive voix, elle n'est nulle part ici : à consigner si c'est le cas,
+parce que la suite en dépend.
+
+Le rapprochement avec le tableau du §1 est difficile à éviter. Le Loft était le
+compte le mieux servi en volume (46 contenus, 57 % publiés, le meilleur taux du
+portefeuille) et c'est celui qui est parti. **Le volume n'a pas retenu le
+client.** Ce qui l'aurait retenu, c'est de reconnaître son salon dans ses
+propres posts.
+
+### Ce que devient le portefeuille
+
+Comptes clients actifs au 31/08/2026 : **J Lawson Golf, La Galerie Immobilière,
+Pierre Huiban**, plus Run On Invest en phase de lancement. OTEA PRODUCTION et
+Otea Filmakers sont des vitrines internes, pas des missions facturées.
+
+Aux tarifs retenus, l'arithmétique du portefeuille :
+
+| Nombre de clients | En ESSENTIEL 390 € | En SIGNATURE 690 € | En CROISSANCE 1 190 € |
+|---:|---:|---:|---:|
+| 3 | 1 170 € | 2 070 € | 3 570 € |
+| 5 | 1 950 € | 3 450 € | 5 950 € |
+| 8 | 3 120 € | 5 520 € | 9 520 € |
+
+À trois clients, aucun niveau de prix de cette grille ne suffit seul. **Le
+levier n'est plus le tarif, c'est le nombre de clients.** C'est précisément ce
+à quoi sert la présentation de services demandée : elle a maintenant une raison
+d'exister plus urgente qu'un simple support de vente.
+
+### Ce qu'il reste à trancher sur Le Loft
+
+- **37 brouillons** du 31/08 au 31/12 dans Metricool, aucun en auto-publish,
+  rien ne partira. Les supprimer ou non est ta décision : la suppression est
+  irréversible, je n'y touche pas.
+- Les **9 posts Pierre Huiban** égarés dans ce calendrier (`327013311` à
+  `327013327`) n'ont plus d'urgence, mais ils restent une anomalie à nettoyer
+  si le compte est rendu.
+- La **réponse WhatsApp à William**, rédigée et jamais envoyée. Si tu veux
+  comprendre pourquoi il part, c'est le dernier moment pour poser la question,
+  et la réponse vaut plus cher que le contrat lui-même.
 
 ## Décision
 
 Les prix sont ceux que tu as demandés. Le point non négociable n'est pas le
 tarif, c'est le **budget temps** : 1 jour, 1,7 jour, 3 jours. Une formule qui
-déborde de son budget temps est vendue à perte, et c'est la seule chose qui
-peut faire couler la boîte.
+déborde de son budget temps est vendue à perte.
+
+Et le constat du mois n'est pas un constat de prix : **le compte le mieux servi
+en volume est celui qui est parti, sur un reproche de pertinence.** C'est là
+qu'est le sujet.
