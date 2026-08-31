@@ -112,6 +112,11 @@ la phrase en petit dessous.
 > reconnaît votre salle, votre vitrine, votre équipe. Pas un décor acheté sur
 > une banque d'images.
 >
+> En échange, une seule chose vous est demandée : alimenter un album partagé.
+> Dix photos par mois, prises au téléphone, sans mise en scène. C'est le seul
+> effort qui reste de votre côté, et c'est lui qui fait toute la différence
+> entre un compte qui vous ressemble et un compte interchangeable.
+>
 > **Un calendrier calé sur votre métier.**
 > Pas un planning générique. Ce qui se passe chez vous, quand ça se passe.
 >
@@ -142,10 +147,11 @@ dessous. C'est la planche la plus visuelle de la présentation.
 Tableau à trois colonnes. La colonne du milieu est mise en avant, encadrée
 d'un filet accent, avec la mention « le plus choisi ».
 
-> **ESSENTIEL**
-> **390 € / mois**
-> 1 réseau · 8 contenus publiés par mois · 2 stories vidéo · calendrier
-> mensuel · compte rendu mensuel
+> **ENTRETIEN**
+> **290 € / mois**
+> 1 réseau · 8 contenus publiés par mois · 4 stories vidéo animées depuis vos
+> photos · calendrier saisonnier · compte rendu mensuel
+> Sans reel.
 >
 > **SIGNATURE**
 > **690 € / mois**
@@ -157,11 +163,18 @@ d'un filet accent, avec la mention « le plus choisi ».
 > 2 à 3 réseaux · 20 contenus publiés par mois · 8 stories vidéo · 2 reels ·
 > une demi-journée de tournage par trimestre · compte rendu chiffré et point
 > trimestriel
+>
+> **Reel supplémentaire : 190 € l'unité.** Le tournage se fait chez vous, avec
+> vous. Je ne vends un reel que le jour où vous êtes prêt à passer devant la
+> caméra, jamais à l'avance.
 
 Sous le tableau, en petit :
 
 > Tarifs hors taxes. Engagement de trois mois. En dessous de trois mois,
 > aucun compte ne bouge assez pour qu'on puisse en tirer quoi que ce soit.
+>
+> Toutes les formules supposent un album partagé alimenté de dix photos par
+> mois. Album vide, mois non produit et non facturé.
 
 ---
 
@@ -176,8 +189,8 @@ Sous le tableau, en petit :
 > vaut douze passages par an. Quelques nouveaux clients fidélisés couvrent
 > l'année.
 >
-> **Une prestation à forte valeur.** Un fitting de golf à 160 €. Cinq
-> rendez-vous dans le mois et la formule Signature est remboursée.
+> **Une prestation à forte valeur.** Un fitting de golf à 160 €. Deux
+> rendez-vous remboursent la formule Entretien, cinq remboursent Signature.
 >
 > **Une agence immobilière.** Un seul mandat rentré par les réseaux couvre
 > largement plusieurs mois.
@@ -189,9 +202,12 @@ résultat promis, uniquement le raisonnement.
 
 ## Planche 9 — Comment on démarre
 
-> **Trois étapes, et c'est parti**
+> **Quatre étapes, et c'est parti**
 >
 > **On se parle trente minutes.** Votre métier, votre saison, vos clients.
+>
+> **Vous m'ouvrez un album partagé.** Vous y déposez vos photos au fil de
+> l'eau, depuis votre téléphone. Dix par mois suffisent.
 >
 > **Je vous envoie le premier mois.** Le calendrier complet, les visuels, les
 > textes. Vous voyez exactement ce que vous achetez avant de signer.
@@ -221,3 +237,8 @@ Composition : sobre, une seule ligne de contact, beaucoup de vide.
 - Aucun logo client sans leur accord écrit.
 - Aucune photo de banque d'images. Une présentation qui vend « vos vraies
   photos » ne peut pas être illustrée avec des photos achetées.
+- **Aucune promesse de portée ou d'audience.** La formule Entretien à 290 €
+  n'a pas de reel, donc elle ne fera pas décoller la portée. Elle se vend pour
+  ce qu'elle est : un compte qui reste vivant sans que le client y touche.
+  Promettre de l'audience et livrer de la présence est exactement ce qui fait
+  perdre un client.

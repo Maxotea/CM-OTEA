@@ -96,41 +96,57 @@ Les deux leviers, dans cet ordre :
 2. **Rendre le travail visible.** Le compte rendu mensuel avec les chiffres
    est ce qui transforme « il poste des trucs » en « il pilote mon compte ».
 
-## 6. Grille retenue (révisée à la baisse le 31/08/2026)
+## 6. Grille retenue (arrêtée le 31/08/2026)
 
-Maxime a maintenu que 690 / 1 290 / 1 890 restait trop élevé pour sa
-clientèle. Décision prise, grille refaite. La règle appliquée : **le volume
-descend avec le prix.** Baisser le tarif en gardant 45 contenus par mois
-serait donner la marge, pas gagner des clients.
+Deux révisions successives le même jour. D'abord une baisse générale, ensuite
+la création d'un palier d'entrée automatisé, sans reel, décidé par Maxime.
+
+Règle appliquée sur toute la grille : **le volume descend avec le prix.**
+Baisser le tarif en gardant 45 contenus par mois serait donner la marge.
 
 Les volumes sont des volumes **publiés**, pas produits.
 
-| | ESSENTIEL | SIGNATURE | CROISSANCE |
+| | ENTRETIEN | SIGNATURE | CROISSANCE |
 |---|---|---|---|
-| **Prix HT / mois** | **390 €** | **690 €** | **1 190 €** |
+| **Prix HT / mois** | **290 €** | **690 €** | **1 190 €** |
 | Réseaux | 1 (Instagram) | 2 (Instagram + Facebook) | 2 à 3 |
 | Contenus publiés / mois | 8 | 14 | 20 |
-| dont stories vidéo animées | 2 | 5 | 8 |
-| Reels | non | 1 | 2 |
-| Calendrier calé sur leur actualité | non, calendrier type | oui | oui |
+| dont stories vidéo animées | 4 | 5 | 8 |
+| Reels | **aucun** | 1 | 2 |
+| Calendrier | saisonnier type | calé sur leur actualité | calé sur leur actualité |
 | Validation avant publication | oui | oui | oui |
-| Compte rendu | mensuel simple | mensuel chiffré | mensuel chiffré + point trimestriel |
-| Tournage sur place | option | option | 1 demi-journée / trimestre |
-| Position dans le marché | bande 300-800 | bande 300-800, haut | bas de la bande 800-1800 |
+| Compte rendu | mensuel | mensuel chiffré | mensuel chiffré + point trimestriel |
+| Tournage sur place | non | option | 1 demi-journée / trimestre |
 
-### Le contrôle qui compte : le prix à la pièce
+Reel supplémentaire hors forfait : **190 € l'unité**, tournage chez le client.
 
-| Formule | Contenus publiés | Prix à la pièce |
-|---|---:|---:|
-| ESSENTIEL | 8 | **49 €** |
-| SIGNATURE | 14 | **49 €** |
-| CROISSANCE | 20 | **60 €** |
-| *Aujourd'hui, Le Loft à 1 200 € pour 46 produits* | *46* | *26 €* |
+Le palier ESSENTIEL à 390 € est supprimé : à volume identique, il ne survivait
+pas à côté d'ENTRETIEN à 290 €.
 
-C'est le résultat contre-intuitif de l'opération : **en baissant le prix
-affiché et le volume en même temps, la valeur à la pièce passe de 26 € à
-49 €.** L'affichage devient accessible, la rentabilité s'améliore. C'est
-exactement l'inverse de ce que produirait une simple remise.
+### Pourquoi ENTRETIEN n'a pas de reel
+
+Ce n'est pas d'abord une question de temps de production. **Un reel dépend du
+client, pas de nous.** Constat du 31/08 sur La Galerie : les deux reels du
+calendrier, créés le 20/08 pour les 01 et 08/09, sont toujours sans média
+onze jours plus tard, et ce sont les deux seuls points d'alerte de tout le
+calendrier. Tout ce qui ne dépend que de nous tourne.
+
+On ne vend pas ce qu'on ne peut pas livrer seul. Le reel devient donc une
+option, vendue le jour où le client est prêt à passer devant la caméra.
+
+### La condition qui porte tout : l'album partagé
+
+Le modèle repose sur « le client fournit les photos ». C'est exactement la
+condition qui a échoué sur Le Loft, où `medias/le-loft/` est resté vide du
+début à la fin, et où le grief du 21/08 portait sur des photos qui n'étaient
+pas les siennes. Ce n'est donc pas un espoir, c'est un mécanisme :
+
+- un album partagé (Drive, Google Photos ou groupe WhatsApp dédié) ;
+- **dix photos par mois minimum**, écrit au contrat ;
+- **album vide, mois non produit et non facturé.**
+
+La contrepartie est ce qui rend la règle crédible. Sans elle, on retombe sur
+la banque d'images, et sur le scénario Le Loft.
 
 ### Le budget temps, la vraie contrainte
 
@@ -138,23 +154,50 @@ Au TJM marché de 400 €, chaque formule doit tenir dans :
 
 | Formule | Temps maximum par mois |
 |---|---|
-| ESSENTIEL 390 € | **1 jour** |
+| ENTRETIEN 290 € | **2 heures** |
 | SIGNATURE 690 € | **1,7 jour** |
 | CROISSANCE 1 190 € | **3 jours** |
 
-Au-delà, la formule est vendue à perte, quel que soit le prix affiché. C'est
-le seul chiffre à surveiller.
+### Le plancher, corrigé
 
-### Le plancher
+Le plancher n'est pas un montant, c'est **une fonction du temps**. Une mission
+d'une journée et demie ne pouvait pas descendre sous 375 € au TJM plancher de
+250 € : c'était le raisonnement du premier jet, et il valait pour une formule
+à une journée et demie.
 
-Le bas de la fourchette du TJM community manager freelance français est de
-**250 € HT**. Une mission qui prend une journée et demie ne peut donc pas se
-vendre en dessous de **375 €**. **ESSENTIEL à 390 € est le plancher.** En
-dessous, ce n'est plus une remise commerciale, c'est du travail vendu sous le
-prix plancher du métier.
+ENTRETIEN change la donnée d'entrée. La chaîne étant automatisée (crop 9:16,
+i2v, composition ffmpeg, hébergement, programmation), la mission tient en
+2 heures, soit ~72 € de temps au TJM plancher. **290 € laisse quatre fois la
+marge.** Le tarif est sain.
 
-Options hors forfait : demi-journée de tournage, campagne ponctuelle
-(ouverture, lancement, recrutement), refonte complète d'un compte.
+⚠️ Deux heures, pas trente minutes. La chaîne est réelle mais elle casse : le
+31/08, pour sortir quinze stories, le sandbox a été recyclé deux fois, les
+polices ont répondu 404, les identifiants de post changent à chaque écriture,
+et un processus tiers a réécrit le calendrier en publication automatique. La
+maintenance d'un pipeline ne diminue pas quand le prix baisse.
+
+### Ce que ce palier est, et ce qu'il n'est pas
+
+ENTRETIEN se vend comme de **la présence, pas de la croissance**. Sans reel,
+la portée ne décollera pas. Le promettre reviendrait à vendre de l'audience et
+livrer du papier peint, ce qui est précisément ce qui a coûté Le Loft.
+
+Formulation qui tient : « votre compte reste vivant et vous n'y touchez pas ».
+
+### La conséquence économique
+
+À 290 €, le modèle gagne sur le **nombre de clients**, pas sur la marge par
+client :
+
+| Clients en ENTRETIEN | Chiffre d'affaires mensuel | Temps total |
+|---:|---:|---:|
+| 3 | 870 € | 6 h |
+| 6 | 1 740 € | 12 h |
+| 10 | 2 900 € | 20 h |
+| 15 | 4 350 € | 30 h |
+
+Dix clients en ENTRETIEN tiennent dans vingt heures par mois. C'est une
+machine à volume, et elle ne vaut que si l'acquisition suit.
 
 Engagement conseillé : 3 mois. En dessous, aucun compte ne bouge, et c'est le
 client qui conclut que ça ne marche pas.
@@ -186,11 +229,11 @@ Otea Filmakers sont des vitrines internes, pas des missions facturées.
 
 Aux tarifs retenus, l'arithmétique du portefeuille :
 
-| Nombre de clients | En ESSENTIEL 390 € | En SIGNATURE 690 € | En CROISSANCE 1 190 € |
+| Nombre de clients | En ENTRETIEN 290 € | En SIGNATURE 690 € | En CROISSANCE 1 190 € |
 |---:|---:|---:|---:|
-| 3 | 1 170 € | 2 070 € | 3 570 € |
-| 5 | 1 950 € | 3 450 € | 5 950 € |
-| 8 | 3 120 € | 5 520 € | 9 520 € |
+| 3 | 870 € | 2 070 € | 3 570 € |
+| 5 | 1 450 € | 3 450 € | 5 950 € |
+| 8 | 2 320 € | 5 520 € | 9 520 € |
 
 À trois clients, aucun niveau de prix de cette grille ne suffit seul. **Le
 levier n'est plus le tarif, c'est le nombre de clients.** C'est précisément ce
@@ -212,8 +255,8 @@ d'exister plus urgente qu'un simple support de vente.
 ## Décision
 
 Les prix sont ceux que tu as demandés. Le point non négociable n'est pas le
-tarif, c'est le **budget temps** : 1 jour, 1,7 jour, 3 jours. Une formule qui
-déborde de son budget temps est vendue à perte.
+tarif, c'est le **budget temps** : 2 heures, 1,7 jour, 3 jours. Une formule
+qui déborde de son budget temps est vendue à perte.
 
 Et le constat du mois n'est pas un constat de prix : **le compte le mieux servi
 en volume est celui qui est parti, sur un reproche de pertinence.** C'est là
