@@ -1,2 +1,5 @@
 medias/
 .DS_Store
+
+# Canvas assemblé de la présentation (2 Mo, régénérable via design-presentation/gen.py)
+design-presentation/presentation-services-otea.html
