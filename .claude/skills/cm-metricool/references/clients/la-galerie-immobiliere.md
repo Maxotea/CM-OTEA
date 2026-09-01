@@ -494,3 +494,12 @@ Cela viole la règle non négociable n°1 : tout contenu créé dans Metricool
 reste en brouillon, Maxime valide lui-même dans l'interface. Tant que la
 source de ces écritures n'est pas identifiée, **passer un
 `audit_publication_safety` sur 5733302 au début de chaque session**.
+
+## Carrousel hebdo (créneau du mercredi, 18h, Instagram + Facebook)
+- **Typologie** : très forte valeur unitaire, décision longue → la preuve est la maîtrise du détail. **Cible** : propriétaire ou acquéreur sur Paris 16e / Puteaux / Hauts-de-Seine, qui engage un patrimoine et craint surtout de se tromper. Jargon économique toléré, jamais technique.
+- **Archétypes prioritaires** : A2 (erreurs, le plus performant sur cette cible), A5 (arbitrage), A8 (saisonnier), A7 (coulisses de l'expertise). **A6 (décryptage chiffré : taux, prix au m², DPE) uniquement après recherche web datée et sourcée.**
+- **DA carrousel** (`scripts/themes.json` → `la-galerie-immobiliere`) : fond beige #EFE9E1, texte taupe #2E2A26, accent doré #B08D57, **police sérif** (Didot, repli Georgia), titres en bas-de-casse. Cohérente avec `LaGalerie-Studio`.
+- **Planifiés (spec dans `carrousels/la-galerie-immobiliere/`)** : 12/08 A2 « Cinq erreurs qui coûtent des semaines » · 19/08 A5 « Vendre ou louer » · 26/08 A8 « Préparer son bien avant septembre » (angle home staging, adossé à l'expertise archi d'intérieur de la fondatrice) · 02/09 A7 « Ce que l'on regarde avant d'estimer ».
+- **Réserve de sujets** : DPE et réglementation (A6, **réglementation à vérifier par recherche web à la date de publication**) · « Acheter en fin d'année : ce qui change » (A8, novembre) · « Une visite réussie, du point de vue de l'acquéreur » (A5) · remise de clés commentée (A3, dès qu'un client accepte).
+- **Cadence particulière — le compte ne publie pas le mercredi.** Ses posts feed sortent le **vendredi à 12h30**. Le carrousel du mercredi ne remplace donc rien ici : il **s'ajoute**. C'est assumé, le compte est au **forfait maximum** (confirmé par Maxime, 06/08/2026) — la règle « le carrousel remplace le post du mercredi » ne s'y applique pas.
+- **Vigilance** : barème d'honoraires **non vérifié** → aucun honoraire cité. Aucun prix au m², aucun taux, aucun chiffre de marché sans source datée. Le prénom de la fondatrice n'apparaît pas encore dans les slides : à ajouter si elle le valide. Ne jamais illustrer un carrousel avec un visuel IA présenté comme un bien réel.

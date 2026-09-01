@@ -1,0 +1,17 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {
+    "2026-08-24": {
+      "LGI-01": {
+        "decision": "OK",
+        "hash": "ea01f577e43d44a9",
+        "quand": "2026-08-25T11:00:02",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 364338999.0,
+        "resultat": "post introuvable dans Metricool (supprimé ou déplacé hors semaine)"
+      }
+    }
+  }
+}

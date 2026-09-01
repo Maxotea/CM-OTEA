@@ -1,0 +1,62 @@
+{
+  "client": "la-galerie-immobiliere",
+  "slug": "2026-08-12-erreurs-vendeur",
+  "archetype": "A2",
+  "pilier": "P1",
+  "date_time": "2026-08-12T18:00:00",
+  "cible": "Propriétaire à Paris ou dans les Hauts-de-Seine qui envisage de vendre à la rentrée et redoute de mal s'y prendre sur un bien de valeur",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Vendre",
+      "title": "**Cinq erreurs** qui coûtent des semaines",
+      "body": "Elles se commettent toutes avant la première visite."
+    },
+    {
+      "kicker": "Erreur 1",
+      "title": "Fixer un prix pour se laisser une marge",
+      "body": "Un bien surévalué attire peu de visites les premières semaines, précisément **quand l'attention est maximale**. On négocie ensuite en position de faiblesse."
+    },
+    {
+      "kicker": "Erreur 2",
+      "title": "Photographier avant de préparer",
+      "body": "Les photos sont vues **des centaines de fois**, la visite une dizaine. Préparer le bien avant la prise de vue reste l'investissement le plus rentable d'une vente."
+    },
+    {
+      "kicker": "Erreur 3",
+      "title": "Multiplier les mandats simples",
+      "body": "Le même bien affiché partout, parfois à des prix différents, envoie **un signal d'urgence**. L'acquéreur le lit immédiatement et attend."
+    },
+    {
+      "kicker": "Erreur 4",
+      "title": "Faire visiter soi-même",
+      "body": "Un vendeur défend son bien, un professionnel **écoute les objections**. Ce sont ces objections, entendues et traitées, qui font l'offre."
+    },
+    {
+      "kicker": "Erreur 5",
+      "title": "Attendre la bonne saison",
+      "body": "Ce n'est pas le mois qui compte, c'est **le nombre de biens comparables** en face. Un bien seul en janvier se vend mieux que le dixième d'avril."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Tout se joue avant la mise en ligne",
+      "body": "**Prix juste, bien préparé, un seul interlocuteur**. Le reste n'est que la conséquence de ces trois décisions."
+    },
+    {
+      "cta": true,
+      "kicker": "La Galerie Immobilière",
+      "title": "Parlons de votre bien",
+      "body": "L'art de l'immobilier à Paris et en Île-de-France. **Estimation et conseil avant mise en vente**. Écrivez-nous en message privé."
+    }
+  ],
+  "caption": "Une vente qui traîne se décide rarement pendant les visites. Elle se décide avant la mise en ligne.\n\nCinq erreurs que nous voyons chaque saison, et ce qu'elles coûtent réellement en semaines. Faites défiler.\n\nLa première est de loin la plus fréquente : se laisser une marge de négociation. C'est aussi celle qui fait perdre les meilleures semaines d'exposition.\n\nÉcrivez-nous en message privé pour en parler.",
+  "hashtags": [
+    "#immobilierparis",
+    "#vendresonbien",
+    "#hautsdeseine",
+    "#immobilierprestige",
+    "#estimation",
+    "#puteaux"
+  ],
+  "note": "Aucun honoraire, aucun chiffre de marché, aucun taux cité : le barème de l'agence n'est pas encore vérifié et les données de marché doivent passer par une recherche web datée. Vouvoiement élégant conforme à la fiche."
+}

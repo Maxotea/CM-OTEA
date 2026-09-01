@@ -1,0 +1,81 @@
+{
+  "_doc": "Médias du client, alimentés automatiquement par scripts/drive_sync.py depuis sa boîte de dépôt Drive. Ne pas ajouter d'entrée à la main : la déduplication se fait par empreinte du contenu. Les champs sujet et pilier sont VIDES à l'arrivée et demandent une qualification à l'œil — un média non qualifié ne doit jamais être attaché automatiquement à un post. Le champ url est rempli à l'hébergement.",
+  "client": "gossip-beauty-center",
+  "drive_folder": "1rSMJHRJb_CBY49S7C2--2m-3eEzSJO6g",
+  "photos": [
+    {
+      "drive_id": "15TQWpHwFsKQn0zHsAAcd_xS4CngHkVZn",
+      "drive_nom": "image00004.jpeg",
+      "empreinte": "9f57f5be2afdb5ef",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/YBXNYpk6/9f57f5be2afdb5ef.jpg"
+    },
+    {
+      "drive_id": "1OpM03RMnlsFCsG0lpkIy_olhH2jTQ_I9",
+      "drive_nom": "image00003.jpeg",
+      "empreinte": "95052a43da953e22",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/yn40TBbs/95052a43da953e22.jpg"
+    },
+    {
+      "drive_id": "1Tes1etThHAExNzja_TLnGcrzxQXiPnmc",
+      "drive_nom": "image00002.jpeg",
+      "empreinte": "299166ef02cf3b38",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/fYkyxZmr/299166ef02cf3b38.jpg"
+    },
+    {
+      "drive_id": "1NVacvWgBywX0ab2uSASL2LkXzN1uIrGg",
+      "drive_nom": "image00001.jpeg",
+      "empreinte": "93c370383176a3cf",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/DPhtkGxy/93c370383176a3cf.jpg"
+    },
+    {
+      "drive_id": "1xE6lC1CuYpih9woIeP53kPCNDkvKNZv9",
+      "drive_nom": "image00006.jpeg",
+      "empreinte": "645e3e0728f78f7f",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/Cx2PrHL/645e3e0728f78f7f.jpg"
+    },
+    {
+      "drive_id": "12xBrChMwT20veP96j_0vAJ7P4dJkv7Sy",
+      "drive_nom": "image00007.jpeg",
+      "empreinte": "f17d0164e41a05ac",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/G4PPxwDM/f17d0164e41a05ac.jpg"
+    },
+    {
+      "drive_id": "1ouVWPAJ_hLlgbZfNLW2r9JJOdVxEmHtY",
+      "drive_nom": "image00008.jpeg",
+      "empreinte": "3bef546ef130e680",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/cXsj3vyH/3bef546ef130e680.jpg"
+    },
+    {
+      "drive_id": "1umSJO90Hl8b8aJJpWx5LZ37yxrw3OGrD",
+      "drive_nom": "image00009.jpeg",
+      "empreinte": "3a772526b7a9fa7a",
+      "type": "jpg",
+      "sujet": null,
+      "pilier": null,
+      "url": "https://i.ibb.co/W4s8cxWC/3a772526b7a9fa7a.jpg"
+    }
+  ],
+  "_note_dossier": "Ce dossier est aujourd'hui un sous-dossier de la copie du dépôt dans le Drive. À remplacer par une boîte de dépôt dédiée, partagée avec la cliente, ne contenant QUE ses médias — voir la répartition Drive/GitHub dans le README.",
+  "_reperage": "9 fichiers repérés le 06/08/2026 via le connecteur Drive. Sujets et piliers volontairement vides : ils demandent un œil. Deux fichiers pèsent le même nombre d'octets (image00004 et image00005) — la déduplication par empreinte tranchera."
+}

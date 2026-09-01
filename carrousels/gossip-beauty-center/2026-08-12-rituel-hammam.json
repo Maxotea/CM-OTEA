@@ -1,0 +1,62 @@
+{
+  "client": "gossip-beauty-center",
+  "slug": "2026-08-12-rituel-hammam",
+  "archetype": "A7",
+  "pilier": "P3",
+  "date_time": "2026-08-12T18:00:00",
+  "cible": "Femme d'Argenteuil et alentours, curieuse du hammam traditionnel, qui n'ose pas franchir la porte parce qu'elle ne sait pas comment ça se passe",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Le rituel",
+      "title": "Le hammam, **étape par étape**",
+      "body": "Ce qui s'y passe vraiment, pour celles qui n'ont jamais osé pousser la porte."
+    },
+    {
+      "kicker": "Avant tout",
+      "title": "Un lieu entre femmes, uniquement",
+      "body": "Notre institut est **exclusivement féminin**. Pas de regard, pas de gêne, pas d'exception. C'est ce qui permet de se détendre vraiment."
+    },
+    {
+      "kicker": "Étape 1",
+      "title": "La chaleur, sans se presser",
+      "body": "**Une quinzaine de minutes** dans la vapeur, le temps que la peau s'assouplisse. Tout ce qui suit dépend de cette patience-là."
+    },
+    {
+      "kicker": "Étape 2",
+      "title": "Le savon noir",
+      "body": "Appliqué généreusement, laissé poser. Il prépare la peau au gommage. C'est le geste que l'on saute le plus souvent chez soi, et **celui qui change tout**."
+    },
+    {
+      "kicker": "Étape 3",
+      "title": "Le gommage au gant",
+      "body": "Le moment que l'on **redoute et que l'on redemande**. La peau est débarrassée de ce qui l'étouffe, la sensation est immédiate."
+    },
+    {
+      "kicker": "Étape 4",
+      "title": "Le rinçage, chaud puis frais",
+      "body": "Le contraste **referme, tonifie et réveille**. C'est aussi ce qui laisse cette impression de légèreté en repartant."
+    },
+    {
+      "kicker": "Étape 5",
+      "title": "Le soin qui prolonge",
+      "body": "Une huile ou un lait nourrissant sur une peau enfin réceptive. Sans lui, le bénéfice du gommage **se perd en deux jours**."
+    },
+    {
+      "cta": true,
+      "kicker": "Gossip Beauty Center, Argenteuil",
+      "title": "Réservez votre moment",
+      "body": "Un rituel qui se transmet **entre femmes depuis des générations**. Écrivez-nous en message privé pour connaître nos disponibilités."
+    }
+  ],
+  "caption": "Le hammam, beaucoup en ont entendu parler sans jamais oser entrer. Alors nous vous montrons exactement comment il se déroule, étape par étape.\n\nCinq temps, dans l'ordre, sans rien enjoliver. Faites défiler.\n\nEt un rappel qui compte pour beaucoup d'entre vous : notre institut est exclusivement féminin. Vous êtes chez vous.\n\nÉcrivez-nous en message privé pour réserver.",
+  "hashtags": [
+    "#hammam",
+    "#argenteuil",
+    "#institutdebeaute",
+    "#rituelbeaute",
+    "#entrefemmes",
+    "#gommage"
+  ],
+  "note": "Aucun tarif cité : les prix de l'institut ne sont pas encore vérifiés, ne rien inventer. Rappel du caractère exclusivement féminin placé ici, il couvre le rappel mensuel prévu par la fiche. Le hammam est raconté comme tradition et transmission, jamais comme allégation de résultat."
+}

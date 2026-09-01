@@ -48,3 +48,11 @@ déjà muettes — non touchées. Anciens brouillons supprimés : 355805250, …
 
 ⚠️ Toute nouvelle story de ce compte part **sans son** (`-an` au montage) :
 `.claude/memories/stories-sans-son.md`.
+
+## Carrousel hebdo (créneau du mercredi, 12h, Instagram + Facebook + LinkedIn)
+- **Typologie** : B2B projet → la preuve est la méthode et le cadrage. **Cible** : dirigeant ou responsable communication de PME, souvent échaudé par une première vidéo qui n'a rien donné. Ce qu'il veut vérifier : que ça sert un objectif business et que ça ne va pas immobiliser son entreprise.
+- **Archétypes prioritaires** : A2 (erreurs), A1 (méthode), A8 (rétroplanning saisonnier), A7 (coulisses, lève l'objection « on va bloquer les bureaux »). A6 possible mais **toute statistique du secteur exige une source web datée**.
+- **DA carrousel** (`scripts/themes.json` → `otea-production`) : fond #201E1E, texte #F1F1F1, accent orange #FF5800, secondaire vert d'eau #ACC1C0, titres en capitales, sans filet. Charte Brandbook 2026, police Forma DJR Display si installée.
+- **Planifiés (spec dans `carrousels/otea-production/`)** : 12/08 A2 « 5 erreurs qui plombent une vidéo d'entreprise » · 19/08 A1 « De l'idée au film livré » · 26/08 A8 « Vœux 2027 : le rétroplanning » (temps fort sept-oct de la fiche) · 02/09 A7 « Ce qui se passe le jour du tournage ».
+- **Réserve de sujets** : « Vertical ou horizontal : comment choisir » (A5) · « Ce qu'une journée de tournage peut produire » (A1, argument déclinaisons) · budgets Q4 et plans de com (A8, septembre) · cas client commenté (A3, avec accord).
+- **Vigilance** : les fourchettes de devis ne sont pas renseignées → aucun tarif ni délai chiffré tant que Maxime ne les fournit pas. Ce compte est aussi la vitrine de l'offre CM : un carrousel réussi ici est un cas d'usage commercial réutilisable.

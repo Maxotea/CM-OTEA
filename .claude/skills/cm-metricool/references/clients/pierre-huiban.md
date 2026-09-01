@@ -3,7 +3,7 @@
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)
-- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne Road to Stockholm (Mondiaux Hyrox 2026)
+- Secteur / typologie : athlète sponsorisé — compétiteur Hyrox (double vie commercial Europe / athlète), campagne Road to Hong Kong (Mondiaux Hyrox 2027)
 - Ville / zone de chalandise : n/a (personal branding, pas de zone de chalandise)
 - Site web / source officielle : n/a — vérifier si un site/linktree existe
 
@@ -41,7 +41,8 @@ plus bas ; ce qui suit est la ligne en vigueur.
 - Cadence actuelle observée : reels/posts lifestyle Hyrox, horaires 00h30/06h00 (à confirmer si voulu, ces horaires semblent atypiques pour du lifestyle sport — à vérifier avec l'utilisateur)
 
 ## Saisonnalité & temps forts
-- Road to Stockholm : Mondiaux Hyrox 2026 (vérifier dates exactes par recherche web le moment venu)
+- **Road to Hong Kong** : Mondiaux Hyrox 2027, AsiaWorld-Expo, 10-13 juin 2027 (vérifié par recherche web le 06/08/2026 — annoncé pendant les Mondiaux de Stockholm).
+- ⚠️ **Stockholm, c'est fini** : les Mondiaux 2026 ont eu lieu du 18 au 21 juin 2026. Le hashtag `#roadtostockholm` est périmé depuis. Une campagne datée se revérifie à chaque trimestre — celle-ci est restée dans la fiche deux mois de trop et s'est retrouvée dans quatre carrousels avant qu'un correctif manuel dans Metricool ne la rattrape.
 - Contenus déjà en brouillon : famille/double vie, setup d'entraînement, mindset, coach (Quentin), objectifs fin 2026
 
 ## Tarifs vérifiés — pour le module ROI
@@ -178,3 +179,11 @@ défaire. Ce qu'il faut en retenir : **le contrôle `autoPublish` doit porter su
 tout le calendrier du compte, pas sur les seules publications qu'on est en train
 de retoucher.** Le compte est vérifié depuis : `16 publications · draft:true
 partout · autoPublish:false partout · noMedia 0`.
+
+## Carrousel hebdo (créneau du mercredi, 18h, Instagram)
+- **Typologie** : personal branding athlète → la preuve est la donnée et la constance, jamais la promesse. **Cible** : communauté Hyrox France (pratiquants amateurs qui bossent à plein temps) et marques cherchant un athlète authentique. Jargon Hyrox assumé, tutoiement, aucune mise en scène.
+- **Archétypes prioritaires** : A7 (coulisses), A2 (erreurs), A1 (méthode), A5 (guide de choix). A6 (décryptage chiffré) dès que Pierre fournit ses vrais chronos et volumes — **ne jamais fabriquer un chiffre**.
+- **DA carrousel** (`scripts/themes.json` → `pierre-huiban`) : Pitch Black #0A0A0A, texte blanc, accent Rouge Sang #DC2626, capitales, stats en mono. Cartes typographiques uniquement — conforme à la règle « vraies photos only » pour le photographique, on ne fabrique aucune image de lui.
+- **Planifiés (spec dans `carrousels/pierre-huiban/`)** : 12/08 A7 « Une semaine de prépa, vraiment » · 19/08 A2 « 5 erreurs qui te coûtent des minutes » · 26/08 A1 « Sled push : la station qui casse ta course » · 02/09 A5 « Quelle station bosser en priorité ».
+- **Ce que ça résout** : la fiche signalait que les posts « Swipez → » n'avaient qu'une photo de couverture, sans slides. Le format carrousel est désormais outillé — les anciens posts « Swipez » peuvent être repris avec ce moteur.
+- **Vigilance** : **tout le contenu technique doit être relu par Pierre avant publication** — c'est son expertise, pas la nôtre. Aucun chrono, aucune charge en kilos, aucune date de Mondiaux cités sans vérification. Aucun sponsor mentionné dans ces quatre carrousels : un carrousel sponsorisé exige les handles exacts, les règles de tag contractuelles et de vraies photos produit, tout cela encore manquant.

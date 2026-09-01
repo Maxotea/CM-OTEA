@@ -1,0 +1,62 @@
+{
+  "client": "le-loft",
+  "slug": "2026-08-26-coulisses-headspa",
+  "archetype": "A7",
+  "pilier": "P3",
+  "date_time": "2026-08-26T18:00:00",
+  "cible": "Homme curieux du head spa, qui trouve ça cher ou vaguement gênant parce qu'il ne sait pas ce qu'il y a dedans",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Coulisses",
+      "title": "Ce qui se passe **vraiment** pendant un head spa",
+      "body": "Étape par étape, pour ceux qui n'osent pas demander."
+    },
+    {
+      "kicker": "Étape 1",
+      "title": "On regarde ton cuir chevelu",
+      "body": "Sec, gras, irrité, pellicules. Ce qu'on voit **décide du produit** utilisé après. C'est la seule étape où tu ne sens rien."
+    },
+    {
+      "kicker": "Étape 2",
+      "title": "Vapeur et serviette chaude",
+      "body": "La chaleur ouvre et **décolle ce qui s'est accumulé** : sébum, résidus de coiffants, pollution. Sans ça, le nettoyage reste en surface."
+    },
+    {
+      "kicker": "Étape 3",
+      "title": "Le massage, la partie qu'on retient",
+      "body": "Nuque, tempes, sommet du crâne. C'est long, c'est lent, et c'est là que la plupart des clients **arrêtent de parler**."
+    },
+    {
+      "kicker": "Étape 4",
+      "title": "Double nettoyage puis soin",
+      "body": "Un premier shampooing qui décape, un second qui traite. Puis un soin choisi selon ce qu'on a vu à l'étape 1."
+    },
+    {
+      "kicker": "Étape 5",
+      "title": "Séchage et coiffage",
+      "body": "Tu repars **coiffé, pas trempé**. C'est aussi à ce moment qu'on te dit ce que ton cuir chevelu réclame au quotidien."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Ce n'est pas un shampooing amélioré",
+      "body": "C'est un **soin du cuir chevelu**. Le confort se sent le soir même, l'effet sur les cheveux se voit au bout de deux séances."
+    },
+    {
+      "cta": true,
+      "kicker": "Le Loft, Puteaux",
+      "title": "Teste-le une fois",
+      "body": "Head spa **à partir de 60 euros**, mixte. 7j/7 de 10h à 20h, 33 rue Godefroy, à deux pas de La Défense. Book ton rdv en bio."
+    }
+  ],
+  "caption": "Le head spa, tout le monde en parle et personne ne sait ce qu'il y a dedans. Alors on ouvre la porte.\n\nCinq étapes, dans l'ordre, sans rien romancer. Swipe.\n\nCelle que nos clients retiennent, c'est la 3. Celle qui fait la différence sur la durée, c'est la 4.\n\nBook ton rdv, lien en bio.",
+  "hashtags": [
+    "#headspa",
+    "#barbierputeaux",
+    "#cuirchevelu",
+    "#soinhomme",
+    "#ladefense",
+    "#barbershopfrance"
+  ],
+  "note": "Tarif head spa à partir de 60 euros et head spa mixte : vérifiés fiche client juillet 2026. Visuel de couverture : si une vraie photo head spa existe dans la banque, la préférer à la slide typographique."
+}

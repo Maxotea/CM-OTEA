@@ -293,3 +293,13 @@ répercuter si ce mapping est réutilisé ailleurs.
 montre un barbier avec un téléphone, pas un geste de coupe. Elle vient du bas du
 cadre 9:16 de la story « rasage à l'ancienne ». Si une vraie photo de coupe
 existe dans `medias/le-loft/`, elle sera meilleure.
+
+- 🟢 Validations du gérant vues (28/07) : stories mar 04 & ven 07/08 + post soin-visage 05/08 passés en publication auto (l'UI vide le texte-note des stories validées, normal). ⚠️ **Jeudi 06/08 : story absente** (supprimée ou jamais créée) — signalée dans le récap hebdo du 03/08, à recréer (visuel rasage) seulement si le gérant le demande.
+
+## Carrousel hebdo (créneau du mercredi, 18h, Instagram)
+- **Typologie** : récurrence forte, panier moyen → la preuve à servir est la régularité et la note. **Cible** : homme 25-45 ans, actif La Défense, décision rapide, aucun jargon toléré. Ce qu'il veut vérifier : que ce sera bien fait et que le lieu lui correspond.
+- **Archétypes prioritaires** : A2 (erreurs), A5 (guide de choix), A7 (coulisses), A8 (checklist saisonnière). Éviter A6 (décryptage chiffré) : pas de data secteur exploitable ici.
+- **DA carrousel** (`scripts/themes.json` → `le-loft`) : fond #14110F, texte #F5EFE6, accent laiton #C89B4B, titres en capitales, filet sous le kicker. Cohérente avec l'élément `LeLoft-Studio`.
+- **Planifiés (spec dans `carrousels/le-loft/`)** : 12/08 A2 « 5 erreurs qui flinguent ta barbe » · 19/08 A5 « Head spa, soin visage ou rasage » · 26/08 A7 « Ce qui se passe pendant un head spa » · 02/09 A8 « Checklist rentrée ».
+- **Réserve de sujets** : Movember (préparer fin octobre, A8) · « 5 signes qu'il est temps de changer de coupe » (A2) · « Pourquoi ta coupe ne tient que 3 jours » (A1) · « Le head spa vu par ceux qui n'y croyaient pas » (A3, dès qu'on a des avis exploitables).
+- **Vigilance** : les tarifs cités (48 € coupe+barbe, head spa dès 60 €, enfant dès 20 €, étudiant 22 €, note 4,9/5) viennent de Planity vérifié juillet 2026 — les revérifier avant chaque publication. Aucune promo inventée, le salon n'en fait pas.

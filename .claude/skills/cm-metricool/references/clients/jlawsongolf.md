@@ -223,3 +223,15 @@ maison la remplacent :
 ⚠️ **Piège `bulk_update_post_media` :** elle **crée un nouveau post** au lieu de
 modifier l'existant. Il faut supprimer l'ancien derrière, sinon le créneau se
 retrouve en double. Vérifié : 81 posts après, 74 après nettoyage.
+
+## Stories quotidiennes août 2026 (28/07/2026)
+- Banque 7 stories 9:16 `medias/jlawson-golf/ia/stories/` (lun nouvelle-semaine, mar shaft, mer fers, jeu driver, ven résa, sam data, dim parcours). Vérifiées.
+- **31 stories planifiées ✅** 01→31/08 à 10:00, IG+FB, brouillon, via `bulk_schedule_stories`.
+
+## Carrousel hebdo (créneau du mercredi, 18h, Instagram + Facebook)
+- **Typologie** : vente unitaire chère, expertise technique → la preuve est la mesure. **Cible** : golfeur de club, initié, jargon assumé et même attendu. Ce qu'il veut vérifier : que l'expertise est réelle et mesurable, et qu'on ne lui vend pas une marque.
+- **Archétypes prioritaires** : A5 (guide de choix), A2 (erreurs), A7 (coulisses), A8 (saisonnier matériel). **A6 (décryptage chiffré) réservé aux semaines de tournoi** et uniquement après vérification web des résultats — jamais de chiffre de mémoire.
+- **DA carrousel** (`scripts/themes.json` → `jlawsongolf`) : fond bleu marine #0F1B2B, texte #F2F5F7, accent vert #4CAF7D, titres en capitales, chiffres en police mono (signal data). Tranche l'incohérence DA de la banque IA : le carrousel est 100 % tech, sans bois.
+- **Planifiés (spec dans `carrousels/jlawsongolf/`)** : 12/08 A5 « Par quel fitting commencer » · 19/08 A2 « 5 erreurs à l'achat de clubs en ligne » · 26/08 A7 « Une séance minute par minute » · 02/09 A8 « Préparer son sac pour l'automne ».
+- **Réserve de sujets** : « Ce que le launch monitor voit et pas vous » (A7) · WITB du vainqueur d'un majeur (A6, avril à juillet, résultats à vérifier) · « Regripper : quand et pourquoi » (A1) · « Fitting putter : le plus rentable en coups » (A5).
+- **Vigilance** : tarifs 160 € (driver, fers, putter) et 260 € (Gears full corps) vérifiés sur jlawsongolf.com/rendezvous.html en juillet 2026, à revérifier. Aucune marque de matériel citée : l'indépendance du studio est un argument. Phrases courtes, John est anglophone. Faire relire le déroulé technique par John.

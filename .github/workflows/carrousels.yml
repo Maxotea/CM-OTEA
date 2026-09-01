@@ -1,0 +1,85 @@
+name: Carrousels hebdo
+
+# Rend et planifie en brouillon le carrousel du mercredi de chaque client.
+# Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
+# bloque app.metricool.com et l'hébergeur d'images, un runner Actions ne les bloque pas.
+
+on:
+  schedule:
+    # Chaque vendredi 4h30 UTC (6h30 à Paris en heure d'été) : « next Wednesday » calculé
+    # un vendredi tombe sur le mercredi de la semaine SUIVANTE — le carrousel est donc
+    # planté avant le generer de la review (5h00), et figure dans le fichier de
+    # validation que le client reçoit le lundi.
+    - cron: "30 4 * * 5"
+  workflow_dispatch:
+    inputs:
+      semaine:
+        description: "Mercredi visé (YYYY-MM-DD), ou un préfixe : 2026-08 = tout août. Vide = prochain mercredi."
+        required: false
+      client:
+        description: "Ne traiter qu'un compte (ex. le-loft). Vide = les six."
+        required: false
+      dry_run:
+        description: "Ne rien publier, seulement afficher ce qui serait fait"
+        type: boolean
+        default: false
+      remplacer:
+        description: "Recréer les carrousels déjà planifiés (quand seules les slides changent)"
+        type: boolean
+        default: false
+      photos:
+        description: "Ingérer les photos Drive de ce compte (ex. gossip-beauty-center). Vide = ne rien ingérer."
+        required: false
+
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Déterminer la semaine
+        id: semaine
+        run: |
+          if [ -n "${{ inputs.semaine }}" ]; then
+            echo "date=${{ inputs.semaine }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "date=$(date -d 'next Wednesday' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Valider les specs
+        run: python3 scripts/carrousel.py carrousels/ --check
+
+      - name: Rendre les slides
+        run: python3 scripts/carrousel.py carrousels/
+
+      - name: Planifier dans Metricool
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+        run: |
+          python3 scripts/publier.py \
+            --semaine "${{ steps.semaine.outputs.date }}" \
+            ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
+            ${{ inputs.remplacer && '--remplacer' || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Ingérer les photos client depuis le Drive
+        if: inputs.photos != ''
+        env:
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+        run: python3 scripts/drive_sync.py "${{ inputs.photos }}" ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Conserver les slides rendues
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: carrousels-${{ steps.semaine.outputs.date }}
+          path: medias/*/carrousels/
+          retention-days: 30

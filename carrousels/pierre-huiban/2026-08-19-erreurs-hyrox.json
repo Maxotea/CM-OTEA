@@ -1,0 +1,61 @@
+{
+  "client": "pierre-huiban",
+  "slug": "2026-08-19-erreurs-hyrox",
+  "archetype": "A2",
+  "pilier": "P1",
+  "date_time": "2026-08-19T18:00:00",
+  "cible": "Pratiquant qui prépare sa première ou deuxième course Hyrox et perd du temps sur des choses qui n'ont rien à voir avec sa condition physique",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Course",
+      "title": "**5 erreurs** qui te coûtent des minutes",
+      "body": "Aucune n'a à voir avec ta condition physique."
+    },
+    {
+      "kicker": "Erreur 1",
+      "title": "Tu pars trop vite sur le premier kilomètre",
+      "body": "Tu te sens bien, tu accélères, et tu payes à partir de la station 3. Le premier kilomètre doit te sembler **trop lent**. C'est le signe que c'est bon."
+    },
+    {
+      "kicker": "Erreur 2",
+      "title": "Tu poses le sled trop bas",
+      "body": "Position trop basse, bras tendus, dos rond. Tu pousses avec les bras au lieu des jambes. Le sled ne se pousse pas, **il s'appuie**."
+    },
+    {
+      "kicker": "Erreur 3",
+      "title": "Tu ne t'entraînes jamais fatigué",
+      "body": "Faire du wall ball frais, tout le monde sait. Le faire **après huit kilomètres**, personne ne s'y prépare. C'est pourtant la seule chose qui compte."
+    },
+    {
+      "kicker": "Erreur 4",
+      "title": "Tu perds du temps dans les transitions",
+      "body": "Ajuster, boire, respirer, chercher son emplacement. Quelques secondes par station, **huit stations**. Le calcul est vite fait."
+    },
+    {
+      "kicker": "Erreur 5",
+      "title": "Tu découvres ton matériel le jour J",
+      "body": "Chaussures neuves, short qui gratte, gants oubliés. Rien de tout ça ne se teste **sur la ligne de départ**."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Partir lent, pousser bas, s'entraîner cassé, ne rien découvrir le jour J",
+      "body": "**Quatre corrections gratuites**. Elles ne demandent aucune condition physique en plus."
+    },
+    {
+      "cta": true,
+      "kicker": "Road to Hong Kong",
+      "title": "Tu prépares ta prochaine course ?",
+      "body": "Dis-moi **en commentaire** laquelle des cinq tu fais encore. On est plusieurs, promis. LFG."
+    }
+  ],
+  "caption": "Cinq erreurs qui te coûtent des minutes sur un Hyrox. Aucune n'a à voir avec ta condition physique.\n\nJe les ai toutes faites. La 1 pendant deux saisons complètes. Swipe.\n\nCelle qui coûte le plus cher sur la durée, c'est la 3 : personne ne s'entraîne fatigué, alors que c'est exactement l'état dans lequel tu fais chaque station.\n\nDis-moi en commentaire laquelle tu fais encore. LFG.",
+  "hashtags": [
+    "#hyrox",
+    "#hyroxfrance",
+    "#hyroxtraining",
+    "#roadtohongkong",
+    "#lfg"
+  ],
+  "note": "Aucun chrono ni gain de temps chiffré annoncé : ne pas promettre un nombre de minutes. Aucun sponsor mentionné. À faire relire par Pierre, le contenu technique doit être le sien."
+}

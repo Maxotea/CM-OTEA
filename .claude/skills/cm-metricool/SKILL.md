@@ -14,11 +14,13 @@ description: Workflow complet de community management multi-comptes — génère
 4. Créer la fiche du client dans `references/clients/` en dupliquant `_template-nouveau-client.md`, la remplir, et mettre à jour la mémoire.
 
 **Routine hebdomadaire** (déclenchée par « routine hebdo » ou équivalent — un rappel récurrent du lundi existe sur le téléphone de l'utilisateur) :
+0. **Le carrousel du mercredi de chaque compte est-il écrit, rendu et planifié ?** C'est le premier point de la routine, avant l'horizon : un carrousel manquant se voit dans le fil, un trou à la semaine 12 non. Voir `references/carrousels-hebdo.md`.
 1. Pour CHAQUE marque : `list_scheduled_posts` sur les 14 prochaines semaines → mesurer l'horizon couvert.
 2. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
 3. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
-4. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
-5. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
+4. **Review client** : le cycle est automatisé depuis le 19/08/2026 — le vendredi matin, l'action « Review hebdo client » génère les fichiers de la semaine suivante et la routine « Review — préparation du vendredi » les dépose dans le dossier Drive permanent de chaque client (`reviews/config.json`) avec les brouillons Gmail ; le lundi matin, la routine d'envoi expédie le mail (si opt-in) ; le CR redescend `reviews/etat/` (publiés, à corriger, refusés, en attente). Séquence complète : `recaps/routine-cr-client.md` ; détail technique : `references/review-hebdo.md`.
+5. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
+6. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
 
 **Capture de trend à tout moment** : quand l'utilisateur signale une trend (message, vocal transcrit, lien, description), immédiatement : 1) l'évaluer avec les critères de bonnes-pratiques-cm.md, 2) proposer son adaptation pour chaque compte pertinent (script/légende prêts), 3) planifier les posts validés via bulk_schedule_posts dans la semaine (les trends se périment en jours), 4) si c'est un enseignement durable (« ce format marche »), l'ajouter à la mémoire et aux bonnes pratiques.
 
@@ -45,7 +47,9 @@ Toujours vérifier par recherche web avant d'écrire : dates réelles des évén
 
 ## Étape 3 — Structure éditoriale (commune à tous les comptes)
 
-5 piliers : P1 pédagogie métier (30%), P2 actu secteur (25%), P3 coulisses (20%), P4 saisonnalité client (15%), P5 preuve sociale (10%). Cadence : 3 posts feed/semaine (lundi P2, mercredi P1/P3, vendredi P5/P4) + stories. Semaine d'événement majeur : 4-5 posts.
+5 piliers : P1 pédagogie métier (30%), P2 actu secteur (25%), P3 coulisses (20%), P4 saisonnalité client (15%), P5 preuve sociale (10%). Cadence : 3 posts feed/semaine (lundi P2, **mercredi carrousel**, vendredi P5/P4) + stories. Semaine d'événement majeur : 4-5 posts.
+
+**Le mercredi est un carrousel, sur tous les comptes, toutes les semaines.** Il remplace le post feed du mercredi, il ne s'y ajoute pas : le volume mensuel et donc le palier vendu ne bougent pas. C'est le format qui produit le plus de sauvegardes et de partages. Structure, archétypes, adaptation à la typologie et à la cible, méthode de planification : `references/carrousels-hebdo.md`. Les specs vivent dans `carrousels/<client>/`, le rendu se fait avec `scripts/carrousel.py`.
 
 Déclencheurs automatiques :
 - **J-7 avant événement** → post/reel preview
@@ -55,7 +59,9 @@ Déclencheurs automatiques :
 
 ## Étape 4 — Visuels : hiérarchie stricte pour chaque publication
 
-Pour CHAQUE post non-reel (photo simple, carrousel), choisir le visuel dans cet ordre :
+Les **carrousels du mercredi** ne suivent pas cette hiérarchie : leurs slides sont typographiques et générées par `scripts/carrousel.py` à partir de la DA du compte (`scripts/themes.json`). Voir `references/carrousels-hebdo.md`. La banque photos reste réservée aux posts simples et aux reels — c'est aussi ce qui la préserve de l'épuisement.
+
+Pour CHAQUE post simple non-reel, choisir le visuel dans cet ordre :
 
 1. **Galerie du client d'abord** : photo de la banque classée par pilier (voir la fiche du client dans `references/clients/`), en rapport avec le texte. Rotation : pas de réutilisation à moins de 30 jours. Limite API : les photos locales n'ont pas d'URL publique → créer le post en brouillon et indiquer à l'utilisateur le fichier exact à attacher.
 2. **Photo trouvée si la galerie ne couvre pas le sujet** (événement externe, lieu, produit) : chercher via image_search/web une photo en rapport avec le texte, en privilégiant les sources libres de droits ou officielles (banques d'images libres, communiqués/press kits des marques) — jamais de photo de presse/agence protégée (Getty, AFP) pour un compte commercial. Avantage : une photo en ligne a une URL publique → elle peut être attachée directement au `schedule_post` (post planifié complet, plus besoin de brouillon). Toujours montrer la photo choisie à l'utilisateur dans la réponse.
@@ -78,6 +84,8 @@ Scripts de reels : passer par le skill `reel-script` (hook chiffré, 3 étapes, 
 
 ## Étape 6 — Planification Metricool
 
+**Carrousel** : un carrousel = un seul appel `schedule_post` avec les slides dans `media01` … `media08`, DANS L'ORDRE (l'ordre des paramètres est l'ordre d'affichage). `bulk_schedule_posts` ne gère pas les médias et ne convient donc pas. Penser à supprimer le post feed déjà planifié ce mercredi-là, que le carrousel remplace. Procédure complète : `references/carrousels-hebdo.md`.
+
 **Création en masse (préférée dès 3+ posts)** : code action personnalisé `code_action_metricoolcliapi__bulk_schedule_posts` (params : blog_id, posts = chaîne JSON `[{"date_time":"YYYY-MM-DDTHH:mm:ss","text":"...","type":"POST|REEL"}]`) — crée directement en brouillon (draft true, autoPublish false), Instagram+Facebook, fuseau Europe/Paris natif SANS bug horaire. C'est la méthode par défaut pour un calendrier.
 
 **Création unitaire** via `Zapier:execute_zapier_write_action`, action `schedule_post` :
@@ -91,6 +99,17 @@ Scripts de reels : passer par le skill `reel-script` (hook chiffré, 3 étapes, 
 ## Étape 7 — Boucle post-événement
 
 Le lendemain d'un événement : rechercher le résultat réel sur le web, donner à l'utilisateur le texte final complété. Pour éditer un brouillon existant : supprimer/recréer via schedule_post (le texte n'est pas éditable directement), ou utiliser les code actions personnalisés pour la date et le statut brouillon.
+
+## Validation client — la review hebdo (fichier Excel ↔ Metricool)
+
+Le client valide sa semaine dans un fichier type Excel déposé chaque vendredi dans son
+dossier Drive permanent (toujours le même lien pour lui) ; le mail part le lundi matin.
+Il corrige les légendes dans les cases, choisit ✅ / ✏️ / ⛔ par ligne ; ses décisions sont
+relevées trois fois par jour par l'action « Review hebdo client », qui pousse les
+modifications dans Metricool et passe les ✅ en publication automatique. Un post sans
+décision ne part jamais ; jamais de suppression automatique. Rôle des routines du
+vendredi et du lundi (dépôt Drive, `reviews/config.json`, envoi opt-in, exploitation de
+`reviews/etat/` dans le récap) et garde-fous : `references/review-hebdo.md`.
 
 ## Étape 8 — Calcul ROI pour le client (justifier la prestation)
 

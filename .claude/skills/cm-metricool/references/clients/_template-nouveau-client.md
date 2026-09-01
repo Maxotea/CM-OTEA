@@ -33,3 +33,11 @@
 - Emplacement / état : [reçue, à recevoir, classement par pilier fait ?]
 - Trous à combler :
 - Preset IA (Higgsfield) : [id élément + règles DA] — en dernier recours uniquement
+
+## Carrousel hebdo (mercredi — un par semaine, obligatoire)
+- Typologie ROI et **ce que la cible veut vérifier** avant d'acheter :
+- Cible : niveau de jargon [aucun / initié / décideur] · type de chiffre qui la convainc · CTA qui la fait bouger
+- Archétypes prioritaires (voir `references/carrousels-hebdo.md`) : [A1 méthode / A2 erreurs / A3 avant-après / A4 mythes / A5 guide de choix / A6 décryptage chiffré / A7 coulisses / A8 checklist saisonnière]
+- DA carrousel : ajouter une entrée dans `scripts/themes.json` (fond, texte, accent, police, capitales ou non, réseaux, heure)
+- Preuve à placer en slide 8 :
+- Vigilance : prix vérifiés ou non, allégations interdites, personnes à ne pas montrer

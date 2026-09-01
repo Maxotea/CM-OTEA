@@ -1,0 +1,57 @@
+{
+  "client": "le-loft",
+  "slug": "2026-08-19-quel-soin",
+  "archetype": "A5",
+  "pilier": "P1",
+  "date_time": "2026-08-19T18:00:00",
+  "cible": "Homme 25-45 ans qui vient pour la coupe, ne connaît pas le reste de la carte, et n'ose pas demander ce que c'est",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Guide",
+      "title": "Head spa, soin visage ou rasage : **lequel te faut-il** ?",
+      "body": "Trois prestations, trois problèmes différents. Tu es dans un des trois."
+    },
+    {
+      "kicker": "Le problème",
+      "title": "Tu prends toujours la même chose",
+      "body": "Coupe, barbe, tu repars. Alors que **ce qui te gêne vraiment**, c'est le cuir chevelu, la peau ou les irritations."
+    },
+    {
+      "kicker": "Head spa",
+      "title": "Si ton cuir chevelu **tire, gratte ou graisse vite**",
+      "body": "Massage, vapeur, nettoyage en profondeur. C'est le soin qui fait le plus de bien à ceux qui bossent sous casque, casquette ou stress."
+    },
+    {
+      "kicker": "Soin visage",
+      "title": "Si ta peau **brille à midi et tire le soir**",
+      "body": "Nettoyage, extraction, hydratation. Le truc que personne ne fait chez soi et qui se voit dès le lendemain sur le teint."
+    },
+    {
+      "kicker": "Rasage à l'ancienne",
+      "title": "Si tu t'irrites à chaque rasage",
+      "body": "Serviette chaude, coupe-chou, après-rasage. Le poil est coupé net au ras, pas arraché. **Zéro feu du rasoir** pendant deux jours."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "**Cuir chevelu, peau, irritations**",
+      "body": "Head spa pour la tête. Soin visage pour le teint. Rasage à l'ancienne pour la peau qui réagit."
+    },
+    {
+      "cta": true,
+      "kicker": "Le Loft, Puteaux",
+      "title": "Dis-nous ce qui te gêne, on t'oriente",
+      "body": "Head spa **à partir de 60 euros**, soin visage à partir de 30 euros, rasage à l'ancienne 30 euros. 7j/7, 10h-20h, 33 rue Godefroy."
+    }
+  ],
+  "caption": "Tu viens pour la coupe depuis deux ans et tu n'as jamais testé le reste de la carte. Normal : personne ne t'a expliqué à quoi ça sert.\n\nTrois prestations, trois problèmes précis. Swipe, tu es forcément dans un des trois.\n\nLe head spa, c'est celui que nos clients réservent une fois et reprennent tous les mois.\n\nBook ton rdv, lien en bio.",
+  "hashtags": [
+    "#headspa",
+    "#barbierputeaux",
+    "#rasageancienne",
+    "#soinvisagehomme",
+    "#ladefense",
+    "#barbershop"
+  ],
+  "note": "Tarifs head spa 60-120 euros, soin visage 30-60 euros, rasage 30 euros : vérifiés Planity juillet 2026, fiche client. Le head spa est le différenciateur numéro 1 du salon, il porte la couverture."
+}

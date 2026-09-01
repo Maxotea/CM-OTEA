@@ -1,0 +1,62 @@
+{
+  "client": "otea-production",
+  "slug": "2026-08-12-erreurs-video-entreprise",
+  "archetype": "A2",
+  "pilier": "P1",
+  "date_time": "2026-08-12T12:00:00",
+  "cible": "Dirigeant ou responsable communication d'une PME, a déjà fait une vidéo qui n'a pas marché, et n'ose plus remettre de budget dessus",
+  "slides": [
+    {
+      "cover": true,
+      "kicker": "Vidéo d'entreprise",
+      "title": "**5 erreurs** qui plombent une vidéo d'entreprise",
+      "body": "Elles se commettent toutes avant le premier jour de tournage."
+    },
+    {
+      "kicker": "Erreur 1",
+      "title": "Commencer par le format",
+      "body": "On décide d'une vidéo de trois minutes avant de savoir à qui elle parle. L'objectif choisit le format, **jamais l'inverse**."
+    },
+    {
+      "kicker": "Erreur 2",
+      "title": "Vouloir tout dire",
+      "body": "L'histoire, les valeurs, les produits, le recrutement. Une vidéo qui traite quatre sujets n'en transmet aucun. **Un message, une vidéo**."
+    },
+    {
+      "kicker": "Erreur 3",
+      "title": "Soigner l'image et négliger le son",
+      "body": "Une image moyenne passe. **Un son moyen fait fermer la vidéo** en quelques secondes. C'est le poste sur lequel on ne transige jamais."
+    },
+    {
+      "kicker": "Erreur 4",
+      "title": "Découvrir la diffusion à la livraison",
+      "body": "Un film pensé pour le site ne fonctionne pas en vertical, ni en dix secondes. Les formats de diffusion se décident **avant le tournage**."
+    },
+    {
+      "kicker": "Erreur 5",
+      "title": "Un seul livrable pour un seul usage",
+      "body": "Une journée de tournage peut produire un film, des extraits sociaux et des visuels. Ne pas le prévoir, c'est payer une journée pour **un dixième de sa valeur**."
+    },
+    {
+      "kicker": "À retenir",
+      "title": "Objectif, message unique, son, diffusion, déclinaisons",
+      "body": "Cinq décisions prises en amont. Elles coûtent une réunion et **sauvent un budget**."
+    },
+    {
+      "cta": true,
+      "kicker": "OTEA Production",
+      "title": "Parlons de votre prochain projet",
+      "body": "Vidéo d'entreprise, captation d'événement, interviews et marque employeur. Échange de cadrage **sans engagement**. Lien en bio."
+    }
+  ],
+  "caption": "Vous avez déjà fait une vidéo qui n'a pas marché. Dans la plupart des cas, le problème n'était pas le tournage.\n\nCinq erreurs qui se commettent toutes avant le premier jour de tournage. Faites défiler.\n\nLa cinquième est celle qui coûte le plus cher : une journée de tournage utilisée pour un seul livrable, alors qu'elle pouvait en produire dix.\n\nParlons de votre projet, lien en bio.",
+  "hashtags": [
+    "#videoentreprise",
+    "#communicationvideo",
+    "#productionaudiovisuelle",
+    "#marqueemployeur",
+    "#contentmarketing",
+    "#videomarketing"
+  ],
+  "note": "B2B, publication 12h00, Instagram + Facebook + LinkedIn. Aucune statistique de marché citée : toute donnée chiffrée sur la vidéo exige une recherche web sourcée avant publication. Ton vouvoiement professionnel accessible, expert qui challenge, conforme à la fiche."
+}
