@@ -1,54 +1,84 @@
 {
-  "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement — UNE SEULE exception, décidée par Maxime le 19/08/2026 : le mail de review hebdo du lundi matin part automatiquement pour les comptes où envoi_review_auto=true ET email_confirme=true (routine « Review — envoi du lundi ») ; partout ailleurs, brouillon seulement. Cycle review depuis le 19/08/2026 : le VENDREDI matin la routine dépose le tableau de la semaine suivante dans le dossier Drive permanent du client et prépare les brouillons ; le LUNDI matin le mail part (auto si opt-in, sinon Maxime envoie) et le CR redescend le bilan des décisions — séquence complète : recaps/routine-cr-client.md, modèle du mail : recaps/modele-mail-review.md.",
+  "_doc": "Configuration des comptes-rendus hebdo CLIENTS du lundi. Canaux : 'email' (brouillon Gmail), 'whatsapp' (lien wa.me pré-rempli dans le récap), 'les deux' (défaut). Règles : l'adresse email n'est mise dans le brouillon QUE si email_confirme=true ; le numéro WhatsApp n'est mis dans le lien wa.me QUE si whatsapp_confirme=true (sinon lien sans numéro : Maxime choisit le contact dans WhatsApp). Format numéro : international sans + ni espaces (ex. 33612345678). Ajouter un client = ajouter une entrée ; la tâche compare aussi avec list_brands (Metricool) et signale tout compte non configuré. Ne JAMAIS envoyer automatiquement — UNE SEULE exception, décidée par Maxime le 19/08/2026 : le mail de review hebdo du lundi matin part automatiquement pour les comptes où envoi_review_auto=true ET email_confirme=true (routine « Review — envoi du lundi ») ; partout ailleurs, brouillon seulement. Cycle review depuis le 19/08/2026 : le VENDREDI matin la routine dépose le tableau de la semaine suivante dans le dossier Drive permanent du client et prépare les brouillons ; le LUNDI matin le mail part (auto si opt-in, sinon Maxime envoie) et le CR redescend le bilan des décisions — séquence complète : recaps/routine-cr-client.md, modèle du mail : recaps/modele-mail-review.md. Champ 'actif' : un compte avec actif=false est DESACTIVE, la tache doit le sauter entierement (ni recap interne, ni compte rendu client, ni branchement de medias). L'absence du champ vaut actif=true.",
   "comptes": [
     {
       "blog_id": 5733269,
       "nom": "OTEA PRODUCTION",
       "recap_client": false,
-      "note": "Compte de l'agence (Maxime) — couvert par le récap interne, pas de mail client."
+      "note": "Compte de l'agence (Maxime) — couvert par le récap interne, pas de mail client.",
+      "dossier_medias": "medias/otea-production",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 5733306,
       "nom": "Gossip Beauty Center by Sarah",
-      "recap_client": true,
+      "recap_client": false,
       "email": null,
       "email_cc": null,
       "email_confirme": false,
       "envoi_review_auto": false,
       "ton": "vouvoiement chaleureux et élégant",
-      "note": "Adresse de Sarah à demander. community.aureal@gmail.com trouvée dans Gmail = collaboratrice CM (répartition des missions), PAS la cliente — à confirmer par Maxime avant tout usage.",
+      "note": "COMPTE DESACTIVE le 28/08/2026 sur demande de Maxime. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. 39 brouillons restaient dans Metricool au 28/08, tous en draft, aucun en autoPublish : rien ne partira tout seul. Coordonnees conservees au cas ou le compte serait reactive. WhatsApp fourni par Maxime le 03/08/2026 ; email client toujours manquant (community.aureal@gmail.com est la collaboratrice CM, pas la cliente).",
       "canal": "les deux",
-      "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp": "33769025786",
+      "whatsapp_confirme": true,
+      "dossier_medias": "medias/gossip-beauty-center",
+      "medias_auto": {
+        "actif": false,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      },
+      "actif": false
     },
     {
       "blog_id": 6191921,
       "nom": "Le Loft",
-      "recap_client": true,
-      "email": null,
+      "recap_client": false,
+      "email": "lestudio92800@gmail.com",
       "email_cc": null,
       "email_confirme": false,
       "envoi_review_auto": false,
       "ton": "tutoiement énergique, direct",
-      "note": "Aucune adresse trouvée dans Gmail — à demander.",
+      "note": "CONTRAT TERMINE le 31/08/2026 : William a mis fin au contrat. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. 37 brouillons restaient dans Metricool du 31/08 au 31/12, tous en draft, aucun en autoPublish : rien ne partira tout seul. Coordonnees conservees au cas ou le compte reviendrait. Email et WhatsApp fournis par Maxime le 03/08/2026.",
       "canal": "les deux",
-      "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp": "33616071506",
+      "whatsapp_confirme": true,
+      "dossier_medias": "medias/le-loft",
+      "medias_auto": {
+        "actif": false,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      },
+      "actif": false
     },
     {
       "blog_id": 6563137,
       "nom": "J Lawson Golf",
       "recap_client": true,
-      "email": null,
+      "email": "jlawsongolfpro@gmail.com",
       "email_cc": null,
       "email_confirme": false,
       "envoi_review_auto": false,
       "email_suggere": "jlawsongolfpro@gmail.com",
       "ton": "vouvoiement pro, passionné golf, phrases courtes (John est anglophone)",
-      "note": "jlawsongolfpro@gmail.com = John en direct (échange logo 15/07/2026) — haute confiance, en attente de confirmation Maxime.",
+      "note": "Email et WhatsApp confirmés par Maxime le 03/08/2026. John est anglophone : phrases courtes.",
       "canal": "les deux",
-      "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp": "33611726562",
+      "whatsapp_confirme": true,
+      "dossier_medias": "medias/jlawson-golf",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
+      }
     },
     {
       "blog_id": 5733302,
@@ -61,12 +91,19 @@
       "email_suggere": "sabrina.khalfa@lagalerieimmobiliere.com",
       "email_cc_suggere": "remi.lerer@lagalerieimmobiliere.com",
       "ton": "vouvoiement élégant",
-      "note": "Sabrina Khalfa (fondatrice) + Rémi Lerer (directeur associé) trouvés dans Gmail — en attente de confirmation Maxime.",
+      "note": "Fournis par Maxime le 03/08/2026. Sabrina Khalfa (fondatrice) en destinataire principal, Rémi Lerer (directeur associé) en copie. Le 06 45 68 49 66 était déjà identifié comme celui de Rémi via sa signature mail : le 06 59 00 93 49 est donc celui de Sabrina. Un seul lien wa.me est généré, vers Sabrina.",
       "canal": "les deux",
-      "whatsapp": null,
-      "whatsapp_confirme": false,
-      "whatsapp_suggere_cc": "33645684966",
-      "note_whatsapp": "+33 6 45 68 49 66 = Rémi Lerer (signature mail) — c'est le directeur associé, PAS Sabrina. À confirmer."
+      "whatsapp": "33659009349",
+      "whatsapp_confirme": true,
+      "dossier_medias": "medias/la-galerie-immobiliere",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)",
+        "note": "Photos de biens réels = posts feed uniquement, jamais présentées comme un bien à vendre si générique."
+      },
+      "whatsapp_cc": "33645684966"
     },
     {
       "blog_id": 6572293,
@@ -77,10 +114,18 @@
       "email_confirme": false,
       "envoi_review_auto": false,
       "ton": "tutoiement direct, énergie brute, LFG",
-      "note": "NE PAS utiliser pierre.huiban@lexisnexisrisk.com (adresse de son employeur) — demander son adresse perso.",
+      "note": "WhatsApp fourni par Maxime le 03/08/2026. Email perso TOUJOURS MANQUANT — ne jamais utiliser pierre.huiban@lexisnexisrisk.com (employeur).",
       "canal": "les deux",
-      "whatsapp": null,
-      "whatsapp_confirme": false
+      "whatsapp": "33669387606",
+      "whatsapp_confirme": true,
+      "dossier_medias": "medias/pierre-huiban",
+      "medias_auto": {
+        "actif": true,
+        "max_remplacements_semaine": 4,
+        "animer_stories": false,
+        "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)",
+        "note": "Personal branding : vraies photos obligatoires, JAMAIS d'IA sur son visage."
+      }
     },
     {
       "blog_id": 4728418,
@@ -100,9 +145,9 @@
     },
     {
       "blog_id": 6636615,
-      "nom": "(compte sans nom)",
+      "nom": "Run On Invest",
       "recap_client": false,
-      "note": "Détecté via list_brands le 29/07/2026 — à identifier."
+      "note": "Onboardé le 03/08/2026 (brief plateforme de marque V2.1). Instagram uniquement (@runoninvest). Phase teasing en brouillon. ⛔ Confidentialité stricte : négociations sponsors (Projet Foulée) et Arena 2027 — rien ne se publie sans validation explicite de Maxime. Aucune donnée factuelle confirmée (dates, lieu, jauge, URL) : placeholders obligatoires. recap_client à activer quand le compte sera actif."
     }
   ]
 }

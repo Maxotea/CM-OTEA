@@ -77,3 +77,8 @@
 2. **Rotation anti-répétition** : pas la même photo à moins de 30 jours d'intervalle, même règle que pour les autres comptes. Attention aux quasi-doublons des séries corde (27-41) et tapis (69-79) : deux photos de la même série comptent comme la même image aux yeux de l'audience.
 3. **Trous à combler en priorité** : les piliers *entraînement*, *compétition*, *data* et *coulisses* sont désormais couverts. Manquent encore : **famille/double vie** (zéro photo) et **toutes les photos sponsors** (Kairyn, GX Society, Split Nutrition) — au minimum une photo par sponsor est nécessaire avant de planifier d'autres posts sponsorisés au-delà de l'annonce groupée et des 2 posts déjà en brouillon (7 incontournables, setup).
 4. **IA (Higgsfield) en dernier recours** : pas de preset de marque défini pour Pierre Huiban à ce jour — à créer seulement si besoin de visuels impossibles à shooter (ex. carte du parcours Stockholm).
+
+## Règles de sélection (import v3 — 02/08/2026)
+- **Rotation anti-répétition** : pas la même photo à moins de 30 jours d'intervalle, même règle que pour les autres comptes.
+- **Trous à combler en priorité** : au minimum une photo par sponsor avant de planifier d'autres posts sponsorisés au-delà de l'annonce groupée et des 2 posts déjà en brouillon (7 incontournables, setup).
+- *(La grille de catégories vide du zip v3 n'a pas été reprise : le catalogue ci-dessus, avec 81 photos classées, la remplace.)*

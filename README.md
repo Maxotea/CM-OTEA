@@ -95,3 +95,18 @@ garde-fous et rôle de la session : `.claude/skills/cm-metricool/references/revi
 
 Mettre en route un nouveau client : l'ajouter à `reviews/config.json` (slug, blog_id,
 prefixe, `actif: true`) — le reste suit le lundi suivant.
+
+## Ajouts v3 (02/08/2026)
+- `.claude/skills/cm-metricool/references/compte-rendu-hebdo-clients.md` — comptes rendus hebdo clients (lundi 9h) : WhatsApp prioritaire + doublon email, mode brouillon
+- `.claude/skills/cm-metricool/references/roi-clients.md` et `banques-photos.md` — références transverses
+- `references/clients/` couvre désormais **8 comptes** (ajout de Confshine Game et Otea Filmakers) + template + banques photos
+
+## Migration (02/08/2026)
+- `.claude/memories/` — les 7 mémoires du CM, désormais **versionnées** (elles vivaient hors du repo et ont été perdues à la migration). Les 2 règles non négociables sont rappelées dans `CLAUDE.md`.
+- `.claude/taches-planifiees/recap-hebdo-publications/SKILL.md` — prompt de la tâche du lundi 9h, chemins rendus relatifs. **La Routine reste à créer.**
+- `scripts/` — `carte-story.py` (composition carte story 9:16) et `scan-medias.py` (détection SHA1 des nouveaux médias). Testés sous Linux.
+- `_portage/INSTALLATION.md` — état complet de la migration : ce qui marche, ce qui manque, ce qui reste à faire.
+
+### Prérequis machine
+`python3` + `Pillow` (`pip install Pillow`) et `ffmpeg` (`apt install ffmpeg` · `brew install ffmpeg` · `choco install ffmpeg`).
+Le dossier `medias/` (1,5 Go) n'est pas versionné : le copier à part, sinon la tâche du lundi ne peut brancher aucune photo.

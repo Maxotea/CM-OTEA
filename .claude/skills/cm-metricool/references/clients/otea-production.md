@@ -27,7 +27,27 @@
 - Banque 7 stories 9:16 `medias/otea-production/ia/stories/` (lun belle-semaine, mar idée-vidéo, mer coulisses, jeu conseil, ven parlons-projet, sam captation, dim inspiration). DA orange/noir/teal. Vérifiées.
 - **31 stories planifiées ✅** 01→31/08 à 10:00, IG+FB (stories LinkedIn non supportées), brouillon, via `bulk_schedule_stories`.
 - **Vraies photos dans les stories (29/07)** : 3 slots de la rotation basculés en cartes photo composées via PIL (photo réelle intacte + barre orange #FF5800 + titre HelveticaNeue, fond flouté) : **mercredi Coulisses** (`story-coulisses-photo.jpg`, gros plan objectif), **vendredi Parlons projet** (`story-projet-photo.jpg`, sourire derrière caméra), **samedi Captation événement** (`story-captation-photo.jpg`, micro en événement). 13 stories d'août remplacées, doublon 08/08 purgé, vérifié 1 story/jour. Lun/mar/jeu/dim restent IA (silhouette, clap, fauteuil, drone). Script PIL réutilisable pour composer des cartes 9:16 photo+texte sans IA (pas d'altération de visages).
+- ⛔ **PLUS AUCUN VISUEL IA DANS LES STORIES (règle Maxime, 01/08/2026)** — voir [[stories-vraies-photos-sans-ia]]. Les 13 stories qui tournaient encore sur les visuels IA (lun/mar/jeu/dim) sont remplacées par **4 cartes issues de ses vraies photos**, réellement animées en i2v : lun `260506-153801` (gimbal en action) · mar `260702-103536` (tournage studio à deux) · jeu `251107-094553` (échange conseil au bureau) · dim `260506-155121` (plan large graphique, lampe suspendue). Fichiers : `medias/otea-production/stories-video/`. Ids août : 356689499/502/504/507/508/513/515, 356689545/550/555/560/563/571.
+- **Août = 100 % vraies photos animées** : 13 (nouvelles) + 9 cartes photo animées (mer/ven/sam) + 4 stories photo fixes déjà validées par Maxime, non touchées.
 - **Cartes photo ANIMÉES (30/07)** : les 9 stories photo encore en brouillon (mer 12/19/26, ven 14/21/28, sam 15/22/29 août — ids 355805218/232/244/250/261/270/280/299/310) sont passées en **vidéo 5 s** (`story-*-anim.mp4` dans `ia/stories/`). Pipeline réutilisable : calques PIL séparés (fond photo sans texte + PNG texte avec scrim dégradé sombre en haut pour lisibilité) → i2v Higgsfield `kling3_0_turbo` (7,5 crédits/5 s, prompt « subtle cinemagraph, slow push-in, face stays identical, no morphing ») → ffmpeg upscale 1080x1920 + overlay du texte fixe (net) → mp4 hébergé via media_upload → `bulk_schedule_stories` accepte les .mp4 tel quel. Frames vérifiées : visages intacts. Les 4 stories photo VALIDÉES par Maxime (01, 05, 07, 08/08) restent en photo fixe — ne pas re-toucher ; proposer la bascule vidéo s'il re-valide.
+
+## 🔇 Stories muettes — corrigé le 19/08/2026
+Les **3 cartes photo composées le 29/07** (Coulisses, Parlons projet, Captation
+événement) portaient une bande son incrustée, contrairement à ce que supposait
+`_portage/REPRISE-STORIES-PHOTOS.md`. Elles ont été redéposées muettes :
+
+| Slot | Ancien média (sonore) | Nouveau média (muet) | Nouveaux ids (19 + 26/08, 21 + 28/08, 22 + 29/08) |
+|---|---|---|---|
+| mercredi Coulisses | `b7f45530` | `85fc08f7-301b-4d2a-a464-845f100f3516` | 363861326 · 363861333 |
+| vendredi Parlons projet | `da10744b` | `422579cc-be31-42ca-95f3-8e6fb5d1c6d0` | 363861348 · 363861359 |
+| samedi Captation | `1fe49bcf` | `dcaa7c92-abeb-4d9b-9a29-0890745af254` | 363861362 · 363861363 |
+
+Les 4 cartes IA (Le conseil, Inspiration, Belle semaine, Idée vidéo) étaient
+déjà muettes — non touchées. Anciens brouillons supprimés : 355805250, …261,
+…270, …280, …299, …310. Vérifié : 13 stories, une par jour du 19 au 31/08.
+
+⚠️ Toute nouvelle story de ce compte part **sans son** (`-an` au montage) :
+`.claude/memories/stories-sans-son.md`.
 
 ## Carrousel hebdo (créneau du mercredi, 12h, Instagram + Facebook + LinkedIn)
 - **Typologie** : B2B projet → la preuve est la méthode et le cadrage. **Cible** : dirigeant ou responsable communication de PME, souvent échaudé par une première vidéo qui n'a rien donné. Ce qu'il veut vérifier : que ça sert un objectif business et que ça ne va pas immobiliser son entreprise.

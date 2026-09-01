@@ -1,0 +1,77 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Constat.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Services.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Methode.dc.html",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Distinction.dc.html",
+      "x": 0,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Preuve.dc.html",
+      "x": 1560,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Formules.dc.html",
+      "x": 3120,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Rentabilite.dc.html",
+      "x": 4680,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Demarrage.dc.html",
+      "x": 0,
+      "y": 1940,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Contact.dc.html",
+      "x": 1560,
+      "y": 1940,
+      "w": 1440,
+      "h": 810
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

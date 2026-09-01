@@ -36,7 +36,7 @@ Les outils Metricool passent par Zapier. Toujours appeler `Zapier:list_enabled_z
 |---|---|---|---|
 | jlawsongolf | 6563137 | Instagram, Facebook | Fitting de clubs de golf |
 | LE LOFT | 6191921 | Instagram | Barbier |
-| Gossip Beauty Center | 5733306 | IG, FB, TikTok | Institut de beauté |
+| ~~Gossip Beauty Center~~ | ~~5733306~~ | | **DÉSACTIVÉ le 28/08/2026** : ne rien produire ni programmer sans un feu vert explicite de Maxime |
 | La Galerie Immobilière | 5733302 | IG, FB, TikTok | Immobilier |
 | OTEA PRODUCTION | 5733269 | IG, FB, TikTok, YT, LinkedIn | Production vidéo |
 | Otea Filmakers | 4728418 | IG, FB, TikTok, LinkedIn | Production vidéo |
@@ -68,6 +68,15 @@ Pour CHAQUE post simple non-reel, choisir le visuel dans cet ordre :
 3. **IA (Higgsfield) en tout dernier recours** : uniquement si rien d'existant ne convient (concepts abstraits, schémas pédagogiques). Utiliser l'élément de référence de la marque (ex. J Lawson Golf : élément "JLawson-Studio", rendu tech premium moderne, PAS de bois, métal noir mat, LED avec accent chaud, bleu marine et vert, launch monitor en fond).
 
 Les reels restent tournés avec de vraies vidéos (script reel-script + B-roll listé depuis la banque).
+
+**Stories : format figé.** Une story se produit toujours de la même façon, sur
+tout compte qui a de vraies photos : vraie photo du client recadrée 9:16 dans
+PIL, animée en i2v caméra verrouillée (`kling3_0_turbo`, 5 s, 7,5 crédits),
+composée **plein cadre 1080×1920** avec le texte incrusté en ffmpeg par-dessus,
+**muette**, branchée en brouillon puis vérifiée à `audit_publication_safety`.
+Jamais une carte typographique seule, jamais une photo de banque, jamais une
+vidéo logée dans une vignette, jamais un `zoompan` seul. Process complet et
+pièges mesurés : `.claude/memories/story-video-plein-cadre.md`.
 
 ## Étape 5 — Écriture
 
