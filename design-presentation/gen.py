@@ -7,7 +7,9 @@ INK2     = "#1B1815"   # panneaux
 CREME    = "#F0E9DE"
 DIM      = "#9E9488"
 ACCENT   = "#C88B52"   # oklch(~0.68 0.13 55), laiton
-LINE     = "#2E2823"
+LINE     = "#2E2823"   # filets 1 px, jamais du texte
+MENTION  = "#7B7268"   # mentions légales, lisible sur le fond
+FOLIO    = "#6B6259"   # numéro de planche, discret mais visible
 
 SERIF = "'Bodoni Moda', Georgia, 'Times New Roman', serif"
 SANS  = "'IBM Plex Sans', 'Helvetica Neue', Helvetica, sans-serif"
@@ -52,8 +54,8 @@ def eyebrow(num, texte):
     <span>%s</span>
   </div>""" % (MONO, DIM, ACCENT, num, LINE, texte))
 
-def folio(n):
-    return ("""  <div style="position: absolute; right: 96px; bottom: 76px; font-family: %s; font-size: 12px; letter-spacing: 0.14em; color: %s;">%s <span style="color: %s;">/ 10</span></div>""" % (MONO, LINE, n, LINE))
+def folio(n, pad=96):
+    return ("""  <div style="position: absolute; right: %dpx; bottom: 76px; font-family: %s; font-size: 12px; letter-spacing: 0.14em; color: %s;">%s <span style="color: %s;">/ 10</span></div>""" % (pad, MONO, FOLIO, n, "#4E463E"))
 
 def titre(t, taille=58, mb=40):
     return ("""  <h1 style="margin: 0 0 %dpx; font-family: %s; font-weight: 500; font-size: %dpx; line-height: 1.08; letter-spacing: -0.01em; color: %s; text-wrap: pretty;">%s</h1>""" % (mb, SERIF, taille, CREME, t))
@@ -64,7 +66,7 @@ P = {}
 P["Main"] = page("""  <div style="font-family: %s; font-size: 14px; font-weight: 500; letter-spacing: 0.32em; text-transform: uppercase; color: %s;">OTEA Production</div>
   <div style="flex-grow: 1;"></div>
   <div style="width: 92px; height: 2px; background: %s; margin-bottom: 44px;"></div>
-  <h1 style="margin: 0 0 36px; font-family: %s; font-weight: 400; font-size: 78px; line-height: 1.1; letter-spacing: -0.015em; color: %s; max-width: 1100px;">Je m%sccupe de vos r%sseaux sociaux.<br>Vous vous occupez de votre m%stier.</h1>
+  <h1 style="margin: 0 0 36px; font-family: %s; font-weight: 400; font-size: 78px; line-height: 1.1; letter-spacing: -0.015em; color: %s; max-width: 1100px;">Je m%soccupe de vos r%sseaux sociaux.<br>Vous vous occupez de votre m%stier.</h1>
   <div style="font-size: 21px; font-weight: 300; letter-spacing: 0.01em; color: %s;">Community management pour commerces et ind%spendants</div>
 """ % (MONO, CREME, ACCENT, SERIF, CREME, "’", "é", "é", DIM, "é"))
 
@@ -229,11 +231,11 @@ P["Formules"] = page("""%s
   %s
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px;">%s
   </div>
-  <div style="display: flex; gap: 22px; align-items: baseline; margin-top: 24px; padding-top: 18px; border-top: 1px solid %s;">
+  <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: baseline; margin-top: 24px; padding-top: 18px; border-top: 1px solid %s;">
     <div style="font-size: 16px; font-weight: 500; color: %s; white-space: nowrap;">Reel suppl%smentaire : 190 %s l%sunit%s.</div>
     <div style="font-size: 15px; font-weight: 300; color: %s; line-height: 1.5;">Le tournage se fait chez vous, avec vous. Je ne vends un reel que le jour o%s vous %stes pr%st %s passer devant la cam%sra, jamais %s l%savance.</div>
   </div>
-  <div style="margin-top: 16px; font-size: 12px; font-weight: 300; line-height: 1.6; color: %s;">
+  <div style="margin-top: 16px; font-size: 12.5px; font-weight: 300; line-height: 1.6; color: %s;">
     Tarifs hors taxes. Engagement de trois mois. En dessous de trois mois, aucun compte ne bouge assez pour qu%son puisse en tirer quoi que ce soit.<br>
     Toutes les formules supposent un album partag%s aliment%s de dix photos par mois. Album vide, mois non produit et non factur%s.
   </div>
@@ -241,7 +243,7 @@ P["Formules"] = page("""%s
          "".join(colonne(*f) for f in FORMULES), LINE,
          ACCENT, "é", "€", "’", "é", DIM,
          "ù", "ê", "ê", "à", "é", "à", "’",
-         LINE, "’", "é", "é", "é", folio("07")), pad=72)
+         MENTION, "’", "é", "é", "é", folio("07", 72)), pad=72)
 
 # ------------------------------------------------------------ 08 le calcul
 CALCULS = [
