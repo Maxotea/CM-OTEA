@@ -548,9 +548,51 @@ Deux limites, relevées à la mesure et à l'œil :
   filigrane et le titre se disputent le même espace.
 
 Ce sont des photos de mandats à vendre, pas des intérieurs meublés
-aspirationnels. **Ce qui débloquerait vraiment le sujet : demander à Sabrina
-des photos de biens meublés ou vendus, et des extérieurs de quartier.** Le
-manifeste les prendra le jour où elles arrivent, rien d'autre à changer.
+aspirationnels. **Demander à Sabrina des photos de biens meublés ou vendus, et
+des extérieurs de quartier** reste la meilleure piste : ce sont les seules qui
+peuvent illustrer un bien précis.
+
+### 🌇 Fonds d'ambiance sous licence — 02/09/2026
+
+Maxime : « des photos qui ne sont pas obligatoirement des biens à la vente de
+La Galerie ; il faut que ces photos soient instagrammables / Pinterest ».
+
+**La distinction qui rend ça sain.** Ce qui a coûté Le Loft, c'est d'avoir fait
+passer des images pour SON salon. Un fond d'ambiance derrière un texte de
+conseil ne prétend rien de tel : c'est de l'habillage, pas un mandat. Deux
+provenances cohabitent donc dans le manifeste :
+
+| | `provenance: client` | `provenance: libre` |
+|---|---|---|
+| Origine | leurs mandats publiés | Pexels, licence commerciale |
+| Peut illustrer un bien précis | **oui** | **non, refusé par la validation** |
+| Champs obligatoires | — | `licence` + `credit` |
+
+**Le garde-fou.** Si le texte d'une slide contient « ce bien », « à vendre »,
+« en exclusivité », « coup de cœur » et compagnie, et que la slide porte un
+fond `libre`, la validation refuse et dit pourquoi. Testé sur trois cas :
+texte général + fond libre accepté, texte de mandat + fond libre refusé,
+texte de mandat + photo du client accepté.
+
+**⛔ Pinterest n'est pas une source.** Les images qui y sont épinglées
+appartiennent à des tiers. On y cherche l'esthétique, on prend les fichiers sur
+Pexels, dont la licence commerciale est explicite et gratuite.
+
+**Ce qui a été retenu.** Cinquante-huit références proposées, cinquante-six
+**téléchargées et mesurées une par une** : aucune référence inventée. Trente-
+quatre ont de la matière et entrent au manifeste sous les clés `P<id>` :
+toits de zinc, façades haussmanniennes, ferronneries, rues de Montmartre,
+voilages traversés par le soleil, cuisines chaleureuses, bibliothèques.
+
+Planche-contact des 34, avec identifiants et luminance :
+`https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f05400a8-f92c-4cf9-bc35-5f501f31d8a0.jpg`
+
+**L'effet du calcul de voile se voit ici.** Une façade claire (`P31058041`,
+luminance 205 sous le texte) demande 68 % de voile ; le voilage au soleil
+(`P3557507`, 116) n'en demande que 40 % et la photo reste largement lisible.
+Le titre tient à 7,59:1 dans les deux cas. C'est tout l'intérêt de mesurer
+plutôt que de fixer une opacité : la photo n'est jamais assombrie plus que
+nécessaire.
 
 ### Où c'est câblé
 
