@@ -1,0 +1,255 @@
+{
+  "_doc": "Fonds photo des carrousels La Galerie Immobilière. Ce sont LEURS photos, publiées sur leurs propres mandats (lagalerieimmobiliere.com) : jamais de banque d'images sur un compte commercial. Le champ matiere dit si la photo a de la texture (True) ou si c'est un mur nu de logement vide (False) : seules les photos à matiere=True font un fond qui tient. luminance et detail sont mesurés sur le recadrage 4:5 et servent au calcul du voile.",
+  "client": "la-galerie-immobiliere",
+  "source": "site du client, mandats publiés",
+  "releve": "2026-09-02",
+  "photos": [
+    {
+      "cle": "01",
+      "slug": "facade-bois",
+      "sujet": "Façade contemporaine bardée de bois, jardin",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2025/10/17278165891_VM345_23_original.jpg",
+      "luminance": 108.8,
+      "detail": {
+        "haut": 27.7,
+        "milieu": 43.2,
+        "bas": 39.1
+      },
+      "matiere": true
+    },
+    {
+      "cle": "02",
+      "slug": "chambre-vide",
+      "sujet": "Chambre vide, fenêtre sur toits",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260191_VM345_8_original.jpg",
+      "luminance": 138.4,
+      "detail": {
+        "haut": 4.1,
+        "milieu": 6.7,
+        "bas": 7.8
+      },
+      "matiere": false
+    },
+    {
+      "cle": "04",
+      "slug": "salle-bain-vasque",
+      "sujet": "Salle de bains, vasque bois et miroir ovale",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260311_VM345_10_original.jpg",
+      "luminance": 159.1,
+      "detail": {
+        "haut": 6.6,
+        "milieu": 7.8,
+        "bas": 6.8
+      },
+      "matiere": false
+    },
+    {
+      "cle": "06",
+      "slug": "piece-vide",
+      "sujet": "Pièce vide, parquet clair",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260541_VM345_13_original.jpg",
+      "luminance": 169.7,
+      "detail": {
+        "haut": 4.7,
+        "milieu": 5.8,
+        "bas": 8.4
+      },
+      "matiere": false
+    },
+    {
+      "cle": "07",
+      "slug": "douche-italienne",
+      "sujet": "Douche à l'italienne, vasque bois",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260621_VM345_14_original.jpg",
+      "luminance": 153.8,
+      "detail": {
+        "haut": 9.4,
+        "milieu": 13.0,
+        "bas": 6.9
+      },
+      "matiere": false
+    },
+    {
+      "cle": "08",
+      "slug": "piece-claire",
+      "sujet": "Pièce claire, mur blanc",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260751_VM345_16_original.jpg",
+      "luminance": 157.7,
+      "detail": {
+        "haut": 4.3,
+        "milieu": 9.0,
+        "bas": 8.2
+      },
+      "matiere": false
+    },
+    {
+      "cle": "09",
+      "slug": "piece-blanche",
+      "sujet": "Pièce blanche, forte luminosité",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260951_VM345_18_original.jpg",
+      "luminance": 183.3,
+      "detail": {
+        "haut": 3.8,
+        "milieu": 7.4,
+        "bas": 8.4
+      },
+      "matiere": false
+    },
+    {
+      "cle": "10",
+      "slug": "piece-lumineuse",
+      "sujet": "Pièce lumineuse, sol clair",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219261071_VM345_19_original.jpg",
+      "luminance": 178.2,
+      "detail": {
+        "haut": 3.7,
+        "milieu": 10.9,
+        "bas": 7.2
+      },
+      "matiere": false
+    },
+    {
+      "cle": "11",
+      "slug": "sejour-matiere",
+      "sujet": "Séjour, matière et contraste",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722541_VM383_1_original.jpg",
+      "luminance": 144.4,
+      "detail": {
+        "haut": 21.3,
+        "milieu": 29.6,
+        "bas": 9.3
+      },
+      "matiere": true
+    },
+    {
+      "cle": "12",
+      "slug": "exterieur-terrasse",
+      "sujet": "Extérieur, terrasse",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722551_VM383_2_original.jpg",
+      "luminance": 164.8,
+      "detail": {
+        "haut": 8.1,
+        "milieu": 25.4,
+        "bas": 13.9
+      },
+      "matiere": true
+    },
+    {
+      "cle": "13",
+      "slug": "volume-contraste",
+      "sujet": "Volume contrasté, ouverture",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722571_VM383_4_original.jpg",
+      "luminance": 143.4,
+      "detail": {
+        "haut": 12.0,
+        "milieu": 25.1,
+        "bas": 33.4
+      },
+      "matiere": true
+    },
+    {
+      "cle": "15",
+      "slug": "lumiere-jour",
+      "sujet": "Pièce traversée par la lumière du jour",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722611_VM383_7_original.jpg",
+      "luminance": 161.7,
+      "detail": {
+        "haut": 2.0,
+        "milieu": 22.4,
+        "bas": 21.9
+      },
+      "matiere": true
+    },
+    {
+      "cle": "17",
+      "slug": "interieur-calme",
+      "sujet": "Intérieur calme, tons chauds",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722631_VM383_9_original.jpg",
+      "luminance": 159.4,
+      "detail": {
+        "haut": 7.4,
+        "milieu": 18.2,
+        "bas": 13.5
+      },
+      "matiere": true
+    },
+    {
+      "cle": "18",
+      "slug": "cuisine",
+      "sujet": "Cuisine équipée",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722661_VM383_11_original.jpg",
+      "luminance": 163.1,
+      "detail": {
+        "haut": 3.2,
+        "milieu": 13.5,
+        "bas": 24.8
+      },
+      "matiere": true
+    },
+    {
+      "cle": "20",
+      "slug": "detail-architecture",
+      "sujet": "Détail d'architecture, forte texture",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722951_VM383_40_original.jpg",
+      "luminance": 128.7,
+      "detail": {
+        "haut": 21.5,
+        "milieu": 48.7,
+        "bas": 44.4
+      },
+      "matiere": true
+    },
+    {
+      "cle": "24",
+      "slug": "piece-douce",
+      "sujet": "Pièce aux tons doux",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17798895811_VA2709_11_original.jpg",
+      "luminance": 181.2,
+      "detail": {
+        "haut": 4.0,
+        "milieu": 6.1,
+        "bas": 9.8
+      },
+      "matiere": false
+    },
+    {
+      "cle": "27",
+      "slug": "mise-en-valeur",
+      "sujet": "Bien mis en valeur, contraste marqué",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811232911_VA2709_19_original.jpg",
+      "luminance": 147.6,
+      "detail": {
+        "haut": 10.1,
+        "milieu": 21.4,
+        "bas": 14.4
+      },
+      "matiere": true
+    },
+    {
+      "cle": "28",
+      "slug": "piece-sobre",
+      "sujet": "Pièce sobre",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811234651_VA2709_20_original.jpg",
+      "luminance": 153.7,
+      "detail": {
+        "haut": 4.9,
+        "milieu": 13.3,
+        "bas": 7.5
+      },
+      "matiere": false
+    },
+    {
+      "cle": "30",
+      "slug": "perspective",
+      "sujet": "Perspective, profondeur de champ",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811242321_VA2709_22_original.jpg",
+      "luminance": 163.8,
+      "detail": {
+        "haut": 3.4,
+        "milieu": 17.7,
+        "bas": 14.1
+      },
+      "matiere": true
+    }
+  ]
+}

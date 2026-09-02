@@ -10,43 +10,51 @@
       "cover": true,
       "kicker": "Vendre",
       "title": "**Cinq erreurs** qui coûtent des semaines",
-      "body": "Elles se commettent toutes avant la première visite."
+      "body": "Elles se commettent toutes avant la première visite.",
+      "photo": "20"
     },
     {
       "kicker": "Erreur 1",
       "title": "Fixer un prix pour se laisser une marge",
-      "body": "Un bien surévalué attire peu de visites les premières semaines, précisément **quand l'attention est maximale**. On négocie ensuite en position de faiblesse."
+      "body": "Un bien surévalué attire peu de visites les premières semaines, précisément **quand l'attention est maximale**. On négocie ensuite en position de faiblesse.",
+      "photo": "27"
     },
     {
       "kicker": "Erreur 2",
       "title": "Photographier avant de préparer",
-      "body": "Les photos sont vues **des centaines de fois**, la visite une dizaine. Préparer le bien avant la prise de vue reste l'investissement le plus rentable d'une vente."
+      "body": "Les photos sont vues **des centaines de fois**, la visite une dizaine. Préparer le bien avant la prise de vue reste l'investissement le plus rentable d'une vente.",
+      "photo": "13"
     },
     {
       "kicker": "Erreur 3",
       "title": "Multiplier les mandats simples",
-      "body": "Le même bien affiché partout, parfois à des prix différents, envoie **un signal d'urgence**. L'acquéreur le lit immédiatement et attend."
+      "body": "Le même bien affiché partout, parfois à des prix différents, envoie **un signal d'urgence**. L'acquéreur le lit immédiatement et attend.",
+      "photo": "11"
     },
     {
       "kicker": "Erreur 4",
       "title": "Faire visiter soi-même",
-      "body": "Un vendeur défend son bien, un professionnel **écoute les objections**. Ce sont ces objections, entendues et traitées, qui font l'offre."
+      "body": "Un vendeur défend son bien, un professionnel **écoute les objections**. Ce sont ces objections, entendues et traitées, qui font l'offre.",
+      "photo": "15"
     },
     {
       "kicker": "Erreur 5",
       "title": "Attendre la bonne saison",
-      "body": "Ce n'est pas le mois qui compte, c'est **le nombre de biens comparables** en face. Un bien seul en janvier se vend mieux que le dixième d'avril."
+      "body": "Ce n'est pas le mois qui compte, c'est **le nombre de biens comparables** en face. Un bien seul en janvier se vend mieux que le dixième d'avril.",
+      "photo": "18"
     },
     {
       "kicker": "À retenir",
       "title": "Tout se joue avant la mise en ligne",
-      "body": "**Prix juste, bien préparé, un seul interlocuteur**. Le reste n'est que la conséquence de ces trois décisions."
+      "body": "**Prix juste, bien préparé, un seul interlocuteur**. Le reste n'est que la conséquence de ces trois décisions.",
+      "photo": "17"
     },
     {
       "cta": true,
       "kicker": "La Galerie Immobilière",
       "title": "Parlons de votre bien",
-      "body": "L'art de l'immobilier à Paris et en Île-de-France. **Estimation et conseil avant mise en vente**. Écrivez-nous en message privé."
+      "body": "L'art de l'immobilier à Paris et en Île-de-France. **Estimation et conseil avant mise en vente**. Écrivez-nous en message privé.",
+      "photo": "12"
     }
   ],
   "caption": "Une vente qui traîne se décide rarement pendant les visites. Elle se décide avant la mise en ligne.\n\nCinq erreurs que nous voyons chaque saison, et ce qu'elles coûtent réellement en semaines. Faites défiler.\n\nLa première est de loin la plus fréquente : se laisser une marge de négociation. C'est aussi celle qui fait perdre les meilleures semaines d'exposition.\n\nÉcrivez-nous en message privé pour en parler.",

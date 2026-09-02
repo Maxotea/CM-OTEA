@@ -95,7 +95,18 @@
     ],
     "uppercase_titles": false,
     "rule": true,
-    "note": "Prestige parisien : beige, taupe, doré, vert sauge. Sérif assumé, vouvoiement élégant."
+    "note": "Prestige parisien : beige, taupe, doré, vert sauge. Sérif assumé, vouvoiement élégant.",
+    "fond": {
+      "manifeste": "photos/la-galerie-immobiliere.json",
+      "cache": "medias/la-galerie-immobiliere/fonds",
+      "texte": "#F7F2EB",
+      "muted": "#D6CCBE",
+      "accent": "#DDB77F",
+      "voile": "#14110E",
+      "contraste_titre": 7.0,
+      "contraste_corps": 4.5,
+      "_doc": "Fond photo au lieu du fond uni. Les couleurs ci-dessus remplacent bg/fg/muted/accent sur une slide qui porte une photo. Le voile est calculé slide par slide pour atteindre les contrastes demandés : aucune valeur d'opacité n'est fixée à la main."
+    }
   },
   "otea-production": {
     "nom": "OTEA PRODUCTION",

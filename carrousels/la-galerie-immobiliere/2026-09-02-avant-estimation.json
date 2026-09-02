@@ -10,43 +10,51 @@
       "cover": true,
       "kicker": "Coulisses",
       "title": "Ce que l'on regarde **avant d'estimer** un bien",
-      "body": "Six éléments qu'aucun simulateur en ligne ne voit."
+      "body": "Six éléments qu'aucun simulateur en ligne ne voit.",
+      "photo": "01"
     },
     {
       "kicker": "Le point de départ",
       "title": "Un algorithme connaît le quartier, pas votre bien",
-      "body": "Il travaille sur **des moyennes au mètre carré**. C'est utile pour cadrer, insuffisant pour décider d'un prix de mise en vente."
+      "body": "Il travaille sur **des moyennes au mètre carré**. C'est utile pour cadrer, insuffisant pour décider d'un prix de mise en vente.",
+      "photo": "13"
     },
     {
       "kicker": "1",
       "title": "L'étage et ce qu'il change",
-      "body": "Vue, bruit, luminosité, présence d'un ascenseur. Le même appartement au deuxième et au sixième ne s'adresse **pas aux mêmes acquéreurs**."
+      "body": "Vue, bruit, luminosité, présence d'un ascenseur. Le même appartement au deuxième et au sixième ne s'adresse **pas aux mêmes acquéreurs**.",
+      "photo": "20"
     },
     {
       "kicker": "2",
       "title": "L'orientation, heure par heure",
-      "body": "Nous visitons en connaissant le moment de la journée. Un séjour plein sud à quinze heures **ne se vend pas comme** un nord à neuf heures."
+      "body": "Nous visitons en connaissant le moment de la journée. Un séjour plein sud à quinze heures **ne se vend pas comme** un nord à neuf heures.",
+      "photo": "15"
     },
     {
       "kicker": "3",
       "title": "La distribution des pièces",
-      "body": "Deux biens de surface identique **n'ont pas la même valeur** si l'un traverse et si l'autre distribue tout par un couloir."
+      "body": "Deux biens de surface identique **n'ont pas la même valeur** si l'un traverse et si l'autre distribue tout par un couloir.",
+      "photo": "17"
     },
     {
       "kicker": "4",
       "title": "La copropriété",
-      "body": "Travaux votés, charges, état des parties communes. C'est souvent là que se joue **la négociation finale**, bien plus que sur le bien lui-même."
+      "body": "Travaux votés, charges, état des parties communes. C'est souvent là que se joue **la négociation finale**, bien plus que sur le bien lui-même.",
+      "photo": "11"
     },
     {
       "kicker": "À retenir",
       "title": "Le prix se lit dans les détails, pas dans la moyenne",
-      "body": "Étage, orientation, distribution, copropriété. Un simulateur ne voit **aucun des quatre**."
+      "body": "Étage, orientation, distribution, copropriété. Un simulateur ne voit **aucun des quatre**.",
+      "photo": "27"
     },
     {
       "cta": true,
       "kicker": "La Galerie Immobilière",
       "title": "Demandez une estimation sur place",
-      "body": "Paris et Hauts-de-Seine. Nous venons voir votre bien **avant d'avancer un prix**. Écrivez-nous en message privé."
+      "body": "Paris et Hauts-de-Seine. Nous venons voir votre bien **avant d'avancer un prix**. Écrivez-nous en message privé.",
+      "photo": "30"
     }
   ],
   "caption": "Vous avez fait une estimation en ligne et obtenu une fourchette de plusieurs dizaines de milliers d'euros. Normal : un algorithme connaît votre quartier, pas votre bien.\n\nVoici ce que nous regardons en plus, sur place. Faites défiler.\n\nLe point 4 est celui qui fait basculer le plus de négociations, et il n'apparaît sur aucun simulateur.\n\nÉcrivez-nous en message privé pour une estimation sur place.",

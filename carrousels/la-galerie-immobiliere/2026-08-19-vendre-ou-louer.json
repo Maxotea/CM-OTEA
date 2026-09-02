@@ -10,43 +10,51 @@
       "cover": true,
       "kicker": "Arbitrage",
       "title": "Vendre ou louer : **comment trancher**",
-      "body": "Quatre questions, dans cet ordre. La réponse apparaît d'elle-même."
+      "body": "Quatre questions, dans cet ordre. La réponse apparaît d'elle-même.",
+      "photo": "11"
     },
     {
       "kicker": "Le vrai sujet",
       "title": "Ce n'est pas une question de rendement",
-      "body": "C'est **une question de projet**. Le rendement n'arbitre que si l'on sait déjà ce que l'on veut faire des dix prochaines années."
+      "body": "C'est **une question de projet**. Le rendement n'arbitre que si l'on sait déjà ce que l'on veut faire des dix prochaines années.",
+      "photo": "15"
     },
     {
       "kicker": "Question 1",
       "title": "Avez-vous besoin du capital ?",
-      "body": "Si la vente finance un autre achat, un projet ou une transmission, **la question est déjà tranchée**. Tout le reste devient secondaire."
+      "body": "Si la vente finance un autre achat, un projet ou une transmission, **la question est déjà tranchée**. Tout le reste devient secondaire.",
+      "photo": "30"
     },
     {
       "kicker": "Question 2",
       "title": "Le bien se loue-t-il facilement ici ?",
-      "body": "Un bien recherché à la location se loue vite et bien. Un bien atypique peut rester vacant, et **une vacance coûte davantage** qu'un loyer modéré."
+      "body": "Un bien recherché à la location se loue vite et bien. Un bien atypique peut rester vacant, et **une vacance coûte davantage** qu'un loyer modéré.",
+      "photo": "20"
     },
     {
       "kicker": "Question 3",
       "title": "Quel budget de travaux dans cinq ans ?",
-      "body": "Un bien loué s'use et doit rester aux normes. Cette dépense future se compare au produit de la vente aujourd'hui, **pas au loyer du mois**."
+      "body": "Un bien loué s'use et doit rester aux normes. Cette dépense future se compare au produit de la vente aujourd'hui, **pas au loyer du mois**.",
+      "photo": "12"
     },
     {
       "kicker": "Question 4",
       "title": "Avez-vous envie d'être bailleur ?",
-      "body": "Gestion, impayés, relances, entretien. La question paraît triviale, elle **explique pourtant la majorité des ventes** décidées après deux ans de location."
+      "body": "Gestion, impayés, relances, entretien. La question paraît triviale, elle **explique pourtant la majorité des ventes** décidées après deux ans de location.",
+      "photo": "13"
     },
     {
       "kicker": "À retenir",
       "title": "Le projet d'abord, le calcul ensuite",
-      "body": "Capital, marché local, travaux à venir, envie de gérer. **Quatre réponses honnêtes** suffisent à décider."
+      "body": "Capital, marché local, travaux à venir, envie de gérer. **Quatre réponses honnêtes** suffisent à décider.",
+      "photo": "27"
     },
     {
       "cta": true,
       "kicker": "La Galerie Immobilière",
       "title": "Posons ces questions ensemble",
-      "body": "Transaction, location, gestion. Nous vous disons ce que votre bien permet réellement, **avant toute décision**. Écrivez-nous en message privé."
+      "body": "Transaction, location, gestion. Nous vous disons ce que votre bien permet réellement, **avant toute décision**. Écrivez-nous en message privé.",
+      "photo": "17"
     }
   ],
   "caption": "Un bien devenu vacant, et cette question qui revient chaque soir : le vendre ou le louer ?\n\nElle ne se tranche pas avec une calculette. Quatre questions, dans cet ordre, et la réponse apparaît. Faites défiler.\n\nLa quatrième est celle que personne n'ose se poser. Elle explique pourtant la plupart des ventes décidées après deux ans de location.\n\nÉcrivez-nous en message privé.",
