@@ -3,10 +3,10 @@
   "slug": "voeux-2027",
   "titre": "Vœux vidéo 2027 : se tourner en octobre",
   "mois": "2026-09",
-  "objectif_business": "Des demandes de devis pour des vidéos de vœux d'entreprise, temps fort sept-oct de la fiche client (les vœux se tournent en octobre-novembre, jamais en décembre).",
-  "objectif": "OUTCOME_TRAFFIC",
-  "optimisation": "LINK_CLICKS",
-  "destination": "WEBSITE",
+  "objectif_business": "Des demandes de devis pour des vidéos de vœux d'entreprise, temps fort sept-oct de la fiche client (les vœux se tournent en octobre-novembre, jamais en décembre). Le site oteaproduction.com est hors ligne depuis le 02/09/2026 : la demande arrive par message sur la page, pas par le site.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "CONVERSATIONS",
+  "destination": "MESSENGER",
   "facturation": "IMPRESSIONS",
   "budget": {
     "type": "journalier",
@@ -15,7 +15,9 @@
     "fin": "2026-09-21"
   },
   "ciblage": {
-    "pays": ["FR"],
+    "pays": [
+      "FR"
+    ],
     "age_min": 28,
     "age_max": 60,
     "advantage_audience": true,
@@ -33,13 +35,14 @@
         "hash": null,
         "note": "Choisir une vraie photo du shooting HOMESANFAUTE (plateau de tournage ou interview micro), jamais un visuel IA : la règle du compte l'interdit dès qu'il y a de vraies photos. L'héberger (imgbb) puis renseigner url."
       },
-      "texte": "Vos vœux 2027 en vidéo se tournent en octobre, pas en décembre. Une demi-journée de tournage, un film prêt avant les fêtes.",
+      "texte": "Vos vœux 2027 en vidéo se tournent en octobre, pas en décembre. Envoyez-nous votre date en message, on répond avec un devis.",
       "titre": "Vœux 2027 : tournez en octobre",
-      "description": "Production vidéo entreprise",
-      "cta": "GET_QUOTE",
-      "lien": "https://oteaproduction.com",
-      "lien_affiche": "oteaproduction.com",
-      "ia_generative": "OPT_OUT"
+      "description": "Réponse sous 24 h",
+      "cta": "MESSAGE_PAGE",
+      "lien": "https://m.me/994117790447204",
+      "lien_affiche": null,
+      "ia_generative": "OPT_OUT",
+      "note_destination": "Site hors ligne (02/09/2026) : le clic ouvre Messenger sur la page OTEA Production. Le lien m.me/<page_id> est la forme la plus sûre avec le connecteur, qui n'expose pas le message d'accueil Messenger ; à confirmer à la première création, repli possible sur Interaction · POST_ENGAGEMENT · ON_POST. Revenir à Trafic · LINK_CLICKS · WEBSITE quand le site est en ligne et vérifié."
     }
   ],
   "validation": {

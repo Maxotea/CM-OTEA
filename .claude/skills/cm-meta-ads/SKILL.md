@@ -54,7 +54,8 @@ Traduction directe des cas courants :
 
 | Le client veut | Objectif | Optimisation | Destination |
 |---|---|---|---|
-| des demandes de devis, sans pixel sur le site | OUTCOME_TRAFFIC | LINK_CLICKS | WEBSITE |
+| des demandes de devis, sans pixel sur le site | OUTCOME_TRAFFIC | LINK_CLICKS | WEBSITE (le site doit répondre) |
+| des demandes de devis, site hors ligne | OUTCOME_ENGAGEMENT | CONVERSATIONS | MESSENGER ou WHATSAPP (lien m.me / wa.me, CTA MESSAGE_PAGE / WHATSAPP_MESSAGE) |
 | des messages (WhatsApp, Messenger, DM) | OUTCOME_ENGAGEMENT | CONVERSATIONS | WHATSAPP / MESSENGER / INSTAGRAM_DIRECT |
 | des prospects par formulaire | OUTCOME_LEADS | LEAD_GENERATION | (page avec conditions Lead Ads acceptées) |
 | des conversions mesurées sur le site | OUTCOME_LEADS ou OUTCOME_SALES | OFFSITE_CONVERSIONS | WEBSITE (pixel obligatoire) |
@@ -89,6 +90,15 @@ pas). Journalier pour une campagne continue, total pour une opération datée.
 Première campagne d'un compte : 5 à 10 € par jour, 7 jours, jamais plus sans
 un premier bilan. Les plafonds du registre sont des murs : les relever est un
 geste de Maxime dans le fichier, pas une décision de session.
+
+**Page d'atterrissage** : elle doit répondre le jour de la création et être
+relue à J+1. Une pub vers une page morte est refusée par Meta, ou pire,
+diffuse et brûle le budget sur des clics perdus. Un site signalé hors ligne
+se note dans le registre (`site_indisponible_depuis`) : `check` refuse alors
+toute destination `WEBSITE` et tout lien vers ce domaine, et on bascule sur
+une destination qui ne dépend pas du site (Messenger, WhatsApp, interaction
+sur un post). Le réseau de la session ne joint pas toujours les sites :
+quand `curl` échoue en 403 sur le proxy, c'est Maxime qui confirme.
 
 **Ciblage** : large, pays ou villes, tranche d'âge, Advantage+ audience
 laissé actif. Aucun identifiant d'intérêt inventé : sans identifiant réel, pas

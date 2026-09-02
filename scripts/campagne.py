@@ -24,6 +24,7 @@ Garde-fous codés ici (les autres sont dans le skill) :
   - fin après début, budget total => date de fin obligatoire ;
   - aucun texte à trous [ENTRE CROCHETS] ni média sans URL/hash : `check` passe mais `plan` refuse ;
   - catégorie spéciale du registre reportée d'office (immobilier = HOUSING) ;
+  - site du client signalé hors ligne dans le registre => aucune destination WEBSITE ni lien vers lui ;
   - jamais d'activation : `plan` s'arrête à l'aperçu, l'activation est un geste de Maxime.
 """
 
@@ -81,6 +82,7 @@ DESTINATIONS_IMPOSEES = {
     "PROFILE_AND_PAGE_ENGAGEMENT": {"INSTAGRAM_PROFILE", "FACEBOOK_PAGE",
                                     "INSTAGRAM_PROFILE_AND_FACEBOOK_PAGE"},
 }
+MESSAGERIES = {"MESSENGER", "WHATSAPP", "INSTAGRAM_DIRECT"}
 DESTINATIONS_INSTAGRAM = {"INSTAGRAM_PROFILE", "INSTAGRAM_DIRECT",
                           "INSTAGRAM_PROFILE_AND_FACEBOOK_PAGE"}
 # Optimisations qui exigent un promoted_object (pixel, formulaire…).
@@ -195,6 +197,13 @@ def verifier(spec, registre, pour_plan=False):
     if opt in OPTIMISATIONS_LEADFORM and not compte.get("leadgen_tos_accepte"):
         r.bloque(f"{opt} exige que la page ait accepté les conditions Lead Ads "
                  "(leadgen_tos_accepte=false dans le registre)")
+    hors_ligne = compte.get("site_indisponible_depuis")
+    site_hote = None
+    if compte.get("site"):
+        site_hote = re.sub(r"^https?://(www\.)?", "", compte["site"]).split("/")[0].lower()
+    if hors_ligne and dest == "WEBSITE":
+        r.bloque(f"destination WEBSITE alors que le site du client est hors ligne depuis {hors_ligne} "
+                 "(site_indisponible_depuis dans le registre)")
     fact = spec.get("facturation", "IMPRESSIONS")
     if fact not in FACTURATIONS:
         r.bloque(f"facturation hors liste : {fact}")
@@ -284,8 +293,13 @@ def verifier(spec, registre, pour_plan=False):
             r.avertit(f"{tag} : titre de {len(pub['titre'])} caractères, {TITRE_MAX} max conseillé")
         if len(pub.get("description") or "") > DESCRIPTION_MAX:
             r.avertit(f"{tag} : description de {len(pub['description'])} caractères, {DESCRIPTION_MAX} max conseillé")
-        if fmt == "image" and not pub.get("lien"):
+        if fmt == "image" and not pub.get("lien") and dest not in MESSAGERIES:
             r.bloque(f"{tag} : une pub image exige un lien de destination")
+        lien = (pub.get("lien") or "").lower()
+        if hors_ligne and site_hote and site_hote in lien:
+            r.bloque(f"{tag} : le lien pointe vers {site_hote}, hors ligne depuis {hors_ligne}")
+        if lien.startswith("http") and pour_plan:
+            r.avertit(f"{tag} : vérifier que {pub['lien']} répond avant de créer (le script ne le fait pas)")
         if fmt == "post_existant":
             if not pub.get("post_id"):
                 r.bloque(f"{tag} : post_existant exige post_id (format pageID_postID)")
@@ -386,8 +400,7 @@ def plan(spec, compte):
         ens["destination_type"] = spec["destination"]
     if fin:
         ens["end_time"] = fin
-    if spec["optimisation"] == "CONVERSATIONS" or \
-            spec.get("destination") in {"MESSENGER", "WHATSAPP", "INSTAGRAM_DIRECT"}:
+    if spec["optimisation"] == "CONVERSATIONS" or spec.get("destination") in MESSAGERIES:
         ens["promoted_object"] = json.dumps({"page_id": compte["page_id"]})
     if spec["optimisation"] in OPTIMISATIONS_PIXEL and compte.get("pixel_id"):
         ens["promoted_object"] = json.dumps({"pixel_id": compte["pixel_id"]})

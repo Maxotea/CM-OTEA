@@ -15,8 +15,13 @@ Otéa `201523269`, page OTEA Production). Fiche organique :
   salons d'automne, janvier pour les plans annuels.
 
 ## Où atterrit le clic
-- Site oteaproduction.com (page de contact ou portfolio). Pas de pixel au
-  02/09/2026 : objectif Trafic · clics de lien, pas de vues de page.
+- ⚠️ **oteaproduction.com est hors ligne depuis le 02/09/2026** (signalé par
+  Maxime, noté dans le registre). Aucune campagne vers le site tant qu'il
+  n'est pas revenu et vérifié. En attendant : Messenger sur la page OTEA
+  Production (lien `m.me/994117790447204`, CTA « Envoyer un message »).
+- Quand le site revient : page de contact ou portfolio, objectif Trafic ·
+  clics de lien (pas de pixel, donc pas de vues de page), et remettre
+  `site_indisponible_depuis` à null dans le registre.
 - À terme : formulaire prospect Meta (3 champs : entreprise, besoin,
   téléphone) une fois les conditions Lead Ads acceptées sur la page.
 
@@ -39,4 +44,4 @@ Otéa `201523269`, page OTEA Production). Fiche organique :
 ## Historique des campagnes
 | Mois | Spec | Objectif | Dépense | Résultats | Coût / résultat | Ce qu'on retient |
 |---|---|---|---:|---:|---:|---|
-| 2026-09 | `campagnes/otea-production/2026-09-voeux-2027.json` | Trafic · clics | (brouillon) | | | première campagne du compte, 5 € par jour, 7 jours |
+| 2026-09 | `campagnes/otea-production/2026-09-voeux-2027.json` | Interaction · messages Messenger | (brouillon) | | | première campagne du compte, 5 € par jour, 7 jours ; basculée du site vers Messenger le 02/09 (site down) |
