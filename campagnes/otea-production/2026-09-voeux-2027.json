@@ -1,0 +1,60 @@
+{
+  "client": "otea-production",
+  "slug": "voeux-2027",
+  "titre": "Vœux vidéo 2027 : se tourner en octobre",
+  "mois": "2026-09",
+  "objectif_business": "Des demandes de devis pour des vidéos de vœux d'entreprise, temps fort sept-oct de la fiche client (les vœux se tournent en octobre-novembre, jamais en décembre).",
+  "objectif": "OUTCOME_TRAFFIC",
+  "optimisation": "LINK_CLICKS",
+  "destination": "WEBSITE",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "journalier",
+    "montant_eur": 5,
+    "debut": "2026-09-15",
+    "fin": "2026-09-21"
+  },
+  "ciblage": {
+    "pays": ["FR"],
+    "age_min": 28,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Cible : dirigeants et responsables communication de PME. Sans pixel ni audience personnalisée, on reste large et on laisse Meta optimiser ; ciblage par intérêts seulement avec des identifiants réels."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Vœux 2027, tournage en octobre",
+      "format": "image",
+      "media": {
+        "type": "image",
+        "fichier": "medias/otea-production/",
+        "url": null,
+        "hash": null,
+        "note": "Choisir une vraie photo du shooting HOMESANFAUTE (plateau de tournage ou interview micro), jamais un visuel IA : la règle du compte l'interdit dès qu'il y a de vraies photos. L'héberger (imgbb) puis renseigner url."
+      },
+      "texte": "Vos vœux 2027 en vidéo se tournent en octobre, pas en décembre. Une demi-journée de tournage, un film prêt avant les fêtes.",
+      "titre": "Vœux 2027 : tournez en octobre",
+      "description": "Production vidéo entreprise",
+      "cta": "GET_QUOTE",
+      "lien": "https://oteaproduction.com",
+      "lien_affiche": "oteaproduction.com",
+      "ia_generative": "OPT_OUT"
+    }
+  ],
+  "validation": {
+    "brief_valide_par": null,
+    "brief_valide_le": null,
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

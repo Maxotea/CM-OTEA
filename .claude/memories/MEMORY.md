@@ -10,3 +10,4 @@
 - [Récap hebdo lundi 9h](recap-hebdo-lundi.md) — tâche planifiée : récap des publications de la semaine, 6 comptes, statuts validé/notif/brouillon
 - [Détection nouveaux médias](detection-nouveaux-medias.md) — scan SHA1 des dossiers clients + composition de cartes story, branché dans la tâche du lundi
 - [Rédaction sans tirets](redaction-sans-tirets.md) : aucun « — » ni « -- » dans les textes rédigés (légendes, messages clients) ; virgule, deux-points ou deux phrases à la place
+- [Meta Ads : jamais d'activation sans OK](meta-ads-jamais-activer-sans-ok.md) — toute campagne est créée en PAUSE ; seule une phrase explicite de Maxime, nommant la campagne, déclenche l'activation et donc la dépense

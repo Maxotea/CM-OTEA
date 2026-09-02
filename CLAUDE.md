@@ -31,6 +31,7 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `smc-ceo-day` | point hebdo, tri des idées, planification trimestrielle |
 | `smc-ops-finance` | devis, facture, impayé, TVA, trésorerie, clôture |
 | `smc-veille` | analyse concurrent, offre ou lancement du marché |
+| `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
 
 ## Articulation avec les skills existants
 
@@ -47,6 +48,14 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
   `.claude/references/social-media-ceo/03-workflow-contenu.md`.
 - **`reel-script` / `reel-lint`** — l'écriture et la notation des vidéos courtes,
   appelées depuis le statut `Rédaction` / `Tournage`.
+- **`cm-meta-ads`** — la publicité Meta (Facebook, Instagram) par client :
+  registre `campagnes/comptes.json`, une spec JSON par campagne dans
+  `campagnes/<client>/`, `scripts/campagne.py` pour valider et planifier. Le pont
+  avec `cm-metricool` : un post publié et validé peut être boosté, jamais un
+  brouillon. Banc d'essai : OTEA PRODUCTION et Otea Filmakers (compte pub
+  Maks Otéa). Règle de même rang que le brouillon Metricool : **tout est créé
+  en PAUSE, seule une phrase explicite de Maxime nommant la campagne l'active.**
+  → `.claude/memories/meta-ads-jamais-activer-sans-ok.md`
 
 ## Règles permanentes du CM (non négociables)
 
