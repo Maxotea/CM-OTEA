@@ -1,0 +1,56 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Constat.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Proposition.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Storyboard.dc.html",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Honnete.dc.html",
+      "x": 0,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Deroule.dc.html",
+      "x": 1560,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    },
+    {
+      "file": "Essai.dc.html",
+      "x": 3120,
+      "y": 970,
+      "w": 1440,
+      "h": 810
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
