@@ -140,9 +140,15 @@ def _fond_pire_cas(img, boite):
     if zone.width < 2 or zone.height < 2:
         return (255, 255, 255)
     gris = zone.convert("L").resize((max(1, zone.width // 8), max(1, zone.height // 8)))
-    valeurs = sorted(gris.getdata())
-    seuil = valeurs[int(len(valeurs) * 0.97) - 1]
-    return (seuil, seuil, seuil)
+    # via l'histogramme : API stable et sans copie de tous les pixels
+    hist = gris.histogram()
+    total = sum(hist)
+    cible, cumul = total * 0.97, 0
+    for niveau, n in enumerate(hist):
+        cumul += n
+        if cumul >= cible:
+            return (niveau, niveau, niveau)
+    return (255, 255, 255)
 
 
 def _alpha_requis(fond, texte, voile, cible):

@@ -503,3 +503,65 @@ source de ces écritures n'est pas identifiée, **passer un
 - **Réserve de sujets** : DPE et réglementation (A6, **réglementation à vérifier par recherche web à la date de publication**) · « Acheter en fin d'année : ce qui change » (A8, novembre) · « Une visite réussie, du point de vue de l'acquéreur » (A5) · remise de clés commentée (A3, dès qu'un client accepte).
 - **Cadence particulière — le compte ne publie pas le mercredi.** Ses posts feed sortent le **vendredi à 12h30**. Le carrousel du mercredi ne remplace donc rien ici : il **s'ajoute**. C'est assumé, le compte est au **forfait maximum** (confirmé par Maxime, 06/08/2026) — la règle « le carrousel remplace le post du mercredi » ne s'y applique pas.
 - **Vigilance** : barème d'honoraires **non vérifié** → aucun honoraire cité. Aucun prix au m², aucun taux, aucun chiffre de marché sans source datée. Le prénom de la fondatrice n'apparaît pas encore dans les slides : à ajouter si elle le valide. Ne jamais illustrer un carrousel avec un visuel IA présenté comme un bien réel.
+
+## 🖼️ CARROUSELS SUR FOND PHOTO — 02/09/2026
+
+Demande de Maxime : « plutôt mettre des photos de beaux biens immobiliers
+parisiens qu'un fond uni. le texte doit ressortir ».
+
+### Ce que le texte fait pour ressortir
+
+Le voile n'est pas choisi à l'œil, il est calculé, slide par slide :
+
+1. on mesure le **97e centile de luminance** de la zone réellement occupée par
+   le texte. Pas la moyenne : une moyenne ment. Un titre posé sur une fenêtre
+   surexposée passe la moyenne et reste illisible sur la fenêtre. Mesuré : sur
+   un fond sombre percé d'une fenêtre blanche, la moyenne dit 62, le 97e
+   centile dit 255 ;
+2. on résout par dichotomie l'opacité minimale du voile qui amène le rapport
+   WCAG à **7:1 pour le titre** et **4,5:1 pour le corps et l'accent** ;
+3. le voile est un dégradé qui monte sur 150 px au-dessus du bloc et ne
+   redescend jamais en dessous, sinon la fin d'une phrase retombe sur une zone
+   claire ;
+4. après composition **on remesure**, et la slide est refusée si le contraste
+   n'y est pas. Le script échouait déjà plutôt que de livrer un texte qui
+   déborde, il échoue maintenant aussi sur un texte illisible.
+
+Rendu réel sur leurs photos, mesuré le 02/09 : couverture (photo 01, façade)
+voile à 71 %, titre à **7,59:1** ; slide 3 (photo 20) voile à 67 %, titre à
+**7,59:1**, corps à 5,33:1, accent à 4,49:1.
+
+### ⚠️ Ce que leur banque photo permet, et ce qu'elle ne permet pas
+
+Les 19 photos viennent de **leurs propres mandats publiés** sur
+lagalerieimmobiliere.com. Aucune banque d'images : c'est un compte commercial.
+
+Deux limites, relevées à la mesure et à l'œil :
+
+- **Neuf des dix-neuf sont des logements vides** : murs blancs, pièces sans
+  meuble. Le détail mesuré y tombe sous 15 sur les trois bandes. Un mur nu ne
+  fait pas une image, il fait une tache grise. Le manifeste les marque
+  `matiere: false` et la validation les refuse comme fond. Restent **dix
+  photos exploitables** : 01, 11, 12, 13, 15, 17, 18, 20, 27, 30.
+- **Elles portent le filigrane « LA GALERIE IMMOBILIÈRE »** au centre. Sur
+  leur propre carrousel ce n'est pas un défaut, c'est leur signature, mais le
+  filigrane et le titre se disputent le même espace.
+
+Ce sont des photos de mandats à vendre, pas des intérieurs meublés
+aspirationnels. **Ce qui débloquerait vraiment le sujet : demander à Sabrina
+des photos de biens meublés ou vendus, et des extérieurs de quartier.** Le
+manifeste les prendra le jour où elles arrivent, rien d'autre à changer.
+
+### Où c'est câblé
+
+- `scripts/carrousel.py` — `_fond_pire_cas`, `_alpha_requis`, `poser_voile`,
+  `charger_fond`, et la vérification après composition dans `render_slide`.
+- `scripts/themes.json` — clé `fond` de `la-galerie-immobiliere` : couleurs de
+  texte sur photo et cibles de contraste.
+- `photos/la-galerie-immobiliere.json` — les 19 photos, leur URL sur le site du
+  client, leur luminance et leur détail mesurés, et le champ `matiere`.
+- Les quatre carrousels portent une clé `photo` par slide, sans répétition à
+  l'intérieur d'un même carrousel.
+
+Les cinq autres comptes ne sont pas touchés : tout est conditionné à la
+présence d'une clé `fond` dans le thème.
