@@ -43,6 +43,17 @@ SZ_NUM = (28, 28)
 
 # Contraste : on ne juge pas un fond photo à l'œil, on le mesure. Rapport WCAG
 # entre la couleur du texte et le fond réellement composité sous ce texte.
+# Une photo d'ambiance sous licence libre habille un propos général. Elle ne
+# doit JAMAIS illustrer un texte qui désigne un bien précis : le lecteur
+# comprendrait qu'on lui montre un mandat de l'agence. C'est exactement le
+# reproche qui a coûté le compte Le Loft le 31/08/2026.
+DESIGNE_UN_BIEN = (
+    "ce bien", "cet appartement", "cette maison", "ce logement", "ce studio",
+    "notre mandat", "nos mandats", "à vendre", "a vendre", "en exclusivité",
+    "en exclusivite", "ce duplex", "cet immeuble", "visitez", "coup de coeur",
+    "coup de cœur", "nouveauté", "nouveaute", "vendu", "disponible",
+)
+
 CONTRASTE_TITRE = 7.0      # AAA — un titre doit tenir même au soleil
 CONTRASTE_CORPS = 4.5      # AA
 VOILE_MAX = 0.94           # au-delà, le fond photo ne sert plus à rien
@@ -459,11 +470,26 @@ def validate(spec, themes, path):
         if cle and fonds is not None:
             if cle not in fonds:
                 errs.append(f"slide {i} : fond « {cle} » absent du manifeste")
-            elif not fonds[cle].get("matiere"):
-                errs.append(
-                    f"slide {i} : fond « {cle} » est un mur nu de logement vide "
-                    f"({fonds[cle]['sujet']}). Un fond sans matière ne fait pas "
-                    f"une image, il fait une tache grise")
+            else:
+                fond = fonds[cle]
+                if not fond.get("matiere"):
+                    errs.append(
+                        f"slide {i} : fond « {cle} » est un mur nu de logement vide "
+                        f"({fond['sujet']}). Un fond sans matière ne fait pas "
+                        f"une image, il fait une tache grise")
+                if fond.get("provenance") == "libre":
+                    en_clair = brut.replace("**", " ").lower()
+                    mots = [m for m in DESIGNE_UN_BIEN if m in en_clair]
+                    if mots:
+                        errs.append(
+                            f"slide {i} : le texte désigne un bien précis "
+                            f"({', '.join(mots)}) alors que le fond « {cle} » est une "
+                            f"photo d'ambiance sous licence libre. Le lecteur croirait "
+                            f"voir un mandat de l'agence. Mettre une photo du client "
+                            f"ou réécrire la slide")
+                    if not fond.get("licence"):
+                        errs.append(
+                            f"slide {i} : fond « {cle} » sans licence renseignée")
         elif fonds is not None and not cle:
             errs.append(f"slide {i} : champ photo manquant (le thème a des fonds)")
     texts = [spec.get("caption", "")] + [

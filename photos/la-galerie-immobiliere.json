@@ -1,5 +1,5 @@
 {
-  "_doc": "Fonds photo des carrousels La Galerie Immobilière. Ce sont LEURS photos, publiées sur leurs propres mandats (lagalerieimmobiliere.com) : jamais de banque d'images sur un compte commercial. Le champ matiere dit si la photo a de la texture (True) ou si c'est un mur nu de logement vide (False) : seules les photos à matiere=True font un fond qui tient. luminance et detail sont mesurés sur le recadrage 4:5 et servent au calcul du voile.",
+  "_doc": "Fonds photo des carrousels La Galerie Immobilière. Deux provenances. provenance=client : LEURS photos, publiées sur leurs propres mandats (lagalerieimmobiliere.com). Ce sont les seules qui peuvent illustrer un texte désignant un bien précis. provenance=libre : photo d'ambiance sous licence commerciale (Unsplash ou Pexels uniquement), pour habiller un propos général ; le champ licence et le champ credit sont alors obligatoires, et la validation refuse de la poser sous un texte qui parle d'un bien à vendre. Jamais de Pinterest : les images qui y sont épinglées appartiennent à des tiers. Le champ matiere dit si la photo a de la texture (True) ou si c'est un mur nu de logement vide (False) : seules les photos à matiere=True font un fond qui tient. luminance et detail sont mesurés sur le recadrage 4:5 et servent au calcul du voile.",
   "client": "la-galerie-immobiliere",
   "source": "site du client, mandats publiés",
   "releve": "2026-09-02",
@@ -15,7 +15,9 @@
         "milieu": 43.2,
         "bas": 39.1
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "02",
@@ -28,7 +30,9 @@
         "milieu": 6.7,
         "bas": 7.8
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "04",
@@ -41,7 +45,9 @@
         "milieu": 7.8,
         "bas": 6.8
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "06",
@@ -54,7 +60,9 @@
         "milieu": 5.8,
         "bas": 8.4
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "07",
@@ -67,7 +75,9 @@
         "milieu": 13.0,
         "bas": 6.9
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "08",
@@ -80,7 +90,9 @@
         "milieu": 9.0,
         "bas": 8.2
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "09",
@@ -93,7 +105,9 @@
         "milieu": 7.4,
         "bas": 8.4
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "10",
@@ -106,7 +120,9 @@
         "milieu": 10.9,
         "bas": 7.2
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "11",
@@ -119,7 +135,9 @@
         "milieu": 29.6,
         "bas": 9.3
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "12",
@@ -132,7 +150,9 @@
         "milieu": 25.4,
         "bas": 13.9
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "13",
@@ -145,7 +165,9 @@
         "milieu": 25.1,
         "bas": 33.4
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "15",
@@ -158,7 +180,9 @@
         "milieu": 22.4,
         "bas": 21.9
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "17",
@@ -171,7 +195,9 @@
         "milieu": 18.2,
         "bas": 13.5
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "18",
@@ -184,7 +210,9 @@
         "milieu": 13.5,
         "bas": 24.8
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "20",
@@ -197,7 +225,9 @@
         "milieu": 48.7,
         "bas": 44.4
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "24",
@@ -210,7 +240,9 @@
         "milieu": 6.1,
         "bas": 9.8
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "27",
@@ -223,7 +255,9 @@
         "milieu": 21.4,
         "bas": 14.4
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "28",
@@ -236,7 +270,9 @@
         "milieu": 13.3,
         "bas": 7.5
       },
-      "matiere": false
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     },
     {
       "cle": "30",
@@ -249,7 +285,9 @@
         "milieu": 17.7,
         "bas": 14.1
       },
-      "matiere": true
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
     }
   ]
 }
