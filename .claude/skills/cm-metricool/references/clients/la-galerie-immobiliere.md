@@ -503,3 +503,20 @@ source de ces écritures n'est pas identifiée, **passer un
 - **Réserve de sujets** : DPE et réglementation (A6, **réglementation à vérifier par recherche web à la date de publication**) · « Acheter en fin d'année : ce qui change » (A8, novembre) · « Une visite réussie, du point de vue de l'acquéreur » (A5) · remise de clés commentée (A3, dès qu'un client accepte).
 - **Cadence particulière — le compte ne publie pas le mercredi.** Ses posts feed sortent le **vendredi à 12h30**. Le carrousel du mercredi ne remplace donc rien ici : il **s'ajoute**. C'est assumé, le compte est au **forfait maximum** (confirmé par Maxime, 06/08/2026) — la règle « le carrousel remplace le post du mercredi » ne s'y applique pas.
 - **Vigilance** : barème d'honoraires **non vérifié** → aucun honoraire cité. Aucun prix au m², aucun taux, aucun chiffre de marché sans source datée. Le prénom de la fondatrice n'apparaît pas encore dans les slides : à ajouter si elle le valide. Ne jamais illustrer un carrousel avec un visuel IA présenté comme un bien réel.
+
+## 🎬 VIDÉO D'ANNONCE, UN MANDAT = UN REEL (proposition du 02/09/2026)
+
+Maxime a demandé de « proposer la même chose » que https://www.diane.estate/fr.
+Diane n'est pas une agence mais un logiciel de vidéos d'annonces par IA
+(narration, avatar, montage, 19 à 23 $ la vidéo). Transposition complète,
+prix proposé, message à Sabrina et pilote à zéro crédit sur le bien VM383 :
+`offre/video-annonce-la-galerie.md`.
+
+- Script d'assemblage : `scripts/lg-video-annonce.py` (intro, plans i2v en
+  fondu, texte incrusté, outro, musique, narration optionnelle, 9:16 et 16:9).
+- Spec du pilote : `videos-annonces/la-galerie-immobiliere/pilote-vm383.json`,
+  crochets à remplir depuis l'annonce, rien ne s'invente.
+- Ce qu'on ne reprend pas de Diane : l'avatar (jamais de visage généré), la
+  voix clonée, les vues drone inventées. Vraies photos, caméra verrouillée.
+- Ce format sert les créneaux REEL qui attendent des rushes depuis le 20/08 :
+  un reel qui ne demande rien à Sabrina.
