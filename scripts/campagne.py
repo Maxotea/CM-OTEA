@@ -116,6 +116,9 @@ def specs_dans(chemin):
     p = Path(chemin)
     if p.is_file():
         return [p]
+    directs = sorted(f for f in p.glob("*.json") if not f.name.startswith("_") and f.name != "comptes.json")
+    if directs and p.name != "campagnes":
+        return directs  # un dossier client
     return sorted(f for f in p.glob("*/*.json") if f.parent.name not in {"etat"}
                   and not f.name.startswith("_"))
 
