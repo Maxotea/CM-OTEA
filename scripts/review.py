@@ -111,7 +111,7 @@ ENTETES = ["Réf", "Jour", "Heure", "Format", "Réseaux", "Visuel",
 # Colonnes que le client édite. Tout le reste est verrouillé — le verrou tient dans Excel,
 # Google Sheets l'ignore : c'est un garde-fou contre la fausse manœuvre, pas une serrure.
 EDITABLES = {"C", "G", "H", "I"}
-LARGEURS = {"A": 9, "B": 11, "C": 9, "D": 12, "E": 13, "F": 15, "G": 62, "H": 27, "I": 34}
+LARGEURS = {"A": 9, "B": 11, "C": 9, "D": 12, "E": 13, "F": 15, "G": 78, "H": 27, "I": 34}
 
 NOIR = "FF111827"
 GRIS_FOND = "FFF5F6F8"
@@ -161,10 +161,29 @@ def _mode_demploi(wb, compte, lundi):
     return ws
 
 
+# Bornes de hauteur de ligne. Elles ne sont pas décoratives.
+# Le PLANCHER : une story porte un simple libellé d'une ligne (« Story lundi —
+# Nouvelle semaine »). Sans plancher sa ligne tombait à 21 points, une lamelle
+# coincée entre deux pavés de 210, et le tableau prenait l'air cassé. C'est le
+# reproche de Maxime du 02/09 : « la présentation n'est pas jolie ». Mesuré sur
+# la semaine du 31/08 : cinq fichiers sur six avaient un écart de 189 points
+# entre leur plus petite et leur plus grande ligne ; le seul qui passait pour
+# beau, Otea Filmakers, avait un écart de 15.
+# Le PLAFOND : au-delà, une seule légende mange l'écran et le client perd la
+# vue d'ensemble de sa semaine.
+HAUTEUR_MIN = 42
+HAUTEUR_MAX = 150
+# Caractères tenant sur une ligne de la colonne Légende. Dérivé de sa largeur,
+# et non écrit en dur : une valeur figée à 58 pendant que la colonne passait à
+# 78 aurait remis le tableau de travers sans que personne ne le voie.
+CARS_PAR_LIGNE = LARGEURS["G"] - 4
+
+
 def _hauteur(texte):
     """Une hauteur de ligne qui laisse la légende lisible sans dérouler."""
-    lignes = sum(max(1, len(l) // 58 + 1) for l in (texte or "").splitlines()) or 1
-    return min(15 * lignes + 6, 210)
+    lignes = sum(max(1, len(l) // CARS_PAR_LIGNE + 1)
+                 for l in (texte or "").splitlines()) or 1
+    return max(HAUTEUR_MIN, min(15 * lignes + 6, HAUTEUR_MAX))
 
 
 def ecrire_fichier(compte, lundi, brouillons, chemin):

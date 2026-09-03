@@ -6,21 +6,23 @@
       "blog_id": 5733306,
       "nom": "Gossip Beauty Center",
       "prefixe": "GBC",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1bbO5_SNq8EsFePBoRQvW8fm2KfJNvh18",
       "drive_archives": "1XIjGnrY38hPinOKLC9lDoGr-j-LIQQZh",
       "drive_fichier": "10RikexnqvlDsLlNptdVZ-mRFMUeiRIwju4AE6Bbseoo",
-      "note": "Le dossier vit dans le dossier photos partagé du client : la lecture par lien est héritée (la relève fonctionne), mais le droit d'ÉCRITURE par lien reste à activer une fois sur le dossier Validation hebdo."
+      "note": "Le dossier vit dans le dossier photos partagé du client : la lecture par lien est héritée (la relève fonctionne), mais le droit d'ÉCRITURE par lien reste à activer une fois sur le dossier Validation hebdo.",
+      "note_arret": "Compte désactivé le 28/08/2026. Ne plus générer ni déposer de fichier de review : le dossier Drive reste partagé avec Sarah."
     },
     {
       "slug": "le-loft",
       "blog_id": 6191921,
       "nom": "Le Loft",
       "prefixe": "LL",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1pqpmlG9ussUd2wYiVLMXOxMcwJCwIuOl",
       "drive_archives": "1c0SvqIhlcDM8EoC3b6qGulzDkNf-V8iP",
-      "drive_fichier": "1yNn-OQERbp0IDTZVDoQ2EYbDrfdImEAvPwXkiLu9L20"
+      "drive_fichier": "1yNn-OQERbp0IDTZVDoQ2EYbDrfdImEAvPwXkiLu9L20",
+      "note_arret": "Contrat terminé le 31/08/2026, William a mis fin au contrat. Ne plus générer ni déposer de fichier de review : le dossier Drive reste partagé avec lui."
     },
     {
       "slug": "jlawsongolf",
