@@ -520,3 +520,15 @@ prix proposé, message à Sabrina et pilote à zéro crédit sur le bien VM383 :
   voix clonée, les vues drone inventées. Vraies photos, caméra verrouillée.
 - Ce format sert les créneaux REEL qui attendent des rushes depuis le 20/08 :
   un reel qui ne demande rien à Sabrina.
+
+### Premier rendu d'essai, 03/09/2026 (zéro crédit)
+Vidéo : https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/00d39a03-d49b-4902-ad8f-f206e4cc84a4.mp4
+32,5 s, 1080×1920, six plans i2v du bien VM383 (photos 11, 15, 18, 13, 12,
+17), musique procédurale, texte incrusté, médaillon en haut à droite. Spec :
+`videos-annonces/la-galerie-immobiliere/essai-vm383.json`. Rendu dans la
+sandbox Higgsfield, vérifié frame par frame (photo pleine largeur en haut,
+voile sable, texte, médaillon sur chaque plan). **Aucun fait sur le bien
+n'est affiché**, ni ville ni « à vendre » : l'annonce n'a pas été relevée.
+Ce n'est pas la version à montrer à Rémi, c'est la preuve que la chaîne
+tourne. Reste : relever l'annonce, nommer les pièces, narration, brouillon
+Metricool.
