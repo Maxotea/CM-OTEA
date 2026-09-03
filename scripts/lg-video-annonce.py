@@ -359,7 +359,9 @@ def assembler(spec):
     bien = spec["bien"]
     plans = spec["plans"]
     connus, cdn = {}, ""
-    if not TEST:
+    # Le mapping clé -> plan i2v vit dans lg-story-video.py ; on ne le charge
+    # que si un plan est donné par sa clé (une spec peut porter des URL).
+    if not TEST and any(not p.get("url") for p in plans):
         m = importlib.util.spec_from_file_location(
             "lgsv", os.path.join(ICI, "lg-story-video.py"))
         mod = importlib.util.module_from_spec(m)
@@ -367,7 +369,10 @@ def assembler(spec):
         connus, cdn = mod.PLANS, mod.CDN
 
     segs, durees = [], []
-    carte("o/_intro.png", "à vendre · " + bien["ville"], bien["titre"], bien["accroche"])
+    # surtitre explicite si le bien n'est pas (ou plus) à vendre : jamais
+    # « à vendre » sur un bien dont on n'a pas vérifié l'état.
+    carte("o/_intro.png", bien.get("surtitre") or "à vendre · " + bien["ville"],
+          bien["titre"], bien["accroche"])
     seg_carte("o/_intro.png", D_INTRO, "o/_s00.mp4")
     segs.append("o/_s00.mp4"); durees.append(D_INTRO)
     for i, p in enumerate(plans, 1):
