@@ -22,7 +22,7 @@ from pathlib import Path
 import urllib.request
 
 try:
-    from PIL import Image, ImageDraw, ImageFont, ImageStat
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont
 except ImportError:
     sys.exit("Pillow manquant : pip install pillow")
 
@@ -139,27 +139,33 @@ def _hex_rgb(h):
     return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
 
 
-def _fond_pire_cas(img, boite):
-    """Couleur la plus claire rencontrée sous le texte, pas la moyenne.
+def _fond_sous_encre(img, masque, halo=3):
+    """Pixel le plus clair du fond RÉELLEMENT recouvert par le texte.
 
-    Une moyenne ment : un titre posé sur une fenêtre surexposée passe la moyenne
-    et reste illisible sur la fenêtre. On prend donc le 97e centile de luminance
-    de la zone, après un léger flou qui écarte le pixel isolé.
+    Deux erreurs ont été commises ici et corrigées le 02/09/2026, après
+    reproduction sur le vrai chemin de code :
+
+    1. On mesurait sur toute la boîte, marges comprises. Les grandes zones
+       sombres où aucun texte ne passe diluaient la mesure.
+    2. On prenait le 97e centile. Sur une boîte de 894 000 px, 3 % font un
+       carré de 163 px : une fenêtre surexposée plus petite que ça était
+       jetée par le centile, c'est-à-dire exactement ce qu'on cherchait.
+       Mesuré : une fenêtre de 200×100 recevait un voile de 0 %, le script
+       annonçait 13,94:1 et le contraste réel était de 1,08:1.
+
+    On prend donc le MAXIMUM, et seulement sous l'encre. L'encre est dilatée
+    de quelques pixels : un glyphe est antialiasé, ses bords empruntent la
+    couleur du fond, et l'œil lit le contraste sur cette frange. Un flou léger
+    sur le fond écarte le pixel isolé sans effacer une zone brûlée.
     """
-    x0, y0, x1, y1 = boite
-    zone = img.crop((max(0, x0), max(0, y0), min(img.width, x1), min(img.height, y1)))
-    if zone.width < 2 or zone.height < 2:
-        return (255, 255, 255)
-    gris = zone.convert("L").resize((max(1, zone.width // 8), max(1, zone.height // 8)))
-    # via l'histogramme : API stable et sans copie de tous les pixels
-    hist = gris.histogram()
-    total = sum(hist)
-    cible, cumul = total * 0.97, 0
-    for niveau, n in enumerate(hist):
-        cumul += n
-        if cumul >= cible:
-            return (niveau, niveau, niveau)
-    return (255, 255, 255)
+    if masque.getbbox() is None:
+        return (0, 0, 0)
+    encre = masque.filter(ImageFilter.MaxFilter(2 * halo + 1))
+    encre = encre.point(lambda v: 255 if v > 32 else 0)
+    gris = img.convert("L").filter(ImageFilter.GaussianBlur(1.0))
+    sous = Image.composite(gris, Image.new("L", gris.size, 0), encre)
+    haut = sous.getextrema()[1]
+    return (haut, haut, haut)
 
 
 def _alpha_requis(fond, texte, voile, cible):
@@ -361,57 +367,76 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
             f"Raccourcir le titre ou le corps ({len(title)} + {len(body)} caractères)."
         )
 
+    # Le texte est tracé deux fois : une fois en blanc sur un masque, pour savoir
+    # où l'encre tombe réellement, une fois sur l'image pour de bon. C'est le
+    # masque qui permet de mesurer le fond là où ça compte.
+    nf = font(fam, SZ_NUM[0], bold=False)
+    y_depart = y
+
+    def poser(dessin, coul):
+        yy = y_depart
+        if kicker:
+            tracked(dessin, kicker, MARGIN, yy, kf, coul("accent"))
+            yy += SZ_KICKER[0] + 46
+            if theme.get("rule"):
+                dessin.rectangle([MARGIN, yy - 22, MARGIN + 96, yy - 18],
+                                 fill=coul("accent"))
+                yy += rule_h - 22
+        yy = draw_lines(dessin, tlines, MARGIN, yy, tf, tlh,
+                        coul("fg"), coul("emph"))
+        if blines:
+            draw_lines(dessin, blines, MARGIN, yy + body_gap, bf, blh,
+                       coul("corps"), coul("emph"))
+        if not is_cta:
+            dessin.text((MARGIN, H - MARGIN - 34), f"{index}/{total}",
+                        font=nf, fill=coul("muted"))
+        if is_cover:
+            cue = "SWIPE →"
+            dessin.text((W - MARGIN - dessin.textlength(cue, font=kf),
+                         H - MARGIN - 40), cue, font=kf, fill=coul("accent"))
+
+    couleurs = {"fg": fg, "corps": fg if is_cta else muted, "emph": fill_emph,
+                "accent": accent, "muted": muted}
+
     if photo:
         img = charger_fond(conf_fond, photo, slug)
         voile = _hex_rgb(conf_fond["voile"])
-        # La boîte descend jusqu'au numéro de slide : la fin d'une phrase ne doit
-        # pas retomber sur une zone claire.
-        boite = (0, y, W, H - MARGIN + 4)
-        pire = _fond_pire_cas(img, boite)
+
+        masque = Image.new("L", (W, H), 0)
+        poser(ImageDraw.Draw(masque), lambda role: 255)
+        cadre = masque.getbbox()
+        if cadre is None:
+            raise ValueError(f"{slug} · slide {index} : aucun texte à poser.")
+
+        pire = _fond_sous_encre(img, masque)
+        cible_t = conf_fond.get("contraste_titre", CONTRASTE_TITRE)
+        cible_c = conf_fond.get("contraste_corps", CONTRASTE_CORPS)
         alpha = max(
-            _alpha_requis(pire, _hex_rgb(fg), voile,
-                          conf_fond.get("contraste_titre", CONTRASTE_TITRE)),
-            _alpha_requis(pire, _hex_rgb(muted), voile,
-                          conf_fond.get("contraste_corps", CONTRASTE_CORPS)),
-            _alpha_requis(pire, _hex_rgb(accent), voile,
-                          conf_fond.get("contraste_corps", CONTRASTE_CORPS)),
+            _alpha_requis(pire, _hex_rgb(couleurs["fg"]), voile, cible_t),
+            _alpha_requis(pire, _hex_rgb(couleurs["corps"]), voile, cible_c),
+            _alpha_requis(pire, _hex_rgb(couleurs["accent"]), voile, cible_c),
         )
         if alpha > VOILE_MAX:
             raise ValueError(
                 f"{slug} · slide {index} : la photo « {photo['cle']} » est trop claire "
                 f"sous le texte, il faudrait un voile à {alpha:.0%} et le fond "
                 f"disparaîtrait. Choisir une autre photo.")
-        img = poser_voile(img, boite, alpha, voile)
-        # Vérification après coup : on ne livre pas sur une promesse de calcul.
-        obtenu = _fond_pire_cas(img, boite)
-        reel = min(_contraste(obtenu, _hex_rgb(fg)),
-                   _contraste(obtenu, _hex_rgb(muted)),
-                   _contraste(obtenu, _hex_rgb(accent)))
-        if reel < conf_fond.get("contraste_corps", CONTRASTE_CORPS) - 0.05:
+        img = poser_voile(img, (0, cadre[1], W, H), alpha, voile)
+
+        # Contrôle après composition, sur les pixels et non sur le modèle.
+        obtenu = _fond_sous_encre(img, masque)
+        reel_t = _contraste(obtenu, _hex_rgb(couleurs["fg"]))
+        reel_c = min(_contraste(obtenu, _hex_rgb(couleurs["corps"])),
+                     _contraste(obtenu, _hex_rgb(couleurs["accent"])))
+        if reel_t < cible_t - 0.1 or reel_c < cible_c - 0.1:
             raise ValueError(
-                f"{slug} · slide {index} : contraste mesuré {reel:.1f}:1 après voile, "
-                f"en dessous du minimum. Photo « {photo['cle']} » à remplacer.")
+                f"{slug} · slide {index} : après voile, contraste mesuré sous le "
+                f"texte {reel_t:.2f}:1 pour le titre et {reel_c:.2f}:1 pour le corps, "
+                f"en dessous des cibles {cible_t}:1 et {cible_c}:1. "
+                f"Photo « {photo['cle']} » à remplacer.")
         d = ImageDraw.Draw(img)
 
-    if kicker:
-        tracked(d, kicker, MARGIN, y, kf, accent)
-        y += SZ_KICKER[0] + 46
-        if theme.get("rule"):
-            d.rectangle([MARGIN, y - 22, MARGIN + 96, y - 18], fill=accent)
-            y += rule_h - 22
-
-    y = draw_lines(d, tlines, MARGIN, y, tf, tlh, fg, fill_emph)
-    if blines:
-        y = draw_lines(d, blines, MARGIN, y + body_gap, bf,
-                       blh, fg if is_cta else muted, fill_emph)
-
-    nf = font(fam, SZ_NUM[0], bold=False)
-    if not is_cta:
-        d.text((MARGIN, H - MARGIN - 34), f"{index}/{total}", font=nf, fill=muted)
-    if is_cover:
-        cue = "SWIPE →"
-        d.text((W - MARGIN - d.textlength(cue, font=kf), H - MARGIN - 40),
-               cue, font=kf, fill=accent)
+    poser(d, lambda role: couleurs[role])
     return img
 
 
