@@ -9,7 +9,7 @@
       "actif": true,
       "drive_dossier": "1bbO5_SNq8EsFePBoRQvW8fm2KfJNvh18",
       "drive_archives": "1XIjGnrY38hPinOKLC9lDoGr-j-LIQQZh",
-      "drive_fichier": "10RikexnqvlDsLlNptdVZ-mRFMUeiRIwju4AE6Bbseoo",
+      "drive_fichier": "1oULUsZK9gNqXMD0F7CpYDeIZCNrsapyiSREhFBUu-KE",
       "note": "Le dossier vit dans le dossier photos partagé du client : la lecture par lien est héritée (la relève fonctionne), mais le droit d'ÉCRITURE par lien reste à activer une fois sur le dossier Validation hebdo."
     },
     {
@@ -20,7 +20,7 @@
       "actif": true,
       "drive_dossier": "1pqpmlG9ussUd2wYiVLMXOxMcwJCwIuOl",
       "drive_archives": "1c0SvqIhlcDM8EoC3b6qGulzDkNf-V8iP",
-      "drive_fichier": "1yNn-OQERbp0IDTZVDoQ2EYbDrfdImEAvPwXkiLu9L20"
+      "drive_fichier": "1jI2yzgIwcWwlPbhH76ZG7kRxBdSsuFATiiMI_wLLgC4"
     },
     {
       "slug": "jlawsongolf",
@@ -30,7 +30,7 @@
       "actif": true,
       "drive_dossier": "1Q8KPPL1S2mrJ6afLObZoD3sokPULdcNG",
       "drive_archives": "1fbD-vdIeCEltDGWvEGRkzXy4_HMvF2XH",
-      "drive_fichier": "11g2OG61Q8DZ65M66EDr7ch6PhbTOJGk9sbu1ZC6nrkQ"
+      "drive_fichier": "18b6A-RjJOUPw7-puG4ar_xbUgPCzC1VBdmWI6V_oSxs"
     },
     {
       "slug": "la-galerie-immobiliere",
@@ -40,8 +40,8 @@
       "actif": true,
       "drive_dossier": "1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34YrLO",
       "drive_archives": "1sQVmOw2WVIXNOeVpEMI5WPYG3XHRJAml",
-      "drive_fichier": "1UFOJ-xNx8r-_7NXovCXpPHBzZ5iz2MiaSdgHK-J0RzU",
-      "note": "Semaine du 31/08 : tableau déposé le 25/08 à la demande de Maxime, et mail déjà envoyé à Sabrina et Rémi le 25/08. C'est CE fichier que la cliente a en main — la version régénérée le 28/08 par le job generer n'a donc pas été déposée : remplacer le fichier ferait tomber leurs décisions dans un tableau que la relève ne lit plus."
+      "drive_fichier": "1sBqojmhShwHIo6cMdceuKSTYB9aS-q0ZL6x_tnONNGk",
+      "note": "Seul compte réellement en service à ce jour : Sabrina et Rémi reçoivent le mail et ouvrent le tableau. Règle apprise le 28/08 : quand un tableau a déjà été envoyé à la cliente, c'est CE fichier que la routine garde, même si le job generer en produit une version plus fraîche — le remplacer ferait tomber leurs décisions dans un tableau que la relève ne lit plus."
     },
     {
       "slug": "pierre-huiban",
@@ -51,7 +51,7 @@
       "actif": true,
       "drive_dossier": "1VGThaVWofkwv3sUqZQo-R0_sST5nvytB",
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
-      "drive_fichier": "1yVz6biowe03wB31QOz01pt1ML3oZhUEWoLnwawivblg"
+      "drive_fichier": "1BSNsS3SKyQPF6GEq8wc_BxTbcdEEIDO1zZ5HeD7zrKw"
     },
     {
       "slug": "otea-production",
@@ -72,7 +72,7 @@
       "actif": true,
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
-      "drive_fichier": "1AVeTPKE2g7iwbUQzzNqOjOlsp4pm2ZE6EUNcVZtzXdo",
+      "drive_fichier": "1r_uvfyp34EHP06YrB_Yu804mepUGt63bQ7SNP5WQ2nE",
       "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). BLOQUANT au 21/08/2026 : le dossier Validation hebdo n'a AUCUNE permission « tous les utilisateurs disposant du lien » (vérifié par get_file_permissions), la relève ne peut donc pas lire le fichier et le job appliquer sort en erreur à chaque passage depuis le 19/08. Réglage à faire une fois par Maxime sur le dossier : Partager → Accès général → Tous les utilisateurs disposant du lien → Éditeur."
     }
   ]
