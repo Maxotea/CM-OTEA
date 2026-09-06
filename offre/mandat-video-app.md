@@ -61,8 +61,7 @@ en vertical et en horizontal, en Full HD. Mandat Vidéo refait ce parcours,
    droits), voix mixée. 30 à 45 secondes. Compter deux à quatre minutes en
    720p, davantage en 1080p, onglet ouvert.
 9. La vidéo est enregistrée dans le stockage de l'appli, lisible et
-   téléchargeable depuis l'onglet « Mes vidéos », le rendu 1080p (montage plus long), la lecture
-d'un site d'annonce précis (chaque portail a sa structure).
+   téléchargeable depuis l'onglet « Mes vidéos ».
 
 Ce que l'outil s'interdit, comme la proposition du 02/09 : aucun visage
 généré, aucune vue drone inventée, aucun chiffre qui ne vienne pas de
@@ -127,7 +126,8 @@ accès sans session Higgsfield, y compris à la page d'accueil, et cet
 environnement n'en a pas. Le premier essai réel sera donc celui de Maxime
 ou de Rémi. Les points à surveiller au premier passage : la validation
 Higgsfield par photo, le temps de montage, la lecture de la vidéo dans
-l'onglet « Mes vidéos ».
+l'onglet « Mes vidéos », le rendu 1080p (montage plus long), la lecture
+d'un site d'annonce précis (chaque portail a sa structure).
 
 ## Pour Rémi
 
