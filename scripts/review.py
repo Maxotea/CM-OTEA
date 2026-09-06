@@ -129,7 +129,7 @@ def _mode_demploi(wb, compte, lundi):
     ws.column_dimensions["A"].width = 4
     ws.column_dimensions["B"].width = 100
     lignes = [
-        (f"Vos publications — semaine du {lundi:%d/%m} au {lundi + timedelta(days=6):%d/%m}", "titre"),
+        (f"Vos publications : semaine du {lundi:%d/%m} au {lundi + timedelta(days=6):%d/%m}", "titre"),
         (compte["nom"], "sous-titre"),
         ("", None),
         ("Trois minutes suffisent :", "gras"),
@@ -137,9 +137,9 @@ def _mode_demploi(wb, compte, lundi):
         ("2.  Les colonnes JAUNES sont à vous : corrigez la légende directement dans la case,", None),
         ("     ajustez l'heure si besoin, et laissez-nous un commentaire si utile.", None),
         ("3.  Choisissez votre décision dans le menu de la colonne « Votre décision » :", None),
-        (f"      {DECISION_OK} — la publication part automatiquement, plus rien à faire.", None),
-        (f"      {DECISION_CORRIGER} — on la retravaille avec votre commentaire et on vous la représente.", None),
-        (f"      {DECISION_NON} — elle est retirée de la semaine.", None),
+        (f"      {DECISION_OK} : la publication part automatiquement, plus rien à faire.", None),
+        (f"      {DECISION_CORRIGER} : on la retravaille avec votre commentaire et on vous la représente.", None),
+        (f"      {DECISION_NON} : elle est retirée de la semaine.", None),
         ("", None),
         ("Vos décisions sont relevées plusieurs fois par jour et prises en compte sous quelques", None),
         ("heures. Une ligne laissée sans décision reste en attente : elle ne sera pas publiée.", None),
@@ -516,6 +516,8 @@ def appliquer_compte(compte, dry_run=False):
             sources.append(("Drive", telecharger_review(compte["drive_fichier"])))
         except Exception as exc:
             print(f"✗ {slug} : export Drive impossible — {exc}", file=sys.stderr)
+            annoter("warning", f"{slug} : fichier de review illisible ({exc}). Le compte n'est "
+                               f"pas relevé tant que son dossier Drive n'est pas partagé par lien.")
             return {"erreurs": 1}
     for chemin in sorted(RETOURS.glob(f"{slug}*.xlsx")):
         sources.append((chemin.name, chemin))
@@ -652,6 +654,21 @@ def appliquer_compte(compte, dry_run=False):
 
 # ---------------------------------------------------------------- orchestration
 
+def annoter(niveau, message):
+    """Annotation GitHub Actions (warning/error) : lisible dans la liste des runs sans ouvrir
+    les logs. Trois relèves par jour en rouge sans dire pourquoi, personne ne les lit plus.
+    Sans effet hors d'un runner."""
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::{niveau}::{message}")
+
+
+def resumer(lignes):
+    """Résumé Markdown du run, dans l'onglet Summary de GitHub Actions. Sans effet ailleurs."""
+    chemin = os.environ.get("GITHUB_STEP_SUMMARY")
+    if chemin:
+        with open(chemin, "a", encoding="utf-8") as f:
+            f.write("\n".join(lignes) + "\n")
+
 def charger_comptes(filtre=None):
     config = json.loads((REVIEWS / "config.json").read_text(encoding="utf-8"))
     comptes = [c for c in config["comptes"] if c.get("actif")]
@@ -686,15 +703,21 @@ def main():
         print(f"\n{total} brouillon(s) {verbe}.")
         return 0
 
-    totaux = {}
+    totaux, resume = {}, ["## Relève de la review client", "", "| Compte | Publiés | À corriger | Refusés | En attente | Sans décision | Erreurs |",
+                          "|---|---:|---:|---:|---:|---:|---:|"]
     for compte in comptes:
-        for cle, valeur in appliquer_compte(compte, args.dry_run).items():
+        compteurs = appliquer_compte(compte, args.dry_run)
+        for cle, valeur in compteurs.items():
             totaux[cle] = totaux.get(cle, 0) + valeur
-    print(f"\nBilan : {totaux.get('publies', 0)} publié(s), {totaux.get('a_corriger', 0)} à corriger, "
-          f"{totaux.get('refuses', 0)} refusé(s), {totaux.get('en_attente', 0)} ✅ en attente "
-          f"(média/placeholders), {totaux.get('sans_decision', 0)} sans décision, "
-          f"{totaux.get('erreurs', 0)} erreur(s)."
-          + ("" if args.dry_run else " Détail durable : reviews/etat/."))
+        resume.append(f"| {compte['nom']} | " + " | ".join(
+            str(compteurs.get(k, 0)) for k in ("publies", "a_corriger", "refuses", "en_attente",
+                                               "sans_decision", "erreurs")) + " |")
+    bilan = (f"Bilan : {totaux.get('publies', 0)} publié(s), {totaux.get('a_corriger', 0)} à corriger, "
+             f"{totaux.get('refuses', 0)} refusé(s), {totaux.get('en_attente', 0)} ✅ en attente "
+             f"(média/placeholders), {totaux.get('sans_decision', 0)} sans décision, "
+             f"{totaux.get('erreurs', 0)} erreur(s).")
+    print("\n" + bilan + ("" if args.dry_run else " Détail durable : reviews/etat/."))
+    resumer(resume + ["", bilan])
     return 1 if totaux.get("erreurs") else 0
 
 

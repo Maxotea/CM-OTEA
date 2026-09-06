@@ -1,0 +1,30 @@
+name: Tests
+
+# Les garde-fous du dépôt, à chaque push et sur chaque PR : la suite pytest (moteur de la
+# review, règles de remplacement des carrousels, règle d'écriture, cohérence des
+# configurations) puis le bilan de santé de l'outil, publié dans le résumé du run.
+# Aucun secret, aucun appel réseau : tout tourne à blanc.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install openpyxl pillow pytest
+
+      - name: Suite de tests
+        run: python3 -m pytest -q
+
+      - name: Bilan de santé de l'outil
+        if: always()
+        run: python3 scripts/sante.py

@@ -248,7 +248,11 @@ def main():
     motif = f"{args.client or '*'}/{args.semaine}-*.json"
     specs = sorted((ROOT / "carrousels").glob(motif))
     if not specs:
-        raise SystemExit(f"aucun carrousel pour {motif}")
+        message = (f"aucun carrousel pour {motif} : la spec du mercredi n'a pas été écrite "
+                   f"(carrousels/<client>/<date>-<slug>.json, voir references/carrousels-hebdo.md)")
+        if os.environ.get("GITHUB_ACTIONS"):
+            print(f"::error::{message}")
+        raise SystemExit(message)
 
     echecs = 0
     for s in specs:
