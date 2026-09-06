@@ -83,6 +83,20 @@ Fichiers qui portent le produit :
 | `app/container/` | l'assemblage serveur (ffmpeg + Node), prêt mais non déployable aujourd'hui |
 | `app/public/ffmpeg/` | le moteur ffmpeg WebAssembly, en deux morceaux (limite de 25 Mo par fichier) |
 
+## Ce qui a été vérifié, et ce qui ne l'a pas été
+
+Vérifié : la compilation TypeScript est propre, le site est construit et en
+ligne, les fichiers du moteur de montage et les médias d'exemple sont servis,
+la connexion renvoie bien vers l'authentification Higgsfield.
+
+Non vérifié : le parcours complet dans un navigateur connecté (dépôt des
+photos, animation, montage, dépôt du fichier). La plateforme refuse tout
+accès sans session Higgsfield, y compris à la page d'accueil, et cet
+environnement n'en a pas. Le premier essai réel sera donc celui de Maxime
+ou de Rémi. Les points à surveiller au premier passage : la validation
+Higgsfield par photo, le temps de montage, la lecture de la vidéo dans
+l'onglet « Mes vidéos ».
+
 ## Pour Rémi
 
 Lui envoyer le lien, avec trois consignes : se connecter avec un compte
