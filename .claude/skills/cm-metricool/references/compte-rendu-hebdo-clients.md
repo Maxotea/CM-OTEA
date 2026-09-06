@@ -20,9 +20,9 @@ Les comptes internes OTEA (OTEA PRODUCTION, Otea Filmakers) sont exclus par déf
 ## Modèle de message WhatsApp (plus court que l'email, format natif WhatsApp)
 > Bonjour [Prénom] ! 👋 Voici vos publications de la semaine :
 >
-> *Lundi [date] · [heure]* — [1re ligne accroche du post]
-> *Mercredi [date] · [heure]* — [accroche]
-> *Vendredi [date] · [heure]* — [accroche]
+> *Lundi [date] · [heure]* : [1re ligne accroche du post]
+> *Mercredi [date] · [heure]* : [accroche]
+> *Vendredi [date] · [heure]* : [accroche]
 >
 > Les textes complets suivent dans les messages suivants 👇 _(un message par post, texte intégral)_
 >
@@ -34,13 +34,13 @@ Les comptes internes OTEA (OTEA PRODUCTION, Otea Filmakers) sont exclus par déf
 Règle : le 1er message = sommaire ; puis UN message par post avec le texte intégral (les clients valident ce qui partira réellement, comme sur l'email).
 
 ## Modèle d'email
-Objet : `Vos publications de la semaine — [Client] (semaine du [date])`
+Objet : `Vos publications de la semaine : [Client] (semaine du [date])`
 
 > Bonjour [Prénom],
 >
-> Voici les publications prévues cette semaine sur vos réseaux. Merci de les valider (ou de me signaler vos corrections) avant mercredi — ensuite, tout part automatiquement aux horaires prévus.
+> Voici les publications prévues cette semaine sur vos réseaux. Merci de les valider (ou de me signaler vos corrections) avant mercredi. Ensuite, tout part automatiquement aux horaires prévus.
 >
-> **[Jour date] à [heure] — [type]**
+> **[Jour date] à [heure] · [type]**
 > [Texte complet du post]
 > 📷 Visuel : [description du média à attacher / "déjà en place"]
 >
@@ -50,7 +50,7 @@ Objet : `Vos publications de la semaine — [Client] (semaine du [date])`
 > ✏️ Une modification ? Indiquez le jour concerné et votre correction, je m'en occupe.
 >
 > Bonne semaine !
-> Maxime — OTEA Production
+> Maxime, OTEA Production
 
 ## Règles
 - Le texte des posts est copié TEL QUEL depuis Metricool (le client valide ce qui partira vraiment).

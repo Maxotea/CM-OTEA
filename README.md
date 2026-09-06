@@ -96,6 +96,24 @@ garde-fous et rôle de la session : `.claude/skills/cm-metricool/references/revi
 Mettre en route un nouveau client : l'ajouter à `reviews/config.json` (slug, blog_id,
 prefixe, `actif: true`) — le reste suit le lundi suivant.
 
+## La revue quotidienne de l'outil
+
+Chaque matin à 7h30 (Paris), une routine relit l'outil comme un produit : les runs de la
+nuit, les PR, les scripts, les configurations, les routines. Elle corrige ce qui tient en
+une session, protège chaque correction par un test, et note le reste dans
+`ameliorations/BACKLOG.md`. Revues datées dans `ameliorations/`, prompt dans
+`.claude/taches-planifiees/review-quotidienne-outil/SKILL.md`. Le but : l'outil CM le plus
+productif et le plus rapide du marché, vendable à d'autres community managers.
+
+```bash
+pip install openpyxl pillow pytest
+python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
+python3 -m pytest -q              # 69 tests, sans réseau ni secret
+```
+
+Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de
+santé dans le résumé du run.
+
 ## Ajouts v3 (02/08/2026)
 - `.claude/skills/cm-metricool/references/compte-rendu-hebdo-clients.md` — comptes rendus hebdo clients (lundi 9h) : WhatsApp prioritaire + doublon email, mode brouillon
 - `.claude/skills/cm-metricool/references/roi-clients.md` et `banques-photos.md` — références transverses
