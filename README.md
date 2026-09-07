@@ -98,7 +98,7 @@ prefixe, `actif: true`) — le reste suit le lundi suivant.
 
 ## La revue quotidienne de l'outil
 
-Chaque matin à 7h30 (Paris), une routine relit l'outil comme un produit : les runs de la
+Chaque matin à 9h00 (Paris), une routine relit l'outil comme un produit : les runs de la
 nuit, les PR, les scripts, les configurations, les routines. Elle corrige ce qui tient en
 une session, protège chaque correction par un test, et note le reste dans
 `ameliorations/BACKLOG.md`. Revues datées dans `ameliorations/`, prompt dans
