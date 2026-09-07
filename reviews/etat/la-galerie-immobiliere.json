@@ -12,6 +12,108 @@
         "post_id": 364338999.0,
         "resultat": "post introuvable dans Metricool (supprimé ou déplacé hors semaine)"
       }
+    },
+    "2026-09-07": {
+      "LGI-01": {
+        "decision": "NON",
+        "hash": "eb0961258492a7ff",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713599.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-02": {
+        "decision": "CORRIGER",
+        "hash": "d2e78c988b281b15",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": "Peut on écrire sur la photo un titre pour que ça soit accrocheur: Les taux ont bougé. Votre budget aussi. En police Baskerville ou Book Antiqua",
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 357903150.0,
+        "resultat": "à corriger puis re-proposer"
+      },
+      "LGI-03": {
+        "decision": "NON",
+        "hash": "80ab4963e18cabdf",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713603.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-05": {
+        "decision": "NON",
+        "hash": "c4d8b82f0f5fb5d4",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713611.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-06": {
+        "decision": "CORRIGER",
+        "hash": "008f965d90dd20c3",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": "Ajouter un titre sur l'image en police Book antiqua ou Baskerville : Votre logement a peut-être changé de classe sans que vous ayez touché à rien.",
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 357903169.0,
+        "resultat": "à corriger puis re-proposer"
+      },
+      "LGI-07": {
+        "decision": "NON",
+        "hash": "272fff25f9ea9916",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713626.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-08": {
+        "decision": "NON",
+        "hash": "302dd932d0281e7c",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713638.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-09": {
+        "decision": "CORRIGER",
+        "hash": "5717349208e76153",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": "Ajouter avec la meme police que les post précédent : Pourquoi Sabrina ? 5 raisons de lui confier votre projet 🎯\n\nSon expertise, sa méthode, son ancrage local. Et ce qui fait toute la différence.\n\nPrenez rendez-vous, c'est sans engagement.",
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 351958207.0,
+        "resultat": "à corriger puis re-proposer"
+      },
+      "LGI-10": {
+        "decision": "NON",
+        "hash": "c032e2577482f648",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713650.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      },
+      "LGI-11": {
+        "decision": "NON",
+        "hash": "ee1ba6ce0d0ccfe0",
+        "quand": "2026-09-07T15:59:03",
+        "commentaire": null,
+        "legende_modifiee": false,
+        "heure": null,
+        "post_id": 368713662.0,
+        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+      }
     }
   }
 }
