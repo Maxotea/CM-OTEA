@@ -45,7 +45,10 @@ Comment ça marche :
    ✅ **OK pour publier** — la publication part automatiquement, plus rien à faire
    ✏️ **À corriger** (voir commentaire) — on la retravaille et on vous la représente
    ⛔ **Ne pas publier** — elle est retirée de la semaine
-3. C'est tout. Vos décisions sont prises en compte automatiquement plusieurs fois par jour.
+3. Quand vous avez tout relu, basculez la case en haut du tableau sur
+   ✅ **J'ai terminé mes retours** — c'est elle qui nous prévient qu'on peut reprendre
+   la main. Pas besoin de l'attendre pour valider : chaque décision part de son côté,
+   les décisions sont prises en compte plusieurs fois par jour.
 
 À savoir : une ligne laissée sans décision reste en attente — rien ne part sans votre
 accord. Les visuels marqués « à venir » seront ajoutés avant publication. Votre tableau

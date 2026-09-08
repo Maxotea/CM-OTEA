@@ -16,6 +16,7 @@ du brouillon à la **publication automatique**. Ce qu'il n'a pas validé ne part
 | Lundi 6h00 | Routine Claude « Review — envoi du lundi » | envoie le mail (seulement si `envoi_review_auto` + `email_confirme`), sinon signale les brouillons à envoyer |
 | En semaine | Le client | corrige, commente, décide — toujours au même lien (son dossier) |
 | 4h30 · 10h30 · 16h30 | Action — job `appliquer` | relit chaque fichier par son export public, applique dans Metricool, journalise dans `reviews/etat/` |
+| dans la foulée | Action — `scripts/notifier.py` | si le client a touché à son tableau depuis la relève précédente, envoie le signal (voir « La veille ») |
 | Lundi 7h00 | Routine Claude « CR client Publi Hebdo » | lit `reviews/etat/` pour le récap : parti, à corriger, refusé, bloqué |
 
 Même partage des rôles que la chaîne photos : **la session fait la moitié authentifiée**
@@ -40,6 +41,14 @@ Colonnes de la table — seules les JAUNES sont éditables par le client :
 | Votre décision | **oui** | menu : `✅ OK pour publier` · `✏️ À corriger (voir commentaire)` · `⛔ Ne pas publier` |
 | Votre commentaire | **oui** | libre |
 
+Et **au-dessus de l'entête**, en ligne 1, la case « j'ai fini » (`H1`, jaune, menu à deux
+valeurs) : `🕐 Je n'ai pas fini` · `✅ J'ai terminé mes retours`. Elle ne conditionne
+rien — chaque décision est appliquée au fil de l'eau sans l'attendre. Elle répond à une
+autre question : *le client a-t-il encore quelque chose à dire ?* Son basculement est le
+signal fort de la veille. Son adresse voyage dans `_tech!B4` (`case_fini`), et
+`lire_review` cherche la ligne d'entête au lieu de la supposer : les fichiers d'avant,
+sans bannière ni case, restent lisibles et ne déclenchent aucun signal.
+
 Ce que fait `appliquer` de chaque décision :
 - **✅** → légende/heure de la ligne poussées dans Metricool si modifiées, puis
   `draft: false, autoPublish: true` — le post part tout seul à l'heure dite ;
@@ -48,6 +57,42 @@ Ce que fait `appliquer` de chaque décision :
 - **⛔** → aucun geste Metricool ; reste en brouillon, à retirer à la main —
   **jamais de suppression automatique** ;
 - vide → rien. Un post sans décision ne part jamais.
+
+## La veille — savoir que le client a répondu, sans attendre le lundi
+
+Le trou que ça bouche : Sabrina a rempli son tableau le 07/09 au soir, et Maxime ne l'a
+su qu'en le lui demandant. Rien ne prévenait. Google Sheets ne notifie pas le
+propriétaire d'un fichier que quelqu'un d'autre modifie, et le récap ne tombait que le
+lundi suivant.
+
+La relève a déjà le fichier sous les yeux trois fois par jour : elle sait donc s'il a
+bougé. Deux étages séparés, exprès :
+
+1. **`review.py` constate.** À chaque passage, il calcule une *signature de relecture*
+   (toutes les décisions, tous les commentaires, toutes les légendes) et la compare à
+   celle du passage précédent, stockée dans `reviews/etat/<client>.json` → `veille`. Il
+   en tire quatre signaux, du plus faible au plus fort :
+
+   | Signal | Quand |
+   |---|---|
+   | `premiers_retours` | le tableau était vierge, il ne l'est plus |
+   | `nouveaux_retours` | la signature a changé (décision, commentaire ou légende) |
+   | `termine` | la case « j'ai fini » vient de basculer — **la main repasse à Maxime** |
+   | `decision_illisible` | la case « Votre décision » contient autre chose que les trois choix : le client croit avoir décidé, et rien ne partira |
+
+   Les signaux sont déposés dans `reviews/etat/notifications.json`.
+
+2. **`notifier.py` porte.** Il vide la file par deux canaux cumulables :
+   - `NOTIF_WEBHOOK` (secret du dépôt) — une URL qui reçoit le signal en JSON. C'est le
+     canal utile : branchée sur un « Catch Hook » Zapier, elle devient mail, SMS,
+     WhatsApp ou notif push sans rien changer au code. **Non réglé pour l'instant.**
+   - une **issue GitHub**, toujours : une par client et par semaine (`🔔 Retours client —
+     <Client> — semaine du <lundi>`), les signaux suivants en commentaire du même fil.
+     Gratuit, sans réglage, et ça fait archive : on voit après coup quand le client a
+     répondu.
+
+Un signal envoyé est mémorisé et jamais répété ; un envoi qui échoue laisse le signal en
+file pour le passage suivant. Rien ne se perd, rien ne double.
 
 ## Côté sessions Claude — le vendredi et le lundi
 

@@ -61,6 +61,15 @@ DECISION_OK = "✅ OK pour publier"
 DECISION_CORRIGER = "✏️ À corriger (voir commentaire)"
 DECISION_NON = "⛔ Ne pas publier"
 
+# La case « j'ai fini », en haut du tableau. Le client la bascule quand il a terminé sa
+# relecture : c'est CE basculement qui prévient Maxime qu'il peut reprendre la main. Elle
+# ne conditionne rien — les décisions déjà posées sont appliquées au fil de l'eau, la case
+# dit « j'ai fini de relire », pas « vous pouvez commencer à lire ».
+FINI_NON = "🕐 Je n'ai pas fini"
+FINI_OUI = "✅ J'ai terminé mes retours"
+FINI_ETIQUETTE = "Quand vous avez tout relu, dites-le nous ici →"
+FINI_CELLULE = "H1"
+
 JOURS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
 RESEAUX = {"instagram": "IG", "facebook": "FB", "tiktok": "TikTok", "linkedin": "LinkedIn",
            "youtube": "YT", "twitter": "X", "pinterest": "Pinterest", "threads": "Threads",
@@ -141,9 +150,13 @@ def _mode_demploi(wb, compte, lundi):
         (f"      {DECISION_CORRIGER} — on la retravaille avec votre commentaire et on vous la représente.", None),
         (f"      {DECISION_NON} — elle est retirée de la semaine.", None),
         ("", None),
+        (f"4.  Quand vous avez tout relu, basculez la case en haut du tableau sur", "gras"),
+        (f"      « {FINI_OUI} ». C'est elle qui nous prévient.", "gras"),
+        ("", None),
         ("Vos décisions sont relevées plusieurs fois par jour et prises en compte sous quelques", None),
         ("heures. Une ligne laissée sans décision reste en attente : elle ne sera pas publiée.", None),
         ("Les lignes « ⚠️ visuel à venir » reçoivent leur photo/vidéo avant publication.", None),
+        ("Pas besoin d'attendre d'avoir fini pour valider : chaque décision part de son côté.", None),
         ("", None),
         ("Merci de ne pas toucher aux colonnes grises ni à la colonne Réf : elles servent au suivi.", "petit"),
     ]
@@ -191,26 +204,43 @@ def ecrire_fichier(compte, lundi, brouillons, chemin):
     _mode_demploi(wb, compte, lundi)
 
     ws = wb.create_sheet(f"Semaine du {lundi:%d-%m}")
-    ws.freeze_panes = "A2"
+    ws.freeze_panes = "A3"
     for col, largeur in LARGEURS.items():
         ws.column_dimensions[col].width = largeur
 
+    # Ligne 1 : la case « j'ai fini ». Au-dessus de l'entête pour être vue en premier et
+    # rester visible au défilement (les deux premières lignes sont figées).
+    ws.merge_cells("A1:G1")
+    etiquette = ws.cell(row=1, column=1, value=FINI_ETIQUETTE)
+    etiquette.font = Font(bold=True, color=NOIR)
+    etiquette.alignment = Alignment(vertical="center", horizontal="right")
+    case = ws.cell(row=1, column=8, value=FINI_NON)
+    case.fill = PatternFill("solid", fgColor=JAUNE_EDIT)
+    case.font = Font(bold=True)
+    case.alignment = Alignment(vertical="center", horizontal="center", wrap_text=True)
+    case.border = BORD
+    case.protection = Protection(locked=False)
+    ws.row_dimensions[1].height = 30
+
     for c, entete in enumerate(ENTETES, start=1):
-        cellule = ws.cell(row=1, column=c, value=entete)
+        cellule = ws.cell(row=2, column=c, value=entete)
         cellule.font = Font(bold=True, color="FFFFFFFF")
         cellule.fill = PatternFill("solid", fgColor=NOIR)
         cellule.alignment = Alignment(vertical="center", wrap_text=True)
-    ws.row_dimensions[1].height = 22
+    ws.row_dimensions[2].height = 22
 
     tech = wb.create_sheet("_tech")
     tech["A1"], tech["B1"] = "client", compte["slug"]
     tech["A2"], tech["B2"] = "semaine", lundi.isoformat()
     tech["A3"], tech["B3"] = "genere", datetime.now().isoformat(timespec="seconds")
+    # L'adresse de la case « j'ai fini » voyage avec le fichier : la relève la lit ici
+    # plutôt que de la supposer, et un fichier d'une autre version reste lisible.
+    tech["A4"], tech["B4"] = "case_fini", FINI_CELLULE
     for c, entete in enumerate(["ref", "post_id", "blog_id", "date_time", "texte_original"], start=1):
         tech.cell(row=5, column=c, value=entete)
 
     for i, post in enumerate(brouillons, start=1):
-        r = i + 1
+        r = i + 2
         dt = datetime.fromisoformat(post["publicationDate"]["dateTime"])
         ref = f"{compte['prefixe']}-{i:02d}"
         media = post.get("media") or []
@@ -241,19 +271,30 @@ def ecrire_fichier(compte, lundi, brouillons, chemin):
                                     post["publicationDate"]["dateTime"], post.get("text", "")], start=1):
             tech.cell(row=5 + i, column=c, value=valeur)
 
-    fin = len(brouillons) + 1
+    fin = len(brouillons) + 2
     decisions = DataValidation(
         type="list", formula1=f'"{DECISION_OK},{DECISION_CORRIGER},{DECISION_NON}"',
         allow_blank=True, showErrorMessage=True, errorTitle="Choisir dans la liste",
         error="Choisissez une des trois décisions du menu, ou laissez la case vide.")
     ws.add_data_validation(decisions)
-    decisions.add(f"H2:H{fin}")
+    decisions.add(f"H3:H{fin}")
     for fond, decision in ((VERT_OK, DECISION_OK), (ORANGE_CORRIGER, DECISION_CORRIGER),
                            (ROUGE_NON, DECISION_NON)):
         ws.conditional_formatting.add(
-            f"A2:I{fin}",
-            FormulaRule(formula=[f'$H2="{decision}"'],
+            f"A3:I{fin}",
+            FormulaRule(formula=[f'$H3="{decision}"'],
                         fill=PatternFill("solid", bgColor=fond), stopIfTrue=True))
+
+    fini = DataValidation(
+        type="list", formula1=f'"{FINI_NON},{FINI_OUI}"', allow_blank=True,
+        showErrorMessage=True, errorTitle="Choisir dans la liste",
+        error="Deux choix : pas encore fini, ou terminé.")
+    ws.add_data_validation(fini)
+    fini.add(FINI_CELLULE)
+    ws.conditional_formatting.add(
+        FINI_CELLULE,
+        FormulaRule(formula=[f'${FINI_CELLULE[0]}${FINI_CELLULE[1:]}="{FINI_OUI}"'],
+                    fill=PatternFill("solid", bgColor=VERT_OK)))
 
     ws.protection.sheet = True
     tech.sheet_state = "hidden"
@@ -339,8 +380,21 @@ def lire_review(source):
     feuille = next((ws for ws in wb.worksheets if ws.title.startswith("Semaine")), None)
     if feuille is None:
         raise RuntimeError("onglet « Semaine du … » introuvable")
+
+    # L'entête n'est plus forcément en ligne 1 : depuis la case « j'ai fini » elle est en
+    # ligne 2. On la cherche au lieu de la supposer, ce qui garde lisibles les fichiers
+    # déjà entre les mains des clients.
+    ligne_entete = next((r for r in range(1, 6)
+                         if str(feuille.cell(row=r, column=1).value or "").strip() == ENTETES[0]), 1)
+
+    # La case « j'ai fini », à l'adresse que le fichier déclare lui-même. Absente des
+    # fichiers d'avant : meta["fini"] vaut alors None, et la veille ne signale rien.
+    meta["fini"] = None
+    if str(tech["A4"].value or "").strip() == "case_fini" and tech["B4"].value:
+        meta["fini"] = feuille[str(tech["B4"].value).strip()].value
+
     lignes = []
-    for valeurs in feuille.iter_rows(min_row=2, max_col=9, values_only=True):
+    for valeurs in feuille.iter_rows(min_row=ligne_entete + 1, max_col=9, values_only=True):
         ref = str(valeurs[0]).strip() if valeurs[0] else None
         if not ref:
             continue
@@ -517,8 +571,90 @@ def charger_etat(slug):
     return {"_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par "
                     "le workflow « Review hebdo client », ne pas éditer à la main. Sert "
                     "d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) "
-                    "et de matière au récap du lundi.",
-            "semaines": {}}
+                    "et de matière au récap du lundi. Le bloc « veille » mémorise, par semaine, "
+                    "l'état de la relecture du client (signature, nombre de décisions, case "
+                    "« j'ai fini ») : c'est lui qui permet de dire ce qui a bougé depuis la "
+                    "relève précédente sans re-signaler deux fois la même chose.",
+            "semaines": {}, "veille": {}}
+
+
+def signature_relecture(lignes):
+    """Ce que le client a écrit, tout compris : décisions, commentaires, légendes.
+
+    Sert à répondre à une seule question — « a-t-il touché au tableau depuis la dernière
+    relève ? » — sans dépendre du journal des décisions, qui lui n'enregistre que les
+    lignes actionnables. Une légende corrigée sans décision compte comme un retour.
+    """
+    brut = "\n".join(
+        f"{l['ref']}|{normaliser_texte(l['decision'])}"
+        f"|{normaliser_texte(l['commentaire'])}|{normaliser_texte(l['legende'])}"
+        for l in lignes)
+    return hashlib.sha256(brut.encode()).hexdigest()[:16]
+
+
+def veiller(compte, meta, lignes, etat, evenements):
+    """Compare la relecture du client à ce qu'on en savait, et note ce qui a bougé.
+
+    Trois signaux, du plus faible au plus fort : il a commencé, il a continué, il a
+    terminé. Le dernier est celui qui compte — c'est la main qui repasse à Maxime.
+    """
+    semaine = str(meta["semaine"])
+    veille = etat.setdefault("veille", {})
+    avant = veille.get(semaine, {})
+    signature = signature_relecture(lignes)
+    posees = sum(1 for l in lignes if str(l["decision"] or "").strip())
+    fini = str(meta.get("fini") or "").strip() == FINI_OUI
+    lien = (f"https://docs.google.com/spreadsheets/d/{compte['drive_fichier']}/edit"
+            if compte.get("drive_fichier") else None)
+
+    def signaler(type_, titre, detail):
+        evenements.append({
+            "quand": datetime.now().isoformat(timespec="seconds"),
+            "client": compte["slug"], "nom": compte["nom"], "semaine": semaine,
+            "type": type_, "titre": titre, "detail": detail, "lien": lien})
+
+    if fini and not avant.get("fini"):
+        signaler("termine",
+                 f"{compte['nom']} a terminé ses retours — semaine du {semaine}",
+                 f"{posees} ligne(s) sur {len(lignes)} décidées. À toi de jouer : "
+                 f"les ✏️ sont à retravailler, les ⛔ à retirer du calendrier.")
+    elif signature != avant.get("signature"):
+        if not avant.get("signature") or avant.get("posees", 0) == 0:
+            signaler("premiers_retours",
+                     f"{compte['nom']} a commencé à répondre — semaine du {semaine}",
+                     f"{posees} ligne(s) sur {len(lignes)} décidées pour l'instant.")
+        else:
+            avance = posees - avant.get("posees", 0)
+            signaler("nouveaux_retours",
+                     f"{compte['nom']} a modifié ses retours — semaine du {semaine}",
+                     (f"{avance:+d} décision(s) depuis le dernier passage, "
+                      f"{posees} sur {len(lignes)} au total."
+                      if avance else
+                      f"Une légende ou un commentaire a changé. Toujours {posees} "
+                      f"décision(s) sur {len(lignes)}."))
+
+    veille[semaine] = {"signature": signature, "posees": posees, "lignes": len(lignes),
+                       "fini": fini, "vu": datetime.now().isoformat(timespec="seconds")}
+    return signature != avant.get("signature") or fini != bool(avant.get("fini"))
+
+
+def empiler_notifications(evenements):
+    """Dépose les signaux dans une file que scripts/notifier.py vide ensuite.
+
+    Deux étages volontairement séparés : la relève sait ce qui a bougé (elle a le fichier
+    sous les yeux), l'envoi sait comment joindre Maxime (il a les secrets). Si l'envoi
+    tombe, rien n'est perdu — la file attend le passage suivant.
+    """
+    chemin = ETAT / "notifications.json"
+    file = {"_doc": "File des signaux de veille de la review client — écrite par "
+                    "scripts/review.py, vidée par scripts/notifier.py. « en_attente » = pas "
+                    "encore notifié, « envoyes » = les 50 derniers, pour ne pas re-signaler.",
+            "en_attente": [], "envoyes": [], "fils": {}}
+    if chemin.exists():
+        file.update(json.loads(chemin.read_text(encoding="utf-8")))
+    file["en_attente"].extend(evenements)
+    ETAT.mkdir(parents=True, exist_ok=True)
+    chemin.write_text(json.dumps(file, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def empreinte(decision, legende, heure):
@@ -526,7 +662,7 @@ def empreinte(decision, legende, heure):
     return hashlib.sha256(brut.encode()).hexdigest()[:16]
 
 
-def appliquer_compte(compte, dry_run=False):
+def appliquer_compte(compte, dry_run=False, evenements=None):
     """Traite toutes les sources de retour d'un compte. Retourne les compteurs."""
     slug = compte["slug"]
     sources = []
@@ -561,6 +697,13 @@ def appliquer_compte(compte, dry_run=False):
         semaine = str(meta["semaine"])
         journal = etat["semaines"].setdefault(semaine, {})
         print(f"{compte['nom']} — semaine du {semaine} (source : {nom_source})")
+
+        # La veille tourne avant l'application : même si aucune décision n'est actionnable,
+        # un tableau touché doit se voir. Un retour Drive fait foi ; un fichier revenu par
+        # mail est un doublon de la même semaine et ne redéclenche pas de signal.
+        if evenements is not None and nom_source == "Drive" and not dry_run:
+            if veiller(compte, meta, lignes, etat, evenements):
+                touches = True
 
         for ligne in lignes:
             ref, original = ligne["ref"], ligne["original"]
@@ -598,6 +741,20 @@ def appliquer_compte(compte, dry_run=False):
             if decision == "INCONNU":
                 entree["resultat"] = f"décision illisible : « {ligne['decision']} » — à clarifier"
                 print(f"  ? {ref} : {entree['resultat']}")
+                # Silencieux côté client : sa case est remplie, il croit avoir décidé, et
+                # rien ne partira. Ça mérite un signal, pas seulement une ligne de journal.
+                if evenements is not None:
+                    evenements.append({
+                        "quand": datetime.now().isoformat(timespec="seconds"),
+                        "client": slug, "nom": compte["nom"], "semaine": semaine,
+                        "type": "decision_illisible",
+                        "titre": f"{compte['nom']} — décision illisible sur {ref}",
+                        "detail": f"La case « Votre décision » contient « {ligne['decision']} », "
+                                  f"qui n'est aucun des trois choix. La ligne ne partira pas "
+                                  f"tant que ce n'est pas clarifié.",
+                        "lien": (f"https://docs.google.com/spreadsheets/d/"
+                                 f"{compte['drive_fichier']}/edit"
+                                 if compte.get("drive_fichier") else None)})
             elif decision == "NON":
                 entree["resultat"] = "refusé — laissé en brouillon, à retirer à la main"
                 compteurs["refuses"] += 1
@@ -705,10 +862,15 @@ def main():
         print(f"\n{total} brouillon(s) {verbe}.")
         return 0
 
-    totaux = {}
+    totaux, evenements = {}, []
     for compte in comptes:
-        for cle, valeur in appliquer_compte(compte, args.dry_run).items():
+        for cle, valeur in appliquer_compte(compte, args.dry_run, evenements).items():
             totaux[cle] = totaux.get(cle, 0) + valeur
+    if evenements and not args.dry_run:
+        empiler_notifications(evenements)
+        print(f"\n{len(evenements)} signal(aux) de veille en file — scripts/notifier.py les envoie.")
+    for e in evenements:
+        print(f"  🔔 {e['titre']}")
     print(f"\nBilan : {totaux.get('publies', 0)} publié(s), {totaux.get('a_corriger', 0)} à corriger, "
           f"{totaux.get('refuses', 0)} refusé(s), {totaux.get('en_attente', 0)} ✅ en attente "
           f"(média/placeholders), {totaux.get('sans_decision', 0)} sans décision, "
