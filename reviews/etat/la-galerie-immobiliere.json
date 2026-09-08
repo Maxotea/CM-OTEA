@@ -105,14 +105,14 @@
         "resultat": "refusé — laissé en brouillon, à retirer à la main"
       },
       "LGI-11": {
-        "decision": "NON",
-        "hash": "ee1ba6ce0d0ccfe0",
-        "quand": "2026-09-07T15:59:03",
+        "decision": "INCONNU",
+        "hash": "ebb93a43709d36ff",
+        "quand": "2026-09-08T14:42:41",
         "commentaire": null,
         "legende_modifiee": false,
         "heure": null,
         "post_id": 368713662.0,
-        "resultat": "refusé — laissé en brouillon, à retirer à la main"
+        "resultat": "décision illisible : « 2026-09-07 00:00:00 » — à clarifier"
       }
     }
   }
