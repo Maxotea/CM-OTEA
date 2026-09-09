@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install openpyxl pillow pytest
+      - run: pip install openpyxl pillow numpy pytest
 
       - name: Suite de tests
         run: python3 -m pytest -q
