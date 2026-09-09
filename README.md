@@ -29,6 +29,32 @@ Le rendu part dans `medias/<client>/carrousels/<slug>/` (dossier ignoré par git
 ## Ajouter un client
 Dupliquer `references/clients/_template-nouveau-client.md`, remplir, créer si besoin sa `banque-photos-[client].md`, et ajouter sa DA de carrousel dans `scripts/themes.json`.
 
+## Aftermovie corporate depuis un dossier de rushs
+
+`scripts/aftermovie.py` monte un premier bout-à-bout d'une minute à partir des
+rushs d'un tournage (dossier lu en récursif, disque externe compris). Il
+dérushe en répartissant les plans sur toute la journée, écarte les images
+noires, recadre en 1920×1080 sans déformation, enchaîne au rythme d'un
+aftermovie (ouverture longue + titre, accélération, plan final posé, carton),
+garde l'ambiance sonore sous une musique optionnelle et normalise à -14 LUFS.
+
+```bash
+pip install pillow          # ffmpeg + ffprobe dans le PATH (~/.local/node/bin)
+python3 scripts/aftermovie.py "/Volumes/VERT/Salomon" \
+    --titre "SALOMON" --sous-titre "Les Roches · 2026" \
+    --carton-fin "Merci à toute l'équipe\nUne production Otea" \
+    --musique ~/Musique/track.mp3 --sortie o/salomon-aftermovie.mp4
+```
+
+Le script écrit à côté de la vidéo un `*.montage.json` : la liste des plans
+retenus (fichier, point d'entrée, durée). Pour changer un plan, on édite ce
+fichier et on relance `python3 scripts/aftermovie.py --edl o/salomon-aftermovie.montage.json`,
+sans refaire l'analyse. `--vertical` sort un 1080×1920 pour un reel,
+`--duree` change la longueur, `--sans-analyse` saute le contrôle de luminosité.
+
+Ce sont les rushs du client et rien d'autre : aucune image générée. Le film
+n'est pas une story, il garde le son.
+
 ## Répartition Drive / GitHub
 
 Deux stockages, deux rôles. Les confondre crée des copies qui divergent.
