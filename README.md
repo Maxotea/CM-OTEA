@@ -55,6 +55,27 @@ sans refaire l'analyse. `--vertical` sort un 1080×1920 pour un reel,
 Ce sont les rushs du client et rien d'autre : aucune image générée. Le film
 n'est pas une story, il garde le son.
 
+## Reel client depuis un dossier de rushs (prises multiples, stéréo, étalonnage)
+
+`scripts/reel-montage.py` est le pendant vertical de l'aftermovie, pour un
+reel de 1 min 30 : il regroupe les rushs par scène (noms de fichiers ou
+ressemblance visuelle), note chaque prise (netteté, exposition, longueur, son,
+dernière prise) et n'en garde qu'une, monte en 1080×1920 à 30 i/s, force une
+vraie stéréo (mono dupliqué, canal mort recopié, niveaux rapprochés, −14 LUFS)
+et étalonne tout le montage (exposition rapprochée plan par plan, puis un look
+global : `ramen`, `neutre`, `froid` ou une LUT `.cube`).
+
+```bash
+pip install pillow numpy     # ffmpeg + ffprobe dans le PATH (~/.local/node/bin)
+python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" \
+    --titre "NINA RAMEN" --duree 90 --sortie o/nina-ramen-reel-v1.mp4
+```
+
+Il écrit à côté de la vidéo un `*.montage.json` (EDL rééditable, relancer avec
+`--edl`) et un `*.rapport.md` (prises par scène, retenue et notes, diagnostic
+son de chaque plan, contrôle stéréo de la sortie). Projet type :
+`projets/nina-ramen/`.
+
 ## Répartition Drive / GitHub
 
 Deux stockages, deux rôles. Les confondre crée des copies qui divergent.
@@ -134,7 +155,7 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 69 tests, sans réseau ni secret
+python3 -m pytest -q              # 78 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de
