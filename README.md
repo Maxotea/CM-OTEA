@@ -55,6 +55,26 @@ sans refaire l'analyse. `--vertical` sort un 1080×1920 pour un reel,
 Ce sont les rushs du client et rien d'autre : aucune image générée. Le film
 n'est pas une story, il garde le son.
 
+### Habillage dynamique et voix off (deuxième passe)
+
+Une fois le bout-à-bout validé, `scripts/habillage.py` incruste des textes
+animés pilotés par un `habillage.json` (quoi, quand, quel style) et mixe la
+voix off par-dessus la bande son avec ducking (la musique baisse quand la
+voix parle). Cinq styles : `punch` (un nom qui claque, mot par mot, sur
+surlignage accent), `bandeau` (synthé nom + fonction), `chiffre` (compteur),
+`mot` (étiquette dans un coin), `liste` (lignes qui apparaissent une à une).
+
+```bash
+python3 scripts/habillage.py o/salomon-aftermovie.mp4 aftermovies/salomon/habillage.json \
+    --voix ~/Desktop/vocal-salomon.m4a --sortie o/salomon-final.mp4
+python3 scripts/habillage.py o/salomon-aftermovie.mp4 aftermovies/salomon/habillage.json --apercu 5.6
+```
+
+`--apercu` sort une seule image à la seconde donnée pour caler un élément
+sans rendre tout le film. Le fichier de référence du projet Salomon est
+`aftermovies/salomon/habillage.json` ; les EDL `o/*.montage.json` sont
+versionnées, les rendus mp4 non.
+
 ## Répartition Drive / GitHub
 
 Deux stockages, deux rôles. Les confondre crée des copies qui divergent.

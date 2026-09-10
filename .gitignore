@@ -5,5 +5,6 @@ __pycache__/
 # Canvas assemblé de la présentation (2 Mo, régénérable via design-presentation/gen.py)
 design-presentation/presentation-services-otea.html
 
-# Rendus vidéo locaux (aftermovies)
-o/
+# Rendus vidéo locaux (aftermovies) ; les EDL et habillages json restent versionnés
+o/*
+!o/*.json
