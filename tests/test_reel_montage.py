@@ -4,6 +4,7 @@ des plans. Ce sont les règles qui garantissent « 90 s, stéréo, homogène ».
 
 import importlib
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -135,3 +136,77 @@ def test_repartition_plus_de_scenes_que_de_plans_et_accroche():
 
 def test_echapper_chemin_lut():
     assert rm.echapper("/Volumes/Disque:vert/it's.cube") == "/Volumes/Disque\\:vert/it\\'s.cube"
+
+
+def _plans_fcp():
+    return [dict(fichier="/V/nina/a.mov", debut=1.0, duree=2.5, scene=1, audio=True, gain_db=3.0,
+                 duree_rush=8.0, pan=None, diag_son="stéréo → conservée", mesure_image=dict(surexpose=False)),
+            dict(fichier="/V/nina/b.mov", debut=0.5, duree=2.2, scene=2, audio=True, gain_db=0.0,
+                 duree_rush=5.0, pan="pan=stereo|c0=c0|c1=c0", diag_son="mono → dupliqué",
+                 mesure_image=dict(surexpose=True, YAVG=229.0, clip=0.86)),
+            dict(fichier="/V/nina/a.mov", debut=4.0, duree=3.0, scene=1, audio=False, gain_db=0.0,
+                 duree_rush=8.0, pan="silence", diag_son="aucune piste", mesure_image=dict(surexpose=False))]
+
+
+def _frames(t):
+    n, d = t[:-1].split("/")
+    assert int(d) == rm.FPS
+    return int(n)
+
+
+def test_fcpxml_timeline_dure_ce_que_dure_le_rendu(tmp_path):
+    plans = _plans_fcp()
+    titre = tmp_path / "t.png"
+    titre.write_bytes(b"png")
+    chemin = tmp_path / "reel.fcpxml"
+    total = rm.ecrire_fcpxml(str(chemin), "reel", plans, str(titre), None)
+    attendu = round((sum(p["duree"] for p in plans) - (len(plans) - 1) * rm.TRANSITION) * rm.FPS)
+    assert total == attendu
+    root = ET.parse(chemin).getroot()
+    assert root.get("version") == "1.8"
+    fmt = root.find("resources/format")
+    assert (fmt.get("width"), fmt.get("height")) == (str(rm.W), str(rm.H))
+    # un rush = une ressource, même s'il sert deux fois ; le titre en plus
+    assets = root.findall("resources/asset")
+    assert [a.get("name") for a in assets] == ["a.mov", "t.png", "b.mov"]
+    assert assets[0].get("src").startswith("file:///") and assets[0].get("src").endswith("/V/nina/a.mov")
+    seq = root.find("library/event/project/sequence")
+    assert _frames(seq.get("duration")) == attendu
+    clips = seq.findall("spine/asset-clip")
+    trans = seq.findall("spine/transition")
+    assert len(clips) == 3 and len(trans) == 2
+    # bord à bord, fondus centrés sur les coupes
+    pos = 0
+    for k, c in enumerate(clips):
+        assert _frames(c.get("offset")) == pos
+        pos += _frames(c.get("duration"))
+    assert pos == attendu
+    for c, t in zip(clips[1:], trans):
+        assert _frames(t.get("offset")) == _frames(c.get("offset")) - _frames(t.get("duration")) // 2
+    # les poignées des fondus restent dans la plage [debut, debut+duree] de chaque plan
+    for k, (c, p) in enumerate(zip(clips, plans)):
+        start = _frames(c.get("start"))
+        assert start >= round(p["debut"] * rm.FPS)
+        assert start + _frames(c.get("duration")) <= round((p["debut"] + p["duree"]) * rm.FPS)
+
+
+def test_fcpxml_transporte_gain_titre_et_marqueurs(tmp_path):
+    plans = _plans_fcp()
+    titre = tmp_path / "t.png"
+    titre.write_bytes(b"png")
+    carton = tmp_path / "c.png"
+    carton.write_bytes(b"png")
+    chemin = tmp_path / "reel.fcpxml"
+    rm.ecrire_fcpxml(str(chemin), "reel", plans, str(titre), str(carton))
+    clips = ET.parse(chemin).getroot().findall("library/event/project/sequence/spine/asset-clip")
+    assert len(clips) == 4 and clips[-1].get("name") == "Carton de fin"
+    assert _frames(clips[-1].get("duration")) == round(rm.DUREE_CARTON * rm.FPS) - rm.frames(rm.TRANSITION) // 2
+    assert clips[0].find("adjust-volume").get("amount") == "+3.0dB"
+    assert clips[1].find("adjust-volume") is None
+    t = clips[0].find("asset-clip")
+    assert t.get("lane") == "1" and t.get("offset") == clips[0].get("start")
+    assert clips[0].get("audioRole") == "dialogue" and clips[2].get("audioRole") is None
+    marques = [m.get("value") for m in clips[1].findall("marker")]
+    assert len(marques) == 2 and marques[0].startswith("Son : mono") and "surexposé" in marques[1]
+    assert [m.get("value") for m in clips[2].findall("marker")] == ["Son : aucune piste, poser une ambiance"]
+    assert clips[0].findall("marker") == []

@@ -75,9 +75,13 @@ python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" \
 
 Il écrit à côté de la vidéo un `*.montage.json` (EDL rééditable, relancer avec
 `--edl` ; `--edl … --reetalonner` refait seulement l'étalonnage des plans
-retenus) et un `*.rapport.md` (prises par scène, retenue et notes, plans
-surexposés signalés, diagnostic son de chaque plan, contrôle stéréo de la
-sortie). Projet type :
+retenus), un `*.fcpxml` (la même timeline pour DaVinci Resolve : Fichier >
+Importer > Timeline ; prises, points d'entrée, fondus, titre en V2, carton,
+gain par plan, marqueurs sur les plans mono ou surexposés) et un
+`*.rapport.md` (prises par scène, retenue et notes, plans surexposés
+signalés, diagnostic son de chaque plan, contrôle stéréo de la sortie).
+`--sans-rendu` s'arrête à la timeline et au rapport, sans mp4, quand le
+montage se finit dans Resolve. Projet type :
 `projets/nina-ramen/`.
 
 ## Répartition Drive / GitHub
@@ -159,7 +163,7 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 82 tests, sans réseau ni secret
+python3 -m pytest -q              # 84 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de

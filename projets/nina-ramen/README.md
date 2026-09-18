@@ -15,7 +15,7 @@ vert, dossier `Nina Ramen`. Le disque n'est pas accessible depuis le cloud :
 | Son | **stéréo garanti** : les rushs mono ou « mono sur un canal » sont recopiés sur les deux canaux, niveaux rapprochés plan par plan, mix à −14 LUFS |
 | Image | étalonnage sur **tout le montage** : exposition et contraste rapprochés plan par plan, plans **surexposés** détectés (moyenne haute, 90e centile au blanc ou plus de 3 % de pixels brûlés) et ramenés par une courbe maître (hautes lumières écrasées, tons moyens redescendus, ombres préservées), puis look `ramen` (chaud, contrasté, saturé, léger vignettage) sur la timeline entière |
 | Images IA | aucune : ce sont les rushs du client et rien d'autre |
-| Livrable | `o/nina-ramen-reel-v1.mp4` + `.montage.json` (EDL rééditable) + `.rapport.md` (prises, choix, diagnostics son) |
+| Livrable | `o/nina-ramen-reel-v1.fcpxml` (timeline pour le projet DaVinci Resolve) + `o/nina-ramen-reel-v1.mp4` (rendu ffmpeg, optionnel) + `.montage.json` (EDL rééditable) + `.rapport.md` (prises, choix, diagnostics son) |
 
 ## Lancer le montage (sur le Mac)
 
@@ -43,6 +43,41 @@ Options utiles :
 - `--lut fichier.cube` : ta propre LUT à la place du look `ramen` ;
 - `--look neutre` ou `--look froid` : autres looks.
 
+## Dans le projet DaVinci Resolve (déjà créé)
+
+Le projet Nina Ramen existe déjà dans Resolve : on n'en crée pas un autre,
+on y importe la timeline. Deux commandes, disque vert branché :
+
+```bash
+./projets/nina-ramen/montage.sh --sans-rendu        # analyse les rushs, écrit la timeline, pas de mp4
+python3 projets/nina-ramen/davinci-import.py o/nina-ramen-reel-v1.fcpxml
+```
+
+La seconde passe par l'API de Resolve (Resolve ouvert sur le projet,
+« Scripting externe » sur Local dans Préférences > Système > Général). Sans
+l'API : **Fichier > Importer > Timeline**, choisir `o/nina-ramen-reel-v1.fcpxml`,
+laisser « importer les clips source » coché (les rushs déjà dans la
+bibliothèque sont réutilisés quand le chemin correspond, rien n'est dupliqué).
+
+Ce que contient la timeline `nina-ramen-reel-v1` :
+
+- les prises retenues, dans l'ordre, avec les mêmes points d'entrée et durées
+  que le rendu ffmpeg (90 s au total, fondus de 0,2 s centrés sur les coupes) ;
+- le titre en V2 sur l'accroche (`o/nina-ramen-reel-v1-titre.png`, à remplacer
+  par un Text+ si tu veux le retravailler) et le carton de fin s'il est demandé ;
+- le gain par plan (volume du clip), calculé pour rapprocher les niveaux ;
+- **un marqueur sur chaque plan à traiter** : « Son : mono … dupliquer le bon
+  canal sur G et D » ou « Image : surexposé … descendre les hautes lumières ».
+  Ce sont les deux choses que le rendu ffmpeg fait seul et qu'une timeline ne
+  transporte pas ; dans Resolve ça se fait à la main (Fairlight : panoramique
+  ou canal dupliqué ; Color : courbe sur les hautes lumières), puis le look
+  global sur l'ensemble.
+
+À vérifier après import : réglages de la timeline **1080×1920, 30 i/s**
+(réglages personnalisés si le projet est en 16:9) et mise à l'échelle des
+rushs horizontaux sur **« remplir le cadre »** (Réglages du projet > Image >
+Mise à l'échelle, ou clip par clip dans l'inspecteur).
+
 ## Retoucher la V1
 
 1. Lire `o/nina-ramen-reel-v1.rapport.md` : chaque scène liste ses prises,
@@ -56,7 +91,9 @@ Options utiles :
    python3 scripts/reel-montage.py --edl o/nina-ramen-reel-v1.montage.json
    ```
 
-   Le rendu repart sans refaire l'analyse.
+   Le rendu et la timeline `.fcpxml` repartent sans refaire l'analyse
+   (réimporter le `.fcpxml` dans Resolve : il crée une nouvelle timeline,
+   l'ancienne reste).
 3. Si des plans restent trop clairs à l'image : le rapport les marque
    « ⚠ surexposé, ramené (YAVG …, N % brûlé) ». Pour refaire seulement
    l'étalonnage des plans retenus, sans retoucher le choix des prises :

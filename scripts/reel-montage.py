@@ -63,6 +63,16 @@ Ce n'est pas une story, le reel garde son son.
     # reprendre l'étalonnage d'une V1 déjà montée (plans surexposés compris)
     python3 scripts/reel-montage.py --edl o/nina-ramen-reel-v1.montage.json --reetalonner
 
+    # projet DaVinci Resolve déjà ouvert : juste la timeline, sans rendu mp4
+    python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" --titre "NINA RAMEN" \
+        --sortie o/nina-ramen-reel-v1.mp4 --sans-rendu
+    # puis Fichier > Importer > Timeline > o/nina-ramen-reel-v1.fcpxml
+    # (ou : python3 projets/nina-ramen/davinci-import.py o/nina-ramen-reel-v1.fcpxml)
+
+Chaque lancement écrit aussi `<sortie>.fcpxml`, la même timeline pour DaVinci
+Resolve : prises, points d'entrée, durées, fondus, titre en V2, carton de fin,
+gain par plan, et un marqueur sur chaque plan mono ou surexposé.
+
 ffmpeg et ffprobe doivent être dans le PATH (sur le Mac : `~/.local/node/bin`)
 ou donnés par `--ffmpeg`. Dépendances Python : pillow, numpy.
 """
@@ -75,6 +85,8 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import urllib.request
+import xml.etree.ElementTree as ET
 
 import numpy as np
 
@@ -617,21 +629,150 @@ def verifier_sortie(ffmpeg, ffprobe, sortie):
     return info, son, ok
 
 
+# ------------------------------------------------------- timeline DaVinci ---
+
+FONDU_UID = "FxPlug:4731E73A-8DAC-4113-9A30-AE85B1761265"   # Cross Dissolve
+
+
+def frames(secondes):
+    return int(round(secondes * FPS))
+
+
+def temps(n):
+    """Valeur de temps FCPXML, alignée sur la grille de la timeline (30 i/s)."""
+    return "%d/%ds" % (n, FPS)
+
+
+def url_fichier(chemin):
+    return "file://" + urllib.request.pathname2url(os.path.abspath(chemin))
+
+
+def notes_plan(pl):
+    """Ce qu'il faut savoir sur ce plan une fois dans Resolve : ce que le rendu
+    ffmpeg faisait tout seul et qu'une timeline ne transporte pas. Chaque note
+    devient un marqueur sur le plan."""
+    notes = []
+    pan = pl.get("pan")
+    if pan == "silence":
+        notes.append("Son : aucune piste, poser une ambiance")
+    elif pan:
+        notes.append("Son : %s. Dupliquer le bon canal sur G et D." % (pl.get("diag_son") or "mono"))
+    m = pl.get("mesure_image") or {}
+    if m.get("surexpose"):
+        notes.append("Image : surexposé (YAVG %s, %.0f %% brûlé). Courbe : descendre les "
+                     "hautes lumières, garder les ombres." % (m.get("YAVG", "?"),
+                                                              100 * (m.get("clip") or 0)))
+    return notes
+
+
+def ecrire_fcpxml(chemin, nom, plans, titre_png=None, carton_png=None, evenement="Reel"):
+    """Timeline importable dans DaVinci Resolve (Fichier > Importer > Timeline),
+    identique au rendu ffmpeg : mêmes prises, mêmes points d'entrée, mêmes
+    durées, fondus de 0,2 s centrés sur chaque coupe, titre en V2 sur
+    l'accroche, carton de fin. Les rushs sont référencés à leur emplacement
+    d'origine (chemins absolus), rien n'est copié.
+
+    Ce qu'une timeline ne transporte pas (mise en stéréo, étalonnage) est posé
+    en marqueur sur chaque plan concerné, et le gain par plan en volume du clip.
+    Retourne la durée de la timeline en images."""
+    t2 = frames(TRANSITION) // 2                 # demi-fondu, de chaque côté de la coupe
+    root = ET.Element("fcpxml", version="1.8")
+    res = ET.SubElement(root, "resources")
+    ET.SubElement(res, "format", id="r1", name="FFVideoFormatRateUndefined",
+                  frameDuration="100/%ds" % (FPS * 100), width=str(W), height=str(H))
+    ET.SubElement(res, "effect", id="r2", name="Cross Dissolve", uid=FONDU_UID)
+    ids = {}
+
+    def ressource(fichier, duree=None, image=False, audio=True):
+        if fichier in ids:
+            return ids[fichier]
+        rid = "r%d" % (len(ids) + 3)
+        attrs = dict(id=rid, name=os.path.basename(fichier), src=url_fichier(fichier),
+                     start="0s", hasVideo="1")
+        if image:
+            attrs["duration"] = "0s"
+        else:
+            if audio:
+                attrs["hasAudio"] = "1"
+            if duree:
+                attrs["duration"] = temps(frames(duree))
+        ET.SubElement(res, "asset", **attrs)
+        ids[fichier] = rid
+        return rid
+
+    lib = ET.SubElement(root, "library")
+    ev = ET.SubElement(lib, "event", name=evenement)
+    proj = ET.SubElement(ev, "project", name=nom)
+    seq = ET.SubElement(proj, "sequence", format="r1", tcStart="0s", tcFormat="NDF",
+                        audioLayout="stereo", audioRate="48k")
+    spine = ET.SubElement(seq, "spine")
+
+    items = [dict(pl, carton=False) for pl in plans]
+    if carton_png:
+        items.append(dict(fichier=carton_png, debut=0.0, duree=DUREE_CARTON, carton=True))
+    total = 0
+    for k, pl in enumerate(items):
+        premier, dernier = k == 0, k == len(items) - 1
+        # les plans se suivent bord à bord, chaque fondu mord t2 images de part
+        # et d'autre de la coupe : on rend ces images au plan (poignées) pour
+        # que la timeline dure exactement ce que dure le rendu
+        duree = frames(pl["duree"]) - (0 if premier else t2) - (0 if dernier else t2)
+        if pl["carton"]:
+            rid, start = ressource(pl["fichier"], image=True), 0
+            nom_clip = "Carton de fin"
+        else:
+            rid = ressource(pl["fichier"], pl.get("duree_rush"), audio=pl.get("audio", True))
+            start = frames(pl["debut"]) + (0 if premier else t2)
+            nom_clip = "%02d sc%02d %s" % (k + 1, pl.get("scene", 0), os.path.basename(pl["fichier"]))
+        if not premier:
+            tr = ET.SubElement(spine, "transition", name="Cross Dissolve",
+                               offset=temps(total - t2), duration=temps(2 * t2))
+            ET.SubElement(tr, "filter-video", ref="r2", name="Cross Dissolve")
+        clip = ET.SubElement(spine, "asset-clip", ref=rid, name=nom_clip, offset=temps(total),
+                             start=temps(start), duration=temps(duree), format="r1", tcFormat="NDF")
+        if not pl["carton"] and pl.get("audio", True):
+            clip.set("audioRole", "dialogue")
+        if pl.get("gain_db"):
+            ET.SubElement(clip, "adjust-volume", amount="%+.1fdB" % pl["gain_db"])
+        if premier and titre_png:
+            rid_t = ressource(titre_png, image=True)
+            ET.SubElement(clip, "asset-clip", ref=rid_t, lane="1", name="Titre",
+                          offset=temps(start), start="0s",
+                          duration=temps(min(frames(DUREE_ACCROCHE), duree)), format="r1")
+        if not pl["carton"]:
+            for note in notes_plan(pl):
+                ET.SubElement(clip, "marker", start=temps(start), duration=temps(1), value=note)
+        total += duree
+    seq.set("duration", temps(total))
+
+    if hasattr(ET, "indent"):
+        ET.indent(root, space="  ")
+    with open(chemin, "w", encoding="utf-8") as fh:
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE fcpxml>\n')
+        fh.write(ET.tostring(root, encoding="unicode") + "\n")
+    return total
+
+
 # ------------------------------------------------------------------ main ---
 
 def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
-    info, son, ok = verif
     L = ["# Rapport de montage : %s" % os.path.basename(a.sortie), ""]
-    L.append("- Durée : %.1f s, %dx%d, %d i/s" % (info["duree"], info["largeur"], info["hauteur"], FPS))
-    L.append("- Son de sortie : %d canaux, RMS G %.1f dB / D %.1f dB → %s"
-             % (son["canaux"], son["rms"][0] if son["rms"] else -120,
-                son["rms"][1] if len(son["rms"]) > 1 else -120,
-                "stéréo OK" if ok else "⚠ À VÉRIFIER"))
-    L.append("- Look : %s" % (("LUT " + a.lut) if a.lut else a.look))
+    if verif:
+        info, son, ok = verif
+        L.append("- Durée : %.1f s, %dx%d, %d i/s" % (info["duree"], info["largeur"], info["hauteur"], FPS))
+        L.append("- Son de sortie : %d canaux, RMS G %.1f dB / D %.1f dB → %s"
+                 % (son["canaux"], son["rms"][0] if son["rms"] else -120,
+                    son["rms"][1] if len(son["rms"]) > 1 else -120,
+                    "stéréo OK" if ok else "⚠ À VÉRIFIER"))
+        L.append("- Look : %s" % (("LUT " + a.lut) if a.lut else a.look))
+    else:
+        L.append("- Rendu ffmpeg non effectué (`--sans-rendu`) : le montage vit dans la timeline DaVinci")
+    L.append("- Timeline DaVinci Resolve : `%s` (Fichier > Importer > Timeline). Les plans mono ou "
+             "surexposés portent un marqueur qui dit quoi faire." % a.fcpxml_chemin)
     L.append("- Scènes : %d (%s), plans : %d" % (len(scenes), methode, len(plans)))
     n_sur = sum(1 for p in plans if p.get("mesure_image", {}).get("surexpose"))
     if n_sur:
-        L.append("- Plans surexposés ramenés par courbe : %d (voir la colonne image)" % n_sur)
+        L.append("- Plans surexposés : %d (courbe au rendu ffmpeg, marqueur dans la timeline DaVinci)" % n_sur)
     L += ["", "## Prises", ""]
     for i, sc in enumerate(scenes):
         L.append("### Scène %d, %d prise%s" % (i + 1, len(sc), "s" if len(sc) > 1 else ""))
@@ -677,6 +818,9 @@ def main():
     p.add_argument("--sortie", help="fichier mp4 de sortie")
     p.add_argument("--ffmpeg", help="chemin de ffmpeg (ffprobe cherché à côté)")
     p.add_argument("--garder", action="store_true", help="garder les clips intermédiaires")
+    p.add_argument("--sans-rendu", action="store_true", dest="sans_rendu",
+                   help="écrire l'EDL, la timeline DaVinci (.fcpxml) et le rapport "
+                        "sans rendre le mp4")
     a = p.parse_args()
 
     ffmpeg = am.trouver_binaire("ffmpeg", a.ffmpeg)
@@ -749,6 +893,7 @@ def main():
         for pl in plans:
             r = par_fichier[pl["fichier"]]
             pl["audio"] = r["audio"]
+            pl["duree_rush"] = round(r["duree"], 3)
             diag, pan = decision_stereo(r["son"])
             pl["diag_son"] = diag
             pl["pan"] = pan or ("silence" if r["son"]["canaux"] == 0 else None)
@@ -764,6 +909,26 @@ def main():
                        duree=a.duree, plans=plans), fh, ensure_ascii=False, indent=2)
     log("• EDL écrite : %s" % a.edl_chemin)
 
+    # cartons écrits à côté de la sortie : le rendu et la timeline DaVinci
+    # utilisent les mêmes fichiers
+    base = os.path.splitext(a.sortie)[0]
+    titre_png = base + "-titre.png"
+    am.carton_titre(titre_png, a.titre, a.sous_titre, W, H)
+    carton_png = None
+    if a.carton_fin:
+        carton_png = base + "-carton-fin.png"
+        am.carton_fin(carton_png, a.carton_fin, W, H)
+    a.fcpxml_chemin = base + ".fcpxml"
+    n_images = ecrire_fcpxml(a.fcpxml_chemin, os.path.basename(base), plans,
+                             titre_png if a.titre else None, carton_png,
+                             evenement=a.titre or "Reel")
+    log("• timeline DaVinci : %s (%.1f s, %d plans)" % (a.fcpxml_chemin, n_images / FPS, len(plans)))
+    if a.sans_rendu:
+        rapport = base + ".rapport.md"
+        ecrire_rapport(rapport, a, scenes, retenues, methode, plans, None)
+        log("• rapport : %s (pas de rendu mp4, --sans-rendu)" % rapport)
+        return
+
     tmp = tempfile.mkdtemp(prefix="reel-")
     try:
         clips = []
@@ -774,14 +939,10 @@ def main():
                 pl["debut"], pl["duree"], pl.get("diag_son", "")))
             rendre_plan(ffmpeg, pl, c)
             clips.append(c)
-        if a.carton_fin:
-            png = os.path.join(tmp, "carton-fin.png")
-            am.carton_fin(png, a.carton_fin, W, H)
+        if carton_png:
             c = os.path.join(tmp, "carton-fin.mov")
-            rendre_carton_clip(ffmpeg, png, c, DUREE_CARTON)
+            rendre_carton_clip(ffmpeg, carton_png, c, DUREE_CARTON)
             clips.append(c)
-        titre_png = os.path.join(tmp, "titre.png")
-        am.carton_titre(titre_png, a.titre, a.sous_titre, W, H)
         log("• assemblage + étalonnage (%s)…" % (("LUT " + a.lut) if a.lut else a.look))
         total = assembler(ffmpeg, clips, durees, titre_png, min(DUREE_ACCROCHE, durees[0]),
                           look, a.musique, a.sortie)

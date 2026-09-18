@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Montage V1 du reel Nina Ramen depuis le disque dur vert.
 # Usage : ./projets/nina-ramen/montage.sh [dossier des rushs] [options reel-montage.py…]
+#   --sans-rendu : timeline DaVinci (.fcpxml) + rapport seulement, pas de mp4
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 export PATH="$HOME/.local/node/bin:$PATH"     # ffmpeg / ffprobe sur le Mac
