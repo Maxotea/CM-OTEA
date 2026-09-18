@@ -40,7 +40,10 @@ l'autre.
    deux canaux, tous les deux avec du signal.
 5. **Étalonnage.** En deux temps : (a) chaque plan est ramené vers une
    exposition et un contraste communs (correction plafonnée pour ne pas
-   dénaturer), (b) un « look » unique est appliqué sur tout le montage
+   dénaturer) ; un plan **surexposé** (tons moyens trop hauts, 90e centile
+   au blanc ou pixels brûlés) passe par une voie dédiée, bien plus ferme :
+   courbe maître qui écrase les hautes lumières, redescend les tons moyens
+   et ramène le blanc pur à 95 % ; (b) un « look » unique est appliqué sur tout le montage
    assemblé : `ramen` par défaut (chaud, contrasté, saturé, léger vignettage,
    pour la cuisine et la vapeur), `neutre`, `froid`, ou ton propre `--lut
    fichier.cube`.
@@ -56,6 +59,9 @@ Ce n'est pas une story, le reel garde son son.
 
     # changer une prise ou un plan dans o/nina-ramen-reel-v1.montage.json, puis
     python3 scripts/reel-montage.py --edl o/nina-ramen-reel-v1.montage.json
+
+    # reprendre l'étalonnage d'une V1 déjà montée (plans surexposés compris)
+    python3 scripts/reel-montage.py --edl o/nina-ramen-reel-v1.montage.json --reetalonner
 
 ffmpeg et ffprobe doivent être dans le PATH (sur le Mac : `~/.local/node/bin`)
 ou donnés par `--ffmpeg`. Dépendances Python : pillow, numpy.
@@ -103,6 +109,16 @@ SPREAD_CIBLE = 140.0          # écart 10 % / 90 % visé
 CORR_PART = 0.5               # on ne corrige que la moitié de l'écart mesuré
 CORR_LUMA_MAX = 0.08          # brightness eq, borné
 CORR_CONTRASTE = (0.9, 1.15)
+# --- plans surexposés : voie dédiée, bien plus ferme que la correction douce
+# Les mesures signalstats (YAVG, YLOW, YHIGH) sont en plage limitée : le blanc
+# vidéo est à 235, pas 255. Les seuils ci-dessous sont dans cette échelle.
+SUREXPO_YAVG = 160.0          # tons moyens au-dessus desquels le plan est surexposé…
+SUREXPO_YAVG_HAUTES = 222.0   # …si en plus le 90e centile approche le blanc
+SUREXPO_YHIGH = 232.0         # 90e centile qui touche le blanc (235) : surexposé
+SUREXPO_CLIP = 0.03           # part de pixels brûlés (>= 233) qui suffit à déclencher
+SUREXPO_TIRAGE_MAX = 0.28     # descente maximale des tons moyens (échelle 0-1)
+SUREXPO_HAUTES = 0.82         # où retombe le 90e centile (échelle 0-1)
+BLANC_MAX = 0.95              # le blanc pur est ramené à 95 % : le cramé redevient une haute lumière
 
 LOOKS = {
     # chaud, contrasté, saturé : bouillon, vapeur, bois, néons
@@ -149,7 +165,8 @@ def image_gris(ffmpeg, fichier, t, largeur, hauteur):
 
 
 def stats_image(ffmpeg, fichier, t):
-    """YAVG, YLOW, YHIGH (signalstats) sur 3 images autour de t."""
+    """YAVG, YLOW, YHIGH (signalstats, plage limitée) sur 3 images autour de
+    t, et CLIP, la part de pixels brûlés (luma >= 233) sur une image réduite."""
     r = subprocess.run(
         [ffmpeg, "-hide_banner", "-ss", "%.3f" % max(0, t - 0.2), "-i", fichier,
          "-frames:v", "3", "-vf", "scale=240:-2,signalstats,metadata=print",
@@ -160,8 +177,25 @@ def stats_image(ffmpeg, fichier, t):
         m = re.findall(r"lavfi\.signalstats\.%s=(\d+\.?\d*)" % cle, r.stderr)
         vals[cle] = sum(map(float, m)) / len(m) if m else None
     if vals["YAVG"] is None:
-        return dict(YAVG=128.0, YLOW=40.0, YHIGH=215.0)
+        return dict(YAVG=128.0, YLOW=40.0, YHIGH=215.0, CLIP=0.0)
+    y = plan_luma(ffmpeg, fichier, t, 160, 90)
+    vals["CLIP"] = float((y >= 233).mean()) if y is not None else 0.0
     return vals
+
+
+def plan_luma(ffmpeg, fichier, t, largeur, hauteur):
+    """Le plan Y brut (plage limitée, 16-235) d'une image prise à l'instant t,
+    à la même échelle que signalstats, contrairement à image_gris qui sort
+    du gris en plage pleine."""
+    r = subprocess.run(
+        [ffmpeg, "-hide_banner", "-ss", "%.3f" % t, "-i", fichier,
+         "-frames:v", "1", "-vf", "scale=%d:%d" % (largeur, hauteur),
+         "-f", "rawvideo", "-pix_fmt", "yuv420p", "-"],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    n = largeur * hauteur
+    if len(r.stdout) < n:
+        return None
+    return np.frombuffer(r.stdout[:n], np.uint8).astype(float).reshape(hauteur, largeur)
 
 
 def nettete(im):
@@ -414,12 +448,63 @@ def repartir_plans(scenes, retenues, durees, accroche=None):
 
 # ------------------------------------------------------------ étalonnage ---
 
+def surexpose(stats):
+    """Un plan est surexposé si les tons moyens sont trop hauts, si le 90e
+    centile touche le blanc, ou si une part visible de l'image est brûlée."""
+    yhigh = stats.get("YHIGH") or 0
+    # une scène claire mais tenue (hautes lumières sous 222) n'est pas surexposée
+    return ((stats["YAVG"] > SUREXPO_YAVG and yhigh >= SUREXPO_YAVG_HAUTES)
+            or yhigh >= SUREXPO_YHIGH
+            or (stats.get("CLIP") or 0.0) > SUREXPO_CLIP)
+
+
+def courbe_surexpo(stats):
+    """Points (x/y, échelle 0-1) d'une courbe maître qui ramène un plan
+    surexposé : les ombres bougent à peine, les tons moyens redescendent
+    vers la cible (plein chemin, borné), le 90e centile retombe à
+    SUREXPO_HAUTES et le blanc pur à BLANC_MAX. Les points sont gardés
+    strictement croissants, ce qu'exige le filtre curves.
+
+    curves travaille en plage pleine (0-1 = 0-255) alors que les mesures
+    sont en plage limitée (16-235) : chaque valeur est convertie."""
+    def pleine(v):
+        return max(0.0, min(1.0, (v - 16.0) / 219.0))
+    y = pleine(stats["YAVG"])
+    ylow = pleine(stats.get("YLOW") or 40)
+    yhigh = pleine(stats.get("YHIGH") or 215)
+    cible = pleine(LUMA_CIBLE)
+    ym = max(y - SUREXPO_TIRAGE_MAX, cible + (y - cible) * 0.3)
+    candidats = [(ylow, ylow * 0.95), (y, ym), (yhigh, min(SUREXPO_HAUTES, yhigh))]
+    points = [(0.0, 0.0)]
+    for x, v in candidats:
+        if x <= points[-1][0] + 0.02 or x >= 0.98:
+            continue                      # trop proche du point précédent ou du blanc
+        v = max(v, points[-1][1] + 0.02)  # jamais en dessous du point précédent
+        points.append((round(x, 3), round(min(v, 0.93), 3)))
+    # Blanc pur : un cran au-dessus du dernier point, sans dépasser BLANC_MAX.
+    # Plan entièrement brûlé (aucun point intermédiaire retenu) : on descend
+    # le blanc jusqu'aux tons moyens visés, jamais en dessous.
+    fin = min(BLANC_MAX, max(points[-1][1] + 0.2, ym))
+    points.append((1.0, round(max(fin, points[-1][1] + 0.02), 3)))
+    return points
+
+
 def correction_plan(stats):
-    """Filtre eq qui ramène le plan vers LUMA_CIBLE / SPREAD_CIBLE, borné."""
+    """Filtre vidéo qui rapproche le plan de l'exposition commune.
+
+    Plan normal : eq doux, la moitié du chemin vers LUMA_CIBLE / SPREAD_CIBLE,
+    dans des bornes serrées (on rapproche, on n'uniformise pas).
+    Plan surexposé : courbe maître ferme (voir courbe_surexpo), qui écrase les
+    hautes lumières et redescend les tons moyens, avant le look global."""
     y = stats["YAVG"]
-    spread = max(1.0, (stats["YHIGH"] or 215) - (stats["YLOW"] or 40))
-    # la moitié du chemin vers la cible, dans des bornes serrées : on
-    # rapproche les plans, on ne les uniformise pas
+    spread = max(1.0, (stats.get("YHIGH") or 215) - (stats.get("YLOW") or 40))
+    if surexpose(stats):
+        points = courbe_surexpo(stats)
+        courbe = " ".join("%g/%g" % (x, v) for x, v in points)
+        return "curves=master='%s',eq=saturation=1.04" % courbe, \
+            dict(YAVG=round(y, 1), spread=round(spread, 1),
+                 clip=round(stats.get("CLIP") or 0.0, 3), surexpose=True,
+                 courbe=courbe)
     contraste = 1 + (SPREAD_CIBLE / spread - 1) * CORR_PART
     contraste = max(CORR_CONTRASTE[0], min(CORR_CONTRASTE[1], contraste))
     # eq applique le contraste autour de 128 puis la luminosité
@@ -428,7 +513,7 @@ def correction_plan(stats):
     lum = max(-CORR_LUMA_MAX, min(CORR_LUMA_MAX, lum))
     return "eq=contrast=%.3f:brightness=%.3f" % (contraste, lum), \
         dict(YAVG=round(y, 1), spread=round(spread, 1), contraste=round(contraste, 3),
-             brightness=round(lum, 3))
+             brightness=round(lum, 3), surexpose=False)
 
 
 # ----------------------------------------------------------------- rendu ---
@@ -544,6 +629,9 @@ def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
                 "stéréo OK" if ok else "⚠ À VÉRIFIER"))
     L.append("- Look : %s" % (("LUT " + a.lut) if a.lut else a.look))
     L.append("- Scènes : %d (%s), plans : %d" % (len(scenes), methode, len(plans)))
+    n_sur = sum(1 for p in plans if p.get("mesure_image", {}).get("surexpose"))
+    if n_sur:
+        L.append("- Plans surexposés ramenés par courbe : %d (voir la colonne image)" % n_sur)
     L += ["", "## Prises", ""]
     for i, sc in enumerate(scenes):
         L.append("### Scène %d, %d prise%s" % (i + 1, len(sc), "s" if len(sc) > 1 else ""))
@@ -560,7 +648,10 @@ def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
         L.append("| %d | %d | %s | %.2f | %.2f | %s%s | %s |" % (
             k + 1, p.get("scene", 0), os.path.basename(p["fichier"]), p["debut"], p["duree"],
             p.get("diag_son", ""), (" (%+.1f dB)" % p["gain_db"]) if p.get("gain_db") else "",
-            p.get("correction", "")))
+            ("⚠ surexposé, ramené (YAVG %s, %.0f %% brûlé)" % (
+                p.get("mesure_image", {}).get("YAVG", "?"),
+                100 * (p.get("mesure_image", {}).get("clip") or 0)))
+            if p.get("mesure_image", {}).get("surexpose") else p.get("correction", "")))
     L += ["", "Pour changer un plan ou une prise : éditer `%s` puis relancer avec `--edl`." % a.edl_chemin]
     with open(chemin, "w", encoding="utf-8") as fh:
         fh.write("\n".join(L) + "\n")
@@ -570,6 +661,9 @@ def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     p.add_argument("dossier", nargs="?", help="dossier des rushs (récursif)")
     p.add_argument("--edl", help="re-rendre depuis un montage.json existant")
+    p.add_argument("--reetalonner", action="store_true",
+                   help="avec --edl : remesurer chaque plan et recalculer sa correction "
+                        "d'exposition (plans surexposés compris) avant le rendu")
     p.add_argument("--titre", default="", help="titre incrusté sur l'accroche")
     p.add_argument("--sous-titre", default="", dest="sous_titre")
     p.add_argument("--carton-fin", default="", dest="carton_fin",
@@ -610,6 +704,13 @@ def main():
             durees.append(DUREE_CARTON)
         scenes, retenues, methode = [], [], "EDL"
         log("↻ EDL relue : %d plans" % len(plans))
+        if a.reetalonner:
+            n_sur = 0
+            for pl in plans:
+                st = stats_image(ffmpeg, pl["fichier"], pl["debut"] + pl["duree"] / 2)
+                pl["correction"], pl["mesure_image"] = correction_plan(st)
+                n_sur += int(pl["mesure_image"].get("surexpose", False))
+            log("↻ étalonnage recalculé : %d plans, dont %d surexposés" % (len(plans), n_sur))
     else:
         if not a.dossier:
             p.error("donne un dossier de rushs, ou --edl montage.json")

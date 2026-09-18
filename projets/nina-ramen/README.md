@@ -13,7 +13,7 @@ vert, dossier `Nina Ramen`. Le disque n'est pas accessible depuis le cloud :
 | Durée | 1 min 30 (90 s) |
 | Prises | plusieurs prises par scène, une seule retenue (netteté, exposition, longueur, son, dernière prise) |
 | Son | **stéréo garanti** : les rushs mono ou « mono sur un canal » sont recopiés sur les deux canaux, niveaux rapprochés plan par plan, mix à −14 LUFS |
-| Image | étalonnage sur **tout le montage** : exposition et contraste rapprochés plan par plan, puis look `ramen` (chaud, contrasté, saturé, léger vignettage) sur la timeline entière |
+| Image | étalonnage sur **tout le montage** : exposition et contraste rapprochés plan par plan, plans **surexposés** détectés (moyenne haute, 90e centile au blanc ou plus de 3 % de pixels brûlés) et ramenés par une courbe maître (hautes lumières écrasées, tons moyens redescendus, ombres préservées), puis look `ramen` (chaud, contrasté, saturé, léger vignettage) sur la timeline entière |
 | Images IA | aucune : ce sont les rushs du client et rien d'autre |
 | Livrable | `o/nina-ramen-reel-v1.mp4` + `.montage.json` (EDL rééditable) + `.rapport.md` (prises, choix, diagnostics son) |
 
@@ -57,7 +57,18 @@ Options utiles :
    ```
 
    Le rendu repart sans refaire l'analyse.
-3. Avant diffusion : vérifier dans le rapport la ligne « Son de sortie :
+3. Si des plans restent trop clairs à l'image : le rapport les marque
+   « ⚠ surexposé, ramené (YAVG …, N % brûlé) ». Pour refaire seulement
+   l'étalonnage des plans retenus, sans retoucher le choix des prises :
+
+   ```bash
+   python3 scripts/reel-montage.py --edl o/nina-ramen-reel-v1.montage.json --reetalonner
+   ```
+
+   Pour forcer la main sur un plan précis : éditer son champ `correction`
+   dans l'EDL (par exemple `curves=master='0/0 0.7/0.55 1/0.9'`) et relancer
+   avec `--edl` seul.
+4. Avant diffusion : vérifier dans le rapport la ligne « Son de sortie :
    2 canaux … stéréo OK » et regarder le reel une fois en entier sur un
    téléphone.
 

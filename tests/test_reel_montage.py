@@ -56,8 +56,51 @@ def test_correction_exposition_bornee():
     assert f == "eq=contrast=1.000:brightness=0.000"
     f, m = rm.correction_plan(dict(YAVG=30, YLOW=5, YHIGH=20))
     assert m["contraste"] == rm.CORR_CONTRASTE[1] and m["brightness"] == rm.CORR_LUMA_MAX
-    f, m = rm.correction_plan(dict(YAVG=230, YLOW=40, YHIGH=250))
+    # clair mais tenu (hautes lumières sous le seuil) : eq doux, pas la courbe
+    f, m = rm.correction_plan(dict(YAVG=200, YLOW=60, YHIGH=218, CLIP=0.0))
+    assert m["surexpose"] is False and f.startswith("eq=")
     assert rm.CORR_CONTRASTE[0] <= m["contraste"] <= 1.0 and m["brightness"] == -rm.CORR_LUMA_MAX
+
+
+def test_surexpose_detecte_les_trois_signaux():
+    assert not rm.surexpose(dict(YAVG=118, YLOW=48, YHIGH=188, CLIP=0.0))
+    assert not rm.surexpose(dict(YAVG=212, YLOW=120, YHIGH=219, CLIP=0.0))   # clair, tenu
+    assert rm.surexpose(dict(YAVG=170, YLOW=90, YHIGH=225, CLIP=0.0))        # moyen haut + hautes brûlées
+    assert rm.surexpose(dict(YAVG=140, YLOW=60, YHIGH=233, CLIP=0.0))        # 90e centile au blanc
+    assert rm.surexpose(dict(YAVG=150, YLOW=60, YHIGH=210, CLIP=0.05))       # 5 % de pixels brûlés (ciel)
+
+
+def _croissante(points):
+    return all(b[0] > a[0] and b[1] > a[1] for a, b in zip(points, points[1:]))
+
+
+def test_courbe_surexpo_croissante_et_bornee():
+    for stats in (dict(YAVG=229, YLOW=180, YHIGH=236, CLIP=0.86),
+                  dict(YAVG=170, YLOW=90, YHIGH=225, CLIP=0.0),
+                  dict(YAVG=150, YLOW=60, YHIGH=210, CLIP=0.05)):
+        pts = rm.courbe_surexpo(stats)
+        assert pts[0] == (0.0, 0.0) and pts[-1][0] == 1.0
+        assert _croissante(pts)
+        assert all(0.0 <= v <= rm.BLANC_MAX for _, v in pts)
+        # les tons moyens redescendent, sans jamais tomber sous la cible
+        y = (stats["YAVG"] - 16) / 219
+        x_moy, v_moy = min(pts[1:], key=lambda p: abs(p[0] - y))
+        assert v_moy < y and v_moy >= y - rm.SUREXPO_TIRAGE_MAX - 1e-6
+
+
+def test_courbe_surexpo_plan_brule_ne_s_effondre_pas():
+    # tout est blanc : aucun point intermédiaire ne survit, le blanc descend
+    # vers les tons moyens visés mais pas plus bas
+    pts = rm.courbe_surexpo(dict(YAVG=249, YLOW=245, YHIGH=255, CLIP=0.92))
+    assert pts == [(0.0, 0.0), (1.0, 0.72)]
+
+
+def test_correction_plan_surexpose_passe_par_la_courbe():
+    f, m = rm.correction_plan(dict(YAVG=229, YLOW=180, YHIGH=236, CLIP=0.86))
+    assert m["surexpose"] is True and m["clip"] == 0.86
+    assert f.startswith("curves=master='0/0 ") and f.endswith("',eq=saturation=1.04")
+    pts = rm.courbe_surexpo(dict(YAVG=229, YLOW=180, YHIGH=236, CLIP=0.86))
+    assert m["courbe"] == " ".join("%g/%g" % p for p in pts)
 
 
 def test_scene_par_nom():
