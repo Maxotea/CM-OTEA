@@ -74,6 +74,16 @@ La séquence de la session (toujours commencer par `git pull`) :
 3. C'est la SEULE exception à la règle « ne jamais envoyer automatiquement », décidée par
    Maxime le 19/08/2026 et bornée par les deux drapeaux de `clients-config.json`.
 
+**La routine du vendredi vérifie que celle du lundi tourne encore.** Constaté le
+18/09/2026 : la routine d'envoi était désactivée depuis le 31/08 sans que rien ne le
+signale, et trois lundis sont passés sans qu'aucun mail parte — y compris l'envoi
+automatique d'Otea Filmakers. Les brouillons s'étaient empilés, dix au total, sans que
+leur nombre alerte personne. Le vendredi, donc : lister les Routines, vérifier que
+« Review — envoi du lundi » est `enabled` et que son `last_fired_at` tombe bien sur le
+lundi précédent. Une routine désactivée se signale à Maxime — elle ne se réactive pas
+toute seule : la réactiver ferait partir un mail client dès le lundi suivant, et c'est
+sa décision.
+
 ## LUNDI — routine « CR client Publi Hebdo » (9h00 Paris été)
 
 1. **Bilan de la semaine passée** — lire `reviews/etat/*.json` : publiés, ✏️ à corriger
