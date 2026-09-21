@@ -105,6 +105,44 @@ Retours reçus par message après la V1 (détail et réponse dans
    fichiers). En sortir : le logo en PNG fond transparent, la police, les deux
    couleurs (fond, encre).
 
+### La V2 se fait dans le projet Resolve « Nina Ramen / Chatgpt »
+
+C'est la consigne : on part du montage V1 tel qu'il est dans Resolve, pas
+d'un rendu ffmpeg à côté. `davinci-v2.py` passe par l'API de Resolve
+(Resolve ouvert, « Scripting externe » sur Local) :
+
+```bash
+python3 projets/nina-ramen/davinci-v2.py \
+  --carton-fin "Réservez votre table\nninaramen.fr · @ninaramen" \
+  --cta-fond "#F3E9D2" --cta-texte "#1F1F1F" \
+  --cta-police projets/nina-ramen/charte/Police.otf \
+  --cta-logo projets/nina-ramen/charte/logo.png \
+  --rendre
+```
+
+Ce qu'il fait : ouvre le projet (dossier « Nina Ramen », projet « Chatgpt »,
+ou `--projet "autre nom"`), prend la timeline V1 courante (ou `--timeline
+"nom"`), mesure les blancs dans chaque fichier source avec ffmpeg, crée une
+timeline **« <V1> V2 blancs coupés »** en 1080×1920 à 30 i/s où chaque clip
+de la V1 est remplacé par ses bouts de phrase (coupe franche entre eux,
+étalonnage du clip V1 recopié sur ses bouts), pose le carton d'appel à
+l'action au bout, et avec `--rendre` sort le mp4 H.264 dans `o/` pour
+Submagic. La V1 reste intacte. Il liste à la fin ce qu'il n'a pas pu
+recopier (titres Text+, transitions) : à refaire à la main sur la V2.
+
+Les couleurs ci-dessus sont des exemples : prendre celles du brand book. Le
+texte du carton est à confirmer avec elle (réservation, site, compte).
+
+Ordre des opérations : `davinci-v2.py` (coupes + carton) → relecture dans
+Resolve, titres refaits si besoin → export mp4 → Submagic (sous-titres) →
+envoi à la cliente. Les sous-titres se font en dernier parce que chaque
+coupe déplace le texte.
+
+### Variante sans Resolve
+
+Si la V1 vient de l'outil et non de Resolve, le même résultat s'obtient par
+le rendu ffmpeg :
+
 ```bash
 ./projets/nina-ramen/montage.sh --couper-blancs \
   --carton-fin "Réservez votre table\nninaramen.fr · @ninaramen" \
@@ -114,16 +152,8 @@ Retours reçus par message après la V1 (détail et réponse dans
   --sortie o/nina-ramen-reel-v2.mp4
 ```
 
-Les couleurs ci-dessus sont des exemples : prendre celles du brand book. Le
-texte du carton est à confirmer avec elle (réservation, site, compte). Si la
-V1 a été retouchée dans Resolve plutôt que rendue par l'outil, relancer avec
-`--sans-rendu` et réimporter le `.fcpxml` : la nouvelle timeline contient
-les coupes de blancs et le carton, il reste à exporter le mp4 depuis Resolve
-pour Submagic.
-
-Ordre des opérations pour la V2 : coupes + carton (outil ou Resolve) →
-export mp4 → Submagic (sous-titres) → envoi à la cliente. Les sous-titres
-se font en dernier parce que chaque coupe déplace le texte.
+Ou `--sans-rendu` puis import du `.fcpxml` dans Resolve : la timeline
+importée contient déjà les coupes et le carton.
 
 ## Retoucher la V1
 

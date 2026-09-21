@@ -279,3 +279,33 @@ def test_fcpxml_blancs_coupes_un_clip_par_bout(tmp_path):
     assert _frames(clips[1].get("start")) == round(3.2 * rm.FPS)
     # marqueurs et titre seulement sur le premier bout
     assert clips[1].findall("marker") == []
+
+
+def _dv2():
+    import importlib.util
+    chemin = Path(__file__).resolve().parent.parent / "projets" / "nina-ramen" / "davinci-v2.py"
+    spec = importlib.util.spec_from_file_location("davinci_v2", chemin)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_davinci_v2_segments_clip_en_images_source():
+    dv = _dv2()
+    fps = 30
+    # clip V1 : images 60 à 300 (2 s à 10 s) ; parole 0-3.12, 4.08-7.12, 9.38-10
+    plages = [(0.0, 3.12), (4.08, 7.12), (9.38, 10.0)]
+    segs = dv.segments_clip(60, 300, plages, fps, 0.35)
+    assert segs == [(60, 94), (122, 214), (281, 300)]
+    assert all(s0 >= 60 and s1 <= 300 for s0, s1 in segs)
+    # clip entièrement dans une plage : inchangé, un seul bout
+    assert dv.segments_clip(10, 80, plages, fps, 0.35) == [(10, 80)]
+    # clip entièrement dans un blanc : on ne perd pas d'image
+    assert dv.segments_clip(95, 120, plages, fps, 0.35) == [(95, 120)]
+
+
+def test_davinci_v2_nom_projet():
+    dv = _dv2()
+    assert dv.nom_projet("Nina Ramen / Chatgpt") == ("Nina Ramen", "Chatgpt")
+    assert dv.nom_projet("Nina RAmen/Chatgpt") == ("Nina RAmen", "Chatgpt")
+    assert dv.nom_projet("Chatgpt") == (None, "Chatgpt")

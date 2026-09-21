@@ -84,7 +84,10 @@ signalés, diagnostic son de chaque plan, contrôle stéréo de la sortie).
 montage se finit dans Resolve. `--couper-blancs` saute les silences entre
 les phrases à l'intérieur de chaque plan (rythme, plus de contenu en 90 s)
 et `--cta-fond/--cta-texte/--cta-police/--cta-logo` habillent le carton de
-fin aux couleurs du client. Les sous-titres se font ensuite dans Submagic. Projet type :
+fin aux couleurs du client. Quand le montage vit déjà dans un projet Resolve,
+`projets/nina-ramen/davinci-v2.py` fait la même chose dans le projet, par
+l'API : timeline V2 sans les blancs, carton, rendu mp4. Les sous-titres se
+font ensuite dans Submagic. Projet type :
 `projets/nina-ramen/`.
 
 ## Répartition Drive / GitHub
@@ -166,7 +169,7 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 89 tests, sans réseau ni secret
+python3 -m pytest -q              # 91 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de

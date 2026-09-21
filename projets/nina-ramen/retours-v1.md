@@ -23,9 +23,9 @@ son Drive. Ils ne sont pas dans le repo : à télécharger sur le Mac dans
 
 | Demande | Réponse | Où |
 |---|---|---|
-| Couper les blancs entre les phrases | `--couper-blancs` : silences de plus de 0,4 s sautés, 0,12 s de respiration gardés, le plan se remplit avec la suite de la prise | `scripts/reel-montage.py`, rapport, timeline DaVinci |
+| Couper les blancs entre les phrases | dans le projet Resolve « Nina Ramen / Chatgpt » : `davinci-v2.py` reconstruit la V1 en une timeline V2 sans les blancs (silences de plus de 0,4 s, 0,12 s de respiration gardés). Même logique dans `reel-montage.py --couper-blancs` pour la variante ffmpeg | `projets/nina-ramen/davinci-v2.py` |
 | Sous-titres | Submagic, sur le mp4 final (consigne Maxime) | circuit dans `README.md` |
-| Appel à l'action | carton de fin aux couleurs de la charte, logo, police | `--carton-fin`, `--cta-fond`, `--cta-texte`, `--cta-police`, `--cta-logo` |
+| Appel à l'action | carton de fin aux couleurs de la charte, logo, police, posé au bout de la timeline V2 | `davinci-v2.py --carton-fin … --cta-logo …` (mêmes options dans `reel-montage.py`) |
 | Sa version « de son côté » | à attendre : si elle a recoupé elle-même, repartir de sa version pour les sous-titres et le carton | |
 | Devis | elle répond par mail, rien à faire ici | |
 
@@ -49,6 +49,7 @@ son Drive. Ils ne sont pas dans le repo : à télécharger sur le Mac dans
 
 - [ ] Dossier graphisme téléchargé dans `charte/` (logo PNG, police, couleurs)
 - [ ] Texte du carton de fin confirmé par la cliente
-- [ ] V2 rendue avec `--couper-blancs` et le carton
+- [ ] `davinci-v2.py` lancé sur le projet « Nina Ramen / Chatgpt » : timeline V2 relue, titres refaits si besoin
+- [ ] mp4 V2 rendu (`--rendre` ou page Rendu de Resolve)
 - [ ] Sous-titres Submagic, relecture des noms propres
 - [ ] V2 envoyée
