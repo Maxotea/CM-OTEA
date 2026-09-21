@@ -261,3 +261,23 @@ qui déborde de son budget temps est vendue à perte.
 Et le constat du mois n'est pas un constat de prix : **le compte le mieux servi
 en volume est celui qui est parti, sur un reproche de pertinence.** C'est là
 qu'est le sujet.
+
+## 8. Décision du 21/09/2026 : retour à la structure de base, réancrée
+
+Sur le dossier Casa Paco, Maxime écarte ENTRETIEN : à 290 € le palier ne
+porte pas assez de publications pour un commerce, et la grille abaissée du
+31/08 (290 / 690 / 1 190) est **abandonnée**. On repart sur la structure
+d'origine du skill (Essentiel / Signature / Signature+), réancrée sur deux
+bornes fixées par Maxime : **une entrée à 480 €** et un accompagnement
+**jusqu'à 1 800 €**.
+
+| | Essentiel | Signature | Signature+ |
+|---|---|---|---|
+| **Prix HT / mois** | **480 €** | **890 €** | **1 800 €** |
+| Contenu | grille d'origine (12 posts, stories) | grille d'origine (+ 4 reels, modération) | grille d'origine (+ captation mensuelle) |
+
+Le palier du milieu n'a pas été cité : 890 € est conservé tel quel, à
+confirmer. Les contenus sont ceux de `references/paliers-offre.md` du skill
+cm-otea, seuls les prix des deux bornes changent. La présentation de
+services (`offre/brief-presentation-services.md` et le design Claude) affiche
+encore la grille du 31/08 : à réaligner.
