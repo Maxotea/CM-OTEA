@@ -266,18 +266,28 @@ qu'est le sujet.
 
 Sur le dossier Casa Paco, Maxime écarte ENTRETIEN : à 290 € le palier ne
 porte pas assez de publications pour un commerce, et la grille abaissée du
-31/08 (290 / 690 / 1 190) est **abandonnée**. On repart sur la structure
-d'origine du skill (Essentiel / Signature / Signature+), réancrée sur deux
-bornes fixées par Maxime : **une entrée à 480 €** et un accompagnement
-**jusqu'à 1 800 €**.
+31/08 (290 / 690 / 1 190) est **abandonnée**. Deux bornes fixées par Maxime,
+**une entrée à 480 €** et un accompagnement **jusqu'à 1 800 €**, et un refus
+de l'échelle « bon / mieux / meilleur » : les paliers se distinguent par les
+**journées de tournage sur place**, pas par un empilement de volumes.
 
-| | Essentiel | Signature | Signature+ |
+| | Présence | Tournage | Signature |
 |---|---|---|---|
 | **Prix HT / mois** | **480 €** | **890 €** | **1 800 €** |
-| Contenu | grille d'origine (12 posts, stories) | grille d'origine (+ 4 reels, modération) | grille d'origine (+ captation mensuelle) |
+| Tournage sur place | aucun, album partagé de dix photos par mois | **1 journée par mois**, lundi ou jeudi au choix du client | **2 journées par mois**, jours au choix |
+| Reels montés | aucun | 4 par mois | 8 par mois |
+| Publications | 12 par mois, 2 séries de stories par semaine | idem | 12 par mois, 3 séries de stories par semaine |
+| Modération | non | 2 créneaux par semaine | jours ouvrés |
+| Bilan | trimestriel | mensuel | mensuel + point visio |
+| Engagement | 3 mois | 3 mois | 3 mois |
 
-Le palier du milieu n'a pas été cité : 890 € est conservé tel quel, à
-confirmer. Les contenus sont ceux de `references/paliers-offre.md` du skill
-cm-otea, seuls les prix des deux bornes changent. La présentation de
+**Option week-end** : un tournage le samedi ou le dimanche entraîne un
+forfait supplémentaire, montant non fixé (sur devis).
+
+Ce qui est de Maxime : les deux bornes de prix, une journée de tournage au
+milieu, deux en haut, l'option week-end. Ce qui est proposé et reste à
+confirmer : les noms des paliers, le prix du milieu conservé à 890 €, les
+8 reels du haut (doublement du ratio 1 journée = 4 reels), l'engagement de
+trois mois partout (repris du brief de présentation). La présentation de
 services (`offre/brief-presentation-services.md` et le design Claude) affiche
 encore la grille du 31/08 : à réaligner.
