@@ -210,3 +210,72 @@ def test_fcpxml_transporte_gain_titre_et_marqueurs(tmp_path):
     assert len(marques) == 2 and marques[0].startswith("Son : mono") and "surexposé" in marques[1]
     assert [m.get("value") for m in clips[2].findall("marker")] == ["Son : aucune piste, poser une ambiance"]
     assert clips[0].findall("marker") == []
+
+
+def test_plages_parole_garde_une_respiration():
+    # prise de 10 s : parole 0-3, blanc 3-4.2, parole 4.2-7, blanc 7-9.5, parole 9.5-10
+    plages = rm.plages_parole([(3.0, 4.2), (7.0, 9.5)], 10.0)
+    g = rm.SILENCE_GARDE
+    assert plages == [(0.0, round(3.0 + g, 3)), (round(4.2 - g, 3), round(7.0 + g, 3)),
+                      (round(9.5 - g, 3), 10.0)]
+    # un blanc en tête et une miette en queue disparaissent
+    assert rm.plages_parole([(0.0, 1.0), (9.9, 10.0)], 10.0) == [(round(1.0 - g, 3), 10.0)]
+    # pas de blanc : la prise entière
+    assert rm.plages_parole([], 5.0) == [(0.0, 5.0)]
+
+
+def test_appliquer_coupes_remplit_la_duree_en_sautant_les_blancs():
+    plages = [(0.0, 3.1), (4.1, 7.1), (9.4, 10.0)]
+    plan = dict(fichier="a", debut=1.0, duree=4.0)
+    segs, saute = rm.appliquer_coupes(plan, plages)
+    assert segs == [(1.0, 2.1), (4.1, 1.9)]
+    assert abs(sum(d for _, d in segs) - 4.0) < 1e-6
+    assert abs(saute - 1.0) < 1e-6
+    # pas assez de parole après debut : on ne touche pas au plan
+    assert rm.appliquer_coupes(dict(fichier="a", debut=9.0, duree=4.0), plages) is None
+    # une seule plage suffit : rien à couper, on garde la fenêtre d'origine
+    assert rm.appliquer_coupes(dict(fichier="a", debut=0.0, duree=2.0), plages) is None
+
+
+def test_couleur_hex():
+    assert rm.couleur("#F3E9D2", (0, 0, 0)) == (243, 233, 210)
+    assert rm.couleur("1f1f1f", (0, 0, 0)) == (31, 31, 31)
+    assert rm.couleur("#abc", (0, 0, 0)) == (170, 187, 204)
+    assert rm.couleur(None, (1, 2, 3)) == (1, 2, 3)
+
+
+def test_carton_cta_aux_couleurs_du_client(tmp_path):
+    from PIL import Image
+    logo = tmp_path / "logo.png"
+    Image.new("RGBA", (400, 200), (255, 0, 0, 255)).save(logo)
+    png = tmp_path / "cta.png"
+    rm.carton_cta(str(png), "Réservez votre table\\nninaramen.fr", 540, 960,
+                  fond="#F3E9D2", encre="#1F1F1F", logo=str(logo))
+    im = Image.open(png).convert("RGB")
+    assert im.size == (540, 960)
+    assert im.getpixel((5, 5)) == (243, 233, 210)            # fond de la charte
+    couleurs = {im.getpixel((x, y)) for x in range(0, 540, 6) for y in range(0, 960, 6)}
+    assert (255, 0, 0) in couleurs                            # le logo est posé
+    assert (31, 31, 31) in couleurs                           # le texte est dans l'encre demandée
+
+
+def test_fcpxml_blancs_coupes_un_clip_par_bout(tmp_path):
+    plans = [dict(fichier="/V/a.mov", debut=1.0, duree=3.0, scene=1, audio=True, gain_db=0.0,
+                  duree_rush=20.0, segments=[(1.0, 1.4), (3.2, 1.6)], blancs_coupes=0.8),
+             dict(fichier="/V/b.mov", debut=0.5, duree=2.0, scene=2, audio=True, gain_db=0.0,
+                  duree_rush=9.0)]
+    chemin = tmp_path / "reel.fcpxml"
+    total = rm.ecrire_fcpxml(str(chemin), "reel", plans, None, None)
+    clips = ET.parse(chemin).getroot().findall("library/event/project/sequence/spine/asset-clip")
+    assert [c.get("name")[-5:] for c in clips[:2]] == ["(1/2)", "(2/2)"]
+    assert len(clips) == 3
+    # bord à bord, et la somme fait exactement la durée du rendu
+    pos = 0
+    for c in clips:
+        assert _frames(c.get("offset")) == pos
+        pos += _frames(c.get("duration"))
+    assert pos == total == round((3.0 + 2.0 - rm.TRANSITION) * rm.FPS)
+    # le 2e bout du plan 1 commence bien à 3.2 s dans la source
+    assert _frames(clips[1].get("start")) == round(3.2 * rm.FPS)
+    # marqueurs et titre seulement sur le premier bout
+    assert clips[1].findall("marker") == []

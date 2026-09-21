@@ -81,7 +81,10 @@ gain par plan, marqueurs sur les plans mono ou surexposés) et un
 `*.rapport.md` (prises par scène, retenue et notes, plans surexposés
 signalés, diagnostic son de chaque plan, contrôle stéréo de la sortie).
 `--sans-rendu` s'arrête à la timeline et au rapport, sans mp4, quand le
-montage se finit dans Resolve. Projet type :
+montage se finit dans Resolve. `--couper-blancs` saute les silences entre
+les phrases à l'intérieur de chaque plan (rythme, plus de contenu en 90 s)
+et `--cta-fond/--cta-texte/--cta-police/--cta-logo` habillent le carton de
+fin aux couleurs du client. Les sous-titres se font ensuite dans Submagic. Projet type :
 `projets/nina-ramen/`.
 
 ## Répartition Drive / GitHub
@@ -163,7 +166,7 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 84 tests, sans réseau ni secret
+python3 -m pytest -q              # 89 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de

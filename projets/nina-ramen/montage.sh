@@ -2,6 +2,8 @@
 # Montage V1 du reel Nina Ramen depuis le disque dur vert.
 # Usage : ./projets/nina-ramen/montage.sh [dossier des rushs] [options reel-montage.py…]
 #   --sans-rendu : timeline DaVinci (.fcpxml) + rapport seulement, pas de mp4
+#   --couper-blancs : saute les blancs entre les phrases (V2, retour cliente)
+#   --carton-fin "…" --cta-logo charte/logo.png --cta-fond "#…" : appel à l'action
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 export PATH="$HOME/.local/node/bin:$PATH"     # ffmpeg / ffprobe sur le Mac

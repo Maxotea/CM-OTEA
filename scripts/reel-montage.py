@@ -69,6 +69,13 @@ Ce n'est pas une story, le reel garde son son.
     # puis Fichier > Importer > Timeline > o/nina-ramen-reel-v1.fcpxml
     # (ou : python3 projets/nina-ramen/davinci-import.py o/nina-ramen-reel-v1.fcpxml)
 
+    # V2 après retours client : blancs coupés entre les phrases, carton d'appel
+    # à l'action aux couleurs de la charte (puis sous-titres dans Submagic)
+    python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" --titre "NINA RAMEN" \
+        --couper-blancs --carton-fin "Réservez votre table\nninaramen.fr" \
+        --cta-fond "#F3E9D2" --cta-texte "#1F1F1F" --cta-police charte/Police.otf \
+        --cta-logo charte/logo.png --sortie o/nina-ramen-reel-v2.mp4
+
 Chaque lancement écrit aussi `<sortie>.fcpxml`, la même timeline pour DaVinci
 Resolve : prises, points d'entrée, durées, fondus, titre en V2, carton de fin,
 gain par plan, et un marqueur sur chaque plan mono ou surexposé.
@@ -114,6 +121,12 @@ CANAL_MORT_DB = -60.0         # sous ce RMS, un canal est considéré vide
 ECART_CANAUX_DB = 12.0        # au-delà de cet écart, on ne garde que le bon canal
 RMS_CIBLE_DB = -20.0          # niveau visé plan par plan avant le mix
 GAIN_MAX_DB = 12.0
+
+# --- blancs entre les phrases (--couper-blancs)
+SILENCE_DB = -35.0            # sous ce niveau, c'est un blanc
+SILENCE_MIN = 0.4             # un blanc plus court est une respiration, on le garde
+SILENCE_GARDE = 0.12          # ce qu'on laisse de chaque côté d'une coupe (s)
+SEGMENT_MIN = 0.35            # un bout de parole plus court n'est pas gardé seul
 
 # --- image
 LUMA_CIBLE = 118.0            # luminosité moyenne visée (0-255)
@@ -458,6 +471,67 @@ def repartir_plans(scenes, retenues, durees, accroche=None):
     return plans
 
 
+# ------------------------------------------------------- blancs coupés ---
+
+def detecter_silences(ffmpeg, fichier, duree):
+    """[(debut, fin)] des blancs d'une prise, mesurés par silencedetect."""
+    r = subprocess.run(
+        [ffmpeg, "-hide_banner", "-i", fichier, "-vn",
+         "-af", "silencedetect=noise=%ddB:d=%.2f" % (SILENCE_DB, SILENCE_MIN),
+         "-f", "null", "-"],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    silences, debut = [], None
+    for m in re.finditer(r"silence_(start|end): (-?[\d.]+)", r.stderr):
+        if m[1] == "start":
+            debut = max(0.0, float(m[2]))
+        elif debut is not None:
+            silences.append((debut, min(duree, float(m[2]))))
+            debut = None
+    if debut is not None:
+        silences.append((debut, duree))
+    return silences
+
+
+def plages_parole(silences, duree, garde=SILENCE_GARDE, minimum=SEGMENT_MIN):
+    """Ce qu'on garde d'une prise : tout sauf les blancs, en laissant `garde`
+    secondes de respiration après chaque phrase et avant la suivante."""
+    plages, cur = [], 0.0
+    for s0, s1 in sorted(silences):
+        fin = min(duree, s0 + garde)
+        if fin - cur >= minimum:
+            plages.append((round(cur, 3), round(fin, 3)))
+        cur = max(cur, s1 - garde)
+    if duree - cur >= minimum:
+        plages.append((round(cur, 3), round(duree, 3)))
+    return plages
+
+
+def appliquer_coupes(plan, plages):
+    """Remplace la fenêtre [debut, debut+duree] d'un plan par les bouts de
+    parole qui se suivent à partir de debut, jusqu'à remplir la même durée :
+    le plan garde sa place dans la grille, mais il contient plus de phrases
+    et plus de blancs. Retourne (segments [(debut, duree)], blanc sauté en s),
+    ou None si la prise n'a pas assez de parole après debut."""
+    reste, t, segs, saute, fin_prec = plan["duree"], plan["debut"], [], 0.0, None
+    for p0, p1 in plages:
+        if p1 <= t:
+            continue
+        d0 = max(p0, t)
+        d = min(p1 - d0, reste)
+        if d < SEGMENT_MIN and d < reste - 1e-6:
+            continue                      # miette de phrase, on passe
+        if fin_prec is not None:
+            saute += d0 - fin_prec
+        segs.append((round(d0, 3), round(d, 3)))
+        reste -= d
+        fin_prec = d0 + d
+        if reste <= 1e-6:
+            break
+    if reste > 0.05 or len(segs) < 2:
+        return None
+    return segs, round(saute, 3)
+
+
 # ------------------------------------------------------------ étalonnage ---
 
 def surexpose(stats):
@@ -535,21 +609,43 @@ def rendre_plan(ffmpeg, plan, sortie):
     video = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,"
              "setsar=1,fps=%d,%s,format=yuv420p"
              % (W, H, W, H, FPS, plan.get("correction", "null")))
-    cmd = [ffmpeg, "-hide_banner", "-y", "-ss", "%.3f" % plan["debut"],
-           "-t", "%.3f" % plan["duree"], "-i", plan["fichier"],
+    segs = plan.get("segments") or [(plan["debut"], plan["duree"])]
+    premier, dernier = segs[0][0], max(d0 + d for d0, d in segs)
+    cmd = [ffmpeg, "-hide_banner", "-y", "-ss", "%.3f" % premier,
+           "-t", "%.3f" % (dernier - premier), "-i", plan["fichier"],
            "-f", "lavfi", "-t", "%.3f" % plan["duree"],
            "-i", "anullsrc=r=48000:cl=stereo"]
-    if plan.get("audio", True) and plan.get("pan") != "silence":
+    avec_son = plan.get("audio", True) and plan.get("pan") != "silence"
+    f = []
+    if len(segs) > 1:
+        # blancs coupés : chaque bout est découpé puis les bouts sont mis bout à bout
+        for i, (d0, d) in enumerate(segs):
+            a, b = d0 - premier, d0 - premier + d
+            f.append("[0:v]trim=start=%.3f:end=%.3f,setpts=PTS-STARTPTS[v%d]" % (a, b, i))
+            if avec_son:
+                f.append("[0:a]atrim=start=%.3f:end=%.3f,asetpts=PTS-STARTPTS[a%d]" % (a, b, i))
+        f.append("".join("[v%d]" % i for i in range(len(segs)))
+                 + "concat=n=%d:v=1:a=0[vc]" % len(segs))
+        src_v = "[vc]"
+        if avec_son:
+            f.append("".join("[a%d]" % i for i in range(len(segs)))
+                     + "concat=n=%d:v=0:a=1[ac]" % len(segs))
+        src_a = "[ac]"
+    else:
+        src_v, src_a = "[0:v]", "[0:a]"
+    if avec_son:
         etapes = ["aresample=48000"]
         if plan.get("pan"):
             etapes.append(plan["pan"])
         etapes.append("aformat=channel_layouts=stereo")
         if plan.get("gain_db"):
             etapes.append("volume=%.1fdB" % plan["gain_db"])
-        audio = "[0:a]%s[a]" % ",".join(etapes)
+        audio = "%s%s[a]" % (src_a, ",".join(etapes))
     else:
         audio = "[1:a]anull[a]"
-    cmd += ["-filter_complex", "[0:v]%s[v];%s" % (video, audio),
+    f.append("%s%s[v]" % (src_v, video))
+    f.append(audio)
+    cmd += ["-filter_complex", ";".join(f),
             "-map", "[v]", "-map", "[a]", "-t", "%.3f" % plan["duree"],
             "-c:v", "libx264", "-preset", "fast", "-crf", "16",
             "-c:a", "pcm_s16le", "-ar", "48000", "-ac", "2", sortie]
@@ -627,6 +723,64 @@ def verifier_sortie(ffmpeg, ffprobe, sortie):
     ok = son["canaux"] == 2 and all(v > CANAL_MORT_DB for v in son["rms"]) \
         and abs(son["rms"][0] - son["rms"][1]) < 6
     return info, son, ok
+
+
+# ------------------------------------------------------------ carton CTA ---
+
+def couleur(hexa, defaut):
+    """'#F1E4C8' -> (241, 228, 200) ; None -> defaut."""
+    if not hexa:
+        return defaut
+    h = hexa.strip().lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def carton_cta(chemin, texte, W, H, fond=None, encre=None, police_chemin=None, logo=None):
+    """Carton de fin aux couleurs du client : fond et encre de la charte, sa
+    police, son logo au-dessus du texte. Première ligne en grand (l'appel à
+    l'action), les suivantes en petit (adresse, site, compte)."""
+    from PIL import Image, ImageDraw, ImageFont
+    fond, encre = couleur(fond, am.ENCRE), couleur(encre, am.BLANC)
+    im = Image.new("RGB", (W, H), fond)
+    d = ImageDraw.Draw(im)
+
+    def fonte(taille):
+        if police_chemin and os.path.exists(police_chemin):
+            try:
+                return ImageFont.truetype(police_chemin, taille)
+            except OSError:
+                pass
+        return am.police(taille)
+
+    lignes = [l for l in re.split(r"\\n|\n", texte) if l.strip()]
+    blocs, largeur_max = [], int(W * 0.86)
+    for i, l in enumerate(lignes):
+        taille = int(H * (0.055 if i == 0 else 0.028))
+        while True:                       # la ligne tient dans la largeur, quitte à rapetisser
+            fo = fonte(taille)
+            b = d.textbbox((0, 0), l, font=fo)
+            if b[2] - b[0] <= largeur_max or taille <= int(H * 0.02):
+                break
+            taille = int(taille * 0.92)
+        blocs.append((l, fo, b[2] - b[0], b[3] - b[1]))
+    inter = int(H * 0.022)
+    h_texte = sum(h for *_, h in blocs) + inter * (len(blocs) - 1)
+    im_logo = None
+    if logo and os.path.exists(logo):
+        im_logo = Image.open(logo).convert("RGBA")
+        larg = int(W * 0.42)
+        im_logo = im_logo.resize((larg, max(1, int(im_logo.height * larg / im_logo.width))))
+    h_logo = (im_logo.height + int(H * 0.05)) if im_logo else 0
+    y = (H - h_texte - h_logo) // 2
+    if im_logo:
+        im.paste(im_logo, ((W - im_logo.width) // 2, y), im_logo)
+        y += h_logo
+    for l, fo, w, h in blocs:
+        d.text(((W - w) // 2, y), l, font=fo, fill=encre)
+        y += h + inter
+    im.save(chemin)
 
 
 # ------------------------------------------------------- timeline DaVinci ---
@@ -718,31 +872,43 @@ def ecrire_fcpxml(chemin, nom, plans, titre_png=None, carton_png=None, evenement
         # que la timeline dure exactement ce que dure le rendu
         duree = frames(pl["duree"]) - (0 if premier else t2) - (0 if dernier else t2)
         if pl["carton"]:
-            rid, start = ressource(pl["fichier"], image=True), 0
+            rid = ressource(pl["fichier"], image=True)
+            morceaux = [(0, duree)]
             nom_clip = "Carton de fin"
         else:
             rid = ressource(pl["fichier"], pl.get("duree_rush"), audio=pl.get("audio", True))
-            start = frames(pl["debut"]) + (0 if premier else t2)
             nom_clip = "%02d sc%02d %s" % (k + 1, pl.get("scene", 0), os.path.basename(pl["fichier"]))
+            segs = pl.get("segments") or [(pl["debut"], pl["duree"])]
+            # blancs coupés : un clip par bout de parole, coupes franches entre
+            # eux ; les poignées du fondu sont prises sur le premier et le dernier
+            morceaux = [(frames(d0), frames(d)) for d0, d in segs]
+            if not premier:
+                morceaux[0] = (morceaux[0][0] + t2, morceaux[0][1] - t2)
+            if not dernier:
+                morceaux[-1] = (morceaux[-1][0], morceaux[-1][1] - t2)
+            ecart = duree - sum(d for _, d in morceaux)   # arrondis image par image
+            morceaux[-1] = (morceaux[-1][0], morceaux[-1][1] + ecart)
         if not premier:
             tr = ET.SubElement(spine, "transition", name="Cross Dissolve",
                                offset=temps(total - t2), duration=temps(2 * t2))
             ET.SubElement(tr, "filter-video", ref="r2", name="Cross Dissolve")
-        clip = ET.SubElement(spine, "asset-clip", ref=rid, name=nom_clip, offset=temps(total),
-                             start=temps(start), duration=temps(duree), format="r1", tcFormat="NDF")
-        if not pl["carton"] and pl.get("audio", True):
-            clip.set("audioRole", "dialogue")
-        if pl.get("gain_db"):
-            ET.SubElement(clip, "adjust-volume", amount="%+.1fdB" % pl["gain_db"])
-        if premier and titre_png:
-            rid_t = ressource(titre_png, image=True)
-            ET.SubElement(clip, "asset-clip", ref=rid_t, lane="1", name="Titre",
-                          offset=temps(start), start="0s",
-                          duration=temps(min(frames(DUREE_ACCROCHE), duree)), format="r1")
-        if not pl["carton"]:
-            for note in notes_plan(pl):
-                ET.SubElement(clip, "marker", start=temps(start), duration=temps(1), value=note)
-        total += duree
+        for j, (start, d) in enumerate(morceaux):
+            nom = nom_clip if len(morceaux) == 1 else "%s (%d/%d)" % (nom_clip, j + 1, len(morceaux))
+            clip = ET.SubElement(spine, "asset-clip", ref=rid, name=nom, offset=temps(total),
+                                 start=temps(start), duration=temps(d), format="r1", tcFormat="NDF")
+            if not pl["carton"] and pl.get("audio", True):
+                clip.set("audioRole", "dialogue")
+            if pl.get("gain_db"):
+                ET.SubElement(clip, "adjust-volume", amount="%+.1fdB" % pl["gain_db"])
+            if j == 0 and premier and titre_png:
+                rid_t = ressource(titre_png, image=True)
+                ET.SubElement(clip, "asset-clip", ref=rid_t, lane="1", name="Titre",
+                              offset=temps(start), start="0s",
+                              duration=temps(min(frames(DUREE_ACCROCHE), d)), format="r1")
+            if j == 0 and not pl["carton"]:
+                for note in notes_plan(pl):
+                    ET.SubElement(clip, "marker", start=temps(start), duration=temps(1), value=note)
+            total += d
     seq.set("duration", temps(total))
 
     if hasattr(ET, "indent"):
@@ -770,6 +936,11 @@ def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
     L.append("- Timeline DaVinci Resolve : `%s` (Fichier > Importer > Timeline). Les plans mono ou "
              "surexposés portent un marqueur qui dit quoi faire." % a.fcpxml_chemin)
     L.append("- Scènes : %d (%s), plans : %d" % (len(scenes), methode, len(plans)))
+    coupes = [p for p in plans if len(p.get("segments") or []) > 1]
+    if coupes:
+        L.append("- Blancs coupés entre les phrases : %d coupes sur %d plans, %.1f s de silence retirés"
+                 % (sum(len(p["segments"]) - 1 for p in coupes), len(coupes),
+                    sum(p.get("blancs_coupes", 0) for p in coupes)))
     n_sur = sum(1 for p in plans if p.get("mesure_image", {}).get("surexpose"))
     if n_sur:
         L.append("- Plans surexposés : %d (courbe au rendu ffmpeg, marqueur dans la timeline DaVinci)" % n_sur)
@@ -786,8 +957,10 @@ def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
         L.append("")
     L += ["## Plans montés", "", "| # | scène | fichier | entrée | durée | son | image |", "|---|---|---|---|---|---|---|"]
     for k, p in enumerate(plans):
-        L.append("| %d | %d | %s | %.2f | %.2f | %s%s | %s |" % (
+        n_seg = len(p.get("segments") or [])
+        L.append("| %d | %d | %s | %.2f | %.2f%s | %s%s | %s |" % (
             k + 1, p.get("scene", 0), os.path.basename(p["fichier"]), p["debut"], p["duree"],
+            (" (%d bouts, %.1f s de blanc sautés)" % (n_seg, p.get("blancs_coupes", 0))) if n_seg > 1 else "",
             p.get("diag_son", ""), (" (%+.1f dB)" % p["gain_db"]) if p.get("gain_db") else "",
             ("⚠ surexposé, ramené (YAVG %s, %.0f %% brûlé)" % (
                 p.get("mesure_image", {}).get("YAVG", "?"),
@@ -796,6 +969,31 @@ def ecrire_rapport(chemin, a, scenes, retenues, methode, plans, verif):
     L += ["", "Pour changer un plan ou une prise : éditer `%s` puis relancer avec `--edl`." % a.edl_chemin]
     with open(chemin, "w", encoding="utf-8") as fh:
         fh.write("\n".join(L) + "\n")
+
+
+def couper_blancs(ffmpeg, plans, par_fichier):
+    """Applique la coupe des blancs à chaque plan qui a du son. Une prise n'est
+    analysée qu'une fois. Les plans qui n'ont pas assez de parole gardent leur
+    fenêtre d'origine."""
+    plages = {}
+    n_coupes, gagne = 0, 0.0
+    for pl in plans:
+        r = par_fichier.get(pl["fichier"])
+        if not r or not r.get("audio", True) or pl.get("pan") == "silence":
+            continue
+        if pl["fichier"] not in plages:
+            sil = detecter_silences(ffmpeg, pl["fichier"], r["duree"])
+            plages[pl["fichier"]] = plages_parole(sil, r["duree"])
+        res = appliquer_coupes(pl, plages[pl["fichier"]])
+        if not res:
+            continue
+        segs, saute = res
+        pl["segments"] = segs
+        pl["blancs_coupes"] = saute
+        pl["debut"] = segs[0][0]
+        n_coupes += len(segs) - 1
+        gagne += saute
+    log("• blancs coupés : %d coupes, %.1f s de silence sautés" % (n_coupes, gagne))
 
 
 def main():
@@ -809,6 +1007,18 @@ def main():
     p.add_argument("--sous-titre", default="", dest="sous_titre")
     p.add_argument("--carton-fin", default="", dest="carton_fin",
                    help="texte du carton de fin ; \\n pour une 2e ligne")
+    p.add_argument("--cta-fond", default=None, dest="cta_fond",
+                   help="couleur de fond du carton de fin (#hex, charte du client)")
+    p.add_argument("--cta-texte", default=None, dest="cta_texte",
+                   help="couleur du texte du carton de fin (#hex)")
+    p.add_argument("--cta-police", default=None, dest="cta_police",
+                   help="police .ttf/.otf du carton de fin (charte du client)")
+    p.add_argument("--cta-logo", default=None, dest="cta_logo",
+                   help="logo .png (fond transparent) posé au-dessus du texte du carton")
+    p.add_argument("--couper-blancs", action="store_true", dest="couper_blancs",
+                   help="couper les blancs entre les phrases dans chaque plan (silences "
+                        "de plus de %.1f s, %.2f s de respiration gardés de chaque côté)"
+                        % (SILENCE_MIN, SILENCE_GARDE))
     p.add_argument("--duree", type=float, default=90.0, help="durée totale (s), 90 par défaut")
     p.add_argument("--musique", help="fichier audio de fond (optionnel)")
     p.add_argument("--look", default="ramen", choices=sorted(LOOKS),
@@ -833,7 +1043,8 @@ def main():
 
     if a.edl:
         edl = json.load(open(a.edl, encoding="utf-8"))
-        for cle in ("titre", "sous_titre", "carton_fin", "musique", "sortie", "lut"):
+        for cle in ("titre", "sous_titre", "carton_fin", "musique", "sortie", "lut",
+                    "cta_fond", "cta_texte", "cta_police", "cta_logo"):
             if getattr(a, cle) in ("", None) and edl.get(cle):
                 setattr(a, cle, edl[cle])
         if edl.get("look") and a.look == "ramen":
@@ -848,6 +1059,13 @@ def main():
             durees.append(DUREE_CARTON)
         scenes, retenues, methode = [], [], "EDL"
         log("↻ EDL relue : %d plans" % len(plans))
+        if a.couper_blancs and not any(pl.get("segments") for pl in plans):
+            infos = {}
+            for pl in plans:
+                if pl["fichier"] not in infos:
+                    i = am.sonder(ffprobe, ffmpeg, pl["fichier"])
+                    infos[pl["fichier"]] = dict(duree=i["duree"], audio=i["audio"]) if i else None
+            couper_blancs(ffmpeg, plans, {k: v for k, v in infos.items() if v})
         if a.reetalonner:
             n_sur = 0
             for pl in plans:
@@ -899,12 +1117,16 @@ def main():
             pl["pan"] = pan or ("silence" if r["son"]["canaux"] == 0 else None)
             pl["gain_db"] = gain_plan(r["son"])
             pl["correction"], pl["mesure_image"] = correction_plan(r["stats"])
+        if a.couper_blancs:
+            couper_blancs(ffmpeg, plans, par_fichier)
 
     a.sortie = a.sortie or os.path.join("o", "reel.mp4")
     os.makedirs(os.path.dirname(a.sortie) or ".", exist_ok=True)
     a.edl_chemin = os.path.splitext(a.sortie)[0] + ".montage.json"
     with open(a.edl_chemin, "w", encoding="utf-8") as fh:
         json.dump(dict(titre=a.titre, sous_titre=a.sous_titre, carton_fin=a.carton_fin,
+                       cta_fond=a.cta_fond, cta_texte=a.cta_texte, cta_police=a.cta_police,
+                       cta_logo=a.cta_logo, couper_blancs=a.couper_blancs,
                        musique=a.musique, look=a.look, lut=a.lut, sortie=a.sortie,
                        duree=a.duree, plans=plans), fh, ensure_ascii=False, indent=2)
     log("• EDL écrite : %s" % a.edl_chemin)
@@ -917,7 +1139,11 @@ def main():
     carton_png = None
     if a.carton_fin:
         carton_png = base + "-carton-fin.png"
-        am.carton_fin(carton_png, a.carton_fin, W, H)
+        if a.cta_fond or a.cta_texte or a.cta_police or a.cta_logo:
+            carton_cta(carton_png, a.carton_fin, W, H, a.cta_fond, a.cta_texte,
+                       a.cta_police, a.cta_logo)
+        else:
+            am.carton_fin(carton_png, a.carton_fin, W, H)
     a.fcpxml_chemin = base + ".fcpxml"
     n_images = ecrire_fcpxml(a.fcpxml_chemin, os.path.basename(base), plans,
                              titre_png if a.titre else None, carton_png,

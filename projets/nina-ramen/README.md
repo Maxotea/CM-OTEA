@@ -78,6 +78,53 @@ Ce que contient la timeline `nina-ramen-reel-v1` :
 rushs horizontaux sur **« remplir le cadre »** (Réglages du projet > Image >
 Mise à l'échelle, ou clip par clip dans l'inspecteur).
 
+## V2 : les retours de la cliente
+
+Retours reçus par message après la V1 (détail et réponse dans
+`retours-v1.md`) :
+
+1. **Couper les blancs entre les phrases.** Elle parle phrase par phrase et
+   ça se voit. `--couper-blancs` détecte les silences de plus de 0,4 s dans
+   chaque plan, les saute en gardant 0,12 s de respiration de chaque côté, et
+   remplit le plan avec les phrases suivantes de la même prise : le reel garde
+   ses 90 s mais dit plus de choses, et le rythme monte. Dans la timeline
+   DaVinci chaque bout de phrase devient un clip (`(1/3)`, `(2/3)`…), coupe
+   franche entre eux. Le rapport donne le nombre de coupes et les secondes
+   de blanc retirées, plan par plan.
+2. **Sous-titres : dans Submagic**, pas dans l'outil (consigne Maxime). Le
+   circuit : rendre la V2 en mp4 → nouveau projet Submagic, langue français,
+   import du mp4 → choisir un modèle de sous-titres proche de la charte
+   (police et couleur de l'encre) → relire les mots (noms propres, plats) →
+   exporter en 1080×1920 → `o/nina-ramen-reel-v2-sous-titres.mp4`. Garder
+   les sous-titres dans le tiers central de l'image, loin des zones
+   d'interface Instagram (bas et droite).
+3. **Appel à l'action** : carton de fin aux couleurs de la charte, avec le
+   logo. Le dossier graphisme envoyé par la cliente (brand book PDF + dossier
+   « Imagerie » sur son Drive) se télécharge sur le Mac dans
+   `projets/nina-ramen/charte/` (dossier ignoré par git : ce sont ses
+   fichiers). En sortir : le logo en PNG fond transparent, la police, les deux
+   couleurs (fond, encre).
+
+```bash
+./projets/nina-ramen/montage.sh --couper-blancs \
+  --carton-fin "Réservez votre table\nninaramen.fr · @ninaramen" \
+  --cta-fond "#F3E9D2" --cta-texte "#1F1F1F" \
+  --cta-police projets/nina-ramen/charte/Police.otf \
+  --cta-logo projets/nina-ramen/charte/logo.png \
+  --sortie o/nina-ramen-reel-v2.mp4
+```
+
+Les couleurs ci-dessus sont des exemples : prendre celles du brand book. Le
+texte du carton est à confirmer avec elle (réservation, site, compte). Si la
+V1 a été retouchée dans Resolve plutôt que rendue par l'outil, relancer avec
+`--sans-rendu` et réimporter le `.fcpxml` : la nouvelle timeline contient
+les coupes de blancs et le carton, il reste à exporter le mp4 depuis Resolve
+pour Submagic.
+
+Ordre des opérations pour la V2 : coupes + carton (outil ou Resolve) →
+export mp4 → Submagic (sous-titres) → envoi à la cliente. Les sous-titres
+se font en dernier parce que chaque coupe déplace le texte.
+
 ## Retoucher la V1
 
 1. Lire `o/nina-ramen-reel-v1.rapport.md` : chaque scène liste ses prises,
