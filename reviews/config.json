@@ -31,7 +31,7 @@
       "actif": true,
       "drive_dossier": "1Q8KPPL1S2mrJ6afLObZoD3sokPULdcNG",
       "drive_archives": "1fbD-vdIeCEltDGWvEGRkzXy4_HMvF2XH",
-      "drive_fichier": "1cXtTKmDNt227jzJtFFrEV2oNCRW5-Vm6_kmGmAiwUCM"
+      "drive_fichier": "1Zm1wnZ_fxnsdH5tsABD8vRHP65_mJoCaswh0FVNJwHs"
     },
     {
       "slug": "la-galerie-immobiliere",
@@ -41,7 +41,7 @@
       "actif": true,
       "drive_dossier": "1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34YrLO",
       "drive_archives": "1sQVmOw2WVIXNOeVpEMI5WPYG3XHRJAml",
-      "drive_fichier": "1KJbwkYHU2zdj9DSLxqg62a3fEiE1BWNLp-N6QCzAe4A",
+      "drive_fichier": "14Y43uuxGwgt_s-jIraPVNms23ycgAJAJl8UVMJzM7a0",
       "note": "Seul compte réellement en service à ce jour : Sabrina et Rémi reçoivent le mail et ouvrent le tableau. Règle apprise le 28/08 : quand un tableau a déjà été envoyé à la cliente, c'est CE fichier que la routine garde, même si le job generer en produit une version plus fraîche — le remplacer ferait tomber leurs décisions dans un tableau que la relève ne lit plus."
     },
     {
@@ -73,7 +73,7 @@
       "actif": true,
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
-      "drive_fichier": "1B_TwDkzTbLaKhAufiJHnQXkrx3UFX7ROkjTJmUUdshw",
+      "drive_fichier": "1ypb9TtiTa9HyePdU47ZW51AinicDtXGhnaLT7mEX_Cc",
       "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). BLOQUANT au 21/08/2026 : le dossier Validation hebdo n'a AUCUNE permission « tous les utilisateurs disposant du lien » (vérifié par get_file_permissions), la relève ne peut donc pas lire le fichier et le job appliquer sort en erreur à chaque passage depuis le 19/08. Réglage à faire une fois par Maxime sur le dossier : Partager → Accès général → Tous les utilisateurs disposant du lien → Éditeur."
     }
   ]
