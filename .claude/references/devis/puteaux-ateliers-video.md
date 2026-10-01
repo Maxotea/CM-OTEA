@@ -19,10 +19,12 @@ facturé : 7 000 € HT en juillet 2024.
 
 1. **400 € HT ou TTC ?** Une mairie raisonne souvent en TTC. Si c'est TTC, la
    séance revient à 333,33 € HT. Les devis ci-dessous sont en HT, à ajuster.
-2. **Le prix est bas par rapport à ta grille** : ta demi-journée captation et
-   montage se vend 700 € HT. À 400 €, le montage doit se faire pendant la
-   séance, avec les jeunes, jamais après. Tout montage hors séance est une
-   option payante.
+2. **Le prix est bas par rapport à ta grille** (demi-journée captation et
+   montage : 700 € HT), et c'est assumé : budget public, et surtout un levier
+   pour devenir le partenaire vidéo de la Ville (voir la section « Le levier »).
+   À 400 €, le montage se fait pendant la séance, avec les jeunes, jamais
+   après. Tout montage hors séance est une option payante. Le devis affiche
+   « tarif partenaire » pour que la remise soit visible et négociable.
 3. **Les mercredis 25/11 et 2/12 sont pris** dans ton agenda (tournages Nina
    Ramen). Soit tu décales ces tournages, soit un second intervenant OTEA
    assure ces deux séances.
@@ -63,7 +65,7 @@ Puteaux, cycle 1 (10 séances) »
 
 | Ligne | Qté | PU HT | Total HT |
 |---|---|---|---|
-| Séance d'atelier de 3 h, 1 intervenant OTEA, matériel fourni, 1 vidéo courte produite et montée pendant la séance, exportée en 9:16 (Instagram) et 16:9, légende proposée | 10 | 400 € | 4 000 € |
+| Séance d'atelier de 3 h, 1 intervenant OTEA, matériel fourni, 1 vidéo courte produite et montée pendant la séance, exportée en 9:16 (Instagram) et 16:9, légende proposée. Tarif partenaire Ville de Puteaux (tarif public 700 €) | 10 | 400 € | 4 000 € |
 | Réunion de cadrage avec le service jeunesse (objectifs, charte, droits à l'image, compte Instagram) | 1 | offert | 0 € |
 | **Total HT** | | | **4 000 €** |
 | TVA 20 % | | | 800 € |
@@ -123,6 +125,52 @@ de ses réseaux, un JT habillé à son nom et un film à montrer.
 Mêmes conditions que le devis 1. Les noms des invités sont donnés sous réserve
 de leur disponibilité, avec un remplaçant de même niveau si besoin.
 
+## Le levier : devenir le partenaire vidéo de la Ville
+
+Décision de Maxime (1er octobre) : accepter le budget public sur les ateliers
+et s'en servir pour ouvrir les autres besoins vidéo de la Ville, avec un rendu
+d'agence de production. Le service jeunesse et le service communication n'ont
+pas le même budget : le levier est relationnel (référence, visibilité, accès
+aux élus et aux services), pas contractuel. On ne conditionne donc pas le
+tarif des ateliers, on l'affiche comme « tarif partenaire » et on joint une
+proposition séparée.
+
+Ce que la Ville possède et qui se filme (vérifié sur puteaux.fr) :
+- **L'hôtel du Crêt du Loup à La Clusaz** (Haute-Savoie) : résidence de
+  vacances de la Ville, 38 chambres, séjours ski et été. Préinscriptions aux
+  séjours chaque automne : la vidéo doit exister avant l'ouverture des
+  inscriptions.
+- **La résidence de Plœmeur** (Morbihan) : même logique, séjours famille et
+  jeunesse.
+- Les services municipaux (petite enfance, sport, culture, Puteaux
+  Développement avec Yann Quéré, déjà en contact).
+- Les événements de la Ville (rendez-vous des entrepreneurs, fêtes, forums,
+  cérémonies).
+
+Proposition « La Ville de Puteaux en vidéo », à joindre aux devis ou à
+présenter en rendez-vous avec le service communication :
+
+| Production | Contenu | Prix HT |
+|---|---|---|
+| Film d'une résidence de vacances (La Clusaz ou Plœmeur) | 2 jours de tournage sur place, film de présentation 2 à 3 min, 5 capsules verticales pour les réseaux, photos HD. Déplacement et hébergement pris en charge par la Ville sur place | 3 900 € par résidence |
+| Série « Les services de la Ville » | 1 journée de tournage = 3 à 4 vidéos verticales de 60 à 90 s, montées et sous-titrées, prêtes à publier | 1 500 € la journée |
+| Aftermovie d'un événement | Demi-journée de captation, film de 60 à 90 s livré sous 72 h | 700 € |
+| Aftermovie d'un événement, journée complète | Journée de captation, film de 2 min, 3 extraits verticaux, photos | 1 200 € |
+| Forfait annuel « partenaire vidéo » | 10 journées de tournage à l'année au choix de la Ville (services, événements, séjours), montage inclus, réunion de calage trimestrielle | 12 000 € (soit 1 200 € la journée au lieu de 1 500 €) |
+
+Repères : ces prix sont ta grille habituelle (journée 1 200 à 1 500 € HT,
+aftermovie 2 jours 3 200 € HT). La remise n'est que sur le forfait annuel,
+pas à l'unité.
+
+Règle des marchés publics à garder en tête : en dessous de 40 000 € HT par an
+pour un même besoin, la Ville commande sur devis sans procédure. Ateliers
+(4 000 €) + forfait annuel (12 000 €) + 2 films de résidences (7 800 €) =
+23 800 € HT, on reste sous le seuil. Au-delà, il faudra un marché.
+
+Prochaine étape pour activer le levier : demander à ton contact jeunesse une
+mise en relation avec le service communication, et en parler à Yann Quéré
+(Puteaux Développement) qui connaît déjà OTEA.
+
 ## Mail d'envoi (brouillon)
 
 Objet : Ateliers vidéo du mercredi : les deux devis
@@ -141,8 +189,16 @@ documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini), un
 habillage « JT de Puteaux » et un film bilan projeté en fin de cycle.
 
 Je propose de démarrer le mercredi 4 novembre, à 14h, pour un premier cycle de
-10 séances jusqu'au 27 janvier. Les deux devis sont en pièce jointe. Je reste
-disponible pour en parler de vive voix.
+10 séances jusqu'au 27 janvier. Les deux devis sont en pièce jointe.
+
+Le tarif de la première formule est un tarif partenaire : OTEA Production est
+installée à Puteaux et nous aimerions accompagner la Ville plus largement en
+vidéo, avec un rendu d'agence de production. Je pense aux résidences de
+vacances de La Clusaz et de Plœmeur, aux services municipaux ou aux
+événements de la Ville. Si c'est utile, je serais ravi d'en parler avec le
+service communication : une mise en relation me suffit.
+
+Je reste disponible pour en parler de vive voix.
 
 Bien à vous,
 Maxime Dietrich
