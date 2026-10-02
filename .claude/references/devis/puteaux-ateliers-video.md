@@ -1,7 +1,11 @@
 # Devis Mairie de Puteaux : ateliers vidéo du mercredi (12 jeunes)
 
-Brouillon préparé le 1er octobre 2026, à valider par Maxime avant création
-dans Pennylane. Client existant : COMMUNE DE PUTEAUX (Pennylane n° 107610728,
+Préparé le 1er octobre 2026. Maxime a confirmé le 2 octobre : 400 € HT.
+Devis créés dans Pennylane le 2 octobre 2026 : DEVIS-2026-10-02143
+(La Rédaction, 4 000 € HT) et DEVIS-2026-10-02144 (La Rédaction + Masterclass,
+12 100 € HT, cachets des invités à confirmer avant envoi). Validité 1er
+novembre 2026. Création par la code action Zapier `pennylane_create_quote_json`
+(l'action Zapier native refuse les lignes depuis octobre 2026). Client existant : COMMUNE DE PUTEAUX (Pennylane n° 107610728,
 131 rue de la République, 92800 Puteaux, TVA FR81219200623, contacts
 cmonfret@mairie-puteaux.fr et finances@mairie-puteaux.fr). Dernier projet
 facturé : 7 000 € HT en juillet 2024.
@@ -17,8 +21,9 @@ facturé : 7 000 € HT en juillet 2024.
 
 ## À trancher avant d'envoyer
 
-1. **400 € HT ou TTC ?** Une mairie raisonne souvent en TTC. Si c'est TTC, la
-   séance revient à 333,33 € HT. Les devis ci-dessous sont en HT, à ajuster.
+1. **400 € HT** (confirmé par Maxime le 2 octobre). Si la mairie revient en
+   disant qu'elle pensait TTC, on ne baisse pas le prix : on négocie sur le
+   levier (voir plus bas).
 2. **Le prix est bas par rapport à ta grille** (demi-journée captation et
    montage : 700 € HT), et c'est assumé : budget public, et surtout un levier
    pour devenir le partenaire vidéo de la Ville (voir la section « Le levier »).
