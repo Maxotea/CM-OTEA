@@ -10,3 +10,4 @@
 - [Récap hebdo lundi 9h](recap-hebdo-lundi.md) — tâche planifiée : récap des publications de la semaine, 6 comptes, statuts validé/notif/brouillon
 - [Détection nouveaux médias](detection-nouveaux-medias.md) — scan SHA1 des dossiers clients + composition de cartes story, branché dans la tâche du lundi
 - [Rédaction sans tirets](redaction-sans-tirets.md) : aucun « — » ni « -- » dans les textes rédigés (légendes, messages clients) ; virgule, deux-points ou deux phrases à la place
+- [Devis validé : blocs agenda](devis-valide-blocs-agenda.md) : dès qu'un devis est accepté, poser le jour même les blocs préprod, prod, post et livraison dans l'agenda, selon la grille du fichier
