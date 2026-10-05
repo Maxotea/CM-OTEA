@@ -15,7 +15,7 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
   nouvelle qualification à Rome.
 - Partenaire signé : **Fitness Park**. Recherche un petit nombre de partenaires,
   « pas simplement un logo sur une tenue ».
-- Budget de saison d'environ 30 000 € : **jamais publié** sans accord de Pierre.
+- Budget de saison : **jamais publié** (décision de Maxime du 05/10).
 
 ### DA « trois vies » (remplace Pitch Black / Rouge Sang)
 - Papier `#F2EEE6`, encre `#14171C`, un seul accent « aube » `#E8622C`.
@@ -56,10 +56,25 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
   novembre alors qu'elles avaient été remplacées le 20/08 : nouvelle occurrence
   du processus inconnu qui réécrit les calendriers.
 
-### Questions ouvertes pour Pierre
-Anglais seul ou bilingue face aux marques françaises ; nommer l'employeur ou
-non ; budget public ou non ; Kairyn, GX Society et Split Nutrition toujours
-actifs ? ; handle Instagram d'Antoine ; tournage d'entraînement en novembre.
+### Décisions de Maxime du 05/10/2026 (font foi)
+- **Langue : anglais.** Un peu de français de temps en temps, jamais en majorité.
+- **Employeur : jamais cité.** Ni nom, ni logo, ni indice permettant de le
+  retrouver. On peut parler du métier (équipe commerciale France, Espagne, Italie).
+- **Budget de saison : jamais public.** Il reste un argument de discussion en
+  privé avec les marques, jamais dans un post, une story ou une légende.
+- **Partenaires actuels : une marque de pré-workout et Fitness Park.**
+  **Kairyn ne fait plus partie des partenaires** : ne plus la citer ni la taguer.
+  ⚠️ À clarifier : Kairyn vendait justement un pré-workout (IGNITE). Le nom de la
+  nouvelle marque de pré-workout reste à obtenir, ainsi que le statut de GX
+  Society et Split Nutrition (non cités par Maxime, donc considérés inactifs
+  jusqu'à confirmation).
+- **Antoine Bouhana** : Maxime donne son compte Instagram. En attendant, aucun
+  tag inventé.
+
+### Encore ouvert
+Nom et compte de la marque de pré-workout ; compte d'Antoine ; statut de GX
+Society et Split Nutrition ; tournage d'entraînement en novembre ; stats
+d'entraînement (export Garmin ou Strava).
 
 ## Identité
 - blogId Metricool : 6572293
@@ -90,7 +105,7 @@ plus bas ; ce qui suit est la ligne en vigueur.
   (voir la section en tête). Pitch Black / Rouge Sang / Anton ne sert plus.
 - Interdits : jamais de sponsoring déguisé non assumé, jamais de prix/partenariat inventé
 
-## Partenariats / sponsors actuels (mise à jour 17/07/2026)
+## Partenariats / sponsors (historique du 17/07/2026, ⛔ périmé : voir les décisions du 05/10 en tête)
 - **KAIRYN** (site : kairyn.fr — attention à l'orthographe, pas "Kayrin") — marque française de compléments sport, slogan "Refuse The Average", fondée par un pratiquant Hyrox. Produit phare : pré-workout **IGNITE**. Intégré au post "7 incontournables" (angle pré-workout/compléments).
 - **GX SOCIETY** (SAS, Anglet, dirigeant Alexandre Gouaux) — PAS une marque de vêtements : matériel de **récupération / pressothérapie** ("La révolution de la récupération"). Intégré au post "7 incontournables" (angle outils de récup). Le post "setup d'entraînement" (chaussures/vêtements/accessoires) a été repassé en version sans mention sponsor — aucun des 3 partenaires ne correspond à cette catégorie.
 - **SPLIT NUTRITION** — repas sains livrés à domicile (pas des compléments). Mentionné pour l'instant uniquement dans l'annonce partenariat groupée du 21/07 — pas encore de post dédié qui lui correspond vraiment (aucun post actuel ne parle de repas/alimentation quotidienne). À créer quand plus d'infos/assets seront dispo.
