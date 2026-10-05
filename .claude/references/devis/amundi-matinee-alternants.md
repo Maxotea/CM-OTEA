@@ -65,9 +65,18 @@ matinée), Maxime. Durée 32 minutes.
 
 ## Ce qui a été produit le 5 octobre
 
-- Document de présentation « animation allégée » (PDF, 2 pages) : déroulé
-  8h30 à 14h, le jeu « Les 10 défis », le Burger Quiz express, ce que prépare
-  OTEA, ce que prévoit Amundi. Source HTML dans le scratchpad de la session.
+- Document de présentation « animation allégée », version 2 du 5 octobre
+  après relecture de Maxime (« le déroulé est trop approximatif », « un des
+  exemples parle d'équipe alors qu'il n'y en a pas », « prépare 50 à 60 défis
+  pour éviter les doublons ») : déroulé minute par minute de 8h à 14h, texte
+  du brief au micro, les 5 règles au verso de la carte, Burger Quiz en deux
+  équipes Ketchup et Mayo avec 8 finalistes, plan B, et la base des 60 défis
+  en annexe (6 familles de 10 : faire connaissance, points communs, stands et
+  matinée, Amundi et le métier, petits gestes, petites histoires). Règle clé :
+  une même personne ne signe pas plus de 2 cases, pour forcer la circulation.
+  Source HTML : `.claude/references/devis/amundi/animation-allegee-2026-11-02.html`
+  (rendu PDF avec Chromium headless). Le devis 05153 dit « base de 40 défis »,
+  le document en liste 60 : pas de contradiction gênante, 40 est un minimum.
 - Devis Pennylane **DEVIS-2026-10-05153** (id 31404862922752), 1 400 € HT,
   1 680 € TTC, validité 25 octobre 2026 : animation de la matinée 900 € HT,
   conception du jeu et matériel (base de 40 défis, 150 cartes, stylos, point
