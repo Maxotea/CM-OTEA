@@ -159,31 +159,44 @@ Corrections de Maxime après lecture des premiers devis (5 octobre, 11h30) :
 - **On ne filme pas au smartphone, on filme avec de vraies caméras pro**, et
   on le met en avant. Les jeunes apprennent à s'en servir. Quelques séances au
   smartphone en plus, pour le format réseaux.
-- **Un seul intervenant, dans toutes les formules.** Un second intervenant
-  n'est pas rentable et oblige à trouver quelqu'un à chaque séance. La ligne
-  « second intervenant » de la formule 2 est remplacée par une ligne matériel
-  du même montant (plateau JT et kit reportage pro dédiés à la saison), qui ne
-  dépend de personne. Même substitution dans la formule 3 pour rester
-  cohérent ; les totaux ne bougent pas.
+- **Un seul intervenant dans les formules 1 et 2.** Un second intervenant
+  n'est pas rentable à ce prix et oblige à trouver quelqu'un à chaque séance.
+  La ligne « second intervenant » de la formule 2 est remplacée par une ligne
+  matériel du même montant (plateau JT et kit reportage pro dédiés à la
+  saison), qui ne dépend de personne.
+- **Formule 3 : un second vidéaste, pour intégrer MEMOREM** (décision de
+  Maxime, 5 octobre, 11h50). MEMOREM est l'agence partenaire avec qui OTEA a
+  fait la captation AIIRF du 16 septembre (Guillaume Dominguez,
+  g.dominguez@memorem.fr, et Lou Girault, l.girault@memorem.fr ; MEMOREM a
+  facturé 500 € HT cette captation). Ligne « second vidéaste MEMOREM » sur les
+  11 séances de tournage, facturée 300 € HT la séance : tarif à caler avec
+  Guillaume (hypothèse : 250 € HT payés à MEMOREM, 50 € de coordination pour
+  OTEA). Avec MEMOREM dans le projet, le remplaçant de Maxime peut aussi
+  venir de chez eux, pas seulement Paul : la clause du devis 3 dit « de son
+  équipe ou de son agence partenaire ».
 
 | | Formule 1 « La Rédaction » | Formule 2 « La Rédaction Pro » | Formule 3 « La Rédaction + Masterclass » |
 |---|---|---|---|
 | 22 séances, 1 intervenant, caméras pro fournies, 1 capsule par séance | 8 800 € | 8 800 € | 8 800 € |
 | Plateau JT et kit reportage pro dédiés à la saison (2 caméras, micros HF, lumière 3 points, prompteur, fond de plateau) | | 22 × 125 € = 2 750 € | 2 750 € |
+| Second vidéaste sur les 11 séances de tournage (MEMOREM, agence partenaire) : deux groupes de 6, deux capsules par séance | | | 11 × 300 € = 3 300 € |
 | Finition pro de chaque capsule après la séance (étalonnage, mixage, sous-titres, habillage) | | 22 × 75 € = 1 650 € | 1 650 € |
 | 3 masterclass (réalisateur du documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini) | | | 3 × 1 200 € = 3 600 € |
 | Soirée de remise des prix au cinéma avec les 3 professionnels en jury, captation, aftermovie, trophées | | | 3 000 € |
 | Habillage « JT de Puteaux » | offert | offert | offert |
 | Film de clôture et présence à la soirée | offert (monté en séance) | offert (finalisé par OTEA) | compris dans la soirée |
 | Réunion de cadrage | offerte | offerte | offerte |
-| **Total HT** | **8 800 €** | **13 200 €** | **19 800 €** |
-| **Total TTC** | 10 560 € | 15 840 € | 23 760 € |
+| **Total HT** | **8 800 €** | **13 200 €** | **23 100 €** |
+| **Total TTC** | 10 560 € | 15 840 € | 27 720 € |
 
-Chaque formule vaut 1,5 fois la précédente : la 2 se lit comme « les
-conditions d'une vraie rédaction et des vidéos au niveau des réseaux de la
-Ville », la 3 comme « des pros et une vraie cérémonie ». Seuil des marchés
-publics : 19 800 € + forfait partenaire 12 000 € + 2 films de résidences
-7 800 € = 39 600 € HT, sous les 40 000 €.
+La 2 vaut 1,5 fois la 1 et se lit comme « les conditions d'une vraie
+rédaction et des vidéos au niveau des réseaux de la Ville ». La 3 vaut 1,75
+fois la 2 et se lit comme « deux vidéastes, des pros et une vraie
+cérémonie ». Seuil des marchés publics : avec la formule 3 (23 100 €) plus le
+forfait partenaire (12 000 €) et les 2 films de résidences (7 800 €), on
+arrive à 42 900 € HT, au-dessus des 40 000 €. Si la Ville prend la formule 3,
+le reste se cale sur l'exercice suivant ou passe en procédure adaptée. Avec
+les formules 1 et 2, aucun problème.
 
 Devis Pennylane valables (créés le 5 octobre à 11h46, validité 4 novembre
 2026, clauses de remplacement et de report dans les conditions) :
@@ -192,11 +205,12 @@ Devis Pennylane valables (créés le 5 octobre à 11h46, validité 4 novembre
 |---|---|---|---|
 | 1 | DEVIS-2026-10-05149 | 31389914697728 | 8 800 € |
 | 2 | DEVIS-2026-10-05150 | 31390044815360 | 13 200 € |
-| 3 | DEVIS-2026-10-05151 | 31390141468672 | 19 800 € |
+| 3 | DEVIS-2026-10-05152 | 31391039262720 | 23 100 € |
 
 À archiver dans Pennylane (ne correspondent plus à rien) : DEVIS-2026-10-02143
 et 02144 (2 octobre, 10 séances), DEVIS-2026-10-05146, 05147 et 05148 (5
-octobre, première version avec smartphones et second intervenant).
+octobre, première version avec smartphones et second intervenant), et
+DEVIS-2026-10-05151 (formule 3 sans MEMOREM).
 
 Notes techniques sur les code actions Zapier Pennylane :
 - `pennylane_create_quote_json` : `raw_currency_unit_price` doit être une
@@ -450,10 +464,12 @@ facturée chaque mois sur les séances réalisées.
 dédiés à la saison (deux caméras, micros HF, lumière, prompteur) et une
 finition professionnelle de chaque vidéo, au niveau des réseaux de la Ville.
 
-« La Rédaction + Masterclass » ajoute trois rencontres avec des
-professionnels (réalisateur du documentaire d'Inoxtag, journaliste d'Europe
-1, monteur de Konbini) et une soirée de remise des prix au cinéma avec ces
-trois professionnels en jury, captée et montée pour les réseaux de la Ville.
+« La Rédaction + Masterclass » ajoute un second vidéaste sur les séances de
+tournage (MEMOREM, notre agence partenaire : deux groupes de six, deux
+capsules par séance), trois rencontres avec des professionnels (réalisateur
+du documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini) et une
+soirée de remise des prix au cinéma avec ces trois professionnels en jury,
+captée et montée pour les réseaux de la Ville.
 
 Je propose de démarrer le mercredi 6 janvier, à 14h, jusqu'au 30 juin. D'ici
 là, une réunion de cadrage en décembre nous permet de caler les
