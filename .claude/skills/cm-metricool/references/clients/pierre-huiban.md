@@ -23,8 +23,12 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
 - Registre en tête de chaque visuel : `ATHLETE · FATHER · EXECUTIVE`, avec la
   facette du jour en couleur. Pied : `ROAD TO HONG KONG · JUNE 2027`.
 - Générateurs : `scripts/pierre-carousel-v2.py` (carrousels 1080×1350) et
-  `scripts/pierre-story-cards-v2.py` (cartes de story 1080×1920). Cartes
-  typographiques uniquement : aucune image générée, aucun visage.
+  `scripts/pierre-story-photo-v2.py` (stories 1080×1920 sur vraie photo).
+  Aucune image générée, aucune retouche du visage.
+- **Stories : toujours une VRAIE photo d'entraînement de Pierre en fond**
+  (décision de Maxime du 05/10 : les cartes typographiques sur fond uni sont
+  « nulles, fades »). Photo de la banque recadrée 9:16, dégradé sombre en haut
+  et en bas, une seule phrase. `scripts/pierre-story-cards-v2.py` est périmé.
 
 ### Données de course (source HYRESULT, vérifiées)
 - `assets/hyrox/hyrox_pierre-huiban_rome_2026.{json,csv,srt}` : Rome 26/09/2026,
@@ -44,8 +48,15 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
   Maxime à partir des rushes de Rome ; plan clip par clip dans
   `plans/pierre-huiban/2026-10-reels.json`. À l'ajout de la vidéo, vérifier
   que le post passe bien en type Reel.
-- 57 stories 06:00 (05/10 au 30/11) avec les 7 nouvelles cartes, libellés en
-  anglais. Specs : `carrousels/pierre-huiban/stories-cartes-v2.json`.
+- 57 stories 06:00 (05/10 au 30/11) sur vraies photos d'entraînement, 21
+  visuels en rotation, libellés en anglais. Specs et calendrier appliqué :
+  `carrousels/pierre-huiban/stories-photos-v2.json`. 8 visuels prévus n'ont pas
+  pu être hébergés (mercredi, vendredi, samedi tournent sur 2 photos) : à
+  ajouter quand l'upload repasse.
+- Validation par Pierre : une feuille par semaine dans son dossier Drive
+  `1VGThaVWofkwv3sUqZQo-R0_sST5nvytB` (semaines du 05-10 et du 12-10 créées le
+  05/10, deux semaines d'avance). Colonne Format corrigée à la main (Story /
+  Reel / Carrousel) en attendant le correctif de `review.py`.
 - Supprimés : les 8 posts feed en français d'octobre (LFG, « rage silencieuse »,
   « ma saison se joue plus tard » devenu faux après Rome). Textes archivés dans
   `archives/pierre-huiban/metricool-brouillons-2026-10-05.json`.
