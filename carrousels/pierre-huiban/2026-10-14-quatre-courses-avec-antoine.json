@@ -1,0 +1,30 @@
+{
+  "client": "pierre-huiban", "slug": "2026-10-14-antoine", "da": "v2-trois-vies",
+  "date_time": "2026-10-14T18:00:00", "facette": "ATHLETE",
+  "source": "HYRESULT, fiches Paris, Lyon, Mondiaux Stockholm et Rome 2026 relevées le 03/10/2026 (assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json) ; « premiers Français, 16es mondiaux » : persona de Pierre",
+  "slides": [
+    {"fond": "ink", "kicker": "Pro Doubles · with Antoine", "stat": "4",
+     "titre": "Four races together. **One direction.**", "titre_taille": 88,
+     "texte": "Paris, Lyon, the World Championships, Rome. Here is what the clock says."},
+    {"kicker": "The season", "titre": "Four races, side by side", "tableau": [
+      ["Paris 2026", "54:42"],
+      ["Lyon 2026", "54:59"],
+      ["World Championships, Stockholm", "55:29"],
+      ["Rome 2026 · 1st in age group", "53:34"]]},
+    {"kicker": "Stockholm, June 2026", "stat": "16th", "stat_label": "in the world, age group 35-39",
+     "texte": "And the **first French team** in our category. A race I still think about."},
+    {"kicker": "Paris → Rome", "titre": "Not everything got better", "tableau": [
+      ["Running, 8 km", "−0:53"],
+      ["Sandbag lunges", "−0:38"],
+      ["Farmers carry", "−0:05"],
+      ["Rowing", "+0:10"],
+      ["Sled push", "+0:29"]]},
+    {"kicker": "What it tells us", "titre": "The engine is there. The **sled** is the job.", "titre_taille": 80,
+     "texte": "Faster running, stronger lunges. And one station that went the wrong way. That is where this winter goes."},
+    {"kicker": "The partner", "titre": "None of this is a **solo** project.", "titre_taille": 84,
+     "texte": "Antoine and I have won several Pro Doubles races together and qualified for the World Championships more than once. Rome is one more line on that list."},
+    {"fond": "dawn", "kicker": "Next", "titre": "Hong Kong, together.", "titre_taille": 100, "swipe": false,
+     "texte": "World Championships, June 2027.\nThank you for following the road."}
+  ],
+  "legende": "Four races with Antoine this season. Paris, Lyon, the World Championships in Stockholm, and Rome.\n\nThe clock doesn't lie, and it doesn't flatter either: our running and our lunges got a lot faster, and our sled push went the wrong way. Swipe for the details 📊\n\nThat's the honest version of a season. And it tells us exactly what to work on before Hong Kong.\n\nThank you Antoine for being on the other end of every rope and every sled ❤️\n\nIf you race doubles: what's the station you and your partner fight over? I read everything 🙏\n\n#hyrox #hyroxdoubles #hyroxtraining #roadtohongkong #hyroxworldchampionships"
+}

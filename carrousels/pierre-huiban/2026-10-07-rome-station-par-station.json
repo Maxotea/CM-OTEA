@@ -1,0 +1,31 @@
+{
+  "client": "pierre-huiban",
+  "slug": "2026-10-07-rome",
+  "da": "v2-trois-vies",
+  "date_time": "2026-10-07T18:00:00",
+  "facette": "ATHLETE",
+  "source": "HYRESULT, résultat LR3MS4JI58942C relevé le 03/10/2026 (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)",
+  "slides": [
+    {"fond": "ink", "kicker": "HYROX Rome · 26.09.2026", "stat": "53:34",
+     "titre": "Our fastest race **yet.**", "titre_taille": 92,
+     "texte": "Pro Doubles Men with Antoine Bouhana. First in our age group."},
+    {"kicker": "The result", "titre": "What 53:34 means", "tableau": [
+      ["Age group 35-39", "1st"],
+      ["Pro Doubles Men, all ages", "12 / 292"],
+      ["Our previous best, Paris 2026", "54:42"],
+      ["Time gained", "−1:08"]]},
+    {"kicker": "Running · 8 × 1 km", "stat": "27:59", "stat_label": "18th of 292 · top 3.2%",
+     "texte": "The part nobody films. Our fastest kilometre was the second one: **3:06.**"},
+    {"kicker": "Biggest progress", "stat": "2:17", "stat_label": "Sandbag lunges · 13th of 292",
+     "texte": "In Paris this season, the same station took us 2:55. **Thirty-eight seconds** found on one station."},
+    {"kicker": "Best ranked", "stat": "3:22", "stat_label": "Wall balls · 10th of 292",
+     "texte": "Station eight, 100 reps, legs empty. Our **best-ranked station** of the day."},
+    {"kicker": "Where we lost time", "stat": "2:10", "stat_label": "Sled push · 51st of 292",
+     "texte": "Our weakest station in Rome. We pushed it in 1:41 in Paris, so **the work for this winter** is clear."},
+    {"kicker": "The hidden station", "stat": "4:04", "stat_label": "Roxzone · 25th of 292",
+     "texte": "Four minutes in transitions, between the runs and the stations. **The cheapest time to win back.**"},
+    {"fond": "dawn", "kicker": "Next", "titre": "Hong Kong. June 2027.", "titre_taille": 104, "swipe": false,
+     "texte": "Thank you Antoine, for every second of it.\nWorld Championships, here we come."}
+  ],
+  "legende": "Rome. 53:34 🇮🇹\n\nOur fastest race yet, and first in our age group (35-39) with Antoine Bouhana. 12th of 292 teams in Pro Doubles Men.\n\nSwipe for the race, station by station: where we found time, and the one station that still costs us.\n\nSaturday night in Rome was special. Thank you Antoine for every second of it ❤️\n\nNext stop: the World Championships in Hong Kong, June 2027 🙏\n\nWhich number surprises you the most? I read everything.\n\n#hyrox #hyroxrome #hyroxdoubles #roadtohongkong #hyroxworldchampionships"
+}

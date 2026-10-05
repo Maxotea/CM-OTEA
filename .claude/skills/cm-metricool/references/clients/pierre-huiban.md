@@ -1,5 +1,66 @@
 # Pierre Huiban — fiche d'onboarding
 
+## ✅ RELANCE « ROAD TO HONG KONG » — 05/10/2026 (décision Maxime)
+
+Maxime relance l'accompagnement à fond : Pierre est qualifié pour les Mondiaux
+HYROX de Hong Kong (juin 2027). Deux consignes explicites : **« on oublie le LFG »**
+et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-dessous).
+
+### Persona (transmis par Maxime le 03/10/2026)
+- Père de famille, marié, un petit garçon.
+- Dirigeant commercial : équipe sur la France, l'Espagne et l'Italie. **L'employeur
+  n'est pas nommé dans les posts** tant que Pierre ne l'a pas validé.
+- Athlète HYROX en **Pro Doubles Men avec Antoine Bouhana**. Stockholm : premiers
+  Français de la catégorie 35-39, 16es mondiaux. Nouvelle victoire de catégorie et
+  nouvelle qualification à Rome.
+- Partenaire signé : **Fitness Park**. Recherche un petit nombre de partenaires,
+  « pas simplement un logo sur une tenue ».
+- Budget de saison d'environ 30 000 € : **jamais publié** sans accord de Pierre.
+
+### DA « trois vies » (remplace Pitch Black / Rouge Sang)
+- Papier `#F2EEE6`, encre `#14171C`, un seul accent « aube » `#E8622C`.
+- Titres Fraunces SemiBold en casse normale, texte Inter, chiffres JetBrains Mono.
+- Registre en tête de chaque visuel : `ATHLETE · FATHER · EXECUTIVE`, avec la
+  facette du jour en couleur. Pied : `ROAD TO HONG KONG · JUNE 2027`.
+- Générateurs : `scripts/pierre-carousel-v2.py` (carrousels 1080×1350) et
+  `scripts/pierre-story-cards-v2.py` (cartes de story 1080×1920). Cartes
+  typographiques uniquement : aucune image générée, aucun visage.
+
+### Données de course (source HYRESULT, vérifiées)
+- `assets/hyrox/hyrox_pierre-huiban_rome_2026.{json,csv,srt}` : Rome 26/09/2026,
+  **53:34**, 1er des 35-39, 12e sur 292 en Pro Doubles Men.
+- `assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json` : Paris 54:42,
+  Lyon 54:59, Stockholm 55:29, Rome 53:34.
+- `assets/hyrox/rushes_rome_2026.json` : 34 rushes FX3 recalés sur le chrono.
+  Les vidéos 7302 à 7344 et 7347 manquent dans le Drive (seuls les XML y sont).
+- **Stats d'entraînement : aucune source.** Le Strava connecté est celui de
+  Maxime. Demander à Pierre des exports Garmin ou Strava, ou des captures.
+
+### Ce qui est dans Metricool (brouillons, vérifiés le 05/10)
+- 4 carrousels, mercredi 18:00 : 07/10 Rome station par station, 14/10 quatre
+  courses avec Antoine, 21/10 trois vies, 28/10 Road to Hong Kong (Fitness Park,
+  appel aux partenaires). Specs dans `carrousels/pierre-huiban/2026-10-*.json`.
+- 12 reels **sans vidéo** (06/10 au 01/11), légendes prêtes. Le montage revient à
+  Maxime à partir des rushes de Rome ; plan clip par clip dans
+  `plans/pierre-huiban/2026-10-reels.json`. À l'ajout de la vidéo, vérifier
+  que le post passe bien en type Reel.
+- 57 stories 06:00 (05/10 au 30/11) avec les 7 nouvelles cartes, libellés en
+  anglais. Specs : `carrousels/pierre-huiban/stories-cartes-v2.json`.
+- Supprimés : les 8 posts feed en français d'octobre (LFG, « rage silencieuse »,
+  « ma saison se joue plus tard » devenu faux après Rome). Textes archivés dans
+  `archives/pierre-huiban/metricool-brouillons-2026-10-05.json`.
+- ⚠️ **Restent 8 posts feed en français en novembre** (04, 07, 11, 14, 18, 21,
+  25, 28/11), ancienne ligne, dont 3 avec « LFG ». À réécrire ou remplacer dans
+  la nouvelle DA quand le plan de novembre sera fait.
+- ⚠️ Les cartes de story **LFG en français** étaient revenues sur octobre et
+  novembre alors qu'elles avaient été remplacées le 20/08 : nouvelle occurrence
+  du processus inconnu qui réécrit les calendriers.
+
+### Questions ouvertes pour Pierre
+Anglais seul ou bilingue face aux marques françaises ; nommer l'employeur ou
+non ; budget public ou non ; Kairyn, GX Society et Split Nutrition toujours
+actifs ? ; handle Instagram d'Antoine ; tournage d'entraînement en novembre.
+
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)
@@ -25,9 +86,8 @@ plus bas ; ce qui suit est la ligne en vigueur.
   sponsorisé authentique.
 - Piliers : dépassement de soi, double vie (commercial + athlète + papa),
   coulisses d'entraînement, Road to Hong Kong.
-- Direction artistique : **inchangée** (Pitch Black #0A0A0A + Rouge Sang #DC2626,
-  capitales). Il n'a jamais reproché la DA. Ne pas la refaire sans lui demander.
-- Direction artistique (si supports visuels type carrousels/covers) : Pitch Black #0A0A0A + Rouge Sang #DC2626, typo display Anton (UPPERCASE), corps Inter, stats en JetBrains Mono
+- Direction artistique : ⛔ **remplacée le 05/10/2026** par la DA « trois vies »
+  (voir la section en tête). Pitch Black / Rouge Sang / Anton ne sert plus.
 - Interdits : jamais de sponsoring déguisé non assumé, jamais de prix/partenariat inventé
 
 ## Partenariats / sponsors actuels (mise à jour 17/07/2026)

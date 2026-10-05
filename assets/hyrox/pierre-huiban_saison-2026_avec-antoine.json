@@ -1,0 +1,68 @@
+{
+  "athlete": "Pierre Huiban",
+  "partenaire": "Antoine Bouhana",
+  "division": "PRO DOUBLES MEN 35-39",
+  "source": "HYRESULT, fiches résultat relevées le 03/10/2026",
+  "courses": {
+    "Paris 2026": {
+      "total": "54:42",
+      "rang_division": 16,
+      "running": 1732,
+      "SkiErg": 219,
+      "Sled Push": 101,
+      "Sled Pull": 162,
+      "Burpee Broad Jump": 117,
+      "Row": 230,
+      "Farmers Carry": 86,
+      "Sandbag Lunges": 175,
+      "Wall Balls": 199
+    },
+    "Lyon 2026": {
+      "total": "54:59",
+      "rang_division": 10,
+      "running": 1654,
+      "SkiErg": 218,
+      "Sled Push": 134,
+      "Sled Pull": 206,
+      "Burpee Broad Jump": 136,
+      "Row": 228,
+      "Farmers Carry": 91,
+      "Sandbag Lunges": 156,
+      "Wall Balls": 206
+    },
+    "Mondiaux Stockholm 2026": {
+      "total": "55:29",
+      "rang_division": 119,
+      "rang_categorie": 16,
+      "running": 1758,
+      "SkiErg": 213,
+      "Sled Push": 110,
+      "Sled Pull": 188,
+      "Burpee Broad Jump": 130,
+      "Row": 242,
+      "Farmers Carry": 81,
+      "Sandbag Lunges": 160,
+      "Wall Balls": 217
+    },
+    "Rome 2026": {
+      "total": "53:34",
+      "rang_division": 12,
+      "rang_categorie": 1,
+      "running": 1679,
+      "SkiErg": 213,
+      "Sled Push": 130,
+      "Sled Pull": 173,
+      "Burpee Broad Jump": 115,
+      "Row": 240,
+      "Farmers Carry": 81,
+      "Sandbag Lunges": 137,
+      "Wall Balls": 202
+    }
+  },
+  "carriere": {
+    "courses": 15,
+    "podiums": 6,
+    "saisons": 3,
+    "note": "compteurs affichés par HYRESULT, toutes divisions"
+  }
+}
