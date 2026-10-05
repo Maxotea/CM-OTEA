@@ -243,6 +243,100 @@ Prochaine étape pour activer le levier : demander à ton contact jeunesse une
 mise en relation avec le service communication, et en parler à Yann Quéré
 (Puteaux Développement) qui connaît déjà OTEA.
 
+## Ce que ça te coûte vraiment, et le prix rentable (analyse du 5 octobre)
+
+Question de Maxime : « si ça se valide, je m'engage tous les mercredis de 13h à
+17h. Combien ça me coûte, à quel prix je suis rentable, et comment je me fais
+remplacer si un projet tombe un mercredi ? »
+
+### Le temps réel par mercredi
+
+| Poste | Temps |
+|---|---|
+| Sur place (13h installation, 14h-17h séance, rangement) | 4 h 30 |
+| Préparation (interlocuteur, questions, matériel, charge des batteries) | 1 h |
+| Après la séance (export, légende, envoi à la Ville) | 30 min |
+| Coordination et facturation (lissées sur le cycle) | 30 min |
+| **Total** | **6 h 30** |
+
+Soit 65 h sur le cycle de 10 séances pour 4 000 € HT : 62 € HT de l'heure.
+Ta demi-journée habituelle (700 € HT pour environ 6 h, captation et montage)
+vaut 117 € HT de l'heure. L'atelier est payé 47 % en dessous de ta grille.
+
+Ce qui te reste après les enveloppes du système (URSSAF et impôts 25 %, congés
+10 %, trésorerie 7 %, projet 5 %) : 53 % du HT, soit 212 € par mercredi, 33 €
+de l'heure. Ce sont les pourcentages du template, pas ta situation fiscale
+exacte : à vérifier avec ton comptable.
+
+### Ce que le mercredi bloqué te fait perdre
+
+Sur ton agenda de juin à septembre 2026 (17 semaines), 3 mercredis après-midi
+ont eu un tournage (Galerie Immobilière le 10/06, RATP le 1/07, République
+Dominicaine le 16/09), et 2 sont déjà pris en novembre et décembre (Nina
+Ramen les 25/11 et 2/12). Rythme : 1 mercredi sur 5 ou 6. Sur un cycle de 10,
+compte 2 à 3 conflits.
+
+Chaque conflit, c'est soit un remplaçant à payer, soit une demi-journée client
+(700 € HT) ou une journée (1 200 à 1 500 € HT) refusée. Le vrai coût du cycle
+n'est pas les 4 000 € encaissés, c'est le risque de refuser 2 à 3 missions à
+700 ou 1 200 € pendant le cycle. Avec un remplaçant en place, ce risque tombe
+à zéro.
+
+### Le remplaçant : Paul Chabot (Forgeraw)
+
+Paul a déjà remplacé OTEA chez un client (COEDIS, 7 mai 2026 : Emeline de
+Good Story a accepté « si c'est du même niveau de qualité que toi »). Il
+connaît ta façon de tourner. Son tarif journée n'est pas dans les mails (les
+montants sont dans ses PDF) : hypothèse de 300 à 400 € HT la journée, donc
+200 à 250 € HT la demi-journée, à confirmer avec lui.
+
+| Scénario sur un mercredi | Encaissé | Dépensé | Ton temps | Reste pour toi |
+|---|---|---|---|---|
+| Tu animes | 400 € | 0 € | 6 h 30 | 400 € HT (212 € après enveloppes) |
+| Paul anime, tu briefes | 400 € | 200 à 250 € | 1 h (brief, relecture, envoi) | 150 à 200 € HT, et ta journée est libre pour la mission client |
+| Paul anime, et tu factures la mission client le même jour | 400 € + 700 à 1 500 € | 200 à 250 € | 1 h + la mission | la mission entière, plus 150 à 200 € |
+
+Conclusion : à 400 € HT, l'atelier est rentable **seulement si c'est toi qui
+animes** ou si le remplacement te libère pour une mission. Un remplaçant à
+chaque séance, à 400 €, ne laisse presque rien.
+
+### Le prix rentable, selon ce que tu veux
+
+| Objectif | Prix par séance |
+|---|---|
+| Levier partenaire, tu animes 8 séances sur 10, Paul 2 | 400 € HT (le devis actuel) |
+| Pouvoir déléguer n'importe quelle séance sans perdre d'argent (Paul 250 € + 1 h de toi + marge 30 %) | 550 € HT |
+| Ta grille demi-journée, sans remise | 700 € HT |
+
+Recommandation : garder 400 € HT sur le cycle 1 comme tarif partenaire, avec
+deux garde-fous écrits dans le devis. Au cycle 2 (février), repasser à 550 €
+HT si le levier n'a rien donné (aucune mise en relation avec le service
+communication, aucun autre devis Ville signé d'ici fin janvier).
+
+### Les deux clauses à ajouter aux conditions du devis
+
+1. **Remplacement.** « L'intervenant principal est Maxime Dietrich. En cas
+   d'empêchement, OTEA Production fait intervenir un vidéaste professionnel de
+   son équipe, de même niveau, briefé sur le programme. La Ville est prévenue
+   au moins 7 jours avant la séance. »
+2. **Report.** « Jusqu'à 2 séances par cycle peuvent être déplacées d'un commun
+   accord, avec un préavis de 7 jours, et rattrapées dans les 3 semaines
+   suivant la fin du cycle. »
+
+Avec ces deux lignes, un projet client qui tombe un mercredi se gère ainsi :
+Paul si c'est une séance avec interlocuteur extérieur (la Ville ne veut pas
+décaler son commerçant), report si c'est une séance de plateau ou de montage.
+Les 25/11 et 2/12 sont déjà des séances Paul, à lui réserver maintenant.
+
+### À faire avant d'envoyer le devis
+
+- Appeler Paul : son tarif demi-journée, et sa disponibilité de principe sur
+  les 10 mercredis (il n'est payé que s'il intervient).
+- Ajouter les deux clauses dans les conditions des deux devis Pennylane.
+- Dire au responsable, de vive voix, que l'équipe OTEA est de deux personnes
+  et qu'un remplaçant est prévu : annoncé avant la signature, c'est du
+  sérieux ; annoncé après, c'est une excuse.
+
 ## Mail d'envoi (brouillon, version du 5 octobre)
 
 Objet : Ateliers vidéo du mercredi : la parole aux 10-14 ans de Puteaux
