@@ -1,6 +1,8 @@
-# Devis Mairie de Puteaux : ateliers vidéo du mercredi (12 jeunes)
+# Devis Mairie de Puteaux : ateliers vidéo du mercredi (12 jeunes de 10 à 14 ans)
 
 Préparé le 1er octobre 2026. Maxime a confirmé le 2 octobre : 400 € HT.
+Brief précisé en rendez-vous le 5 octobre (voir plus bas) : public 10-14 ans,
+programme refait autour des sujets voulus par la Ville, prix inchangé.
 Devis créés dans Pennylane le 2 octobre 2026 : DEVIS-2026-10-02143
 (La Rédaction, 4 000 € HT) et DEVIS-2026-10-02144 (La Rédaction + Masterclass,
 12 100 € HT, cachets des invités à confirmer avant envoi). Validité 1er
@@ -18,6 +20,45 @@ facturé : 7 000 € HT en juillet 2024.
 - Publier le plus souvent possible sur Instagram.
 - Budget annoncé : 400 € par mercredi.
 - Maxime a proposé un second devis, plus haut, avec des intervenants connus.
+
+## Le brief du rendez-vous du 5 octobre (compte rendu de Maxime, à chaud)
+
+Rendez-vous avec le responsable du service jeunesse ou du Point Ado
+[prénom à confirmer, dicté « Warden »]. Ce qu'il veut, dans ses mots :
+
+- **Une activité qui met en avant les jeunes et qui leur donne la parole**,
+  avec des vidéos façon Konbini ou Quotidien.
+- **La tranche d'âge, c'est 10-14 ans.** Ces jeunes n'ont pas vraiment
+  d'activité à Puteaux, ou n'en trouvent pas. L'atelier est la réponse.
+- Les faire **user de leur créativité, de leur envie d'apprendre et de leur
+  envie de parler**.
+- Leur apprendre à **parler devant une caméra** pour les préparer aux oraux
+  qu'ils auront plus tard, à l'école puis au travail.
+- Les capsules à produire :
+  1. **Les métiers de la Ville** (agents municipaux).
+  2. **Les commerces de Puteaux**.
+  3. **Les activités de la Ville qui manquent d'inscrits** : les jeunes en
+     font la publicité.
+  4. **Des personnes dans le monde du travail interrogées par les jeunes**,
+     pour casser les préjugés et les clichés des 10-14 ans sur le salariat.
+  5. **L'entrepreneuriat**, pour leur montrer qu'il n'y a pas que le salariat.
+
+Ce que ça change par rapport au devis du 2 octobre :
+
+- Le prix et le volume ne bougent pas (10 séances à 400 € HT). Le programme
+  change : il part des sujets voulus par la Ville, plus de la technique.
+- L'atelier devient un argument pour la Ville elle-même : chaque capsule sert
+  un service, un commerce ou une activité municipale. C'est le levier
+  « partenaire vidéo » qui démarre dès le cycle 1, sans rien facturer de plus.
+- La Ville doit fournir des interlocuteurs : un agent municipal, un
+  commerçant, un responsable d'activité, un salarié et un entrepreneur de
+  Puteaux (Yann Quéré, Puteaux Développement, peut aider pour les deux
+  derniers). À caler à la réunion de cadrage.
+- Droit à l'image : les autorisations parentales pour les jeunes, plus une
+  autorisation pour chaque adulte interviewé.
+- L'objet du devis Pennylane peut rester tel quel. S'il faut l'ajuster, on
+  remplace « la rédaction des jeunes de Puteaux » par « la parole aux 10-14
+  ans de Puteaux ». À faire avant envoi, pas après.
 
 ## À trancher avant d'envoyer
 
@@ -43,7 +84,35 @@ facturé : 7 000 € HT en juillet 2024.
 6. **Cachets des invités (devis 2)** : hypothèse de 1 200 € HT par masterclass,
    à confirmer avec chaque intervenant avant d'envoyer.
 
-## Calendrier proposé : cycle 1, 10 séances
+## Calendrier proposé : cycle 1, 10 séances (version du 5 octobre)
+
+Mercredis 14h00 à 17h00, hors vacances de la Toussaint et de Noël (zone C,
+dates à vérifier) et hors 11 novembre. Chaque séance produit une capsule, et
+chaque capsule sert un sujet voulu par la Ville. La technique (cadre, son,
+montage) s'apprend en faisant, séance après séance.
+
+| Séance | Date | Sujet de la capsule | Ce qu'on apprend |
+|---|---|---|---|
+| 1 | 4 novembre 2026 | « Je me présente en 30 secondes » : chaque jeune face caméra | Parler à une caméra, se tenir, respirer, regarder l'objectif |
+| 2 | 18 novembre | Micro-trottoir dans Puteaux : « c'est quoi un bon métier ? » (les clichés des jeunes, dits par eux) | Tenir un micro, poser une question, écouter la réponse |
+| 3 | 25 novembre | Un métier de la Ville : interview d'un agent municipal sur son lieu de travail | Préparer des questions, cadrer une interview |
+| 4 | 2 décembre | Un commerce de Puteaux : reportage de 90 secondes chez un commerçant | Le reportage : plans, voix off, rythme |
+| 5 | 9 décembre | Le JT de Puteaux n° 1 : plateau et lancement d'une activité de la Ville qui manque d'inscrits | Présenter, lancer un sujet, lire un prompteur |
+| 6 | 16 décembre | « Questions cash » à un entrepreneur de Puteaux, façon Konbini | Le format face caméra, les sous-titres, le rythme |
+| 7 | 6 janvier 2027 | « Questions cash » à un salarié : la vraie journée de bureau contre les clichés | Le montage : couper, habiller, exporter |
+| 8 | 13 janvier | Reportage en extérieur dans un service de la Ville (piscine, conservatoire, médiathèque, au choix du service) | Tourner en équipe, gérer le son dehors |
+| 9 | 20 janvier | Le JT de Puteaux n° 2 : chaque jeune présente son sujet | Prendre la parole en public, en conditions réelles |
+| 10 | 27 janvier | Best of du cycle et remise des « cartes de presse » | Relire son travail, le présenter aux familles |
+
+Les interlocuteurs à prévoir par la Ville avant le 18 novembre : un agent
+municipal (séance 3), un commerçant (4), un responsable d'activité (5), un
+entrepreneur (6), un salarié (7), un service d'accueil (8).
+
+Un cycle 2 peut enchaîner du 3 février au printemps sur le même modèle, avec
+de nouveaux métiers, commerces et activités.
+
+### Première version du calendrier (1er octobre), gardée pour mémoire
+
 
 Mercredis 14h00 à 17h00, hors vacances de la Toussaint et de Noël (zone C,
 dates à vérifier) et hors 11 novembre :
@@ -60,8 +129,6 @@ dates à vérifier) et hors 11 novembre :
 | 8 | 13 janvier | Le reportage en extérieur : tournage dans la ville |
 | 9 | 20 janvier | Le JT spécial : chaque jeune présente son sujet |
 | 10 | 27 janvier | Bilan et diffusion : best of et remise des « cartes de presse » |
-
-Un cycle 2 peut enchaîner du 3 février au printemps sur le même modèle.
 
 ## Devis 1 : « La Rédaction » (400 € HT par mercredi)
 
@@ -176,7 +243,54 @@ Prochaine étape pour activer le levier : demander à ton contact jeunesse une
 mise en relation avec le service communication, et en parler à Yann Quéré
 (Puteaux Développement) qui connaît déjà OTEA.
 
-## Mail d'envoi (brouillon)
+## Mail d'envoi (brouillon, version du 5 octobre)
+
+Objet : Ateliers vidéo du mercredi : la parole aux 10-14 ans de Puteaux
+
+Bonjour [Prénom],
+
+Merci pour notre échange de ce matin. J'ai retenu l'essentiel : donner la
+parole aux 10-14 ans de Puteaux, leur apprendre à s'exprimer devant une
+caméra, et leur faire découvrir les métiers, les commerces et les activités
+de la ville avec leur propre regard.
+
+C'est exactement ce que proposent les ateliers du mercredi. Chaque séance
+produit une capsule courte, façon Konbini ou JT, tournée et montée avec les
+jeunes : un agent municipal interviewé sur son lieu de travail, un commerce de
+Puteaux en reportage, une activité de la Ville à faire connaître, un
+entrepreneur et un salarié qui répondent à leurs « questions cash ». Le
+programme détaillé des 10 séances est joint.
+
+Deux formules, en pièce jointe :
+
+La première, « La Rédaction », tient dans le budget annoncé : 400 € HT par
+mercredi, une vidéo prête à publier à chaque séance.
+
+La seconde, « La Rédaction + Masterclass », ajoute un second intervenant à
+chaque séance, trois rencontres avec des professionnels (réalisateur du
+documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini), un
+habillage « JT de Puteaux » et un film bilan projeté aux familles.
+
+Je propose de démarrer le mercredi 4 novembre, à 14h, pour un premier cycle de
+10 séances jusqu'au 27 janvier. D'ici là, une réunion de cadrage nous permet
+de caler les interlocuteurs à interviewer et les autorisations de droit à
+l'image.
+
+Le tarif de la première formule est un tarif partenaire : OTEA Production est
+installée à Puteaux et nous aimerions accompagner la Ville plus largement en
+vidéo, avec un rendu d'agence de production. Je pense aux résidences de
+vacances de La Clusaz et de Plœmeur, aux services municipaux ou aux
+événements de la Ville. Si c'est utile, je serais ravi d'en parler avec le
+service communication : une mise en relation me suffit.
+
+Je reste disponible pour en parler de vive voix.
+
+Bien à vous,
+Maxime Dietrich
+OTEA Production
+
+### Première version du mail (2 octobre), gardée pour mémoire
+
 
 Objet : Ateliers vidéo du mercredi : les deux devis
 
