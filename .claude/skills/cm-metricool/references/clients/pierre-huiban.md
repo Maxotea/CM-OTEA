@@ -62,18 +62,19 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
   retrouver. On peut parler du métier (équipe commerciale France, Espagne, Italie).
 - **Budget de saison : jamais public.** Il reste un argument de discussion en
   privé avec les marques, jamais dans un post, une story ou une légende.
-- **Partenaires actuels : une marque de pré-workout et Fitness Park.**
-  **Kairyn ne fait plus partie des partenaires** : ne plus la citer ni la taguer.
-  ⚠️ À clarifier : Kairyn vendait justement un pré-workout (IGNITE). Le nom de la
-  nouvelle marque de pré-workout reste à obtenir, ainsi que le statut de GX
-  Society et Split Nutrition (non cités par Maxime, donc considérés inactifs
-  jusqu'à confirmation).
-- **Antoine Bouhana** : Maxime donne son compte Instagram. En attendant, aucun
-  tag inventé.
+- **Partenaires actuels : LE PREWORKOUT et Fitness Park.**
+  « LE PREWORKOUT » est le nom de la marque, donné tel quel par Maxime le 05/10.
+  Son compte Instagram n'est pas encore connu : citer la marque par son nom,
+  sans @ inventé. **Kairyn ne fait plus partie des partenaires** : ne plus la
+  citer ni la taguer. GX Society et Split Nutrition, non cités par Maxime, sont
+  considérés inactifs jusqu'à confirmation.
+- **Antoine Bouhana : @antoine_bhna** (donné par Maxime le 05/10). Tagué une
+  fois par légende, à la première mention ; les mentions suivantes restent
+  « Antoine ». Déjà fait sur les 5 brouillons qui le citent (07/10, 14/10,
+  reels du 06/10, 18/10 et 22/10).
 
 ### Encore ouvert
-Nom et compte de la marque de pré-workout ; compte d'Antoine ; statut de GX
-Society et Split Nutrition ; tournage d'entraînement en novembre ; stats
+Compte Instagram de LE PREWORKOUT ; statut de GX Society et Split Nutrition ; tournage d'entraînement en novembre ; stats
 d'entraînement (export Garmin ou Strava).
 
 ## Identité
