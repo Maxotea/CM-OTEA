@@ -1,8 +1,10 @@
-# Devis Mairie de Puteaux : ateliers vidéo du mercredi (12 jeunes de 10 à 14 ans)
+# Devis Mairie de Puteaux : ateliers vidéo du mercredi (12 jeunes de 10 à 14 ans, janvier à juin 2027)
 
 Préparé le 1er octobre 2026. Maxime a confirmé le 2 octobre : 400 € HT.
 Brief précisé en rendez-vous le 5 octobre (voir plus bas) : public 10-14 ans,
-programme refait autour des sujets voulus par la Ville, prix inchangé.
+programme refait autour des sujets voulus par la Ville, prix par séance inchangé.
+Précision de l'après-midi : la saison va de janvier à juin 2027 (22 séances,
+8 800 € HT en formule 1) avec une remise des prix au cinéma en clôture.
 Devis créés dans Pennylane le 2 octobre 2026 : DEVIS-2026-10-02143
 (La Rédaction, 4 000 € HT) et DEVIS-2026-10-02144 (La Rédaction + Masterclass,
 12 100 € HT, cachets des invités à confirmer avant envoi). Validité 1er
@@ -23,8 +25,11 @@ facturé : 7 000 € HT en juillet 2024.
 
 ## Le brief du rendez-vous du 5 octobre (compte rendu de Maxime, à chaud)
 
-Rendez-vous avec le responsable du service jeunesse ou du Point Ado
-[prénom à confirmer, dicté « Warden »]. Ce qu'il veut, dans ses mots :
+Rendez-vous avec Warden Gadri (Wgadri@mairie-puteaux.fr, tutoiement), responsable
+côté jeunesse. C'est le même contact à qui Maxime a envoyé le 9 juillet 2026
+le « Projet concours courts métrages » (note de synthèse et PowerPoint pour
+Madame le Maire, pièces jointes du mail, documents faits avec ChatGPT, pas
+retrouvés sur le Drive). Ce qu'il veut, dans ses mots :
 
 - **Une activité qui met en avant les jeunes et qui leur donne la parole**,
   avec des vidéos façon Konbini ou Quotidien.
@@ -84,32 +89,86 @@ Ce que ça change par rapport au devis du 2 octobre :
 6. **Cachets des invités (devis 2)** : hypothèse de 1 200 € HT par masterclass,
    à confirmer avec chaque intervenant avant d'envoyer.
 
-## Calendrier proposé : cycle 1, 10 séances (version du 5 octobre)
+## Calendrier proposé : de janvier à juin 2027, 22 séances (version du 5 octobre, après-midi)
 
-Mercredis 14h00 à 17h00, hors vacances de la Toussaint et de Noël (zone C,
-dates à vérifier) et hors 11 novembre. Chaque séance produit une capsule, et
-chaque capsule sert un sujet voulu par la Ville. La technique (cadre, son,
-montage) s'apprend en faisant, séance après séance.
+Précision de Maxime après le rendez-vous : ce n'est pas un cycle de 10
+mercredis, c'est de janvier à juin, avec une remise des prix au cinéma en
+clôture (comme le projet concours courts métrages de juillet 2026).
+
+Mercredis 14h00 à 17h00, du 6 janvier au 30 juin 2027. Sur la période il y a
+26 mercredis ; on retire les vacances d'hiver (zone C, 20 février au 8 mars,
+à vérifier : les mercredis 24/02 et 3/03) et de printemps (17 avril au 3 mai,
+à vérifier : les 21/04 et 28/04). Reste **22 séances**. Chaque séance produit
+une capsule. La saison se joue en trois temps.
+
+**Temps 1 : la rédaction se forme (janvier et février, 7 séances)**
 
 | Séance | Date | Sujet de la capsule | Ce qu'on apprend |
 |---|---|---|---|
-| 1 | 4 novembre 2026 | « Je me présente en 30 secondes » : chaque jeune face caméra | Parler à une caméra, se tenir, respirer, regarder l'objectif |
-| 2 | 18 novembre | Micro-trottoir dans Puteaux : « c'est quoi un bon métier ? » (les clichés des jeunes, dits par eux) | Tenir un micro, poser une question, écouter la réponse |
-| 3 | 25 novembre | Un métier de la Ville : interview d'un agent municipal sur son lieu de travail | Préparer des questions, cadrer une interview |
-| 4 | 2 décembre | Un commerce de Puteaux : reportage de 90 secondes chez un commerçant | Le reportage : plans, voix off, rythme |
-| 5 | 9 décembre | Le JT de Puteaux n° 1 : plateau et lancement d'une activité de la Ville qui manque d'inscrits | Présenter, lancer un sujet, lire un prompteur |
-| 6 | 16 décembre | « Questions cash » à un entrepreneur de Puteaux, façon Konbini | Le format face caméra, les sous-titres, le rythme |
-| 7 | 6 janvier 2027 | « Questions cash » à un salarié : la vraie journée de bureau contre les clichés | Le montage : couper, habiller, exporter |
-| 8 | 13 janvier | Reportage en extérieur dans un service de la Ville (piscine, conservatoire, médiathèque, au choix du service) | Tourner en équipe, gérer le son dehors |
-| 9 | 20 janvier | Le JT de Puteaux n° 2 : chaque jeune présente son sujet | Prendre la parole en public, en conditions réelles |
-| 10 | 27 janvier | Best of du cycle et remise des « cartes de presse » | Relire son travail, le présenter aux familles |
+| 1 | 6 janvier | « Je me présente en 30 secondes » : chaque jeune face caméra | Parler à une caméra, se tenir, regarder l'objectif |
+| 2 | 13 janvier | Micro-trottoir dans Puteaux : « c'est quoi un bon métier ? » | Tenir un micro, poser une question, écouter |
+| 3 | 20 janvier | Un métier de la Ville : interview d'un agent municipal sur son lieu de travail | Préparer des questions, cadrer une interview |
+| 4 | 27 janvier | Un commerce de Puteaux : reportage de 90 secondes chez un commerçant | Le reportage : plans, voix off, rythme |
+| 5 | 3 février | Le JT de Puteaux n° 1 : lancement d'une activité de la Ville qui manque d'inscrits | Présenter, lancer un sujet, lire un prompteur |
+| 6 | 10 février | « Questions cash » à un entrepreneur de Puteaux, façon Konbini | Le face caméra, les sous-titres, le rythme |
+| 7 | 17 février | « Questions cash » à un salarié : la vraie journée de bureau contre les clichés | Le montage : couper, habiller, exporter |
 
-Les interlocuteurs à prévoir par la Ville avant le 18 novembre : un agent
-municipal (séance 3), un commerçant (4), un responsable d'activité (5), un
-entrepreneur (6), un salarié (7), un service d'accueil (8).
+**Temps 2 : la rédaction produit (mars et avril, 6 séances)**
 
-Un cycle 2 peut enchaîner du 3 février au printemps sur le même modèle, avec
-de nouveaux métiers, commerces et activités.
+| Séance | Date | Sujet de la capsule | Ce qu'on apprend |
+|---|---|---|---|
+| 8 | 10 mars | Un second métier de la Ville (sport, culture ou petite enfance, au choix du service) | Tourner en équipe, gérer le son dehors |
+| 9 | 17 mars | Un second commerce : les jeunes choisissent et démarchent eux-mêmes | Négocier un tournage, préparer un rendez-vous |
+| 10 | 24 mars | Le JT de Puteaux n° 2 : une activité de la Ville à faire connaître avant les vacances | Présenter en duo, enchaîner les sujets |
+| 11 | 31 mars | Une femme entrepreneure de Puteaux : « questions cash », saison 2 | Relancer, creuser une réponse |
+| 12 | 7 avril | Un métier qu'on ne voit jamais : coulisses d'un service de la Ville (piscine, médiathèque, police municipale) | Le reportage long : 2 à 3 minutes |
+| 13 | 14 avril | Les jeunes interrogent un élu ou la Maire : « c'est quoi votre métier ? » (à demander à la Ville) | Préparer une interview officielle |
+
+**Temps 3 : le film et la remise des prix (mai et juin, 9 séances)**
+
+| Séance | Date | Sujet | Ce qu'on apprend |
+|---|---|---|---|
+| 14 | 5 mai | Choix du film de clôture : chaque jeune pitche son sujet | Convaincre en 1 minute |
+| 15 | 12 mai | Écriture : les sujets retenus deviennent un film de 10 à 15 minutes | Le séquencier, la voix off |
+| 16 | 19 mai | Tournage 1 : compléments et plans manquants | Diriger un tournage |
+| 17 | 26 mai | Tournage 2 : la voix off et les plateaux | Enregistrer une voix propre |
+| 18 | 2 juin | Montage 1 avec les jeunes | Le dérushage |
+| 19 | 9 juin | Montage 2 : musique, habillage, sous-titres | Finir un film |
+| 20 | 16 juin | Le JT de Puteaux n° 3 : chaque jeune présente son sujet, bande-annonce du film | Prendre la parole en public |
+| 21 | 23 juin | Répétition de la soirée : présentation sur scène, remerciements | Parler devant une salle |
+| 22 | 30 juin | **Soirée de remise des prix au cinéma de Puteaux** (date à caler avec le cinéma, possible un autre soir de la semaine) : projection du film et des meilleures capsules, prix par catégorie, remise des « cartes de presse », familles et élus invités | |
+
+Les interlocuteurs à prévoir par la Ville : deux agents municipaux, deux
+commerçants, deux responsables d'activités, deux entrepreneurs (dont une
+femme), un salarié, un élu ou la Maire, et le cinéma pour la soirée. À caler à
+la réunion de cadrage de décembre, puis par trimestre.
+
+Pourquoi la soirée au cinéma vaut le coup : c'est ce qui donne un but aux
+jeunes pendant six mois, c'est la photo pour la Ville (élus, familles, presse
+locale), et c'est ce qui rend l'atelier reconductible pour la rentrée 2027.
+
+### Les devis recalculés pour 22 séances
+
+| | Devis 1 « La Rédaction » | Devis 2 « La Rédaction + Masterclass » |
+|---|---|---|
+| Séances d'atelier | 22 × 400 € = 8 800 € | 22 × 650 € = 14 300 € |
+| Masterclass de professionnels | en option, 1 200 € l'unité | 3 × 1 200 € = 3 600 € |
+| Habillage « JT de Puteaux » | en option, 600 € | 1 200 € (avec finition de toutes les capsules) |
+| Soirée de remise des prix au cinéma : film de clôture de 10 à 15 min finalisé par OTEA, captation de la soirée, aftermovie de 90 s, trophées et cartes de presse | en option, 1 500 € | 1 500 € |
+| Réunion de cadrage | offerte | offerte |
+| **Total HT** | **8 800 €** (12 100 € avec habillage, soirée et 1 masterclass) | **20 600 €** |
+| **Total TTC** | 10 560 € | 24 720 € |
+
+Les deux devis Pennylane du 2 octobre (DEVIS-2026-10-02143 et 02144) sont
+calés sur 10 séances de novembre à janvier : ils sont à refaire sur ces
+montants avant envoi, et les anciens à archiver. Facturation mensuelle sur
+les séances réalisées (6 factures, de janvier à juin), ce qui est aussi plus
+simple pour la Ville en début d'exercice budgétaire.
+
+Seuil des marchés publics : 20 600 € + forfait partenaire 12 000 € + 2 films
+de résidences 7 800 € = 40 400 € HT, juste au-dessus des 40 000 €. Si la Ville
+prend la formule haute et le reste, il faudra scinder sur deux exercices ou
+accepter une procédure adaptée. Avec le devis 1, aucun problème.
 
 ### Première version du calendrier (1er octobre), gardée pour mémoire
 
@@ -259,7 +318,8 @@ remplacer si un projet tombe un mercredi ? »
 | Coordination et facturation (lissées sur le cycle) | 30 min |
 | **Total** | **6 h 30** |
 
-Soit 65 h sur le cycle de 10 séances pour 4 000 € HT : 62 € HT de l'heure.
+Soit 65 h pour 10 séances, ou 143 h pour la saison de 22 séances (8 800 € HT) :
+62 € HT de l'heure dans les deux cas.
 Ta demi-journée habituelle (700 € HT pour environ 6 h, captation et montage)
 vaut 117 € HT de l'heure. L'atelier est payé 47 % en dessous de ta grille.
 
@@ -273,8 +333,8 @@ exacte : à vérifier avec ton comptable.
 Sur ton agenda de juin à septembre 2026 (17 semaines), 3 mercredis après-midi
 ont eu un tournage (Galerie Immobilière le 10/06, RATP le 1/07, République
 Dominicaine le 16/09), et 2 sont déjà pris en novembre et décembre (Nina
-Ramen les 25/11 et 2/12). Rythme : 1 mercredi sur 5 ou 6. Sur un cycle de 10,
-compte 2 à 3 conflits.
+Ramen les 25/11 et 2/12). Rythme : 1 mercredi sur 5 ou 6. Sur une saison de 22 séances de janvier à
+juin, compte 4 à 5 conflits.
 
 Chaque conflit, c'est soit un remplaçant à payer, soit une demi-journée client
 (700 € HT) ou une journée (1 200 à 1 500 € HT) refusée. Le vrai coût du cycle
@@ -304,14 +364,14 @@ chaque séance, à 400 €, ne laisse presque rien.
 
 | Objectif | Prix par séance |
 |---|---|
-| Levier partenaire, tu animes 8 séances sur 10, Paul 2 | 400 € HT (le devis actuel) |
+| Levier partenaire, tu animes 17 ou 18 séances sur 22, Paul 4 ou 5 | 400 € HT (le devis actuel) |
 | Pouvoir déléguer n'importe quelle séance sans perdre d'argent (Paul 250 € + 1 h de toi + marge 30 %) | 550 € HT |
 | Ta grille demi-journée, sans remise | 700 € HT |
 
-Recommandation : garder 400 € HT sur le cycle 1 comme tarif partenaire, avec
-deux garde-fous écrits dans le devis. Au cycle 2 (février), repasser à 550 €
-HT si le levier n'a rien donné (aucune mise en relation avec le service
-communication, aucun autre devis Ville signé d'ici fin janvier).
+Recommandation : garder 400 € HT sur la saison 2027 comme tarif partenaire,
+avec deux garde-fous écrits dans le devis. À la reconduction (rentrée 2027),
+repasser à 550 € HT si le levier n'a rien donné (aucune mise en relation avec
+le service communication, aucun autre devis Ville signé d'ici juin).
 
 ### Les deux clauses à ajouter aux conditions du devis
 
@@ -326,18 +386,71 @@ communication, aucun autre devis Ville signé d'ici fin janvier).
 Avec ces deux lignes, un projet client qui tombe un mercredi se gère ainsi :
 Paul si c'est une séance avec interlocuteur extérieur (la Ville ne veut pas
 décaler son commerçant), report si c'est une séance de plateau ou de montage.
-Les 25/11 et 2/12 sont déjà des séances Paul, à lui réserver maintenant.
+Les conflits de janvier à juin ne sont pas encore connus : lui réserver le
+créneau de principe, et le prévenir dès qu'un devis client tombe un mercredi.
 
 ### À faire avant d'envoyer le devis
 
 - Appeler Paul : son tarif demi-journée, et sa disponibilité de principe sur
-  les 10 mercredis (il n'est payé que s'il intervient).
+  les 22 mercredis de janvier à juin (il n'est payé que s'il intervient).
 - Ajouter les deux clauses dans les conditions des deux devis Pennylane.
 - Dire au responsable, de vive voix, que l'équipe OTEA est de deux personnes
   et qu'un remplaçant est prévu : annoncé avant la signature, c'est du
   sérieux ; annoncé après, c'est une excuse.
 
-## Mail d'envoi (brouillon, version du 5 octobre)
+## Mail d'envoi (brouillon, version du 5 octobre, après-midi)
+
+Objet : Ateliers vidéo du mercredi : la parole aux 10-14 ans de Puteaux
+
+Salut Warden,
+
+Merci pour notre échange de ce matin. J'ai retenu l'essentiel : donner la
+parole aux 10-14 ans de Puteaux, leur apprendre à s'exprimer devant une
+caméra, et leur faire découvrir les métiers, les commerces et les activités
+de la ville avec leur propre regard.
+
+C'est exactement ce que proposent les ateliers du mercredi, de janvier à juin.
+Chaque séance produit une capsule courte, façon Konbini ou JT, tournée et
+montée avec les jeunes : un agent municipal interviewé sur son lieu de
+travail, un commerce de Puteaux en reportage, une activité de la Ville à faire
+connaître, un entrepreneur et un salarié qui répondent à leurs « questions
+cash ». Et en juin, une soirée de remise des prix au cinéma, avec le film de
+la saison projeté devant les familles et les élus. Le programme des 22
+séances est joint.
+
+Deux formules, en pièce jointe :
+
+La première, « La Rédaction », tient dans le budget annoncé : 400 € HT par
+mercredi, une vidéo prête à publier à chaque séance, facturée chaque mois sur
+les séances réalisées. La soirée au cinéma y est en option.
+
+La seconde, « La Rédaction + Masterclass », ajoute un second intervenant à
+chaque séance, trois rencontres avec des professionnels (réalisateur du
+documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini), un
+habillage « JT de Puteaux » et la soirée au cinéma comprise.
+
+Je propose de démarrer le mercredi 6 janvier, à 14h, jusqu'au 30 juin. D'ici
+là, une réunion de cadrage en décembre nous permet de caler les
+interlocuteurs à interviewer, le cinéma et les autorisations de droit à
+l'image. Côté OTEA, nous sommes deux sur le projet : si je suis en tournage un
+mercredi, c'est Paul, vidéaste de l'équipe, qui assure la séance, et tu es
+prévenu une semaine avant.
+
+Le tarif de la première formule est un tarif partenaire : OTEA Production est
+installée à Puteaux et nous aimerions accompagner la Ville plus largement en
+vidéo, avec un rendu d'agence de production. Je pense aux résidences de
+vacances de La Clusaz et de Plœmeur, aux services municipaux ou aux
+événements de la Ville. Si c'est utile, je serais ravi d'en parler avec le
+service communication : une mise en relation me suffit.
+
+Je reste disponible pour en parler de vive voix.
+
+À bientôt,
+Maxime Dietrich
+OTEA Production
+
+### Version du 5 octobre matin (10 séances, novembre à janvier), gardée pour mémoire
+
 
 Objet : Ateliers vidéo du mercredi : la parole aux 10-14 ans de Puteaux
 
