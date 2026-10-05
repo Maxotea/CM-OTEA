@@ -147,47 +147,50 @@ Pourquoi la soirée au cinéma vaut le coup : c'est ce qui donne un but aux
 jeunes pendant six mois, c'est la photo pour la Ville (élus, familles, presse
 locale), et c'est ce qui rend l'atelier reconductible pour la rentrée 2027.
 
-### Les devis recalculés pour 22 séances
+### Les trois formules (décision de Maxime, 5 octobre : « good, better, best »)
 
-| | Devis 1 « La Rédaction » | Devis 2 « La Rédaction + Masterclass » |
-|---|---|---|
-| Séances d'atelier | 22 × 400 € = 8 800 € | 22 × 650 € = 14 300 € |
-| Masterclass de professionnels | en option, 1 200 € l'unité | 3 × 1 200 € = 3 600 € |
-| Habillage « JT de Puteaux » | en option, 600 € | 1 200 € (avec finition de toutes les capsules) |
-| Soirée de remise des prix au cinéma : film de clôture de 10 à 15 min finalisé par OTEA, captation de la soirée, aftermovie de 90 s, trophées et cartes de presse | en option, 1 500 € | 1 500 € |
-| Réunion de cadrage | offerte | offerte |
-| **Total HT** | **8 800 €** (12 100 € avec habillage, soirée et 1 masterclass) | **20 600 €** |
-| **Total TTC** | 10 560 € | 24 720 € |
+Règles fixées par Maxime : 8 800 € HT est le prix d'entrée, on ne peut pas
+descendre plus bas. Les masterclass à 1 200 € par intervenant, c'est bon.
+L'habillage JT et la soirée au cinéma ne se facturent pas en tant que tels à
+la Ville (ils sont offerts et affichés comme tels), sauf si on fait venir les
+intervenants : dans la formule haute, la soirée devient une soirée avec jury.
 
-Les deux devis Pennylane du 2 octobre (DEVIS-2026-10-02143 et 02144) sont
-calés sur 10 séances de novembre à janvier : ils sont à refaire sur ces
-montants avant envoi, et les anciens à archiver. Facturation mensuelle sur
-les séances réalisées (6 factures, de janvier à juin), ce qui est aussi plus
-simple pour la Ville en début d'exercice budgétaire.
+| | Formule 1 « La Rédaction » | Formule 2 « La Rédaction Pro » | Formule 3 « La Rédaction + Masterclass » |
+|---|---|---|---|
+| 22 séances, 1 intervenant, 1 capsule par séance | 8 800 € | 8 800 € | 8 800 € |
+| Second intervenant OTEA sur les 11 séances de tournage (deux groupes de 6, deux capsules par séance) | | 11 × 250 € = 2 750 € | 2 750 € |
+| Finition pro de chaque capsule après la séance (étalonnage, mixage, sous-titres, habillage) | | 22 × 75 € = 1 650 € | 1 650 € |
+| 3 masterclass (réalisateur du documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini) | | | 3 × 1 200 € = 3 600 € |
+| Soirée de remise des prix au cinéma avec les 3 professionnels en jury, captation, aftermovie, trophées | | | 3 000 € |
+| Habillage « JT de Puteaux » | offert | offert | offert |
+| Film de clôture et présence à la soirée | offert (monté en séance) | offert (finalisé par OTEA) | compris dans la soirée |
+| Réunion de cadrage | offerte | offerte | offerte |
+| **Total HT** | **8 800 €** | **13 200 €** | **19 800 €** |
+| **Total TTC** | 10 560 € | 15 840 € | 23 760 € |
 
-Seuil des marchés publics : 20 600 € + forfait partenaire 12 000 € + 2 films
-de résidences 7 800 € = 40 400 € HT, juste au-dessus des 40 000 €. Si la Ville
-prend la formule haute et le reste, il faudra scinder sur deux exercices ou
-accepter une procédure adaptée. Avec le devis 1, aucun problème.
+Chaque formule vaut 1,5 fois la précédente : la 2 se lit comme « des vidéos
+au niveau des réseaux de la Ville », la 3 comme « des pros et une vraie
+cérémonie ». Seuil des marchés publics : 19 800 € + forfait partenaire
+12 000 € + 2 films de résidences 7 800 € = 39 600 € HT, sous les 40 000 €.
 
-### Première version du calendrier (1er octobre), gardée pour mémoire
+Devis Pennylane créés le 5 octobre (validité 4 novembre 2026), avec les
+clauses de remplacement et de report dans les conditions :
 
+| Formule | Numéro | Pennylane id | HT |
+|---|---|---|---|
+| 1 | DEVIS-2026-10-05146 | 31386032500736 | 8 800 € |
+| 2 | DEVIS-2026-10-05147 | 31386083606528 | 13 200 € |
+| 3 | DEVIS-2026-10-05148 | 31386173607936 | 19 800 € |
 
-Mercredis 14h00 à 17h00, hors vacances de la Toussaint et de Noël (zone C,
-dates à vérifier) et hors 11 novembre :
+Les devis du 2 octobre (DEVIS-2026-10-02143 et 02144, 10 séances) sont à
+archiver dans Pennylane : ils ne correspondent plus à rien.
 
-| Séance | Date | Thème |
-|---|---|---|
-| 1 | 4 novembre 2026 | La rédaction : rôles, formats, première interview |
-| 2 | 18 novembre | Le cadre et la lumière : tourner au smartphone |
-| 3 | 25 novembre | Le son et l'interview : micro-trottoir dans Puteaux |
-| 4 | 2 décembre | Le JT : présentateur, plateau, lancement |
-| 5 | 9 décembre | Le reportage : sujet de 90 secondes sur un lieu de la ville |
-| 6 | 16 décembre | Le format Konbini : face caméra, rythme, sous-titres |
-| 7 | 6 janvier 2027 | Le montage : couper, habiller, exporter |
-| 8 | 13 janvier | Le reportage en extérieur : tournage dans la ville |
-| 9 | 20 janvier | Le JT spécial : chaque jeune présente son sujet |
-| 10 | 27 janvier | Bilan et diffusion : best of et remise des « cartes de presse » |
+Note technique : dans la code action `pennylane_create_quote_json`, le prix
+unitaire `raw_currency_unit_price` doit être une chaîne (`"400"`), pas un
+nombre, sinon Pennylane refuse la ligne (« schema of the object invoice_lines
+isn't one of… »). Les lignes à 0 € (« offert ») passent.
+
+### Devis du 2 octobre, gardés pour mémoire (10 séances, novembre à janvier)
 
 ## Devis 1 : « La Rédaction » (400 € HT par mercredi)
 
@@ -418,16 +421,20 @@ cash ». Et en juin, une soirée de remise des prix au cinéma, avec le film de
 la saison projeté devant les familles et les élus. Le programme des 22
 séances est joint.
 
-Deux formules, en pièce jointe :
+Trois formules, en pièces jointes :
 
-La première, « La Rédaction », tient dans le budget annoncé : 400 € HT par
-mercredi, une vidéo prête à publier à chaque séance, facturée chaque mois sur
-les séances réalisées. La soirée au cinéma y est en option.
+« La Rédaction » tient dans le budget annoncé : 400 € HT par mercredi, une
+vidéo prête à publier à chaque séance, l'habillage JT et le film de clôture
+offerts, facturée chaque mois sur les séances réalisées.
 
-La seconde, « La Rédaction + Masterclass », ajoute un second intervenant à
-chaque séance, trois rencontres avec des professionnels (réalisateur du
-documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini), un
-habillage « JT de Puteaux » et la soirée au cinéma comprise.
+« La Rédaction Pro » ajoute un second vidéaste sur les séances de tournage
+(deux groupes de six, deux capsules par séance) et une finition
+professionnelle de chaque vidéo, au niveau des réseaux de la Ville.
+
+« La Rédaction + Masterclass » ajoute trois rencontres avec des
+professionnels (réalisateur du documentaire d'Inoxtag, journaliste d'Europe
+1, monteur de Konbini) et une soirée de remise des prix au cinéma avec ces
+trois professionnels en jury, captée et montée pour les réseaux de la Ville.
 
 Je propose de démarrer le mercredi 6 janvier, à 14h, jusqu'au 30 juin. D'ici
 là, une réunion de cadrage en décembre nous permet de caler les
