@@ -155,10 +155,21 @@ L'habillage JT et la soirée au cinéma ne se facturent pas en tant que tels à
 la Ville (ils sont offerts et affichés comme tels), sauf si on fait venir les
 intervenants : dans la formule haute, la soirée devient une soirée avec jury.
 
+Corrections de Maxime après lecture des premiers devis (5 octobre, 11h30) :
+- **On ne filme pas au smartphone, on filme avec de vraies caméras pro**, et
+  on le met en avant. Les jeunes apprennent à s'en servir. Quelques séances au
+  smartphone en plus, pour le format réseaux.
+- **Un seul intervenant, dans toutes les formules.** Un second intervenant
+  n'est pas rentable et oblige à trouver quelqu'un à chaque séance. La ligne
+  « second intervenant » de la formule 2 est remplacée par une ligne matériel
+  du même montant (plateau JT et kit reportage pro dédiés à la saison), qui ne
+  dépend de personne. Même substitution dans la formule 3 pour rester
+  cohérent ; les totaux ne bougent pas.
+
 | | Formule 1 « La Rédaction » | Formule 2 « La Rédaction Pro » | Formule 3 « La Rédaction + Masterclass » |
 |---|---|---|---|
-| 22 séances, 1 intervenant, 1 capsule par séance | 8 800 € | 8 800 € | 8 800 € |
-| Second intervenant OTEA sur les 11 séances de tournage (deux groupes de 6, deux capsules par séance) | | 11 × 250 € = 2 750 € | 2 750 € |
+| 22 séances, 1 intervenant, caméras pro fournies, 1 capsule par séance | 8 800 € | 8 800 € | 8 800 € |
+| Plateau JT et kit reportage pro dédiés à la saison (2 caméras, micros HF, lumière 3 points, prompteur, fond de plateau) | | 22 × 125 € = 2 750 € | 2 750 € |
 | Finition pro de chaque capsule après la séance (étalonnage, mixage, sous-titres, habillage) | | 22 × 75 € = 1 650 € | 1 650 € |
 | 3 masterclass (réalisateur du documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini) | | | 3 × 1 200 € = 3 600 € |
 | Soirée de remise des prix au cinéma avec les 3 professionnels en jury, captation, aftermovie, trophées | | | 3 000 € |
@@ -168,27 +179,34 @@ intervenants : dans la formule haute, la soirée devient une soirée avec jury.
 | **Total HT** | **8 800 €** | **13 200 €** | **19 800 €** |
 | **Total TTC** | 10 560 € | 15 840 € | 23 760 € |
 
-Chaque formule vaut 1,5 fois la précédente : la 2 se lit comme « des vidéos
-au niveau des réseaux de la Ville », la 3 comme « des pros et une vraie
-cérémonie ». Seuil des marchés publics : 19 800 € + forfait partenaire
-12 000 € + 2 films de résidences 7 800 € = 39 600 € HT, sous les 40 000 €.
+Chaque formule vaut 1,5 fois la précédente : la 2 se lit comme « les
+conditions d'une vraie rédaction et des vidéos au niveau des réseaux de la
+Ville », la 3 comme « des pros et une vraie cérémonie ». Seuil des marchés
+publics : 19 800 € + forfait partenaire 12 000 € + 2 films de résidences
+7 800 € = 39 600 € HT, sous les 40 000 €.
 
-Devis Pennylane créés le 5 octobre (validité 4 novembre 2026), avec les
-clauses de remplacement et de report dans les conditions :
+Devis Pennylane valables (créés le 5 octobre à 11h46, validité 4 novembre
+2026, clauses de remplacement et de report dans les conditions) :
 
 | Formule | Numéro | Pennylane id | HT |
 |---|---|---|---|
-| 1 | DEVIS-2026-10-05146 | 31386032500736 | 8 800 € |
-| 2 | DEVIS-2026-10-05147 | 31386083606528 | 13 200 € |
-| 3 | DEVIS-2026-10-05148 | 31386173607936 | 19 800 € |
+| 1 | DEVIS-2026-10-05149 | 31389914697728 | 8 800 € |
+| 2 | DEVIS-2026-10-05150 | 31390044815360 | 13 200 € |
+| 3 | DEVIS-2026-10-05151 | 31390141468672 | 19 800 € |
 
-Les devis du 2 octobre (DEVIS-2026-10-02143 et 02144, 10 séances) sont à
-archiver dans Pennylane : ils ne correspondent plus à rien.
+À archiver dans Pennylane (ne correspondent plus à rien) : DEVIS-2026-10-02143
+et 02144 (2 octobre, 10 séances), DEVIS-2026-10-05146, 05147 et 05148 (5
+octobre, première version avec smartphones et second intervenant).
 
-Note technique : dans la code action `pennylane_create_quote_json`, le prix
-unitaire `raw_currency_unit_price` doit être une chaîne (`"400"`), pas un
-nombre, sinon Pennylane refuse la ligne (« schema of the object invoice_lines
-isn't one of… »). Les lignes à 0 € (« offert ») passent.
+Notes techniques sur les code actions Zapier Pennylane :
+- `pennylane_create_quote_json` : `raw_currency_unit_price` doit être une
+  chaîne (`"400"`), pas un nombre, sinon Pennylane refuse la ligne. Les
+  lignes à 0 € (« offert ») passent.
+- `pennylane_update_quote_json` (créée le 5 octobre, PUT /quotes/{id}) :
+  Pennylane refuse `invoice_lines` en tableau à la mise à jour (« should be
+  a object »), et la lecture des lignes existantes renvoie une liste vide. En
+  pratique, pour changer les lignes d'un devis, on en recrée un et on archive
+  l'ancien.
 
 ### Devis du 2 octobre, gardés pour mémoire (10 séances, novembre à janvier)
 
@@ -423,13 +441,14 @@ séances est joint.
 
 Trois formules, en pièces jointes :
 
-« La Rédaction » tient dans le budget annoncé : 400 € HT par mercredi, une
-vidéo prête à publier à chaque séance, l'habillage JT et le film de clôture
-offerts, facturée chaque mois sur les séances réalisées.
+« La Rédaction » tient dans le budget annoncé : 400 € HT par mercredi, de
+vraies caméras professionnelles entre les mains des jeunes, une vidéo prête à
+publier à chaque séance, l'habillage JT et le film de clôture offerts,
+facturée chaque mois sur les séances réalisées.
 
-« La Rédaction Pro » ajoute un second vidéaste sur les séances de tournage
-(deux groupes de six, deux capsules par séance) et une finition
-professionnelle de chaque vidéo, au niveau des réseaux de la Ville.
+« La Rédaction Pro » ajoute un plateau JT et un kit reportage professionnels
+dédiés à la saison (deux caméras, micros HF, lumière, prompteur) et une
+finition professionnelle de chaque vidéo, au niveau des réseaux de la Ville.
 
 « La Rédaction + Masterclass » ajoute trois rencontres avec des
 professionnels (réalisateur du documentaire d'Inoxtag, journaliste d'Europe
