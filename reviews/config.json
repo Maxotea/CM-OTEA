@@ -1,5 +1,5 @@
 {
-  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
+  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. semaines_avance = nombre de semaines ouvertes à la fois devant le client (1 par défaut ; 2 = le vendredi génère le lundi suivant ET celui d'après). drive_fichiers = la liste des fichiers ouverts quand il y en a plusieurs (un par semaine, du plus ancien au plus récent) ; la relève les lit tous. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
   "comptes": [
     {
       "slug": "gossip-beauty-center",
@@ -52,7 +52,12 @@
       "actif": true,
       "drive_dossier": "1VGThaVWofkwv3sUqZQo-R0_sST5nvytB",
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
-      "drive_fichier": "10hnadMpB8wMmFuhHfmTAZIoZY59_pA0Tb2pPe8orYIQ"
+      "semaines_avance": 2,
+      "drive_fichiers": [
+        "1wWbx3yj5XfxVzYP96RlaiD6bjOOzjgxiI4MeQkZRD3M",
+        "1cUzldtSeQMOalcy3Dv7TIHQUkGknwV0_s7A49d1yZnY"
+      ],
+      "note": "Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = semaine du 05-10 puis semaine du 12-10, une Google Sheet par semaine dans le dossier. Le fichier du 02-10 (10hnadMp…) est périmé et rangé en Archives."
     },
     {
       "slug": "otea-production",

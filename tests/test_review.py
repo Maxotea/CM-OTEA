@@ -38,6 +38,17 @@ def test_type_du_distingue_carrousel_reel_story_post():
     assert review.type_du({}) == "Post"
 
 
+def test_type_du_lit_le_reseau_vise_avant_les_autres_blocs():
+    # Metricool renvoie un twitterData de type POST même pour une story Instagram seule.
+    story = {"media": ["a"], "providers": [{"network": "instagram"}],
+             "twitterData": {"type": "POST"}, "instagramData": {"type": "STORY"}}
+    assert review.type_du(story) == "Story"
+    reel = {"media": [], "providers": [{"network": "instagram"}, {"network": "facebook"}],
+            "twitterData": {"type": "POST"}, "facebookData": {"type": "POST"},
+            "instagramData": {"type": "REEL"}}
+    assert review.type_du(reel) == "Reel"
+
+
 def test_reseaux_du_abrege_et_tolere_l_inconnu():
     post = {"providers": [{"network": "instagram"}, {"network": "facebook"}]}
     assert review.reseaux_du(post) == "IG + FB"
@@ -237,8 +248,28 @@ def test_lire_review_refuse_un_fichier_etranger(tmp_path):
 
 def test_config_des_comptes_actifs_est_complete():
     for compte in review.charger_comptes():
-        for champ in ("slug", "nom", "prefixe", "blog_id", "drive_dossier", "drive_fichier"):
+        for champ in ("slug", "nom", "prefixe", "blog_id", "drive_dossier"):
             assert compte.get(champ), f"{compte.get('slug')} : {champ} manquant"
+        assert review.fichiers_de(compte), f"{compte['slug']} : ni drive_fichier ni drive_fichiers"
+        avance = int(compte.get("semaines_avance") or 1)
+        assert len(review.fichiers_de(compte)) <= avance, \
+            f"{compte['slug']} : plus de fichiers ouverts que de semaines d'avance"
+
+
+def test_fichiers_de_fusionne_sans_doublon():
+    assert review.fichiers_de({"drive_fichier": "a"}) == ["a"]
+    assert review.fichiers_de({"drive_fichiers": ["a", "b"], "drive_fichier": "a"}) == ["a", "b"]
+    assert review.fichiers_de({"drive_fichiers": ["a", None, "b"]}) == ["a", "b"]
+    assert review.fichiers_de({"drive_fichier": None}) == []
+
+
+def test_semaines_a_venir_selon_l_avance():
+    vendredi = date(2026, 10, 9)
+    assert review.semaines_a_venir({}, vendredi) == [date(2026, 10, 12)]
+    assert review.semaines_a_venir({"semaines_avance": 2}, vendredi) == [date(2026, 10, 12),
+                                                                          date(2026, 10, 19)]
+    # un lundi vise le lundi d'après, jamais le jour même
+    assert review.semaines_a_venir({}, date(2026, 10, 12)) == [date(2026, 10, 19)]
 
 
 def test_charger_comptes_refuse_un_inconnu():
