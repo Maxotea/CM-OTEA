@@ -3,8 +3,11 @@
 Préparé le 1er octobre 2026. Maxime a confirmé le 2 octobre : 400 € HT.
 Brief précisé en rendez-vous le 5 octobre (voir plus bas) : public 10-14 ans,
 programme refait autour des sujets voulus par la Ville, prix par séance inchangé.
-Précision de l'après-midi : la saison va de janvier à juin 2027 (22 séances,
-8 800 € HT en formule 1) avec une remise des prix au cinéma en clôture.
+Précision de l'après-midi : la saison va de janvier à juin 2027 avec une remise
+des prix au cinéma en clôture. Rectification du 6 octobre après le retour de
+Warden (« 2 séances en trop car pendant les vacances : le 17 février et le 14
+avril ») : **20 séances, 8 000 € HT en formule 1**. Devis refaits le 6 octobre :
+DEVIS-2026-10-06154, 06155 et 06156 (tableau plus bas).
 Devis créés dans Pennylane le 2 octobre 2026 : DEVIS-2026-10-02143
 (La Rédaction, 4 000 € HT) et DEVIS-2026-10-02144 (La Rédaction + Masterclass,
 12 100 € HT, cachets des invités à confirmer avant envoi). Validité 1er
@@ -89,19 +92,22 @@ Ce que ça change par rapport au devis du 2 octobre :
 6. **Cachets des invités (devis 2)** : hypothèse de 1 200 € HT par masterclass,
    à confirmer avec chaque intervenant avant d'envoyer.
 
-## Calendrier proposé : de janvier à juin 2027, 22 séances (version du 5 octobre, après-midi)
+## Calendrier proposé : de janvier à juin 2027, 20 séances (version du 6 octobre, après retour de Warden)
 
 Précision de Maxime après le rendez-vous : ce n'est pas un cycle de 10
 mercredis, c'est de janvier à juin, avec une remise des prix au cinéma en
 clôture (comme le projet concours courts métrages de juillet 2026).
 
-Mercredis 14h00 à 17h00, du 6 janvier au 30 juin 2027. Sur la période il y a
-26 mercredis ; on retire les vacances d'hiver (zone C, 20 février au 8 mars,
-à vérifier : les mercredis 24/02 et 3/03) et de printemps (17 avril au 3 mai,
-à vérifier : les 21/04 et 28/04). Reste **22 séances**. Chaque séance produit
+Mercredis 14h00 à 17h00, du 6 janvier au 30 juin 2027. Warden a corrigé le
+calendrier le 6 octobre : le 17 février et le 14 avril tombent pendant les
+vacances. Vacances zone C 2027 retenues : hiver du 13 février au 1er mars
+(mercredis 17/02 et 24/02 sans séance), printemps du 10 au 26 avril (14/04 et
+21/04 sans séance). Reste **20 séances**. Les mercredis 3 mars et 28 avril sont
+des jours d'école : si la Ville veut revenir à 22 séances, ce sont ceux-là à
+rajouter (proposé à Warden dans la réponse du 6 octobre). Chaque séance produit
 une capsule. La saison se joue en trois temps.
 
-**Temps 1 : la rédaction se forme (janvier et février, 7 séances)**
+**Temps 1 : la rédaction se forme (janvier et février, 6 séances)**
 
 | Séance | Date | Sujet de la capsule | Ce qu'on apprend |
 |---|---|---|---|
@@ -111,32 +117,30 @@ une capsule. La saison se joue en trois temps.
 | 4 | 27 janvier | Un commerce de Puteaux : reportage de 90 secondes chez un commerçant | Le reportage : plans, voix off, rythme |
 | 5 | 3 février | Le JT de Puteaux n° 1 : lancement d'une activité de la Ville qui manque d'inscrits | Présenter, lancer un sujet, lire un prompteur |
 | 6 | 10 février | « Questions cash » à un entrepreneur de Puteaux, façon Konbini | Le face caméra, les sous-titres, le rythme |
-| 7 | 17 février | « Questions cash » à un salarié : la vraie journée de bureau contre les clichés | Le montage : couper, habiller, exporter |
 
-**Temps 2 : la rédaction produit (mars et avril, 6 séances)**
+**Temps 2 : la rédaction produit (mars et avril, 5 séances)**
 
 | Séance | Date | Sujet de la capsule | Ce qu'on apprend |
 |---|---|---|---|
-| 8 | 10 mars | Un second métier de la Ville (sport, culture ou petite enfance, au choix du service) | Tourner en équipe, gérer le son dehors |
-| 9 | 17 mars | Un second commerce : les jeunes choisissent et démarchent eux-mêmes | Négocier un tournage, préparer un rendez-vous |
-| 10 | 24 mars | Le JT de Puteaux n° 2 : une activité de la Ville à faire connaître avant les vacances | Présenter en duo, enchaîner les sujets |
-| 11 | 31 mars | Une femme entrepreneure de Puteaux : « questions cash », saison 2 | Relancer, creuser une réponse |
-| 12 | 7 avril | Un métier qu'on ne voit jamais : coulisses d'un service de la Ville (piscine, médiathèque, police municipale) | Le reportage long : 2 à 3 minutes |
-| 13 | 14 avril | Les jeunes interrogent un élu ou la Maire : « c'est quoi votre métier ? » (à demander à la Ville) | Préparer une interview officielle |
+| 7 | 10 mars | « Questions cash » à un salarié : la vraie journée de bureau contre les clichés | Le montage : couper, habiller, exporter |
+| 8 | 17 mars | Un second commerce : les jeunes choisissent et démarchent eux-mêmes | Négocier un tournage, préparer un rendez-vous |
+| 9 | 24 mars | Le JT de Puteaux n° 2 : une activité de la Ville à faire connaître avant les vacances | Présenter en duo, enchaîner les sujets |
+| 10 | 31 mars | Une femme entrepreneure de Puteaux : « questions cash », saison 2 | Relancer, creuser une réponse |
+| 11 | 7 avril | Un second métier de la Ville, vu des coulisses (piscine, médiathèque, police municipale), ou un élu si la Ville le souhaite : « c'est quoi votre métier ? » | Le reportage long : 2 à 3 minutes, tourner en équipe |
 
 **Temps 3 : le film et la remise des prix (mai et juin, 9 séances)**
 
 | Séance | Date | Sujet | Ce qu'on apprend |
 |---|---|---|---|
-| 14 | 5 mai | Choix du film de clôture : chaque jeune pitche son sujet | Convaincre en 1 minute |
-| 15 | 12 mai | Écriture : les sujets retenus deviennent un film de 10 à 15 minutes | Le séquencier, la voix off |
-| 16 | 19 mai | Tournage 1 : compléments et plans manquants | Diriger un tournage |
-| 17 | 26 mai | Tournage 2 : la voix off et les plateaux | Enregistrer une voix propre |
-| 18 | 2 juin | Montage 1 avec les jeunes | Le dérushage |
-| 19 | 9 juin | Montage 2 : musique, habillage, sous-titres | Finir un film |
-| 20 | 16 juin | Le JT de Puteaux n° 3 : chaque jeune présente son sujet, bande-annonce du film | Prendre la parole en public |
-| 21 | 23 juin | Répétition de la soirée : présentation sur scène, remerciements | Parler devant une salle |
-| 22 | 30 juin | **Soirée de remise des prix au cinéma de Puteaux** (date à caler avec le cinéma, possible un autre soir de la semaine) : projection du film et des meilleures capsules, prix par catégorie, remise des « cartes de presse », familles et élus invités | |
+| 12 | 5 mai | Choix du film de clôture : chaque jeune pitche son sujet | Convaincre en 1 minute |
+| 13 | 12 mai | Écriture : les sujets retenus deviennent un film de 10 à 15 minutes | Le séquencier, la voix off |
+| 14 | 19 mai | Tournage 1 : compléments et plans manquants | Diriger un tournage |
+| 15 | 26 mai | Tournage 2 : la voix off et les plateaux | Enregistrer une voix propre |
+| 16 | 2 juin | Montage 1 avec les jeunes | Le dérushage |
+| 17 | 9 juin | Montage 2 : musique, habillage, sous-titres | Finir un film |
+| 18 | 16 juin | Le JT de Puteaux n° 3 : chaque jeune présente son sujet, bande-annonce du film | Prendre la parole en public |
+| 19 | 23 juin | Répétition de la soirée : présentation sur scène, remerciements | Parler devant une salle |
+| 20 | 30 juin | **Soirée de remise des prix au cinéma de Puteaux** (date à caler avec le cinéma, possible un autre soir de la semaine) : projection du film et des meilleures capsules, prix par catégorie, remise des « cartes de presse », familles et élus invités | |
 
 Les interlocuteurs à prévoir par la Ville : deux agents municipaux, deux
 commerçants, deux responsables d'activités, deux entrepreneurs (dont une
@@ -169,7 +173,8 @@ Corrections de Maxime après lecture des premiers devis (5 octobre, 11h30) :
   fait la captation AIIRF du 16 septembre (Guillaume Dominguez,
   g.dominguez@memorem.fr, et Lou Girault, l.girault@memorem.fr ; MEMOREM a
   facturé 500 € HT cette captation). Ligne « second vidéaste MEMOREM » sur les
-  11 séances de tournage, facturée 300 € HT la séance : tarif à caler avec
+  10 séances de tournage (11 dans la version à 22 séances), facturée 300 € HT
+  la séance : tarif à caler avec
   Guillaume (hypothèse : 250 € HT payés à MEMOREM, 50 € de coordination pour
   OTEA). Avec MEMOREM dans le projet, le remplaçant de Maxime peut aussi
   venir de chez eux, pas seulement Paul : la clause du devis 3 dit « de son
@@ -177,17 +182,17 @@ Corrections de Maxime après lecture des premiers devis (5 octobre, 11h30) :
 
 | | Formule 1 « La Rédaction » | Formule 2 « La Rédaction Pro » | Formule 3 « La Rédaction + Masterclass » |
 |---|---|---|---|
-| 22 séances, 1 intervenant, caméras pro fournies, 1 capsule par séance | 8 800 € | 8 800 € | 8 800 € |
-| Plateau JT et kit reportage pro dédiés à la saison (2 caméras, micros HF, lumière 3 points, prompteur, fond de plateau) | | 22 × 125 € = 2 750 € | 2 750 € |
-| Second vidéaste sur les 11 séances de tournage (MEMOREM, agence partenaire) : deux groupes de 6, deux capsules par séance | | | 11 × 300 € = 3 300 € |
-| Finition pro de chaque capsule après la séance (étalonnage, mixage, sous-titres, habillage) | | 22 × 75 € = 1 650 € | 1 650 € |
+| 20 séances, 1 intervenant, caméras pro fournies, 1 capsule par séance | 8 000 € | 8 000 € | 8 000 € |
+| Plateau JT et kit reportage pro dédiés à la saison (2 caméras, micros HF, lumière 3 points, prompteur, fond de plateau) | | 20 × 125 € = 2 500 € | 2 500 € |
+| Second vidéaste sur les 10 séances de tournage (MEMOREM, agence partenaire) : deux groupes de 6, deux capsules par séance | | | 10 × 300 € = 3 000 € |
+| Finition pro de chaque capsule après la séance (étalonnage, mixage, sous-titres, habillage) | | 20 × 75 € = 1 500 € | 1 500 € |
 | 3 masterclass (réalisateur du documentaire d'Inoxtag, journaliste d'Europe 1, monteur de Konbini) | | | 3 × 1 200 € = 3 600 € |
 | Soirée de remise des prix au cinéma avec les 3 professionnels en jury, captation, aftermovie, trophées | | | 3 000 € |
 | Habillage « JT de Puteaux » | offert | offert | offert |
 | Film de clôture et présence à la soirée | offert (monté en séance) | offert (finalisé par OTEA) | compris dans la soirée |
 | Réunion de cadrage | offerte | offerte | offerte |
-| **Total HT** | **8 800 €** | **13 200 €** | **23 100 €** |
-| **Total TTC** | 10 560 € | 15 840 € | 27 720 € |
+| **Total HT** | **8 000 €** | **12 000 €** | **21 600 €** |
+| **Total TTC** | 9 600 € | 14 400 € | 25 920 € |
 
 La 2 vaut 1,5 fois la 1 et se lit comme « les conditions d'une vraie
 rédaction et des vidéos au niveau des réseaux de la Ville ». La 3 vaut 1,75
@@ -198,19 +203,23 @@ arrive à 42 900 € HT, au-dessus des 40 000 €. Si la Ville prend la formule 
 le reste se cale sur l'exercice suivant ou passe en procédure adaptée. Avec
 les formules 1 et 2, aucun problème.
 
-Devis Pennylane valables (créés le 5 octobre à 11h46, validité 4 novembre
+Devis Pennylane valables (créés le 6 octobre, 20 séances, validité 5 novembre
 2026, clauses de remplacement et de report dans les conditions) :
 
 | Formule | Numéro | Pennylane id | HT |
 |---|---|---|---|
-| 1 | DEVIS-2026-10-05149 | 31389914697728 | 8 800 € |
-| 2 | DEVIS-2026-10-05150 | 31390044815360 | 13 200 € |
-| 3 | DEVIS-2026-10-05152 | 31391039262720 | 23 100 € |
+| 1 | DEVIS-2026-10-06154 | 31558990086144 | 8 000 € |
+| 2 | DEVIS-2026-10-06155 | 31559005097984 | 12 000 € |
+| 3 | DEVIS-2026-10-06156 | 31559009988608 | 21 600 € |
+
+Les PDF (et le programme des 20 séances) ont été transmis à Maxime le 6
+octobre pour les glisser dans le brouillon de réponse à Warden.
 
 À archiver dans Pennylane (ne correspondent plus à rien) : DEVIS-2026-10-02143
 et 02144 (2 octobre, 10 séances), DEVIS-2026-10-05146, 05147 et 05148 (5
-octobre, première version avec smartphones et second intervenant), et
-DEVIS-2026-10-05151 (formule 3 sans MEMOREM).
+octobre, première version avec smartphones et second intervenant),
+DEVIS-2026-10-05151 (formule 3 sans MEMOREM), et DEVIS-2026-10-05149, 05150 et
+05152 (5 octobre, 22 séances, envoyés à Warden puis remplacés).
 
 Notes techniques sur les code actions Zapier Pennylane :
 - `pennylane_create_quote_json` : `raw_currency_unit_price` doit être une
@@ -353,7 +362,7 @@ remplacer si un projet tombe un mercredi ? »
 | Coordination et facturation (lissées sur le cycle) | 30 min |
 | **Total** | **6 h 30** |
 
-Soit 65 h pour 10 séances, ou 143 h pour la saison de 22 séances (8 800 € HT) :
+Soit 65 h pour 10 séances, ou 130 h pour la saison de 20 séances (8 000 € HT) :
 62 € HT de l'heure dans les deux cas.
 Ta demi-journée habituelle (700 € HT pour environ 6 h, captation et montage)
 vaut 117 € HT de l'heure. L'atelier est payé 47 % en dessous de ta grille.
@@ -368,7 +377,7 @@ exacte : à vérifier avec ton comptable.
 Sur ton agenda de juin à septembre 2026 (17 semaines), 3 mercredis après-midi
 ont eu un tournage (Galerie Immobilière le 10/06, RATP le 1/07, République
 Dominicaine le 16/09), et 2 sont déjà pris en novembre et décembre (Nina
-Ramen les 25/11 et 2/12). Rythme : 1 mercredi sur 5 ou 6. Sur une saison de 22 séances de janvier à
+Ramen les 25/11 et 2/12). Rythme : 1 mercredi sur 5 ou 6. Sur une saison de 20 séances de janvier à
 juin, compte 4 à 5 conflits.
 
 Chaque conflit, c'est soit un remplaçant à payer, soit une demi-journée client
@@ -433,7 +442,39 @@ créneau de principe, et le prévenir dès qu'un devis client tombe un mercredi.
   et qu'un remplaçant est prévu : annoncé avant la signature, c'est du
   sérieux ; annoncé après, c'est une excuse.
 
-## Mail d'envoi (brouillon, version du 5 octobre, après-midi)
+## Réponse à Warden (brouillon Gmail du 6 octobre, dans le fil envoyé le 5 octobre à 11h32)
+
+Le mail du 5 octobre est parti avec les devis 05149, 05150, 05152 et le
+programme des 22 séances. Warden a répondu (hors Gmail) : « Salut Max, Merci
+pour ton devis ! Tu as mis 2 séances en trop car elles sont pendant les
+vacances ! Le 17 février et le 14 avril ». Réponse préparée en brouillon,
+pièces jointes à ajouter par Maxime (3 devis + Programme-20-seances-Puteaux.pdf) :
+
+Salut Warden,
+
+Bien vu, merci. Les trois devis sont refaits sur 20 séances, sans le 17
+février ni le 14 avril. Ils sont en pièces jointes avec le programme mis à
+jour :
+
+« La Rédaction » : 8 000 € HT (20 séances à 400 €)
+« La Rédaction Pro » : 12 000 € HT
+« La Rédaction + Masterclass » : 21 600 € HT
+
+Le programme garde ses trois temps (la rédaction se forme, la rédaction
+produit, puis le film et la soirée au cinéma le 30 juin). J'ai décalé les
+« questions cash » au salarié au 10 mars, et regroupé le second métier de la
+Ville et l'interview d'un élu sur le 7 avril.
+
+Sauf erreur de ma part, les mercredis 3 mars et 28 avril sont hors vacances
+(zone C : du 13 février au 1er mars, puis du 10 au 26 avril). Si tu préfères
+rester sur 22 séances, je les rajoute et je te renvoie les devis dans la
+journée.
+
+À bientôt,
+Maxime Dietrich
+OTEA Production
+
+## Mail d'envoi (envoyé le 5 octobre à 11h32, version 22 séances, gardé pour mémoire)
 
 Objet : Ateliers vidéo du mercredi : la parole aux 10-14 ans de Puteaux
 
