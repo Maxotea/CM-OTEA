@@ -17,6 +17,8 @@ Usage :
     python3 pierre-story-photo-v2.py PHOTO.jpg SPEC.json CLE SORTIE.jpg [POLICES] [DECALAGE]
 
 CLE = lun|mar|mer|jeu|ven|sam|dim (une entrée de SPEC["cartes"]).
+PHOTO = « - » : écrit à la place le calque PNG transparent (dégradé + texte) à
+poser sur une story vidéo, voir scripts/pierre-story-ralenti.sh.
 DECALAGE = position horizontale du recadrage, de 0 (bord gauche) à 1 (bord
 droit), 0.5 par défaut : sert à garder Pierre dans le cadre quand il n'est pas
 au centre de la photo.
@@ -46,8 +48,8 @@ def cadrer(photo, decalage=0.5):
     return ImageOps.fit(im, (W, H), Image.LANCZOS, centering=(decalage, 0.45))
 
 
-def degrade(img):
-    """Assombrit le haut (registre) et le bas (texte) ; le milieu, où est Pierre, reste net."""
+def _voile():
+    """Masque du dégradé : sombre en haut (registre) et en bas (texte), net au milieu."""
     voile = Image.new("L", (1, H))
     for y in range(H):
         if y < 420:
@@ -58,13 +60,29 @@ def degrade(img):
         else:
             a = 0
         voile.putpixel((0, y), a)
-    noir = Image.new("RGB", (W, H), (12, 14, 18))
-    return Image.composite(noir, img, voile.resize((W, H)))
+    return voile.resize((W, H))
+
+
+def degrade(img):
+    """Assombrit le haut (registre) et le bas (texte) ; le milieu, où est Pierre, reste net."""
+    return Image.composite(Image.new("RGB", (W, H), (12, 14, 18)), img, _voile())
 
 
 def story(photo, c, polices, decalage=0.5):
     img = degrade(cadrer(photo, decalage))
-    d = ImageDraw.Draw(img)
+    _texte(ImageDraw.Draw(img), c, polices)
+    return img
+
+
+def calque(c, polices):
+    """Le même habillage sur fond transparent, à poser par ffmpeg sur une vidéo."""
+    img = Image.new("RGBA", (W, H), (12, 14, 18, 0))
+    img.putalpha(_voile())
+    _texte(ImageDraw.Draw(img), c, polices)
+    return img
+
+
+def _texte(d, c, polices):
     P = lambda k, t: pc2.police(polices, k, t)
 
     # registre en tête, sous la barre de progression d'Instagram
@@ -92,7 +110,6 @@ def story(photo, c, polices, decalage=0.5):
 
     d.line([(M, yb), (W - M, yb)], fill=(120, 116, 110), width=2)
     pc2.espace(d, (M, yb + 30), "ROAD TO HONG KONG · JUNE 2027", P("label", 22), (215, 210, 202), 2.8)
-    return img
 
 
 def main():
@@ -100,7 +117,10 @@ def main():
     polices = sys.argv[5] if len(sys.argv) > 5 else "fonts"
     decalage = float(sys.argv[6]) if len(sys.argv) > 6 else 0.5
     cartes = {c["cle"]: c for c in json.load(open(spec, encoding="utf-8"))["cartes"]}
-    story(Image.open(photo), cartes[cle], polices, decalage).save(sortie, quality=92, subsampling=0)
+    if photo == "-":   # calque PNG transparent pour une story vidéo (ralenti des rushs)
+        calque(cartes[cle], polices).save(sortie)
+    else:
+        story(Image.open(photo), cartes[cle], polices, decalage).save(sortie, quality=92, subsampling=0)
     print(sortie)
 
 

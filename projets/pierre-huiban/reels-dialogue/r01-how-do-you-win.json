@@ -1,0 +1,100 @@
+{
+  "_doc": "Reel dialogue n°1, type COMPÉTITION (« comment tu gagnes ? ») : l'enfant pose la question (voix Artlist), Pierre répond en sous-titres jaunes, images de Rome en ralenti noir et blanc. Pierre = débardeur noir dans les rushs de Rome (à confirmer par Maxime) ; le débardeur vert avec la chaîne est Antoine. Points d'entrée indicatifs, à caler à l'œil dans les rushs. Faits utilisés, tous vérifiés : 53:34 à Rome, 1ers des 35-39 (assets/hyrox/hyrox_pierre-huiban_rome_2026.json), qualifiés pour Hong Kong (juin 2027), course en doubles avec Antoine. Le dialogue est un procédé d'écriture (comme le reel de référence) : la voix est une voix de synthèse, pas celle de son fils ; Pierre valide le texte avant publication.",
+  "gabarit": "reel",
+  "sortie": "pierre-reel-r01-how-do-you-win.mp4",
+  "ralenti": 4,
+  "plans": [
+    {
+      "clip": "7366",
+      "debut": 0.4,
+      "duree": 1.0,
+      "x": 0.5
+    },
+    {
+      "clip": "7362",
+      "debut": 1.5,
+      "duree": 1.0,
+      "x": 0.45
+    },
+    {
+      "clip": "7360",
+      "debut": 0.4,
+      "duree": 1.0,
+      "x": 0.4
+    },
+    {
+      "clip": "7374",
+      "debut": 1.2,
+      "duree": 1.0,
+      "x": 0.4
+    },
+    {
+      "clip": "7376",
+      "debut": 19.0,
+      "duree": 1.0,
+      "x": 0.5
+    },
+    {
+      "clip": "7348",
+      "debut": 8.5,
+      "duree": 1.0,
+      "x": 0.5
+    },
+    {
+      "clip": "7362",
+      "debut": 5.6,
+      "duree": 1.0,
+      "x": 0.45
+    }
+  ],
+  "voix": [
+    {
+      "fichier": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f2e88dc5-98c8-450b-908e-91bf447a53f8.mp3",
+      "debut": 0.6,
+      "_texte": "Daddy, how do you win?"
+    },
+    {
+      "fichier": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/6186dba0-1e31-4540-aafe-f6822ad5487e.mp3",
+      "debut": 16.3,
+      "_texte": "Are you going to win in Hong Kong?"
+    }
+  ],
+  "textes": [
+    {
+      "debut": 0.6,
+      "fin": 3.6,
+      "texte": "Daddy, how do you win?"
+    },
+    {
+      "debut": 4.2,
+      "fin": 7.8,
+      "texte": "You don't win\non race day."
+    },
+    {
+      "debut": 8.2,
+      "fin": 11.8,
+      "texte": "You win on the mornings\nnobody sees."
+    },
+    {
+      "debut": 12.2,
+      "fin": 15.8,
+      "texte": "On tired legs.\nWith Antoine next to me."
+    },
+    {
+      "debut": 16.3,
+      "fin": 19.6,
+      "texte": "Are you going to win\nin Hong Kong?"
+    },
+    {
+      "debut": 20.2,
+      "fin": 23.8,
+      "texte": "I don't know, buddy.\nBut I'll give everything."
+    },
+    {
+      "debut": 24.2,
+      "fin": 27.9,
+      "texte": "Like in Rome.\n53:34. First in our age group."
+    }
+  ],
+  "legende": "\"Daddy, how do you win?\"\n\nA small question with a big answer.\n\n53:34 in Rome with @antoine_bhna, first in our age group. Next stop: Hong Kong 🇭🇰\n\n#hyrox #workingdad #fatherhood #hybridathlete #roadtohongkong"
+}
