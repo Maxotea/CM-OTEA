@@ -83,10 +83,11 @@ matinée), Maxime. Durée 32 minutes.
   de calage) 350 € HT, Burger Quiz express 150 € HT. Aucune ligne « offerte »
   : prix net, 35 % sous le devis d'août. L'ancien devis est expiré, rien à
   archiver.
-- Brouillon Gmail à Eva, Aude et Lucile en copie, dans le fil « Projet
-  FILATURE et + ;) », avec le résumé des changements et la proposition d'un
-  point de calage la semaine du 19 octobre. Les deux PDF sont à joindre par
-  Maxime.
+- Mail à Eva, Aude et Lucile en copie, dans le fil « Projet FILATURE et
+  + ;) », avec le résumé des changements et la proposition d'un point de
+  calage la semaine du 19 octobre. **Envoyé par Maxime le 7 octobre à 11h16**,
+  avec le déroulé et le devis 05153 en pièces jointes. Réponse d'Amundi
+  attendue ; relancer vers le 14 octobre si silence.
 
 ## À faire ensuite
 
