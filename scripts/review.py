@@ -719,13 +719,15 @@ def resumer(lignes):
         with open(chemin, "a", encoding="utf-8") as f:
             f.write("\n".join(lignes) + "\n")
 
-def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS):
+def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_retenus=()):
     """Tri des brouillons d'un compte en validation automatique.
 
     Retourne (a_publier, retenus), retenus étant une liste de (post, raison). Seuls les
     brouillons à venir (au-delà de la marge, en deçà de l'horizon) sont regardés. Les
     garde-fous de la review restent : texte à placeholders ou sans média = retenu. S'ajoute
-    le tiret cadratin, qui ne compte pas pour une story (Instagram n'affiche pas son texte).
+    le tiret cadratin, qui ne compte pas pour une story (Instagram n'affiche pas son texte),
+    et les visuels listés dans `medias_retenus` du compte (morceaux d'URL : visuels IA
+    interdits sur un compte qui a de vraies photos, règle du 21/08/2026).
     """
     limite = maintenant + timedelta(days=horizon_jours)
     a_publier, retenus = [], []
@@ -740,6 +742,8 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS):
             retenus.append((post, "texte à placeholders"))
         elif not post.get("media"):
             retenus.append((post, "aucun média attaché"))
+        elif any(m in url for url in post["media"] for m in medias_retenus):
+            retenus.append((post, "visuel IA à remplacer par une vraie photo"))
         elif NOTE_INTERNE.search(texte):
             retenus.append((post, "note de tournage dans la légende (vidéo à tourner)"))
         elif TIRET.search(texte) and type_du(post) != "Story":
@@ -762,7 +766,8 @@ def valider_auto(compte, dry_run=False, maintenant=None):
     debut, fin = maintenant.date(), maintenant.date() + timedelta(days=HORIZON_AUTO_JOURS)
     posts = metricool("/scheduler/posts", blogId=compte["blog_id"],
                       start=f"{debut}T00:00:00", end=f"{fin}T23:59:59").get("data", [])
-    a_publier, retenus = a_valider_auto(posts, maintenant)
+    a_publier, retenus = a_valider_auto(posts, maintenant,
+                                        medias_retenus=compte.get("medias_retenus") or ())
     compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
                  "sans_decision": 0, "en_attente": len(retenus)}
     print(f"{compte['nom']} — validation automatique : {len(a_publier)} à publier, "

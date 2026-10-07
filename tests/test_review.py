@@ -298,13 +298,16 @@ def test_a_valider_auto_trie_et_garde_les_garde_fous():
         _brouillon("2026-10-11T12:00:00", texte="Un tiret — ici"),
         _brouillon("2026-10-12T10:00:00", texte="Story lun — Belle semaine", kind="STORY"),  # ✓
         _brouillon("2026-10-13T18:00:00", texte="La marche.\n\n🎬 À tourner : démo avant / après."),
+        _brouillon("2026-10-14T12:00:00", media=("https://static.metricool.com/zapier/202607/x.png",)),
         _brouillon("2026-10-30T12:00:00"),                       # au-delà de l'horizon
     ]
-    a_publier, retenus = review.a_valider_auto(posts, maintenant)
+    a_publier, retenus = review.a_valider_auto(posts, maintenant,
+                                               medias_retenus=("zapier/202607/",))
     assert [p["id"] for p in a_publier] == ["2026-10-08T12:00:00", "2026-10-12T10:00:00"]
     assert [r for _, r in retenus] == ["aucun média attaché", "texte à placeholders",
                                        "tiret cadratin dans la légende (règle de rédaction)",
-                                       "note de tournage dans la légende (vidéo à tourner)"]
+                                       "note de tournage dans la légende (vidéo à tourner)",
+                                       "visuel IA à remplacer par une vraie photo"]
 
 
 def test_comptes_auto_hors_du_circuit_des_tableaux():
