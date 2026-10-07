@@ -1,5 +1,5 @@
 {
-  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. semaines_avance = nombre de semaines ouvertes à la fois devant le client (1 par défaut ; 2 = le vendredi génère le lundi suivant ET celui d'après). drive_fichiers = la liste des fichiers ouverts quand il y en a plusieurs (un par semaine, du plus ancien au plus récent) ; la relève les lit tous. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
+  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. semaines_avance = nombre de semaines ouvertes à la fois devant le client (1 par défaut ; 2 = le vendredi génère le lundi suivant ET celui d'après). drive_fichiers = la liste des fichiers ouverts quand il y en a plusieurs (un par semaine, du plus ancien au plus récent) ; la relève les lit tous, plus drive_fichier s'il est encore renseigné (la semaine en cours, gardée jusqu'au vendredi où elle part en Archives). drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
   "comptes": [
     {
       "slug": "gossip-beauty-center",
@@ -68,7 +68,10 @@
       "drive_dossier": "1GeMYG_myNbXPTY9W3K8YLdSAm2jJwofw",
       "drive_archives": "1JQI4xUCI1yuZ2MfBCNiv_UjXbScFIDfB",
       "semaines_avance": 2,
-      "drive_fichiers": [],
+      "drive_fichiers": [
+        "1WAhFpk-WHlTqjn8-zaZbfc5P-1o-gEYqgsfK7jAEADo",
+        "14UJlJKm4hCN2PP3yyA4eY1ae4okdQoaGjnmepvr7WIg"
+      ],
       "note": "Compte de l'agence. Jusqu'au 07/10/2026 Maxime validait directement dans Metricool ; depuis, même circuit que Pierre Huiban à sa demande (« faire le même process pour OTEA Production et OTEA Filmakers ») : dossier Validation hebdo créé le 07/10, deux semaines ouvertes. A servi de banc d'essai réel le 08/08/2026 (post 359735766)."
     },
     {
@@ -81,6 +84,10 @@
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
       "drive_fichier": "1jRbMi24_GMWKN7PTS6G-vV9g1tBvTzrpIPN3G7aRdms",
+      "drive_fichiers": [
+        "17XT6GvZiyLcKryXh1ouQKfKADgMMncv97-mjTp5eMIU",
+        "1lfkKMc43mtixFEWBwLyTJLqI-6HJ4MiWZfgIy-CmC18"
+      ],
       "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). BLOQUANT au 21/08/2026 : le dossier Validation hebdo n'a AUCUNE permission « tous les utilisateurs disposant du lien » (vérifié par get_file_permissions), la relève ne peut donc pas lire le fichier et le job appliquer sort en erreur à chaque passage depuis le 19/08. Réglage à faire une fois par Maxime sur le dossier : Partager → Accès général → Tous les utilisateurs disposant du lien → Éditeur."
     }
   ]

@@ -251,9 +251,10 @@ def test_config_des_comptes_actifs_est_complete():
         for champ in ("slug", "nom", "prefixe", "blog_id", "drive_dossier"):
             assert compte.get(champ), f"{compte.get('slug')} : {champ} manquant"
         assert review.fichiers_de(compte), f"{compte['slug']} : ni drive_fichier ni drive_fichiers"
+        # la semaine en cours reste ouverte jusqu'au vendredi, en plus des semaines d'avance
         avance = int(compte.get("semaines_avance") or 1)
-        assert len(review.fichiers_de(compte)) <= avance, \
-            f"{compte['slug']} : plus de fichiers ouverts que de semaines d'avance"
+        assert len(review.fichiers_de(compte)) <= avance + 1, \
+            f"{compte['slug']} : plus de fichiers ouverts que la semaine en cours + l'avance"
 
 
 def test_fichiers_de_fusionne_sans_doublon():
