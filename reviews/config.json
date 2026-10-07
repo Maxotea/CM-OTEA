@@ -64,11 +64,12 @@
       "blog_id": 5733269,
       "nom": "OTEA PRODUCTION",
       "prefixe": "OP",
-      "actif": false,
-      "drive_dossier": null,
-      "drive_archives": null,
-      "drive_fichier": null,
-      "note": "Compte de l'agence — Maxime valide directement dans Metricool, pas de fichier client. A servi de banc d'essai réel le 08/08/2026 (post 359735766)."
+      "actif": true,
+      "drive_dossier": "1GeMYG_myNbXPTY9W3K8YLdSAm2jJwofw",
+      "drive_archives": "1JQI4xUCI1yuZ2MfBCNiv_UjXbScFIDfB",
+      "semaines_avance": 2,
+      "drive_fichiers": [],
+      "note": "Compte de l'agence. Jusqu'au 07/10/2026 Maxime validait directement dans Metricool ; depuis, même circuit que Pierre Huiban à sa demande (« faire le même process pour OTEA Production et OTEA Filmakers ») : dossier Validation hebdo créé le 07/10, deux semaines ouvertes. A servi de banc d'essai réel le 08/08/2026 (post 359735766)."
     },
     {
       "slug": "otea-filmakers",
@@ -76,6 +77,7 @@
       "nom": "Otea Filmakers",
       "prefixe": "OF",
       "actif": true,
+      "semaines_avance": 2,
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
       "drive_fichier": "1jRbMi24_GMWKN7PTS6G-vV9g1tBvTzrpIPN3G7aRdms",
