@@ -32,3 +32,6 @@
 
 ## Note ROI (ancienne fiche, conservée — 02/08/2026)
 - Typologie B2B projet : 1 projet signé couvre largement la prestation ; ROI aussi mesurable en leads qualifiés (DM, formulaires).
+
+## Validation hebdo à deux semaines d'avance (07/10/2026)
+Même circuit que Pierre Huiban : tableaux des semaines du 12-10 et du 19-10 déposés le 07/10 dans le dossier Validation hebdo, celui du 05-10 reste ouvert jusqu'à vendredi. Config `semaines_avance: 2` dans `reviews/config.json` (PR #56). Le dossier n'a toujours aucun partage par lien.
