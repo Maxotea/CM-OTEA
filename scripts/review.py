@@ -70,6 +70,9 @@ PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]")
 # Règle de rédaction de Maxime (mémoire redaction-sans-tirets) : aucun tiret cadratin ni
 # double tiret dans un texte publié. Une légende qui en contient n'est pas publiée seule.
 TIRET = re.compile(r"[—–]|--")
+# Note de production laissée dans une légende (« 🎬 À tourner : … ») : le visuel attaché
+# n'est qu'un provisoire, la vidéo reste à tourner. Jamais publié en automatique.
+NOTE_INTERNE = re.compile(r"à tourner\s*:|a tourner\s*:|\[à faire\]|todo", re.IGNORECASE)
 PARIS = ZoneInfo("Europe/Paris")
 # Validation automatique : jusqu'où on regarde devant, et la marge avant publication
 # (un post à moins de 30 minutes n'est plus touché, Metricool pourrait le publier deux fois).
@@ -737,6 +740,8 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS):
             retenus.append((post, "texte à placeholders"))
         elif not post.get("media"):
             retenus.append((post, "aucun média attaché"))
+        elif NOTE_INTERNE.search(texte):
+            retenus.append((post, "note de tournage dans la légende (vidéo à tourner)"))
         elif TIRET.search(texte) and type_du(post) != "Story":
             retenus.append((post, "tiret cadratin dans la légende (règle de rédaction)"))
         else:
