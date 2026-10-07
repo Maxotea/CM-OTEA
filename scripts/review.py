@@ -40,6 +40,7 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, time as dtime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import openpyxl
 from openpyxl.formatting.rule import FormulaRule
@@ -66,6 +67,14 @@ RESEAUX = {"instagram": "IG", "facebook": "FB", "tiktok": "TikTok", "linkedin": 
            "youtube": "YT", "twitter": "X", "pinterest": "Pinterest", "threads": "Threads",
            "gmb": "GMB"}
 PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]")
+# Règle de rédaction de Maxime (mémoire redaction-sans-tirets) : aucun tiret cadratin ni
+# double tiret dans un texte publié. Une légende qui en contient n'est pas publiée seule.
+TIRET = re.compile(r"[—–]|--")
+PARIS = ZoneInfo("Europe/Paris")
+# Validation automatique : jusqu'où on regarde devant, et la marge avant publication
+# (un post à moins de 30 minutes n'est plus touché, Metricool pourrait le publier deux fois).
+HORIZON_AUTO_JOURS = 14
+MARGE_AUTO = timedelta(minutes=30)
 
 
 # ---------------------------------------------------------------- lecture Metricool
@@ -707,6 +716,85 @@ def resumer(lignes):
         with open(chemin, "a", encoding="utf-8") as f:
             f.write("\n".join(lignes) + "\n")
 
+def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS):
+    """Tri des brouillons d'un compte en validation automatique.
+
+    Retourne (a_publier, retenus), retenus étant une liste de (post, raison). Seuls les
+    brouillons à venir (au-delà de la marge, en deçà de l'horizon) sont regardés. Les
+    garde-fous de la review restent : texte à placeholders ou sans média = retenu. S'ajoute
+    le tiret cadratin, qui ne compte pas pour une story (Instagram n'affiche pas son texte).
+    """
+    limite = maintenant + timedelta(days=horizon_jours)
+    a_publier, retenus = [], []
+    for post in posts:
+        if not post.get("draft"):
+            continue
+        quand = datetime.fromisoformat(post["publicationDate"]["dateTime"])
+        if quand <= maintenant + MARGE_AUTO or quand > limite:
+            continue
+        texte = post.get("text") or ""
+        if PLACEHOLDER.search(texte):
+            retenus.append((post, "texte à placeholders"))
+        elif not post.get("media"):
+            retenus.append((post, "aucun média attaché"))
+        elif TIRET.search(texte) and type_du(post) != "Story":
+            retenus.append((post, "tiret cadratin dans la légende (règle de rédaction)"))
+        else:
+            a_publier.append(post)
+    return a_publier, retenus
+
+
+def valider_auto(compte, dry_run=False, maintenant=None):
+    """Compte dont Maxime est lui-même le client : chaque brouillon vaut ✅.
+
+    Décision de Maxime du 07/10/2026 pour OTEA Production et Otea Filmakers : « tu peux
+    considérer que c'est validé à chaque fois, car c'est moi ». Pas de tableau ; à chaque
+    relève, les brouillons des deux semaines à venir qui passent les garde-fous partent en
+    publication automatique, par le même chemin qu'un ✅ client (passer_en_publication).
+    """
+    slug = compte["slug"]
+    maintenant = maintenant or datetime.now(PARIS).replace(tzinfo=None)
+    debut, fin = maintenant.date(), maintenant.date() + timedelta(days=HORIZON_AUTO_JOURS)
+    posts = metricool("/scheduler/posts", blogId=compte["blog_id"],
+                      start=f"{debut}T00:00:00", end=f"{fin}T23:59:59").get("data", [])
+    a_publier, retenus = a_valider_auto(posts, maintenant)
+    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
+                 "sans_decision": 0, "en_attente": len(retenus)}
+    print(f"{compte['nom']} — validation automatique : {len(a_publier)} à publier, "
+          f"{len(retenus)} retenu(s)")
+    etat = charger_etat(slug)
+    journal = etat.setdefault("auto", {})
+    for post, raison in retenus:
+        print(f"  ⏳ {post['publicationDate']['dateTime']} {type_du(post)} : {raison}")
+    for post in a_publier:
+        quand = post["publicationDate"]["dateTime"]
+        if dry_run:
+            print(f"  [dry-run] {quand} {type_du(post)} : passerait en publication auto")
+            continue
+        try:
+            resultat, post_id = passer_en_publication(compte["blog_id"], post,
+                                                      post.get("text") or "", quand)
+            compteurs["publies"] += 1
+            journal[quand + "|" + str(post["id"])] = {
+                "quand": datetime.now().isoformat(timespec="seconds"),
+                "type": type_du(post), "resultat": resultat, "post_id": post_id}
+            print(f"  ✓ {quand} {type_du(post)} : {resultat}")
+        except Exception as exc:
+            compteurs["erreurs"] += 1
+            print(f"  ✗ {quand} : {exc}", file=sys.stderr)
+    if compteurs["publies"] and not dry_run:
+        ETAT.mkdir(parents=True, exist_ok=True)
+        (ETAT / f"{slug}.json").write_text(
+            json.dumps(etat, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return compteurs
+
+
+def comptes_auto(filtre=None):
+    config = json.loads((REVIEWS / "config.json").read_text(encoding="utf-8"))
+    return [c for c in config["comptes"] if c.get("validation_auto")
+            and (not filtre or c["slug"] == filtre)]
+
+
 def charger_comptes(filtre=None):
     config = json.loads((REVIEWS / "config.json").read_text(encoding="utf-8"))
     comptes = [c for c in config["comptes"] if c.get("actif")]
@@ -735,7 +823,10 @@ def main():
     if absents:
         raise SystemExit(f"secrets manquants : {', '.join(absents)}")
 
-    comptes = charger_comptes(args.client)
+    if args.commande == "appliquer" and args.client and comptes_auto(args.client):
+        comptes = []  # compte en validation automatique : pas de tableau à relever
+    else:
+        comptes = charger_comptes(args.client)
     if args.commande == "generer":
         if args.a_venir:
             plan = [(c, lundi) for c in comptes for lundi in semaines_a_venir(c)]
@@ -751,8 +842,9 @@ def main():
 
     totaux, resume = {}, ["## Relève de la review client", "", "| Compte | Publiés | À corriger | Refusés | En attente | Sans décision | Erreurs |",
                           "|---|---:|---:|---:|---:|---:|---:|"]
-    for compte in comptes:
-        compteurs = appliquer_compte(compte, args.dry_run)
+    for compte, traiter in [(c, appliquer_compte) for c in comptes] + \
+            [(c, valider_auto) for c in comptes_auto(args.client)]:
+        compteurs = traiter(compte, args.dry_run)
         for cle, valeur in compteurs.items():
             totaux[cle] = totaux.get(cle, 0) + valeur
         resume.append(f"| {compte['nom']} | " + " | ".join(

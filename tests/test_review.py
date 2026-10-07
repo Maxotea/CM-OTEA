@@ -276,3 +276,36 @@ def test_semaines_a_venir_selon_l_avance():
 def test_charger_comptes_refuse_un_inconnu():
     with pytest.raises(SystemExit):
         review.charger_comptes("client-qui-n-existe-pas")
+
+
+# ---------------------------------------------------------------- validation automatique
+
+def _brouillon(quand, draft=True, media=("m",), texte="Légende propre", kind="POST"):
+    return {"id": quand, "draft": draft, "media": list(media), "text": texte,
+            "publicationDate": {"dateTime": quand},
+            "providers": [{"network": "instagram"}], "instagramData": {"type": kind}}
+
+
+def test_a_valider_auto_trie_et_garde_les_garde_fous():
+    maintenant = datetime(2026, 10, 7, 12, 0)
+    posts = [
+        _brouillon("2026-10-07T12:10:00"),                       # dans la marge de 30 min
+        _brouillon("2026-10-07T10:00:00"),                       # passé
+        _brouillon("2026-10-08T12:00:00"),                       # ✓
+        _brouillon("2026-10-08T18:00:00", draft=False),          # déjà publiable
+        _brouillon("2026-10-09T12:00:00", media=()),             # sans média
+        _brouillon("2026-10-10T12:00:00", texte="Bravo [VAINQUEUR]"),
+        _brouillon("2026-10-11T12:00:00", texte="Un tiret — ici"),
+        _brouillon("2026-10-12T10:00:00", texte="Story lun — Belle semaine", kind="STORY"),  # ✓
+        _brouillon("2026-10-30T12:00:00"),                       # au-delà de l'horizon
+    ]
+    a_publier, retenus = review.a_valider_auto(posts, maintenant)
+    assert [p["id"] for p in a_publier] == ["2026-10-08T12:00:00", "2026-10-12T10:00:00"]
+    assert [r for _, r in retenus] == ["aucun média attaché", "texte à placeholders",
+                                       "tiret cadratin dans la légende (règle de rédaction)"]
+
+
+def test_comptes_auto_hors_du_circuit_des_tableaux():
+    auto = {c["slug"] for c in review.comptes_auto()}
+    assert auto == {"otea-production", "otea-filmakers"}
+    assert not auto & {c["slug"] for c in review.charger_comptes()}
