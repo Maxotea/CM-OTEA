@@ -17,7 +17,7 @@ Règles qui s'appliquent quelle que soit l'inspiration :
 
 | # | Ajoutée le | Lien | Ce qu'il faut reprendre | Comptes visés | Utilisée sur |
 |---|---|---|---|---|---|
-| 1 | 08/10/2026 | [reel DeKX8kbtcRX](https://www.instagram.com/reel/DeKX8kbtcRX/) | ⏳ **À décrire** : Instagram n'est pas accessible depuis l'outil, le style n'a pas encore été détaillé (rythme des coupes, transitions, texte à l'écran, musique). Maxime complète en 2 ou 3 lignes, ou dépose la vidéo pour analyse plan par plan. | à préciser | pas encore |
+| 1 | 08/10/2026 | [reel DeKX8kbtcRX](https://www.instagram.com/reel/DeKX8kbtcRX/) | ⏳ **À décrire** : Instagram n'est pas accessible depuis l'outil, le style n'a pas encore été détaillé (rythme des coupes, transitions, texte à l'écran, musique). Maxime complète en 2 ou 3 lignes, ou dépose la vidéo pour analyse plan par plan. | Otea Filmakers, Otea Production, Run On Invest | pas encore |
 
 ## Comment ajouter une inspiration
 
