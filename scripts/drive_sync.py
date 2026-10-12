@@ -63,7 +63,11 @@ def synchroniser(client, dry_run=False):
     medias = spec["photos"]
 
     connus = {m["empreinte"]: m for m in medias if m.get("empreinte")}
-    a_traiter = [m for m in medias if not m.get("empreinte")]
+    # Un média catalogué avant son dépôt Drive (drive_id vide) attend : ce n'est pas un échec.
+    en_attente = [m for m in medias if not m.get("empreinte") and not m.get("drive_id")]
+    if en_attente:
+        print(f"{client} : {len(en_attente)} média(s) en attente de dépôt Drive (drive_id vide), ignoré(s)")
+    a_traiter = [m for m in medias if not m.get("empreinte") and m.get("drive_id")]
     if not a_traiter:
         print(f"{client} : rien de nouveau ({len(connus)} média(s) déjà récupéré(s))")
         return 0

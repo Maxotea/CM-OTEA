@@ -18,7 +18,7 @@
 
 ## Assets / banque
 - État : AUCUN rush prêt — "à tourner". Les brouillons contiennent le texte final + une idée de plan "🎬 À tourner : …" en fin de caption, qui sert de shot-list. Maxime tourne, attache le média dans Metricool, valide.
-- À créer : une banque-photos-otea-filmakers.md quand les premiers rushes existeront.
+- Banque photos : `banque-photos-otea.md` (34 photos naturelles validées le 12/10/2026, Maupiti et Tromsø ; fichiers dans `medias/otea-filmakers/nouvelles-2026-10/`, manifeste `photos/otea-filmakers.json`, dépôt Drive à faire).
 
 ## Saisonnalité exploitée (vérifiée)
 - Rentrée septembre, automne/golden hour (angle fort vidéaste), vacances Toussaint (17/10→02/11).
