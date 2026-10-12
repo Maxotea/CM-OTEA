@@ -1,0 +1,27 @@
+{
+  "_doc": "Pilote « vidéo d'annonce » La Galerie : le bien VM383 (7 plans i2v déjà produits le 21/08/2026, photos 11 à 20 de lg-crop-9-16.py, zéro crédit). Tout ce qui est entre crochets vient de l'annonce publiée sur lagalerieimmobiliere.com et doit être relevé AVANT de rendre : aucun chiffre ne s'invente. Les titres marqués « à confirmer » demandent de regarder la photo : on ne décrit pas une pièce qu'on n'a pas vue.",
+  "slug": "pilote-vm383",
+  "bien": {
+    "titre": "[type de bien] à [ville]",
+    "accroche": "[surface] m² · [nombre] pièces · [étage / extérieur]",
+    "ville": "[ville]"
+  },
+  "plans": [
+    {"plan": "11", "titre": "[pièce, à confirmer sur la photo]", "texte": "Un bien qui se découvre dès l'entrée.", "voix": null},
+    {"plan": "15", "titre": "le salon", "texte": "La lumière, le critère qu'on sous-estime le plus.", "voix": null},
+    {"plan": "18", "titre": "la cuisine", "texte": "Là où tout se passe, ouverte sur le séjour [à confirmer].", "voix": null},
+    {"plan": "13", "titre": "[pièce, à confirmer sur la photo]", "texte": "Des volumes qui laissent de la place à vos projets.", "voix": null},
+    {"plan": "12", "titre": "la terrasse", "texte": "Un extérieur, à quelques minutes de Paris.", "voix": null},
+    {"plan": "17", "titre": "[pièce, à confirmer sur la photo]", "texte": "Le calme, sans renoncer à la ville.", "voix": null}
+  ],
+  "outro": {
+    "titre": "visite sur rendez-vous",
+    "texte": "La Galerie Immobilière, Puteaux. Le lien de l'annonce est en bio."
+  },
+  "musique": true,
+  "narration": {
+    "_doc": "Une phrase par plan = le champ texte ci-dessus, dite telle quelle. Voix préréglée française de generate_audio (jamais la voix clonée de Sabrina). Une fois les wav produits, renseigner leur chemin dans voix. Sans wav, la vidéo sort avec la musique seule et le texte à l'écran.",
+    "voix_type": "preset",
+    "registre": "vouvoiement, posé, une phrase courte par plan, aucun chiffre non relevé"
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "_doc": "Bascule des visuels IA vers la banque luxe (restylage des vraies photos du salon). A rejouer via l'action Metricool bulk_update_post_media : blog_id + updates. L'affectation visuel<->sujet est PROVISOIRE, posee sans avoir vu les rendus.",
+  "client": "gossip-beauty-center",
+  "blog_id": "5733306",
+  "date": "2026-08-07",
+  "statut": "EN COURS — 6 faits, 24 restants",
+  "visuels": {
+    "V1": {
+      "source_drive": "image00002 (HD)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_140003_a2f0e6ab-d647-47c5-927c-9a1546804258.mp4"
+    },
+    "V2": {
+      "source_drive": "image00003 (HD)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161159_12106807-33ba-40c5-a1fb-353b59b1c2a3.mp4"
+    },
+    "V3": {
+      "source_drive": "image00004 (HD)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_140003_ddc355ae-87a7-4154-8c09-0256f7117168.mp4"
+    },
+    "V4": {
+      "source_drive": "image00001",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_61acc9e2-a848-46d0-a2f0-b7d3f5329e2f.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4"
+    },
+    "V6": {
+      "source_drive": "image00006",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_26a7a4f6-15c4-4f2f-86ba-dcca3de64091.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_155846_43315cc6-90a5-47bb-83c3-a3faf7b49583.mp4"
+    },
+    "V7": {
+      "source_drive": "image00007",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_094621_76404f7e-9fd9-4abd-8325-f83dc1474247.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_155846_6132811d-76cd-4e15-ab64-4d792b854505.mp4"
+    },
+    "V8": {
+      "source_drive": "image00008",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_a1c3f90c-15ea-4ebd-a594-c8b465af4598.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_155846_782b9753-93a9-4c3a-a368-e3e00c421350.mp4"
+    },
+    "V9": {
+      "source_drive": "image00009",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_d479d9d5-6c41-42db-8183-e9592c40b357.png",
+      "video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_155951_81227e35-83c8-4b72-b9ed-bcf164728eea.mp4"
+    }
+  },
+  "affectation_provisoire": {
+    "accueil": "V1",
+    "massage": "V2",
+    "hammam": "V3",
+    "coiffure": "V4",
+    "cocooning": "V6",
+    "produits-cheveux": "V7",
+    "octobre-rose": "V8",
+    "soin-visage": "V9"
+  },
+  "updates": [
+    {
+      "post_id": "352385622",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-08-05",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14525970038611108765.png",
+      "statut": "HORS PERIMETRE — date deja passee"
+    },
+    {
+      "post_id": "352385638",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-08-07",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2449069421252751805.png",
+      "statut": "HORS PERIMETRE — date deja passee"
+    },
+    {
+      "post_id": "358852794",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-08-10",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": false,
+      "ancien_media": "https://static.metricool.com/common/202608/5733306-mtr_8066276886204391867.png",
+      "statut": "A TRAITER A PART — autoPublish actif, bulk_replace_posts le passerait en brouillon"
+    },
+    {
+      "post_id": "352387770",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-08-14",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-15076287382568237210.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359736471
+    },
+    {
+      "post_id": "352389359",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_61acc9e2-a848-46d0-a2f0-b7d3f5329e2f.png",
+      "date": "2026-08-17",
+      "sujet": "coiffure",
+      "visuel": "V4",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6406803316736036344.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737258
+    },
+    {
+      "post_id": "352389397",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_26a7a4f6-15c4-4f2f-86ba-dcca3de64091.png",
+      "date": "2026-08-21",
+      "sujet": "cocooning",
+      "visuel": "V6",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-11006994014580738450.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737271
+    },
+    {
+      "post_id": "352391801",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-08-28",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-1428950671760351779.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737280
+    },
+    {
+      "post_id": "352393783",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_26a7a4f6-15c4-4f2f-86ba-dcca3de64091.png",
+      "date": "2026-08-31",
+      "sujet": "cocooning",
+      "visuel": "V6",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6829657938783543723.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737291
+    },
+    {
+      "post_id": "352393800",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_094621_76404f7e-9fd9-4abd-8325-f83dc1474247.png",
+      "date": "2026-09-04",
+      "sujet": "produits-cheveux",
+      "visuel": "V7",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14206794336245276463.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352393821",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-09-04",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5548889162096888237.png",
+      "statut": "FAIT",
+      "nouveau_post_id": 359737296
+    },
+    {
+      "post_id": "352395663",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-09-07",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16822801000119623328.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352395692",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_61acc9e2-a848-46d0-a2f0-b7d3f5329e2f.png",
+      "date": "2026-09-07",
+      "sujet": "coiffure",
+      "visuel": "V4",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16452501522709958112.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352395698",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_61acc9e2-a848-46d0-a2f0-b7d3f5329e2f.png",
+      "date": "2026-09-09",
+      "sujet": "coiffure",
+      "visuel": "V4",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8531875422604542130.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352395704",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-09-09",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8251962599419752019.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352395714",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-09-10",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-3031722724201374554.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352395727",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_26a7a4f6-15c4-4f2f-86ba-dcca3de64091.png",
+      "date": "2026-09-11",
+      "sujet": "cocooning",
+      "visuel": "V6",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-7752346412386492648.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398137",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-09-14",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-17610195761480910576.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398150",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-09-16",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-18210417420943530877.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398161",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-09-18",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-8845846792978976796.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398173",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-09-21",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-14402807515008267470.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398187",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_d479d9d5-6c41-42db-8183-e9592c40b357.png",
+      "date": "2026-09-23",
+      "sujet": "soin-visage",
+      "visuel": "V9",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-296700448960773670.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352398198",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-09-25",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9372693867474126003.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400008",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_61acc9e2-a848-46d0-a2f0-b7d3f5329e2f.png",
+      "date": "2026-09-28",
+      "sujet": "coiffure",
+      "visuel": "V4",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-5145351870684384941.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400023",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_a1c3f90c-15ea-4ebd-a594-c8b465af4598.png",
+      "date": "2026-09-30",
+      "sujet": "octobre-rose",
+      "visuel": "V8",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-9973900326379750885.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400032",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_805f37a1-54e5-4d9d-ba26-c436c232d781.png",
+      "date": "2026-10-02",
+      "sujet": "massage",
+      "visuel": "V2",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-10922811701296901518.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400044",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_a1c3f90c-15ea-4ebd-a594-c8b465af4598.png",
+      "date": "2026-10-05",
+      "sujet": "octobre-rose",
+      "visuel": "V8",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12992206339867831382.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400055",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_094621_76404f7e-9fd9-4abd-8325-f83dc1474247.png",
+      "date": "2026-10-07",
+      "sujet": "produits-cheveux",
+      "visuel": "V7",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-4424173554232883886.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352400066",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-10-08",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12398003226668985597.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352401122",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_1460b00e-b528-4ccf-8903-6b17baf0a52f.png",
+      "date": "2026-10-09",
+      "sujet": "accueil",
+      "visuel": "V1",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-2913593068463413880.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352401134",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-10-12",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-12173616072510710369.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352401145",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260806_211031_bfe921c1-ee82-4eaf-b20c-e1ad7969560e.png",
+      "date": "2026-10-14",
+      "sujet": "hammam",
+      "visuel": "V3",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-16036715032533706581.png",
+      "statut": "EN ATTENTE"
+    },
+    {
+      "post_id": "352401153",
+      "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_093913_26a7a4f6-15c4-4f2f-86ba-dcca3de64091.png",
+      "date": "2026-10-16",
+      "sujet": "cocooning",
+      "visuel": "V6",
+      "brouillon": true,
+      "ancien_media": "https://static.metricool.com/zapier/202607/5733306-file-6737333385805004967.png",
+      "statut": "EN ATTENTE"
+    }
+  ],
+  "video": {
+    "_doc": "Animation des 8 visuels. kling3_0_turbo, 9:16, 1080x1920, 5 s, camera VERROUILLEE (no zoom / no pan / no push-in). Il manque encore le fondu 0,6 s vers l'outro de marque GOSSIP pour atteindre les ~9,5 s du pipeline de juillet.",
+    "modele": "kling3_0_turbo",
+    "format": "9:16",
+    "resolution": "1080x1920",
+    "duree_s": 5,
+    "outro_ajoutee": false
+  },
+  "stories_encore_en_image": {
+    "_doc": "Les 4 seules stories qui ne sont pas deja en .mp4 sur vraies photos : les mercredis « Cote coiffure », restes en visuel IA. 27 des 31 stories sont deja en video et ne sont PAS concernees. Bascule via bulk_schedule_stories ou update du media.",
+    "statut": "EN ATTENTE",
+    "updates": [
+      {
+        "post_id": "356675985",
+        "date": "2026-08-05",
+        "jour": "mer",
+        "draft": false,
+        "ancien_media": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260727_130831_295a8f3f-2306-4a2f-b961-20d20e105051.png",
+        "sujet": "coiffure",
+        "visuel": "V4",
+        "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4",
+        "note": "DEJA PUBLIEE le 05/08 — hors bascule"
+      },
+      {
+        "post_id": "358851197",
+        "date": "2026-08-12",
+        "jour": "mer",
+        "draft": false,
+        "ancien_media": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260727_130831_295a8f3f-2306-4a2f-b961-20d20e105051.png",
+        "sujet": "coiffure",
+        "visuel": "V4",
+        "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4"
+      },
+      {
+        "post_id": "354380180",
+        "date": "2026-08-19",
+        "jour": "mer",
+        "draft": true,
+        "ancien_media": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260727_130831_295a8f3f-2306-4a2f-b961-20d20e105051.png",
+        "sujet": "coiffure",
+        "visuel": "V4",
+        "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4"
+      },
+      {
+        "post_id": "354380616",
+        "date": "2026-08-26",
+        "jour": "mer",
+        "draft": true,
+        "ancien_media": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260727_130831_295a8f3f-2306-4a2f-b961-20d20e105051.png",
+        "sujet": "coiffure",
+        "visuel": "V4",
+        "media_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260807_161158_596e9961-2ed5-4f8f-8664-3800a53592ff.mp4"
+      }
+    ]
+  },
+  "_methode": "IMPORTANT : bulk_update_post_media NE MARCHE PAS. Le endpoint PUT de Metricool renvoie 200 et ignore silencieusement le champ media — verifie par comparaison avant/apres, sur une URL cloudfront comme sur une URL imgbb. La seule voie est bulk_replace_posts : recreer le post avec le nouveau media puis supprimer l'ancien. Attention, cette action force draft:true et autoPublish:false — un post en publication automatique perdrait son declenchement."
+}

@@ -27,6 +27,11 @@
 - Généré en brouillon 22/07 → 18/09 (26 posts, batches 1 & 2).
 - Batch 3 (21/09 → 16/10, 12 posts) rédigé mais NON créé (rejeté). À reprendre si validation du ton.
 
+## 🎬 Inspirations de montage
+
+Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
+
+
 ## Tarifs / ROI
 - Typologie B2B projet à la base, mais ce compte est une VITRINE de marque perso, pas une prestation CM facturée classique → pas de module ROI dédié pour l'instant (à clarifier si facturation).
 

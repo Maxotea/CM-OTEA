@@ -108,6 +108,13 @@ plus simple.
 - Pas de témoignage ni de citation participant : l'événement n'a pas eu lieu — rien à citer sans inventer.
 - Remplacer les placeholders `[À CONFIRMER : …]` dès que Maxime a les infos d'édition (date, ville, lieu, fréquence, jauge, URL).
 
+## 🎬 Inspirations de montage
+
+Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
+
+Pas de banque photo sur ce compte : le style se monte sur les cartes typo et les photos IA autorisées le 04/08, jamais avec un visage de personne réelle.
+
+
 ## Tarifs / ROI
 - Modèle économique non communiqué (billetterie ? sponsors ?) — pas de module ROI. À revoir quand le brief s'étoffera.
 
