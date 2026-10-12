@@ -54,9 +54,10 @@
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
       "semaines_avance": 2,
       "drive_fichiers": [
-        "1cUzldtSeQMOalcy3Dv7TIHQUkGknwV0_s7A49d1yZnY"
+        "1cUzldtSeQMOalcy3Dv7TIHQUkGknwV0_s7A49d1yZnY",
+        "1Ixx34cQVds23XhsS3Vj79k5_SUVWFWY0sSWKkoN6NJg"
       ],
-      "note": "Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = les tableaux ouverts, du plus ancien au plus récent : semaine du 12-10 (1cUzldtS…, déposé le 05/10). Le tableau du 19-10 s'ajoute dès qu'il est déposé ; celui du 05-10 est parti en Archives le 09/10, celui du 02-10 (10hnadMp…) y était déjà. Depuis la fusion de la PR #56 (12/10/2026), la relève lit tous les tableaux de drive_fichiers. Email perso toujours manquant : le champ « À » du brouillon reste vide."
+      "note": "Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = les tableaux ouverts, du plus ancien au plus récent : semaine du 12-10 (1cUzldtS…, déposé le 05/10), semaine du 19-10 (1Ixx34cQ…, déposé le 12/10, 11 lignes relues après dépôt). Le 12-10 part en Archives quand le 26-10 arrive ; celui du 05-10 est parti en Archives le 09/10, celui du 02-10 (10hnadMp…) y était déjà. Depuis la fusion de la PR #56 (12/10/2026), la relève lit tous les tableaux de drive_fichiers. Email perso toujours manquant : le champ « À » du brouillon reste vide."
     },
     {
       "slug": "otea-production",
