@@ -4,3 +4,6 @@ __pycache__/
 
 # Canvas assemblé de la présentation (2 Mo, régénérable via design-presentation/gen.py)
 design-presentation/presentation-services-otea.html
+
+# Canevas assemblé de la présentation vidéo d'annonce (2,5 Mo, régénérable via design-video-annonce/gen.py)
+design-video-annonce/video-annonce-la-galerie.html
