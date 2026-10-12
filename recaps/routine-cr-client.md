@@ -96,8 +96,17 @@ La séquence de la session (toujours commencer par `git pull`) :
      du même coup — pas de recomposition, pas de mise à la corbeille. Ne recomposer
      depuis `modele-mail-review.md` que si le brouillon a disparu ; contrôler alors que
      le lien pointe bien sur le `drive_fichier` courant.
-   - Sinon → ne rien envoyer : vérifier que le brouillon du vendredi existe toujours et
-     le lister dans le rapport comme « à envoyer par Maxime ».
+   - Sinon → ne rien envoyer : **recomposer le brouillon lundi matin** et le lister dans
+     le rapport comme « à envoyer par Maxime ».
+
+**Les brouillons du vendredi ne passent pas le week-end.** Vérifié lundi 12/10/2026 :
+les deux brouillons écrits le vendredi 09/10 avaient disparu de Gmail, et rien dans les
+messages envoyés — ni envoyés, ni en attente. Même constat le vendredi 09/10 sur la série
+du lundi 05/10 (`list_drafts` vide, `in:sent newer_than:6d` vide). C'est le sort de chaque
+série depuis le 31/08. Le cycle « écrire vendredi, envoyer lundi » ne tient donc pas : c'est **lundi
+matin** qu'il faut écrire le brouillon, quelques heures avant qu'il serve, et non trois
+jours avant. Le vendredi reste le moment du tableau et de la config ; le mail se compose
+le lundi. Un brouillon du vendredi encore présent le lundi est un bonus, pas une base.
 3. C'est la SEULE exception à la règle « ne jamais envoyer automatiquement », décidée par
    Maxime le 19/08/2026 et bornée par les deux drapeaux de `clients-config.json`.
 
@@ -108,8 +117,18 @@ automatique d'Otea Filmakers. Les brouillons s'étaient empilés, dix au total, 
 leur nombre alerte personne. Le vendredi, donc : lister les Routines, vérifier que
 « Review — envoi du lundi » est `enabled` et que son `last_fired_at` tombe bien sur le
 lundi précédent. Une routine désactivée se signale à Maxime — elle ne se réactive pas
-toute seule : la réactiver ferait partir un mail client dès le lundi suivant, et c'est
-sa décision.
+toute seule, c'est sa décision.
+
+**Mise à jour du 12/10/2026 : le risque qui justifiait cette prudence a disparu.** La
+raison invoquée jusqu'ici — « la réactiver ferait partir un mail client dès le lundi
+suivant » — ne tient plus : le seul compte en `envoi_review_auto` était Otea Filmakers,
+qui est passé en `validation_auto` et sorti du circuit des tableaux le 07/10. Plus aucun
+compte actif n'est en opt-in d'envoi. Réactivée aujourd'hui, la routine du lundi
+n'enverrait donc **rien** automatiquement : elle se contenterait d'écrire les brouillons
+et de les lister pour Maxime. Son prompt est en revanche périmé sur deux points (il nomme
+Otea Filmakers comme l'opt-in, et il lit `drive_fichier` sans `drive_fichiers`) : à
+rafraîchir avant de la rallumer. Sept lundis sont passés sans mail au 12/10 — 31/08,
+07/09, 14/09, 21/09, 28/09, 05/10, 12/10.
 
 ## LUNDI — routine « CR client Publi Hebdo » (9h00 Paris été)
 
