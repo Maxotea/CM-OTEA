@@ -16,11 +16,12 @@ description: Workflow complet de community management multi-comptes — génère
 **Routine hebdomadaire** (déclenchée par « routine hebdo » ou équivalent — un rappel récurrent du lundi existe sur le téléphone de l'utilisateur) :
 0. **Le carrousel du mercredi de chaque compte est-il écrit, rendu et planifié ?** C'est le premier point de la routine, avant l'horizon : un carrousel manquant se voit dans le fil, un trou à la semaine 12 non. Voir `references/carrousels-hebdo.md`.
 1. Pour CHAQUE marque : `list_scheduled_posts` sur les 14 prochaines semaines → mesurer l'horizon couvert.
-2. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
-3. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
-4. **Review client** : le cycle est automatisé depuis le 19/08/2026 — le vendredi matin, l'action « Review hebdo client » génère les fichiers de la semaine suivante et la routine « Review — préparation du vendredi » les dépose dans le dossier Drive permanent de chaque client (`reviews/config.json`) avec les brouillons Gmail ; le lundi matin, la routine d'envoi expédie le mail (si opt-in) ; le CR redescend `reviews/etat/` (publiés, à corriger, refusés, en attente). Séquence complète : `recaps/routine-cr-client.md` ; détail technique : `references/review-hebdo.md`.
-5. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher.
-6. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
+2. **Repérer les suppressions** en comparant avec ce qui avait été planifié : photo retirée d'un brouillon, ou brouillon disparu = un refus de l'utilisateur → appliquer les « Règles de recréation après suppression » ci-dessous.
+3. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
+4. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
+5. **Review client** : le cycle est automatisé depuis le 19/08/2026 — le vendredi matin, l'action « Review hebdo client » génère les fichiers de la semaine suivante et la routine « Review — préparation du vendredi » les dépose dans le dossier Drive permanent de chaque client (`reviews/config.json`) ; le mail se compose le lundi matin (les brouillons du vendredi ne passent pas le week-end) et part si opt-in ; le CR redescend `reviews/etat/` (publiés, à corriger, refusés, en attente). Séquence complète : `recaps/routine-cr-client.md` ; détail technique : `references/review-hebdo.md`.
+6. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher, contenus recréés après suppression.
+7. **Veille trends** : rechercher sur le web les trends/formats/sons de la semaine (Instagram Reels, TikTok), filtrer celles adaptables à chaque compte sans dénaturer la marque, et proposer 1-2 adaptations concrètes par compte (script via reel-script). Voir `references/bonnes-pratiques-cm.md`.
 
 **Capture de trend à tout moment** : quand l'utilisateur signale une trend (message, vocal transcrit, lien, description), immédiatement : 1) l'évaluer avec les critères de bonnes-pratiques-cm.md, 2) proposer son adaptation pour chaque compte pertinent (script/légende prêts), 3) planifier les posts validés via bulk_schedule_posts dans la semaine (les trends se périment en jours), 4) si c'est un enseignement durable (« ce format marche »), l'ajouter à la mémoire et aux bonnes pratiques.
 
@@ -65,7 +66,7 @@ Pour CHAQUE post simple non-reel, choisir le visuel dans cet ordre :
 
 1. **Galerie du client d'abord** : photo de la banque classée par pilier (voir la fiche du client dans `references/clients/`), en rapport avec le texte. Rotation : pas de réutilisation à moins de 30 jours. Limite API : les photos locales n'ont pas d'URL publique → créer le post en brouillon et indiquer à l'utilisateur le fichier exact à attacher.
 2. **Photo trouvée si la galerie ne couvre pas le sujet** (événement externe, lieu, produit) : chercher via image_search/web une photo en rapport avec le texte, en privilégiant les sources libres de droits ou officielles (banques d'images libres, communiqués/press kits des marques) — jamais de photo de presse/agence protégée (Getty, AFP) pour un compte commercial. Avantage : une photo en ligne a une URL publique → elle peut être attachée directement au `schedule_post` (post planifié complet, plus besoin de brouillon). Toujours montrer la photo choisie à l'utilisateur dans la réponse.
-3. **IA (Higgsfield) en tout dernier recours** : uniquement si rien d'existant ne convient (concepts abstraits, schémas pédagogiques). Utiliser l'élément de référence de la marque (ex. J Lawson Golf : élément "JLawson-Studio", rendu tech premium moderne, PAS de bois, métal noir mat, LED avec accent chaud, bleu marine et vert, launch monitor en fond).
+3. **IA (Higgsfield) en tout dernier recours** : uniquement si rien d'existant ne convient (concepts abstraits, schémas pédagogiques). Utiliser l'élément de référence de la marque (ex. J Lawson Golf : élément "JLawson-Studio", rendu tech premium moderne, PAS de bois, métal noir mat, LED avec accent chaud, bleu marine et vert, launch monitor en fond). Une photo supprimée ensuite par l'utilisateur = refusée : en recréer une plus réaliste (voir « Règles de recréation après suppression »).
 
 Les reels restent tournés avec de vraies vidéos (script reel-script + B-roll listé depuis la banque).
 
@@ -110,6 +111,15 @@ modifications dans Metricool et passe les ✅ en publication automatique. Un pos
 décision ne part jamais ; jamais de suppression automatique. Rôle des routines du
 vendredi et du lundi (dépôt Drive, `reviews/config.json`, envoi opt-in, exploitation de
 `reviews/etat/` dans le récap) et garde-fous : `references/review-hebdo.md`.
+
+## Règles de recréation après suppression — une suppression est un feedback
+
+Les brouillons sont relus par l'utilisateur directement dans Metricool : une suppression n'est jamais un accident, c'est un refus à interpréter — pas besoin de demander pourquoi. Deux règles :
+
+1. **La photo d'une publication a été supprimée** (le brouillon existe encore, mais son média a disparu) → la photo ne convenait pas : **en recréer une plus réaliste** pour le même brouillon. Repasser par la hiérarchie de l'Étape 4 (vraie photo de la banque d'abord) ; si le visuel refusé était généré par IA, régénérer en gommant ce qui fait artificiel — lumière naturelle, cadrage type smartphone, textures imparfaites, pas de rendu lisse « publicité » — puis indiquer le nouveau fichier à attacher (ou attacher directement si URL publique).
+2. **Un post a été totalement supprimé** (il n'apparaît plus dans `list_scheduled_posts` alors qu'il avait été planifié) → le texte n'allait pas : **en réécrire un nouveau** sur le même créneau. Changer d'angle et de hook — pas une simple reformulation de la légende refusée.
+
+Dans les deux cas : recréer sans attendre (le créneau reste dû au calendrier) et signaler dans le compte-rendu ce qui a été recréé et pourquoi.
 
 ## Étape 8 — Calcul ROI pour le client (justifier la prestation)
 
