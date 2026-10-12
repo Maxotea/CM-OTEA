@@ -112,14 +112,62 @@
     "cta_bg": "#FF5800",
     "cta_fg": "#201E1E",
     "font_family": [
-      "Forma DJR Display",
+      "Inter Display",
       "Helvetica Neue",
       "Liberation Sans",
       "DejaVu Sans"
     ],
     "uppercase_titles": true,
     "rule": false,
-    "note": "Charte Brandbook 2026 : orange #FF5800, noir #201E1E, blanc #F1F1F1, vert d'eau #ACC1C0. B2B, publication 12h."
+    "note": "Charte Brandbook 2026 : orange #FF5800, noir #201E1E, blanc #F1F1F1, vert d'eau #ACC1C0. B2B, vouvoiement, publication 12h. Police : Inter Display (OFL, fonts/inter-display/), repli DÉCLARÉ commun aux deux comptes OTEA tant que la licence de Forma DJR Display n'est pas confirmée (question Q5 du 12/10/2026) ; Forma DJR revient en tête des listes seulement après cette confirmation, et n'entre jamais dans le dépôt.",
+    "fond": {
+      "manifeste": "photos/otea-production.json",
+      "cache": "medias/otea-production/fonds-prepares",
+      "texte": "#F1F1F1",
+      "muted": "#ACC1C0",
+      "accent": "#FF5800",
+      "voile": "#201E1E",
+      "contraste_titre": 7.0,
+      "contraste_corps": 3.05,
+      "_doc": "Carrousel sur VRAIE photo du shooting HOME SANFAUTE et du portrait pro (jamais une image IA, règle du 21/08/2026). Titre blanc #F1F1F1 à 7:1, corps vert d'eau, accent orange, voile encre calculé slide par slide. contraste_corps 3,05 : la règle est 3:1 (corps 44 à 48 px, kicker 34 px gras et numéro 28 px sont du texte large au sens WCAG AA ; l'orange ne monte pas à 4,5:1 sur une fenêtre ou une softbox) ; le voile est calculé au plus juste, et l'arrondi 8 bits du calque donnait 2,99:1 mesuré sur l'accent orange : la marge de 0,05 garantit 3,00:1 sur les pixels. Les URL du manifeste pointent sur des fonds 4:5 PRÉPARÉS depuis les originaux Drive (cache fonds-prepares) : une story ne les lit jamais (story.cache). Visages : boîtes visage_45 du manifeste, contrôle par scripts/story-photo.py --verifier-carrousel. Dès que ce bloc existe, carrousel.py exige un champ photo sur chaque slide : les specs d'août 2026 sont dans archives/carrousels/otea-production/."
+    },
+    "story": {
+      "nom": "OTEA PRODUCTION",
+      "logo": {
+        "fichier": "assets/logos/otea-production-horizontal-blanc.png",
+        "hauteur": 40,
+        "drive_id": "1HoaYBIxXXslcDAE3lhI05bNN6NLjqEKv",
+        "drive_chemin": "POLE COMMUNICATION / BRAND CONTENT / Livraison finale / LOGOTYPE / HORIZONTAL / PNG / Logo horizontal blanc.png",
+        "_doc": "Logotype horizontal blanc de la charte, posé à x=marge, y=250, 40 px de haut, compté dans le masque du haut. Tant que le fichier n'est pas déposé à ce chemin, story-photo.py écrit le nom saisi et le SIGNALE à chaque rendu. Le monogramme reste hors story."
+      },
+      "registre": [
+        "VIDÉO D'ENTREPRISE",
+        "CAPTATION ÉVÉNEMENTIELLE",
+        "MARQUE EMPLOYEUR"
+      ],
+      "registre_source": "fiche otea-production.md : vidéo d'entreprise, captation événementielle, interviews et marque employeur",
+      "pied": "DEVIS ET PORTFOLIO · LIEN EN BIO",
+      "pied_source": "fiche : CTA « lien en bio » vers devis et portfolio",
+      "casse_phrase": "upper",
+      "polices": {
+        "titre": [
+          "Inter Display Bold"
+        ],
+        "label": [
+          "Inter Display Medium"
+        ]
+      },
+      "taille_phrase": [
+        72,
+        56
+      ],
+      "interligne_phrase": 1.14,
+      "tracking_phrase": 0.0,
+      "grain": 0,
+      "barre_accent": false,
+      "cache": "medias/otea-production/originaux",
+      "_doc": "Stories 1080x1920 sur vraie photo plein cadre (scripts/story-photo.py). cache = originaux HOME-SANFAUTE du Drive (dossier 1_0BHQiHAwDs-4pXp6cXBIfMC7u7ezydY), lus par clé du manifeste ou téléchargés depuis url_originale ; jamais un aperçu ni un fond 4:5 préparé."
+    }
   },
   "pierre-huiban": {
     "nom": "Pierre Huiban",
@@ -148,5 +196,146 @@
     "uppercase_titles": true,
     "rule": false,
     "note": "Pitch Black + Rouge Sang, Anton uppercase, stats en mono. Énergie brute, aucune mise en scène."
+  },
+  "otea-filmakers": {
+    "nom": "Otea Filmakers",
+    "networks": [
+      "instagram",
+      "tiktok"
+    ],
+    "heure": "18:00",
+    "bg": "#201E1E",
+    "fg": "#D5DEDD",
+    "muted": "#D5DEDD",
+    "accent": "#F1F1F1",
+    "cta_bg": "#F1F1F1",
+    "cta_fg": "#201E1E",
+    "font_family": [
+      "Inter Display",
+      "Helvetica Neue",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "uppercase_titles": false,
+    "rule": true,
+    "note": "Voix perso du vidéaste (je, tutoiement), combinaison « Vert & Noir » du Brandbook 2026. Ce n'est pas un OTEA Production en vert d'eau : la hiérarchie passe par le blanc (registre allumé, kicker, mots accentués, barre et filet en #F1F1F1, au-dessus du texte #D5DEDD). Vraies photos uniquement (même banque HOME SANFAUTE qu'OTEA Production), aucune image IA tant que ce compte a des photos. Police : Inter Display (OFL, fonts/inter-display/), repli DÉCLARÉ commun aux deux comptes OTEA tant que la licence de Forma DJR Display n'est pas confirmée (question Q5 du 12/10/2026) ; Forma DJR revient en tête des listes seulement après cette confirmation, et n'entre jamais dans le dépôt.",
+    "fond": {
+      "manifeste": "photos/otea-filmakers.json",
+      "cache": "medias/otea-filmakers/fonds",
+      "texte": "#D5DEDD",
+      "muted": "#D5DEDD",
+      "accent": "#F1F1F1",
+      "voile": "#201E1E",
+      "contraste_titre": 7.0,
+      "contraste_corps": 4.5,
+      "_doc": "Couleurs corrigées le 12/10/2026 (vérificateur de marque). Balayage du jour à contraste_corps 4,5 sur les 32 photos brutes : 7 passent en slide de contenu (16, 19, 23, 27, 29, 30, 44), avec muted #ACC1C0 comme avec #D5DEDD ; moins de 8, donc muted reste #D5DEDD et seuls texte et accent changent (règle du cadrage). Ce sont le titre à 7:1 et l'accent blanc qui limitent, pas le corps."
+    },
+    "story": {
+      "nom": "OTEA FILMAKERS",
+      "registre": [
+        "COULISSES",
+        "LUMIÈRE",
+        "MONTAGE"
+      ],
+      "registre_source": "fiche otea-filmakers.md : P1 craft et coulisses, P2 lumière ; VOYAGE retiré tant qu'aucune photo de voyage n'existe",
+      "pied": "@OTEAFILMAKERS",
+      "pied_source": "fiche : compte @oteafilmakers",
+      "casse_phrase": "sentence",
+      "polices": {
+        "titre": [
+          "Inter Display Medium"
+        ],
+        "label": [
+          "Inter Display Medium"
+        ]
+      },
+      "taille_phrase": [
+        76,
+        58
+      ],
+      "interligne_phrase": 1.16,
+      "tracking_phrase": 0.0,
+      "grain": 18,
+      "barre_accent": true,
+      "filet_accent": true,
+      "cache": "medias/otea-production/originaux",
+      "_doc": "Grain 18 : le grain film 35 mm léger de la DA Filmakers du 08/08, sans IA, posé avant la mesure. cache partagé avec OTEA Production (mêmes originaux Drive, mêmes clés). Les stories d'une même semaine montrent Maxime seul, une fois qu'il a dit lequel il est sur les photos."
+    }
+  },
+  "run-on-invest": {
+    "nom": "Run On Invest",
+    "networks": [
+      "instagram"
+    ],
+    "heure": "08:00",
+    "bg": "#EDE7DD",
+    "fg": "#111111",
+    "muted": "#8C877E",
+    "accent": "#FF4A17",
+    "cta_bg": "#FF4A17",
+    "cta_fg": "#111111",
+    "font_family": [
+      "Archivo Expanded",
+      "Archivo",
+      "Liberation Sans",
+      "DejaVu Sans"
+    ],
+    "uppercase_titles": true,
+    "rule": true,
+    "note": "Kit V2.1 : Blaze #FF4A17 (accent unique), Encre #111111, Écru #EDE7DD, Craie #F7F4EF, Béton #8C877E. Titres en Archivo Expanded Black (fonts/archivo/Archivo_Expanded-Black.ttf), corps en Archivo 400 normal (Archivo-Regular.ttf) : Archivo_Expanded-Regular est volontairement absent de fonts/. Seul compte autorisé aux photos IA (Maxime, 04/08/2026), JAMAIS de personne identifiable. Compte en brouillon : rien ne part sans validation explicite de Maxime.",
+    "fond": {
+      "manifeste": "photos/run-on-invest.json",
+      "cache": "medias/run-on-invest/fonds",
+      "texte": "#F7F4EF",
+      "muted": "#EDE7DD",
+      "accent": "#FF4A17",
+      "voile": "#111111",
+      "contraste_titre": 7.0,
+      "contraste_corps": 4.5,
+      "_doc": "Photo IA ultra réaliste (La Défense au petit matin, coureurs de dos ou en plan large) sous la DA du kit. Manifeste : provenance ia, champ autorisation, personne_identifiable false vérifié à l'œil. Photo sur chaque slide, jamais d'aplat, jamais photo et aplat dans un même carrousel."
+    },
+    "story": {
+      "nom": "R.O.I.",
+      "mention": "LA DÉFENSE",
+      "registre": [
+        "L'EFFORT CRÉE LE LIEN",
+        "ZÉRO PITCH",
+        "LA RÉGULARITÉ PAIE"
+      ],
+      "registre_source": "fiche run-on-invest.md, les 3 piliers",
+      "pied": "COURSE & NETWORKING · ENTREPRENEURS",
+      "pied_source": "descripteur verrouillé au logo ; le kit l'écrit avec un tiret cadratin, remplacé par un point médian",
+      "signature": "COURIR D'ABORD. PARLER ENSUITE.",
+      "signature_source": "fiche ; la légende garde « On court d'abord. On parle ensuite. »",
+      "casse_phrase": "upper",
+      "polices": {
+        "nom": [
+          "Archivo Expanded Black"
+        ],
+        "titre": [
+          "Archivo Expanded Black"
+        ],
+        "label": [
+          "Space Mono Bold"
+        ],
+        "mono": [
+          "Space Mono Regular"
+        ]
+      },
+      "tracking_nom": -0.8,
+      "taille_phrase": [
+        124,
+        72
+      ],
+      "interligne_phrase": 1.02,
+      "tracking_phrase": -0.035,
+      "grain": 26,
+      "barre_accent": true,
+      "marge": 70,
+      "cache": "medias/run-on-invest/originaux",
+      "photos_ia_autorisees": true,
+      "photos_ia_source": "Maxime, 04/08/2026 : seul compte autorisé aux images IA, faute de banque photo ; jamais une personne identifiable",
+      "_doc": "R.O.I. en Archivo Expanded Black (tracking -0,8 px, les -3,5 % du kit à 24 px). Grain 26 posé avant la mesure. cache : originaux IA téléchargés depuis url_originale du manifeste."
+    }
   }
 }
