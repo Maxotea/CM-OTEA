@@ -75,6 +75,41 @@ sans rendre tout le film. Le fichier de référence du projet Salomon est
 `aftermovies/salomon/habillage.json` ; les EDL `o/*.montage.json` sont
 versionnées, les rendus mp4 non.
 
+## Reel client depuis un dossier de rushs (prises multiples, stéréo, étalonnage)
+
+`scripts/reel-montage.py` est le pendant vertical de l'aftermovie, pour un
+reel de 1 min 30 : il regroupe les rushs par scène (noms de fichiers ou
+ressemblance visuelle), note chaque prise (netteté, exposition, longueur, son,
+dernière prise) et n'en garde qu'une, monte en 1080×1920 à 30 i/s, force une
+vraie stéréo (mono dupliqué, canal mort recopié, niveaux rapprochés, −14 LUFS)
+et étalonne tout le montage (exposition rapprochée plan par plan, plans
+surexposés ramenés par une courbe qui écrase les hautes lumières sans boucher
+les ombres, puis un look global : `ramen`, `neutre`, `froid` ou une LUT
+`.cube`).
+
+```bash
+pip install pillow numpy     # ffmpeg + ffprobe dans le PATH (~/.local/node/bin)
+python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" \
+    --titre "NINA RAMEN" --duree 90 --sortie o/nina-ramen-reel-v1.mp4
+```
+
+Il écrit à côté de la vidéo un `*.montage.json` (EDL rééditable, relancer avec
+`--edl` ; `--edl … --reetalonner` refait seulement l'étalonnage des plans
+retenus), un `*.fcpxml` (la même timeline pour DaVinci Resolve : Fichier >
+Importer > Timeline ; prises, points d'entrée, fondus, titre en V2, carton,
+gain par plan, marqueurs sur les plans mono ou surexposés) et un
+`*.rapport.md` (prises par scène, retenue et notes, plans surexposés
+signalés, diagnostic son de chaque plan, contrôle stéréo de la sortie).
+`--sans-rendu` s'arrête à la timeline et au rapport, sans mp4, quand le
+montage se finit dans Resolve. `--couper-blancs` saute les silences entre
+les phrases à l'intérieur de chaque plan (rythme, plus de contenu en 90 s)
+et `--cta-fond/--cta-texte/--cta-police/--cta-logo` habillent le carton de
+fin aux couleurs du client. Quand le montage vit déjà dans un projet Resolve,
+`projets/nina-ramen/davinci-v2.py` fait la même chose dans le projet, par
+l'API : timeline V2 sans les blancs, carton, rendu mp4. Les sous-titres se
+font ensuite dans Submagic. Projet type :
+`projets/nina-ramen/`.
+
 ## Répartition Drive / GitHub
 
 Deux stockages, deux rôles. Les confondre crée des copies qui divergent.
@@ -154,7 +189,7 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 69 tests, sans réseau ni secret
+python3 -m pytest -q              # 91 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de
