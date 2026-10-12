@@ -504,6 +504,16 @@ source de ces écritures n'est pas identifiée, **passer un
 - **Cadence particulière — le compte ne publie pas le mercredi.** Ses posts feed sortent le **vendredi à 12h30**. Le carrousel du mercredi ne remplace donc rien ici : il **s'ajoute**. C'est assumé, le compte est au **forfait maximum** (confirmé par Maxime, 06/08/2026) — la règle « le carrousel remplace le post du mercredi » ne s'y applique pas.
 - **Vigilance** : barème d'honoraires **non vérifié** → aucun honoraire cité. Aucun prix au m², aucun taux, aucun chiffre de marché sans source datée. Le prénom de la fondatrice n'apparaît pas encore dans les slides : à ajouter si elle le valide. Ne jamais illustrer un carrousel avec un visuel IA présenté comme un bien réel.
 
+### Le vendredi 12h30 est un post feed SIMPLE (règle du 07/08/2026)
+
+Une légende du vendredi ne doit **jamais** contenir « Swipez », « slides » ni « faites
+défiler ». Le lot planifié en juillet 2026 portait des légendes écrites pour un carrousel
+posées sur des posts à un seul média : à la lecture, le post promettait une suite qui
+n'existait pas — c'est ce qui a fait dire à Maxime « on dirait qu'il manque une partie ».
+Le moteur de carrousels n'existait pas encore à la date de ce lot. Même défaut relevé sur
+la fiche de Pierre Huiban. Le carrousel, c'est le mercredi 18h, section ci-dessus.
+`scripts/audit_posts.py` vérifie ce point.
+
 ## 🎬 VIDÉO D'ANNONCE, UN MANDAT = UN REEL (proposition du 02/09/2026)
 
 Maxime a demandé de « proposer la même chose » que https://www.diane.estate/fr.
