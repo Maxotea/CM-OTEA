@@ -1,0 +1,199 @@
+{
+  "_doc": "Registre des comptes publicitaires Meta, un bloc par client. C'est la seule source des identifiants (compte pub, page, Instagram) : le skill cm-meta-ads et scripts/campagne.py lisent ici, jamais dans une spec. Champs : slug = identifiant commun au dépôt (mêmes valeurs que recaps/clients-config.json et reviews/config.json) ; prefixe = préfixe des noms de campagnes ; actif = on peut créer des campagnes pour ce client ; test = compte de l'agence, sert de banc d'essai ; ad_account_id = compte pub SANS le préfixe act_ ; devise et budget_journalier_min_cents = renvoyés par ads_get_ad_accounts, à re-vérifier à chaque session ; page_id = page Facebook qui signe les publicités ; ig_account_id = compte Instagram rattaché au compte pub (null tant que ads_get_ig_accounts ne le renvoie pas : pas de boost de post Instagram possible) ; dsa_payor / dsa_beneficiary = mentions obligatoires en Union européenne (Digital Services Act), le nom qui paie et le nom qui bénéficie ; categories_speciales = liste Meta (HOUSING, CREDIT, EMPLOYMENT, ISSUES_ELECTIONS_POLITICS), vide si aucune ; plafonds = garde-fous de l'agence, en euros, qu'aucune spec ne peut dépasser sans que Maxime les relève ici ; pays_defaut = ciblage géographique par défaut. Un client dont ad_account_id est null n'est PAS rattaché : suivre .claude/skills/cm-meta-ads/references/onboarding-compte-pub.md avant toute campagne. Règle permanente : toute entité est créée en PAUSE et ne s'active que sur un OK explicite de Maxime (.claude/memories/meta-ads-jamais-activer-sans-ok.md). site_indisponible_depuis = date (AAAA-MM-JJ) à laquelle Maxime a signalé le site hors ligne, null sinon : tant qu'elle est posée, check refuse toute campagne Trafic vers ce site et tout lien qui pointe dessus.",
+  "comptes": [
+    {
+      "slug": "otea-production",
+      "nom": "OTEA PRODUCTION",
+      "prefixe": "OTEA",
+      "actif": true,
+      "test": true,
+      "ad_account_id": "201523269",
+      "ad_account_nom": "Maks Otéa",
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": 86,
+      "page_id": "994117790447204",
+      "page_nom": "OTEA Production",
+      "ig_account_id": null,
+      "ig_handle": "@oteaproduction",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": "OTEA Production",
+      "dsa_beneficiary": "OTEA Production",
+      "categories_speciales": [],
+      "plafonds": {
+        "journalier_eur": 20,
+        "total_par_campagne_eur": 300
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": "https://oteaproduction.com",
+      "site_indisponible_depuis": "2026-09-02",
+      "paiement": "Compte pub personnel de Maxime, moyen de paiement enregistré (has_payment_method=true le 02/09/2026).",
+      "notes": "Audit du 02/09/2026 : la page OTEA Production est accessible pour la publicité (ads_get_user_pages) mais n'apparaît pas encore dans les pages rattachées au compte pub (ads_get_ad_account_pages ne liste que Otea Filmakers et Pension Papahani Maupiti) : à confirmer à la première création de creative. Aucun compte Instagram rattaché au compte pub, donc pas de boost de post Instagram tant que @oteaproduction n'est pas lié dans le Business Manager. Pas de pixel connu sur oteaproduction.com : objectifs limités à Trafic (clics) et Interaction tant qu'il n'est pas posé. ⚠️ 02/09/2026 : Maxime signale que oteaproduction.com est DOWN. Aucune campagne vers le site tant qu'il n'est pas remis en ligne et vérifié (une pub vers une page morte est refusée par Meta et brûle le budget) : destinations possibles en attendant, Messenger ou WhatsApp sur la page, interaction sur un post. Remettre site_indisponible_depuis à null une fois le site revenu et contrôlé."
+    },
+    {
+      "slug": "otea-filmakers",
+      "nom": "Otea Filmakers",
+      "prefixe": "OFK",
+      "actif": true,
+      "test": true,
+      "ad_account_id": "201523269",
+      "ad_account_nom": "Maks Otéa",
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": 86,
+      "page_id": "103287164627283",
+      "page_nom": "Otea Filmakers",
+      "ig_account_id": null,
+      "ig_handle": "@oteafilmakers",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": "OTEA Production",
+      "dsa_beneficiary": "Otea Filmakers",
+      "categories_speciales": [],
+      "plafonds": {
+        "journalier_eur": 15,
+        "total_par_campagne_eur": 150
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": null,
+      "site_indisponible_depuis": null,
+      "paiement": "Même compte pub que OTEA PRODUCTION (Maks Otéa).",
+      "notes": "Audit du 02/09/2026 : page rattachée au compte pub, leadgen_tos_accepted=false. Historique : trois boosts de publications en 2020 (vidéos, 0 € dépensé). Compte vitrine perso, reels-first : objectifs Interaction (ThruPlay) ou visites de profil Instagram, jamais de pitch commercial (c'est le rôle de OTEA PRODUCTION)."
+    },
+    {
+      "slug": "jlawsongolf",
+      "nom": "J Lawson Golf",
+      "prefixe": "JLG",
+      "actif": false,
+      "test": false,
+      "ad_account_id": null,
+      "ad_account_nom": null,
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": null,
+      "page_id": null,
+      "page_nom": null,
+      "ig_account_id": null,
+      "ig_handle": "@jlawsongolf",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": null,
+      "dsa_beneficiary": null,
+      "categories_speciales": [],
+      "plafonds": {
+        "journalier_eur": null,
+        "total_par_campagne_eur": null
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": null,
+      "site_indisponible_depuis": null,
+      "paiement": null,
+      "notes": "Non rattaché. Le client doit donner l'accès partenaire à son compte pub (onboarding-compte-pub.md). Typologie ROI : fitting unitaire cher, une campagne Prospects (formulaire ou messages) se justifie."
+    },
+    {
+      "slug": "la-galerie-immobiliere",
+      "nom": "La Galerie Immobilière",
+      "prefixe": "LGI",
+      "actif": false,
+      "test": false,
+      "ad_account_id": null,
+      "ad_account_nom": null,
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": null,
+      "page_id": null,
+      "page_nom": "La Galerie Immobilière",
+      "ig_account_id": null,
+      "ig_handle": "@lagalerieimmobiliere",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": null,
+      "dsa_beneficiary": null,
+      "categories_speciales": [
+        "HOUSING"
+      ],
+      "plafonds": {
+        "journalier_eur": null,
+        "total_par_campagne_eur": null
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": "https://lagalerieimmobiliere.com",
+      "site_indisponible_depuis": null,
+      "paiement": null,
+      "notes": "Non rattaché. La page La Galerie Immobilière (106568921929695) est visible dans les pages de Maxime mais sous aucun compte pub connu. Catégorie spéciale HOUSING obligatoire (immobilier) : pas de ciblage par âge, sexe ni code postal, rayon minimal imposé par Meta. Déclarer special_ad_category_country FR."
+    },
+    {
+      "slug": "pierre-huiban",
+      "nom": "Pierre Huiban",
+      "prefixe": "PH",
+      "actif": false,
+      "test": false,
+      "ad_account_id": null,
+      "ad_account_nom": null,
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": null,
+      "page_id": null,
+      "page_nom": null,
+      "ig_account_id": null,
+      "ig_handle": "@pierrehuiban89",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": null,
+      "dsa_beneficiary": null,
+      "categories_speciales": [],
+      "plafonds": {
+        "journalier_eur": null,
+        "total_par_campagne_eur": null
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": null,
+      "site_indisponible_depuis": null,
+      "paiement": null,
+      "notes": "Non rattaché. Instagram seul, pas de page Facebook connue : une page est obligatoire pour signer une publicité, à créer ou à identifier avant tout."
+    },
+    {
+      "slug": "run-on-invest",
+      "nom": "Run On Invest",
+      "prefixe": "ROI",
+      "actif": false,
+      "test": false,
+      "ad_account_id": null,
+      "ad_account_nom": null,
+      "business_id": null,
+      "devise": "EUR",
+      "budget_journalier_min_cents": null,
+      "page_id": null,
+      "page_nom": null,
+      "ig_account_id": null,
+      "ig_handle": "@runoninvest",
+      "pixel_id": null,
+      "leadgen_tos_accepte": false,
+      "dsa_payor": null,
+      "dsa_beneficiary": null,
+      "categories_speciales": [],
+      "plafonds": {
+        "journalier_eur": null,
+        "total_par_campagne_eur": null
+      },
+      "pays_defaut": [
+        "FR"
+      ],
+      "site": null,
+      "site_indisponible_depuis": null,
+      "paiement": null,
+      "notes": "Non rattaché. Course et networking pour entrepreneurs, pas de produit financier malgré le nom : aucune catégorie spéciale a priori, à confirmer avec le brief client avant la première campagne."
+    }
+  ]
+}

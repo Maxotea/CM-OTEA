@@ -12,3 +12,4 @@
 - [Rédaction sans tirets](redaction-sans-tirets.md) : aucun tiret cadratin (U+2014) ni « -- » dans les textes rédigés (légendes, messages clients) ; virgule, deux-points ou deux phrases à la place
 - [Devis validé : blocs agenda](devis-valide-blocs-agenda.md) : dès qu'un devis est accepté, poser le jour même les blocs préprod, prod, post et livraison dans l'agenda, selon la grille du fichier
 - `posture-solution-jamais-excuse.md` : dans un mail client, ouvrir sur la solution et un engagement daté, jamais sur une excuse ou un « je ne peux pas » (règle de Maxime, 5 octobre 2026).
+- [Meta Ads : jamais d'activation sans OK](meta-ads-jamais-activer-sans-ok.md) : toute campagne est créée en PAUSE ; seule une phrase explicite de Maxime, nommant la campagne, déclenche l'activation et donc la dépense

@@ -207,6 +207,31 @@ python3 -m pytest -q              # 91 tests, sans réseau ni secret
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de
 santé dans le résumé du run.
 
+## Campagnes Meta (02/09/2026)
+
+Le skill `.claude/skills/cm-meta-ads/` gère la publicité Facebook et Instagram par
+client, avec le connecteur Meta Ads. Trois pièces :
+
+- `campagnes/comptes.json` : le registre des comptes pub, un bloc par client
+  (compte, page, Instagram, DSA, catégorie spéciale, plafonds de budget). Seule
+  source des identifiants.
+- `campagnes/<client>/<AAAA-MM>-<slug>.json` : une spec par campagne, en français et
+  en euros. Modèle : `campagnes/_template.json`.
+- `scripts/campagne.py` : la moitié hors ligne, sans jeton ni appel à Meta.
+
+```bash
+python3 scripts/campagne.py check campagnes/            # valide toutes les specs contre le registre
+python3 scripts/campagne.py plan  campagnes/otea-production/2026-09-voeux-2027.json   # les appels MCP à passer
+python3 scripts/campagne.py journal <spec> --statut creee_en_pause --set campaign_id=…  # consigne les ids
+python3 scripts/campagne.py liste                       # l'état de toutes les campagnes
+```
+
+**Tout est créé en PAUSE et rien ne s'active sans une phrase explicite de Maxime qui
+nomme la campagne.** C'est le pendant du brouillon Metricool, appliqué à l'argent du
+client. Banc d'essai : OTEA PRODUCTION et Otea Filmakers, sur le compte pub Maks Otéa ;
+état du compte et ce qui reste à rattacher : `campagnes/audit-2026-09-02.md`. Rattacher
+un client : `.claude/skills/cm-meta-ads/references/onboarding-compte-pub.md`.
+
 ## Ajouts v3 (02/08/2026)
 - `.claude/skills/cm-metricool/references/compte-rendu-hebdo-clients.md` — comptes rendus hebdo clients (lundi 9h) : WhatsApp prioritaire + doublon email, mode brouillon
 - `.claude/skills/cm-metricool/references/roi-clients.md` et `banques-photos.md` — références transverses
