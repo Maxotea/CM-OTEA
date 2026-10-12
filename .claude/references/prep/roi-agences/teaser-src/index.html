@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>R.O.I. teaser agences</title>
+<style>
+@font-face{font-family:'Caladea';font-style:normal;font-weight:700;font-display:block;src:url(fonts/caladea-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Caladea';font-style:normal;font-weight:400;font-display:block;src:url(fonts/caladea-400-normal.woff2) format('woff2');}
+@font-face{font-family:'Caladea';font-style:italic;font-weight:400;font-display:block;src:url(fonts/caladea-400-italic.woff2) format('woff2');}
+@font-face{font-family:'Carlito';font-style:normal;font-weight:400;font-display:block;src:url(fonts/carlito-400-normal.woff2) format('woff2');}
+@font-face{font-family:'Carlito';font-style:normal;font-weight:700;font-display:block;src:url(fonts/carlito-700-normal.woff2) format('woff2');}
+
+/* Identité alignée sur le deck R.O.I. (marque.md / deck sponsors) */
+:root{
+  --bg:#0A0A0A; --surface:#161616; --surface-2:#1A1A1A; --line:#2A2A2A;
+  --red:#DC2626; --red-deep:#9F1414; --grey:#6B7280; --grey-light:#9CA3AF;
+  --soft:#E5E5E5; --white:#FFFFFF;
+  --serif:'Caladea','Cambria',Georgia,serif;
+  --sans:'Carlito','Calibri',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+body{font-family:var(--sans);color:var(--white);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+svg{position:absolute;left:0;top:0;overflow:visible}
+.layer{position:absolute;left:0;top:0;width:1920px;height:1080px}
+
+/* Textes : chaque mot est révélé dans un masque */
+.tx{position:absolute;white-space:nowrap}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em .04em .14em;margin:-.16em -.04em -.14em}
+.wi{display:inline-block;will-change:transform}
+.ch{display:inline-block;white-space:pre}
+
+.eyebrow{font-family:var(--sans);font-weight:700;font-size:28px;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
+.h-xl{font-family:var(--serif);font-weight:700;font-size:150px;line-height:1;letter-spacing:-.01em}
+.h-l{font-family:var(--serif);font-weight:700;font-size:118px;line-height:1.04;letter-spacing:-.01em}
+.h-m{font-family:var(--serif);font-weight:700;font-size:96px;line-height:1.06}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.red{color:var(--red)}
+.soft{color:var(--soft)}
+.mute{color:var(--grey-light)}
+.center{left:0;width:1920px;text-align:center}
+
+/* HUD */
+#hud{position:absolute;inset:0;pointer-events:none}
+#hud .brand{position:absolute;left:160px;top:58px;font-family:var(--serif);font-weight:700;font-size:30px;letter-spacing:.03em}
+#hud .meta{position:absolute;right:160px;top:66px;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);font-weight:700}
+#hud .meta b{color:var(--red);margin:0 14px}
+#bar{position:absolute;left:0;top:0;width:14px;height:1080px;background:var(--red);transform-origin:50% 0}
+#prog{position:absolute;left:160px;right:160px;bottom:58px;height:2px;background:var(--line)}
+#progFill{position:absolute;left:0;top:0;height:2px;background:var(--red);width:0}
+#progDot{position:absolute;top:-5px;width:12px;height:12px;border-radius:50%;background:var(--red);margin-left:-6px;box-shadow:0 0 0 6px rgba(220,38,38,.18)}
+
+.pill{position:absolute;font-family:var(--sans);font-weight:700;font-size:30px;letter-spacing:.06em;padding:8px 20px 6px;border-radius:999px;white-space:nowrap;transform:translate(-50%,-50%)}
+.pill.white{background:var(--white);color:var(--bg)}
+.pill.redp{background:var(--red);color:var(--white)}
+
+#hl{position:absolute;background:var(--red);transform-origin:0 50%}
+.redact{position:absolute;height:26px;border-radius:3px;background:#1d1d1d;overflow:hidden}
+.redact i{position:absolute;top:0;bottom:0;width:240px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.10),rgba(255,255,255,0))}
+#vign{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 50% 48%,rgba(10,10,10,0) 55%,rgba(0,0,0,.55) 100%)}
+#flash{position:absolute;inset:0;background:var(--red);opacity:0;pointer-events:none}
+#slash{position:absolute;left:0;top:-200px;width:900px;height:1480px;background:var(--red);transform-origin:50% 50%}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- Monde : quartier, parcours, arena (scènes 2 et 3) -->
+  <svg id="world" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs>
+      <pattern id="winA" width="18" height="22" patternUnits="userSpaceOnUse">
+        <rect width="18" height="22" fill="#121212"/>
+        <rect x="3" y="4" width="10" height="2" fill="#1b1b1b"/>
+      </pattern>
+      <pattern id="winB" width="14" height="16" patternUnits="userSpaceOnUse">
+        <rect width="14" height="16" fill="#181818"/>
+        <rect x="0" y="0" width="1" height="16" fill="#222"/>
+        <rect x="0" y="0" width="14" height="1" fill="#1f1f1f"/>
+      </pattern>
+      <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#151515"/><stop offset="1" stop-color="#0A0A0A"/>
+      </linearGradient>
+      <radialGradient id="domeFill" cx="50%" cy="100%" r="100%">
+        <stop offset="0" stop-color="#1e1e1e"/><stop offset=".7" stop-color="#121212"/><stop offset="1" stop-color="#0d0d0d"/>
+      </radialGradient>
+      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#DC2626" stop-opacity=".55"/><stop offset="1" stop-color="#DC2626" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#0A0A0A" stop-opacity="1"/><stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+      </linearGradient>
+      <pattern id="checker" width="16" height="16" patternUnits="userSpaceOnUse">
+        <rect width="16" height="16" fill="#FFFFFF"/><rect width="8" height="8" fill="#0A0A0A"/><rect x="8" y="8" width="8" height="8" fill="#0A0A0A"/>
+      </pattern>
+    </defs>
+    <g id="cam">
+      <g id="par"><g id="towersBack"></g></g>
+      <g id="towersFront"></g>
+      <g id="arche"></g>
+      <g id="arena"></g>
+      <rect id="groundRect" x="-400" y="820" width="4600" height="300" fill="url(#ground)"/>
+      <line id="groundLine" x1="-400" y1="820" x2="4200" y2="820" stroke="#2A2A2A" stroke-width="2"/>
+      <g id="arenaFront"></g>
+      <g id="routes"></g>
+      <g id="net"></g>
+    </g>
+  </svg>
+
+  <!-- Points (scène 4) -->
+  <svg id="dots" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+  <div id="vign"></div>
+  <div class="layer" id="center4" style="background:radial-gradient(ellipse 34% 40% at 50% 50%,rgba(10,10,10,.92) 30%,rgba(10,10,10,0) 100%)"></div>
+
+  <!-- Scène 1 -->
+  <svg id="s1svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <line id="startLine" x1="160" y1="560" x2="1760" y2="560" stroke="#FFFFFF" stroke-width="3"/>
+    <rect id="startCheck" x="160" y="548" width="0" height="24" fill="url(#checker)"/>
+  </svg>
+  <div class="tx h-xl center" id="t1a" style="top:372px" data-in="0.35" data-out="3.85" data-st="0.14">10&#8239;000 entrepreneurs.</div>
+  <div class="tx h-m center red" id="t1b" style="top:612px" data-in="1.75" data-out="3.9" data-st="0.10">Une ligne de départ.</div>
+
+  <!-- Scène 2 -->
+  <div class="tx eyebrow" id="t2a" style="left:160px;top:200px" data-in="5.0" data-out="11.45" data-st="0.05">Course professionnelle</div>
+  <div class="tx h-l" id="t2b" style="left:160px;top:248px" data-in="5.2" data-out="11.5" data-st="0.10">Au cœur de La Défense.</div>
+  <div class="tx h-xl" id="t2c" style="left:160px;top:410px" data-in="7.6" data-out="11.6" data-st="0.12"><span>5&nbsp;km</span> <span class="red">·</span> <span class="red">10&nbsp;km</span></div>
+  <div class="pill white" id="pill5">5 km</div>
+  <div class="pill redp" id="pill10">10 km</div>
+
+  <!-- Scène 3 -->
+  <div class="tx eyebrow center" id="t3a" style="top:150px" data-in="12.9" data-out="15.85" data-st="0.05">Arrivée à la</div>
+  <div class="tx h-l center" id="t3b" style="top:196px" data-in="13.05" data-out="15.9" data-st="0.10">Plénitude Arena</div>
+  <div class="tx h-m center" id="t3c" style="top:130px" data-in="16.15" data-out="19.55" data-st="0.08">Le networking commence</div>
+  <div class="tx h-m center it red" id="t3d" style="top:236px" data-in="16.5" data-out="19.6" data-st="0.08">à la ligne d’arrivée.</div>
+
+  <!-- Scène 4 -->
+  <div class="tx eyebrow center" id="t4a" style="top:262px" data-in="20.35" data-out="26.6" data-st="0.05">Objectif</div>
+  <div class="tx center" id="t4num" style="top:300px;font-family:var(--serif);font-weight:700;font-size:250px;line-height:1;font-variant-numeric:tabular-nums lining-nums" data-in="20.4" data-out="26.65" data-st="0">10&#8239;000</div>
+  <div class="tx h-m center" id="t4b" style="top:560px;font-size:76px" data-in="21.0" data-out="26.7" data-st="0.08">participants</div>
+  <div class="tx center soft" id="t4c" style="top:680px;font-size:40px;font-weight:700;letter-spacing:.04em" data-in="22.0" data-out="26.72" data-st="0.08">entrepreneurs <span class="red">·</span> dirigeants <span class="red">·</span> cadres <span class="red">·</span> indépendants</div>
+  <div class="tx center" id="t4d" style="top:800px;font-size:30px;font-weight:700;letter-spacing:.24em;text-transform:uppercase" data-in="23.6" data-out="26.75" data-st="0.06">Première édition <span class="red">·</span> automne 2027</div>
+
+  <!-- Scène 5 -->
+  <div id="hl"></div>
+  <div class="tx h-l" id="t5a" style="left:160px;top:210px" data-in="27.3" data-out="32.75" data-st="0.10">Nous cherchons</div>
+  <div class="tx h-l" id="t5b" style="left:160px;top:345px" data-in="27.5" data-out="32.8" data-st="0.10"><span id="agence">l’agence</span> qui va</div>
+  <div class="tx h-l" id="t5c" style="left:160px;top:480px" data-in="27.75" data-out="32.85" data-st="0.10">l’écrire avec nous.</div>
+  <svg id="s5svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <path id="pen" d="M164 660 C 360 640, 520 690, 760 662 S 1060 630, 1190 652" fill="none" stroke="#DC2626" stroke-width="7" stroke-linecap="round"/>
+    <circle id="penDot" r="11" fill="#DC2626"/>
+  </svg>
+  <div class="tx soft" id="t5d" style="left:160px;top:790px;font-size:36px;font-weight:700;letter-spacing:.02em" data-in="29.4" data-out="32.9" data-st="0.05">Mandataire unique <span class="red">·</span> groupement <span class="red">·</span> assistance à maîtrise d’ouvrage</div>
+
+  <!-- Scène 6 -->
+  <div class="tx h-l center" id="t6a" style="top:300px" data-k="chars" data-in="33.25" data-out="37.45" data-st="0.035">Et ce n’est pas tout.</div>
+  <div id="redacts">
+    <div class="redact" id="rd1" style="left:610px;top:500px;width:700px"><i></i></div>
+    <div class="redact" id="rd2" style="left:690px;top:548px;width:540px"><i></i></div>
+    <div class="redact" id="rd3" style="left:650px;top:596px;width:620px"><i></i></div>
+  </div>
+  <div class="tx center" id="t6b" style="top:690px;font-family:var(--serif);font-style:italic;font-size:64px" data-in="35.1" data-out="37.5" data-st="0.06">La suite, on vous la raconte <span class="red">en visio.</span></div>
+
+  <!-- Scène 7 -->
+  <div class="tx center" id="t7a" style="top:150px;font-family:var(--serif);font-weight:700;font-size:250px;line-height:.9;letter-spacing:-.02em" data-in="37.85" data-out="99" data-st="0.07">R.O.I.</div>
+  <div class="tx center" id="t7b" style="top:410px;font-weight:700;font-size:40px;letter-spacing:.42em;color:var(--red);padding-left:.42em" data-in="38.25" data-out="99" data-st="0.06">RUN ON INVESTMENT</div>
+  <div class="tx center it soft" id="t7c" style="top:480px;font-size:52px" data-in="38.55" data-out="99" data-st="0.05">la course qui connecte les entrepreneurs</div>
+  <div class="tx center" id="t7d" style="top:668px;font-family:var(--serif);font-weight:700;font-size:84px" data-in="39.55" data-out="99" data-st="0.07">On en parle <span class="red">30&nbsp;minutes</span>&#8239;?</div>
+  <div class="tx center" id="t7e" style="top:806px;font-size:42px;font-weight:700;letter-spacing:.06em" data-in="40.0" data-out="99" data-st="0.06">Maxime Dietrich <span class="red">·</span> 07&nbsp;79&nbsp;97&nbsp;19&nbsp;61</div>
+  <svg id="s7svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <line id="sep7" x1="960" y1="616" x2="960" y2="616" stroke="#2A2A2A" stroke-width="2"/>
+  </svg>
+
+  <div id="hud">
+    <div class="brand">R.O.I.</div>
+    <div class="meta">La Défense<b>·</b>Automne 2027</div>
+    <div id="prog"><div id="progFill"></div><div id="progDot"></div></div>
+  </div>
+  <div id="bar"></div>
+  <div id="slash"></div>
+  <div id="flash"></div>
+</div>
+
+<script src="timeline.js"></script>
+</body>
+</html>
