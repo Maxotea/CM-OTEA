@@ -56,3 +56,8 @@ déjà muettes — non touchées. Anciens brouillons supprimés : 355805250, …
 - **Planifiés (spec dans `carrousels/otea-production/`)** : 12/08 A2 « 5 erreurs qui plombent une vidéo d'entreprise » · 19/08 A1 « De l'idée au film livré » · 26/08 A8 « Vœux 2027 : le rétroplanning » (temps fort sept-oct de la fiche) · 02/09 A7 « Ce qui se passe le jour du tournage ».
 - **Réserve de sujets** : « Vertical ou horizontal : comment choisir » (A5) · « Ce qu'une journée de tournage peut produire » (A1, argument déclinaisons) · budgets Q4 et plans de com (A8, septembre) · cas client commenté (A3, avec accord).
 - **Vigilance** : les fourchettes de devis ne sont pas renseignées → aucun tarif ni délai chiffré tant que Maxime ne les fournit pas. Ce compte est aussi la vitrine de l'offre CM : un carrousel réussi ici est un cas d'usage commercial réutilisable.
+
+## 🎬 Inspirations de montage
+
+Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
+
