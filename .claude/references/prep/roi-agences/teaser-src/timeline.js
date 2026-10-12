@@ -77,7 +77,7 @@
     S.texts = [];
     document.querySelectorAll('.tx').forEach((node) => {
       const k = node.dataset.k || 'up';
-      const item = { node, k, tin: +node.dataset.in, tout: +node.dataset.out, st: +(node.dataset.st || 0.06) };
+      const item = { node, k, tin: +node.dataset.in, tout: +node.dataset.out, st: +(node.dataset.st || 0.06), cut: +(node.dataset.cut || 999) };
       item.parts = k === 'chars' ? splitChars(node) : splitWords(node);
       S.texts.push(item);
     });
@@ -85,7 +85,7 @@
   function animTexts(t) {
     for (const it of S.texts) {
       const n = it.parts.length;
-      const end = it.tout + 0.5 + n * it.st * 0.4;
+      const end = Math.min(it.cut, it.tout + 0.5 + n * it.st * 0.4);
       if (t < it.tin - 0.01 || t > end) { it.node.style.visibility = 'hidden'; continue; }
       it.node.style.visibility = 'visible';
       it.parts.forEach((p, i) => {
@@ -250,7 +250,7 @@
   // ---------- Animation du monde ----------
   function animWorld(t) {
     const world = $('world');
-    const vis = t > 4.0 && t < 20.7;
+    const vis = t > 4.23 && t < 20.7;
     world.style.visibility = vis ? 'visible' : 'hidden';
     if (!vis) { $('pill5').style.opacity = 0; $('pill10').style.opacity = 0; return; }
 
@@ -356,7 +356,7 @@
   function animFlat(t) {
     // Scène 1 : ligne de départ
     const s1 = $('s1svg');
-    s1.style.visibility = t < 4.4 ? 'visible' : 'hidden';
+    s1.style.visibility = t < 4.23 ? 'visible' : 'hidden';
     const kl = P(t, 0.05, 1.0, E.outExpo);
     const ko = P(t, 3.7, 4.2, E.inCubic);
     const ln = $('startLine');
@@ -369,20 +369,20 @@
 
     // transition rouge en biais
     const slash = $('slash');
-    const k1 = P(t, 3.95, 4.6, E.inOutQuint);
-    const k2 = P(t, 37.35, 38.0, E.inOutQuint);
+    const k1 = P(t, 3.85, 4.6, E.inOutQuint);
+    const k2 = P(t, 37.25, 38.0, E.inOutQuint);
     if (k1 > 0 && k1 < 1) {
       slash.style.visibility = 'visible';
-      slash.style.transform = `translateX(${lerp(-1300, 2400, k1)}px) skewX(-18deg)`;
+      slash.style.transform = `translateX(${lerp(-3100, 2500, k1)}px) skewX(-18deg)`;
     } else if (k2 > 0 && k2 < 1) {
       slash.style.visibility = 'visible';
-      slash.style.transform = `translateX(${lerp(2400, -1300, k2)}px) skewX(-18deg)`;
+      slash.style.transform = `translateX(${lerp(2500, -3100, k2)}px) skewX(-18deg)`;
     } else slash.style.visibility = 'hidden';
 
     // barre rouge verticale (signature du deck) et HUD
     $('bar').style.transform = `scaleY(${P(t, 4.3, 5.1, E.outExpo).toFixed(4)})`;
     const hud = $('hud');
-    const kh = win(t, 4.6, 5.3, 37.0, 37.4);
+    const kh = win(t, 4.6, 5.3, 37.0, 37.3);
     hud.style.opacity = kh.toFixed(3);
     const pr = P(t, 4.6, 37.2, E.lin);
     $('progFill').style.width = (pr * 100).toFixed(3) + '%';
@@ -422,7 +422,7 @@
     s5.style.opacity = (1 - ko5).toFixed(3);
 
     // Scène 6 : lignes masquées
-    const rdVis = t > 34.1 && t < 37.6;
+    const rdVis = t > 34.1 && t < 37.65;
     $('redacts').style.visibility = rdVis ? 'visible' : 'hidden';
     ['rd1', 'rd2', 'rd3'].forEach((id, i) => {
       const n = $(id);
