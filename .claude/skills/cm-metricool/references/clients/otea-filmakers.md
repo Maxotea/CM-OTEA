@@ -37,3 +37,8 @@ Les prochains reels de ce compte reprennent les styles listés pour lui dans `..
 
 ## Note ROI (ancienne fiche, conservée — 02/08/2026)
 - Typologie B2B projet : 1 projet signé couvre largement la prestation ; ROI aussi mesurable en leads qualifiés (DM, formulaires).
+
+## Validation automatique (07/10/2026)
+Maxime est le client de ce compte : même règle qu'OTEA Production, `validation_auto` dans `reviews/config.json` (PR #56). Plus de tableau. Les brouillons des 14 jours à venir partent en publication automatique s'ils passent les garde-fous.
+- 07/10 : tirets cadratins retirés des posts du 09/10 et du 19/10 (nouveaux ids 390382826 et 390382868).
+- ⚠️ Les posts du 09/10 (marche caméra) et du 06/11 (cadrage) portent « 🎬 À tourner : … » dans la légende : bloqués tant que la vidéo n'est pas tournée et la note retirée.

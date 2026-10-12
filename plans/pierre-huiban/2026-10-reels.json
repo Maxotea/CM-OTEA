@@ -1,0 +1,207 @@
+{
+  "_doc": "Les 12 reels d'octobre 2026, tous tirés des rushes FX3 de HYROX Rome (dossier Drive « PIERRE », 1cAaXJwg9h9zdO0I8VRVNdJX_xHONtU6v). Les numéros de clips renvoient à assets/hyrox/rushes_rome_2026.json, qui dit où en était Pierre dans la course à chaque clip (recalage sur le chrono officiel). Rushes en S-Log3 : appliquer la LUT SL3SG3Ctos709. 100p : ralenti x4 disponible. Les incrustations de temps viennent de assets/hyrox/hyrox_pierre-huiban_rome_2026.srt. Muets à l'export comme les stories ? Non : ce sont des reels, la musique se pose dans Instagram à la validation.",
+  "reels": [
+    {
+      "n": 1,
+      "date_time": "2026-10-06T12:30:00",
+      "titre": "53:34, the last seconds",
+      "clips": [
+        "7376 (wall balls, 52:46 → 53:25)",
+        "7377 (après l'arrivée, 99 s)"
+      ],
+      "montage": "Ouvrir sur les dernières wall balls au ralenti, chrono incrusté qui défile jusqu'à 53:34, coupe nette sur la ligne, puis la réaction dans 7377. 20 à 25 s.",
+      "incrustations": [
+        "HYROX ROME · PRO DOUBLES",
+        "53:34",
+        "1st · AGE GROUP 35-39"
+      ],
+      "legende": "The last seconds of our fastest race 🇮🇹\n\n53:34 in Rome with @antoine_bhna. First in our age group, and a new best by more than a minute.\n\nI still can't watch this without smiling ❤️\n\nThank you Antoine 🙏\n\n#hyrox #hyroxrome #hyroxdoubles #roadtohongkong"
+    },
+    {
+      "n": 2,
+      "date_time": "2026-10-08T12:30:00",
+      "titre": "100 wall balls, legs empty",
+      "clips": [
+        "7374 (51:42)",
+        "7375 (52:04)",
+        "7376 (52:46)"
+      ],
+      "montage": "Tout au ralenti 100p, son de la salle conservé en fond. Compteur de reps en incrustation si lisible, sinon le seul temps de station.",
+      "incrustations": [
+        "STATION 8 · WALL BALLS",
+        "3:22",
+        "10th OF 292"
+      ],
+      "legende": "Station eight. 100 wall balls. Legs completely empty.\n\n3:22 in Rome, our best-ranked station of the day (10th of 292).\n\nNobody is fresh here. It's just about not stopping 🙏\n\nHow do you get through your last 30 reps? I read everything.\n\n#hyrox #wallballs #hyroxrome #roadtohongkong"
+    },
+    {
+      "n": 3,
+      "date_time": "2026-10-11T18:00:00",
+      "titre": "The 8 km nobody films",
+      "clips": [
+        "7345",
+        "7346",
+        "7350",
+        "7351",
+        "7354",
+        "7355",
+        "7363",
+        "7364",
+        "7369",
+        "7372",
+        "7373"
+      ],
+      "montage": "Uniquement la course à pied, du Run 3 au Run 8. Une incrustation par kilomètre avec son temps (SRT). Finir sur le total.",
+      "incrustations": [
+        "RUN 3 · 3:18",
+        "RUN 4 · 3:20",
+        "RUN 5 · 3:24",
+        "RUN 6 · 3:23",
+        "RUN 7 · 3:23",
+        "RUN 8 · 3:45",
+        "8 KM · 27:59"
+      ],
+      "legende": "Everyone films the stations. Nobody films the running.\n\nBut in HYROX, it's 8 kilometres. In Rome we ran them in 27:59, 18th of 292 teams.\n\nThat's where most of our progress this season came from 🙏\n\nRunners or station people: which one are you?\n\n#hyrox #hyroxrunning #hyroxrome #roadtohongkong"
+    },
+    {
+      "n": 4,
+      "date_time": "2026-10-13T12:30:00",
+      "titre": "1000 m of rowing",
+      "clips": [
+        "7358 (32:53)",
+        "7359",
+        "7361 (34:14)"
+      ],
+      "montage": "Ralenti 100p sur le tirage, plans serrés 70-200. Rythme calé sur la cadence de rame.",
+      "incrustations": [
+        "STATION 5 · ROWING",
+        "4:00"
+      ],
+      "legende": "1000 metres of rowing, halfway through the race.\n\n4:00 in Rome, 37th of 292. Right in the middle of the race, when everything starts to hurt.\n\nDo you push the row or do you recover on it?\n\n#hyrox #rowing #hyroxrome #roadtohongkong"
+    },
+    {
+      "n": 5,
+      "date_time": "2026-10-15T12:30:00",
+      "titre": "Sled pull",
+      "clips": [
+        "7348 (19:39)",
+        "7349 (20:19 → 20:44, fin de station)"
+      ],
+      "montage": "Tirage corde au ralenti, finir sur le traîneau qui passe la ligne.",
+      "incrustations": [
+        "STATION 3 · SLED PULL",
+        "2:53",
+        "15th OF 292"
+      ],
+      "legende": "Sled pull, Rome. 2:53, 15th of 292.\n\nHand over hand, and the sled feels heavier every metre.\n\nIn doubles you split the work. Trusting the other person to take their share is half the race 🙏\n\n#hyrox #sledpull #hyroxdoubles #roadtohongkong"
+    },
+    {
+      "n": 6,
+      "date_time": "2026-10-18T18:00:00",
+      "titre": "Two engines",
+      "clips": [
+        "7350 (Run 4, 46 s)",
+        "7353 (roxzone)",
+        "7362 (roxzone après le rameur)",
+        "7365"
+      ],
+      "montage": "Choisir les plans où Antoine et Pierre sont tous les deux dans le cadre. Portrait du binôme, pas de la performance.",
+      "incrustations": [
+        "PRO DOUBLES",
+        "PIERRE HUIBAN × ANTOINE BOUHANA"
+      ],
+      "legende": "Doubles is not two people racing side by side. It's one team.\n\n@antoine_bhna and I have won several Pro Doubles races together and qualified for the World Championships more than once. Rome was one more.\n\nThank you Antoine, for every metre ❤️\n\nTag the person you'd race doubles with 🙏\n\n#hyrox #hyroxdoubles #teamwork #roadtohongkong"
+    },
+    {
+      "n": 7,
+      "date_time": "2026-10-20T12:30:00",
+      "titre": "After the line",
+      "clips": [
+        "7377 (99 s après l'arrivée)",
+        "7378 (56:10)",
+        "7379 (60:11, 1080p Rec709)"
+      ],
+      "montage": "Aucune incrustation de chrono. L'émotion, le souffle, l'accolade. Garder le son réel si possible.",
+      "incrustations": [
+        "ROME · 26.09.2026"
+      ],
+      "legende": "The minutes after the finish line are my favourite part.\n\nNo clock, no plan. Just the two of us, completely empty, realising what we just did ❤️\n\nThis is what all the early sessions are for 🙏\n\n#hyrox #hyroxrome #finishline #roadtohongkong"
+    },
+    {
+      "n": 8,
+      "date_time": "2026-10-22T12:30:00",
+      "titre": "Rome in 30 seconds",
+      "clips": [
+        "un plan par station disponible, dans l'ordre de course : 7346, 7349, 7351, 7353, 7358, 7365, 7373, 7376, 7377"
+      ],
+      "montage": "Coupe très rapide, un plan par moment de course, nom et temps incrustés (SRT). Finir sur 53:34.",
+      "incrustations": [
+        "SRT complet : hyrox_pierre-huiban_rome_2026.srt"
+      ],
+      "legende": "Rome in 30 seconds ⏱\n\n8 km of running, 8 stations, 53:34 with @antoine_bhna.\n\nThe full breakdown, station by station, is in the carousel on my profile 🙏\n\n#hyrox #hyroxrome #hyroxdoubles #roadtohongkong"
+    },
+    {
+      "n": 9,
+      "date_time": "2026-10-25T18:00:00",
+      "titre": "Built before sunrise",
+      "clips": [
+        "plans de course au choix, plutôt larges et lumineux"
+      ],
+      "montage": "Reel texte : trois phrases du persona en incrustation sur les images de Rome. Le changement d'heure de la nuit est le prétexte.",
+      "incrustations": [
+        "Clocks went back last night.",
+        "My sessions start in the dark anyway.",
+        "This race was built before sunrise."
+      ],
+      "legende": "Clocks went back last night. My early sessions just got a bit darker 🌒\n\nWith a job and a family, early mornings are where the training happens. Rome was built there, one early session at a time.\n\nWhen do you train? Morning, lunch or evening? I read everything 🙏\n\n#hyrox #morningtraining #workingdad #roadtohongkong"
+    },
+    {
+      "n": 10,
+      "date_time": "2026-10-27T12:30:00",
+      "titre": "The hidden station",
+      "clips": [
+        "7353 (roxzone 26:43)",
+        "7362 (roxzone 34:42)",
+        "7365 (sortie de roxzone 40:09)"
+      ],
+      "montage": "Les transitions seulement : entrer, poser, ressortir. Chrono de roxzone qui s'additionne en incrustation jusqu'à 4:04.",
+      "incrustations": [
+        "ROXZONE",
+        "4:04",
+        "25th OF 292"
+      ],
+      "legende": "There's a ninth station in HYROX that nobody trains: the Roxzone.\n\nIn Rome we spent 4:04 in transitions. 25th of 292 teams.\n\nThat's free time to win back before Hong Kong 🙏\n\n#hyrox #roxzone #hyroxtraining #roadtohongkong"
+    },
+    {
+      "n": 11,
+      "date_time": "2026-10-29T12:30:00",
+      "titre": "Father. Executive. Athlete.",
+      "clips": [
+        "plans de course au choix, un par phrase"
+      ],
+      "montage": "Reel manifeste, trois cartons au gabarit de la DA (papier, Fraunces) intercalés avec Rome. Texte tiré du persona, rien d'ajouté.",
+      "incrustations": [
+        "Father.",
+        "Executive.",
+        "Athlete.",
+        "Sport is not my full-time job."
+      ],
+      "legende": "Father. Executive. Athlete.\n\nSport is not my full-time job. My training has to find its place between a family I care deeply about and a demanding job across France, Spain and Italy.\n\nI share it because I think a lot of you live the same thing ❤️\n\n#hyrox #workingdad #hybridathlete #roadtohongkong"
+    },
+    {
+      "n": 12,
+      "date_time": "2026-11-01T18:00:00",
+      "titre": "221 days",
+      "clips": [
+        "les meilleurs plans du mois"
+      ],
+      "montage": "Récap du mois en 20 s, finir sur un carton « 221 DAYS · HONG KONG ».",
+      "incrustations": [
+        "221 DAYS",
+        "HYROX WORLD CHAMPIONSHIPS",
+        "HONG KONG · JUNE 2027"
+      ],
+      "legende": "221 days to Hong Kong 🇭🇰\n\nOctober was about Rome. November is about the work: the sled push, the transitions, and a lot of early mornings.\n\nThank you for following the road. It means more than you think 🙏\n\n#hyrox #roadtohongkong #hyroxworldchampionships #hybridathlete"
+    }
+  ]
+}

@@ -19,8 +19,10 @@ import re
 import sys
 from pathlib import Path
 
+import urllib.request
+
 try:
-    from PIL import Image, ImageDraw, ImageFont
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont
 except ImportError:
     sys.exit("Pillow manquant : pip install pillow")
 
@@ -38,6 +40,24 @@ SZ_COVER_TITLE = (100, 62)
 SZ_TITLE = (66, 48)
 SZ_BODY = (48, 44)
 SZ_NUM = (28, 28)
+
+# Contraste : on ne juge pas un fond photo à l'œil, on le mesure. Rapport WCAG
+# entre la couleur du texte et le fond réellement composité sous ce texte.
+# Une photo d'ambiance sous licence libre habille un propos général. Elle ne
+# doit JAMAIS illustrer un texte qui désigne un bien précis : le lecteur
+# comprendrait qu'on lui montre un mandat de l'agence. C'est exactement le
+# reproche qui a coûté le compte Le Loft le 31/08/2026.
+DESIGNE_UN_BIEN = (
+    "ce bien", "cet appartement", "cette maison", "ce logement", "ce studio",
+    "notre mandat", "nos mandats", "à vendre", "a vendre", "en exclusivité",
+    "en exclusivite", "ce duplex", "cet immeuble", "visitez", "coup de coeur",
+    "coup de cœur", "nouveauté", "nouveaute", "vendu", "disponible",
+)
+
+CONTRASTE_TITRE = 7.0      # AAA — un titre doit tenir même au soleil
+CONTRASTE_CORPS = 4.5      # AA
+VOILE_MAX = 0.94           # au-delà, le fond photo ne sert plus à rien
+RAMPE_VOILE = 150          # dégradé au-dessus du bloc de texte, en pixels
 
 FONT_DIRS = [
     Path("/System/Library/Fonts"), Path("/Library/Fonts"), Path.home() / "Library/Fonts",
@@ -93,6 +113,119 @@ def font(families, size, bold=False):
     f = ImageFont.truetype(str(path), size) if path else ImageFont.load_default(size)
     cache[key] = f
     return f
+
+
+# ---------------------------------------------------------------- fond photo
+
+def _luminance(rgb):
+    """Luminance relative WCAG d'un triplet 0-255."""
+    canaux = []
+    for v in rgb[:3]:
+        v /= 255.0
+        canaux.append(v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4)
+    r, v, b = canaux
+    return 0.2126 * r + 0.7152 * v + 0.0722 * b
+
+
+def _contraste(c1, c2):
+    l1, l2 = _luminance(c1), _luminance(c2)
+    if l2 > l1:
+        l1, l2 = l2, l1
+    return (l1 + 0.05) / (l2 + 0.05)
+
+
+def _hex_rgb(h):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def _fond_sous_encre(img, masque, halo=3):
+    """Pixel le plus clair du fond RÉELLEMENT recouvert par le texte.
+
+    Deux erreurs ont été commises ici et corrigées le 02/09/2026, après
+    reproduction sur le vrai chemin de code :
+
+    1. On mesurait sur toute la boîte, marges comprises. Les grandes zones
+       sombres où aucun texte ne passe diluaient la mesure.
+    2. On prenait le 97e centile. Sur une boîte de 894 000 px, 3 % font un
+       carré de 163 px : une fenêtre surexposée plus petite que ça était
+       jetée par le centile, c'est-à-dire exactement ce qu'on cherchait.
+       Mesuré : une fenêtre de 200×100 recevait un voile de 0 %, le script
+       annonçait 13,94:1 et le contraste réel était de 1,08:1.
+
+    On prend donc le MAXIMUM, et seulement sous l'encre. L'encre est dilatée
+    de quelques pixels : un glyphe est antialiasé, ses bords empruntent la
+    couleur du fond, et l'œil lit le contraste sur cette frange. Un flou léger
+    sur le fond écarte le pixel isolé sans effacer une zone brûlée.
+    """
+    if masque.getbbox() is None:
+        return (0, 0, 0)
+    encre = masque.filter(ImageFilter.MaxFilter(2 * halo + 1))
+    encre = encre.point(lambda v: 255 if v > 32 else 0)
+    gris = img.convert("L").filter(ImageFilter.GaussianBlur(1.0))
+    sous = Image.composite(gris, Image.new("L", gris.size, 0), encre)
+    haut = sous.getextrema()[1]
+    return (haut, haut, haut)
+
+
+def _alpha_requis(fond, texte, voile, cible):
+    """Plus petite opacité de voile qui amène le contraste à la cible."""
+    if _contraste(fond, texte) >= cible:
+        return 0.0
+    bas, haut = 0.0, 1.0
+    for _ in range(24):                       # dichotomie, 24 tours = 1e-7
+        milieu = (bas + haut) / 2
+        melange = tuple(f * (1 - milieu) + v * milieu for f, v in zip(fond, voile))
+        if _contraste(melange, texte) >= cible:
+            haut = milieu
+        else:
+            bas = milieu
+    return haut
+
+
+def charger_fond(conf, photo, slug):
+    """Récupère la photo du client, la met en cache, la recadre en 4:5."""
+    cache = ROOT / conf["cache"]
+    cache.mkdir(parents=True, exist_ok=True)
+    fichier = cache / (photo["cle"] + ".jpg")
+    if not fichier.exists():
+        requete = urllib.request.Request(photo["url"],
+                                         headers={"User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(requete, timeout=45) as flux:
+                fichier.write_bytes(flux.read())
+        except Exception as exc:
+            raise ValueError(
+                f"{slug} : photo de fond « {photo['cle']} » introuvable ({exc}). "
+                f"Vérifier {photo['url']}")
+    img = Image.open(fichier).convert("RGB")
+    lw, lh = img.size
+    if lw / lh > W / H:
+        cw = int(lh * W / H)
+        img = img.crop(((lw - cw) // 2, 0, (lw - cw) // 2 + cw, lh))
+    else:
+        ch = int(lw * H / W)
+        img = img.crop((0, (lh - ch) // 2, lw, (lh - ch) // 2 + ch))
+    return img.resize((W, H), Image.LANCZOS)
+
+
+def poser_voile(img, boite, alpha, voile):
+    """Voile dégradé : nul en haut de la rampe, plein sur le bloc de texte.
+
+    La photo reste lisible au-dessus du texte ; en dessous, le voile ne se lève
+    pas, sinon la fin d'une phrase retomberait sur une zone claire.
+    """
+    y0 = max(0, boite[1] - RAMPE_VOILE)
+    calque = Image.new("RGBA", (W, H), voile + (0,))
+    dessin = ImageDraw.Draw(calque)
+    for y in range(y0, H):
+        if y < boite[1]:
+            t = (y - y0) / float(max(1, boite[1] - y0))
+            a = alpha * t * t
+        else:
+            a = alpha
+        dessin.line([(0, y), (W, y)], fill=voile + (int(round(a * 255)),))
+    return Image.alpha_composite(img.convert("RGBA"), calque).convert("RGB")
 
 
 # ---------------------------------------------------------------- texte
@@ -178,7 +311,7 @@ def tracked(draw, text, x, y, fnt, fill, tracking=6):
 
 # ---------------------------------------------------------------- rendu d'une slide
 
-def render_slide(slide, theme, index, total, slug):
+def render_slide(slide, theme, index, total, slug, fonds=None):
     is_cta = slide.get("cta") or index == total
     is_cover = slide.get("cover") or index == 1
 
@@ -186,6 +319,15 @@ def render_slide(slide, theme, index, total, slug):
     fg = theme["cta_fg"] if is_cta else theme["fg"]
     accent = theme["cta_fg"] if is_cta else theme["accent"]
     muted = theme["cta_fg"] if is_cta else theme["muted"]
+
+    # Fond photo : les couleurs de texte changent, le calcul du voile vient plus
+    # bas, une fois la boîte du texte connue.
+    conf_fond = theme.get("fond")
+    photo = fonds.get(slide["photo"]) if (conf_fond and fonds and slide.get("photo")) else None
+    if photo:
+        fg = conf_fond["texte"]
+        muted = conf_fond["muted"]
+        accent = conf_fond["accent"]
 
     fam = theme.get("font_family", ["DejaVu Sans"])
     img = Image.new("RGB", (W, H), bg)
@@ -225,29 +367,92 @@ def render_slide(slide, theme, index, total, slug):
             f"Raccourcir le titre ou le corps ({len(title)} + {len(body)} caractères)."
         )
 
-    if kicker:
-        tracked(d, kicker, MARGIN, y, kf, accent)
-        y += SZ_KICKER[0] + 46
-        if theme.get("rule"):
-            d.rectangle([MARGIN, y - 22, MARGIN + 96, y - 18], fill=accent)
-            y += rule_h - 22
-
-    y = draw_lines(d, tlines, MARGIN, y, tf, tlh, fg, fill_emph)
-    if blines:
-        y = draw_lines(d, blines, MARGIN, y + body_gap, bf,
-                       blh, fg if is_cta else muted, fill_emph)
-
+    # Le texte est tracé deux fois : une fois en blanc sur un masque, pour savoir
+    # où l'encre tombe réellement, une fois sur l'image pour de bon. C'est le
+    # masque qui permet de mesurer le fond là où ça compte.
     nf = font(fam, SZ_NUM[0], bold=False)
-    if not is_cta:
-        d.text((MARGIN, H - MARGIN - 34), f"{index}/{total}", font=nf, fill=muted)
-    if is_cover:
-        cue = "SWIPE →"
-        d.text((W - MARGIN - d.textlength(cue, font=kf), H - MARGIN - 40),
-               cue, font=kf, fill=accent)
+    y_depart = y
+
+    def poser(dessin, coul):
+        yy = y_depart
+        if kicker:
+            tracked(dessin, kicker, MARGIN, yy, kf, coul("accent"))
+            yy += SZ_KICKER[0] + 46
+            if theme.get("rule"):
+                dessin.rectangle([MARGIN, yy - 22, MARGIN + 96, yy - 18],
+                                 fill=coul("accent"))
+                yy += rule_h - 22
+        yy = draw_lines(dessin, tlines, MARGIN, yy, tf, tlh,
+                        coul("fg"), coul("emph"))
+        if blines:
+            draw_lines(dessin, blines, MARGIN, yy + body_gap, bf, blh,
+                       coul("corps"), coul("emph"))
+        if not is_cta:
+            dessin.text((MARGIN, H - MARGIN - 34), f"{index}/{total}",
+                        font=nf, fill=coul("muted"))
+        if is_cover:
+            cue = "SWIPE →"
+            dessin.text((W - MARGIN - dessin.textlength(cue, font=kf),
+                         H - MARGIN - 40), cue, font=kf, fill=coul("accent"))
+
+    couleurs = {"fg": fg, "corps": fg if is_cta else muted, "emph": fill_emph,
+                "accent": accent, "muted": muted}
+
+    if photo:
+        img = charger_fond(conf_fond, photo, slug)
+        voile = _hex_rgb(conf_fond["voile"])
+
+        masque = Image.new("L", (W, H), 0)
+        poser(ImageDraw.Draw(masque), lambda role: 255)
+        cadre = masque.getbbox()
+        if cadre is None:
+            raise ValueError(f"{slug} · slide {index} : aucun texte à poser.")
+
+        pire = _fond_sous_encre(img, masque)
+        cible_t = conf_fond.get("contraste_titre", CONTRASTE_TITRE)
+        cible_c = conf_fond.get("contraste_corps", CONTRASTE_CORPS)
+        alpha = max(
+            _alpha_requis(pire, _hex_rgb(couleurs["fg"]), voile, cible_t),
+            _alpha_requis(pire, _hex_rgb(couleurs["corps"]), voile, cible_c),
+            _alpha_requis(pire, _hex_rgb(couleurs["accent"]), voile, cible_c),
+        )
+        if alpha > VOILE_MAX:
+            raise ValueError(
+                f"{slug} · slide {index} : la photo « {photo['cle']} » est trop claire "
+                f"sous le texte, il faudrait un voile à {alpha:.0%} et le fond "
+                f"disparaîtrait. Choisir une autre photo.")
+        img = poser_voile(img, (0, cadre[1], W, H), alpha, voile)
+
+        # Contrôle après composition, sur les pixels et non sur le modèle.
+        obtenu = _fond_sous_encre(img, masque)
+        reel_t = _contraste(obtenu, _hex_rgb(couleurs["fg"]))
+        reel_c = min(_contraste(obtenu, _hex_rgb(couleurs["corps"])),
+                     _contraste(obtenu, _hex_rgb(couleurs["accent"])))
+        if reel_t < cible_t - 0.1 or reel_c < cible_c - 0.1:
+            raise ValueError(
+                f"{slug} · slide {index} : après voile, contraste mesuré sous le "
+                f"texte {reel_t:.2f}:1 pour le titre et {reel_c:.2f}:1 pour le corps, "
+                f"en dessous des cibles {cible_t}:1 et {cible_c}:1. "
+                f"Photo « {photo['cle']} » à remplacer.")
+        d = ImageDraw.Draw(img)
+
+    poser(d, lambda role: couleurs[role])
     return img
 
 
 # ---------------------------------------------------------------- spec
+
+def charger_manifeste(theme):
+    """Index des fonds photo du client, par clé. Vide si le thème n'en a pas."""
+    conf = theme.get("fond")
+    if not conf:
+        return None
+    chemin = ROOT / conf["manifeste"]
+    if not chemin.exists():
+        raise ValueError(f"manifeste de fonds introuvable : {conf['manifeste']}")
+    data = json.loads(chemin.read_text(encoding="utf-8"))
+    return {p["cle"]: p for p in data["photos"]}
+
 
 def load_themes():
     return json.loads(THEMES_PATH.read_text(encoding="utf-8"))
@@ -255,6 +460,13 @@ def load_themes():
 
 def validate(spec, themes, path):
     errs = []
+    fonds = None
+    theme = themes.get(spec.get("client")) or {}
+    if theme.get("fond"):
+        try:
+            fonds = charger_manifeste(theme)
+        except ValueError as exc:
+            errs.append(str(exc))
     for field in ("client", "slug", "archetype", "pilier", "date_time", "cible", "slides", "caption"):
         if not spec.get(field):
             errs.append(f"champ obligatoire manquant : {field}")
@@ -279,6 +491,32 @@ def validate(spec, themes, path):
         words = len(brut.replace("**", " ").split())
         if words > 40:
             errs.append(f"slide {i} : {words} mots (maximum 40)")
+        cle = s.get("photo")
+        if cle and fonds is not None:
+            if cle not in fonds:
+                errs.append(f"slide {i} : fond « {cle} » absent du manifeste")
+            else:
+                fond = fonds[cle]
+                if not fond.get("matiere"):
+                    errs.append(
+                        f"slide {i} : fond « {cle} » est un mur nu de logement vide "
+                        f"({fond['sujet']}). Un fond sans matière ne fait pas "
+                        f"une image, il fait une tache grise")
+                if fond.get("provenance") == "libre":
+                    en_clair = brut.replace("**", " ").lower()
+                    mots = [m for m in DESIGNE_UN_BIEN if m in en_clair]
+                    if mots:
+                        errs.append(
+                            f"slide {i} : le texte désigne un bien précis "
+                            f"({', '.join(mots)}) alors que le fond « {cle} » est une "
+                            f"photo d'ambiance sous licence libre. Le lecteur croirait "
+                            f"voir un mandat de l'agence. Mettre une photo du client "
+                            f"ou réécrire la slide")
+                    if not fond.get("licence"):
+                        errs.append(
+                            f"slide {i} : fond « {cle} » sans licence renseignée")
+        elif fonds is not None and not cle:
+            errs.append(f"slide {i} : champ photo manquant (le thème a des fonds)")
     texts = [spec.get("caption", "")] + [
         f"{s.get('kicker', '')} {s.get('title', '')} {s.get('body', '')}" for s in slides]
     if any("[" in t for t in texts):
@@ -292,11 +530,12 @@ def render_spec(path, themes, check_only=False):
     spec = validate(json.loads(path.read_text(encoding="utf-8")), themes, path)
     theme = themes[spec["client"]]
     slides = spec["slides"]
+    fonds = charger_manifeste(theme)
     out = ROOT / "medias" / spec["client"] / "carrousels" / spec["slug"]
 
     files = []
     for i, slide in enumerate(slides, 1):
-        img = render_slide(slide, theme, i, len(slides), spec["slug"])
+        img = render_slide(slide, theme, i, len(slides), spec["slug"], fonds)
         name = f"slide-{i:02d}.png"
         files.append(name)
         if not check_only:

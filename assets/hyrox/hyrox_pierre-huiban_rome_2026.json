@@ -1,0 +1,200 @@
+{
+  "athlete": "Pierre Huiban",
+  "partenaire": "Antoine Bouhana",
+  "course": "HYROX Rome 2026",
+  "date": "2026-09-26",
+  "depart": "19:20",
+  "division": "PRO DOUBLES MEN, catégorie 35-39",
+  "temps_final": "53:34",
+  "temps_final_s": 3214,
+  "classement": {
+    "division": "12e sur 292",
+    "categorie_age": "1er (35-39)"
+  },
+  "roxzone": {
+    "total": "4:04",
+    "rang": "25e sur 292"
+  },
+  "running": {
+    "total": "27:59",
+    "rang": "18e sur 292",
+    "top_pct": 3.2
+  },
+  "stations": {
+    "total": "21:31",
+    "rang": "12e sur 292",
+    "top_pct": 7.0
+  },
+  "source": "HYRESULT, https://www.hyresult.com/result/LR3MS4JI58942C, relevé le 03/10/2026",
+  "verification": "stations : somme exacte (1291 s). runs : somme des 8 splits 1683 s pour 1679 s officiels, écart 4 s (arrondi des splits, et pas de roxzone mesurée avant les wall balls : le run 8 l'inclut). Total officiel 53:34 confirmé par le chrono.",
+  "segments": [
+    {
+      "type": "run",
+      "nom": "Run 1",
+      "duree_s": 264,
+      "rang_division": 14,
+      "ordre": 1,
+      "duree_affichee": "4:24",
+      "cumul_s": 264,
+      "cumul_affiche": "0:04:24"
+    },
+    {
+      "type": "station",
+      "nom": "SkiErg 1000 m",
+      "duree_s": 213,
+      "rang_division": 22,
+      "top_pct": 19.1,
+      "ordre": 2,
+      "duree_affichee": "3:33",
+      "cumul_s": 481,
+      "cumul_affiche": "0:08:01"
+    },
+    {
+      "type": "run",
+      "nom": "Run 2",
+      "duree_s": 186,
+      "rang_division": 11,
+      "ordre": 3,
+      "duree_affichee": "3:06",
+      "cumul_s": 697,
+      "cumul_affiche": "0:11:37"
+    },
+    {
+      "type": "station",
+      "nom": "Sled Push 50 m",
+      "duree_s": 130,
+      "rang_division": 51,
+      "top_pct": 54.8,
+      "ordre": 4,
+      "duree_affichee": "2:10",
+      "cumul_s": 831,
+      "cumul_affiche": "0:13:51"
+    },
+    {
+      "type": "run",
+      "nom": "Run 3",
+      "duree_s": 198,
+      "rang_division": 15,
+      "ordre": 5,
+      "duree_affichee": "3:18",
+      "cumul_s": 1061,
+      "cumul_affiche": "0:17:41"
+    },
+    {
+      "type": "station",
+      "nom": "Sled Pull 50 m",
+      "duree_s": 173,
+      "rang_division": 15,
+      "top_pct": 9.5,
+      "ordre": 6,
+      "duree_affichee": "2:53",
+      "cumul_s": 1241,
+      "cumul_affiche": "0:20:41"
+    },
+    {
+      "type": "run",
+      "nom": "Run 4",
+      "duree_s": 200,
+      "rang_division": 21,
+      "ordre": 7,
+      "duree_affichee": "3:20",
+      "cumul_s": 1473,
+      "cumul_affiche": "0:24:33"
+    },
+    {
+      "type": "station",
+      "nom": "Burpee Broad Jumps 80 m",
+      "duree_s": 115,
+      "rang_division": 26,
+      "top_pct": 15.2,
+      "ordre": 8,
+      "duree_affichee": "1:55",
+      "cumul_s": 1601,
+      "cumul_affiche": "0:26:41"
+    },
+    {
+      "type": "run",
+      "nom": "Run 5",
+      "duree_s": 204,
+      "rang_division": 26,
+      "ordre": 9,
+      "duree_affichee": "3:24",
+      "cumul_s": 1815,
+      "cumul_affiche": "0:30:15"
+    },
+    {
+      "type": "station",
+      "nom": "Rowing 1000 m",
+      "duree_s": 240,
+      "rang_division": 37,
+      "top_pct": 26.6,
+      "ordre": 10,
+      "duree_affichee": "4:00",
+      "cumul_s": 2071,
+      "cumul_affiche": "0:34:31"
+    },
+    {
+      "type": "run",
+      "nom": "Run 6",
+      "duree_s": 203,
+      "rang_division": 22,
+      "ordre": 11,
+      "duree_affichee": "3:23",
+      "cumul_s": 2295,
+      "cumul_affiche": "0:38:15"
+    },
+    {
+      "type": "station",
+      "nom": "Farmers Carry 200 m",
+      "duree_s": 81,
+      "rang_division": 25,
+      "top_pct": 20.9,
+      "ordre": 12,
+      "duree_affichee": "1:21",
+      "cumul_s": 2403,
+      "cumul_affiche": "0:40:03"
+    },
+    {
+      "type": "run",
+      "nom": "Run 7",
+      "duree_s": 203,
+      "rang_division": 20,
+      "ordre": 13,
+      "duree_affichee": "3:23",
+      "cumul_s": 2617,
+      "cumul_affiche": "0:43:37"
+    },
+    {
+      "type": "station",
+      "nom": "Sandbag Lunges 100 m",
+      "duree_s": 137,
+      "rang_division": 13,
+      "top_pct": 3.5,
+      "ordre": 14,
+      "duree_affichee": "2:17",
+      "cumul_s": 2783,
+      "cumul_affiche": "0:46:23"
+    },
+    {
+      "type": "run",
+      "nom": "Run 8",
+      "duree_s": 225,
+      "rang_division": 16,
+      "ordre": 15,
+      "duree_affichee": "3:45",
+      "cumul_s": 3012,
+      "cumul_affiche": "0:50:12"
+    },
+    {
+      "type": "station",
+      "nom": "Wall Balls 100 reps",
+      "duree_s": 202,
+      "rang_division": 10,
+      "top_pct": 14.6,
+      "ordre": 16,
+      "duree_affichee": "3:22",
+      "cumul_s": 3214,
+      "cumul_affiche": "0:53:34"
+    }
+  ]
+}

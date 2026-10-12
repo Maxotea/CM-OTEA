@@ -1,0 +1,837 @@
+{
+  "_doc": "Fonds photo des carrousels La Galerie Immobilière. Deux provenances. provenance=client : LEURS photos, publiées sur leurs propres mandats (lagalerieimmobiliere.com). Ce sont les seules qui peuvent illustrer un texte désignant un bien précis. provenance=libre : photo d'ambiance sous licence commerciale (Unsplash ou Pexels uniquement), pour habiller un propos général ; le champ licence et le champ credit sont alors obligatoires, et la validation refuse de la poser sous un texte qui parle d'un bien à vendre. Jamais de Pinterest : les images qui y sont épinglées appartiennent à des tiers. Le champ matiere dit si la photo a de la texture (True) ou si c'est un mur nu de logement vide (False) : seules les photos à matiere=True font un fond qui tient. luminance et detail sont mesurés sur le recadrage 4:5 et servent au calcul du voile.",
+  "client": "la-galerie-immobiliere",
+  "source": "site du client, mandats publiés",
+  "releve": "2026-09-02",
+  "photos": [
+    {
+      "cle": "01",
+      "slug": "facade-bois",
+      "sujet": "Façade contemporaine bardée de bois, jardin",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2025/10/17278165891_VM345_23_original.jpg",
+      "luminance": 108.8,
+      "detail": {
+        "haut": 27.7,
+        "milieu": 43.2,
+        "bas": 39.1
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "02",
+      "slug": "chambre-vide",
+      "sujet": "Chambre vide, fenêtre sur toits",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260191_VM345_8_original.jpg",
+      "luminance": 138.4,
+      "detail": {
+        "haut": 4.1,
+        "milieu": 6.7,
+        "bas": 7.8
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "04",
+      "slug": "salle-bain-vasque",
+      "sujet": "Salle de bains, vasque bois et miroir ovale",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260311_VM345_10_original.jpg",
+      "luminance": 159.1,
+      "detail": {
+        "haut": 6.6,
+        "milieu": 7.8,
+        "bas": 6.8
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "06",
+      "slug": "piece-vide",
+      "sujet": "Pièce vide, parquet clair",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260541_VM345_13_original.jpg",
+      "luminance": 169.7,
+      "detail": {
+        "haut": 4.7,
+        "milieu": 5.8,
+        "bas": 8.4
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "07",
+      "slug": "douche-italienne",
+      "sujet": "Douche à l'italienne, vasque bois",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260621_VM345_14_original.jpg",
+      "luminance": 153.8,
+      "detail": {
+        "haut": 9.4,
+        "milieu": 13.0,
+        "bas": 6.9
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "08",
+      "slug": "piece-claire",
+      "sujet": "Pièce claire, mur blanc",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260751_VM345_16_original.jpg",
+      "luminance": 157.7,
+      "detail": {
+        "haut": 4.3,
+        "milieu": 9.0,
+        "bas": 8.2
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "09",
+      "slug": "piece-blanche",
+      "sujet": "Pièce blanche, forte luminosité",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219260951_VM345_18_original.jpg",
+      "luminance": 183.3,
+      "detail": {
+        "haut": 3.8,
+        "milieu": 7.4,
+        "bas": 8.4
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "10",
+      "slug": "piece-lumineuse",
+      "sujet": "Pièce lumineuse, sol clair",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17219261071_VM345_19_original.jpg",
+      "luminance": 178.2,
+      "detail": {
+        "haut": 3.7,
+        "milieu": 10.9,
+        "bas": 7.2
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "11",
+      "slug": "sejour-matiere",
+      "sujet": "Séjour, matière et contraste",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722541_VM383_1_original.jpg",
+      "luminance": 144.4,
+      "detail": {
+        "haut": 21.3,
+        "milieu": 29.6,
+        "bas": 9.3
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "12",
+      "slug": "exterieur-terrasse",
+      "sujet": "Extérieur, terrasse",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722551_VM383_2_original.jpg",
+      "luminance": 164.8,
+      "detail": {
+        "haut": 8.1,
+        "milieu": 25.4,
+        "bas": 13.9
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "13",
+      "slug": "volume-contraste",
+      "sujet": "Volume contrasté, ouverture",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722571_VM383_4_original.jpg",
+      "luminance": 143.4,
+      "detail": {
+        "haut": 12.0,
+        "milieu": 25.1,
+        "bas": 33.4
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "15",
+      "slug": "lumiere-jour",
+      "sujet": "Pièce traversée par la lumière du jour",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722611_VM383_7_original.jpg",
+      "luminance": 161.7,
+      "detail": {
+        "haut": 2.0,
+        "milieu": 22.4,
+        "bas": 21.9
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "17",
+      "slug": "interieur-calme",
+      "sujet": "Intérieur calme, tons chauds",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722631_VM383_9_original.jpg",
+      "luminance": 159.4,
+      "detail": {
+        "haut": 7.4,
+        "milieu": 18.2,
+        "bas": 13.5
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "18",
+      "slug": "cuisine",
+      "sujet": "Cuisine équipée",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722661_VM383_11_original.jpg",
+      "luminance": 163.1,
+      "detail": {
+        "haut": 3.2,
+        "milieu": 13.5,
+        "bas": 24.8
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "20",
+      "slug": "detail-architecture",
+      "sujet": "Détail d'architecture, forte texture",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17704722951_VM383_40_original.jpg",
+      "luminance": 128.7,
+      "detail": {
+        "haut": 21.5,
+        "milieu": 48.7,
+        "bas": 44.4
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "24",
+      "slug": "piece-douce",
+      "sujet": "Pièce aux tons doux",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17798895811_VA2709_11_original.jpg",
+      "luminance": 181.2,
+      "detail": {
+        "haut": 4.0,
+        "milieu": 6.1,
+        "bas": 9.8
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "27",
+      "slug": "mise-en-valeur",
+      "sujet": "Bien mis en valeur, contraste marqué",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811232911_VA2709_19_original.jpg",
+      "luminance": 147.6,
+      "detail": {
+        "haut": 10.1,
+        "milieu": 21.4,
+        "bas": 14.4
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "28",
+      "slug": "piece-sobre",
+      "sujet": "Pièce sobre",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811234651_VA2709_20_original.jpg",
+      "luminance": 153.7,
+      "detail": {
+        "haut": 4.9,
+        "milieu": 13.3,
+        "bas": 7.5
+      },
+      "matiere": false,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "30",
+      "slug": "perspective",
+      "sujet": "Perspective, profondeur de champ",
+      "url": "https://lagalerieimmobiliere.com/wp-content/uploads/2026/07/17811242321_VA2709_22_original.jpg",
+      "luminance": 163.8,
+      "detail": {
+        "haut": 3.4,
+        "milieu": 17.7,
+        "bas": 14.1
+      },
+      "matiere": true,
+      "provenance": "client",
+      "credit": "La Galerie Immobilière"
+    },
+    {
+      "cle": "P2265845",
+      "slug": "pexels-2265845",
+      "sujet": "Vue panoramique sur les toits et la skyline de Paris.",
+      "url": "https://images.pexels.com/photos/2265845/pexels-photo-2265845.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cityscape-view-of-paris-2265845/",
+      "luminance": 167.8,
+      "detail": {
+        "max": 56.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Vincent Rivaud",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P3557507",
+      "slug": "pexels-3557507",
+      "sujet": "Rideau devant une fenetre traverse par les rayons du lever de soleil, ombres douces projetees a l'interieur.",
+      "url": "https://images.pexels.com/photos/3557507/pexels-photo-3557507.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/window-curtain-with-sunrise-beams-3557507/",
+      "luminance": 96.5,
+      "detail": {
+        "max": 47.6
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Szabo Viktor",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P11299684",
+      "slug": "pexels-11299684",
+      "sujet": "Immeuble d'habitation français typique, façade claire, volets et garde-corps en fer forgé.",
+      "url": "https://images.pexels.com/photos/11299684/pexels-photo-11299684.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/typical-french-residential-building-11299684/",
+      "luminance": 116.7,
+      "detail": {
+        "max": 42.6
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Mathias Reding",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P31387559",
+      "slug": "pexels-31387559",
+      "sujet": "Rue pavée parisienne bordée d'immeubles anciens, ciel dégagé.",
+      "url": "https://images.pexels.com/photos/31387559/pexels-photo-31387559.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/charming-cobblestone-street-in-paris-31387559/",
+      "luminance": 136.4,
+      "detail": {
+        "max": 39.5
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Vincent Rivaud",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P10800451",
+      "slug": "pexels-10800451",
+      "sujet": "Vue aérienne des immeubles parisiens dans la brume, atmosphère feutrée.",
+      "url": "https://images.pexels.com/photos/10800451/pexels-photo-10800451.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/aerial-photography-of-city-buildings-in-paris-10800451/",
+      "luminance": 216.0,
+      "detail": {
+        "max": 38.0
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Tarvo Metspalu",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P16646221",
+      "slug": "pexels-16646221",
+      "sujet": "Enfilade de façades d'immeubles parisiens traditionnels, vues d'en face.",
+      "url": "https://images.pexels.com/photos/16646221/pexels-photo-16646221.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/facades-of-traditional-houses-in-paris-france-16646221/",
+      "luminance": 185.2,
+      "detail": {
+        "max": 37.5
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Lucas Mota",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P19328832",
+      "slug": "pexels-19328832",
+      "sujet": "Immeubles parisiens en pierre de taille, façades traditionnelles vues de la rue.",
+      "url": "https://images.pexels.com/photos/19328832/pexels-photo-19328832.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/the-buildings-in-paris-are-made-of-stone-19328832/",
+      "luminance": 144.4,
+      "detail": {
+        "max": 36.7
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Vincent Rivaud",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P3952086",
+      "slug": "pexels-3952086",
+      "sujet": "Bibliotheque de style classique, rayonnages, plante en pot et assise confortable dans la lumiere naturelle.",
+      "url": "https://images.pexels.com/photos/3952086/pexels-photo-3952086.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-public-library-and-potted-tree-in-classic-style-interior-3952086/",
+      "luminance": 125.9,
+      "detail": {
+        "max": 33.9
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Ksenia Chernaya",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P17837303",
+      "slug": "pexels-17837303",
+      "sujet": "Rue parisienne avec immeubles d'habitation néoclassiques et façades colorées.",
+      "url": "https://images.pexels.com/photos/17837303/pexels-photo-17837303.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/residential-buildings-in-paris-france-17837303/",
+      "luminance": 159.5,
+      "detail": {
+        "max": 33.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Mathias Reding",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P30341658",
+      "slug": "pexels-30341658",
+      "sujet": "Panorama sur les toits de Paris depuis la terrasse du Centre Pompidou.",
+      "url": "https://images.pexels.com/photos/30341658/pexels-photo-30341658.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/scenic-view-from-the-pompidou-center-in-paris-30341658/",
+      "luminance": 164.8,
+      "detail": {
+        "max": 32.8
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Julia Maks",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P31058041",
+      "slug": "pexels-31058041",
+      "sujet": "Immeuble haussmannien élégant en plein Paris, moulures et balcons filants.",
+      "url": "https://images.pexels.com/photos/31058041/pexels-photo-31058041.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/elegant-haussmann-building-in-paris-france-31058041/",
+      "luminance": 120.0,
+      "detail": {
+        "max": 32.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Abhishek Navlakha",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P30986793",
+      "slug": "pexels-30986793",
+      "sujet": "Vue dégagée sur Paris depuis les hauteurs de Montmartre.",
+      "url": "https://images.pexels.com/photos/30986793/pexels-photo-30986793.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/scenic-view-of-paris-from-montmartre-30986793/",
+      "luminance": 174.6,
+      "detail": {
+        "max": 32.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Céline",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P952587",
+      "slug": "pexels-952587",
+      "sujet": "Fenêtre à volets verts sur une façade parisienne couleur pêche, avec pots de fleurs.",
+      "url": "https://images.pexels.com/photos/952587/pexels-photo-952587.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/window-with-green-shutters-on-peach-colored-house-in-paris-952587/",
+      "luminance": 126.9,
+      "detail": {
+        "max": 32.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Leah Newhouse",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P1850613",
+      "slug": "pexels-1850613",
+      "sujet": "Immeuble parisien clair aux balcons ouvragés, baigné de lumière naturelle du jour.",
+      "url": "https://images.pexels.com/photos/1850613/pexels-photo-1850613.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/white-apartment-building-1850613/",
+      "luminance": 154.6,
+      "detail": {
+        "max": 30.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Elina Sazonova",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P16923121",
+      "slug": "pexels-16923121",
+      "sujet": "Toits parisiens en zinc vus d'en haut, forêt de cheminées et lucarnes, architecture haussmannienne.",
+      "url": "https://images.pexels.com/photos/16923121/pexels-photo-16923121.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/roofs-of-buildings-in-paris-16923121/",
+      "luminance": 141.3,
+      "detail": {
+        "max": 30.0
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Diego F. Parra",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P30601584",
+      "slug": "pexels-30601584",
+      "sujet": "Table de petit-déjeuner dressée dans une salle à manger baignée de lumière naturelle.",
+      "url": "https://images.pexels.com/photos/30601584/pexels-photo-30601584.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-breakfast-setup-in-a-sunlit-dining-room-30601584/",
+      "luminance": 144.0,
+      "detail": {
+        "max": 27.8
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Kate Filatova",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P16934111",
+      "slug": "pexels-16934111",
+      "sujet": "Vue de quartier parisien, enfilade de toits et de cheminées, façades claires en pierre de taille.",
+      "url": "https://images.pexels.com/photos/16934111/pexels-photo-16934111.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cityscape-of-paris-france-16934111/",
+      "luminance": 147.8,
+      "detail": {
+        "max": 27.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Diego F. Parra",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P30702969",
+      "slug": "pexels-30702969",
+      "sujet": "Scène de rue à Montmartre, façades anciennes et ferronneries de balcon.",
+      "url": "https://images.pexels.com/photos/30702969/pexels-photo-30702969.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/charming-parisian-street-scene-in-montmartre-30702969/",
+      "luminance": 115.5,
+      "detail": {
+        "max": 26.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "TBD Traveller",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P6243730",
+      "slug": "pexels-6243730",
+      "sujet": "Escalier d'un immeuble ancien, marches usees et rampe, eclaire en lumiere naturelle.",
+      "url": "https://images.pexels.com/photos/6243730/pexels-photo-6243730.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/old-staircase-in-ancient-building-6243730/",
+      "luminance": 120.7,
+      "detail": {
+        "max": 26.2
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Meruyert Gonullu",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P4913317",
+      "slug": "pexels-4913317",
+      "sujet": "Appartement élégant, grande fenêtre et mobilier bois classique, lumière naturelle.",
+      "url": "https://images.pexels.com/photos/4913317/pexels-photo-4913317.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/interior-of-cozy-elegant-apartment-with-big-window-and-classic-wooden-furniture-4913317/",
+      "luminance": 93.5,
+      "detail": {
+        "max": 25.1
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P18390947",
+      "slug": "pexels-18390947",
+      "sujet": "Nuages au-dessus des immeubles parisiens au coucher du soleil, ciel de fin de journée.",
+      "url": "https://images.pexels.com/photos/18390947/pexels-photo-18390947.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/clouds-over-buildings-in-paris-at-sunset-18390947/",
+      "luminance": 95.1,
+      "detail": {
+        "max": 24.0
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "non identifié — page inaccessible depuis cette session, à relever sur la page avant publication",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P16703087",
+      "slug": "pexels-16703087",
+      "sujet": "Façade d'immeuble haussmannien classique sur ciel bleu franc, balcons en ferronnerie et fenêtres alignées.",
+      "url": "https://images.pexels.com/photos/16703087/pexels-photo-16703087.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/facade-of-a-traditional-french-apartment-building-16703087/",
+      "luminance": 141.0,
+      "detail": {
+        "max": 21.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Lucas Mota",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P19881388",
+      "slug": "pexels-19881388",
+      "sujet": "Toits parisiens et cheminées sous un ciel gris chargé, lumière contrastée de fin de journée.",
+      "url": "https://images.pexels.com/photos/19881388/pexels-photo-19881388.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cityscape-of-paris-under-gray-clouds-19881388/",
+      "luminance": 135.6,
+      "detail": {
+        "max": 20.8
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Khaled Ameur",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P548176",
+      "slug": "pexels-548176",
+      "sujet": "Garde-corps en fer forgé noir sur balcon d'immeuble, façade parisienne ouvragée.",
+      "url": "https://images.pexels.com/photos/548176/pexels-photo-548176.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/black-steel-railing-on-building-balcony-548176/",
+      "luminance": 123.6,
+      "detail": {
+        "max": 20.6
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Margerretta",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P35505452",
+      "slug": "pexels-35505452",
+      "sujet": "Cuisine chaleureuse à façades en bois avec piano de cuisson et lumière naturelle.",
+      "url": "https://images.pexels.com/photos/35505452/pexels-photo-35505452.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-kitchen-with-wooden-cabinets-and-modern-stove-35505452/",
+      "luminance": 156.3,
+      "detail": {
+        "max": 19.8
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Peter Vang",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P3681641",
+      "slug": "pexels-3681641",
+      "sujet": "Croissant et tasse en céramique posés sur une table en bois, avec un magazine ouvert.",
+      "url": "https://images.pexels.com/photos/3681641/pexels-photo-3681641.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/bread-on-wood-table-and-ceramic-cup-3681641/",
+      "luminance": 111.1,
+      "detail": {
+        "max": 19.6
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "La Miko",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P18809458",
+      "slug": "pexels-18809458",
+      "sujet": "Hôtel particulier baroque en bord de rue à Paris, sous un ciel couvert.",
+      "url": "https://images.pexels.com/photos/18809458/pexels-photo-18809458.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/baroque-townhouse-by-street-in-paris-france-18809458/",
+      "luminance": 116.7,
+      "detail": {
+        "max": 19.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "cami",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P19096629",
+      "slug": "pexels-19096629",
+      "sujet": "Fauteuil beige devant une fenetre voilee de tulle blanc, lumiere du jour filtree.",
+      "url": "https://images.pexels.com/photos/19096629/pexels-photo-19096629.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-armchair-standing-by-a-window-with-white-tulle-curtain-19096629/",
+      "luminance": 132.2,
+      "detail": {
+        "max": 17.5
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Anne van der Valk",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P5824528",
+      "slug": "pexels-5824528",
+      "sujet": "Intérieur de style ancien, mobilier bois classique et tapis à motifs.",
+      "url": "https://images.pexels.com/photos/5824528/pexels-photo-5824528.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/vintage-styled-house-with-classic-wooden-furniture-and-ornamental-rug-5824528/",
+      "luminance": 49.2,
+      "detail": {
+        "max": 16.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Charlotte May",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P3733769",
+      "slug": "pexels-3733769",
+      "sujet": "Fleurs sechees dans un vase en ceramique et pichet poses sur un tabouret en bois, fond beige.",
+      "url": "https://images.pexels.com/photos/3733769/pexels-photo-3733769.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/dried-plants-in-ceramic-vase-and-jug-on-wooden-stool-3733769/",
+      "luminance": 173.1,
+      "detail": {
+        "max": 16.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Deden Dicky Ramdhani",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P35602820",
+      "slug": "pexels-35602820",
+      "sujet": "Lumiere de fin de journee traversant un voilage, une plante en contre-jour se detache en silhouette.",
+      "url": "https://images.pexels.com/photos/35602820/pexels-photo-35602820.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/serene-sunset-through-sheer-curtains-35602820/",
+      "luminance": 109.3,
+      "detail": {
+        "max": 16.0
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Liza",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P4353719",
+      "slug": "pexels-4353719",
+      "sujet": "Salon bibliothèque avec fauteuils, rayonnages de livres et cheminée.",
+      "url": "https://images.pexels.com/photos/4353719/pexels-photo-4353719.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-interior-with-bookshelves-and-fireplace-4353719/",
+      "luminance": 56.6,
+      "detail": {
+        "max": 15.7
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "ArtHouse Studio",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P5825543",
+      "slug": "pexels-5825543",
+      "sujet": "Pièce meublée sur parquet bois, décor classique.",
+      "url": "https://images.pexels.com/photos/5825543/pexels-photo-5825543.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/interior-of-room-with-furniture-5825543/",
+      "luminance": 139.4,
+      "detail": {
+        "max": 15.4
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Charlotte May",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    },
+    {
+      "cle": "P29148452",
+      "slug": "pexels-29148452",
+      "sujet": "Cuisine chaleureuse en bois traversée par un rayon de soleil.",
+      "url": "https://images.pexels.com/photos/29148452/pexels-photo-29148452.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "page": "https://www.pexels.com/photo/cozy-sunlit-kitchen-with-wooden-furniture-29148452/",
+      "luminance": 115.7,
+      "detail": {
+        "max": 15.3
+      },
+      "matiere": true,
+      "provenance": "libre",
+      "licence": "Pexels License, usage commercial, sans attribution obligatoire",
+      "credit": "Sami Abdullah",
+      "verifie": "2026-09-02, téléchargée et mesurée"
+    }
+  ]
+}

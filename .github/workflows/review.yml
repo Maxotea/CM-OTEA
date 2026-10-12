@@ -46,6 +46,9 @@ concurrency: review-hebdo
 
 permissions:
   contents: write
+  # La veille des retours clients ouvre un fil d'issue par client et par semaine : c'est
+  # le canal de notification qui marche sans réglage. Voir scripts/notifier.py.
+  issues: write
 
 jobs:
   generer:
@@ -133,6 +136,17 @@ jobs:
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      # Prévenir Maxime que le client a répondu, sans attendre le récap du lundi.
+      # Toujours joué, même si la relève a planté en cours de route : les signaux déjà
+      # déposés partent, et ceux qui échouent restent en file pour le passage suivant.
+      - name: Signaler les retours clients
+        if: ${{ always() && !inputs.dry_run }}
+        env:
+          NOTIF_WEBHOOK: ${{ secrets.NOTIF_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 scripts/notifier.py
+
       - name: Commiter le journal des décisions
         if: ${{ always() && !inputs.dry_run }}
         run: |
@@ -145,6 +159,6 @@ jobs:
           git add reviews/etat/
           git commit \
             -m "Applique les décisions de la review client" \
-            -m "Journal par compte dans reviews/etat/ — matière du récap du lundi."
+            -m "Journal par compte dans reviews/etat/ — matière du récap du lundi. La veille (signature de relecture, case « j'ai fini ») et la file des signaux y vivent aussi."
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
