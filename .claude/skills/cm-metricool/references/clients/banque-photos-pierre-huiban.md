@@ -51,7 +51,7 @@
 
 ## Photos par sponsor (produit/logo du partenaire visible ou clairement identifiable)
 
-### KAIRYN (pré-workout / compléments)
+### KAIRYN (pré-workout / compléments) ⛔ plus partenaire depuis le 05/10/2026, ne plus utiliser ces photos en sponsorisé
 | Usage | Fichiers | Notes |
 |---|---|---|
 | Prise du pré-workout IGNITE avant séance | *à remplir* | Packaging visible si possible |

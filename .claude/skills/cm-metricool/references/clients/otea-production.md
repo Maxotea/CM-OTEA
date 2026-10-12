@@ -61,3 +61,7 @@ déjà muettes — non touchées. Anciens brouillons supprimés : 355805250, …
 
 Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
 
+## Validation automatique (07/10/2026)
+Maxime est le client de ce compte : « tu peux considérer que c'est validé à chaque fois, car c'est moi », puis choix explicite de la publication automatique. Plus de tableau de validation (le dossier « Validation hebdo — OTEA PRODUCTION » et ses tableaux du 12-10 et du 19-10 restent en place, sans usage). Le contenu est toujours créé en brouillon ; la relève GitHub (`validation_auto` dans `reviews/config.json`, PR #56) passe en publication les brouillons des 14 jours à venir qui passent les garde-fous : média présent, pas de placeholder, pas de tiret cadratin dans une légende, pas de note « À tourner », pas de visuel IA de juillet (`medias_retenus`).
+- 07/10 : tirets cadratins retirés des 14 légendes feed du 07/10 au 06/11, et « Les 3 questions à te poser » passé au vouvoiement (21/10). Nouveaux ids 390382088 à 390382469.
+- ⚠️ Visuels IA de juillet encore en place les 09/10 (« La cohérence visuelle ») et 16/10 (« Dernière ligne droite avant la Toussaint ») : bloqués tant qu'une vraie photo ne les remplace pas.
