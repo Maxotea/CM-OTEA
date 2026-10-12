@@ -1,0 +1,120 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {},
+  "auto": {
+    "2026-10-13T10:00:00|383261947": {
+      "quand": "2026-10-12T12:20:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966490)",
+      "post_id": 393966490
+    },
+    "2026-10-14T10:00:00|383261956": {
+      "quand": "2026-10-12T12:20:20",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966544)",
+      "post_id": 393966544
+    },
+    "2026-10-15T10:00:00|383261965": {
+      "quand": "2026-10-12T12:20:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966561)",
+      "post_id": 393966561
+    },
+    "2026-10-16T10:00:00|383261980": {
+      "quand": "2026-10-12T12:20:23",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966577)",
+      "post_id": 393966577
+    },
+    "2026-10-17T10:00:00|383261988": {
+      "quand": "2026-10-12T12:20:25",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966594)",
+      "post_id": 393966594
+    },
+    "2026-10-18T10:00:00|383261998": {
+      "quand": "2026-10-12T12:20:27",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966611)",
+      "post_id": 393966611
+    },
+    "2026-10-19T10:00:00|383262005": {
+      "quand": "2026-10-12T12:20:28",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966626)",
+      "post_id": 393966626
+    },
+    "2026-10-20T10:00:00|383262016": {
+      "quand": "2026-10-12T12:20:30",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966642)",
+      "post_id": 393966642
+    },
+    "2026-10-21T10:00:00|383262858": {
+      "quand": "2026-10-12T12:20:31",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966659)",
+      "post_id": 393966659
+    },
+    "2026-10-22T10:00:00|383262868": {
+      "quand": "2026-10-12T12:20:33",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966672)",
+      "post_id": 393966672
+    },
+    "2026-10-23T10:00:00|383262882": {
+      "quand": "2026-10-12T12:20:34",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966689)",
+      "post_id": 393966689
+    },
+    "2026-10-24T10:00:00|383262892": {
+      "quand": "2026-10-12T12:20:36",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966708)",
+      "post_id": 393966708
+    },
+    "2026-10-25T10:00:00|383262902": {
+      "quand": "2026-10-12T12:20:37",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966728)",
+      "post_id": 393966728
+    },
+    "2026-10-26T10:00:00|383262917": {
+      "quand": "2026-10-12T12:20:39",
+      "type": "Story",
+      "resultat": "publication programmée (version 393966742)",
+      "post_id": 393966742
+    },
+    "2026-10-14T12:00:00|390382185": {
+      "quand": "2026-10-12T12:20:40",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966755)",
+      "post_id": 393966755
+    },
+    "2026-10-19T12:00:00|390382214": {
+      "quand": "2026-10-12T12:20:42",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966770)",
+      "post_id": 393966770
+    },
+    "2026-10-21T12:00:00|390382235": {
+      "quand": "2026-10-12T12:20:43",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966788)",
+      "post_id": 393966788
+    },
+    "2026-10-23T12:00:00|390382263": {
+      "quand": "2026-10-12T12:20:45",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966798)",
+      "post_id": 393966798
+    },
+    "2026-10-26T12:00:00|390382303": {
+      "quand": "2026-10-12T12:20:46",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966813)",
+      "post_id": 393966813
+    }
+  }
+}

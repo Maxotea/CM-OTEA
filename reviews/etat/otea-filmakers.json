@@ -1,0 +1,42 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {},
+  "auto": {
+    "2026-10-12T18:00:00|383270039": {
+      "quand": "2026-10-12T12:20:48",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966838)",
+      "post_id": 393966838
+    },
+    "2026-10-14T18:00:00|383270055": {
+      "quand": "2026-10-12T12:20:49",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 393966856)",
+      "post_id": 393966856
+    },
+    "2026-10-16T18:00:00|383270077": {
+      "quand": "2026-10-12T12:20:51",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966877)",
+      "post_id": 393966877
+    },
+    "2026-10-21T18:00:00|383270122": {
+      "quand": "2026-10-12T12:20:52",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966894)",
+      "post_id": 393966894
+    },
+    "2026-10-23T18:00:00|383270142": {
+      "quand": "2026-10-12T12:20:54",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966908)",
+      "post_id": 393966908
+    },
+    "2026-10-19T18:00:00|390382868": {
+      "quand": "2026-10-12T12:20:57",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966926)",
+      "post_id": 393966926
+    }
+  }
+}
