@@ -20,6 +20,7 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/social-media-ceo/03-workflow-contenu.md` | le pipeline de production de contenu |
 | `.claude/references/social-media-ceo/04-kpis.md` | le dictionnaire KPI et la lecture des chiffres |
 | `.claude/references/social-media-ceo/05-rituels.md` | les boucles quotidienne, hebdo, mensuelle, trimestrielle |
+| `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
 
 ## Les skills
 
