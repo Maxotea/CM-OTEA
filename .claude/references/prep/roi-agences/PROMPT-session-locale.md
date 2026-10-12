@@ -5,8 +5,8 @@ RÈGLE ABSOLUE : R.O.I. comporte une application, c'est un secret. Les mots « a
 ## Où sont les fichiers
 Dépôt GitHub Maxotea/CM-OTEA, branche `claude/friendly-hamilton-9he6oa` (PR #67). Clone ou pull cette branche. Dossier : `.claude/references/prep/roi-agences/`
 - `marque.md` : identité (noir #0A0A0A, rouge #DC2626, Caladea, Carlito)
-- `habillages/` : titres animés à fond transparent (ProRes 4444) façon Nike/Adidas/Puma, plus `LISEZMOI.md` avec le découpage conseillé. S'il n'y est pas encore, attends-le ou dis-le-moi.
-- `broll/` : 8 plans de running générés sur Higgsfield. S'ils n'y sont pas, récupère-les avec le connecteur Higgsfield (jobs 24897e52-d40c-4d33-b510-f1fcd5571f30, 96a7f575-f252-4cbb-90b0-db707581023a, 807723b9-a2ef-4887-b61c-e22340d2ccd1, 05397f1d-4912-46cc-a0f1-8b8c5c4ab7a1, 1e3485a5-b5ab-4e00-9f9d-c96069dba4d0, 1fc7d897-d3e5-4b1a-8ab1-1d4ab9a92d40, a72fb583-2ecc-496c-bbb4-4b7f8d7f956c, e6513d65-ddc5-4be1-919e-8af0f2bd11d3).
+- `habillages/leger/` : 13 titres animés à fond transparent (.mov codec PNG, lisibles par DaVinci) façon Nike/Adidas/Puma. `habillages/LISEZMOI.md` donne le découpage conseillé, et explique comment regénérer depuis `habillages/src/` les versions ProRes 4444 (plus belles, avec voile sombre derrière le texte) : fais-le si tu as la place.
+- `broll/` : 7 plans de running générés sur Higgsfield (720p, 5 s). Le plan aérien a été refusé : remplace-le par un extrait de « PROJET MARATHON.mp4 » (Drive). Sur `06_networking.mp4`, un maillot porte un logo de marque : recadre ou floute.
 - `ROI_Run_on_Investment_Agences.pdf` et `deck-slide-*.png` : le deck agences (validé)
 - `roi-agences.html` : la page en ligne https://claude.ai/artifact/JRUvaxk3EWhMp4XdJhwkA9 (vidéo + deck + contact)
 - `mails-24-agences.json` : les 24 mails personnalisés, déjà écrits
