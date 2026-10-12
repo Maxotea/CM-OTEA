@@ -64,6 +64,26 @@ La séquence de la session (toujours commencer par `git pull`) :
      a toujours refusé le résultat (« Invalid conversion requested »), mais une perte qui
      laisserait par chance un zip valide passerait sans bruit et déposerait un tableau
      tronqué chez le client. La relecture est le seul contrôle qui ferme ce trou.
+
+     **Le dépôt est le maillon fragile de toute la chaîne, et ça ne se corrige pas par la
+     méthode.** `create_file` n'a aucun paramètre de chemin local : le xlsx doit traverser
+     les tokens du modèle en base64, soit 13 000 à 15 000 caractères à réémettre mot pour
+     mot. Observé le 09 et le 12/10 : deux dépôts sur trois ont abouti, chacun au deuxième
+     essai après corruption ; le troisième (Pierre Huiban, 15 340 caractères, le plus gros)
+     a échoué quatre fois, la dernière en se faisant couper par un classificateur de
+     sécurité — un blob binaire de 15 ko émis verbatim ressemble à une exfiltration. Il n'y
+     a pas de contournement : vérifier sa transcription avec `cmp` ne valide qu'une copie
+     jetable, l'émission qui compte est celle de l'appel API, et elle n'est jamais vérifiable
+     avant d'être partie. Les parades qui ne marchent pas : un CSV en `textContent` convertit
+     bien en Sheet mais ne porte qu'un onglet et perdrait `_tech`, que la relève lit pour
+     rattacher chaque décision à son `post_id` ; `copy_file` duplique la structure mais rien
+     n'écrit les cellules. **La vraie sortie est côté GitHub** : le workflow a déjà le fichier
+     et le réseau, il ne lui manque qu'un droit d'écriture sur Drive — donc une clé de compte
+     de service dans les secrets, ce que la règle « aucune clé Google nulle part » interdit
+     aujourd'hui. C'est l'arbitrage à poser à Maxime : garder la règle et accepter un dépôt
+     fragile et conduit à la main, ou ouvrir une clé et rendre le vendredi entièrement
+     automatique. En attendant, déposer d'abord les comptes qui reçoivent vraiment un mail,
+     et ne pas s'acharner sur un gros fichier dont le dépôt n'a pas d'effet immédiat.
    - Déplacer l'ancien fichier (le `drive_fichier` actuel) vers `drive_archives` :
      `update_file` avec `parentId` = `drive_archives`. Ne JAMAIS le supprimer.
    - Noter le nouvel identifiant dans `reviews/config.json` → `drive_fichier`.
