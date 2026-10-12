@@ -22,6 +22,11 @@ jobs:
 
       - run: pip install openpyxl pillow numpy pytest
 
+      # Mêmes polices que le job carrousels.yml : le check des specs mesure le texte, il doit
+      # le mesurer dans la police qui sera réellement rendue le vendredi.
+      - name: Installer les polices du dépôt
+        run: mkdir -p ~/.fonts && cp -r fonts/. ~/.fonts/
+
       - name: Suite de tests
         run: python3 -m pytest -q
 

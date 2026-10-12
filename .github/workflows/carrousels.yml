@@ -17,7 +17,7 @@ on:
         description: "Mercredi visé (YYYY-MM-DD), ou un préfixe : 2026-08 = tout août. Vide = prochain mercredi."
         required: false
       client:
-        description: "Ne traiter qu'un compte (ex. le-loft). Vide = les six."
+        description: "Ne traiter qu'un compte (ex. le-loft). Vide = tous les comptes qui ont une spec ce jour-là."
         required: false
       dry_run:
         description: "Ne rien publier, seulement afficher ce qui serait fait"
@@ -42,6 +42,16 @@ jobs:
           python-version: "3.12"
 
       - run: pip install pillow
+
+      # carrousel.py ne cherche ses polices que dans les dossiers système et ~/.fonts : sans
+      # cette copie, le runner retombe sur DejaVu pour les comptes dont la police est
+      # versionnée dans fonts/ (Inter Display, Archivo, Space Mono). Avant le check, qui
+      # mesure le texte.
+      - name: Installer les polices du dépôt
+        run: |
+          mkdir -p ~/.fonts
+          cp -r fonts/. ~/.fonts/
+          find ~/.fonts -name '*.ttf' | sort
 
       - name: Déterminer la semaine
         id: semaine
