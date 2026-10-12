@@ -22,12 +22,28 @@ Avant elle, tout ça a déjà tourné tout seul — vérifier, pas refaire :
 | 6h30 | « Carrousels hebdo » | le carrousel du mercredi SUIVANT est planté en brouillon |
 | 7h00 | « Review hebdo client », job `generer` | un fichier par compte actif pour le lundi SUIVANT (et celui d'après pour un compte à `semaines_avance: 2`), commité dans `reviews/a-envoyer/` |
 
+**Ne pas compter sur le cron du vendredi : il ne part pas.** Constaté le 09/10/2026 en
+listant les runs — le `generer` planifié (`0 5 * * 5`) n'a pas déclenché une seule fois
+depuis le 29/08, sept vendredis d'affilée ; c'est la routine qui le lance à la main chaque
+semaine. Les relèves `appliquer` partent, mais 2 passages sur 3 seulement, et avec jusqu'à
+cinq heures de retard. GitHub abandonne les déclenchements planifiés des dépôts peu actifs,
+sans rien signaler. Donc : **la routine déclenche `generer` elle-même, dès l'étape 1, sans
+attendre ni s'étonner.**
+
 La séquence de la session (toujours commencer par `git pull`) :
 
-1. **Vérifier la génération** : les fichiers `reviews/a-envoyer/<slug>-<lundi suivant>.xlsx`
-   existent pour chaque compte actif de `reviews/config.json`. Sinon, lancer le workflow
-   « Review hebdo client » en mode `generer` (le déclenchement planifié vise le lundi
-   suivant tout seul ; à la main, remplir `semaine`) et attendre le commit.
+1. **Lancer la génération** : déclencher « Review hebdo client » en mode `generer` (à la
+   main, remplir `semaine` = le lundi visé) et attendre le commit, puis vérifier que
+   `reviews/a-envoyer/<slug>-<lundi suivant>.xlsx` existe pour chaque compte actif de
+   `reviews/config.json`.
+   **Puis lire les PR ouvertes qui touchent `reviews/config.json` ou `recaps/clients-config.json`.**
+   Leçon du 09/10/2026 : la PR #56, ouverte le 07/10 par une autre session, enregistrait
+   deux décisions de Maxime (Pierre Huiban à deux semaines d'avance, OTEA Production et
+   Otea Filmakers sortis du circuit des tableaux) — jamais mergée, donc absente de main, et
+   la routine a préparé un tableau et un brouillon de mail pour un compte dont il avait dit
+   ne plus vouloir de review. Une décision client peut dormir dans une PR ouverte ; `main`
+   n'est pas la seule source de vérité le vendredi matin. Reprendre ce qui est réversible et
+   ne publie rien ; laisser à Maxime ce qui lève une règle non négociable de CLAUDE.md.
    **Puis vérifier la santé des relèves de la semaine écoulée** : lister les runs de
    `review.yml` et lire les logs des jobs `appliquer` en échec. Le job sort en erreur dès
    qu'un seul compte est illisible — un compte dont le partage par lien n'est pas actif
@@ -43,6 +59,11 @@ La séquence de la session (toujours commencer par `git pull`) :
      le dossier** (`search_files` sur le titre) : un tableau peut avoir été préparé à
      l'avance, à la demande de Maxime. Dans ce cas, ne pas en déposer un second —
      reprendre l'identifiant existant pour la suite de la séquence.
+     **Après dépôt, relire le tableau déposé** (`read_file_content`) et compter ses lignes
+     contre le xlsx source. Le base64 long se corrompt à l'émission : jusqu'ici l'API Drive
+     a toujours refusé le résultat (« Invalid conversion requested »), mais une perte qui
+     laisserait par chance un zip valide passerait sans bruit et déposerait un tableau
+     tronqué chez le client. La relecture est le seul contrôle qui ferme ce trou.
    - Déplacer l'ancien fichier (le `drive_fichier` actuel) vers `drive_archives` :
      `update_file` avec `parentId` = `drive_archives`. Ne JAMAIS le supprimer.
    - Noter le nouvel identifiant dans `reviews/config.json` → `drive_fichier`.
