@@ -20,7 +20,7 @@ Avant elle, tout ça a déjà tourné tout seul — vérifier, pas refaire :
 |---|---|---|
 | 6h30 | « Review hebdo client », job `appliquer` | dernière relève de la semaine en cours |
 | 6h30 | « Carrousels hebdo » | le carrousel du mercredi SUIVANT est planté en brouillon |
-| 7h00 | « Review hebdo client », job `generer` | un fichier par compte actif pour le lundi SUIVANT, commité dans `reviews/a-envoyer/` |
+| 7h00 | « Review hebdo client », job `generer` | un fichier par compte actif pour le lundi SUIVANT (et celui d'après pour un compte à `semaines_avance: 2`), commité dans `reviews/a-envoyer/` |
 
 **Ne pas compter sur le cron du vendredi : il ne part pas.** Constaté le 09/10/2026 en
 listant les runs — le `generer` planifié (`0 5 * * 5`) n'a pas déclenché une seule fois
@@ -67,12 +67,18 @@ La séquence de la session (toujours commencer par `git pull`) :
    - Déplacer l'ancien fichier (le `drive_fichier` actuel) vers `drive_archives` :
      `update_file` avec `parentId` = `drive_archives`. Ne JAMAIS le supprimer.
    - Noter le nouvel identifiant dans `reviews/config.json` → `drive_fichier`.
+   - **Compte à deux semaines d'avance** (`semaines_avance: 2`, Pierre Huiban depuis le
+     05/10/2026) : deux fichiers générés, lundi suivant (S+1) et lundi d'après (S+2).
+     S+1 est normalement déjà dans le dossier depuis le vendredi précédent, peut-être
+     déjà coché par le client : le garder tel quel, ne déposer que S+2. Archiver
+     uniquement le fichier de la semaine qui se termine. `drive_fichiers` devient
+     `[id S+1, id S+2]`. Le brouillon de mail donne les deux liens.
    - Préparer le **brouillon Gmail** depuis `modele-mail-review.md`, au ton du client
      (`clients-config.json` → `ton`). Le bouton pointe vers le **fichier de la semaine**,
      et le mail rappelle que le **dossier** est le même lien chaque semaine. Destinataire :
      uniquement si `email_confirme` est `true` ; sinon champ « À » vide.
 3. **Commit + push + PR + merge de `reviews/config.json`** : les relèves (6h30 · 12h30 ·
-   18h30, heure de Paris) lisent le `drive_fichier` de main plusieurs fois par jour —
+   18h30, heure de Paris) lisent le `drive_fichier` (ou les `drive_fichiers`) de main plusieurs fois par jour —
    la mise à jour doit être mergée dans la foulée.
 4. **Vérifier la lisibilité** : `get_file_permissions` sur le nouveau fichier doit montrer
    une permission `type: anyone` (héritée du dossier). Si elle manque, le partage du

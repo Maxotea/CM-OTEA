@@ -57,6 +57,9 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 1. **Tout contenu créé dans Metricool reste en BROUILLON** (`draft:true`,
    jamais `autoPublish`). Maxime valide lui-même dans l'interface. Toute code
    action qui crée du contenu doit vérifier le `draft` après création.
+   Seule exception (07/10/2026) : OTEA Production et Otea Filmakers, dont
+   Maxime est le client. Le contenu y est créé en brouillon, puis la relève
+   GitHub le passe en publication automatique (`validation_auto`).
    → `.claude/memories/autonomie-decisions-cm.md`
 2. **Les stories partent des VRAIES photos du client, animées en IA.**
    Deux choses distinctes, à ne pas confondre (règle reprécisée le 21/08/2026) :

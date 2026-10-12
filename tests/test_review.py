@@ -38,6 +38,17 @@ def test_type_du_distingue_carrousel_reel_story_post():
     assert review.type_du({}) == "Post"
 
 
+def test_type_du_lit_le_reseau_vise_avant_les_autres_blocs():
+    # Metricool renvoie un twitterData de type POST même pour une story Instagram seule.
+    story = {"media": ["a"], "providers": [{"network": "instagram"}],
+             "twitterData": {"type": "POST"}, "instagramData": {"type": "STORY"}}
+    assert review.type_du(story) == "Story"
+    reel = {"media": [], "providers": [{"network": "instagram"}, {"network": "facebook"}],
+            "twitterData": {"type": "POST"}, "facebookData": {"type": "POST"},
+            "instagramData": {"type": "REEL"}}
+    assert review.type_du(reel) == "Reel"
+
+
 def test_reseaux_du_abrege_et_tolere_l_inconnu():
     post = {"providers": [{"network": "instagram"}, {"network": "facebook"}]}
     assert review.reseaux_du(post) == "IG + FB"
@@ -237,10 +248,69 @@ def test_lire_review_refuse_un_fichier_etranger(tmp_path):
 
 def test_config_des_comptes_actifs_est_complete():
     for compte in review.charger_comptes():
-        for champ in ("slug", "nom", "prefixe", "blog_id", "drive_dossier", "drive_fichier"):
+        for champ in ("slug", "nom", "prefixe", "blog_id", "drive_dossier"):
             assert compte.get(champ), f"{compte.get('slug')} : {champ} manquant"
+        assert review.fichiers_de(compte), f"{compte['slug']} : ni drive_fichier ni drive_fichiers"
+        # la semaine en cours reste ouverte jusqu'au vendredi, en plus des semaines d'avance
+        avance = int(compte.get("semaines_avance") or 1)
+        assert len(review.fichiers_de(compte)) <= avance + 1, \
+            f"{compte['slug']} : plus de fichiers ouverts que la semaine en cours + l'avance"
+
+
+def test_fichiers_de_fusionne_sans_doublon():
+    assert review.fichiers_de({"drive_fichier": "a"}) == ["a"]
+    assert review.fichiers_de({"drive_fichiers": ["a", "b"], "drive_fichier": "a"}) == ["a", "b"]
+    assert review.fichiers_de({"drive_fichiers": ["a", None, "b"]}) == ["a", "b"]
+    assert review.fichiers_de({"drive_fichier": None}) == []
+
+
+def test_semaines_a_venir_selon_l_avance():
+    vendredi = date(2026, 10, 9)
+    assert review.semaines_a_venir({}, vendredi) == [date(2026, 10, 12)]
+    assert review.semaines_a_venir({"semaines_avance": 2}, vendredi) == [date(2026, 10, 12),
+                                                                          date(2026, 10, 19)]
+    # un lundi vise le lundi d'après, jamais le jour même
+    assert review.semaines_a_venir({}, date(2026, 10, 12)) == [date(2026, 10, 19)]
 
 
 def test_charger_comptes_refuse_un_inconnu():
     with pytest.raises(SystemExit):
         review.charger_comptes("client-qui-n-existe-pas")
+
+
+# ---------------------------------------------------------------- validation automatique
+
+def _brouillon(quand, draft=True, media=("m",), texte="Légende propre", kind="POST"):
+    return {"id": quand, "draft": draft, "media": list(media), "text": texte,
+            "publicationDate": {"dateTime": quand},
+            "providers": [{"network": "instagram"}], "instagramData": {"type": kind}}
+
+
+def test_a_valider_auto_trie_et_garde_les_garde_fous():
+    maintenant = datetime(2026, 10, 7, 12, 0)
+    posts = [
+        _brouillon("2026-10-07T12:10:00"),                       # dans la marge de 30 min
+        _brouillon("2026-10-07T10:00:00"),                       # passé
+        _brouillon("2026-10-08T12:00:00"),                       # ✓
+        _brouillon("2026-10-08T18:00:00", draft=False),          # déjà publiable
+        _brouillon("2026-10-09T12:00:00", media=()),             # sans média
+        _brouillon("2026-10-10T12:00:00", texte="Bravo [VAINQUEUR]"),
+        _brouillon("2026-10-11T12:00:00", texte="Un tiret — ici"),
+        _brouillon("2026-10-12T10:00:00", texte="Story lun — Belle semaine", kind="STORY"),  # ✓
+        _brouillon("2026-10-13T18:00:00", texte="La marche.\n\n🎬 À tourner : démo avant / après."),
+        _brouillon("2026-10-14T12:00:00", media=("https://static.metricool.com/zapier/202607/x.png",)),
+        _brouillon("2026-10-30T12:00:00"),                       # au-delà de l'horizon
+    ]
+    a_publier, retenus = review.a_valider_auto(posts, maintenant,
+                                               medias_retenus=("zapier/202607/",))
+    assert [p["id"] for p in a_publier] == ["2026-10-08T12:00:00", "2026-10-12T10:00:00"]
+    assert [r for _, r in retenus] == ["aucun média attaché", "texte à placeholders",
+                                       "tiret cadratin dans la légende (règle de rédaction)",
+                                       "note de tournage dans la légende (vidéo à tourner)",
+                                       "visuel IA à remplacer par une vraie photo"]
+
+
+def test_comptes_auto_hors_du_circuit_des_tableaux():
+    auto = {c["slug"] for c in review.comptes_auto()}
+    assert auto == {"otea-production", "otea-filmakers"}
+    assert not auto & {c["slug"] for c in review.charger_comptes()}

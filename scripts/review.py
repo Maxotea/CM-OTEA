@@ -40,6 +40,7 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, time as dtime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import openpyxl
 from openpyxl.formatting.rule import FormulaRule
@@ -66,6 +67,17 @@ RESEAUX = {"instagram": "IG", "facebook": "FB", "tiktok": "TikTok", "linkedin": 
            "youtube": "YT", "twitter": "X", "pinterest": "Pinterest", "threads": "Threads",
            "gmb": "GMB"}
 PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]")
+# Règle de rédaction de Maxime (mémoire redaction-sans-tirets) : aucun tiret cadratin ni
+# double tiret dans un texte publié. Une légende qui en contient n'est pas publiée seule.
+TIRET = re.compile(r"[—–]|--")
+# Note de production laissée dans une légende (« 🎬 À tourner : … ») : le visuel attaché
+# n'est qu'un provisoire, la vidéo reste à tourner. Jamais publié en automatique.
+NOTE_INTERNE = re.compile(r"à tourner\s*:|a tourner\s*:|\[à faire\]|todo", re.IGNORECASE)
+PARIS = ZoneInfo("Europe/Paris")
+# Validation automatique : jusqu'où on regarde devant, et la marge avant publication
+# (un post à moins de 30 minutes n'est plus touché, Metricool pourrait le publier deux fois).
+HORIZON_AUTO_JOURS = 14
+MARGE_AUTO = timedelta(minutes=30)
 
 
 # ---------------------------------------------------------------- lecture Metricool
@@ -90,11 +102,21 @@ def posts_semaine(blog_id, lundi):
 
 
 def type_du(post):
-    """Le format lisible par le client. La donnée vit dans instagramData/facebookData/…"""
+    """Le format lisible par le client. La donnée vit dans instagramData/facebookData/…
+
+    Metricool renvoie un bloc *Data pour CHAQUE réseau, même ceux où le post ne part pas :
+    une story Instagram arrive avec un twitterData de type POST avant son instagramData.
+    On lit donc d'abord les blocs des réseaux réellement visés (providers), dans leur
+    ordre ; les autres ne servent que de repli. Constaté le 05/10/2026 : toutes les
+    stories de Pierre Huiban s'affichaient « Post » dans le tableau.
+    """
     if len(post.get("media") or []) > 1:
         return f"Carrousel ({len(post['media'])} visuels)"
-    for cle, val in post.items():
-        if cle.endswith("Data") and isinstance(val, dict) and val.get("type"):
+    vises = [f"{pr.get('network')}Data" for pr in post.get("providers") or [] if pr.get("network")]
+    autres = [cle for cle in post if cle.endswith("Data") and cle not in vises]
+    for cle in vises + autres:
+        val = post.get(cle)
+        if isinstance(val, dict) and val.get("type"):
             return {"POST": "Post", "REEL": "Reel", "STORY": "Story"}.get(val["type"], val["type"].title())
     return "Post"
 
@@ -242,6 +264,31 @@ def ecrire_fichier(compte, lundi, brouillons, chemin):
 
     chemin.parent.mkdir(parents=True, exist_ok=True)
     wb.save(chemin)
+
+
+def semaines_a_venir(compte, aujourd_hui=None):
+    """Les lundis à générer pour un compte lors de la génération planifiée du vendredi.
+
+    `semaines_avance` (1 par défaut) : combien de semaines le client a ouvertes devant lui.
+    À 2, le vendredi produit le lundi suivant ET celui d'après — Maxime le 05/10/2026 pour
+    Pierre Huiban : « on aura deux semaines d'avance », valider le vendredi pour le lundi
+    est trop juste. Le fichier du lundi suivant existe déjà en général (généré la semaine
+    d'avant) : la routine du vendredi garde alors celui du Drive, où le client a peut-être
+    déjà coché, et ne dépose que le nouveau.
+    """
+    aujourd_hui = aujourd_hui or date.today()
+    prochain = aujourd_hui + timedelta(days=7 - aujourd_hui.weekday())
+    return [prochain + timedelta(weeks=i) for i in range(max(1, int(compte.get("semaines_avance") or 1)))]
+
+
+def fichiers_de(compte):
+    """Les fichiers Drive que la relève lit pour un compte, sans doublon.
+
+    `drive_fichiers` (liste) quand le client a plusieurs semaines ouvertes à la fois,
+    `drive_fichier` (un seul) sinon ; les deux peuvent cohabiter le temps d'une bascule.
+    """
+    ids = list(compte.get("drive_fichiers") or []) + [compte.get("drive_fichier")]
+    return [i for n, i in enumerate(ids) if i and i not in ids[:n]]
 
 
 def generer_compte(compte, lundi, dry_run=False):
@@ -510,25 +557,28 @@ def empreinte(decision, legende, heure):
 def appliquer_compte(compte, dry_run=False):
     """Traite toutes les sources de retour d'un compte. Retourne les compteurs."""
     slug = compte["slug"]
-    sources = []
-    if compte.get("drive_fichier"):
+    sources, illisibles = [], 0
+    for drive_id in fichiers_de(compte):
         try:
-            sources.append(("Drive", telecharger_review(compte["drive_fichier"])))
+            sources.append((f"Drive {drive_id[:8]}…", telecharger_review(drive_id)))
         except Exception as exc:
-            print(f"✗ {slug} : export Drive impossible — {exc}", file=sys.stderr)
-            annoter("warning", f"{slug} : fichier de review illisible ({exc}). Le compte n'est "
-                               f"pas relevé tant que son dossier Drive n'est pas partagé par lien.")
-            return {"erreurs": 1}
+            # Un fichier illisible n'empêche pas de relever l'autre semaine ouverte.
+            print(f"✗ {slug} : export Drive impossible ({drive_id}) — {exc}", file=sys.stderr)
+            annoter("warning", f"{slug} : fichier de review illisible ({exc}). Il n'est pas "
+                               f"relevé tant que le dossier Drive n'est pas partagé par lien.")
+            illisibles += 1
     for chemin in sorted(RETOURS.glob(f"{slug}*.xlsx")):
         sources.append((chemin.name, chemin))
     if not sources:
+        if illisibles:
+            return {"erreurs": illisibles}
         print(f"= {slug} : aucun fichier de review à lire (drive_fichier vide, aucun retour déposé)")
         return {}
 
     etat = charger_etat(slug)
-    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
+    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": illisibles,
                  "sans_decision": 0, "en_attente": 0}
-    posts_cache = {}
+    posts_cache = {}  # par semaine : deux fichiers ouverts = deux semaines de posts
     touches = False
 
     for nom_source, source in sources:
@@ -590,10 +640,10 @@ def appliquer_compte(compte, dry_run=False):
                 compteurs["a_corriger"] += 1
                 print(f"  ✏️ {ref} : à corriger — « {commentaire or 'sans commentaire'} »")
             else:  # OK
-                if compte["blog_id"] not in posts_cache:
+                if semaine not in posts_cache:
                     lundi = date.fromisoformat(semaine)
-                    posts_cache[compte["blog_id"]] = posts_semaine(compte["blog_id"], lundi)
-                post = retrouver_post(posts_cache[compte["blog_id"]], original)
+                    posts_cache[semaine] = posts_semaine(compte["blog_id"], lundi)
+                post = retrouver_post(posts_cache[semaine], original)
                 nouvelle_date = f"{original['date_time'][:11]}{heure}:00" if heure_modifiee \
                     else original["date_time"]
                 # Une case légende vidée est presque toujours une fausse manœuvre : on garde
@@ -635,7 +685,7 @@ def appliquer_compte(compte, dry_run=False):
                         compteurs["publies"] += 1
                         detail = " — légende du client" if legende_modifiee else ""
                         print(f"  ✓ {ref} : {resultat}{detail}")
-                        posts_cache.pop(compte["blog_id"], None)  # cache invalide après écriture
+                        posts_cache.pop(semaine, None)  # cache invalide après écriture
                     except Exception as exc:
                         entree["resultat"] = f"échec Metricool : {exc}"
                         compteurs["erreurs"] += 1
@@ -669,6 +719,92 @@ def resumer(lignes):
         with open(chemin, "a", encoding="utf-8") as f:
             f.write("\n".join(lignes) + "\n")
 
+def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_retenus=()):
+    """Tri des brouillons d'un compte en validation automatique.
+
+    Retourne (a_publier, retenus), retenus étant une liste de (post, raison). Seuls les
+    brouillons à venir (au-delà de la marge, en deçà de l'horizon) sont regardés. Les
+    garde-fous de la review restent : texte à placeholders ou sans média = retenu. S'ajoute
+    le tiret cadratin, qui ne compte pas pour une story (Instagram n'affiche pas son texte),
+    et les visuels listés dans `medias_retenus` du compte (morceaux d'URL : visuels IA
+    interdits sur un compte qui a de vraies photos, règle du 21/08/2026).
+    """
+    limite = maintenant + timedelta(days=horizon_jours)
+    a_publier, retenus = [], []
+    for post in posts:
+        if not post.get("draft"):
+            continue
+        quand = datetime.fromisoformat(post["publicationDate"]["dateTime"])
+        if quand <= maintenant + MARGE_AUTO or quand > limite:
+            continue
+        texte = post.get("text") or ""
+        if PLACEHOLDER.search(texte):
+            retenus.append((post, "texte à placeholders"))
+        elif not post.get("media"):
+            retenus.append((post, "aucun média attaché"))
+        elif any(m in url for url in post["media"] for m in medias_retenus):
+            retenus.append((post, "visuel IA à remplacer par une vraie photo"))
+        elif NOTE_INTERNE.search(texte):
+            retenus.append((post, "note de tournage dans la légende (vidéo à tourner)"))
+        elif TIRET.search(texte) and type_du(post) != "Story":
+            retenus.append((post, "tiret cadratin dans la légende (règle de rédaction)"))
+        else:
+            a_publier.append(post)
+    return a_publier, retenus
+
+
+def valider_auto(compte, dry_run=False, maintenant=None):
+    """Compte dont Maxime est lui-même le client : chaque brouillon vaut ✅.
+
+    Décision de Maxime du 07/10/2026 pour OTEA Production et Otea Filmakers : « tu peux
+    considérer que c'est validé à chaque fois, car c'est moi ». Pas de tableau ; à chaque
+    relève, les brouillons des deux semaines à venir qui passent les garde-fous partent en
+    publication automatique, par le même chemin qu'un ✅ client (passer_en_publication).
+    """
+    slug = compte["slug"]
+    maintenant = maintenant or datetime.now(PARIS).replace(tzinfo=None)
+    debut, fin = maintenant.date(), maintenant.date() + timedelta(days=HORIZON_AUTO_JOURS)
+    posts = metricool("/scheduler/posts", blogId=compte["blog_id"],
+                      start=f"{debut}T00:00:00", end=f"{fin}T23:59:59").get("data", [])
+    a_publier, retenus = a_valider_auto(posts, maintenant,
+                                        medias_retenus=compte.get("medias_retenus") or ())
+    compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
+                 "sans_decision": 0, "en_attente": len(retenus)}
+    print(f"{compte['nom']} — validation automatique : {len(a_publier)} à publier, "
+          f"{len(retenus)} retenu(s)")
+    etat = charger_etat(slug)
+    journal = etat.setdefault("auto", {})
+    for post, raison in retenus:
+        print(f"  ⏳ {post['publicationDate']['dateTime']} {type_du(post)} : {raison}")
+    for post in a_publier:
+        quand = post["publicationDate"]["dateTime"]
+        if dry_run:
+            print(f"  [dry-run] {quand} {type_du(post)} : passerait en publication auto")
+            continue
+        try:
+            resultat, post_id = passer_en_publication(compte["blog_id"], post,
+                                                      post.get("text") or "", quand)
+            compteurs["publies"] += 1
+            journal[quand + "|" + str(post["id"])] = {
+                "quand": datetime.now().isoformat(timespec="seconds"),
+                "type": type_du(post), "resultat": resultat, "post_id": post_id}
+            print(f"  ✓ {quand} {type_du(post)} : {resultat}")
+        except Exception as exc:
+            compteurs["erreurs"] += 1
+            print(f"  ✗ {quand} : {exc}", file=sys.stderr)
+    if compteurs["publies"] and not dry_run:
+        ETAT.mkdir(parents=True, exist_ok=True)
+        (ETAT / f"{slug}.json").write_text(
+            json.dumps(etat, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return compteurs
+
+
+def comptes_auto(filtre=None):
+    config = json.loads((REVIEWS / "config.json").read_text(encoding="utf-8"))
+    return [c for c in config["comptes"] if c.get("validation_auto")
+            and (not filtre or c["slug"] == filtre)]
+
+
 def charger_comptes(filtre=None):
     config = json.loads((REVIEWS / "config.json").read_text(encoding="utf-8"))
     comptes = [c for c in config["comptes"] if c.get("actif")]
@@ -684,6 +820,9 @@ def main():
     sous = ap.add_subparsers(dest="commande", required=True)
     g = sous.add_parser("generer", help="écrit le fichier Excel de la semaine par client")
     g.add_argument("--semaine", help="lundi visé (YYYY-MM-DD). Vide = semaine en cours")
+    g.add_argument("--a-venir", action="store_true",
+                   help="génération planifiée du vendredi : le lundi suivant, et les semaines "
+                        "d'après selon semaines_avance de chaque compte")
     a = sous.add_parser("appliquer", help="lit les retours clients et pousse dans Metricool")
     for p in (g, a):
         p.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft")
@@ -694,19 +833,28 @@ def main():
     if absents:
         raise SystemExit(f"secrets manquants : {', '.join(absents)}")
 
-    comptes = charger_comptes(args.client)
+    if args.commande == "appliquer" and args.client and comptes_auto(args.client):
+        comptes = []  # compte en validation automatique : pas de tableau à relever
+    else:
+        comptes = charger_comptes(args.client)
     if args.commande == "generer":
-        lundi = semaine_lundi(args.semaine)
-        print(f"Review de la semaine du {lundi} au {lundi + timedelta(days=6)} — {len(comptes)} compte(s)\n")
-        total = sum(generer_compte(c, lundi, args.dry_run) for c in comptes)
+        if args.a_venir:
+            plan = [(c, lundi) for c in comptes for lundi in semaines_a_venir(c)]
+            print(f"Review des semaines à venir — {len(comptes)} compte(s), {len(plan)} fichier(s) visé(s)\n")
+        else:
+            lundi = semaine_lundi(args.semaine)
+            plan = [(c, lundi) for c in comptes]
+            print(f"Review de la semaine du {lundi} au {lundi + timedelta(days=6)} — {len(comptes)} compte(s)\n")
+        total = sum(generer_compte(c, lundi, args.dry_run) for c, lundi in plan)
         verbe = "couverts (rien n'a été écrit)" if args.dry_run else "couverts par les fichiers générés"
         print(f"\n{total} brouillon(s) {verbe}.")
         return 0
 
     totaux, resume = {}, ["## Relève de la review client", "", "| Compte | Publiés | À corriger | Refusés | En attente | Sans décision | Erreurs |",
                           "|---|---:|---:|---:|---:|---:|---:|"]
-    for compte in comptes:
-        compteurs = appliquer_compte(compte, args.dry_run)
+    for compte, traiter in [(c, appliquer_compte) for c in comptes] + \
+            [(c, valider_auto) for c in comptes_auto(args.client)]:
+        compteurs = traiter(compte, args.dry_run)
         for cle, valeur in compteurs.items():
             totaux[cle] = totaux.get(cle, 0) + valeur
         resume.append(f"| {compte['nom']} | " + " | ".join(

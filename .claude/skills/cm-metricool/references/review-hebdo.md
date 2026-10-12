@@ -69,7 +69,9 @@ le modèle du mail dans `recaps/modele-mail-review.md`. Le détail technique :
    lecture pour la relève (export public), écriture pour le client. Contrôle :
    `get_file_permissions` du nouveau fichier doit montrer une entrée `type: anyone`.
 4. Écrire l'identifiant du nouveau fichier dans `reviews/config.json` → `drive_fichier`
-   du client, commit + PR + merge dans la foulée. C'est **lui** que le workflow relit
+   du client (ou, pour un compte à `semaines_avance: 2`, la liste `drive_fichiers` des
+   deux semaines ouvertes, S+1 gardé tel quel, S+2 ajouté), commit + PR + merge dans la
+   foulée. La relève lit chaque fichier et recharge les posts de la semaine qu'il porte. C'est **lui** que le workflow relit
    trois fois par jour ; un identifiant périmé est sans danger (semaine passée rejouée à
    vide), un identifiant absent = client non relevé.
 5. Préparer le brouillon Gmail au ton du client (`recaps/clients-config.json`), sans
