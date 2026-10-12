@@ -26,8 +26,101 @@ python3 scripts/carrousel.py carrousels/ --check      # valide tout sans rien é
 
 Le rendu part dans `medias/<client>/carrousels/<slug>/` (dossier ignoré par git) avec les slides numérotées dans l'ordre, la légende, et un `manifest.json` qui alimente `media01`…`media0N` de `schedule_post`.
 
+## Relire ce qui est déjà planifié
+
+```bash
+python3 scripts/audit_posts.py                              # les six comptes, 120 jours
+python3 scripts/audit_posts.py --client le-loft --jours 180
+```
+
+Signale deux défauts que la vignette du calendrier Metricool ne montre pas : une légende qui
+promet des slides (« Swipez → ») sur un post qui n'en a qu'une, et un placeholder `[VAINQUEUR]`
+jamais rempli. Les deux sont arrivés, les deux ont été découverts à l'œil des semaines plus tard.
+Tourne chaque lundi avec l'action « Carrousels hebdo », sans jamais la faire échouer.
+
 ## Ajouter un client
 Dupliquer `references/clients/_template-nouveau-client.md`, remplir, créer si besoin sa `banque-photos-[client].md`, et ajouter sa DA de carrousel dans `scripts/themes.json`.
+
+## Aftermovie corporate depuis un dossier de rushs
+
+`scripts/aftermovie.py` monte un premier bout-à-bout d'une minute à partir des
+rushs d'un tournage (dossier lu en récursif, disque externe compris). Il
+dérushe en répartissant les plans sur toute la journée, écarte les images
+noires, recadre en 1920×1080 sans déformation, enchaîne au rythme d'un
+aftermovie (ouverture longue + titre, accélération, plan final posé, carton),
+garde l'ambiance sonore sous une musique optionnelle et normalise à -14 LUFS.
+
+```bash
+pip install pillow          # ffmpeg + ffprobe dans le PATH (~/.local/node/bin)
+python3 scripts/aftermovie.py "/Volumes/VERT/Salomon" \
+    --titre "SALOMON" --sous-titre "Les Roches · 2026" \
+    --carton-fin "Merci à toute l'équipe\nUne production Otea" \
+    --musique ~/Musique/track.mp3 --sortie o/salomon-aftermovie.mp4
+```
+
+Le script écrit à côté de la vidéo un `*.montage.json` : la liste des plans
+retenus (fichier, point d'entrée, durée). Pour changer un plan, on édite ce
+fichier et on relance `python3 scripts/aftermovie.py --edl o/salomon-aftermovie.montage.json`,
+sans refaire l'analyse. `--vertical` sort un 1080×1920 pour un reel,
+`--duree` change la longueur, `--sans-analyse` saute le contrôle de luminosité.
+
+Ce sont les rushs du client et rien d'autre : aucune image générée. Le film
+n'est pas une story, il garde le son.
+
+### Habillage dynamique et voix off (deuxième passe)
+
+Une fois le bout-à-bout validé, `scripts/habillage.py` incruste des textes
+animés pilotés par un `habillage.json` (quoi, quand, quel style) et mixe la
+voix off par-dessus la bande son avec ducking (la musique baisse quand la
+voix parle). Cinq styles : `punch` (un nom qui claque, mot par mot, sur
+surlignage accent), `bandeau` (synthé nom + fonction), `chiffre` (compteur),
+`mot` (étiquette dans un coin), `liste` (lignes qui apparaissent une à une).
+
+```bash
+python3 scripts/habillage.py o/salomon-aftermovie.mp4 aftermovies/salomon/habillage.json \
+    --voix ~/Desktop/vocal-salomon.m4a --sortie o/salomon-final.mp4
+python3 scripts/habillage.py o/salomon-aftermovie.mp4 aftermovies/salomon/habillage.json --apercu 5.6
+```
+
+`--apercu` sort une seule image à la seconde donnée pour caler un élément
+sans rendre tout le film. Le fichier de référence du projet Salomon est
+`aftermovies/salomon/habillage.json` ; les EDL `o/*.montage.json` sont
+versionnées, les rendus mp4 non.
+
+## Reel client depuis un dossier de rushs (prises multiples, stéréo, étalonnage)
+
+`scripts/reel-montage.py` est le pendant vertical de l'aftermovie, pour un
+reel de 1 min 30 : il regroupe les rushs par scène (noms de fichiers ou
+ressemblance visuelle), note chaque prise (netteté, exposition, longueur, son,
+dernière prise) et n'en garde qu'une, monte en 1080×1920 à 30 i/s, force une
+vraie stéréo (mono dupliqué, canal mort recopié, niveaux rapprochés, −14 LUFS)
+et étalonne tout le montage (exposition rapprochée plan par plan, plans
+surexposés ramenés par une courbe qui écrase les hautes lumières sans boucher
+les ombres, puis un look global : `ramen`, `neutre`, `froid` ou une LUT
+`.cube`).
+
+```bash
+pip install pillow numpy     # ffmpeg + ffprobe dans le PATH (~/.local/node/bin)
+python3 scripts/reel-montage.py "/Volumes/VERT/Nina Ramen" \
+    --titre "NINA RAMEN" --duree 90 --sortie o/nina-ramen-reel-v1.mp4
+```
+
+Il écrit à côté de la vidéo un `*.montage.json` (EDL rééditable, relancer avec
+`--edl` ; `--edl … --reetalonner` refait seulement l'étalonnage des plans
+retenus), un `*.fcpxml` (la même timeline pour DaVinci Resolve : Fichier >
+Importer > Timeline ; prises, points d'entrée, fondus, titre en V2, carton,
+gain par plan, marqueurs sur les plans mono ou surexposés) et un
+`*.rapport.md` (prises par scène, retenue et notes, plans surexposés
+signalés, diagnostic son de chaque plan, contrôle stéréo de la sortie).
+`--sans-rendu` s'arrête à la timeline et au rapport, sans mp4, quand le
+montage se finit dans Resolve. `--couper-blancs` saute les silences entre
+les phrases à l'intérieur de chaque plan (rythme, plus de contenu en 90 s)
+et `--cta-fond/--cta-texte/--cta-police/--cta-logo` habillent le carton de
+fin aux couleurs du client. Quand le montage vit déjà dans un projet Resolve,
+`projets/nina-ramen/davinci-v2.py` fait la même chose dans le projet, par
+l'API : timeline V2 sans les blancs, carton, rendu mp4. Les sous-titres se
+font ensuite dans Submagic. Projet type :
+`projets/nina-ramen/`.
 
 ## Répartition Drive / GitHub
 
@@ -108,11 +201,36 @@ productif et le plus rapide du marché, vendable à d'autres community managers.
 ```bash
 pip install openpyxl pillow pytest
 python3 scripts/sante.py          # le bilan de santé : carrousel du mercredi, review, configs, journal
-python3 -m pytest -q              # 69 tests, sans réseau ni secret
+python3 -m pytest -q              # 91 tests, sans réseau ni secret
 ```
 
 Le workflow `Tests` lance les deux à chaque push et sur chaque PR, et publie le bilan de
 santé dans le résumé du run.
+
+## Campagnes Meta (02/09/2026)
+
+Le skill `.claude/skills/cm-meta-ads/` gère la publicité Facebook et Instagram par
+client, avec le connecteur Meta Ads. Trois pièces :
+
+- `campagnes/comptes.json` : le registre des comptes pub, un bloc par client
+  (compte, page, Instagram, DSA, catégorie spéciale, plafonds de budget). Seule
+  source des identifiants.
+- `campagnes/<client>/<AAAA-MM>-<slug>.json` : une spec par campagne, en français et
+  en euros. Modèle : `campagnes/_template.json`.
+- `scripts/campagne.py` : la moitié hors ligne, sans jeton ni appel à Meta.
+
+```bash
+python3 scripts/campagne.py check campagnes/            # valide toutes les specs contre le registre
+python3 scripts/campagne.py plan  campagnes/otea-production/2026-09-voeux-2027.json   # les appels MCP à passer
+python3 scripts/campagne.py journal <spec> --statut creee_en_pause --set campaign_id=…  # consigne les ids
+python3 scripts/campagne.py liste                       # l'état de toutes les campagnes
+```
+
+**Tout est créé en PAUSE et rien ne s'active sans une phrase explicite de Maxime qui
+nomme la campagne.** C'est le pendant du brouillon Metricool, appliqué à l'argent du
+client. Banc d'essai : OTEA PRODUCTION et Otea Filmakers, sur le compte pub Maks Otéa ;
+état du compte et ce qui reste à rattacher : `campagnes/audit-2026-09-02.md`. Rattacher
+un client : `.claude/skills/cm-meta-ads/references/onboarding-compte-pub.md`.
 
 ## Ajouts v3 (02/08/2026)
 - `.claude/skills/cm-metricool/references/compte-rendu-hebdo-clients.md` — comptes rendus hebdo clients (lundi 9h) : WhatsApp prioritaire + doublon email, mode brouillon

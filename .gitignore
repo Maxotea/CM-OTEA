@@ -7,3 +7,10 @@ design-presentation/presentation-services-otea.html
 
 # Canevas assemblé de la présentation vidéo d'annonce (2,5 Mo, régénérable via design-video-annonce/gen.py)
 design-video-annonce/video-annonce-la-galerie.html
+
+# Rendus vidéo locaux (aftermovies) ; les EDL et habillages json restent versionnés
+o/*
+!o/*.json
+
+# fichiers de charte des clients (logos, polices), téléchargés sur le Mac
+projets/*/charte/

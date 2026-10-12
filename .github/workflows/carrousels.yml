@@ -70,6 +70,16 @@ jobs:
             ${{ inputs.remplacer && '--remplacer' || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
+      # Relecture de tout ce qui est déjà planifié, pas seulement de ce qui vient d'être créé :
+      # les défauts qu'elle cherche viennent de lots écrits il y a des semaines. Ne bloque pas —
+      # une légende à reprendre ne doit pas faire échouer la publication de la semaine.
+      - name: Relire les posts déjà planifiés
+        if: always()
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+        run: python3 scripts/audit_posts.py
+
       - name: Ingérer les photos client depuis le Drive
         if: inputs.photos != ''
         env:
