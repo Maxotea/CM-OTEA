@@ -1,0 +1,143 @@
+<title>R.O.I. Consultation agences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&family=Carlito:wght@400;700&display=swap">
+<style>
+/* Layout : une seule colonne éditoriale sur fond noir, la vidéo en ouverture, le deck en défilé vertical, le contact en clôture. */
+:root {
+  --bg: #0A0A0A;
+  --surface: #161616;
+  --rule: #2A2A2A;
+  --red: #DC2626;
+  --muted: #9CA3AF;
+  --dim: #6B7280;
+  --ink: #FFFFFF;
+  --soft: #E5E5E5;
+  --display: "Caladea", Cambria, Georgia, serif;
+  --text: "Carlito", Calibri, "Segoe UI", Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { background: var(--bg); color: var(--soft); font-family: var(--text); font-size: 18px; line-height: 1.55; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-inline: 24px; padding-block: 40px 72px; display: flex; flex-direction: column; gap: 64px; }
+.label { font-family: var(--text); font-weight: 700; font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: var(--dim); margin: 0; }
+.label b { color: var(--red); font-weight: 700; }
+header { display: flex; flex-direction: column; gap: 20px; }
+.mark { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: clamp(64px, 12vw, 128px); line-height: .9; margin: 0; letter-spacing: -.01em; }
+.sub { font-family: var(--text); font-weight: 700; color: var(--red); letter-spacing: .42em; font-size: clamp(13px, 2vw, 18px); text-transform: uppercase; margin: 0; }
+.tag { font-family: var(--display); font-style: italic; font-size: clamp(24px, 3.4vw, 34px); color: var(--soft); margin: 0; line-height: 1.25; text-wrap: balance; }
+.film { display: flex; flex-direction: column; gap: 12px; }
+.film video { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: var(--surface); display: block; border: 1px solid var(--rule); }
+.film p { margin: 0; color: var(--dim); font-size: 14px; }
+.pitch { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.pitch h2, .deck h2, .contact h2 { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: clamp(30px, 4.6vw, 46px); line-height: 1.1; margin: 0; text-wrap: balance; }
+.pitch h2 em, .contact h2 em { color: var(--red); font-style: normal; }
+.pitch p { margin: 0; max-width: 62ch; color: var(--soft); }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--rule); }
+.facts div { padding: 20px 16px 0 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.facts div + div { padding-left: 16px; border-left: 1px solid var(--rule); }
+.facts strong { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: clamp(30px, 5vw, 48px); line-height: 1; font-variant-numeric: tabular-nums; }
+.facts div:first-child strong { color: var(--red); }
+.facts span { color: var(--muted); font-size: 15px; }
+.deck { display: flex; flex-direction: column; gap: 20px; }
+.slides { display: flex; flex-direction: column; gap: 16px; }
+.slides img { width: 100%; max-width: 100%; display: block; border: 1px solid var(--rule); }
+.contact { border-top: 1px solid var(--rule); padding-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+.contact p { margin: 0; max-width: 60ch; }
+.who { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.who div { background: var(--surface); padding: 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.who .name { font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 22px; }
+.who .role { color: var(--dim); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+.line { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.line span { color: var(--soft); user-select: all; overflow-wrap: anywhere; }
+.copy { font: 700 13px/1 var(--text); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1px solid var(--red); padding: 9px 12px; cursor: pointer; }
+.copy:hover { background: var(--red); }
+.copy:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+footer { color: var(--dim); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; }
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .wrap { padding-inline: 16px; gap: 48px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .who { grid-template-columns: 1fr; }
+}
+</style>
+
+<main class="wrap">
+  <header>
+    <p class="label">Consultation agences <b>·</b> octobre 2026</p>
+    <h1 class="mark">R.O.I.</h1>
+    <p class="sub">Run on Investment</p>
+    <p class="tag">La course qui connecte les entrepreneurs.</p>
+  </header>
+
+  <section class="film" aria-label="Le film">
+    <video controls playsinline preload="metadata" poster="teaser-poster.png" src="ROI_Run_on_Investment_teaser.mp4"></video>
+    <p>Le concept en 40 secondes.</p>
+  </section>
+
+  <section class="pitch">
+    <p class="label">L'idée</p>
+    <h2>Courir à La Défense. Arriver dans une Arena. <em>Rester pour le networking.</em></h2>
+    <p>Une course professionnelle de 5 et 10 km au cœur du quartier d'affaires de La Défense, avec une arrivée et un village networking à la Plénitude Arena. Première édition à l'automne 2027.</p>
+    <div class="facts">
+      <div><strong>10 000</strong><span>participants visés</span></div>
+      <div><strong>2</strong><span>distances, 5 et 10 km</span></div>
+      <div><strong>1</strong><span>Arena, arrivée en intérieur</span></div>
+      <div><strong>2027</strong><span>édition 1, à l'automne</span></div>
+    </div>
+    <p>Nous cherchons l'agence qui va l'écrire avec nous, en mandataire unique, en groupement ou en assistance à maîtrise d'ouvrage. Le cahier des charges est prêt.</p>
+  </section>
+
+  <section class="deck" aria-label="Le deck">
+    <p class="label">Le deck</p>
+    <h2>L'essentiel, en sept pages.</h2>
+    <div class="slides">
+      <img src="deck-slide-1.png" alt="R.O.I. Run on Investment, la course qui connecte les entrepreneurs. La Défense, automne 2027." loading="lazy">
+      <img src="deck-slide-2.png" alt="Courir. Arriver. Rester." loading="lazy">
+      <img src="deck-slide-3.png" alt="Une première édition qui voit grand : 10 000 participants visés, 2 distances, 1 Arena, 2027." loading="lazy">
+      <img src="deck-slide-4.png" alt="Un peloton de décideurs : entrepreneurs, dirigeants, cadres, indépendants." loading="lazy">
+      <img src="deck-slide-5.png" alt="Ce que nous cherchons : une agence partenaire, trois formules." loading="lazy">
+      <img src="deck-slide-6.png" alt="Et ce n'est pas tout. Il y a un dernier élément, nous vous le présenterons de vive voix." loading="lazy">
+      <img src="deck-slide-7.png" alt="30 minutes en visio avec Marion Boudet et Maxime Dietrich." loading="lazy">
+    </div>
+  </section>
+
+  <section class="contact">
+    <p class="label">Prochaine étape</p>
+    <h2>30 minutes en visio. <em>Et le dernier élément, de vive voix.</em></h2>
+    <p>Nous vous présentons le cahier des charges et répondons à vos questions. Écrivez ou appelez, nous calons le créneau qui vous arrange.</p>
+    <div class="who">
+      <div>
+        <span class="role">Président</span>
+        <span class="name">Maxime Dietrich</span>
+        <div class="line"><span id="tel">07 79 97 19 61</span><button class="copy" type="button" data-copy="tel">Copier</button></div>
+        <div class="line"><span id="mail">contact@oteaproduction.com</span><button class="copy" type="button" data-copy="mail">Copier</button></div>
+      </div>
+      <div>
+        <span class="role">Pilote de la consultation</span>
+        <span class="name">Marion Boudet</span>
+        <span class="role">Présente à la visio</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>R.O.I. · Run on Investment · La Défense · Automne 2027</footer>
+</main>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = document.getElementById(b.dataset.copy).textContent;
+    var done = function () { b.textContent = 'Copié'; setTimeout(function () { b.textContent = 'Copier'; }, 1600); };
+    try {
+      navigator.clipboard.writeText(t).then(done, function () { select(b.dataset.copy); });
+    } catch (e) { select(b.dataset.copy); }
+  });
+});
+function select(id) {
+  var r = document.createRange(); r.selectNodeContents(document.getElementById(id));
+  var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+}
+</script>
