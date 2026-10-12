@@ -60,7 +60,7 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 
 ## Règles permanentes du CM (non négociables)
 
-Ces deux règles priment sur toute autre considération d'exécution. Elles
+Ces règles priment sur toute autre considération d'exécution. Elles
 vivaient dans les mémoires Claude, hors du repo — elles sont désormais
 versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 
@@ -95,6 +95,13 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 3. **Aucune bande son sur les vidéos de story.** Elles partent muettes, Maxime
    ajoute l'audio dans Instagram au moment de valider.
    → `.claude/memories/stories-sans-son.md`
+4. **Un à deux mois d'avance sur tout événement** (vacances scolaires, vœux,
+   galette des rois, séminaires, salons, événements corpo). Une offre liée à un
+   temps fort se publie entre J-60 et J-30, jamais pendant : un prospect qui
+   lit « c'est le moment de filmer » le premier jour des vacances ne peut plus
+   rien en faire (Maxime, 12/10/2026). Seule une actualité annoncée pour
+   information sort à J-7 / J.
+   → `.claude/memories/anticipation-evenements.md`
 
 Index complet des mémoires : `.claude/memories/MEMORY.md`.
 

@@ -46,6 +46,8 @@ Les outils Metricool passent par Zapier. Toujours appeler `Zapier:list_enabled_z
 
 Toujours vérifier par recherche web avant d'écrire : dates réelles des événements, vainqueurs/gagnants récents, sorties produits. Exemples par secteur : golf → majeurs (Masters avril, PGA mai, US Open juin, The Open juillet), WITB des vainqueurs, sorties matériel janv-mars ; beauté → fêtes (Saint-Valentin, fête des mères), saisons (été/soleil, hiver/hydratation), tendances ; immobilier → rentrée, printemps (pic d'achats), taux ; barbier → Movember, fêtes, rentrée.
 
+**Fenêtre d'anticipation (règle de Maxime, 12/10/2026)** : au moment de poser le calendrier, tout post qui propose une prestation ou une inscription liée à un temps fort (vacances scolaires, vœux, galette des rois, séminaire, salon, événement corpo) se date entre J-60 et J-30 avant ce temps fort, jamais pendant ; les déclencheurs J-7 / J+1 de l'étape 3 ne valent que pour une actualité annoncée pour information. Détail et exemples par compte : `.claude/memories/anticipation-evenements.md`.
+
 ## Étape 3 — Structure éditoriale (commune à tous les comptes)
 
 5 piliers : P1 pédagogie métier (30%), P2 actu secteur (25%), P3 coulisses (20%), P4 saisonnalité client (15%), P5 preuve sociale (10%). Cadence : 3 posts feed/semaine (lundi P2, **mercredi carrousel**, vendredi P5/P4) + stories. Semaine d'événement majeur : 4-5 posts.
