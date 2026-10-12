@@ -62,6 +62,23 @@ OTEA Production
 
 ---
 
-Variante tutoiement (Le Loft, Pierre Huiban…) : « Salut {PRÉNOM} », « tes publications »,
-« corrige la légende directement dans la case », « tes décisions sont prises en compte »,
-signature identique. Le fond ne change pas : 3 étapes, 3 décisions, rien ne part sans accord.
+Variante tutoiement : « Salut {PRÉNOM} », « tes publications », « corrige la légende
+directement dans la case », « tes décisions sont prises en compte », signature identique.
+Le fond ne change pas : 3 étapes, 3 décisions, rien ne part sans accord.
+
+⚠️ **Pierre Huiban n'est plus dans cette variante, et ne l'a jamais voulu.** Il a rejeté
+lui-même la ligne « tutoiement, énergie brute, LFG » le 19/08/2026 (« ça ne me ressemble
+pas »), capture de sa propre story à l'appui. Sa ligne en vigueur, écrite le 20/08 et
+rappelée dans `clients-config.json` : **anglais**, première personne, chaleureux et
+généreux, il remercie. **Interdits absolus : « LFG », « Pas d'excuses », « Balance-moi »,
+l'impératif sec, le registre coach-motivation.** Fin de message : une invitation ouverte et
+un remerciement, jamais un ordre ; émojis 🔊 ❤️ 🙏. Son mail de review suit cette ligne.
+Erreur commise le 12/10/2026 : un brouillon signé « LFG 🔥 » parce que cette page disait
+encore « variante tutoiement, Pierre Huiban ». Lire `clients-config.json` → `ton` avant
+d'écrire, pas cette liste.
+
+**Un brouillon sans destinataire ne tient pas.** Vérifié le 12/10/2026 : le brouillon de
+Pierre, champ « À » vide faute d'adresse perso, a disparu de Gmail en vingt minutes, quand
+les deux brouillons adressés du même lot étaient encore là. Un compte sans adresse
+confirmée n'a donc pas de brouillon fiable : le signaler dans le rapport plutôt que
+compter dessus.
