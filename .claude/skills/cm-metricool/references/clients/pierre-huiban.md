@@ -92,7 +92,7 @@ d'entraînement (export Garmin ou Strava).
 Référence donnée par Maxime : @rundadlift, reel DeHgY1RxPfB (monologue intérieur
 d'un père qui court, noir et blanc, sous-titres jaunes à empattements centrés,
 valse au piano). Cinq specs dans `projets/pierre-huiban/reels-monologue/` :
-M3-R6 (18/10, brouillon 394964381), M1-R7 (20/10, 388250104), D1-R8 (22/10,
+M3-R6 (18/10, brouillon 395043919), M1-R7 (20/10, 388250104), D1-R8 (22/10,
 388353604), M2-R11 (29/10, 388250135), M4-R12 (01/11, 388250148). Moteur :
 gabarit `monologue` de `scripts/pierre-reel-ralenti.py`, mode d'emploi dans
 `projets/pierre-huiban/reels-dialogue/README.md`. Sorties muettes, aucune voix

@@ -1,7 +1,7 @@
 {
  "_doc": "M3-R6-two-engines, reel « monologue » de Pierre Huiban (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube (--drive-index rushes-drive.json, ou --rushes DOSSIER avec des rushes lus par plages). Muet : la valse au piano se pose dans Instagram. Textes : script reel-script, corrigé par les deux vérificateurs du 13/10 (voir _corrections).",
  "id": "M3-R6-two-engines",
- "slot": "R6 · dim. 18/10/2026 18:00 · Metricool 394964381 (brouillon ; ancien id 388353576, Metricool a changé l'id à une mise à jour ; lu le 13/10 à 14:55 UTC, légende encore à l'ancienne version v1) · PH-11 de la feuille du 12-10",
+ "slot": "R6 · dim. 18/10/2026 18:00 · Metricool 395043919 (brouillon ; ids précédents 388353576 puis 394964381, Metricool change l'id à chaque mise à jour ; légende en ligne au 13/10 16h : version corrigée « won our age group in Rome and qualified for the World Championships twice. », sans « Rome was one more. » ; instagramData.type vaut encore POST, à passer en REEL au branchement de la vidéo) · PH-11 de la feuille du 12-10",
  "theme": "Antoine : le binôme de Pro Doubles, la corde, le traîneau, la confiance, Hong Kong ensemble",
  "hooks": [
   "Four races. / Same partner.",
@@ -247,7 +247,7 @@
    "_role": "CTA"
   }
  ],
- "legende": "Doubles is not two people racing side by side. It's one team.\n\nRome was the fastest of our four races together this season with @antoine_bhna. First in our age group, and Hong Kong is next.\n\nThank you, Antoine, for every metre ❤️\n\nIf you race doubles, I'd love to know who you race with. I read everything 🙏\n\n#hyrox #hyroxdoubles #teamwork #hyroxrome #roadtohongkong",
+ "legende": "Doubles is not two people racing side by side. It's one team.\n\nRome was the fastest of our four races together this year with @antoine_bhna. First in our age group, and Hong Kong is next.\n\nThank you, Antoine, for every metre ❤️\n\nIf you race doubles, I'd love to know who you race with. I read everything 🙏\n\n#hyrox #hyroxdoubles #teamwork #hyroxrome #roadtohongkong",
  "note_lint": 93,
  "verdict_lint": "93/100 🟢",
  "_corrections": [
@@ -259,7 +259,7 @@
   "Vérif. 13/10 (grammaire de la référence, blocs de 3 à 8 mots) : cartes 2 et 3 sans subordonnée « When ... » : « I'm on the rope. / He's right behind me. » et « He takes the sled. / I catch my breath. ».",
   "Vérif. 13/10 (redite du post du 15/10, 388250088 « Trusting the other person ... is half the race ») : carte 4 « I trust him / with every metre. », mot jaune « trust ».",
   "Vérif. 13/10 (construction bancale) : carte 6 « It's looking up / and seeing him there. ».",
-  "Vérif. 13/10 (copie mot pour mot du carrousel du 14/10, 388353524 « Four races with @antoine_bhna this season. Paris, Lyon, ... ») : 2e paragraphe réécrit. Le « fourth » proposé n'est pas repris : le dépôt ne date pas Paris et Lyon. Retenu : « Rome was the fastest of our four races together this season » (53:34 contre 54:42, 54:59 et 55:29, pierre-huiban_saison-2026_avec-antoine.json).",
+  "Vérif. 13/10 (copie mot pour mot du carrousel du 14/10, 388353524 « Four races with @antoine_bhna this season. Paris, Lyon, ... ») : 2e paragraphe réécrit. Le « fourth » proposé n'est pas repris : le dépôt ne date pas Paris et Lyon. Retenu : « Rome was the fastest of our four races together this season » (53:34 contre 54:42, 54:59 et 55:29, pierre-huiban_saison-2026_avec-antoine.json). Puis « this season » devient « this year » (13/10, 16h) : Pierre compte Rome comme course n° 1 d'une nouvelle saison (30/09), alors que les quatre courses sont toutes en 2026 (Paris du 23 au 26/04/2026 et Lyon du 20 au 24/05/2026 selon france.hyrox.com, Stockholm en juin, Rome le 26/09).",
   "Vérif. 13/10 (ponctuation) : « Thank you, Antoine, for every metre ».",
   "Note reel-lint recalculée par le vérificateur : 93 (Hook 18, Structure 20, Format 20, CTA 20, Preuve 15).",
   "Vérif. adverse 13/10 : carte 4 « I trust him / with every metre. » posait un « I » sur un gros plan d'Antoine. Devenue « He's got my back, / every metre. », mot jaune « back, », +0,3 s après la virgule, bloc complet tenu 0,82 s. Même idée, sujet à l'écran."
