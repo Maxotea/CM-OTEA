@@ -48,9 +48,11 @@ Maxime est le client de ce compte : même règle qu'OTEA Production, `validation
 Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
 
 - **DA photo** : Vert et Noir, voix « je », tutoiement. Même banque que OTEA Production (`photos/otea-filmakers.json`,
-  22 photos ouvertes au compte). Q4 ouverte (lequel est Maxime sur les photos) : aucun « je » sous une personne
-  visible, une personne n'apparaît que si elle n'est pas présentée comme « je ». Q3 : tout vécu non confirmé est
-  écrit au neutre.
+  22 photos ouvertes au compte, plus les 73 instantanés validés le 13/10). Q4 répondue : Maxime = le vidéaste barbu
+  en t-shirt noir, sans casquette (photo 01), réponse du 13/10/2026 ; seule personne présentable en « je » sur
+  Filmakers (ailleurs il porte parfois une casquette jaune ou orange, planche d'identité dans
+  `banque-photos-otea.md`). Aucun « je » sous une autre personne visible. Q3 : tout vécu non confirmé est écrit au
+  neutre.
 - **Stories** : lun, mer, ven à 10:00, Instagram seul (Q9). Mer (mp4 e5955e06) et ven (ac9af476) en i2v plein cadre,
   muettes, sans personne, du 28/10 au 27/11 : 394728098 à 394728497 (10 stories). Le lundi est refusé (le softbox
   bouge) et sa carte « Je commence par regarder la lumière » est à neutraliser. Aucune story en décembre.
@@ -61,12 +63,13 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   pas reprendre une photo du feed OTEA de décembre. Trois reels à tourner (R1 04/12, R2 21/12, R3 01/01), une carte
   de repli occupe chaque créneau.
 - **Décisions de Maxime** : Q3 (texte neutre), Q8 (22,5 crédits pour ce compte, dépensés), Q9 (stories lun, mer, ven
-  10:00 dès le 26/10). Q4 toujours ouverte.
+  10:00 dès le 26/10), Q4 (13/10, voir DA photo).
 - **Chiffres (13/09 au 12/10)** : 3 800 abonnés Instagram (61 gagnés, 113 perdus). Les deux reels de sport (Rome
   27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction (le post
   du 12/10 y est parti), pas @oteafilmakers.
 - **Reste** : 30/10 383270198 (photo, avant le 16/10 6h30), 02/11 383270388 (photo, avant le 19/10), 04/11 383270407
   (texte, avant le 21/10), 13/11 394182835 (photo 3d299617 commune avec OTEA, avant le 30/10), 18/11 383270536
   (texte), 20/11 383270550 (photo), 27/11 383270617 (texte et photo, avant le 13/11) ; média du 28/10 (54df9acf,
-  doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11 ; tâche Mac (banque propre).
+  doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11. Banque propre faite le 13/10 depuis
+  le Mac (73 instantanés).
   Après tout `bulk_replace_posts` sur ce compte, relire `tiktokData` : l'action le perd.

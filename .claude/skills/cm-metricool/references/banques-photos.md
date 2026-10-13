@@ -17,9 +17,11 @@ Banques à constituer : demander les photos existantes, les classer par pilier (
 - Manifestes : `photos/otea-production.json` (32 photos) et `photos/otea-filmakers.json` (22 photos ouvertes à
   Filmakers), mêmes clés 01 à 46. Ils portent le recadrage 4:5, le recadrage 9:16 pris sur l'original (une story
   plein cadre ne part jamais d'un aperçu), les boîtes de visage YuNet et le contrôle de rendu carrousel.
-- Personne n'est nommé : tant que Maxime n'a pas dit lequel il est (Q4), le champ `qui` reste « à confirmer », aucune
-  légende Filmakers ne pose un « je » sur une personne visible, et la 34 (portrait N&B) reste hors rotation. La 40
-  (texte d'écran d'un tiers) ne sert pas de fond.
+- Q4 : Maxime = le vidéaste barbu en t-shirt noir, sans casquette (photo 01), réponse du 13/10/2026 ; seule personne
+  présentable en « je » sur Filmakers (ailleurs il porte parfois une casquette jaune ou orange, planche d'identité
+  dans `clients/banque-photos-otea.md`). Le champ `qui` de la 01 le dit ; sur les autres photos de 01 à 46 il reste
+  « à confirmer », aucune légende Filmakers ne pose un « je » sur une autre personne visible, et la 34 (portrait N&B)
+  reste hors rotation. La 40 (texte d'écran d'un tiers) ne sert pas de fond.
 - Rotation : une même photo ne repasse pas au feed avant 30 jours, carrousels compris, et pas le même jour sur les
   deux comptes. Les deux comptes puisent dans le même stock : en décembre, OTEA utilise les clés 02, 03, 04, 05, 06,
   07, 08, 09, 10, 11, 12, 13, 14, 17, 20, 21, 23, 26, 27, 30, 42 et 44 ; Filmakers est passé en cartes
@@ -28,7 +30,8 @@ Banques à constituer : demander les photos existantes, les classer par pilier (
   menton, visage complété), et un plan sans visage a inventé une main et un faux logo. Les seuls plans retenus n'ont
   aucun visage (OTEA sam 17, Filmakers 08c et 09t). Choisir pour les stories des photos sans visage visible, et
   contrôler chaque plan frame par frame.
-- Trou principal : la banque Filmakers propre (photos instantanées de Maxime, voyage) attend la tâche Mac.
+- Banque d'instantanés faite le 13/10 depuis le Mac : 114 photos OTEA Production, 73 Otea Filmakers, ajoutées aux
+  manifestes après les clés 01 à 46 ; détail, accords à obtenir et trous dans `clients/banque-photos-otea.md`.
 
 ## Run On Invest : la banque IA (relevé du 12/10/2026)
 - Seul compte autorisé aux photos IA ultra réalistes (Maxime, 04/08/2026), tant qu'aucune édition n'a eu lieu.
