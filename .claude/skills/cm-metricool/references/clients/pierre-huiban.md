@@ -88,6 +88,18 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
 Compte Instagram de LE PREWORKOUT ; statut de GX Society et Split Nutrition ; tournage d'entraînement en novembre ; stats
 d'entraînement (export Garmin ou Strava).
 
+### Reels monologue (13/10/2026)
+Référence donnée par Maxime : @rundadlift, reel DeHgY1RxPfB (monologue intérieur
+d'un père qui court, noir et blanc, sous-titres jaunes à empattements centrés,
+valse au piano). Cinq specs dans `projets/pierre-huiban/reels-monologue/` :
+M3-R6 (18/10, brouillon 394964381), M1-R7 (20/10, 388250104), D1-R8 (22/10,
+388353604), M2-R11 (29/10, 388250135), M4-R12 (01/11, 388250148). Moteur :
+gabarit `monologue` de `scripts/pierre-reel-ralenti.py`, mode d'emploi dans
+`projets/pierre-huiban/reels-dialogue/README.md`. Sorties muettes, aucune voix
+synthétisée, aucun plan d'Antoine sous un « I ». Au 13/10, aucun reel n'est
+rendu (Drive en « Quota exceeded ») et les légendes des brouillons sont encore
+les anciennes : les remplacer par la `legende` de chaque spec au branchement.
+
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)

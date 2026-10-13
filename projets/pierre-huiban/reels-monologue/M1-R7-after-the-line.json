@@ -1,0 +1,253 @@
+{
+ "_doc": "M1-R7-after-the-line : After the line, les minutes qui suivent l'arrivée à Rome, Antoine et moi, vidés. Gabarit monologue de scripts/pierre-reel-ralenti.py (référence @rundadlift DeHgY1RxPfB). Corrections des vérificateurs du 13/10/2026 appliquées : carte 4 « Trying to take in / what we just did. », légende « This is what all the work is for. », aucun plan de sled push ni de couloir de traîneaux sous un texte d'après la ligne, aucun plan d'Antoine sous un « I ». Plans calés à l'image sur les rushes lus par plages HTTP (voir `pourquoi`). Sortie muette, aucune voix.",
+ "_titre": "M1-R7 After the line",
+ "slot": "R7 · mar. 20/10/2026 12:30 · Metricool 388250104 · PH-03 de la feuille du 19-10",
+ "gabarit": "monologue",
+ "sortie": "M1-R7-after-the-line.mp4",
+ "ralenti": 4,
+ "fondu_sortie": 0,
+ "mot_en_cours": true,
+ "plans": [
+  {
+   "clip": "7377",
+   "debut": 80.0,
+   "duree": 0.77,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 1, dernières wall balls avant la ligne (arrivée vers 84 s du rush, caméra en avance de 90 s). Vu le 13/10 sur deux images clés de 7377 : à 74 s, Pierre (débardeur noir, brassard gris au bras droit, x 0,45 environ) attend à la station ; à 78 s, un débardeur vert (Antoine probable) lance la balle, de dos. Le barbu au débardeur noir à logo Z est à gauche, c'est l'autre binôme. Caler la seconde et le x entre 78 et 84 s, hors 82,0 à 82,5 s (pris par D1). Pas de repli vu : le repli 7376 à 19,0 s est pris par D1 et r01."
+  },
+  {
+   "clip": "7377",
+   "debut": 85.2,
+   "duree": 1.18,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 2, juste après la ligne. Rush non lu (quota Drive). Hors 84,4 à 85,0 s (pris par D1). Repli 7350 à 3,0 s retiré (couloirs de traîneaux sous un texte d'après la ligne, vérificateur 1) : sans image d'après la ligne, la carte ne se monte pas."
+  },
+  {
+   "clip": "7377",
+   "debut": 88.6,
+   "duree": 0.9,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 3 « Just Antoine and me », les deux après la ligne. Rush non lu. Repli 7350 (A4, de dos côte à côte au sled pull) retiré pour la même raison que la carte 2."
+  },
+  {
+   "clip": "7377",
+   "debut": 93.0,
+   "duree": 0.93,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 4 « Trying to take in », après la ligne, à la place de 7346 à 5,6 s (Antoine pendant le sled push, hors thème, vérificateur 1). Fin de 7377 (vers 9 à 14 s après la ligne) ou début de 7378."
+  },
+  {
+   "clip": "7379",
+   "debut": 2.0,
+   "duree": 2.88,
+   "ralenti": 1,
+   "slog3": false,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 5 « Everyone remembers the finish line. » 1080p 25p Rec.709, environ 5 min après l'arrivée : ralenti 1, pas de LUT. Vignette Drive : nuque et profil d'un débardeur vert (Antoine probable), fond CHAMPION. Repli 7346 à 9,6 s retiré (sled push), le repli du vérificateur 2 (7346 à 15,0 s) aussi, pour la même raison."
+  },
+  {
+   "clip": "7378",
+   "debut": 15.0,
+   "duree": 0.72,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 6 « I remember what comes after. » : il faut Pierre (un « I »), après la ligne. 7378 couvre 54:40 à 55:15 au chrono (1 min après l'arrivée), vignette Drive très sombre : exposition à remonter. Repli d'identité seulement : 7345 à 5,0 s, x 0,45 (A2 vu, Pierre plié sur le traîneau, vérificateur 2), hors thème (sled push)."
+  },
+  {
+   "clip": "7351",
+   "debut": 11.9,
+   "duree": 1.03,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "vu",
+   "pourquoi": "Carte 7 « This is what all the work is for. » A1 vu : Pierre tire la corde du sled pull face caméra, Antoine derrière lui. 11,9 à 12,93 s libre (M3 prend 10,0 à 11,2 et 14,2 à 15,13 ; M2 9,0 à 9,95 ; D1 13,0 à 13,5)."
+  },
+  {
+   "clip": "7378",
+   "debut": 5.0,
+   "duree": 0.92,
+   "ralenti": 4,
+   "x": 0.5,
+   "statut": "à caler",
+   "pourquoi": "Carte 8, question finale, après l'arrivée. Vignette Drive très sombre. Repli 7346 à 2,0 s retiré (pris par M2, et sled push)."
+  }
+ ],
+ "sous_titres": [
+  {
+   "t": 0.4,
+   "fin": 3.08,
+   "lignes": [
+    "The clock stops",
+    "at 53:34."
+   ],
+   "mots_jaunes": [
+    "53:34."
+   ],
+   "horodatages": [
+    0.4,
+    0.81,
+    1.32,
+    1.82,
+    2.23
+   ]
+  },
+  {
+   "t": 3.28,
+   "fin": 7.8,
+   "lignes": [
+    "For a few minutes,",
+    "no clock, no plan."
+   ],
+   "mots_jaunes": [
+    "plan."
+   ],
+   "horodatages": [
+    3.28,
+    3.67,
+    4.05,
+    4.44,
+    5.35,
+    5.74,
+    6.57,
+    6.95
+   ]
+  },
+  {
+   "t": 8.0,
+   "fin": 11.4,
+   "lignes": [
+    "Just Antoine and me,",
+    "completely empty."
+   ],
+   "mots_jaunes": [
+    "empty."
+   ],
+   "horodatages": [
+    8.0,
+    8.4,
+    8.91,
+    9.26,
+    9.95,
+    10.55
+   ]
+  },
+  {
+   "t": 11.6,
+   "fin": 15.12,
+   "lignes": [
+    "Trying to take in",
+    "what we just did."
+   ],
+   "mots_jaunes": [
+    "did."
+   ],
+   "horodatages": [
+    11.6,
+    12.06,
+    12.41,
+    12.8,
+    13.15,
+    13.53,
+    13.88,
+    14.27
+   ]
+  },
+  {
+   "t": 15.32,
+   "fin": 18.0,
+   "lignes": [
+    "Everyone remembers",
+    "the finish line."
+   ],
+   "mots_jaunes": [
+    "finish",
+    "line."
+   ],
+   "horodatages": [
+    15.32,
+    15.83,
+    16.38,
+    16.71,
+    17.15
+   ]
+  },
+  {
+   "t": 18.2,
+   "fin": 20.88,
+   "lignes": [
+    "I remember",
+    "what comes after."
+   ],
+   "mots_jaunes": [
+    "after."
+   ],
+   "horodatages": [
+    18.2,
+    18.57,
+    19.15,
+    19.57,
+    20.03
+   ]
+  },
+  {
+   "t": 21.08,
+   "fin": 25.0,
+   "lignes": [
+    "This is what",
+    "all the work is for."
+   ],
+   "mots_jaunes": [
+    "work"
+   ],
+   "horodatages": [
+    21.08,
+    21.55,
+    21.96,
+    22.43,
+    22.85,
+    23.27,
+    23.74,
+    24.15
+   ]
+  },
+  {
+   "t": 25.2,
+   "fin": 28.68,
+   "lignes": [
+    "What's your favourite",
+    "part of race day?"
+   ],
+   "mots_jaunes": [
+    "favourite"
+   ],
+   "horodatages": [
+    25.2,
+    25.68,
+    26.08,
+    26.67,
+    27.07,
+    27.43,
+    27.83
+   ]
+  }
+ ],
+ "legende": "The minutes after the finish line are my favourite part.\n\nNo clock, no plan. Just @antoine_bhna and me, completely empty, realising what we just did ❤️\n\nThis is what all the work is for.\n\nIf you race too, I'd love to know your favourite part. I read everything 🙏\n\n#hyrox #hyroxrome #finishline #hyroxdoubles #roadtohongkong",
+ "note_lint": 90,
+ "verdict_lint": "90/100 🟢",
+ "a_trancher": [
+  "M1 affirme une scène vécue (les minutes après la ligne, « completely empty », « my favourite part ») écrite par nous le 05/10. Pierre doit la confirmer par écrit dans la feuille du 19-10, au même titre que la variante de M2.",
+  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (effet karaoké des reels voisins de @rundadlift). La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
+  "Musique : sortie muette, Maxime pose la valse au piano dans Instagram."
+ ],
+ "statut_rendu": "NON RENDU au 13/10/2026 12:42 UTC : Drive refuse toute plage (« Quota exceeded ») depuis 08:15 UTC, sur tous les rushes du dossier PIERRE. 7377 au-delà de 78 s, 7378 et 7379 n'ont pas pu être lus (seules deux images clés de 7377, à 74 et 78 s). Une MAQUETTE sur images fixes (rendus/M1-R7-after-the-line-MAQUETTE.mp4) montre les sous-titres ; ce n'est pas le rendu. Dès que Drive rouvre : rendus/_travail-M1/rendre_M1.sh reperage, caler plans.json sur les planches, puis rendre_M1.sh rendu."
+}

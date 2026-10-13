@@ -1,0 +1,275 @@
+{
+ "_doc": "M3-R6-two-engines, reel « monologue » de Pierre Huiban (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube (--drive-index rushes-drive.json, ou --rushes DOSSIER avec des rushes lus par plages). Muet : la valse au piano se pose dans Instagram. Textes : script reel-script, corrigé par les deux vérificateurs du 13/10 (voir _corrections).",
+ "id": "M3-R6-two-engines",
+ "slot": "R6 · dim. 18/10/2026 18:00 · Metricool 394964381 (brouillon ; ancien id 388353576, Metricool a changé l'id à une mise à jour ; lu le 13/10 à 14:55 UTC, légende encore à l'ancienne version v1) · PH-11 de la feuille du 12-10",
+ "theme": "Antoine : le binôme de Pro Doubles, la corde, le traîneau, la confiance, Hong Kong ensemble",
+ "hooks": [
+  "Four races. / Same partner.",
+  "53:34 in Rome. / Two of us.",
+  "Four races, / one rope, two of us."
+ ],
+ "hook_retenu": "Four races. / Same partner.",
+ "gabarit": "monologue",
+ "sortie": "M3-R6-two-engines.mp4",
+ "ralenti": 4,
+ "mot_en_cours": true,
+ "fondu_sortie": 0,
+ "plans": [
+  {
+   "clip": "7350",
+   "debut": 26.1,
+   "duree": 0.8,
+   "ralenti": 4,
+   "x": 0.78,
+   "pourquoi": "Carte 1 (hook « Four races. / Same partner. ») · A4 : Antoine (vert, chaîne) et le débardeur noir de dos, côte à côte, repartent à la fin du sled pull. Fenêtre calée pour contenir l'image vue à 26,88 s (x 0,78 contrôlé dessus) ; s'arrête avant D1 (27,0)."
+  },
+  {
+   "clip": "7351",
+   "debut": 10.0,
+   "duree": 1.2,
+   "ralenti": 4,
+   "x": 0.53,
+   "pourquoi": "Carte 2 (« I'm on the rope. / He's right behind me. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde face caméra, Antoine juste derrière lui. Images vues à 10,0 et 10,45 s : texte sur les mains et la corde, jamais sur un visage. Vérif. adverse 13/10 : sur l'essai réel, le cadre glisse ; à 10,475 s Pierre est dans la moitié droite et Antoine n'est plus qu'au bord droit. Regarder 10,6, 10,9 et 11,2 s avec ETAPE=voir ; si Antoine sort par la droite, passer x de 0,53 à 0,60.",
+   "statut": "à contrôler"
+  },
+  {
+   "clip": "7345",
+   "debut": 9.2,
+   "duree": 1.3,
+   "ralenti": 4,
+   "x": 0.45,
+   "pourquoi": "Carte 3 (« He takes the sled. / I catch my breath. ») · débardeur vert (Antoine) qui pousse le traîneau, de face (vu à 9,41 s ; A2 : dès 9 s c'est Antoine qui pousse)."
+  },
+  {
+   "clip": "7350",
+   "debut": 18.9,
+   "duree": 0.83,
+   "ralenti": 4,
+   "x": 0.58,
+   "pourquoi": "Carte 4 (« He's got my back, / every metre. ») · A10 : profil net d'Antoine, chaîne, regard au loin. Recalé de 18,0 à 18,9 s et x de 0,85 à 0,58 : sur l'image vue (19,20 s), x 0,85 coupait le visage en deux ; à 0,58 le profil est entier, le texte passe sous le menton. Vérif. adverse 13/10 : sous l'ancien texte « I trust him », c'était Antoine à l'écran sous un « I ». Le texte a changé, le plan reste : le sujet de la phrase est Antoine, qui est à l'écran."
+  },
+  {
+   "clip": "7346",
+   "debut": 13.55,
+   "duree": 0.92,
+   "ralenti": 4,
+   "x": 0.4,
+   "pourquoi": "Carte 5 (« But the best part / isn't the clock. ») · A9 : Antoine de dos, mains aux hanches, souffle (vu à 14,45 s, dans la fenêtre)."
+  },
+  {
+   "clip": "7350",
+   "debut": 34.45,
+   "duree": 0.92,
+   "ralenti": 4,
+   "x": 0.45,
+   "pourquoi": "Carte 6 (« It's looking up / and seeing him there. ») · Antoine de dos, le débardeur noir face à lui (vu à 34,56 s). Remplace A3 (7346 à 1,0 s) : sur l'image vue (2,06 s) le texte tombait sur le menton du gros plan flou. Fenêtre accolée à M2 (33,6 à 34,42), sans seconde commune."
+  },
+  {
+   "clip": "7351",
+   "debut": 5.8,
+   "duree": 0.93,
+   "ralenti": 4,
+   "x": 0.45,
+   "pourquoi": "Carte 7 (« Next stop, / Hong Kong. Together. ») · Pierre (débardeur noir) et Antoine (vert) debout côte à côte dans le couloir du sled pull, face caméra (vu à 6,19 s) : l'image dit « Together ». Texte sur les jambes. Seconde libre (M4 2,0 à 2,63 ; M2 9,0)."
+  },
+  {
+   "clip": "7349",
+   "debut": 16.6,
+   "duree": 1.1,
+   "ralenti": 4,
+   "x": 0.62,
+   "pourquoi": "Carte 8 (CTA « If you race doubles, / who's your partner? ») · A11 : débardeur noir accroupi à la corde, chargé, tête basse (vu à 17,14 s). Remplace 21,4 s : sur l'image vue (22,03 s) le texte touchait la tête du tireur et le visage d'Antoine penché derrière lui. Avant les replis de M1 (18,0)."
+  }
+ ],
+ "sous_titres": [
+  {
+   "t": 0.4,
+   "fin": 3.2,
+   "lignes": [
+    "Four races.",
+    "Same partner."
+   ],
+   "mots_jaunes": [
+    "Four"
+   ],
+   "horodatages": [
+    0.4,
+    0.8,
+    1.7,
+    2.1
+   ],
+   "_role": "Hook"
+  },
+  {
+   "t": 3.4,
+   "fin": 8.0,
+   "lignes": [
+    "I'm on the rope.",
+    "He's right behind me."
+   ],
+   "mots_jaunes": [
+    "behind"
+   ],
+   "horodatages": [
+    3.4,
+    3.8,
+    4.2,
+    4.6,
+    5.5,
+    5.9,
+    6.3,
+    6.7
+   ],
+   "_role": "Temps 1 : la corde"
+  },
+  {
+   "t": 8.2,
+   "fin": 13.2,
+   "lignes": [
+    "He takes the sled.",
+    "I catch my breath."
+   ],
+   "mots_jaunes": [
+    "breath."
+   ],
+   "horodatages": [
+    8.2,
+    8.61,
+    9.02,
+    9.44,
+    10.36,
+    10.78,
+    11.19,
+    11.6
+   ],
+   "_role": "Temps 2 : le traîneau"
+  },
+  {
+   "t": 13.4,
+   "fin": 16.52,
+   "lignes": [
+    "He's got my back,",
+    "every metre."
+   ],
+   "mots_jaunes": [
+    "back,"
+   ],
+   "horodatages": [
+    13.4,
+    13.8,
+    14.2,
+    14.6,
+    15.3,
+    15.7
+   ],
+   "_role": "Temps 3 : la confiance"
+  },
+  {
+   "t": 16.72,
+   "fin": 20.2,
+   "lignes": [
+    "But the best part",
+    "isn't the clock."
+   ],
+   "mots_jaunes": [
+    "best"
+   ],
+   "horodatages": [
+    16.72,
+    17.12,
+    17.52,
+    17.92,
+    18.32,
+    18.72,
+    19.12
+   ],
+   "_role": "Bascule"
+  },
+  {
+   "t": 20.4,
+   "fin": 23.88,
+   "lignes": [
+    "It's looking up",
+    "and seeing him there."
+   ],
+   "mots_jaunes": [
+    "there."
+   ],
+   "horodatages": [
+    20.4,
+    20.8,
+    21.2,
+    21.6,
+    22.0,
+    22.4,
+    22.8
+   ],
+   "_role": "Réponse"
+  },
+  {
+   "t": 24.08,
+   "fin": 27.6,
+   "lignes": [
+    "Next stop,",
+    "Hong Kong. Together."
+   ],
+   "mots_jaunes": [
+    "Hong Kong."
+   ],
+   "horodatages": [
+    24.08,
+    24.48,
+    25.18,
+    25.58,
+    26.48
+   ],
+   "_role": "Morale"
+  },
+  {
+   "t": 27.8,
+   "fin": 32.0,
+   "lignes": [
+    "If you race doubles,",
+    "who's your partner?"
+   ],
+   "mots_jaunes": [
+    "partner?"
+   ],
+   "horodatages": [
+    27.8,
+    28.2,
+    28.6,
+    29.0,
+    29.7,
+    30.1,
+    30.5
+   ],
+   "_role": "CTA"
+  }
+ ],
+ "legende": "Doubles is not two people racing side by side. It's one team.\n\nRome was the fastest of our four races together this season with @antoine_bhna. First in our age group, and Hong Kong is next.\n\nThank you, Antoine, for every metre ❤️\n\nIf you race doubles, I'd love to know who you race with. I read everything 🙏\n\n#hyrox #hyroxdoubles #teamwork #hyroxrome #roadtohongkong",
+ "note_lint": 93,
+ "verdict_lint": "93/100 🟢",
+ "_corrections": [
+  "v1, carte « We don't talk much / out there. » : anecdote inventée (faute irrattrapable de cm-b2c). Supprimée.",
+  "v1, légende avec « won several Pro Doubles races » : fait non documenté. Remplacé par les quatre courses et la victoire de catégorie.",
+  "v1, fin de légende « Tag the person you'd race doubles with » : impératif. Remplacée par une invitation.",
+  "v1, CTA sur 7350 A4 (déjà en hook) : passé sur 7349 (corde) pour ne pas finir sur le plan d'ouverture.",
+  "Vérif. 13/10 (majeur) : CTA « who's on your rope? » faux en HYROX (au sled pull, l'autre bout de la corde est le traîneau) et peu idiomatique : carte 8 « If you race doubles, / who's your partner? », légende « I'd love to know who you race with. I read everything ».",
+  "Vérif. 13/10 (grammaire de la référence, blocs de 3 à 8 mots) : cartes 2 et 3 sans subordonnée « When ... » : « I'm on the rope. / He's right behind me. » et « He takes the sled. / I catch my breath. ».",
+  "Vérif. 13/10 (redite du post du 15/10, 388250088 « Trusting the other person ... is half the race ») : carte 4 « I trust him / with every metre. », mot jaune « trust ».",
+  "Vérif. 13/10 (construction bancale) : carte 6 « It's looking up / and seeing him there. ».",
+  "Vérif. 13/10 (copie mot pour mot du carrousel du 14/10, 388353524 « Four races with @antoine_bhna this season. Paris, Lyon, ... ») : 2e paragraphe réécrit. Le « fourth » proposé n'est pas repris : le dépôt ne date pas Paris et Lyon. Retenu : « Rome was the fastest of our four races together this season » (53:34 contre 54:42, 54:59 et 55:29, pierre-huiban_saison-2026_avec-antoine.json).",
+  "Vérif. 13/10 (ponctuation) : « Thank you, Antoine, for every metre ».",
+  "Note reel-lint recalculée par le vérificateur : 93 (Hook 18, Structure 20, Format 20, CTA 20, Preuve 15).",
+  "Vérif. adverse 13/10 : carte 4 « I trust him / with every metre. » posait un « I » sur un gros plan d'Antoine. Devenue « He's got my back, / every metre. », mot jaune « back, », +0,3 s après la virgule, bloc complet tenu 0,82 s. Même idée, sujet à l'écran."
+ ],
+ "_statut": "13/10/2026 14:50 UTC : spec corrigée après la vérification adverse (texte de la carte 4), NON RENDUE, et aucune maquette vidéo (seulement rendus/M3-R6-two-engines-maquette-cadrage.jpg et un essai de 2 s de la carte 2). Drive répond « Quota exceeded » aux téléchargements depuis 08:20 environ (encore à 14:45). Cadrage contrôlé sur les images déjà vues (une par fenêtre de rush) et sur l'essai de la carte 2 (7351, 10,0 à 10,5 s : N&B p1 3, p5 5, médiane 71, p95 181, contraste du texte 4,9, karaoké correct, aucun texte sur un visage). Quand Drive rouvre : ETAPE=voir (carte 2 à 10,6, 10,9 et 11,2 s), rendu avec le moteur corrigé, puis contrôle à 12 images (1080x1920, 25 i/s, 32 s, aucune piste audio).",
+ "_choix": "Blanc cassé, mots clés en jaune et mot en cours en jaune (karaoké des reels voisins, demande du 13/10), comme M1 ; la couverture mesurée met tout en jaune : passer \"mots_jaunes\": \"*\" si Maxime préfère. Sortie de bloc en coupe sèche au changement de plan (REFERENCE.md §3). Cadence : 0,4 s par mot, +0,3 s après une virgule, +0,5 s après un point, bloc complet tenu 0,7 à 1,2 s.",
+ "a_trancher": [
+  "Doublon de 7350 autour de 34,4 s : la carte 6 (34,45 à 35,37) touche la carte 9 de M2 (33,32 à 34,42), publié le 29/10. À trancher par Maxime, ou décaler l'une des deux cartes après lecture du rush.",
+  "Carte 8 (7349 de 16,6 à 17,7 s) : M2 prend désormais 7349 de 18,0 à 19,02 s, même plan large du sled pull, onze jours plus tard. Aucune seconde commune.",
+  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (karaoké des reels voisins de @rundadlift). La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
+  "Musique : sortie muette, Maxime pose la valse au piano dans Instagram."
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "_doc": "M4-R12-221-days, reel « monologue » de Pierre Huiban (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube (--drive-index rushes-drive.json, ou --rushes DOSSIER avec des rushes lus par plages). Muet : la valse au piano se pose dans Instagram. Textes : script reel-script, corrigé par les deux vérificateurs du 13/10 (voir corrections_lint).",
+ "id": "M4-R12-221-days",
+ "slot": "R12 · dim. 01/11/2026 18:00 · Metricool 388250148 · feuille du 26-10",
+ "theme": "Hong Kong 2027 : 221 jours, ce que Rome a appris (sled push, transitions), novembre est pour le travail",
+ "hooks": [
+  "221 days / to Hong Kong.",
+  "221 days left. / Rome is done.",
+  "Rome took 53:34. / Hong Kong, 221 days."
+ ],
+ "hook_retenu": "221 days / to Hong Kong.",
+ "gabarit": "monologue",
+ "sortie": "M4-R12-221-days.mp4",
+ "ralenti": 4,
+ "mot_en_cours": true,
+ "fondu_sortie": 0,
+ "plans": [
+  {
+   "clip": "7354",
+   "debut": 10.8,
+   "duree": 0.77,
+   "ralenti": 4,
+   "x": 0.53,
+   "exposition": 7.5,
+   "pourquoi": "Carte 1 (hook « 221 days / to Hong Kong. ») · A6 : plan au sol, débardeur noir en appui sur les mains, face caméra, l'angle bas de la référence (image vue à 10,75 s : tête au-dessus de la bande, texte sur les avant-bras). Exposition 7,5 (médiane simulée 46 ; 34 à 5,5). Remplace A5 (7354 à 2,0 s) : à 1,54 s la tête du burpee est DANS la bande du texte, le hook serait tombé sur le visage. Fenêtre libre (M2 prend 9,8 à 10,42)."
+  },
+  {
+   "clip": "7351",
+   "debut": 2.0,
+   "duree": 0.63,
+   "ralenti": 4,
+   "x": 0.42,
+   "exposition": 1.1,
+   "pourquoi": "Carte 2 (« Rome is / behind us. ») · sled pull en plan large : le débardeur noir et Antoine (chaîne) vont à la corde devant le public de Rome (image vue à 2,06 s ; visages en haut du cadre, texte sur les cuisses). x 0,42 garde les deux. Exposition 1,1 (médiane simulée 58)."
+  },
+  {
+   "clip": "7345",
+   "debut": 4.92,
+   "duree": 0.93,
+   "ralenti": 4,
+   "x": 0.45,
+   "exposition": 1.7,
+   "pourquoi": "Carte 3 (« Our weakest station: / the sled push. ») · A2 : Pierre plié sur le traîneau du sled push, tête au-dessus de la bande (images vues à 4,03 et 6,72 s, de part et d'autre de la fenêtre ; texte sur les disques du traîneau). À 1,34 s (fenêtre du script, 0,5 à 1,43) la tête est DANS la bande. Fenêtre libre entre D1 (4,1 à 4,86) et M2 (6,0 à 7,13). Exposition 1,7 (médiane simulée 58)."
+  },
+  {
+   "clip": "7357",
+   "debut": 3.0,
+   "duree": 0.72,
+   "ralenti": 4,
+   "x": 0.5,
+   "exposition": 1.1,
+   "statut": "à caler",
+   "pourquoi": "Carte 4 (« Too much time / between stations. ») · sortie de l'arche 04, Roxzone : la transition elle-même (vignette Drive seule : foule de dos, aucun partenaire identifiable). Vérif. adverse 13/10 : l'ancien plan (7346 à 10,3 s) ne montrait qu'Antoine, de dos, mains aux hanches, à l'arrêt ; le texte se lisait comme un reproche au partenaire. Rush jamais lu (quota Drive, 6,24 s) : seconde et x à caler avec ETAPE=voir ; aucun partenaire identifiable au repos sous « Too much time ». Seconde libre (7357 n'est utilisé par aucun autre reel)."
+  },
+  {
+   "clip": "7354",
+   "debut": 13.25,
+   "duree": 0.7,
+   "ralenti": 4,
+   "x": 0.9,
+   "exposition": 7.5,
+   "pourquoi": "Carte 5 (« Same job, same family. ») · A7 : baskets et chevilles qui passent au ras du sol, sans visage (image vue à 13,82 s). Fenêtre libre (M2 prend 14,0 à 14,53). Exposition 7,5."
+  },
+  {
+   "clip": "7348",
+   "debut": 7.3,
+   "duree": 0.82,
+   "ralenti": 4,
+   "x": 0.65,
+   "exposition": 1.6,
+   "pourquoi": "Carte 6 (« So November / is about the work. ») · A8 : sol, corde et baskets, aucun visage (sujet à x 0,82 à 6,48 s et 0,42 à 9,07 s, images vues). Fenêtre libre : M2 prend 6,0 à 7,15, r01 du 03/11 8,5 à 9,5. Exposition 1,6."
+  },
+  {
+   "clip": "7348",
+   "debut": 3.6,
+   "duree": 0.73,
+   "ralenti": 4,
+   "x": 0.4,
+   "exposition": 1.1,
+   "pourquoi": "Carte 7 (« One session / at a time. ») · sled pull, plan bas : avant-bras et main qui pend après l'effort, bracelet de course, aucun visage (image vue à 3,89 s). Remplace A6 (7354 à 10,8 s), passé en carte 1. Exposition 1,1 (médiane simulée 70)."
+  },
+  {
+   "clip": "7351",
+   "debut": 14.22,
+   "duree": 1.15,
+   "ralenti": 4,
+   "x": 0.45,
+   "exposition": 1.2,
+   "pourquoi": "Carte 8 (CTA « Chasing something too? / I'd love to hear what. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde face caméra, Antoine debout derrière (image vue à 14,45 s : texte sur les genoux et la corde). Carte à la 1re personne sur Pierre identifié. Remplace 7354 à 4,1 s : à 4,61 s la tête qui se relève est DANS la bande. Fenêtre libre entre D1 (13,5 à 14,2) et M2 (15,4)."
+  }
+ ],
+ "sous_titres": [
+  {
+   "t": 0.4,
+   "fin": 3.08,
+   "lignes": [
+    "221 days",
+    "to Hong Kong."
+   ],
+   "mots_jaunes": [
+    "221"
+   ],
+   "horodatages": [
+    0.4,
+    0.8,
+    1.35,
+    1.7,
+    2.05
+   ],
+   "_role": "Hook"
+  },
+  {
+   "t": 3.28,
+   "fin": 5.6,
+   "lignes": [
+    "Rome is",
+    "behind us."
+   ],
+   "mots_jaunes": [
+    "Rome"
+   ],
+   "horodatages": [
+    3.28,
+    3.68,
+    4.23,
+    4.63
+   ],
+   "_role": "Contexte"
+  },
+  {
+   "t": 5.8,
+   "fin": 9.32,
+   "lignes": [
+    "Our weakest station:",
+    "the sled push."
+   ],
+   "mots_jaunes": [
+    "weakest"
+   ],
+   "horodatages": [
+    5.8,
+    6.15,
+    6.5,
+    7.05,
+    7.4,
+    7.8
+   ],
+   "_role": "Temps 1 : le sled push"
+  },
+  {
+   "t": 9.52,
+   "fin": 12.2,
+   "lignes": [
+    "Too much time",
+    "between stations."
+   ],
+   "mots_jaunes": [
+    "between"
+   ],
+   "horodatages": [
+    9.52,
+    9.87,
+    10.22,
+    10.75,
+    11.2
+   ],
+   "_role": "Temps 2 : les transitions"
+  },
+  {
+   "t": 12.4,
+   "fin": 15.0,
+   "lignes": [
+    "Same job, same family."
+   ],
+   "mots_jaunes": [
+    "family."
+   ],
+   "horodatages": [
+    12.4,
+    12.75,
+    13.35,
+    13.75
+   ],
+   "_role": "Temps 3 : la vie autour"
+  },
+  {
+   "t": 15.2,
+   "fin": 18.28,
+   "lignes": [
+    "So November",
+    "is about the work."
+   ],
+   "mots_jaunes": [
+    "work."
+   ],
+   "horodatages": [
+    15.2,
+    15.5,
+    16.1,
+    16.4,
+    16.75,
+    17.05
+   ],
+   "_role": "Bascule"
+  },
+  {
+   "t": 18.48,
+   "fin": 21.2,
+   "lignes": [
+    "One session",
+    "at a time."
+   ],
+   "mots_jaunes": [
+    "One"
+   ],
+   "horodatages": [
+    18.48,
+    18.85,
+    19.4,
+    19.65,
+    19.9
+   ],
+   "_role": "Morale"
+  },
+  {
+   "t": 21.4,
+   "fin": 25.8,
+   "lignes": [
+    "Chasing something too?",
+    "I'd love to hear what."
+   ],
+   "mots_jaunes": [
+    "what."
+   ],
+   "horodatages": [
+    21.4,
+    21.8,
+    22.25,
+    22.95,
+    23.3,
+    23.6,
+    23.85,
+    24.2
+   ],
+   "_role": "CTA"
+  }
+ ],
+ "duree": 25.8,
+ "legende": "221 days to Hong Kong 🇭🇰\n\nRome is behind us. November is about the work: the sled push and the transitions.\n\nIf you're chasing something too, I'd love to hear what. Thank you for following the road. It means more than you think 🙏\n\n#hyrox #roadtohongkong #hyroxworldchampionships #hybridathlete",
+ "note_lint": 88,
+ "verdict_lint": "88/100 🟢",
+ "corrections_lint": [
+  "v1, carte 5 « Same 24 hours. » : chiffre hors dépôt, même banal (critère 5 : un chiffre hors dépôt est bloquant). Devenu « Same job, same family. ».",
+  "v1, CTA « Thank you / for following the road. » : aucun geste demandé (critère 4 à 5). Remplacé par l'invitation, le merci reste en légende.",
+  "v1, image du sled push absente (le calendrier croyait le sled push non filmé) : 7345 recalé en sled push par matiere/PLANS.md, mis en carte 3.",
+  "Vérif. 13/10 (bloquant) : carte 3 « Our sled push / went the wrong way. » se lisait comme un traîneau poussé dans le mauvais sens (pénalité), juste après « October was about Rome. », et ne valait que face à Paris (1:41 contre 2:10 ; Lyon 2:14). Devenue « The sled push / was our weakest. » : Sled Push 2:10 à Rome, 51e sur 292, top 54,8 %, la station la plus mal classée des huit (assets/hyrox/hyrox_pierre-huiban_rome_2026.json). Variante du 2e vérificateur, même sens : « Our weakest station: / the sled push. ».",
+  "Vérif. 13/10 (majeur) : légende « and a lot of early mornings » retirée (habitude d'entraînement non sourcée, SKILLS.md §2.3) ; « following the road, it means » coupée en deux phrases (virgule qui soudait deux phrases).",
+  "Vérif. 13/10 : plan 6, 7348 à 9,0 s chevauchait r01 du 03/11 (8,5 à 9,5) : déplacé à 7,3 s, x 0,65 (le sujet traverse le cadre de x 0,82 à 6,48 s vers x 0,42 à 9,07 s).",
+  "Note reel-lint recalculée par le vérificateur : 88 (Hook 20, Structure 18, Format 20, CTA 16, Preuve 14).",
+  "Montage 13/10 (aperçus des sous-titres du moteur sur les images vues) : trois plans du script mettaient le texte sur un visage. Carte 1 : 7354 à 2,0 s (A5) remplacé par 7354 à 10,8 s (A6, appui face caméra, tête au-dessus de la bande à 10,75 s). Carte 3 : 7345 à 0,5 s (tête dans la bande à 1,34 s) remplacé par 7345 à 4,92 s (tête au-dessus à 4,03 et 6,72 s). Carte 8 : 7354 à 4,1 s (tête dans la bande à 4,61 s) remplacé par 7351 à 14,22 s (A1, Pierre identifié face caméra, texte sur les genoux à 14,45 s). Carte 7 : A6 parti en carte 1, remplacé par 7348 à 3,6 s (avant-bras et main qui pend, aucun visage).",
+  "Montage 13/10 : M2 a pris à 13:08 7345 de 6,0 à 7,13 s et 7354 de 14,0 à 14,53 s ; carte 5 avancée à 13,25 s et carte 3 posée entre D1 (4,86) et M2 (6,0). Aucune seconde de rush partagée avec D1, M1, M2, M3 ni r01.",
+  "Vérif. adverse 13/10 (inexact) : carte 2 « October was / about Rome. » : la course a eu lieu le 26/09/2026 (champ date de assets/hyrox/hyrox_pierre-huiban_rome_2026.json). Devenue « Rome is / behind us. », mot jaune « Rome » ; même correction dans la légende.",
+  "Vérif. adverse 13/10 (anglais elliptique) : carte 3 « The sled push / was our weakest. » remplacée par la variante déjà notée « Our weakest station: / the sled push. », mot jaune « weakest ». Fait inchangé : Sled Push 51e sur 292, la station la plus mal classée.",
+  "Vérif. adverse 13/10 : carte 4, 7346 à 10,3 s (Antoine seul, à l'arrêt, sous « Too much time ») remplacé par 7357 (sortie de l'arche 04, Roxzone), seconde à caler."
+ ],
+ "a_tourner": "Rien d'indispensable. Facultatif : un plan de sled push à l'entraînement (P7 du batch de R9) rendrait « the work » visible en carte 6.",
+ "a_trancher": [
+  "RENDU RÉEL À FAIRE : Drive répond « Quota exceeded » à toute plage le 13/10 (encore à 14:45 UTC). Seule existe la MAQUETTE rendus/M4-R12-221-days-MAQUETTE.mp4, PÉRIMÉE (anciens textes des cartes 2 et 3, ancien plan de la carte 4) : elle ne se montre pas comme un reel. Relancer rendus/_travail-M4/rendre_M4.sh quand Drive rouvre (ou sur le Mac avec --rushes), ETAPE=voir d'abord. À contrôler à l'image : carte 1 (si l'athlète redescend au sol, la tête peut entrer dans la bande) ; carte 3 (tête de Pierre à quelques pixels au-dessus de la bande à 6,72 s) ; carte 4 (7357, seconde et x à caler) ; carte 6 (x 0,65 interpolé) ; expositions 7,5 des plans au sol 7354.",
+  "Répétition avec M2 (jeu. 29/10), trois jours avant, sur les mêmes clips. Vérif. adverse 13/10 : recaler les cartes 1, 5, 6 et 7 sur des rushes encore jamais lus où Pierre est probable : 7359 (B1, debout entre les rameurs), 7361 (B2, au rameur), 7363 (B4, sortie des rameurs), dès que Drive rouvre, avec ETAPE=voir. Le CTA (7351 de 14,22 à 15,37 s) touche le hook de M2 (7351 dès 15,4 s) et la carte 2 prend 7351 à 2,0 s : deux fenêtres de 7351 dans M4, une seule à garder.",
+  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (karaoké des reels voisins de @rundadlift), comme M1, M2, M3 et D1. La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
+  "Musique : sortie muette, Maxime pose la valse au piano dans Instagram.",
+  "Identité : Pierre = débardeur noir, brassard gris au bras droit, reconnu par la tenue (PLANS.md). Plans au sol 7354 : brassard non visible, « possible » seulement ; à confirmer par Maxime."
+ ]
+}
