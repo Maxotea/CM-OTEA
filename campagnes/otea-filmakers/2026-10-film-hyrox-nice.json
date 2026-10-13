@@ -30,12 +30,12 @@
       "format": "video",
       "media": {
         "type": "video",
-        "fichier": "medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v7-muet.mp4",
-        "url": null,
+        "fichier": "medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v8-partout-muet.mp4",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cf80e60f-ccc3-4840-a594-c2fb4b966384.mp4",
         "hash": null,
-        "video_id": null,
-        "vignette_url": null,
-        "note": "Montage existant ~/Movies/HYROX_TEASER_OTEA/TEASER_HYROX_OTEAFILMAKERS_9-16_V7.mp4 (29/09/2026), ramené en 1080x1920 et rendu muet : la musique du montage (Apashe, fichier MUSIQUE_TEMP) n'est pas licenciée pour une publicité. Les textes incrustés portent le message sans le son."
+        "video_id": "1735975970847474",
+        "vignette_url": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/847228103_1628882615346584_4257803379127526823_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=104&ccb=1-7&_nc_sid=1701c7&_nc_ohc=6gWyNWLw87YQ7kNvwEy6q5n&_nc_oc=Adop6WXGmKNp7J6Dfh_aMJFkRieDWKXUuEi-rEx561nYUZRVTocEfRcN5nUoShAhLeQ&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=AEZPnVgEAAAA&_nc_gid=U2wAcua5xYuOgZllasKGRw&_nc_tpa=Q5bMBQLbsIptVA2ezj_a79wbcyG_bDMcXmuc6Vdgw9IwxRrgvpVjKCPE1qUqAKU_74YYGAef87RCdqumrQ&oh=00_AQOsb4etVaBbSuN68lRnF14zTXiTxd2h3_ks7Z9Pv1xgqg&oe=6AD42CD1",
+        "note": "Teaser V7 du 29/09/2026 remonté le 13/10 en V8 : liste de villes (Paris, Londres, Berlin…) remplacée par « ON SE DÉPLACE PARTOUT. » à la demande de Maxime, 1080x1920, muet (musique TEMP non licenciée). Montage sans retouche générative (Maxime, 13/10). Vignette : celle que Meta génère sur la vidéo."
       },
       "texte": "Tu cours HYROX Nice ? Tu mérites mieux qu'une story floue. Photos et film monté de ta course : 290 €. Écris-moi.",
       "titre": "Ton HYROX. Ton film.",
@@ -44,7 +44,7 @@
       "lien": "https://m.me/103287164627283",
       "lien_affiche": null,
       "ia_generative": "OPT_OUT",
-      "note_activation": "Avant activation : accord des athlètes reconnaissables du teaser pour un usage publicitaire, confirmation que le teaser ne contient aucune retouche IA (sinon OPT_IN, décidé avant création), et que la mention « Londres » correspond à une course réellement couverte."
+      "note_activation": "Accords des athlètes visibles : obtenus (Maxime, 13/10/2026). Activation sur une phrase de Maxime qui nomme la campagne."
     }
   ],
   "validation": {

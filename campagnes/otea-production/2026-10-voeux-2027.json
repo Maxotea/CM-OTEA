@@ -27,13 +27,15 @@
   "publicites": [
     {
       "nom": "Vœux 2027, tournage en octobre",
-      "format": "image",
+      "format": "video",
       "media": {
-        "type": "image",
-        "fichier": "medias/otea-production/nouvelles-2026-10/20260702-maxime-camera-sourire.jpg",
-        "url": null,
+        "type": "video",
+        "fichier": "medias/otea-production/pubs/voeux-2027-maxime-camera-8s.mp4",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ec35f871-1a4d-4679-945a-f6e99bb72c28.mp4",
         "hash": null,
-        "note": "Instantané réel (photographe Jean-Philippe Homé-Sanfaute, commande OTEA) : Maxime seul à la caméra, aucun tiers. L'héberger puis renseigner url et hash."
+        "video_id": "1382714390272396",
+        "vignette_url": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/846506041_1719038472519016_8691692985828666231_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1701c7&_nc_ohc=wfwO-XeWKlQQ7kNvwHKSOex&_nc_oc=AdoZb429rvVNZgfH4bsSV92yXVo0LXmxEIIHHbFP_6TqqdHtPcQK4QoHy0QfQBoIY6g&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=AEZPnVgEAAAA&_nc_gid=U2wAcua5xYuOgZllasKGRw&_nc_tpa=Q5bMBQLP__AzL4z96xJ3YuiM8ZvA3OV-RQb3lsPqrcQUtvngOVv_iOkQCVhGdXLlS2uTx5K1ZPSUhTfImg&oh=00_AQOEO6A0pastpuZz5U85r3zssJUB4er1Fmper54QCHxvrg&oe=6AD41F3B",
+        "note": "Vidéo 8 s, 1080x1350, muette : instantané réel de Maxime à la caméra (20260702-maxime-camera-sourire, photographe Jean-Philippe Homé-Sanfaute, commande OTEA), léger zoom, bandeau d'encre #201E1E avec « VOS VŒUX 2027 / SE TOURNENT MAINTENANT. / Pas en décembre. » (Inter Display). Image fixe abandonnée : l'hébergeur bloque les robots de Meta."
       },
       "texte": "Vos vœux 2027 en vidéo se tournent maintenant, pas en décembre. Envoyez-nous votre date en message : devis sous 24 h.",
       "titre": "Vœux 2027 : tournez avant décembre",
