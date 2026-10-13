@@ -82,6 +82,7 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   394727280 à 394727345). Lun, mar, mer et jeu :
   i2v refusés le 13/10 (visages qui dérivent, personne inventée, faux logo), l'ancienne story reste. Ven non animé
   (plancher de 100 crédits), dim bloqué (photo 42 refusée deux fois). Aucune story en décembre.
+- **Crédits Higgsfield (13/10 après-midi)** : plancher ramené de 100 à 40 par Maxime, solde partagé de 55,25 après les stories R.O.I. animées (leurs ids sont dans `run-on-invest.md`, aucune ne concerne ce compte).
 - **Feed** : carrousel A8 variante Noël au 28/10 12:00 (394672845, remplace le vœux 390382341, Q16). Décembre posé en
   brouillon : 13 posts à 12:00, IG, FB, LinkedIn, 394836453 à 394837622 ; carrousels du mercredi A2 (02/12), A1
   (09/12), A6 Wistia 47 % (16/12), A5 (23/12), A8 fenêtres 2027 (30/12) ; Connecter le 14/12 et le 25/12. Le 11/12
