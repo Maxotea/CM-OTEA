@@ -1,0 +1,63 @@
+{
+  "client": "otea-production",
+  "slug": "voeux-2027",
+  "titre": "Vœux vidéo 2027 : se tourner en octobre",
+  "mois": "2026-10",
+  "objectif_business": "Des demandes de devis pour des vidéos de vœux 2027 (tournage fin octobre et novembre, jamais en décembre). Aucune publicité concurrente active sur « vidéo de vœux » au 13/10/2026 (veille). oteaproduction.com n'affiche qu'une installation WordPress vierge au 13/10/2026 : la demande arrive par message sur la page.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "CONVERSATIONS",
+  "destination": "MESSENGER",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "journalier",
+    "montant_eur": 5,
+    "debut": "2026-10-20",
+    "fin": "2026-11-02"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 28,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Cible : dirigeants et responsables communication de PME. Sans pixel ni audience personnalisée, on reste large et on laisse Meta optimiser ; ciblage par intérêts seulement avec des identifiants réels."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Vœux 2027, tournage en octobre",
+      "format": "image",
+      "media": {
+        "type": "image",
+        "fichier": "medias/otea-production/nouvelles-2026-10/20260702-maxime-camera-sourire.jpg",
+        "url": null,
+        "hash": null,
+        "note": "Instantané réel (photographe Jean-Philippe Homé-Sanfaute, commande OTEA) : Maxime seul à la caméra, aucun tiers. L'héberger puis renseigner url et hash."
+      },
+      "texte": "Vos vœux 2027 en vidéo se tournent maintenant, pas en décembre. Envoyez-nous votre date en message : devis sous 24 h.",
+      "titre": "Vœux 2027 : tournez avant décembre",
+      "description": "Devis sous 24 h",
+      "cta": "MESSAGE_PAGE",
+      "lien": "https://m.me/994117790447204",
+      "lien_affiche": null,
+      "ia_generative": "OPT_OUT",
+      "note_destination": "Site hors ligne (02/09/2026) : le clic ouvre Messenger sur la page OTEA Production. Le lien m.me/<page_id> est la forme la plus sûre avec le connecteur, qui n'expose pas le message d'accueil Messenger ; à confirmer à la première création, repli possible sur Interaction · POST_ENGAGEMENT · ON_POST. Revenir à Trafic · LINK_CLICKS · WEBSITE quand le site est en ligne et vérifié."
+    }
+  ],
+  "validation": {
+    "brief_valide_par": "Maxime",
+    "brief_valide_le": "2026-10-13",
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

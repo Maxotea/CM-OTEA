@@ -1,0 +1,65 @@
+{
+  "client": "otea-filmakers",
+  "slug": "film-hyrox-paris",
+  "titre": "Réserve ton film HYROX, Paris",
+  "mois": "2026-12",
+  "objectif_business": "Des réservations de Course Signature (290 € TTC) pour HYROX Paris, du 12 au 20/12/2026 (dates relevées par la veille du 13/10, à reconfirmer sur hyrox.com avant création).",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "CONVERSATIONS",
+  "destination": "MESSENGER",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "total",
+    "montant_eur": 100,
+    "debut": "2026-12-01",
+    "fin": "2026-12-11"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 20,
+    "age_max": 45,
+    "advantage_audience": true,
+    "note": "Large France : HYROX Nice attire des athlètes de tout le pays. Aucun intérêt inventé ; Advantage+ trouve les pratiquants à partir de la vidéo."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Teaser Ton HYROX ton film, 30 s muet",
+      "format": "video",
+      "media": {
+        "type": "video",
+        "fichier": "medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v7-muet.mp4",
+        "url": null,
+        "hash": null,
+        "video_id": null,
+        "vignette_url": null,
+        "note": "Montage existant ~/Movies/HYROX_TEASER_OTEA/TEASER_HYROX_OTEAFILMAKERS_9-16_V7.mp4 (29/09/2026), ramené en 1080x1920 et rendu muet : la musique du montage (Apashe, fichier MUSIQUE_TEMP) n'est pas licenciée pour une publicité. Les textes incrustés portent le message sans le son."
+      },
+      "texte": "Tu cours HYROX Paris ? Tu mérites mieux qu'une story floue. Photos et film monté de ta course : 290 €. Écris-moi.",
+      "titre": "Ton HYROX. Ton film.",
+      "description": "Course Signature, 290 €",
+      "cta": "MESSAGE_PAGE",
+      "lien": "https://m.me/103287164627283",
+      "lien_affiche": null,
+      "ia_generative": "OPT_OUT",
+      "note_activation": "Avant activation : accord des athlètes reconnaissables du teaser pour un usage publicitaire, confirmation que le teaser ne contient aucune retouche IA (sinon OPT_IN, décidé avant création), et que la mention « Londres » correspond à une course réellement couverte."
+    }
+  ],
+  "validation": {
+    "brief_valide_par": "Maxime",
+    "brief_valide_le": "2026-10-13",
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

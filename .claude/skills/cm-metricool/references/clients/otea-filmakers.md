@@ -5,8 +5,14 @@
 - Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
+## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
+Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
+- Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
+- Le compte est la **vitrine de l'offre athlètes** (Course Signature 290 €, Saison Athlète 59 €/mois, `paliers-offre-athlete.md`) : un post sur quatre au plus porte un appel à réserver par message, jamais d'appel ni de visio.
+- **2 reels par semaine**, montés depuis les disques de Maxime ; un post photo sur deux du calendrier existant est remplacé par un reel dès qu'il est prêt. Chaque reel finit par une question binaire.
+
 ## Ligne éditoriale
-- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. PAS de pitch commercial (ça, c'est OTEA PRODUCTION).
+- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. Pas de pitch B2B entreprise (ça, c'est OTEA PRODUCTION) ; l'offre athlètes est permise dans la limite du cap du 13/10.
 - Ton : première personne "je", tutoiement de l'audience, intime, cinématique, passionné. Réflexion sur le métier, la lumière, la liberté/discipline, le voyage.
 - Priorité format : REEL (marque visuelle créative). Mix reels + posts feed réflexifs/carrousels.
 - ⚠️ Règle "jamais inventer" renforcée : c'est une voix PERSO. Ne jamais fabriquer de faux souvenir/voyage/anecdote précis. Là où un vrai vécu est nécessaire, laisser un [crochet] à remplir par Maxime.
