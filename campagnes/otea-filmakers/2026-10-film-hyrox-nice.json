@@ -26,16 +26,16 @@
   "placements": "automatiques",
   "publicites": [
     {
-      "nom": "Teaser Ton HYROX ton film, 30 s muet",
+      "nom": "Teaser Ton HYROX ton film, 31,7 s muet",
       "format": "video",
       "media": {
         "type": "video",
-        "fichier": "medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v8-partout-muet.mp4",
-        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cf80e60f-ccc3-4840-a594-c2fb4b966384.mp4",
+        "fichier": "medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v9-muet.mp4",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/db847424-2c7a-4ded-beae-1759603fc192.mp4",
         "hash": null,
-        "video_id": "1735975970847474",
-        "vignette_url": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/847228103_1628882615346584_4257803379127526823_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=104&ccb=1-7&_nc_sid=1701c7&_nc_ohc=6gWyNWLw87YQ7kNvwEy6q5n&_nc_oc=Adop6WXGmKNp7J6Dfh_aMJFkRieDWKXUuEi-rEx561nYUZRVTocEfRcN5nUoShAhLeQ&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=AEZPnVgEAAAA&_nc_gid=U2wAcua5xYuOgZllasKGRw&_nc_tpa=Q5bMBQLbsIptVA2ezj_a79wbcyG_bDMcXmuc6Vdgw9IwxRrgvpVjKCPE1qUqAKU_74YYGAef87RCdqumrQ&oh=00_AQOsb4etVaBbSuN68lRnF14zTXiTxd2h3_ks7Z9Pv1xgqg&oe=6AD42CD1",
-        "note": "Teaser V7 du 29/09/2026 remonté le 13/10 en V8 : liste de villes (Paris, Londres, Berlin…) remplacée par « ON SE DÉPLACE PARTOUT. » à la demande de Maxime, 1080x1920, muet (musique TEMP non licenciée). Montage sans retouche générative (Maxime, 13/10). Vignette : celle que Meta génère sur la vidéo."
+        "video_id": "4440978176232490",
+        "vignette_url": null,
+        "note": "Teaser V9 du 13/10/2026, monté depuis la timeline V6 de Resolve (celle qui correspond au V7 exporté le 29/09) : villes en rafale remises, puis carton « ON SE DÉPLACE PARTOUT. », étalonnage refait plan par plan (noirs profonds, contraste, glow) à la demande de Maxime. 1080x1920, 31,7 s, muet (la version sur Apashe « Bellatores » n'a pas de droits pour la pub ; version avec effets sonores : teaser-hyrox-ton-film-v9-sfx.mp4). Montage sans retouche générative. Vignette : celle que Meta génère sur la vidéo."
       },
       "texte": "Tu cours HYROX Nice ? Tu mérites mieux qu'une story floue. Photos et film monté de ta course : 290 €. Écris-moi.",
       "titre": "Ton HYROX. Ton film.",

@@ -62,7 +62,7 @@ Montés par Claude depuis les disques de Maxime (`scripts/reel-montage.py`), sou
 
 | # | Compte | Reel | Source | État au 13/10 |
 |---|---|---|---|---|
-| F1 | Filmakers | « Ton HYROX. Ton film. » (30 s) | `~/Movies/HYROX_TEASER_OTEA/TEASER_HYROX_OTEAFILMAKERS_9-16_V7.mp4` | monté ; musique temporaire à remplacer avant publication |
+| F1 | Filmakers | « Ton HYROX. Ton film. » (31,7 s) | `medias/otea-filmakers/pubs/teaser-hyrox-ton-film-v9-*.mp4` | V9 validée par Maxime le 13/10 (villes + « on se déplace partout », étalonnage refait) ; calée sur Apashe « Bellatores », à poser depuis la bibliothèque Instagram (pas de droits sur le MP3) |
 | F2 | Filmakers | Road to Hong Kong, côté caméra | `~/Desktop/HYROX ROME 2026/` | à monter |
 | F3 | Filmakers | J-2 HYROX Nice : ce qu'il y a dans mon sac | photos matériel de la banque + rushes | à monter |
 | F4 | Filmakers | HYROX Nice en direct, côté caméra | tournage du 29/10 au 01/11 | à tourner |
