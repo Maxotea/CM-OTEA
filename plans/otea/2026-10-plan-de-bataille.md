@@ -78,8 +78,11 @@ Montés par Claude depuis les disques de Maxime (`scripts/reel-montage.py`), sou
 |---|---|---|---|---|---|
 | Réserve ton film HYROX, Nice | Filmakers | messages Messenger | 100 € | 20 au 29/10 | `campagnes/otea-filmakers/2026-10-film-hyrox-nice.json` |
 | Vœux 2027 | Production | messages Messenger | 5 €/jour, 70 € | 20/10 au 02/11 | `campagnes/otea-production/2026-10-voeux-2027.json` |
-| Kick-off de janvier | Production | messages Messenger | 30 € | 10 au 16/11 | `campagnes/otea-production/2026-11-kickoff-janvier.json` |
+| Séminaires et kick-off de janvier | Production | interaction sur le post (boost) | 42 € | 16 au 22/11 | `campagnes/otea-production/2026-11-seminaires-janvier.json` (session du 13/10) |
 | Réserve ton film HYROX, Paris | Filmakers | messages Messenger | 100 € | 01 au 11/12 | `campagnes/otea-filmakers/2026-12-film-hyrox-paris.json` |
+| Vacances d'hiver, tourner sans bloquer les bureaux | Production | interaction sur le post (boost) | 42 € | 08 au 14/12 | `campagnes/otea-production/2026-12-vacances-hiver.json` (session du 13/10) |
+
+Dépense prévue : environ 170 € en octobre, 70 € en novembre, 140 € en décembre, sous les 300 € par mois décidés le 13/10.
 
 Tout est créé en pause ; seule une phrase de Maxime qui nomme la campagne l'active. Bilan à J+7 de chaque campagne (`cm-meta-ads` étape 6), reporting mensuel rattaché au mois.
 
