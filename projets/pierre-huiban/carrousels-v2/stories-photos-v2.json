@@ -1,0 +1,435 @@
+{
+ "_doc": "Stories quotidiennes 06:00 de Pierre, 05/10 au 30/11/2026. Fond = VRAIE photo d'entraînement de la banque Drive (Sans titre-NN.jpg, dossier 1QQ1oOl9gE125-BrkTIvALFLjTqEuVWKb), recadrée 9:16, texte DA trois vies. Remplace les cartes sur fond uni jugées fades par Maxime le 05/10. Rendu : scripts/pierre-story-photo-v2.py.",
+ "cartes": [
+  {
+   "cle": "lun",
+   "jour": "Monday",
+   "facette": "EXECUTIVE",
+   "titre": "A new week starts **early.**",
+   "photos": [
+    15,
+    69,
+    22,
+    77,
+    24
+   ]
+  },
+  {
+   "cle": "mar",
+   "jour": "Tuesday",
+   "facette": "ATHLETE",
+   "titre": "Session done before the **day starts.**",
+   "photos": [
+    27,
+    54,
+    14,
+    70
+   ]
+  },
+  {
+   "cle": "mer",
+   "jour": "Wednesday",
+   "facette": "ATHLETE",
+   "titre": "The numbers tell me **where to work.**",
+   "photos": [
+    63,
+    21,
+    61,
+    64
+   ]
+  },
+  {
+   "cle": "jeu",
+   "jour": "Thursday",
+   "facette": "ATHLETE",
+   "titre": "One station **at a time.**",
+   "photos": [
+    67,
+    26,
+    49,
+    66
+   ]
+  },
+  {
+   "cle": "ven",
+   "jour": "Friday",
+   "facette": "EXECUTIVE",
+   "titre": "One more session before the **weekend.**",
+   "photos": [
+    56,
+    72,
+    16,
+    79
+   ]
+  },
+  {
+   "cle": "sam",
+   "jour": "Saturday",
+   "facette": "FATHER",
+   "titre": "Training, then **family time.**",
+   "photos": [
+    65,
+    68,
+    81,
+    34
+   ]
+  },
+  {
+   "cle": "dim",
+   "jour": "Sunday",
+   "facette": "FATHER",
+   "titre": "Recovery is part of **the plan.**",
+   "photos": [
+    33,
+    46,
+    13,
+    52
+   ]
+  }
+ ],
+ "calendrier": [
+  {
+   "date": "2026-10-05",
+   "cle": "lun",
+   "photo": 15,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bb1b453f-9040-477e-9ec2-61ecba4711f0.jpg"
+  },
+  {
+   "date": "2026-10-06",
+   "cle": "mar",
+   "photo": 27,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/17d140ee-6409-434b-a246-837d1e7e1c8d.jpg"
+  },
+  {
+   "date": "2026-10-07",
+   "cle": "mer",
+   "photo": 63,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7347c296-8358-4f4a-80b2-d4ba4edbfadb.jpg"
+  },
+  {
+   "date": "2026-10-08",
+   "cle": "jeu",
+   "photo": 67,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/98a6bb3e-3f7b-4fb3-9fba-cf0565242f75.jpg"
+  },
+  {
+   "date": "2026-10-09",
+   "cle": "ven",
+   "photo": 56,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/0afb7c30-1a15-4f5f-be2f-f0ee5f21d853.jpg"
+  },
+  {
+   "date": "2026-10-10",
+   "cle": "sam",
+   "photo": 68,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70143692-ba6b-4485-9184-42d700a2963c.jpg"
+  },
+  {
+   "date": "2026-10-11",
+   "cle": "dim",
+   "photo": 33,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c66e24c3-9ecf-4ed3-a480-1ff25e6d03cb.jpg"
+  },
+  {
+   "date": "2026-10-12",
+   "cle": "lun",
+   "photo": 24,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cf96d74d-a740-4ee9-b69a-7d4748b9f2ba.jpg"
+  },
+  {
+   "date": "2026-10-13",
+   "cle": "mar",
+   "photo": 54,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/98acaa78-86e9-4725-9457-5d310a940af1.jpg"
+  },
+  {
+   "date": "2026-10-14",
+   "cle": "mer",
+   "photo": 61,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/36f1762a-0832-4cf6-a816-a2e1416211c7.jpg"
+  },
+  {
+   "date": "2026-10-15",
+   "cle": "jeu",
+   "photo": 49,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/a5cd5a25-db9e-4bdf-b2b9-4cd1472aee30.jpg"
+  },
+  {
+   "date": "2026-10-16",
+   "cle": "ven",
+   "photo": 72,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/23e28990-0429-410c-8b48-e330d5408352.jpg"
+  },
+  {
+   "date": "2026-10-17",
+   "cle": "sam",
+   "photo": 34,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c2e6ad0e-7b90-426b-af77-4c575362ce33.jpg"
+  },
+  {
+   "date": "2026-10-18",
+   "cle": "dim",
+   "photo": 46,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70bd5faf-02ed-4bbe-9fba-7b19d6090ddc.jpg"
+  },
+  {
+   "date": "2026-10-19",
+   "cle": "lun",
+   "photo": 69,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/90a9ab82-6239-4ca9-b890-5b26843f265f.jpg"
+  },
+  {
+   "date": "2026-10-20",
+   "cle": "mar",
+   "photo": 14,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f2b32c97-edf1-4e7a-8d8e-c433d36beddf.jpg"
+  },
+  {
+   "date": "2026-10-21",
+   "cle": "mer",
+   "photo": 63,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7347c296-8358-4f4a-80b2-d4ba4edbfadb.jpg"
+  },
+  {
+   "date": "2026-10-22",
+   "cle": "jeu",
+   "photo": 66,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ba20bbf0-fb0a-4462-b32c-4d1417f742b3.jpg"
+  },
+  {
+   "date": "2026-10-23",
+   "cle": "ven",
+   "photo": 56,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/0afb7c30-1a15-4f5f-be2f-f0ee5f21d853.jpg"
+  },
+  {
+   "date": "2026-10-24",
+   "cle": "sam",
+   "photo": 68,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70143692-ba6b-4485-9184-42d700a2963c.jpg"
+  },
+  {
+   "date": "2026-10-25",
+   "cle": "dim",
+   "photo": 13,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/5142cbcf-44f2-48f9-bfce-1737a0df88f1.jpg"
+  },
+  {
+   "date": "2026-10-26",
+   "cle": "lun",
+   "photo": 77,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/5ada4857-ee9c-44fd-9498-3e850649472a.jpg"
+  },
+  {
+   "date": "2026-10-27",
+   "cle": "mar",
+   "photo": 70,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/974c17cc-2cf7-4387-8ffd-7335c019240a.jpg"
+  },
+  {
+   "date": "2026-10-28",
+   "cle": "mer",
+   "photo": 61,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/36f1762a-0832-4cf6-a816-a2e1416211c7.jpg"
+  },
+  {
+   "date": "2026-10-29",
+   "cle": "jeu",
+   "photo": 67,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/98a6bb3e-3f7b-4fb3-9fba-cf0565242f75.jpg"
+  },
+  {
+   "date": "2026-10-30",
+   "cle": "ven",
+   "photo": 72,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/23e28990-0429-410c-8b48-e330d5408352.jpg"
+  },
+  {
+   "date": "2026-10-31",
+   "cle": "sam",
+   "photo": 34,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c2e6ad0e-7b90-426b-af77-4c575362ce33.jpg"
+  },
+  {
+   "date": "2026-11-01",
+   "cle": "dim",
+   "photo": 52,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bb7cec51-d499-4589-ac35-ba8506b4eabe.jpg"
+  },
+  {
+   "date": "2026-11-02",
+   "cle": "lun",
+   "photo": 15,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bb1b453f-9040-477e-9ec2-61ecba4711f0.jpg"
+  },
+  {
+   "date": "2026-11-03",
+   "cle": "mar",
+   "photo": 27,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/17d140ee-6409-434b-a246-837d1e7e1c8d.jpg"
+  },
+  {
+   "date": "2026-11-04",
+   "cle": "mer",
+   "photo": 63,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7347c296-8358-4f4a-80b2-d4ba4edbfadb.jpg"
+  },
+  {
+   "date": "2026-11-05",
+   "cle": "jeu",
+   "photo": 49,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/a5cd5a25-db9e-4bdf-b2b9-4cd1472aee30.jpg"
+  },
+  {
+   "date": "2026-11-06",
+   "cle": "ven",
+   "photo": 56,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/0afb7c30-1a15-4f5f-be2f-f0ee5f21d853.jpg"
+  },
+  {
+   "date": "2026-11-07",
+   "cle": "sam",
+   "photo": 68,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70143692-ba6b-4485-9184-42d700a2963c.jpg"
+  },
+  {
+   "date": "2026-11-08",
+   "cle": "dim",
+   "photo": 33,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c66e24c3-9ecf-4ed3-a480-1ff25e6d03cb.jpg"
+  },
+  {
+   "date": "2026-11-09",
+   "cle": "lun",
+   "photo": 24,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cf96d74d-a740-4ee9-b69a-7d4748b9f2ba.jpg"
+  },
+  {
+   "date": "2026-11-10",
+   "cle": "mar",
+   "photo": 54,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/98acaa78-86e9-4725-9457-5d310a940af1.jpg"
+  },
+  {
+   "date": "2026-11-11",
+   "cle": "mer",
+   "photo": 61,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/36f1762a-0832-4cf6-a816-a2e1416211c7.jpg"
+  },
+  {
+   "date": "2026-11-12",
+   "cle": "jeu",
+   "photo": 66,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ba20bbf0-fb0a-4462-b32c-4d1417f742b3.jpg"
+  },
+  {
+   "date": "2026-11-13",
+   "cle": "ven",
+   "photo": 72,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/23e28990-0429-410c-8b48-e330d5408352.jpg"
+  },
+  {
+   "date": "2026-11-14",
+   "cle": "sam",
+   "photo": 34,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c2e6ad0e-7b90-426b-af77-4c575362ce33.jpg"
+  },
+  {
+   "date": "2026-11-15",
+   "cle": "dim",
+   "photo": 46,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70bd5faf-02ed-4bbe-9fba-7b19d6090ddc.jpg"
+  },
+  {
+   "date": "2026-11-16",
+   "cle": "lun",
+   "photo": 69,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/90a9ab82-6239-4ca9-b890-5b26843f265f.jpg"
+  },
+  {
+   "date": "2026-11-17",
+   "cle": "mar",
+   "photo": 14,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f2b32c97-edf1-4e7a-8d8e-c433d36beddf.jpg"
+  },
+  {
+   "date": "2026-11-18",
+   "cle": "mer",
+   "photo": 63,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7347c296-8358-4f4a-80b2-d4ba4edbfadb.jpg"
+  },
+  {
+   "date": "2026-11-19",
+   "cle": "jeu",
+   "photo": 67,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/98a6bb3e-3f7b-4fb3-9fba-cf0565242f75.jpg"
+  },
+  {
+   "date": "2026-11-20",
+   "cle": "ven",
+   "photo": 56,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/0afb7c30-1a15-4f5f-be2f-f0ee5f21d853.jpg"
+  },
+  {
+   "date": "2026-11-21",
+   "cle": "sam",
+   "photo": 68,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/70143692-ba6b-4485-9184-42d700a2963c.jpg"
+  },
+  {
+   "date": "2026-11-22",
+   "cle": "dim",
+   "photo": 13,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/5142cbcf-44f2-48f9-bfce-1737a0df88f1.jpg"
+  },
+  {
+   "date": "2026-11-23",
+   "cle": "lun",
+   "photo": 77,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/5ada4857-ee9c-44fd-9498-3e850649472a.jpg"
+  },
+  {
+   "date": "2026-11-24",
+   "cle": "mar",
+   "photo": 70,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/974c17cc-2cf7-4387-8ffd-7335c019240a.jpg"
+  },
+  {
+   "date": "2026-11-25",
+   "cle": "mer",
+   "photo": 61,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/36f1762a-0832-4cf6-a816-a2e1416211c7.jpg"
+  },
+  {
+   "date": "2026-11-26",
+   "cle": "jeu",
+   "photo": 49,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/a5cd5a25-db9e-4bdf-b2b9-4cd1472aee30.jpg"
+  },
+  {
+   "date": "2026-11-27",
+   "cle": "ven",
+   "photo": 72,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/23e28990-0429-410c-8b48-e330d5408352.jpg"
+  },
+  {
+   "date": "2026-11-28",
+   "cle": "sam",
+   "photo": 34,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c2e6ad0e-7b90-426b-af77-4c575362ce33.jpg"
+  },
+  {
+   "date": "2026-11-29",
+   "cle": "dim",
+   "photo": 52,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bb7cec51-d499-4589-ac35-ba8506b4eabe.jpg"
+  },
+  {
+   "date": "2026-11-30",
+   "cle": "lun",
+   "photo": 15,
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bb1b453f-9040-477e-9ec2-61ecba4711f0.jpg"
+  }
+ ],
+ "_a_completer": "8 visuels n'ont pas pu être hébergés le 05/10 (URL d'upload refusées) : lun-22, mer-21, mer-64, jeu-26, ven-16, ven-79, sam-65, sam-81. Le calendrier tourne pour l'instant sur 21 visuels ; les rajouter pour varier mercredi, vendredi et samedi."
+}

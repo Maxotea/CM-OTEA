@@ -19,7 +19,7 @@ sans sacrifier le reste. La DA suit ce texte :
 Usage :
     python3 pierre-carousel-v2.py SPEC.json DOSSIER_SORTIE [DOSSIER_POLICES]
 
-Le spec décrit les slides (voir carrousels/pierre-huiban/2026-10-*.json). Aucun
+Le spec décrit les slides (voir projets/pierre-huiban/carrousels-v2/2026-10-*.json). Aucun
 chiffre n'est calculé ici : tout ce qui est affiché vient du spec, et les specs
 ne contiennent que des valeurs relevées sur HYRESULT ou dites par Pierre.
 """

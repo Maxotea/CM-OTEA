@@ -43,14 +43,14 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
 ### Ce qui est dans Metricool (brouillons, vérifiés le 05/10)
 - 4 carrousels, mercredi 18:00 : 07/10 Rome station par station, 14/10 quatre
   courses avec Antoine, 21/10 trois vies, 28/10 Road to Hong Kong (Fitness Park,
-  appel aux partenaires). Specs dans `carrousels/pierre-huiban/2026-10-*.json`.
+  appel aux partenaires). Specs dans `projets/pierre-huiban/carrousels-v2/2026-10-*.json`.
 - 12 reels **sans vidéo** (06/10 au 01/11), légendes prêtes. Le montage revient à
   Maxime à partir des rushes de Rome ; plan clip par clip dans
   `plans/pierre-huiban/2026-10-reels.json`. À l'ajout de la vidéo, vérifier
   que le post passe bien en type Reel.
 - 57 stories 06:00 (05/10 au 30/11) sur vraies photos d'entraînement, 21
   visuels en rotation, libellés en anglais. Specs et calendrier appliqué :
-  `carrousels/pierre-huiban/stories-photos-v2.json`. 8 visuels prévus n'ont pas
+  `projets/pierre-huiban/carrousels-v2/stories-photos-v2.json`. 8 visuels prévus n'ont pas
   pu être hébergés (mercredi, vendredi, samedi tournent sur 2 photos) : à
   ajouter quand l'upload repasse.
 - Validation par Pierre : une feuille par semaine dans son dossier Drive
@@ -303,7 +303,7 @@ Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un
   stories de décembre ne sont pas créés : aucune vidéo de fond.
 - **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
   liens n'ont pas été envoyés, le courriel perso de Pierre manque.
-- **Corrigé le 13/10** (décision de Maxime) : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice » sur la slide 6 du carrousel du 14/10 (388353524 devenu 394964029) et dans la légende du reel du 18/10 (388353576 devenu 394964381, tableau du 12-10 mis à jour) ; « Four races with @antoine_bhna this season » est gardé (quatre courses dans `assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json`).
+- **Corrigé le 13/10** (décision de Maxime : « je ne sais pas, corrige ») : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice », sans la phrase de chute « Rome was one more » qui laissait croire à une troisième qualification. « this season » devient « this year » dans la légende, et le sur-titre de la slide 02 « THE SEASON » devient « 2026 » : Pierre compte Rome comme la course n° 1 d'une nouvelle saison (30/09), et HYROX classe Paris (23 au 26/04/2026) et Lyon (20 au 24/05/2026) en saison 25/26. Les quatre courses sont toutes en 2026. Carrousel du 14/10 : **395138284** (slides 02 et 06 re-rendues, spec `projets/pierre-huiban/carrousels-v2/2026-10-14-quatre-courses-avec-antoine.json`) ; reel du 18/10 : **395043919** (`instagramData.type` encore POST, à passer en REEL au branchement de la vidéo). Tableau du 12-10 mis à jour (_tech B10, B16, E10, E16 ; G6, G12 ; lien F6 vers une planche des 7 slides), `legende_modifiee` reste faux.
 - **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
   321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié
   lui-même.
