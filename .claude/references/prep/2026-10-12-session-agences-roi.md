@@ -86,32 +86,34 @@ confirmer.
 
 ## Les 25 décideurs avec coordonnées (FullEnrich, 12/10)
 
+Mail envoyé le 13/10 vers 12h aux 24 contacts qui ont une adresse (objet « Run on Investment · 10 000 entrepreneurs à La Défense en 2027 », lien vers le dossier Drive public : teaser + deck). Relance téléphone prévue jeudi 16/10.
+
 Tous les numéros sont des mobiles donnés actifs. Mails « vérifiés » sauf mention.
 
 | Prio | Nom | Agence | Mobile | Mail | Résultat |
 |---|---|---|---|---|---|
-| 1 | Vincent de Bary, Président | KENEO | 06 74 60 61 75 | vincent.debary@keneo.com |  |
-| 1 | Raphaël Marquenet, DG adjoint | Havas Play | 06 33 30 49 15 | raphael.marquenet@havasplay.com |  |
-| 1 | Florent Garrigoux, Dir. commercial et partenariats adjoint | A.S.O. | 06 20 91 61 40 | fgarrigoux@aso.fr (non vérifiable) |  |
-| 1 | Alexis Zabel, Managing Director France | Infront | 06 76 76 56 20 | alexis.zabel@infrontsports.com (probable) |  |
-| 1 | Maxime Lebessou, Deputy MD France | SPORTFIVE | 06 61 74 25 95 | maxime.lebessou@sportfive.com |  |
-| 1 | Guillaume Cossou, Co-CEO | Publicis Sport | 06 71 91 83 57 | guillaume.cossou@publicis.com (probable) |  |
-| 1 | Stéphane Halimi, Dir. développement commercial | egg events | 06 03 67 13 40 | stephane.halimi@egg-events.com |  |
-| 1 | Jean-François Royer, DG UniTeam, CEO Hopscotch Sport | UniTeam / Hopscotch Sport | 06 12 53 12 97 | jfroyer@hopscotchgroupe.com |  |
-| 1 | Arnaud Lacroix, DG | KCO Event | 06 78 67 72 64 | alacroix@pelhammedia.com (domaine du groupe) |  |
-| 1 | Julien Gaborieau, DG adjoint | OC Sport | 06 62 98 47 73 | julien.gaborieau@ocsport.com |  |
-| 2 | Muriel Perret, Dir. Hospitalité | Quarterback | 06 03 81 62 66 | perret@quarterback.fr |  |
-| 2 | Frédéric Delporte, Associé fondateur | Agence Spoutnik | 06 12 58 38 47 | fdelporte@agence-spoutnik.com |  |
-| 2 | Jean-Baptiste Calucci, DG | OLA (ex Deal4event) | 07 62 09 73 86 | jeanbaptiste@deal4event.com |  |
-| 2 | Vincent Bouteiller, Dir. développement | L'Uzyne | 06 21 17 91 97 | vbouteiller@luzyne.fr |  |
-| 2 | Gregory Sevault, CEO | MYCOMM | 06 99 17 10 15 | gsevault@mycomm.fr |  |
-| 2 | Pascal Perrinelle, DG | Agence Novabox | 06 07 26 98 72 | p.perrinelle@agencenovabox.com |  |
-| 2 | François Guyot, Dirigeant | Sport Market | 06 74 40 66 13 | fguyot@sportmarket.fr |  |
-| 2 | Roshan Soomarchun, Fondateur | LEAP Creative Studio | 06 62 38 12 31 | roshan.soomarchun@leapcreativestudio.com |  |
+| 1 | Vincent de Bary, Président | KENEO | 06 74 60 61 75 | vincent.debary@keneo.com || mail 13/10 |
+| 1 | Raphaël Marquenet, DG adjoint | Havas Play | 06 33 30 49 15 | raphael.marquenet@havasplay.com || mail 13/10 |
+| 1 | Florent Garrigoux, Dir. commercial et partenariats adjoint | A.S.O. | 06 20 91 61 40 | fgarrigoux@aso.fr (non vérifiable) || mail 13/10 |
+| 1 | Alexis Zabel, Managing Director France | Infront | 06 76 76 56 20 | alexis.zabel@infrontsports.com (probable) || mail 13/10 |
+| 1 | Maxime Lebessou, Deputy MD France | SPORTFIVE | 06 61 74 25 95 | maxime.lebessou@sportfive.com || mail 13/10 |
+| 1 | Guillaume Cossou, Co-CEO | Publicis Sport | 06 71 91 83 57 | guillaume.cossou@publicis.com (probable) || mail 13/10 |
+| 1 | Stéphane Halimi, Dir. développement commercial | egg events | 06 03 67 13 40 | stephane.halimi@egg-events.com || mail 13/10 |
+| 1 | Jean-François Royer, DG UniTeam, CEO Hopscotch Sport | UniTeam / Hopscotch Sport | 06 12 53 12 97 | jfroyer@hopscotchgroupe.com || mail 13/10 |
+| 1 | Arnaud Lacroix, DG | KCO Event | 06 78 67 72 64 | alacroix@pelhammedia.com (domaine du groupe) || mail 13/10 |
+| 1 | Julien Gaborieau, DG adjoint | OC Sport | 06 62 98 47 73 | julien.gaborieau@ocsport.com || mail 13/10 |
+| 2 | Muriel Perret, Dir. Hospitalité | Quarterback | 06 03 81 62 66 | perret@quarterback.fr || mail 13/10 |
+| 2 | Frédéric Delporte, Associé fondateur | Agence Spoutnik | 06 12 58 38 47 | fdelporte@agence-spoutnik.com || mail 13/10 |
+| 2 | Jean-Baptiste Calucci, DG | OLA (ex Deal4event) | 07 62 09 73 86 | jeanbaptiste@deal4event.com || mail 13/10 |
+| 2 | Vincent Bouteiller, Dir. développement | L'Uzyne | 06 21 17 91 97 | vbouteiller@luzyne.fr || mail 13/10 |
+| 2 | Gregory Sevault, CEO | MYCOMM | 06 99 17 10 15 | gsevault@mycomm.fr || mail 13/10 |
+| 2 | Pascal Perrinelle, DG | Agence Novabox | 06 07 26 98 72 | p.perrinelle@agencenovabox.com || mail 13/10 |
+| 2 | François Guyot, Dirigeant | Sport Market | 06 74 40 66 13 | fguyot@sportmarket.fr || mail 13/10 |
+| 2 | Roshan Soomarchun, Fondateur | LEAP Creative Studio | 06 62 38 12 31 | roshan.soomarchun@leapcreativestudio.com || mail 13/10 |
 | 2 | Nicolas Gleyze, Cofondateur, DG associé | Hypee | 06 67 29 20 92 | aucun trouvé |  |
-| 3 | Christophe Claret de Fleurieu, Président | Paris World Games | 06 85 10 10 86 | christophe@worldgamesevents.com |  |
-| 3 | Josselin Courtin, Directeur | Sport Premium | 07 86 83 31 51 | josselin.courtin@sportpremium.com |  |
-| 3 | Laurent Courbon [à confirmer], Fondateur | Carma (CarmaSport) | 06 17 96 77 40 | laurent.courbon@carmasport.com (probable) |  |
-| 3 | Sami Driss, DG | YOTTA Sports | 06 82 84 18 27 | s.driss@yottaxp.com (probable) |  |
-| 3 | Eloïse Laine, Dir. sport et événementiel | RP Events | 06 32 78 95 33 | eloise@rp-events.fr |  |
-| 3 | Julien Cossou, Président | FIT GROUP | 06 20 64 69 54 | julien.cossou@fitgroupsport.com |  |
+| 3 | Christophe Claret de Fleurieu, Président | Paris World Games | 06 85 10 10 86 | christophe@worldgamesevents.com || mail 13/10 |
+| 3 | Josselin Courtin, Directeur | Sport Premium | 07 86 83 31 51 | josselin.courtin@sportpremium.com || mail 13/10 |
+| 3 | Laurent Courbon [à confirmer], Fondateur | Carma (CarmaSport) | 06 17 96 77 40 | laurent.courbon@carmasport.com (probable) || mail 13/10 |
+| 3 | Sami Driss, DG | YOTTA Sports | 06 82 84 18 27 | s.driss@yottaxp.com (probable) || mail 13/10 |
+| 3 | Eloïse Laine, Dir. sport et événementiel | RP Events | 06 32 78 95 33 | eloise@rp-events.fr || mail 13/10 |
+| 3 | Julien Cossou, Président | FIT GROUP | 06 20 64 69 54 | julien.cossou@fitgroupsport.com || mail 13/10 |
