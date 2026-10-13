@@ -21,32 +21,33 @@
    "duree": 0.8,
    "ralenti": 4,
    "x": 0.78,
-   "pourquoi": "Carte 1 (hook « Four races. / Same partner. ») · A4 : Antoine (vert, chaîne) et le débardeur noir de dos, côte à côte, repartent à la fin du sled pull. Fenêtre calée pour contenir l'image vue à 26,88 s (x 0,78 contrôlé dessus) ; s'arrête avant D1 (27,0)."
+   "pourquoi": "Carte 1 (hook « Four races. / Same partner. ») · A4 : Antoine (vert, chaîne) et le débardeur noir de dos, côte à côte, repartent à la fin du sled pull. Fenêtre calée pour contenir l'image vue à 26,88 s (x 0,78 contrôlé dessus) ; s'arrête avant D1 (27,0). Étalonnage du 13/10 (18h) : exposition 1,3, médiane 27 à 31 et p95 138 à 152 à l'exposition par défaut, 40 à 45 et 173 à 182 à 1,3 (cibles de la référence : médiane 50 à 90, p95 160 à 255).",
+   "exposition": 1.3
   },
   {
    "clip": "7351",
    "debut": 10.0,
    "duree": 1.2,
    "ralenti": 4,
-   "x": 0.53,
-   "pourquoi": "Carte 2 (« I'm on the rope. / He's right behind me. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde face caméra, Antoine juste derrière lui. Images vues à 10,0 et 10,45 s : texte sur les mains et la corde, jamais sur un visage. Vérif. adverse 13/10 : sur l'essai réel, le cadre glisse ; à 10,475 s Pierre est dans la moitié droite et Antoine n'est plus qu'au bord droit. Regarder 10,6, 10,9 et 11,2 s avec ETAPE=voir ; si Antoine sort par la droite, passer x de 0,53 à 0,60.",
-   "statut": "à contrôler"
+   "x": 0.6,
+   "pourquoi": "Carte 2 (« I'm on the rope. / He's right behind me. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde face caméra, Antoine juste derrière lui. Vu le 13/10 à 18h (ETAPE=voir, 9 images de 10,0 à 11,19 s) : Pierre lâche la corde vers 10,6 s et Antoine la reprend ; à x 0,53 Antoine sortait par la droite à 10,6 et 10,75 s, passé à x 0,60 : les deux restent dans le cadre de 10,0 à 11,2 s, Pierre jamais coupé. Texte sur les jambes et la corde, jamais sur un visage."
   },
   {
-   "clip": "7345",
-   "debut": 9.2,
+   "clip": "7349",
+   "debut": 10.45,
    "duree": 1.3,
    "ralenti": 4,
-   "x": 0.45,
-   "pourquoi": "Carte 3 (« He takes the sled. / I catch my breath. ») · débardeur vert (Antoine) qui pousse le traîneau, de face (vu à 9,41 s ; A2 : dès 9 s c'est Antoine qui pousse)."
+   "x": 0.5,
+   "pourquoi": "Carte 3 (« He takes the sled. / I catch my breath. ») · Sled pull, plan large : Antoine (débardeur vert, chaîne) tire la corde au premier plan, Pierre (débardeur noir, brassard gris au bras droit) debout juste derrière lui, qui souffle, visage visible de 10,45 à 11,35 s. Remplace 7345 de 9,2 à 10,5 s (13/10, 18h) : ce plan montrait Antoine seul au traîneau sous « I catch my breath. », donc un « I » posé sur Antoine. Fenêtre arrêtée à 11,75 s : la caméra zoome et le point se perd à partir de 11,8 s. Texte sur les genoux, jamais sur un visage. Aucune seconde commune avec M2 (7349 de 18,0 à 19,02) ni avec la carte 8."
   },
   {
-   "clip": "7350",
-   "debut": 18.9,
+   "clip": "7346",
+   "debut": 5.7,
    "duree": 0.83,
    "ralenti": 4,
-   "x": 0.58,
-   "pourquoi": "Carte 4 (« He's got my back, / every metre. ») · A10 : profil net d'Antoine, chaîne, regard au loin. Recalé de 18,0 à 18,9 s et x de 0,85 à 0,58 : sur l'image vue (19,20 s), x 0,85 coupait le visage en deux ; à 0,58 le profil est entier, le texte passe sous le menton. Vérif. adverse 13/10 : sous l'ancien texte « I trust him », c'était Antoine à l'écran sous un « I ». Le texte a changé, le plan reste : le sujet de la phrase est Antoine, qui est à l'écran."
+   "x": 0.42,
+   "pourquoi": "Carte 4 (« He's got my back, / every metre. ») · Antoine (chaîne) en très gros plan, oreille et nuque, qui se détourne : le texte se pose sur le cou puis sur la nuque et la chaîne (« metre. » à 6,33 s), la tête sort par la droite à la fin. Remplace 7350 de 18,9 à 19,73 s (13/10, 18h) : vu image par image, le texte passait sur l'oreille et la joue avant 18,78 s et sur le menton puis la bouche d'Antoine qui baisse la tête dès 19,5 s ; la fenêtre propre (18,78 à 19,46 s) était trop courte pour la carte. Sujet de la phrase à l'écran, aucun « I ». Clip libre dans les cinq reels hors M3 carte 5 (13,55 s). Étalonnage : exposition 1,2 (médiane 25 à 50 et p95 76 à 151 par défaut, 34 à 68 et 102 à 175 à 1,2).",
+   "exposition": 1.2
   },
   {
    "clip": "7346",
@@ -54,15 +55,16 @@
    "duree": 0.92,
    "ralenti": 4,
    "x": 0.4,
-   "pourquoi": "Carte 5 (« But the best part / isn't the clock. ») · A9 : Antoine de dos, mains aux hanches, souffle (vu à 14,45 s, dans la fenêtre)."
+   "pourquoi": "Carte 5 (« But the best part / isn't the clock. ») · A9 : Antoine de dos, mains aux hanches, souffle (vu à 14,45 s, dans la fenêtre). Étalonnage du 13/10 (18h) : exposition 1,3, médiane 24 et p95 105 en fin de fenêtre (dos dans l'ombre) à l'exposition par défaut, 36 et 143 à 1,3 ; 65 et 214 au début (cibles de la référence : médiane 50 à 90, p95 160 à 255).",
+   "exposition": 1.3
   },
   {
    "clip": "7350",
    "debut": 34.45,
    "duree": 0.92,
    "ralenti": 4,
-   "x": 0.45,
-   "pourquoi": "Carte 6 (« It's looking up / and seeing him there. ») · Antoine de dos, le débardeur noir face à lui (vu à 34,56 s). Remplace A3 (7346 à 1,0 s) : sur l'image vue (2,06 s) le texte tombait sur le menton du gros plan flou. Fenêtre accolée à M2 (33,6 à 34,42), sans seconde commune."
+   "x": 0.52,
+   "pourquoi": "Carte 6 (« It's looking up / and seeing him there. ») · Antoine de dos, le débardeur noir face à lui (vu à 34,56 s). Remplace A3 (7346 à 1,0 s) : sur l'image vue (2,06 s) le texte tombait sur le menton du gros plan flou. Fenêtre accolée à M2 (33,6 à 34,42), sans seconde commune. Vu le 13/10 à 18h : x passé de 0,45 à 0,52, Antoine (penché à droite de 34,9 à 35,35 s) reste dans le cadre ; Pierre de dos, brassard gris visible."
   },
   {
    "clip": "7351",
@@ -78,7 +80,8 @@
    "duree": 1.1,
    "ralenti": 4,
    "x": 0.62,
-   "pourquoi": "Carte 8 (CTA « If you race doubles, / who's your partner? ») · A11 : débardeur noir accroupi à la corde, chargé, tête basse (vu à 17,14 s). Remplace 21,4 s : sur l'image vue (22,03 s) le texte touchait la tête du tireur et le visage d'Antoine penché derrière lui. Avant les replis de M1 (18,0)."
+   "pourquoi": "Carte 8 (CTA « If you race doubles, / who's your partner? ») · A11 : débardeur noir accroupi à la corde, chargé, tête basse (vu à 17,14 s). Remplace 21,4 s : sur l'image vue (22,03 s) le texte touchait la tête du tireur et le visage d'Antoine penché derrière lui. Avant les replis de M1 (18,0). Étalonnage du 13/10 (18h) : exposition 1,2, médiane 24 à 27 à l'exposition par défaut (fond de bâches noires), environ 35 et p95 185 à 1,2 (cibles de la référence : médiane 50 à 90, p95 160 à 255).",
+   "exposition": 1.2
   }
  ],
  "sous_titres": [
@@ -262,14 +265,22 @@
   "Vérif. 13/10 (copie mot pour mot du carrousel du 14/10, 388353524 « Four races with @antoine_bhna this season. Paris, Lyon, ... ») : 2e paragraphe réécrit. Le « fourth » proposé n'est pas repris : le dépôt ne date pas Paris et Lyon. Retenu : « Rome was the fastest of our four races together this season » (53:34 contre 54:42, 54:59 et 55:29, pierre-huiban_saison-2026_avec-antoine.json). Puis « this season » devient « this year » (13/10, 16h) : Pierre compte Rome comme course n° 1 d'une nouvelle saison (30/09), alors que les quatre courses sont toutes en 2026 (Paris du 23 au 26/04/2026 et Lyon du 20 au 24/05/2026 selon france.hyrox.com, Stockholm en juin, Rome le 26/09).",
   "Vérif. 13/10 (ponctuation) : « Thank you, Antoine, for every metre ».",
   "Note reel-lint recalculée par le vérificateur : 93 (Hook 18, Structure 20, Format 20, CTA 20, Preuve 15).",
-  "Vérif. adverse 13/10 : carte 4 « I trust him / with every metre. » posait un « I » sur un gros plan d'Antoine. Devenue « He's got my back, / every metre. », mot jaune « back, », +0,3 s après la virgule, bloc complet tenu 0,82 s. Même idée, sujet à l'écran."
+  "Vérif. adverse 13/10 : carte 4 « I trust him / with every metre. » posait un « I » sur un gros plan d'Antoine. Devenue « He's got my back, / every metre. », mot jaune « back, », +0,3 s après la virgule, bloc complet tenu 0,82 s. Même idée, sujet à l'écran.",
+  "Rendu du 13/10 (18h), carte 2 : vu de 10,0 à 11,19 s, Antoine sortait par la droite à 10,6 et 10,75 s avec x 0,53 : x passé à 0,60.",
+  "Rendu du 13/10 (18h), carte 3, plan changé, texte inchangé : 7345 de 9,2 à 10,5 s montrait Antoine seul au traîneau sous « I catch my breath. » (un « I » posé sur Antoine). Remplacé par 7349 de 10,45 à 11,75 s, x 0,5 : Antoine tire la corde au premier plan, Pierre (débardeur noir, brassard gris) debout derrière lui, qui souffle. 7351 après 11,2 s écarté (un passant flou masque tout le cadre dès 11,4 s), 7351 de 8,8 à 10,0 s écarté (Pierre flou).",
+  "Rendu du 13/10 (18h), carte 4, plan changé, texte inchangé : sur 7350 de 18,9 à 19,73 s, le texte passait sur le menton puis la bouche d'Antoine qui baisse la tête dès 19,5 s, et sur l'oreille et la joue avant 18,78 s. Remplacé par 7346 de 5,7 à 6,53 s, x 0,42 : nuque et oreille d'Antoine (chaîne), texte sur le cou puis la nuque.",
+  "Rendu du 13/10 (18h), carte 6 : x 0,45 → 0,52, Antoine (penché à droite) reste dans le cadre jusqu'à 35,35 s.",
+  "Rendu du 13/10 (18h), étalonnage : exposition 1,3 (cartes 1 et 5) et 1,2 (cartes 4 et 8), médianes remontées de 24 à 31 vers 33 à 65 (cible de la référence 50 à 90)."
  ],
- "_statut": "13/10/2026 14:50 UTC : spec corrigée après la vérification adverse (texte de la carte 4), NON RENDUE, et aucune maquette vidéo (seulement rendus/M3-R6-two-engines-maquette-cadrage.jpg et un essai de 2 s de la carte 2). Drive répond « Quota exceeded » aux téléchargements depuis 08:20 environ (encore à 14:45). Cadrage contrôlé sur les images déjà vues (une par fenêtre de rush) et sur l'essai de la carte 2 (7351, 10,0 à 10,5 s : N&B p1 3, p5 5, médiane 71, p95 181, contraste du texte 4,9, karaoké correct, aucun texte sur un visage). Quand Drive rouvre : ETAPE=voir (carte 2 à 10,6, 10,9 et 11,2 s), rendu avec le moteur corrigé, puis contrôle à 12 images (1080x1920, 25 i/s, 32 s, aucune piste audio).",
+ "_statut": "13/10/2026 18:45 UTC : RENDU sur les vrais rushes de Rome (Drive rouvert à 18:03). rendus/M3-R6-two-engines.mp4, 1080x1920, 25 i/s, 800 images = 32,00 s, aucune piste audio (-map 0:a échoue), noir et blanc (chroma 0 à 0,5), aucun carton. Variante d'habillage « tout en jaune » rendue à côté pour le choix de Maxime : rendus/M3-R6-two-engines-variante-tout-jaune.mp4 (\"mots_jaunes\": \"*\" sur chaque bloc, \"mot_en_cours\": false), mêmes plans, mêmes secondes. Contrôlé sur le rendu : planche de 12 images, première et dernière, et une image toutes les 0,4 s sur la bande de texte : texte jamais sur un visage, contraste 4,5 à 5,7 au pire pixel. Calage du 13/10 (étape voir) : carte 2 x 0,53 → 0,60 ; carte 3 remplacée (7345 → 7349) ; carte 4 remplacée (7350 → 7346) ; carte 6 x 0,45 → 0,52 ; exposition de la LUT relevée sur les cartes 1, 4, 5 et 8. Rien n'est branché dans Metricool.",
  "_choix": "Blanc cassé, mots clés en jaune et mot en cours en jaune (karaoké des reels voisins, demande du 13/10), comme M1 ; la couverture mesurée met tout en jaune : passer \"mots_jaunes\": \"*\" si Maxime préfère. Sortie de bloc en coupe sèche au changement de plan (REFERENCE.md §3). Cadence : 0,4 s par mot, +0,3 s après une virgule, +0,5 s après un point, bloc complet tenu 0,7 à 1,2 s.",
  "a_trancher": [
-  "Doublon de 7350 autour de 34,4 s : la carte 6 (34,45 à 35,37) touche la carte 9 de M2 (33,32 à 34,42), publié le 29/10. À trancher par Maxime, ou décaler l'une des deux cartes après lecture du rush.",
-  "Carte 8 (7349 de 16,6 à 17,7 s) : M2 prend désormais 7349 de 18,0 à 19,02 s, même plan large du sled pull, onze jours plus tard. Aucune seconde commune.",
-  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (karaoké des reels voisins de @rundadlift). La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
+  "Doublon de 7350 autour de 34,4 s : la carte 6 (34,45 à 35,37) touche la carte 9 de M2 (33,32 à 34,42), publiée le 29/10. À trancher par Maxime, ou décaler l'une des deux cartes.",
+  "7349 deux fois dans M3 : carte 3 (10,45 à 11,75, Antoine à la corde, Pierre derrière) et carte 8 (16,6 à 17,7, Pierre à la corde), même couloir du sled pull à 5 s d'écart. M2 prend 7349 de 18,0 à 19,02 s. Aucune seconde commune.",
+  "Carte 3 : Antoine est au premier plan, Pierre visible juste derrière lui (visage de 10,45 à 11,35 s, puis en partie caché par Antoine). Le « I » n'est plus posé sur Antoine seul ; si Maxime juge qu'Antoine y est encore « mis en avant », il n'existe pas dans les rushes lus de plan net où Pierre souffle seul pendant qu'Antoine tire.",
+  "Cartes 4 et 5 : deux plans d'Antoine de dos à la suite (nuque serrée, puis dos), tous deux tirés de 7346.",
+  "Habillage : karaoké blanc cassé et jaune (rendu principal) ou tout en jaune (variante rendue, comme la couverture mesurée). Choix de Maxime sur les deux vrais rendus.",
+  "Logos des sponsors de l'événement HYROX en arrière-plan (PUMA, MYPROTEIN, CENTR sur les disques du traîneau) : aucun n'est l'employeur de Pierre d'après le dépôt, qui ne le nomme pas. À confirmer d'un mot par Maxime.",
   "Musique : sortie muette, Maxime pose la valse au piano dans Instagram."
  ]
 }

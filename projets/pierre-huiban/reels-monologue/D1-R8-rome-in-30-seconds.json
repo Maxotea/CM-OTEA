@@ -17,11 +17,12 @@
  "plans": [
   {
    "clip": "7351",
-   "debut": 13.0,
+   "debut": 13.64,
    "duree": 0.5,
    "ralenti": 4,
-   "x": 0.47,
-   "pourquoi": "Carte 1 (hook « Rome in / 30 seconds. ») · A1 vu : Pierre (débardeur noir, brassard gris) tire la corde du sled pull face caméra, Antoine derrière. x 0,47 (sujet à 0,53 à 10 s, 0,45 à 14 s) ; le texte tombe sur les cuisses et la corde, jamais sur un visage."
+   "x": 0.46,
+   "pourquoi": "Carte 1 (hook « Rome in / 30 seconds. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde du sled pull face caméra, Antoine derrière lui. Étape voir du 13/10 (20:15 UTC) : l'ancienne fenêtre 13,0 à 13,5 s était COUVERTE par un passant flou devant l'objectif de 13,2 à 13,6 s (1,2 s de hook sur un dos flou) ; recalée à 13,64 s (fenêtre nette, visage de Pierre entre 0,2 et 0,45 H, texte sur les cuisses et la corde). Fin à 14,14 s, avant la carte 8 de M4 (14,22 s). Exposition 1,0 : médiane 58 à 77 hors bande.",
+   "exposition": 1.0
   },
   {
    "clip": "CARTON NOIR",
@@ -53,7 +54,8 @@
    "duree": 0.76,
    "ralenti": 2,
    "x": 0.46,
-   "pourquoi": "Carte 5 « SLED PUSH 2:10 » · A2 vu (4,03 s) : Pierre plié sur le traîneau, tête basse (chrono corrigé 13:02). x 0,46 : le traîneau sous le texte, la tête au-dessus."
+   "pourquoi": "Carte 5 « SLED PUSH 2:10 » · A2 vu (4,03 s) : Pierre plié sur le traîneau, tête basse (chrono corrigé 13:02). x 0,46 : le traîneau sous le texte, la tête au-dessus. Étape voir du 13/10 : tête basse de 0,41 à 0,72 H, texte sur le haut des disques juste sous la tête (aucun visage, la tête est vue de dessus) ; secondes inchangées ; finit à 4,86 s, avant la carte 3 de M4 (4,92 s). Exposition 1,7 (médiane 56 à 58, comme M2 et M4). Petit logo de marque sur le short (à confirmer par Maxime avec les autres logos).",
+   "exposition": 1.7
   },
   {
    "clip": "CARTON NOIR",
@@ -69,7 +71,8 @@
    "duree": 0.76,
    "ralenti": 2,
    "x": 0.3,
-   "pourquoi": "Carte 7 « SLED PULL 2:53 » · A8 vu : corde et baskets au ras du sol (18:19), sans visage ; le sujet glisse vers la gauche (x 0,42 à 9 s, 0,06 à 11,7 s), x 0,3 au milieu de la fenêtre. Montre la station, n'identifie personne."
+   "pourquoi": "Carte 7 « SLED PULL 2:53 » · A8 vu : corde et baskets au ras du sol (18:19), sans visage ; le sujet glisse vers la gauche (x 0,42 à 9 s, 0,06 à 11,7 s), x 0,3 au milieu de la fenêtre. Montre la station, n'identifie personne. Étape voir du 13/10 : basket, chaussette et corde, aucun visage ; inchangé. Exposition 1,6 (médiane 64 à 66). La basket porte un logo graphique de marque, sans nom lisible.",
+   "exposition": 1.6
   },
   {
    "clip": "CARTON NOIR",
@@ -85,7 +88,8 @@
    "duree": 0.76,
    "ralenti": 2,
    "x": 0.5,
-   "pourquoi": "Carte 9 « BURPEE BROAD / JUMPS 1:55 » · vu : vertical natif (rotation auto, déjà en 9:16, x sans effet), zone des burpees sous l'arche « BURPEES 04 » (25:08). Sombre."
+   "pourquoi": "Carte 9 « BURPEE BROAD / JUMPS 1:55 » · vu : vertical natif (rotation auto, déjà en 9:16, x sans effet), zone des burpees sous l'arche « BURPEES 04 » (25:08). Sombre. Étape voir du 13/10 : aucune personne identifiable, athlètes de la zone des burpees à mi-distance ; le bloc passe sur des dos et des têtes vues de dessus (visages tournés vers le sol), jamais sur un visage de face. Exposition 5,0 (médiane 0,9 : 8 à 11 ; 5,0 : 47 à 66).",
+   "exposition": 5.0
   },
   {
    "clip": "CARTON NOIR",
@@ -97,12 +101,13 @@
   },
   {
    "clip": "7362",
-   "debut": 3.2,
+   "debut": 3.78,
    "duree": 0.76,
    "ralenti": 2,
-   "x": 0.4,
-   "pourquoi": "Carte 11 « ROWING 4:00 » · B3 (vignette Drive : Pierre au rameur, brassard gris, 33:12). Début 3,2 (vérif. 13/10 : r01 prend 1,5 à 2,5 et 5,6 à 6,6). x 0,4 : sujet à 0,42 de la largeur sur la vignette. À caler à l'image.",
-   "condition": "Pierre (débardeur noir, brassard gris) dans le cadre, texte hors visage ; sinon CARTON NOIR de 1,52 s."
+   "x": 0.36,
+   "pourquoi": "Carte 11 « ROWING 4:00 » · B3 : Pierre au rameur (débardeur noir, brassard gris au bras droit, vu en couleur sur les images clés 0,98 à 4,82 s), 33:12. CONDITION REMPLIE à l'étape voir du 13/10 (20:10 UTC). Début 3,2 → 3,78 s, x 0,4 → 0,36 (2,95 à 3,65 s passe au CTA, carte 21) : tête baissée qui glisse vers la droite puis se relève, épaule et débardeur sous le texte, brassard gris visible de 4,25 à 4,54 s. Premier rendu du 13/10 à x 0,4 et 3,70 s : la joue de Pierre, tête baissée, passait à 30 à 70 px à droite de « 4:00 » ; à x 0,36 et 3,78 s, le menton reste au-dessus de 0,70 H et le texte est sur l'épaule et le cou. Fin à 4,54 s, avant le filé de 4,55 s. r01 prend 1,5 à 2,5 et 5,6 à 6,6 s : fenêtre libre. Très sombre (médiane 2 à 4 à l'exposition 0,9) : exposition 12 (médiane 38 à 55, noirs un peu relevés, p1 7 à 8). Petit logo de marque sur le débardeur, à confirmer par Maxime.",
+   "exposition": 12.0,
+   "condition_tranchee": "REMPLIE à l'étape voir du 13/10/2026 · Pierre (débardeur noir, brassard gris) dans le cadre, texte hors visage ; sinon CARTON NOIR de 1,52 s."
   },
   {
    "clip": "CARTON NOIR",
@@ -130,12 +135,13 @@
   },
   {
    "clip": "7372",
-   "debut": 4.0,
+   "debut": 4.7,
    "duree": 0.76,
    "ralenti": 2,
    "x": 0.5,
-   "pourquoi": "Carte 15 « SANDBAG LUNGES 2:17 » · à caler : vignette Drive = autre athlète torse nu.",
-   "condition": "Ne garder que si le débardeur noir à brassard gris est dans le cadre, sinon CARTON NOIR de 1,52 s."
+   "pourquoi": "Carte 15 « SANDBAG LUNGES 2:17 » · CONDITION REMPLIE à l'étape voir du 13/10 (20:15 UTC) : Pierre (débardeur noir, tatouage de l'avant-bras gauche, même visage que 7362) avance en fente vers l'objectif, le sac sur les épaules, Antoine (haut vert, chaîne) juste derrière lui. L'athlète torse nu de la vignette Drive passe DEVANT l'objectif de 4,0 à 4,6 s : début 4,0 → 4,70 s. Visage de Pierre entre 0,27 et 0,65 H, texte sur le torse et le sac. Exposition 3,0 (médiane 45 à 73). Logo de marque sur le short de Pierre, à confirmer par Maxime.",
+   "exposition": 3.0,
+   "condition_tranchee": "REMPLIE à l'étape voir du 13/10/2026 · Ne garder que si le débardeur noir à brassard gris est dans le cadre, sinon CARTON NOIR de 1,52 s."
   },
   {
    "clip": "CARTON NOIR",
@@ -147,30 +153,31 @@
   },
   {
    "clip": "7376",
-   "debut": 21.0,
+   "debut": 25.68,
    "duree": 0.76,
    "ralenti": 2,
-   "x": 0.5,
-   "pourquoi": "Carte 17 « WALL BALLS 3:22 » · noir et vert lancent, de dos (51:35). Début 21,0 (vérif. 13/10 : r01 prend 19,0 à 20,0).",
-   "condition": "Doute du binôme barbu : de dos, vérifier le brassard gris au bras droit ; sinon CARTON NOIR de 1,52 s."
+   "x": 0.46,
+   "pourquoi": "Carte 17 « WALL BALLS 3:22 » · CONDITION REMPLIE à l'étape voir du 13/10 (20:30 UTC) : Pierre de dos lance la balle, brassard gris au bras droit visible, Antoine (haut vert, chaîne) à côté de lui en attente. Fenêtre déplacée 21,0 → 25,6 s : de 21,0 à 21,8 s la nuque de Pierre est DANS la bande de texte (0,72 à 0,86 H) ; de 23,2 à 23,9 s la caméra part en filé ; de 25,0 à 25,5 s Pierre accroupi, tête dans la bande. À 25,60 s la tête remonte encore à 0,62 à 0,75 H (vu à l'étape voir) : début 25,68 s. De 25,68 à 26,44 s : tête entre 0,2 et 0,6 H, texte sur le dos ; la caméra commence à monter vers la cible à 26,4 s et la quitte à 26,5 s. Exposition 4,0 (médiane 48 à 61). r01 prend 19,0 à 20,0 s.",
+   "exposition": 4.0,
+   "condition_tranchee": "REMPLIE à l'étape voir du 13/10/2026 · Doute du binôme barbu : de dos, vérifier le brassard gris au bras droit ; sinon CARTON NOIR de 1,52 s."
   },
   {
-   "clip": "7377",
-   "debut": 82.0,
-   "duree": 0.5,
-   "ralenti": 4,
+   "clip": "CARTON NOIR",
+   "debut": 0,
+   "duree": 2.0,
+   "ralenti": 1,
    "x": 0.5,
-   "pourquoi": "Carte 18 « And then / the line. » · B10 à caler : dernières wall balls, arrivée vers 84 s du rush.",
-   "condition": "Doute du binôme barbu (logo en Z, brassard noir) : si ce n'est pas Pierre, CARTON NOIR de 2,0 s."
+   "pourquoi": "Carte 18 « And then / the line. » · CONDITION NON REMPLIE à l'étape voir du 13/10 (20:15 UTC), CARTON NOIR de 2.0 s comme la spec le prévoit. 7377 lu en images clés seules de 78,7 à 88,3 s : 78,7 s athlète torse nu tatoué ; 79,7 et 80,7 s le binôme barbu (logo en Z, brassard noir au bras gauche) et un haut vert aux wall balls, ce n'est pas Pierre ; 81,6 s filé ; 82,6 s un membre du staff au téléphone ; 83,5 s une nuque floue sous les projecteurs ; 84,5 à 88,3 s le plafond du hall. Aucune image de l'arrivée ni de Pierre et Antoine ensemble autour de 84 s. Ancien plan : 7377 de 82.0 à 82.5 s.",
+   "condition_tranchee": "Doute du binôme barbu (logo en Z, brassard noir) : si ce n'est pas Pierre, CARTON NOIR de 2,0 s."
   },
   {
-   "clip": "7377",
-   "debut": 84.4,
-   "duree": 0.6,
-   "ralenti": 4,
+   "clip": "CARTON NOIR",
+   "debut": 0,
+   "duree": 2.4,
+   "ralenti": 1,
    "x": 0.5,
-   "pourquoi": "Carte 19 « 53:34 with Antoine. » · B10 à caler : la ligne.",
-   "condition": "Si ce n'est pas Pierre et Antoine, CARTON NOIR de 2,4 s."
+   "pourquoi": "Carte 19 « 53:34 with Antoine. » · CONDITION NON REMPLIE à l'étape voir du 13/10 (20:15 UTC), CARTON NOIR de 2.4 s comme la spec le prévoit. 7377 lu en images clés seules de 78,7 à 88,3 s : 78,7 s athlète torse nu tatoué ; 79,7 et 80,7 s le binôme barbu (logo en Z, brassard noir au bras gauche) et un haut vert aux wall balls, ce n'est pas Pierre ; 81,6 s filé ; 82,6 s un membre du staff au téléphone ; 83,5 s une nuque floue sous les projecteurs ; 84,5 à 88,3 s le plafond du hall. Aucune image de l'arrivée ni de Pierre et Antoine ensemble autour de 84 s. Ancien plan : 7377 de 84.4 à 85.0 s.",
+   "condition_tranchee": "Si ce n'est pas Pierre et Antoine, CARTON NOIR de 2,4 s."
   },
   {
    "clip": "7350",
@@ -178,15 +185,17 @@
    "duree": 0.5,
    "ralenti": 4,
    "x": 0.78,
-   "pourquoi": "Carte 20 « First in our / age group. » · A4 vu (26,88 s) : Antoine (vert, chaîne) et le débardeur noir de dos, côte à côte. M3 s'arrête à 26,9 s."
+   "pourquoi": "Carte 20 « First in our / age group. » · A4 vu (26,88 s) : Antoine (vert, chaîne) et le débardeur noir de dos, côte à côte. M3 s'arrête à 26,9 s. Étape voir du 13/10 : dos d'Antoine (chaîne) au premier plan, Pierre (débardeur noir) derrière lui tête baissée ; texte sur le dos d'Antoine, le bloc n'a pas de « I ». Exposition 1,3 (médiane 49 à 59). Logo PUMA de l'événement en fond.",
+   "exposition": 1.3
   },
   {
-   "clip": "7351",
-   "debut": 13.5,
+   "clip": "7362",
+   "debut": 2.95,
    "duree": 0.7,
    "ralenti": 4,
-   "x": 0.46,
-   "pourquoi": "Carte 21 (CTA « Station by station, / it's on my profile. ») · A1 vu (14,45 s) : Pierre à la corde, face caméra ; suite du plan d'ouverture (13,0 à 13,5), seconde libre jusqu'à 14,2. Remplace A9 (Antoine sous « my profile », vérif. 13/10)."
+   "x": 0.4,
+   "pourquoi": "Carte 21 (CTA « Station by station, / it's on my profile. ») · B3 : Pierre au rameur (débardeur noir, brassard gris au bras droit), gros plan, le visage relevé qui REGARDE L'OBJECTIF de 3,15 à 3,25 s puis s'incline ; visage entre 0,0 et 0,5 H, texte sur le débardeur. Étape voir du 13/10 (20:35 UTC) : 7351 de 13,5 à 14,2 s (plan prévu) commençait sous un passant flou (jusqu'à 13,6 s) et la seule fenêtre nette qui reste, 13,64 à 14,14 s, sert au hook ; 7351 de 8,66 à 9,36 s est flou (mise au point qui cherche, vu au gros plan) ; 7351 de 4,8 à 5,8 et de 2,0 à 2,7 s met Antoine au premier plan (« my » interdit) ; 7372 de 8,7 à 9,5 s : Pierre passe flou devant l'objectif. Même rush que la carte 11 (3,70 à 4,46 s), sans seconde commune. r01 prend 1,5 à 2,5 s : libre. Exposition 12.",
+   "exposition": 12.0
   }
  ],
  "sous_titres": [
@@ -588,13 +597,16 @@
   "Vérif. 13/10 (facultatif, retenu) : « 1:55 » n'est plus seul sur sa ligne, carte 9 « BURPEE BROAD / JUMPS 1:55 ».",
   "Vérif. 13/10 (facultatif, retenu) : carte 18 « And then / the line. » au lieu de « And then / the clock stops. », qui répétait le hook de M1 deux jours plus tôt.",
   "Vérif. 13/10 (rythme) : les cartes de split ne s'allument plus d'un bloc : le libellé, puis le temps en jaune 0,2 s (cartes de run) ou 0,28 s (stations) plus tard. CTA complet dès 29,1 s et tenu jusqu'à la fin (0,9 s au lieu de 0,52 s).",
-  "Note reel-lint recalculée par le vérificateur : 87 (Hook 20, Structure 15, Format 20, CTA 12, Preuve 20)."
+  "Note reel-lint recalculée par le vérificateur : 87 (Hook 20, Structure 15, Format 20, CTA 12, Preuve 20).",
+  "Étape voir et rendu du 13/10 (20:10 à 20:45 UTC) : carte 1 (hook) 7351 de 13,0 → 13,64 s (passant flou devant l'objectif de 13,2 à 13,6 s) ; carte 11 7362 de 3,2 → 3,78 s, x 0,4 → 0,36 ; carte 15 7372 de 4,0 → 4,70 s (athlète torse nu devant l'objectif jusqu'à 4,6 s) ; carte 17 7376 de 21,0 → 25,68 s, x 0,5 → 0,46 (nuque de Pierre dans la bande à 21 s) ; cartes 18 et 19 en CARTON NOIR (7377 : aucune image de Pierre ni de l'arrivée de 78,7 à 88,3 s) ; carte 21 (CTA) 7351 de 13,5 s → 7362 de 2,95 s (passant flou, puis 7351 de 8,66 s flou) ; expositions posées plan par plan. Textes et légende inchangés."
  ],
  "_choix": "Deux tons comme M3 : libellés en blanc cassé, temps et mots clés en jaune ; karaoké (mot en cours en jaune) sur les cartes de texte seulement, pas sur les splits où il ferait clignoter le libellé. Variante tout en jaune de la couverture mesurée : \"mots_jaunes\": \"*\". Sortie de bloc en coupe sèche au changement de plan (REFERENCE.md §3), dernier bloc tenu jusqu'à la fin.",
- "_statut": "13/10/2026 13:00 UTC : spec prête, NON RENDUE depuis les rushes. Drive répond « Quota exceeded » à toute plage depuis 08:20 environ (encore à 13:00 UTC, une requête bornée toutes les 2 min de 12:11 à 13:00) (tous les MP4 du dossier PIERRE, et des fichiers étrangers au dossier : limite de Google sur l'adresse de sortie, levée annoncée sous 24 h). Ce qui est contrôlé : les 21 cartes passent les contrôles du moteur (largeur, deux lignes, chevauchement, tirets), les cartons noirs sont rendus par le moteur (nouvelle clé « CARTON NOIR »), et une MAQUETTE complète sur images fixes de repérage (rendus/D1-R8-rome-in-30-seconds-MAQUETTE.mp4 et sa planche) tient 30,00 s, 1080x1920, 25 i/s, aucune piste audio, coupes calées à l'image près sous les sous-titres, contraste du texte 4,6 à 13,7 au pire pixel sans voile. À faire quand Drive rouvre : rendus/_travail-D1/rendre_D1.sh (ETAPE=voir d'abord pour trancher les conditions de 7362, 7372, 7376 et 7377, puis le rendu et le contrôle). Mise à jour 14:50 UTC : vérification adverse passée sur les textes (16 splits, 53:34 et 1er des 35-39 conformes au JSON officiel) ; correctif de plage du moteur appliqué ; regroupement des runs à trancher (a_trancher). La MAQUETTE ne se montre pas comme un reel.",
+ "_statut": "RENDU le 13/10/2026 à 20:45 UTC sur les vrais rushes de Rome (rendus/D1-R8-rome-in-30-seconds.mp4, 30,00 s, 750 images, 1080x1920, 25 i/s, aucune piste audio : -map 0:a échoue). Drive : 71 requêtes par plages bornées, 590 Mo, aucun refus (images clés seules pour repérer 7362, 7372, 7376 et 7377, puis les seules fenêtres utiles ; blocs de 4 Mo complets versés au cache partagé). Étape voir : conditions de 7362, 7372 et 7376 REMPLIES (secondes recalées), 7377 NON REMPLIE (cartes 18 et 19 en CARTON NOIR de 2,0 et 2,4 s, comme la spec le prévoit) ; hook et CTA recalés (passant flou devant l'objectif sur 7351 de 13,2 à 13,6 s). Contrôlé sur le rendu : planche de 12 images, première et dernière, une image par suite de cartons et une par carte sur image, bande de texte toutes les 0,4 s : texte jamais sur un visage ; contraste du texte 4,5 à 13,8 au pire pixel ; cartons à 1/255 (médiane), 2/255 au plus (p99). Textes et légende inchangés. La MAQUETTE est périmée.",
  "a_trancher": [
-  "Vérif. adverse 13/10 (esprit de la référence) : 10 cartons noirs font 9,68 s sur 30 (32 % du reel), dont 3 d'affilée juste après le hook (2,0 à 4,88 s) ; jusqu'à 18,6 s de noir si les 4 plans conditionnels (7362, 7372, 7376, 7377) tombent. @rundadlift monte en images continues. Proposition à trancher par Maxime : regrouper les 8 runs en une seule carte « 8 KM 27:59 » (temps de course officiel, total des runs dans assets/hyrox/hyrox_pierre-huiban_rome_2026.json, déjà dans plans/pierre-huiban/2026-10-reels.json) posée sur un plan qui bouge, et garder les 8 stations : 8 cartons sur 10 disparaissent, mais le reel ne fait plus 30 s sans rallonger les stations, et le hook « Rome in / 30 seconds. » est à revoir. Au minimum, ne pas enchaîner 3 cartons après le hook ; aucun rush de Run 1, SkiErg ni Run 2 n'existe (7302 à 7344 absents du Drive), d'où la décision à Maxime.",
+  "PART DE NOIR, à trancher par Maxime sur le vrai rendu : 12 cartons noirs (10 prévus + les cartes 18 et 19, 7377 n'ayant aucune image de l'arrivée), 14,08 s sur 30,00 s, soit 46,9 % du reel (352 images sur 750, mesuré image par image sur le rendu, identique au calcul de la spec). Où il tombe : 2,00 à 4,88 s (2,88 s, Run 1, SkiErg, Run 2, juste après le hook) ; 6,40 à 7,28 s (Run 3) ; 8,80 à 9,68 s (Run 4) ; 11,20 à 12,08 s (Run 5) ; 13,60 à 16,88 s (3,28 s, Run 6, Farmers Carry, Run 7) ; 18,40 à 19,28 s (Run 8) ; 20,80 à 25,20 s (4,40 s, « And then / the line. » puis « 53:34 with Antoine. »). Entre 2,0 et 25,2 s, aucune image ne dure plus de 1,52 s ; la plus longue suite d'images est la fin (25,20 à 30,00 s, cartes 20 et 21). Avant l'étape voir : 10 cartons, 9,68 s (32,3 %). @rundadlift monte en images continues. Pistes : regrouper les 8 runs en une carte « 8 KM 27:59 » sur un plan qui bouge (8 cartons sur 12 disparaissent, le reel ne fait plus 30 s, hook à revoir) ; pour la carte 19, 7376 de 26,9 à 28,8 s montre Antoine de face et Pierre de dos aux wall balls (images clés vues en couleur, fenêtre NON lue, la tête de Pierre passe bas dans le cadre : à vérifier à l'étape voir) ; aucun rush de Run 1, SkiErg ni Run 2 (7302 à 7344 absents du Drive), aucun de l'arrivée.",
   "Les cartes de split ne restent que 0,72 s à l'écran : à rallonger si Maxime choisit le regroupement.",
-  "Cartons : depuis le correctif de plage du moteur (13/10), ils sortent noirs (1/255) et non plus gris foncé (17/255) après un plan FX3. La maquette ne montrait pas le défaut (plans tirés d'images fixes)."
+  "Répétitions : les cartes 11 (ROWING) et 21 (CTA) viennent du même gros plan de Pierre au rameur (7362, 3,78 à 4,54 s puis 2,95 à 3,65 s, sans seconde commune) ; le hook reprend le sled pull de 7351 (13,64 à 14,14 s), comme M2 (15,4 s), M3 (5,8 et 10,0 s) et M4 (2,0 et 14,22 s). Aucune autre fenêtre nette de Pierre seul n'existe dans les rushes lus pour le CTA à la première personne.",
+  "Logos à confirmer d'un mot par Maxime (le dépôt ne nomme pas l'employeur de Pierre) : disques CENTR (cartes 1 et 5), PUMA (carte 20), arche BURPEES et HYROX (carte 9), logo graphique de la basket (carte 7), petit logo de marque sur le short (cartes 5 et 15) et sur le débardeur de Pierre (cartes 11 et 21).",
+  "Carte 20 (« First in our / age group. ») : le dos d'Antoine au premier plan, Pierre derrière lui tête baissée ; pas de « I » dans le bloc. Carte 9 : athlètes anonymes de la zone des burpees, le bloc passe près de têtes vues de dessus (visages tournés vers le sol)."
  ]
 }
