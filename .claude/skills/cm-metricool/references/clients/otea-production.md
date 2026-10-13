@@ -65,3 +65,38 @@ Les prochains reels de ce compte reprennent les styles listés pour lui dans `..
 Maxime est le client de ce compte : « tu peux considérer que c'est validé à chaque fois, car c'est moi », puis choix explicite de la publication automatique. Plus de tableau de validation (le dossier « Validation hebdo — OTEA PRODUCTION » et ses tableaux du 12-10 et du 19-10 restent en place, sans usage). Le contenu est toujours créé en brouillon ; la relève GitHub (`validation_auto` dans `reviews/config.json`, PR #56) passe en publication les brouillons des 14 jours à venir qui passent les garde-fous : média présent, pas de placeholder, pas de tiret cadratin dans une légende, pas de note « À tourner », pas de visuel IA de juillet (`medias_retenus`).
 - 07/10 : tirets cadratins retirés des 14 légendes feed du 07/10 au 06/11, et « Les 3 questions à te poser » passé au vouvoiement (21/10). Nouveaux ids 390382088 à 390382469.
 - ⚠️ Visuels IA de juillet encore en place les 09/10 (« La cohérence visuelle ») et 16/10 (« Dernière ligne droite avant la Toussaint ») : bloqués tant qu'une vraie photo ne les remplace pas.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, pilotage, clôture).
+
+- **DA photo** : Orange et Noir, vouvoiement, vraies photos seulement (banque HOME SANFAUTE, manifeste
+  `photos/otea-production.json`). Carrousels « fond photo » rendus par `scripts/carrousel.py` (thème otea-production,
+  Inter Display en attendant une licence Forma DJR, Q5), logotype horizontal blanc versionné (Q6). Les visuels IA de
+  juillet sont tous remplacés (le 16/10 est 394461848, vraie photo 10).
+- **Stories** : une par jour à 10:00, Instagram et Facebook. Toutes muettes depuis le 13/10 : les vidéos mer, ven et
+  sam portaient une piste AAC, refaites en `-an` (mp4 18f768b2 mer, a6fad937 ven, 5333de1a sam ; 5 stories armées
+  recréées en brouillon puis réarmées par la relève de 14h02 : 394878015,
+  394878048, 394878083, 394878113, 394878134 ; 10 brouillons changés de média).
+  Samedi en DA plein cadre i2v du 24/10 au 28/11 (mp4 0889c651 ; 24/10 réarmé en 394877979, puis
+  394727280 à 394727345). Lun, mar, mer et jeu :
+  i2v refusés le 13/10 (visages qui dérivent, personne inventée, faux logo), l'ancienne story reste. Ven non animé
+  (plancher de 100 crédits), dim bloqué (photo 42 refusée deux fois). Aucune story en décembre.
+- **Feed** : carrousel A8 variante Noël au 28/10 12:00 (394672845, remplace le vœux 390382341, Q16). Décembre posé en
+  brouillon : 13 posts à 12:00, IG, FB, LinkedIn, 394836453 à 394837622 ; carrousels du mercredi A2 (02/12), A1
+  (09/12), A6 Wistia 47 % (16/12), A5 (23/12), A8 fenêtres 2027 (30/12) ; Connecter le 14/12 et le 25/12. Le 11/12
+  (394836543) et le 30/12 (394837622) restent bloqués par une ligne à confirmer : disponibilité de tournage du 06 au
+  22/02 et du 03 au 19/04, réponse attendue avant le 26/11. Le reel du 07/12 attend des rushes (sinon l'image part).
+- **Décisions de Maxime** : Q1 oui (Noël, 394180229 armé) ; Q2 « quelques jours » (394180259) ; Q5 Inter Display ;
+  Q6 logotype ; Q7 stories armées remplacées à partir du 19/10 (fait pour le samedi) ; Q8 plafond 187,5 crédits,
+  solde Higgsfield 100,25 le 13/10, plancher de 100 tenu ; Q15 pas de rattrapage du 12/10 ; Q16 oui (galette le 25/11,
+  A8 le 28/10). Q4 ne concerne pas ce compte : personne n'y est présenté comme Maxime.
+- **Chiffres (13/09 au 12/10)** : 81 abonnés Instagram, 0 publication feed depuis le 02/09 (chute mécanique de la
+  portée), LinkedIn 20 abonnés et 14 des 24 clics du trimestre sur 3 carrousels, Facebook 1 abonnée.
+- **Reste** : A4 SATIS 30/10 (390382368 : CTA neutre et photo 9ea5ec6b doublon du 23/10, avant le 16/10 12h) ;
+  02/11 (390382400) et 12/11 (394180718) reprennent mot pour mot des slides de l'A8 ; A5 « avant le 5 décembre »
+  (394180951, avant le 13/11) ; rotation 30 jours des 04, 12 et 18/11 ; carrousel LinkedIn en PDF impossible par
+  Zapier ; lien en bio vers un WordPress vierge ; stories de décembre ; ligne KPI d'octobre le 02/11. Proposé par la
+  lecture KPI, non appliqué : feed à 11:00 (LinkedIn 11h vaut 2 à 2,4 fois 12h).
+- **Publicité** : deux specs en brouillon, `campagnes/otea-production/2026-11-seminaires-janvier.json` et
+  `2026-12-vacances-hiver.json`. Rien n'est créé dans Meta.

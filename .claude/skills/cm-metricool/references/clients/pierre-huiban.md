@@ -286,3 +286,30 @@ partout · autoPublish:false partout · noMedia 0`.
 - **Planifiés (spec dans `carrousels/pierre-huiban/`)** : 12/08 A7 « Une semaine de prépa, vraiment » · 19/08 A2 « 5 erreurs qui te coûtent des minutes » · 26/08 A1 « Sled push : la station qui casse ta course » · 02/09 A5 « Quelle station bosser en priorité ».
 - **Ce que ça résout** : la fiche signalait que les posts « Swipez → » n'avaient qu'une photo de couverture, sans slides. Le format carrousel est désormais outillé — les anciens posts « Swipez » peuvent être repris avec ce moteur.
 - **Vigilance** : **tout le contenu technique doit être relu par Pierre avant publication** — c'est son expertise, pas la nôtre. Aucun chrono, aucune charge en kilos, aucune date de Mondiaux cités sans vérification. Aucun sponsor mentionné dans ces quatre carrousels : un carrousel sponsorisé exige les handles exacts, les règles de tag contractuelles et de vraies photos produit, tout cela encore manquant.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, décembre, clôture). Aucune question Q1 à
+Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un autre chantier.
+
+- **DA** : « trois vies » inchangée. Stories sur vraies photos ; jamais d'IA sur son visage
+  (`recaps/clients-config.json`), donc des stories vidéo tirées de vrais ralentis, et l'i2v seulement sur des photos
+  sans visage (47, 50, 51), si Maxime le confirme. La section « Carrousel hebdo » plus bas (Pitch Black, Rouge Sang)
+  est périmée.
+- **Feed** : les 8 posts de novembre en français (ancienne ligne, LFG) réécrits en anglais le 13/10 : 394698312
+  (04/11), 394698681 (07/11, « ask me anything »), 394698708, 394698738, 394698771, 394698790, 394698816, 394698840.
+  Décembre posé en brouillon : 7 posts, 394831234 (C1, 02/12), 394832053 (C2 partenaires), 394832080 (J-180, 12/12),
+  394832122 (C3 en version repli), 394832144 (C4), 394832169 (C5 bilan), 394832189 (31/12). Les 3 reels et les 31
+  stories de décembre ne sont pas créés : aucune vidéo de fond.
+- **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
+  liens n'ont pas été envoyés, le courriel perso de Pierre manque.
+- **À corriger avant validation** : 388353524 (14/10) dit « Four races with @antoine_bhna this season » et, slide 6,
+  « won several Pro Doubles races together », non documenté (ses mots : « won our age group in Rome », « 2 World
+  Championship qualifications ») ; même phrase dans le reel 388353576 (18/10).
+- **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
+  321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié
+  lui-même.
+- **Reste** : brief de tournage prêt (envoi par Maxime, tournage les 19 à 21/10 ou les 24 et 25/10) ; photos
+  Lightroom et rushes Rome 7302 à 7344 ; médias des posts de novembre (2:3 et doublons de stories, avant le 23/10) ;
+  11 stories qui répètent un visuel à moins de 28 jours ; calendrier de courses 2026-2027 ; compte Instagram de LE
+  PREWORKOUT. Son coach apparaît sous @leqiou_fit dans ses publications (la fiche dit « Quentin ») : à confirmer.

@@ -42,3 +42,31 @@ Les prochains reels de ce compte reprennent les styles listés pour lui dans `..
 Maxime est le client de ce compte : même règle qu'OTEA Production, `validation_auto` dans `reviews/config.json` (PR #56). Plus de tableau. Les brouillons des 14 jours à venir partent en publication automatique s'ils passent les garde-fous.
 - 07/10 : tirets cadratins retirés des posts du 09/10 et du 19/10 (nouveaux ids 390382826 et 390382868).
 - ⚠️ Les posts du 09/10 (marche caméra) et du 06/11 (cadrage) portent « 🎬 À tourner : … » dans la légende : bloqués tant que la vidéo n'est pas tournée et la note retirée.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
+
+- **DA photo** : Vert et Noir, voix « je », tutoiement. Même banque que OTEA Production (`photos/otea-filmakers.json`,
+  22 photos ouvertes au compte). Q4 ouverte (lequel est Maxime sur les photos) : aucun « je » sous une personne
+  visible, une personne n'apparaît que si elle n'est pas présentée comme « je ». Q3 : tout vécu non confirmé est
+  écrit au neutre.
+- **Stories** : lun, mer, ven à 10:00, Instagram seul (Q9). Mer (mp4 e5955e06) et ven (ac9af476) en i2v plein cadre,
+  muettes, sans personne, du 28/10 au 27/11 : 394728098 à 394728497 (10 stories). Le lundi est refusé (le softbox
+  bouge) et sa carte « Je commence par regarder la lumière » est à neutraliser. Aucune story en décembre.
+- **Feed** : carrousel A1 sans personne au 23/10 (394878177, armé) ; 26/10 neutralisé (394878203, armé) ; 28/10 neutralisé
+  (394868991, texte F01) ; les quatre posts « À tourner » sortis du blocage (06/11 394681603, 16/11 394681230, 23/11
+  394681256, 25/11 394681284) ; 11/11 394681208 et 30/11 394681306 au neutre. Décembre posé en brouillon : 14 posts
+  à 18:00, IG et TikTok, 394815812 à 394817242 ; cartes typographiques et une seule vraie photo (03, le 25/12), pour ne
+  pas reprendre une photo du feed OTEA de décembre. Trois reels à tourner (R1 04/12, R2 21/12, R3 01/01), une carte
+  de repli occupe chaque créneau.
+- **Décisions de Maxime** : Q3 (texte neutre), Q8 (22,5 crédits pour ce compte, dépensés), Q9 (stories lun, mer, ven
+  10:00 dès le 26/10). Q4 toujours ouverte.
+- **Chiffres (13/09 au 12/10)** : 3 800 abonnés Instagram (61 gagnés, 113 perdus). Les deux reels de sport (Rome
+  27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction (le post
+  du 12/10 y est parti), pas @oteafilmakers.
+- **Reste** : 30/10 383270198 (photo, avant le 16/10 6h30), 02/11 383270388 (photo, avant le 19/10), 04/11 383270407
+  (texte, avant le 21/10), 13/11 394182835 (photo 3d299617 commune avec OTEA, avant le 30/10), 18/11 383270536
+  (texte), 20/11 383270550 (photo), 27/11 383270617 (texte et photo, avant le 13/11) ; média du 28/10 (54df9acf,
+  doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11 ; tâche Mac (banque propre).
+  Après tout `bulk_replace_posts` sur ce compte, relire `tiktokData` : l'action le perd.

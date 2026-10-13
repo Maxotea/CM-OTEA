@@ -178,3 +178,32 @@ sources dans `scripts/roi-photo-habillage.py`.
 visuels du compte, pas seulement ceux de la vague en cours. La liste des
 9 visuels venait du script ; les deux visuels manquants venaient d'une vague
 antérieure qui n'était pas dans le script.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
+
+- **Décision Q10 (12/10)** : rien de ce qui n'est pas dans la fiche n'est publiable (app, Early Bird, 21,5 km,
+  septembre 2027, prix, jauge). Les 12 brouillons qui l'affirmaient ont été remplacés le 12/10.
+- **DA photo** : kit V2.1 posé par `finitions/roi/travail/rendu4.py` (habillage de `scripts/roi-photo-habillage.py`),
+  photos IA du manifeste `photos/run-on-invest.json` : b, g, j, k partout, f et l en 4:5 seulement, d, c, e, h écartées.
+  Jamais une personne identifiable, jamais un faux lettrage. Réserves : g (skyline) et k (arche) ne ressemblent pas à
+  La Défense ; l revient trop souvent.
+- **Feed** : tout est en brouillon, Instagram seul, plus rien sur LinkedIn. 19/10 : 383334471 (armé, IG et LinkedIn,
+  en-tête fantôme) remplacé le 13/10 par 394684571 en brouillon, même texte. 30/10, 09/11, 11/11, 20/11 refaits :
+  394685105, 394685139, 394685167, 394685194. Décembre posé en brouillon : 14 posts à 08:00 du 02/12 au 01/01,
+  394845511 à 394847210, dont 5 carrousels du mercredi ; le 14/12 est une image de repli (394846246) en attendant le
+  reel « zéro pitch » (88/100 à reel-lint).
+- **Stories** : 12:00, Instagram seul. Les 14 stories bloquantes remplacées par les cartes s2 à s10 (394685994 à
+  394687426), en JPG fixe : les 8 animations i2v prévues (60 crédits) ne sont pas faites, le solde est au plancher
+  de 100. Aucune story de décembre créée : elles ne se créeront qu'avec leur mp4 muet, jamais en JPG ni en zoompan.
+- **Décisions de Maxime** : Q10 (ci-dessus) ; Q12 oui, cocher « contenu IA » sur chaque visuel, pas encore fait
+  (`isAiGenerated` n'est pas exposé par les actions Zapier : connecteur Metricool officiel ou case cochée à la
+  validation) ; Q13 oui, 4 à 6 photos IA neuves, pas encore faites ; Q14 Artlist à réautoriser. Q11 ouverte, mais le
+  19/10 est déjà revenu en brouillon : s'il l'avait validé lui-même, il lui suffit de valider 394684571.
+- **Chiffres** : 25 abonnés, inchangés depuis le 30/08 ; aucun post n'a apporté d'abonné ; portée par post 18,2 en
+  P0 puis 8,0 en P1 (5 posts contre 12) ; 0 reel, 0 story publiée.
+- **Reste** : validation de Maxime dans l'interface (rien ne part sans lui) ; 383334008 publié le 12/10 sur IG et
+  LinkedIn (à garder, archiver ou supprimer) et les publications en ligne qui contredisent Q10 ; 394314653 (18/11,
+  « sort tout seul au 4e km ») à reprendre avant le 15/11 ; carrousel A4 non branché (394204763 toujours au 21/10) ;
+  7 libellés de stories avec un tiret cadratin ; registre publicitaire vide pour ce client.
