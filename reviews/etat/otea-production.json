@@ -121,6 +121,48 @@
       "type": "Post",
       "resultat": "publication programmée (version 394461848)",
       "post_id": 394461848
+    },
+    "2026-10-27T10:00:00|383262923": {
+      "quand": "2026-10-13T12:03:11",
+      "type": "Story",
+      "resultat": "publication programmée (version 394877956)",
+      "post_id": 394877956
+    },
+    "2026-10-24T10:00:00|394726897": {
+      "quand": "2026-10-13T12:03:13",
+      "type": "Story",
+      "resultat": "publication programmée (version 394877979)",
+      "post_id": 394877979
+    },
+    "2026-10-14T10:00:00|394867405": {
+      "quand": "2026-10-13T12:03:15",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878015)",
+      "post_id": 394878015
+    },
+    "2026-10-16T10:00:00|394867627": {
+      "quand": "2026-10-13T12:03:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878048)",
+      "post_id": 394878048
+    },
+    "2026-10-17T10:00:00|394867637": {
+      "quand": "2026-10-13T12:03:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878083)",
+      "post_id": 394878083
+    },
+    "2026-10-21T10:00:00|394867651": {
+      "quand": "2026-10-13T12:03:21",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878113)",
+      "post_id": 394878113
+    },
+    "2026-10-23T10:00:00|394867664": {
+      "quand": "2026-10-13T12:03:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878134)",
+      "post_id": 394878134
     }
   }
 }

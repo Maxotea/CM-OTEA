@@ -43,6 +43,18 @@
       "type": "Post",
       "resultat": "publication programmée (version 394461861)",
       "post_id": 394461861
+    },
+    "2026-10-23T18:00:00|394679335": {
+      "quand": "2026-10-13T12:03:25",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 394878177)",
+      "post_id": 394878177
+    },
+    "2026-10-26T18:00:00|394871080": {
+      "quand": "2026-10-13T12:03:27",
+      "type": "Post",
+      "resultat": "publication programmée (version 394878203)",
+      "post_id": 394878203
     }
   }
 }
