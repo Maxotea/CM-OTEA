@@ -86,7 +86,7 @@ confirmer.
 
 ## Les 25 décideurs avec coordonnées (FullEnrich, 12/10)
 
-Mail envoyé le 13/10 vers 12h aux 24 contacts qui ont une adresse (objet « Run on Investment · 10 000 entrepreneurs à La Défense en 2027 », lien vers le dossier Drive public : teaser + deck). Relance téléphone prévue jeudi 16/10.
+Mail envoyé le 13/10 vers 16h aux 24 contacts qui ont une adresse (objet « Run on Investment · 10 000 entrepreneurs à La Défense en 2027 », lien vers le dossier Drive public : teaser + deck). Relance téléphone prévue vendredi 16/10.
 
 Tous les numéros sont des mobiles donnés actifs. Mails « vérifiés » sauf mention.
 
