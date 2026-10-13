@@ -303,9 +303,7 @@ Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un
   stories de décembre ne sont pas créés : aucune vidéo de fond.
 - **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
   liens n'ont pas été envoyés, le courriel perso de Pierre manque.
-- **À corriger avant validation** : 388353524 (14/10) dit « Four races with @antoine_bhna this season » et, slide 6,
-  « won several Pro Doubles races together », non documenté (ses mots : « won our age group in Rome », « 2 World
-  Championship qualifications ») ; même phrase dans le reel 388353576 (18/10).
+- **Corrigé le 13/10** (décision de Maxime) : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice » sur la slide 6 du carrousel du 14/10 (388353524 devenu 394964029) et dans la légende du reel du 18/10 (388353576 devenu 394964381, tableau du 12-10 mis à jour) ; « Four races with @antoine_bhna this season » est gardé (quatre courses dans `assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json`).
 - **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
   321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié
   lui-même.
