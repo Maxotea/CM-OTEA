@@ -92,7 +92,10 @@ Gabarit monologue, clés propres (toutes facultatives sauf `sous_titres`) :
   des mots ; fondu d'entrée `fondu` (0,16 s, 4 images), sortie du bloc en
   `fondu_sortie` (0,16 s ; 0 = coupe sèche).
 - Image : `exposition` (LUT S-Log3 réécrite à cette exposition, globale ou par
-  plan ; sans elle, la LUT de `--lut`), `courbe` (courbe en S de `curves`, voir
+  plan ; sans elle, la LUT de `--lut`), `exposition_fin` et `rampe` (par plan :
+  rampe d'exposition de `exposition` à `exposition_fin`, linéaire sur `rampe`
+  [début, fin] en secondes du rush, tout le plan par défaut ; pour un plan qui
+  passe d'une zone sombre à une zone éclairée), `courbe` (courbe en S de `curves`, voir
   COURBE_NB ; "" = sans), `contraste`, `luminosite`, `gamma` (retouche `eq`,
   absente par défaut), `grain` (6, luminance seule), `flou_bouge` (nombre
   d'images de rush mélangées, 0 = sans ; global ou par plan). Contrôle :
@@ -890,11 +893,40 @@ def filtre_nb_monologue(courbe=COURBE_NB, contraste=None, luminosite=None, gamma
     return f + ",format=gray"
 
 
+def rampe_du_plan(p):
+    """(début, fin) de la rampe d'exposition en secondes du RUSH, ou None sans `exposition_fin`.
+    Par défaut la rampe couvre tout le plan ; elle doit tenir dans le plan."""
+    if p.get("exposition_fin") is None:
+        if p.get("rampe") is not None:
+            raise SystemExit(f"plan {p.get('clip')} : `rampe` sans `exposition_fin`")
+        return None
+    debut, fin = p["debut"], p["debut"] + p["duree"]
+    r0, r1 = p.get("rampe", (debut, fin))
+    if not (debut - 1e-6 <= r0 < r1 <= fin + 1e-6):
+        raise SystemExit(f"plan {p.get('clip')} : rampe {r0}-{r1} hors du plan {debut}-{fin:.2f} "
+                         "(secondes du rush, début < fin)")
+    return float(r0), float(r1)
+
+
 def plan(rush, debut, duree, x, ralenti, lut, nb, sortie, p_log=True, entree=(), grade=None,
-         flou_bouge=0):
+         flou_bouge=0, lut_fin=None, rampe=None):
+    """`lut_fin` et `rampe` (secondes du rush) : rampe d'exposition. Le plan est étalonné
+    par `lut` et par `lut_fin`, puis les deux images sont fondues image par image, poids 0
+    jusqu'à rampe[0], 1 dès rampe[1], linéaire entre les deux (un plan qui passe d'un fond
+    noir à une zone éclairée, M1-R7 carte 2, 14/10/2026)."""
     filtre = (f"setpts={ralenti}*PTS,"
               f"crop=ih*9/16:ih:(iw-ih*9/16)*{x}:0,"
               f"scale={W}:{H}:flags=lanczos,setsar=1,lut3d={lut}")
+    if lut_fin and grade and p_log is not False:
+        r0, r1 = rampe if rampe else (debut, debut + duree)
+        # T : temps de l'image dans le plan ralenti (0 à la première image). Le fondu se fait
+        # après `hue=s=0`, comme le premier filtre du N&B : les formats négociés restent ceux
+        # d'un plan sans rampe (à exposition égale, image identique, 8 ou 10 bits).
+        a, b = (r0 - debut) * ralenti, (r1 - debut) * ralenti
+        filtre = filtre.replace(
+            f",lut3d={lut}",
+            f",split[e0][e1];[e0]lut3d={lut},hue=s=0[l0];[e1]lut3d={lut_fin},hue=s=0[l1];"
+            f"[l0][l1]blend=all_expr='A+(B-A)*clip((T-{a:.4f})/{b - a:.4f}\\,0\\,1)'")
     if p_log is False:
         filtre = filtre.replace(f",lut3d={lut}", "")
     if flou_bouge and int(flou_bouge) > 1:
@@ -967,11 +999,14 @@ def _base_plans(spec, sources, lut, nb, grade=None):
             continue
         rush, entree = sources(p["clip"])
         expo = p.get("exposition", spec.get("exposition"))
+        rampe = rampe_du_plan(p)
         try:
             plan(rush, p["debut"], p["duree"], p.get("x", 0.5), p.get("ralenti", ralenti),
                  lut_exposee(lut, expo) if grade else lut, nb, m, p.get("slog3", True),
                  entree=entree, grade=grade,
-                 flou_bouge=p.get("flou_bouge", spec.get("flou_bouge", 0)) if grade else 0)
+                 flou_bouge=p.get("flou_bouge", spec.get("flou_bouge", 0)) if grade else 0,
+                 lut_fin=lut_exposee(lut, p["exposition_fin"]) if grade and rampe else None,
+                 rampe=rampe)
         except subprocess.CalledProcessError:
             relais = getattr(sources, "relais", None)
             if relais is not None and relais.erreur:

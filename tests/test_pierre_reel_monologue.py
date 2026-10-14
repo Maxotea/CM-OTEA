@@ -472,3 +472,50 @@ def test_police_du_depot_d_abord_pour_le_monologue(tmp_path):
     assert prr.fichier_police(str(tmp_path), "Fraunces-Regular.ttf").endswith("fonts/fraunces/Fraunces-Regular.ttf")
     with pytest.raises(SystemExit, match="introuvable"):
         prr.fichier_police(str(tmp_path), "Absente.ttf")
+
+
+def test_rampe_du_plan_controlee():
+    assert prr.rampe_du_plan({"clip": "7378", "debut": 1.6, "duree": 1.18}) is None
+    p = {"clip": "7378", "debut": 1.6, "duree": 1.18, "exposition": 65, "exposition_fin": 25}
+    assert prr.rampe_du_plan(p) == (1.6, pytest.approx(2.78))
+    assert prr.rampe_du_plan(dict(p, rampe=[2.15, 2.78])) == (2.15, 2.78)
+    with pytest.raises(SystemExit, match="hors du plan"):
+        prr.rampe_du_plan(dict(p, rampe=[2.15, 3.0]))
+    with pytest.raises(SystemExit, match="hors du plan"):
+        prr.rampe_du_plan(dict(p, rampe=[2.5, 2.2]))
+    with pytest.raises(SystemExit, match="sans `exposition_fin`"):
+        prr.rampe_du_plan({"clip": "7378", "debut": 1.6, "duree": 1.18, "rampe": [1.7, 2.0]})
+
+
+@avec_ffmpeg
+def test_rampe_d_exposition_sur_un_plan_log(tmp_path, monkeypatch):
+    """M1-R7 carte 2 (14/10/2026) : le plan passe d'un fond noir à la zone FINISH éclairée ;
+    une exposition unique laissait le début trop sombre ou brûlait la fin. Avec
+    `exposition_fin` et `rampe`, l'exposition reste celle de départ avant la rampe, finit à
+    `exposition_fin`, et passe progressivement de l'une à l'autre, sans rien changer d'autre."""
+    monkeypatch.chdir(tmp_path)
+    subprocess.run([FFMPEG, "-v", "error", "-y", "-f", "lavfi", "-i",
+                    "color=c=0x606060:size=1920x1080:rate=100", "-t", "1.2", "-pix_fmt", "yuv420p",
+                    "-c:v", "libx264", "-preset", "ultrafast",
+                    str(tmp_path / "FX3POST20260926_9997.MP4")], check=True)
+    lut = str(tmp_path / "slog3.cube")
+    prr.ecrire_lut(lut)
+
+    def medianes(nom, **cles):
+        spec = {"gabarit": "monologue", "sortie": nom, "ralenti": 4, "grain": 0,
+                "plans": [dict({"clip": "9997", "debut": 0.1, "duree": 0.5, "exposition": 1}, **cles)],
+                "sous_titres": [{"t": 0.2, "fin": 1.9, "lignes": ["Test"], "mots_jaunes": []}]}
+        assert prr.monter(spec, str(tmp_path), POLICES, lut) == 2.0
+        assert "Audio" not in _infos(tmp_path / nom)
+        # secondes du reel : rush 0,1 + t / 4 ; la rampe [0,3 ; 0,5] du rush tombe de 0,8 à 1,6 s
+        return [float(np.median(_image(tmp_path / nom, t)[:Y0 - 100])) for t in (0.1, 0.5, 1.0, 1.3, 1.7, 1.9)]
+
+    fixe = medianes("fixe.mp4")
+    fort = medianes("fort.mp4", exposition=8)
+    egale = medianes("egale.mp4", exposition_fin=1)
+    rampe = medianes("rampe.mp4", exposition_fin=8, rampe=[0.3, 0.5])
+    assert max(fixe) - min(fixe) < 2 and fort[0] > fixe[0] + 30          # le fond uni ne bouge pas
+    assert all(abs(e - f) < 1.5 for e, f in zip(egale, fixe))              # rampe neutre : image inchangée
+    assert abs(rampe[0] - fixe[0]) < 1.5 and abs(rampe[1] - fixe[1]) < 1.5  # avant 0,3 s du rush
+    assert fixe[2] + 5 < rampe[2] < rampe[3] < fort[3] - 5                 # pendant la rampe, progressive
+    assert abs(rampe[4] - fort[4]) < 1.5 and abs(rampe[5] - fort[5]) < 1.5  # après 0,5 s du rush

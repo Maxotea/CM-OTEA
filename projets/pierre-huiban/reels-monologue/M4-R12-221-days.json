@@ -16,13 +16,13 @@
  "fondu_sortie": 0,
  "plans": [
   {
-   "clip": "7363",
-   "debut": 19.42,
+   "clip": "7361",
+   "debut": 2.5,
    "duree": 0.77,
    "ralenti": 4,
-   "x": 0.36,
-   "exposition": 6.5,
-   "pourquoi": "Carte 1 (hook « 221 days / to Hong Kong. ») · B4 : gros plan de Pierre (débardeur noir) à la sortie des rameurs, regard bas qui remonte vers l'objectif en fin de carte, fond flou sans logo (même minute que la carte 5, où le brassard gris est visible). Étape voir et rendu 13/10 : menton entre 0,64 et 0,69 H, texte sur la poitrine, jamais sur le visage (bande vue toutes les 0,4 s). Remplace 7354 de 10,8 s (même appui au sol que la carte 4 de M2). 7359 (Pierre debout entre les rameurs, de 0,03 à 0,80 s, x 0,55, exposition 6,5, calé et vu) est ÉCARTÉ : le mot « amazon » des bannières du rowing s'y lit derrière Pierre une fois l'image exposée, et la fiche de Pierre interdit tout logo ou indice de l'employeur, que le dépôt ne nomme pas. Variante prête si Maxime confirme que ce n'est pas un indice."
+   "x": 0.45,
+   "exposition": 8.0,
+   "pourquoi": "Carte 1 (hook « 221 days / to Hong Kong. ») · v2 du 14/10 : Pierre assis au rameur après l'effort (brassard gris), la tête se relève, les yeux s'ouvrent dans l'objectif vers 2,62 s du rush (0,5 s du reel) et le regard tient jusqu'à 3,18 s (2,7 s du reel) ; Antoine debout derrière lui (torse et chaîne, visage hors cadre), aucun « I » sur la carte. Menton entre 0,55 et 0,65 H, texte sur le débardeur (bande vue toutes les 0,2 s sur le rendu) ; avant 2,48 s le menton est dans la bande. Comparaison demandée le 14/10 : entre 7359 (de 0,03 à 0,80 s, x 0,55) et le gros plan 7363 (de 19,42 à 20,19 s), le gros plan est le hook le plus fort (visage plein cadre, effort lisible, fond propre ; 7359 : regard caméra pendant 0,1 s du rush, avant le premier mot, puis yeux baissés sur sa gourde, visage d'un dixième de la hauteur, grandes lettres « amazon » floues sur la moitié du cadre). Mais ce gros plan est le seul plan des rushes où le regard de Pierre arrive dans l'objectif pile sur « what. » : il passe au CTA (carte 8). Au hook, 7361 bat les deux (regard caméra soutenu de 0,5 à 2,7 s du reel). 7359 passe en carte 4. Carte 6 au v1 (de 2,48 à 3,30 s)."
   },
   {
    "clip": "7351",
@@ -40,57 +40,57 @@
    "ralenti": 4,
    "x": 0.45,
    "exposition": 1.7,
-   "pourquoi": "Carte 3 (« Our weakest station: / the sled push. ») · A2 : Pierre plié sur le traîneau du sled push, tête au-dessus de la bande (images vues à 4,03 et 6,72 s, de part et d'autre de la fenêtre ; texte sur les disques du traîneau). À 1,34 s (fenêtre du script, 0,5 à 1,43) la tête est DANS la bande. Fenêtre libre entre D1 (4,1 à 4,86) et M2 (6,0 à 7,13). Exposition 1,7 (médiane simulée 58)."
+   "pourquoi": "Carte 3 (« Our weakest station: / the sled push. ») · A2 : Pierre plié sur le traîneau du sled push, tête au-dessus de la bande (images vues à 4,03 et 6,72 s, de part et d'autre de la fenêtre ; texte sur les disques du traîneau). À 1,34 s (fenêtre du script, 0,5 à 1,43) la tête est DANS la bande. Fenêtre libre entre D1 (4,1 à 4,86) et M2 (6,0 à 7,13). Exposition 1,7 (médiane simulée 58). Logo CENTR net, au centre, derrière le texte (disques du traîneau) : sponsor accepté le 14/10 ; pas facile à éviter, la pile de disques est le sujet du plan. Inchangé depuis le 13/10."
   },
   {
-   "clip": "7357",
-   "debut": 0.02,
+   "clip": "7359",
+   "debut": 0.08,
    "duree": 0.72,
    "ralenti": 4,
-   "x": 0.03,
-   "exposition": 2.5,
-   "pourquoi": "Carte 4 (« Too much time / between stations. ») · sortie de l'arche 04, Roxzone : l'arche 04 en haut à gauche au départ, puis panoramique filé vers la droite sur les athlètes de dos et le couloir du burpee broad jump. Aucun partenaire, aucun visage net sous le texte. Étape voir 13/10 : une spectatrice floue traverse de 0,26 à 0,44 s, visage AU-DESSUS du texte (0,59 à 0,69 H) ; le logo Red Bull entre dans le cadre dès 0,86 s, d'où la fin à 0,74 s."
-  },
-  {
-   "clip": "7363",
-   "debut": 13.51,
-   "duree": 0.7,
-   "ralenti": 4,
-   "x": 0.42,
+   "x": 0.55,
    "exposition": 6.5,
-   "pourquoi": "Carte 5 (« Same job, same family. ») · B4 : Pierre debout à la sortie des rameurs, plan moyen, brassard gris bien visible au bras droit, un juge à côté hors du texte, la caméra qui se rapproche ; fond flou, aucune bannière de marque derrière « Same job ». Texte sur le débardeur et le bras, tête entre 0,1 et 0,35 H. Début à 13,51 s (image clé 13,46). Remplace 7354 de 13,25 s (même plan au sol que la carte 5 de M2)."
-  },
-  {
-   "clip": "7361",
-   "debut": 2.48,
-   "duree": 0.82,
-   "ralenti": 4,
-   "x": 0.45,
-   "exposition": 8.0,
-   "pourquoi": "Carte 6 (« So November / is about the work. ») · B2 : Pierre assis au rameur (brassard gris), la tête qui se relève après l'effort, Antoine (haut vert, chaîne) debout derrière lui, visage hors cadre. Étape voir 13/10 : seule fenêtre du rush où la tête reste au-dessus de la bande (2,44 à 3,35 s) ; avant, tête basse dans la bande, après 3,4 s la tête retombe sous le texte ; 5,78 à 6,9 s menton à 0,68 à 0,75 H, écarté. Remplace 7348 de 7,3 s (même couloir que la carte 2 de M2)."
+   "pourquoi": "Carte 4 (« Too much time / between stations. ») · v2 du 14/10 : Pierre debout entre les rameurs (brassard gris), regard caméra au début, puis yeux baissés sur sa gourde souple qu'il ouvre (vu en couleur : une gourde, pas la montre) : une pause pour boire entre deux postes. Texte sur le débardeur noir, tête au-dessus de 0,45 H. Fond : bannières « amazon » et « concept2 » floues (logos du rowing acceptés le 14/10, amazon n'est pas l'employeur), aucun logo net sous le texte. Remplace 7357 (v1, de 0,02 à 0,74 s) : image entièrement floue de 9,36 à 10,0 s du reel (filé du panoramique, 0,03 à 0,19 s du rush) et emblème Red Bull du frigo à canettes dans le cadre de 11,70 à 12,20 s (0,615 à 0,74 s) ; 7357 n'a que 0,4 s nette avant le frigo (0,2 à 0,6 s, spectatrice floue au premier plan), trop court pour 2,88 s, et ses autres images (1,94 s, 3,86 s, 5,78 s) sont des visages inconnus ou une foule floue sous le texte."
   },
   {
    "clip": "7363",
    "debut": 14.47,
-   "duree": 0.73,
+   "duree": 0.7,
    "ralenti": 4,
    "x": 0.46,
    "exposition": 6.5,
-   "pourquoi": "Carte 7 (« One session / at a time. ») · B4 : suite de la même prise que la carte 5 (0,26 s plus tard), Pierre de profil serré qui regarde devant lui, fond flou ; texte sur l'épaule et la poitrine, menton vers 0,6 H. x 0,46 garde le nez dans le cadre jusqu'à 15,2 s. Écartés à l'étape voir : 7363 de 0 à 1 s (le visage descend dans la bande dès 0,5 s), 8,66 s (passant devant l'objectif puis flou), 16,34 et 17,30 s (menton dans la bande) ; 7359 après 2,9 s (Pierre boit puis se penche, tête dans la bande, et c'est Antoine de 5,78 à 14,42 s). Remplace 7348 de 3,6 s (même sled pull que M2)."
+   "pourquoi": "Carte 5 (« Same job, same family. ») · v2 : profil serré de Pierre qui regarde devant lui, fond flou. Carte 7 au v1 (de 14,47 à 15,20 s), échangée avec la carte 7 pour ne pas enchaîner deux plans moyens de Pierre debout après 7359. Ligne unique (encre de 0,733 à 0,766 H), barbe au plus bas vers 0,70 H : texte sur le cou et l'épaule, jamais sur le visage (bande vue toutes les 0,2 s sur le rendu)."
   },
   {
    "clip": "7351",
-   "debut": 14.22,
+   "debut": 9.95,
+   "duree": 0.82,
+   "ralenti": 4,
+   "x": 0.53,
+   "exposition": 1.2,
+   "pourquoi": "Carte 6 (« So November / is about the work. ») · v2 : fin du sled pull, Pierre (brassard gris) tire la corde face caméra puis se relève, un juge à lunettes à gauche, Antoine derrière au début ; texte sur le short et la corde. x 0,53 pour sortir du cadre l'athlète inconnu du couloir voisin (visage net à gauche dès 10,5 s à x 0,45 ; à 0,53 il ne reste que son épaule au bord). Fenêtre libre : M2 prend 7351 dès 15,4 s, M3 de 5,8 à 6,73 s, D1 de 13,64 à 14,1 s. Remplace 7361 (passé au hook)."
+  },
+  {
+   "clip": "7363",
+   "debut": 13.51,
+   "duree": 0.73,
+   "ralenti": 4,
+   "x": 0.42,
+   "exposition": 6.5,
+   "pourquoi": "Carte 7 (« One session / at a time. ») · v2 : Pierre debout à la sortie des rameurs, plan moyen, brassard gris bien visible, puis profil quand la caméra se rapproche ; texte sur le bras et le brassard, tête entre 0,1 et 0,35 H. Carte 5 au v1 (de 13,51 à 14,21 s), allongée de 0,03 s."
+  },
+  {
+   "clip": "7363",
+   "debut": 19.22,
    "duree": 1.15,
    "ralenti": 4,
-   "x": 0.45,
-   "exposition": 1.2,
-   "pourquoi": "Carte 8 (CTA « Chasing something too? / I'd love to hear what. ») · A1 : Pierre (débardeur noir, brassard gris) tire la corde face caméra, Antoine debout derrière (image vue à 14,45 s : texte sur les genoux et la corde). Carte à la 1re personne sur Pierre identifié. Remplace 7354 à 4,1 s : à 4,61 s la tête qui se relève est DANS la bande. Fenêtre libre entre D1 (13,5 à 14,2) et M2 (15,4)."
+   "x": 0.36,
+   "exposition": 6.5,
+   "pourquoi": "Carte 8 (CTA « Chasing something too? / I'd love to hear what. ») · v2 : gros plan de Pierre seul (hook du v1), regard bas puis qui monte dans l'objectif à 19,94 s du rush, soit sur « what. » (24,2 s du reel), et tient jusqu'à la dernière image ; menton entre 0,59 et 0,69 H, texte sur la poitrine. Remplace 7351 de 14,22 à 15,37 s, où le visage de Pierre était caché pendant « I'd love to hear what. » et où les disques CENTR montaient dans la bande dès 25,0 s. Essayé le 14/10 à x 0,35 et avec une fin vers 15,17 s : les disques sortent, mais la tête reste baissée derrière le bras de 14,5 à 15,2 s, un athlète inconnu entre à gauche, et avant 14,1 s c'est le hook de D1. Gros plan 7363 de 17,30 à 18,40 s lu le 14/10 : menton sur le texte, écarté."
   }
  ],
  "sous_titres": [
   {
-   "t": 0.4,
+   "t": 0.1,
    "fin": 3.08,
    "lignes": [
     "221 days",
@@ -100,11 +100,11 @@
     "221"
    ],
    "horodatages": [
+    0.1,
     0.4,
-    0.8,
-    1.35,
-    1.7,
-    2.05
+    0.85,
+    1.1,
+    1.35
    ],
    "_role": "Hook"
   },
@@ -246,8 +246,8 @@
  ],
  "duree": 25.8,
  "legende": "221 days to Hong Kong 🇭🇰\n\nRome is behind us. November is about the work: the sled push and the transitions.\n\nIf you're chasing something too, I'd love to hear what. Thank you for following the road. It means more than you think 🙏\n\n#hyrox #roadtohongkong #hyroxworldchampionships #hybridathlete",
- "note_lint": 88,
- "verdict_lint": "88/100 🟢",
+ "note_lint": 86,
+ "verdict_lint": "86/100 🟢",
  "corrections_lint": [
   "v1, carte 5 « Same 24 hours. » : chiffre hors dépôt, même banal (critère 5 : un chiffre hors dépôt est bloquant). Devenu « Same job, same family. ».",
   "v1, CTA « Thank you / for following the road. » : aucun geste demandé (critère 4 à 5). Remplacé par l'invitation, le merci reste en légende.",
@@ -261,18 +261,20 @@
   "Vérif. adverse 13/10 (inexact) : carte 2 « October was / about Rome. » : la course a eu lieu le 26/09/2026 (champ date de assets/hyrox/hyrox_pierre-huiban_rome_2026.json). Devenue « Rome is / behind us. », mot jaune « Rome » ; même correction dans la légende.",
   "Vérif. adverse 13/10 (anglais elliptique) : carte 3 « The sled push / was our weakest. » remplacée par la variante déjà notée « Our weakest station: / the sled push. », mot jaune « weakest ». Fait inchangé : Sled Push 51e sur 292, la station la plus mal classée.",
   "Vérif. adverse 13/10 : carte 4, 7346 à 10,3 s (Antoine seul, à l'arrêt, sous « Too much time ») remplacé par 7357 (sortie de l'arche 04, Roxzone), seconde à caler.",
-  "Recale 13/10 (point 2 de LIVRAISON, étape voir sur les rushes jamais lus, puis rendu) : carte 1 7354 → 7363 de 19,42 s (gros plan) ; carte 4 7357 calée à 0,02 s, x 0,03 ; carte 5 7354 → 7363 de 13,51 s (brassard visible) ; carte 6 7348 → 7361 de 2,48 s (au rameur, tête relevée) ; carte 7 7348 → 7363 de 14,47 s (profil) ; carte 2 x 0,42 → 0,36 (joue d'Antoine trop près du texte). 7359 écarté (bannières « amazon »). Expositions des plans de la zone du rowing 6,5 à 8 (médianes 45 à 76 hors bande). Textes et légende inchangés."
+  "Recale 13/10 (point 2 de LIVRAISON, étape voir sur les rushes jamais lus, puis rendu) : carte 1 7354 → 7363 de 19,42 s (gros plan) ; carte 4 7357 calée à 0,02 s, x 0,03 ; carte 5 7354 → 7363 de 13,51 s (brassard visible) ; carte 6 7348 → 7361 de 2,48 s (au rameur, tête relevée) ; carte 7 7348 → 7363 de 14,47 s (profil) ; carte 2 x 0,42 → 0,36 (joue d'Antoine trop près du texte). 7359 écarté (bannières « amazon »). Expositions des plans de la zone du rowing 6,5 à 8 (médianes 45 à 76 hors bande). Textes et légende inchangés.",
+  "Rendu v2 du 14/10 (contrôle du 13/10 : 83 mesuré sur le rendu v1, Hook 18, Structure 16, Format 20, CTA 15, Preuve 14). Textes inchangés. Hook : « 221 » à 0,1 s au lieu de 0,4 s, bloc complet à 1,51 s au lieu de 2,21 s (horodatages 0,1 · 0,4 · 0,85 · 1,1 · 1,35), sur Pierre dont le regard arrive dans l'objectif à 0,5 s. Carte 4 nette et lisible (pause pour boire entre deux postes) au lieu d'une foule floue ; carte 6 montre le travail (sled pull) ; CTA sur le visage de Pierre, regard caméra sur « what. ». Note mesurée sur le rendu v2 : 86 (Hook 19, Structure 17, Format 20, CTA 16, Preuve 14)."
  ],
- "a_tourner": "Rien d'indispensable. Facultatif : un plan de sled push à l'entraînement (P7 du batch de R9) rendrait « the work » visible en carte 6.",
+ "a_tourner": "Rien d'indispensable. Facultatif : un plan de sled push à l'entraînement (P7 du batch de R9) rendrait « the work » visible à l'entraînement en carte 6.",
  "a_trancher": [
-  "RENDU le 13/10/2026 à 20:00 UTC sur les vrais rushes (rendus/M4-R12-221-days.mp4, 25,80 s, 645 images, 1080x1920, 25 i/s, aucune piste audio). Contrôlé : planche de 12 images, première et dernière, bande du texte toutes les 0,4 s (65 images) : texte jamais sur un visage ; contraste du texte 4,5 à 7,8 au pire pixel ; aucun carton dans ce reel. La MAQUETTE est périmée.",
-  "Répétition avec M2 (jeu. 29/10) : RÉGLÉE pour les cartes 1, 5, 6 et 7 (recalées sur 7363 et 7361, jamais montés ailleurs) et la carte 4 (7357). Restent les deux fenêtres de 7351 : la carte 2 (sled pull à 2,0 s) et le CTA (14,22 à 15,37 s), qui touche le hook de M2 (7351 dès 15,4 s) et suit de près la carte 21 de D1 (13,5 à 14,2 s). À trancher par Maxime ; aucun plan des rushes lus ne montre Pierre seul, net et identifié pour un CTA à la première personne.",
-  "Variante du hook : 7359 de 0,03 à 0,80 s, x 0,55, exposition 6,5 (Pierre debout entre les rameurs, brassard visible), écartée pour les bannières « amazon » lisibles derrière lui. À remettre si Maxime confirme que ce sponsor n'a rien à voir avec l'employeur de Pierre.",
-  "Le rush 7363 fournit trois cartes (1, 5 et 7) ; les cartes 5 et 7 viennent de la même prise (13,51 à 14,21 s puis 14,47 à 15,20 s), l'une en plan moyen, l'autre en profil serré.",
-  "Carte 4 : panoramique filé dans la Roxzone ; une spectatrice floue traverse le cadre (9,4 à 10,8 s du reel), visage au-dessus du texte ; logo Red Bull laissé hors fenêtre (il entre à 0,86 s du rush).",
-  "Logos en fond : disques CENTR (cartes 3 et 8) et bannière PUMA partielle (carte 8), comme M2 et M3 ; aucun sur les cartes recalées. Maxime confirme d'un mot.",
-  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (karaoké des reels voisins de @rundadlift), comme M1, M2, M3 et D1. La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
+  "RENDU v2 le 14/10/2026 à 09:52 UTC sur les vrais rushes (rendus/M4-R12-221-days.mp4, md5 1f4b9800, 25,80 s, 645 images, 1080x1920, 25 i/s, aucune piste audio : -map 0:a échoue). Contrôlé : planche de 12 images, première et dernière, bande du texte toutes les 0,2 s (129 images, _travail-M4/controle-bande-v2/) : texte jamais sur un visage ; contraste du texte 4,5 à 4,6 au pire pixel (voile 0 à 0,15). Le rendu du 13/10 est gardé en -v1.mp4, à ne plus montrer ; la MAQUETTE est périmée.",
+  "Répétition avec M2 (jeu. 29/10) : aucune seconde commune. M4 garde deux fenêtres de 7351 (carte 2 de 2,0 à 2,63 s, carte 6 de 9,95 à 10,77 s), loin du hook de M2 (dès 15,4 s) ; le CTA ne touche plus 7351. 7359, 7361 et 7363 ne sont montés dans aucun autre reel.",
+  "Le rush 7363 fournit trois cartes : 5 et 7 (même prise, de 14,47 à 15,17 s puis de 13,51 à 14,24 s, montées dans l'ordre inverse) et 8 (gros plan de 19,22 à 20,37 s). Le hook et le CTA sont deux regards caméra de Pierre (7361 puis 7363).",
+  "Carte 4, correction : au v1, l'emblème Red Bull du frigo à canettes était DANS le cadre de 11,70 à 12,20 s (7357 de 0,615 à 0,74 s) ; la phrase « logo Red Bull laissé hors fenêtre » était fausse. Au v2, 7357 est retiré : plus aucun logo Red Bull dans le reel.",
+  "Antoine visible avec Pierre : carte 1 (torse et chaîne derrière lui, visage hors cadre) et début de la carte 6 ; aucune de ces deux cartes ne dit « I ». Le seul « I » (carte 8) est posé sur Pierre seul.",
+  "Personnes inconnues, aucune sous le texte : le juge à lunettes (cartes 2 et 6), l'épaule de l'athlète du couloir voisin au bord gauche (fin de la carte 6), le public flou (cartes 2, 4, 5 et 7).",
+  "Logos acceptés le 14/10 (sponsors, événement) : disques CENTR derrière le texte de la carte 3 (net, au centre, inchangé depuis le 13/10 : la pile de disques est le sujet du plan), bannières « amazon » et « concept2 » floues (carte 4), logo « O » blanc au bord droit (carte 6). Aucun Red Bull, aucun indice de l'employeur.",
+  "Habillage : karaoké blanc cassé et jaune, comme les reels voisins de Pierre (décision de Maxime du 14/10). La variante tout en jaune n'est plus produite.",
   "Musique : sortie muette, Maxime pose la valse au piano dans Instagram.",
-  "Identité : Pierre = débardeur noir, brassard gris au bras droit (vu en couleur sur 7359, 7361, 7363). Antoine = haut vert, chaîne. Le registre des rushes se trompait sur 7359 : Pierre de 0 à 3 s seulement, Antoine au premier plan de 5,78 à 14,42 s ; 7361 : Antoine au premier plan dès 12,5 s."
+  "Identité : Pierre = débardeur noir, brassard gris au bras droit (vu en couleur sur 7359, 7361, 7363). Antoine = haut vert, chaîne. 7359 de 0,6 à 0,8 s : Pierre ouvre une gourde souple, pas sa montre."
  ]
 }
