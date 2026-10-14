@@ -10,76 +10,83 @@
  "plans": [
   {
    "clip": "7377",
-   "debut": 80.0,
+   "debut": 79.5,
    "duree": 0.77,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 1, dernières wall balls avant la ligne (arrivée vers 84 s du rush, caméra en avance de 90 s). Vu le 13/10 sur deux images clés de 7377 : à 74 s, Pierre (débardeur noir, brassard gris au bras droit, x 0,45 environ) attend à la station ; à 78 s, un débardeur vert (Antoine probable) lance la balle, de dos. Le barbu au débardeur noir à logo Z est à gauche, c'est l'autre binôme. Caler la seconde et le x entre 78 et 84 s, hors 82,0 à 82,5 s (pris par D1). Pas de repli vu : le repli 7376 à 19,0 s est pris par D1 et r01."
+   "x": 0.53,
+   "statut": "vu",
+   "pourquoi": "Carte 1 « The clock stops / at 53:34. » (aucun « I »). Calé à l'étape voir du 13/10 (21:05 à 21:35 UTC) : dernières wall balls, l'écran de la station affiche 99 sur 100, Antoine (haut vert, chaîne, de dos) lance la 100e balle, Pierre (débardeur noir, brassard gris au bras droit, visible à 79,70 s en couleur) le regarde juste derrière, puis l'écran passe à GO à 80,20 s. x 0,50 → 0,53 au contrôle du rendu : le visage de Pierre reste à gauche du texte, à environ 100 px de « The » (1,8 à 3,0 s du reel), jamais dessous. Avant 79,5 s son visage est dans la bande ; à 81,0 s la caméra part en filé. Exposition 4,5 (médiane 57 à 98 hors bande).",
+   "exposition": 4.5
   },
   {
-   "clip": "7377",
-   "debut": 85.2,
+   "clip": "7378",
+   "debut": 2.12,
    "duree": 1.18,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 2, juste après la ligne. Rush non lu (quota Drive). Hors 84,4 à 85,0 s (pris par D1). Repli 7350 à 3,0 s retiré (couloirs de traîneaux sous un texte d'après la ligne, vérificateur 1) : sans image d'après la ligne, la carte ne se monte pas."
+   "x": 0.66,
+   "statut": "vu",
+   "pourquoi": "Carte 2 « For a few minutes, / no clock, no plan. » (aucun « I »). 7378 commence environ une minute après l'arrivée, dans la zone FINISH : l'animateur (débardeur gris HYROX, casquette Red Bull) serre la main de Pierre, puis zoom vers Antoine et le groupe. Début sombre (médiane 29 à 2,25 s malgré l'exposition 16), léger filé pendant le zoom vers 2,85 s. Un athlète accroupi passe sous la bande de 4,4 à 5,2 s du reel : cheveux à 70 px sous le texte, visage plus bas, jamais sous le texte. Début 2,2 → 2,12 s pour laisser la carte 3 commencer à 3,30 s.",
+   "exposition": 16
   },
   {
-   "clip": "7377",
-   "debut": 88.6,
+   "clip": "7378",
+   "debut": 3.3,
    "duree": 0.9,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 3 « Just Antoine and me », les deux après la ligne. Rush non lu. Repli 7350 (A4, de dos côte à côte au sled pull) retiré pour la même raison que la carte 2."
+   "x": 0.7,
+   "statut": "vu",
+   "pourquoi": "Carte 3 « Just Antoine and me, / completely empty. » Antoine seul de 3,30 à 3,6 s sous « Just Antoine », puis Pierre et Antoine côte à côte dès 3,66 s (« and me, » s'allume à 3,67 s du rush) ; Pierre s'essuie le visage avec son débardeur sous « empty. ». x 0,66 → 0,70 et 3,40 → 3,30 s au contrôle du rendu : le visage flou d'une spectatrice, au fond à gauche, arrivait au-dessus de « Just » après 4,2 s ; il reste désormais au bord gauche, loin du texte. Exposition 11.",
+   "exposition": 11
   },
   {
-   "clip": "7377",
-   "debut": 93.0,
+   "clip": "7378",
+   "debut": 10.45,
    "duree": 0.93,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 4 « Trying to take in », après la ligne, à la place de 7346 à 5,6 s (Antoine pendant le sled push, hors thème, vérificateur 1). Fin de 7377 (vers 9 à 14 s après la ligne) ou début de 7378."
-  },
-  {
-   "clip": "7379",
-   "debut": 2.0,
-   "duree": 2.88,
-   "ralenti": 1,
-   "slog3": false,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 5 « Everyone remembers the finish line. » 1080p 25p Rec.709, environ 5 min après l'arrivée : ralenti 1, pas de LUT. Vignette Drive : nuque et profil d'un débardeur vert (Antoine probable), fond CHAMPION. Repli 7346 à 9,6 s retiré (sled push), le repli du vérificateur 2 (7346 à 15,0 s) aussi, pour la même raison."
+   "x": 0.47,
+   "statut": "vu",
+   "pourquoi": "Carte 4 « Trying to take in / what we just did. » Pierre seul au premier plan, qui se retourne et regarde autour de lui, l'animateur de dos derrière ; texte sur l'épaule et le bras, visage entre 0,25 et 0,45 H. Exposition 7.",
+   "exposition": 7
   },
   {
    "clip": "7378",
-   "debut": 15.0,
+   "debut": 6.22,
    "duree": 0.72,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 6 « I remember what comes after. » : il faut Pierre (un « I »), après la ligne. 7378 couvre 54:40 à 55:15 au chrono (1 min après l'arrivée), vignette Drive très sombre : exposition à remonter. Repli d'identité seulement : 7345 à 5,0 s, x 0,45 (A2 vu, Pierre plié sur le traîneau, vérificateur 2), hors thème (sled push)."
-  },
-  {
-   "clip": "7351",
-   "debut": 11.9,
-   "duree": 1.03,
-   "ralenti": 4,
-   "x": 0.5,
+   "x": 0.45,
    "statut": "vu",
-   "pourquoi": "Carte 7 « This is what all the work is for. » A1 vu : Pierre tire la corde du sled pull face caméra, Antoine derrière lui. 11,9 à 12,93 s libre (M3 prend 10,0 à 11,2 et 14,2 à 15,13 ; M2 9,0 à 9,95 ; D1 13,0 à 13,5)."
+   "pourquoi": "Carte 5 « Everyone remembers / the finish line. » (aucun « I »). L'animateur serre Antoine dans ses bras, Pierre derrière eux ; les lettres FINISH entrent dans le cadre à 6,8 s, sur « line. ». Après 7,0 s, les visages d'Antoine et de l'animateur descendent dans la bande (écarté à l'étape voir). Plan changé, texte inchangé : remplace 7379 de 2,0 s (1080p 25p Rec.709, vitesse réelle, 5 min après l'arrivée : Antoine qui rit avec une athlète inconnue au premier plan). Exposition 5.",
+   "exposition": 5
   },
   {
    "clip": "7378",
-   "debut": 5.0,
+   "debut": 11.56,
+   "duree": 0.72,
+   "ralenti": 4,
+   "x": 0.47,
+   "statut": "vu",
+   "pourquoi": "Carte 6 « I remember / what comes after. » Pierre seul (visage, souffle), aucun Antoine dans le cadre ; un frigo de canettes en haut à gauche, sans logo lisible dans le recadrage. Exposition 6,5.",
+   "exposition": 6.5
+  },
+  {
+   "clip": "7378",
+   "debut": 8.72,
+   "duree": 1.03,
+   "ralenti": 4,
+   "x": 0.45,
+   "statut": "vu",
+   "pourquoi": "Carte 7 « This is what / all the work is for. » (aucun « I »). Plan changé, texte inchangé : 7351 de 11,9 à 12,93 s était FLOU (un passant devant l'objectif de 11,9 à 12,6 s, vu à l'étape voir) et c'était un couloir de traîneaux sous un texte d'après la ligne. Remplacé par 7378 : Pierre tape dans la main de l'animateur sous les lettres FINISH, puis lui pose la main dans le dos. Léger flou de bougé vers 9,4 s du rush. M1 n'utilise plus 7351. Exposition 5.",
+   "exposition": 5
+  },
+  {
+   "clip": "7378",
+   "debut": 12.4,
    "duree": 0.92,
    "ralenti": 4,
-   "x": 0.5,
-   "statut": "à caler",
-   "pourquoi": "Carte 8, question finale, après l'arrivée. Vignette Drive très sombre. Repli 7346 à 2,0 s retiré (pris par M2, et sled push)."
+   "x": 0.47,
+   "statut": "vu",
+   "pourquoi": "Carte 8, question finale « What's your favourite / part of race day? ». Pierre rit, la main sur l'épaule d'une athlète (inconnue) qui entre à gauche dès 13,0 s ; son visage reste au-dessus de 0,6 H, texte sur les avant-bras. Fond noir de la régie : exposition 20 (médiane 53 à 65 hors bande).",
+   "exposition": 20
   }
  ],
  "sous_titres": [
@@ -247,7 +254,8 @@
  "a_trancher": [
   "M1 affirme une scène vécue (les minutes après la ligne, « completely empty », « my favourite part ») écrite par nous le 05/10. Pierre doit la confirmer par écrit dans la feuille du 19-10, au même titre que la variante de M2.",
   "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (effet karaoké des reels voisins de @rundadlift). La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
-  "Musique : sortie muette, Maxime pose la valse au piano dans Instagram."
+  "Musique : sortie muette, Maxime pose la valse au piano dans Instagram.",
+  "Plans du rendu du 13/10 : l'animateur de l'arrivée (débardeur gris HYROX, casquette Red Bull) apparaît sur les cartes 2, 4, 5 et 7, et deux athlètes inconnues sur les cartes 3 (floue, au fond) et 8 (au premier plan, elle rit avec Pierre). Maxime confirme que ces personnes et la casquette Red Bull peuvent rester."
  ],
- "statut_rendu": "NON RENDU au 13/10/2026 12:42 UTC : Drive refuse toute plage (« Quota exceeded ») depuis 08:15 UTC, sur tous les rushes du dossier PIERRE. 7377 au-delà de 78 s, 7378 et 7379 n'ont pas pu être lus (seules deux images clés de 7377, à 74 et 78 s). Une MAQUETTE sur images fixes (rendus/M1-R7-after-the-line-MAQUETTE.mp4) montre les sous-titres ; ce n'est pas le rendu. Dès que Drive rouvre : rendus/_travail-M1/rendre_M1.sh reperage, caler plans.json sur les planches, puis rendre_M1.sh rendu."
+ "statut_rendu": "RENDU le 13/10/2026 à 21:37 UTC sur les vrais rushes de Rome (rendus/M1-R7-after-the-line.mp4, 28,68 s, 717 images, 1080x1920, 25 i/s, aucune piste audio : -map 0:a échoue). Drive : 86 requêtes par plages bornées, 693 Mo, aucun refus (images clés seules pour repérer 7377 de 88,5 à 98,5 s, 7378 et 7379, puis les seules fenêtres utiles ; blocs de 4 Mo complets versés au cache partagé). Étape voir : 7 plans calés sur 7377 (wall balls, 99 sur 100 puis GO) et 7378 (zone FINISH, une minute après l'arrivée) ; deux plans changés, textes inchangés : carte 5 (7379 → 7378) et carte 7 (7351, flou, → 7378). 7377 après 88 s montre l'écran des résultats sous une bannière « amazon » : écarté. Contrôlé sur le rendu : planche de 12 images, première et dernière, bande de texte image par image : texte jamais sur un visage ; contraste du texte 4,5 à 4,9 au pire pixel ; médianes hors bande 29 à 98 ; aucun carton. Textes et légende inchangés. La MAQUETTE est périmée."
 }
