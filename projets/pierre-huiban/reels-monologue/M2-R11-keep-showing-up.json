@@ -16,13 +16,13 @@
  "fondu_sortie": 0,
  "plans": [
   {
-   "clip": "7351",
-   "debut": 15.4,
+   "clip": "7362",
+   "debut": 2.83,
    "duree": 0.95,
    "ralenti": 4,
    "x": 0.45,
-   "exposition": 1.3,
-   "pourquoi": "Carte 1 (hook « 53:34 in Rome. / Then I'm Dad again. ») · A1, fin : Pierre (débardeur noir, brassard gris) tire la corde face caméra (même action vue à 14,45 s). Vérif. adverse 13/10 : l'ancien plan (7351 de 9,0 à 9,95 s) est FLOU, la mise au point cherche jusqu'à 9,9 s, avec une montée de caméra brusque au début ; dans A1, la seule fenêtre vue nette va de 9,9 à 10,5 s, prise par M3. Étape voir du 13/10 (19:00 UTC), sur le rush : nette de 15,4 à 16,35 s (variance du laplacien 50 à 66 sur Pierre, sans creux de mise au point ; 31 à 15,3 s), brassard gris visible au bras droit, visage entre 0,35 et 0,45 H, texte sur les disques du traîneau, Antoine debout derrière en haut à droite. Une seule fenêtre de 7351 dans M2 (cartes 1 et 8, 15,4 à 17,48 s). Touche le CTA de M4 (7351 de 14,22 à 15,37 s), trois jours plus tard : à régler avec la recale de M4."
+   "exposition": 12.0,
+   "pourquoi": "Carte 1 (hook « 53:34 in Rome. / Then I'm Dad again. ») · B3, rameur : gros plan de Pierre seul (débardeur noir ; le brassard n'est pas dans le cadre, le visage est celui des cartes 6 et 9), qui relève la tête et regarde vers l'objectif de 2,83 à 3,28 s (0 à 1,8 s du reel), puis la baisse ; derrière lui, seulement des mains sur des hanches, aucune tête dans le cadre. Second tour du 14/10 : l'ancien plan (7351 de 15,4 à 16,35 s) montrait net, en haut à gauche, l'officiel à lunettes qui regarde Pierre sous « Then I'm Dad again. » ; 7351 le garde à côté de Pierre de 7,7 à 17,5 s, aucune autre fenêtre de 7351 n'était propre. Vu avant le rendu (rendus/_travail-M2/tour2/voir1.jpg et v7362b.jpg) puis sur le rendu v2 toutes les 0,2 s : texte sur le débardeur, menton au-dessus de 0,70 H jusqu'à 3,3 s ; de 3,4 à 3,8 s, la tête baissée et floue de mouvement descend à la hauteur du texte, à droite de « Rome. » et de « again. » (environ 200 px d'écart), jamais dessous (rendus/_travail-M2/controle/tour2/c1-fin-menton.jpg). Netteté (variance du laplacien, boîte par défaut de nettete.py) 12,7 à 14,5 de 2,84 à 3,08 s (tête qui remonte, avant « 53:34 » à 0,4 s), puis 15,7 à 19,7 ; carte 6, jugée nette, 20 à 24. Exposition 12 (médiane hors bande 68 à 0,0 s, 41 à 1,41 s). Fenêtre lue par une requête Drive bornée (7362 de 1,94 à 2,90 s, 34 Mo) le 14/10. Aucune seconde commune avec M3 ni M4 ; même prise que la carte 7 de D1 (7362 de 3,78 à 4,42 s, 22/10), qui commence là où celle-ci finit, et que r01 (reels-dialogue, 7362 de 1,5 à 2,5 s et de 5,6 à 6,6 s)."
   },
   {
    "clip": "7348",
@@ -31,7 +31,7 @@
    "ralenti": 4,
    "x": 0.8,
    "exposition": 1.6,
-   "pourquoi": "Carte 2 (« He's my little boy. ») · A8 : baskets et cheville à la puce de chrono au ras du sol, marquage blanc, sans visage. Étape voir du 13/10 : de 6,0 à 6,35 s, un mollet au premier plan porte un short au nom et au logo d'une marque de sport LISIBLES : début décalé de 6,0 à 6,42 s, logo hors du cadre, fenêtre 6,42 à 7,57 s, x 0,8 (basket nette à 7,3 s). Elle touche la carte 6 de M4 (7348 de 7,3 à 8,12 s) sur 0,27 s de rush, carte que le point 2 de LIVRAISON.md prévoit déjà de recaler sur 7359, 7361 ou 7363. Exposition 1,6. Facultatif : P11 (chaussures de Pierre à côté d'une petite paire d'enfant) si le batch de R9 arrive avant le 23/10."
+   "pourquoi": "Carte 2 (« He's my little boy. ») · A8 : baskets et cheville à la puce de chrono au ras du sol, marquage blanc, sans visage. Étape voir du 13/10 : de 6,0 à 6,35 s, un mollet au premier plan porte un short au nom et au logo d'une marque de sport LISIBLES : début décalé de 6,0 à 6,42 s, logo hors du cadre, fenêtre 6,42 à 7,57 s, x 0,8 (basket nette à 7,3 s). Exposition 1,6. Plus aucun recouvrement : M4 n'utilise plus 7348 depuis son v2 du 14/10 (sa carte 6 est sur 7351 dès 9,95 s) ; D1 prend 7348 de 10,0 à 10,64 s. Facultatif : P11 (chaussures de Pierre à côté d'une petite paire d'enfant) si le batch de R9 arrive avant le 23/10."
   },
   {
    "clip": "7345",
@@ -40,7 +40,7 @@
    "ralenti": 4,
    "x": 0.5,
    "exposition": 1.7,
-   "pourquoi": "Carte 3 (« A team to lead / in three countries. ») · A2 : Pierre (débardeur noir) plié sur le traîneau du sled push, tête basse, il pousse : la charge. Image vue à 6,72 s, dans la fenêtre ; aperçu avec le texte : tête au-dessus de la bande, texte sur les disques. Exposition 1,7 (médiane 57). Fenêtre libre jusqu'à 7,5 s (A2 : Antoine pousse dès 9 s ; M3 prend 9,2). REMPLACE A5 (7354 à 0,8 s) : sur l'image vue à 1,54 s, une fois l'image remontée, le visage du débardeur noir en bas de burpee tombe sous « A team to lead »."
+   "pourquoi": "Carte 3 (« A team to lead / in three countries. ») · A2 : Pierre (débardeur noir) plié sur le traîneau du sled push, tête basse, il pousse : la charge. Image vue à 6,72 s, dans la fenêtre ; aperçu avec le texte : tête au-dessus de la bande, texte sur les disques. Exposition 1,7 (médiane 57). REMPLACE A5 (7354 à 0,8 s) : sur l'image vue à 1,54 s, une fois l'image remontée, le visage du débardeur noir en bas de burpee tombe sous « A team to lead ». 7345 ailleurs, sans seconde commune : D1 de 4,1 à 4,74 s, M4 de 4,92 à 5,85 s (même prise, sa carte 3, trois jours plus tard)."
   },
   {
    "clip": "7354",
@@ -49,7 +49,7 @@
    "ralenti": 4,
    "x": 0.53,
    "exposition": 6.5,
-   "pourquoi": "Carte 4 (« Some sessions / are average. ») · A6 : même plan au sol, débardeur noir face caméra, brassard gris VISIBLE au bras droit (Pierre), d'abord debout plié, puis en appui sur les mains. Étape voir du 13/10 : de 10,3 à 10,42 s, le visage descend en bas de burpee et la bouche puis le menton passent sous « Some sessions » : fenêtre avancée de 9,8 à 9,63 s (image clé 9,62), elle finit à 10,25 s, menton au-dessus de 0,69 H, texte sur les genoux puis le buste. Antoine (chaîne) debout derrière dès 10,0 s : la phrase n'a pas de « I ». Exposition 6,5, fond de hall en contre-jour. Fenêtre libre (M4 prend 10,8 à 11,57)."
+   "pourquoi": "Carte 4 (« Some sessions / are average. ») · A6 : même plan au sol, débardeur noir face caméra, brassard gris VISIBLE au bras droit (Pierre), d'abord debout plié, puis en appui sur les mains. Étape voir du 13/10 : de 10,3 à 10,42 s, le visage descend en bas de burpee et la bouche puis le menton passent sous « Some sessions » : fenêtre avancée de 9,8 à 9,63 s (image clé 9,62), elle finit à 10,25 s, menton au-dessus de 0,69 H, texte sur les genoux puis le buste. Antoine (chaîne) debout derrière dès 10,0 s : la phrase n'a pas de « I ». Exposition 6,5, fond de hall en contre-jour. Aucune autre spec n'utilise 7354."
   },
   {
    "clip": "7354",
@@ -58,7 +58,7 @@
    "ralenti": 4,
    "x": 0.9,
    "exposition": 4.0,
-   "pourquoi": "Carte 5 (« They still count. ») · A7 : plan au ras du sol, baskets et chevilles qui passent devant l'objectif, aucun visage (image vue à 13,82 s ; aperçu avec le texte à x 0,9 : texte au niveau des baskets). Suite du plan de M4 (13,3 à 14,0), sans seconde commune. Très sombre (médiane 5 à 0,9) : exposition 4,0, médiane basse assumée (sol noir), à recaler sur le rendu. REMPLACE 7345 à 3,5 s, passé en carte 3 sous une autre seconde : deux plans du même traîneau à deux cartes d'écart. Étape voir du 13/10 : de 14,0 à 14,53 s, baskets floues qui passent au ras de l'objectif, barrières et bannières de l'événement en fond (lettres « HY »), aucune personne identifiable, aucun visage. Inchangé."
+   "pourquoi": "Carte 5 (« They still count. ») · A7 : plan au ras du sol, baskets et chevilles qui passent devant l'objectif, aucun visage (image vue à 13,82 s ; aperçu avec le texte à x 0,9 : texte au niveau des baskets). Très sombre (médiane 5 à 0,9) : exposition 4,0, médiane basse assumée (sol noir, 30 sur le rendu). REMPLACE 7345 à 3,5 s, passé en carte 3 sous une autre seconde : deux plans du même traîneau à deux cartes d'écart. Étape voir du 13/10 : de 14,0 à 14,53 s, baskets floues qui passent au ras de l'objectif, barrières et bannières de l'événement en fond (lettres « HY »), aucune personne identifiable, aucun visage. Aucune autre spec n'utilise 7354 (M4 l'a quitté à son v2)."
   },
   {
    "clip": "7349",
@@ -66,7 +66,7 @@
    "duree": 1.02,
    "ralenti": 4,
    "x": 0.54,
-   "pourquoi": "Carte 6 (« So why do it / with so little time? ») · A11 : sled pull en plan large, débardeur noir accroupi à la corde, foule (images vues à 17,14 et 22,03 s, de part et d'autre de la fenêtre). Vérif. adverse 13/10 : l'ancien plan (7346 à 2,0 s, A3) remplissait l'image d'un gros plan flou de visage pendant 3,9 s, le texte sur le bas du visage. La phrase n'a pas de « I ». Étape voir du 13/10 : à x 0,54 c'est un plan SERRÉ de Pierre accroupi à la corde (brassard gris au bras droit), visage entre 0,3 et 0,45 H, texte sur les genoux et la corde, aucune tête dans la bande de 18,0 à 19,02 s ; Antoine (chaîne) debout derrière dès 18,7 s. Secondes inchangées. Exposition 1,7 ajoutée au rendu du 13/10 : sans exposition, médiane 26 à 32 hors bande de texte (cible 50 à 90) ; à 1,7, médiane 51 à 63, rien de brûlé. Fenêtre libre : M3 prend 16,6 à 17,7 s.",
+   "pourquoi": "Carte 6 (« So why do it / with so little time? ») · A11 : sled pull en plan large, débardeur noir accroupi à la corde, foule (images vues à 17,14 et 22,03 s, de part et d'autre de la fenêtre). Vérif. adverse 13/10 : l'ancien plan (7346 à 2,0 s, A3) remplissait l'image d'un gros plan flou de visage pendant 3,9 s, le texte sur le bas du visage. La phrase n'a pas de « I ». Étape voir du 13/10 : à x 0,54 c'est un plan SERRÉ de Pierre accroupi à la corde (brassard gris au bras droit), visage entre 0,3 et 0,45 H, texte sur les genoux et la corde, aucune tête dans la bande de 18,0 à 19,02 s ; Antoine (chaîne) debout derrière dès 18,7 s. Exposition 1,7 (sans elle, médiane 26 à 32 ; avec, 51 à 62). M3 prend 7349 de 16,6 à 17,7 s (carte 8) et de 19,3 à 20,5 s (carte 2, 0,28 s après la fin de cette fenêtre) : même prise, aucune seconde commune, réserve suivie dans M3.",
    "exposition": 1.7
   },
   {
@@ -75,14 +75,13 @@
    "pourquoi": "Carte 7 (« Because of him. ») · carton noir de 3,28 s, la durée à l'écran de l'ancien plan. Vérif. adverse 13/10 : sur 7351 à 18,2 s, Antoine est debout juste derrière Pierre, visage visible (image vue à 18,58 s) : « him » se lisait comme Antoine. Sur le noir, « him » ne désigne que le fils. Exige le correctif de plage du moteur du 13/10 (carton à 1/255 au lieu de 17). Si le batch de R9 arrive avant le 23/10 : P11 (chaussures de Pierre à côté d'une petite paire d'enfant) à la place."
   },
   {
-   "clip": "7351",
-   "debut": 16.35,
+   "clip": "7359",
+   "debut": 1.45,
    "duree": 1.13,
    "ralenti": 4,
-   "x": 0.45,
-   "exposition": 1.3,
-   "pourquoi": "Carte 8 (« I want him to see / me show up anyway. ») · A1, suite immédiate du plan du hook : Pierre se relève et tire la corde main sur main, face caméra (carte à la 1re personne sur Pierre). Vérif. adverse 13/10 : recalée de 15,4 à 16,35 s pour laisser 15,4 à 16,35 au hook. Étape voir du 13/10 : nette de 16,35 à 17,48 s (laplacien 44 à 67), visage de Pierre entre 0,15 et 0,45 H, texte sur les disques. Antoine (chaîne) reste visible derrière lui à droite : à trancher par Maxime, rien n'est changé. Exposition 1,3.",
-   "statut": "à trancher par Maxime (Antoine visible derrière Pierre)"
+   "x": 0.5,
+   "exposition": 6.5,
+   "pourquoi": "Carte 8 (« I want him to see / me show up anyway. ») · B1, entre les rameurs : gros plan de Pierre SEUL qui boit à sa flasque. De 1,50 à 2,10 s (sous « I want him to see »), il regarde l'objectif en buvant ; de 2,15 à 2,50 s, tête baissée ; à 2,58 s, il reboit, yeux baissés. Aucune autre personne dans le cadre, bannières floues en fond : « him » ne peut désigner que le fils posé par la carte 7. Second tour du 14/10 : l'ancien plan (7351 de 16,35 à 17,48 s) montrait net l'officiel à lunettes qui regarde Pierre de 25,1 à 29,4 s, sous toute la phrase (preuve rendus/livraison/controle/M2-carte8-officiel-25.1-29.3s.jpg). Vu avant le rendu (rendus/_travail-M2/tour2/voir8_bande.jpg, toutes les 0,05 s, bloc complet posé) puis sur le rendu v2 toutes les 0,2 s : texte sur la main, la flasque et le débardeur ; le menton descend au plus bas vers 0,69 à 0,70 H de 2,20 à 2,30 s (27,9 à 28,5 s du reel), à 20 ou 35 px au-dessus du haut du texte, jamais dessous. Netteté 15,4 à 23,0, sans creux (zoom de la caméra fini à 1,34 s). Exposition 6,5 (médiane hors bande 53 à 26,76 s, 31 tête baissée à 29,28 s). Fenêtre lue par une requête Drive bornée (7359 de 0,98 à 2,90 s, 58 Mo) le 14/10. Aucune seconde commune avec M3 ni M4 ; même prise que la carte 4 de M4 (7359 de 0,08 à 0,8 s, plan large, « Too much time / between stations. », 01/11), 0,65 s de rush plus tôt."
   },
   {
    "clip": "7350",
@@ -91,7 +90,7 @@
    "ralenti": 4,
    "x": 0.4,
    "exposition": 1.1,
-   "pourquoi": "Carte 9 (CTA « Parents who train, / how do you do it? ») · 7350, fin du sled pull : Pierre (débardeur noir, brassard gris au bras droit) debout face caméra, il sourit ; Antoine (chaîne) à côté de lui tient la corde puis se penche. DÉPLACÉE le 13/10 à l'étape voir : l'ancienne fenêtre (33,32 à 34,42 s) touchait la carte 6 de M3 (7350 dès 34,45 s, publié le 18/10), même plan à une seconde près. Images clés de 7350 lues de 27,9 à 45,1 s : 27,9 à 32,7 s, dos d'Antoine qui s'éloigne (trop proche de la carte 1 de M3, 26,1 à 26,9 s, et de D1, 27,0 à 27,5 s) ; 36,5 à 41,3 s, Antoine tire au premier plan et une tête floue de spectateur passe en bas du cadre ; 44,05 à 45,15 s retenu, x 0,4 : les deux de face, texte sur les shorts et les mains, aucune tête dans la bande (celle d'Antoine, penché à la fin, reste au-dessus de 0,67 H). La caméra part en filé dès 45,24 s. La phrase n'a pas de « I ». Exposition 1,1. Aucune des cinq specs n'utilise 7350 après 35,37 s."
+   "pourquoi": "Carte 9 (CTA « Parents who train, / how do you do it? ») · 7350, fin du sled pull : Pierre (débardeur noir, brassard gris au bras droit) debout face caméra, il sourit ; Antoine (chaîne) à côté de lui tient la corde puis se penche. DÉPLACÉE le 13/10 à l'étape voir : l'ancienne fenêtre (33,32 à 34,42 s) était à une seconde de la carte 6 de M3 de l'époque (7350 dès 34,45 s). Images clés de 7350 lues de 27,9 à 45,1 s : 27,9 à 32,7 s, dos d'Antoine qui s'éloigne ; 33,6 à 38,4 s, Antoine tire accroupi, l'officiel à lunettes debout à droite ; 44,05 à 45,15 s retenu, x 0,4 : les deux de face, texte sur les shorts et les mains, aucune tête dans la bande (celle d'Antoine, penché à la fin, reste au-dessus de 0,67 H), aucun officiel dans le cadre. La caméra part en filé dès 45,24 s. La phrase n'a pas de « I ». Exposition 1,1. Autres fenêtres de 7350, sans seconde commune : M3 de 26,1 à 26,9 s (carte 1) et de 37,0 à 37,92 s (carte 6, même situation au sled pull, 6,13 s de rush avant celle-ci, publiée le 18/10)."
   }
  ],
  "sous_titres": [
@@ -277,8 +276,15 @@
  ],
  "duree": 33.8,
  "legende": "53:34 in Rome. Then I'm Dad again ❤️\n\nMy training has to find its place between a family I care deeply about and a demanding job across France, Spain and Italy. Some sessions are average. They still count.\n\nI want my little boy to see his dad show up anyway.\n\nIf you're a parent who trains too, I'd love to hear how you fit it in. I read everything 🙏\n\n#hyrox #workingdad #fatherhood #hybridathlete #roadtohongkong",
- "note_lint": 93,
- "verdict_lint": "93/100 🟢",
+ "note_lint": 87,
+ "verdict_lint": "87/100 🟢, mesuré le 14/10/2026 sur le vrai rendu v2 (33,80 s, 845 images, 53 mots), images lues carte par carte ; l'ancien 93 était une note du script",
+ "detail_lint": {
+  "hook": "18/20 : chiffre dès la 1re phrase (« 53:34 » s'allume à 0,40 s, bloc complet à 2,85 s, tenu jusqu'à 3,80 s), tension claire entre l'athlète et le père ; première image : gros plan de Pierre seul, regard vers l'objectif jusqu'à 1,8 s. Points perdus : la promesse est émotionnelle, pas un gain annoncé, et l'image est un peu molle sur les 0,6 premières secondes (tête qui remonte).",
+  "structure": "17/20 : trois rôles tenus (père 4,60 s, dirigeant 4,52 s, athlète 4,60 s sur deux cartes), bascule « So why do it / with so little time? » à 17,68 s (52 % du reel), réponse « Because of him. » puis la morale sur Pierre qui regarde l'objectif. Points perdus : 3,28 s de carton noir sous « Because of him. » dans un reel muet, et la carte 5 sur un sol presque noir (médiane 30).",
+  "format": "20/20 : 53 mots, 33,80 s, très en dessous du format 60 s.",
+  "cta": "17/20 : un seul CTA, une question à un public nommé (« Parents who train, / how do you do it? »), complet à 32,50 s et tenu 1,30 s sur Pierre et Antoine qui sourient face caméra ; actionnable (commenter), mais question ouverte sans mot à écrire.",
+  "preuve": "15/20 : 53:34 officiel, les trois pays de l'équipe (fiche : France, Espagne, Italie), images réelles de Rome où Pierre est reconnaissable sur les cartes 1, 4, 6, 8 et 9 ; « Some sessions are average » et le temps compté restent des affirmations sans chiffre."
+ },
  "corrections_lint": [
   "v1, carte 2 « He's asleep / when I train. » : habitude non sourcée (SKILLS.md §2.3, interdits faute de source), faute bloquante. Retenue : « He's my little boy. / Too young for splits. » (seul « little boy » est un fait de la fiche ; aucun âge, aucune mémoire ni aucun comportement du fils n'est affirmé). La v1 est gardée en variante à confirmer par Pierre.",
   "v1, hook « He won't remember / 53:34. » : 2e ligne d'un seul mot (règle 2 à 5 mots). Devenu « Rome, or 53:34. ».",
@@ -294,18 +300,18 @@
   "Vérif. adverse 13/10 (bloquant) : carte 1, plan flou (7351 de 9,0 à 9,95 s, mise au point qui cherche jusqu'à 9,9 s) remplacé par 7351 de 15,4 à 16,35 s ; carte 8 recalée à 16,35 s. Netteté à contrôler au rendu.",
   "Vérif. adverse 13/10 : carte 6, gros plan flou d'un visage (7346 à 2,0 s) remplacé par 7349 à 18,0 s (A11, plan large).",
   "Vérif. adverse 13/10 : carte 7 « Because of him. » passée sur un CARTON NOIR de 3,28 s (Antoine visible derrière Pierre sur 7351 à 18,2 s). M2 n'utilise plus qu'une fenêtre de 7351 au lieu de trois.",
-  "Montage 13/10 (étape voir, 19:00 UTC, sur les vrais rushes) : carte 2 décalée de 6,0 à 6,42 s (logo de marque lisible sur un short de 6,0 à 6,35 s) ; carte 4 avancée de 9,8 à 9,63 s (bouche et menton de Pierre sous le texte de 10,3 à 10,42 s) ; carte 9 déplacée de 33,32 à 44,05 s, x 0,55 à 0,4 (doublon avec la carte 6 de M3). Textes inchangés."
+  "Montage 13/10 (étape voir, 19:00 UTC, sur les vrais rushes) : carte 2 décalée de 6,0 à 6,42 s (logo de marque lisible sur un short de 6,0 à 6,35 s) ; carte 4 avancée de 9,8 à 9,63 s (bouche et menton de Pierre sous le texte de 10,3 à 10,42 s) ; carte 9 déplacée de 33,32 à 44,05 s, x 0,55 à 0,4 (doublon avec la carte 6 de M3). Textes inchangés.",
+  "Second tour du 14/10 (critique de complétude, bloquant) : l'officiel à lunettes, net, regardait Pierre sous « I want him to see / me show up anyway. » (carte 8, 7351) et sous « Then I'm Dad again. » (carte 1, 7351). Carte 1 passée sur 7362 de 2,83 à 3,78 s (gros plan de Pierre seul au rameur, regard caméra), carte 8 sur 7359 de 1,45 à 2,58 s (gros plan de Pierre seul qui boit en regardant l'objectif). M2 n'utilise plus 7351 (l'entrée du 13/10 qui en gardait une fenêtre est dépassée). Textes, horodatages et légende inchangés. Note mesurée sur le rendu v2 : 87 (Hook 18, Structure 17, Format 20, CTA 17, Preuve 15)."
  ],
  "a_tourner": "Rien d'indispensable : la version Rome est complète. Facultatif, si les rushes du batch de R9 arrivent avant le 23/10 : P11 (FATHER, chaussures de Pierre à côté d'une petite paire d'enfant) remplace le carton noir de la carte 7, ou le plan de la carte 2 ; P10 (EXECUTIVE, sac d'ordinateur fermé à côté du sac de sport) celui de la carte 3. Liste complète dans T1-R9.",
- "_statut": "13/10/2026 19:20 UTC : RENDU sur les vrais rushes de Rome après l'étape voir : rendus/M2-R11-keep-showing-up.mp4 (1080x1920, 25 i/s, 845 images, 33,80 s, aucune piste audio, « -map 0:a » échoue ; carton noir de la carte 7 à 1/255) et sa planche de 12 images. Cartes 2, 4 et 9 recalées (voir plans et corrections_lint), exposition 1,7 ajoutée à la carte 6 ; textes et légende inchangés. Contrôlé sur le rendu : 12 images, première et dernière, carte 8 au bloc complet, bande de texte toutes les 0,4 s (aucune tête sous le texte), contraste du texte 4,5 à 6,0 au pire pixel. Drive : 38 requêtes bornées, 571 Mo, aucun refus. La MAQUETTE rendus/M2-R11-keep-showing-up-MAQUETTE.mp4 est périmée. Rien n'est branché dans Metricool : le mp4 attend l'accord de Maxime.",
- "_choix": "Blanc cassé, mots clés en jaune et mot en cours en jaune (karaoké des reels voisins, demande du 13/10), comme M1, M3 et D1 ; la couverture mesurée met tout en jaune : passer \"mots_jaunes\": \"*\" si Maxime préfère. Sortie de bloc en coupe sèche au changement de plan (REFERENCE.md §3), une coupe par carte, aucune au milieu d'un bloc. Cadence : 0,35 à 0,4 s par mot, plus après une virgule ou un point, bloc complet tenu 0,95 à 1,5 s ; plus long sur les deux cartes d'une ligne qui portent le fils (« He's my little boy. » 2,55 s, « Because of him. » 1,98 s). Expositions par plan estimées sur les images vues (inversion du tonemap, contrôlée sur 7351 : médiane simulée 74, mesurée 71) : à recaler sur le rendu avec controle_m2.py.",
+ "_statut": "14/10/2026 12:36 UTC : RENDU v2 sur les vrais rushes de Rome, second tour après la critique de complétude : rendus/M2-R11-keep-showing-up.mp4 (md5 9c7db87d…, 1080x1920, 25 i/s, 845 images, 33,80 s, aucune piste audio, « -map 0:a » échoue avec le code 234 ; carton noir de la carte 7 à 1/255) et sa planche de contrôle ; v1 du 13/10 gardé en rendus/M2-R11-keep-showing-up-v1.mp4 (md5 3f192bb1…). Cartes 1 et 8 recalées (voir plans), le reste inchangé. Contrôlé sur le rendu : planche des 9 cartes, première et dernière image, bande de texte et plein cadre toutes les 0,2 s sur les cartes 1 et 8 (controle/tour2/) : aucun texte sur un visage, aucun officiel ni inconnu dans le cadre des cartes 1 et 8 ; contraste du texte 4,5 à 13,7 au pire pixel. Livraison refaite avec la recette commune : rendus/livraison/M2-R11-keep-showing-up.mp4 (md5 10ec47b1…, 67,7 Mo, 16,0 Mb/s en moyenne, pic de 28,1 Mb/s sur 1 s à 25,12 s, image clé toutes les 2,00 s, faststart, un seul flux vidéo, SSIM 0,982, PSNR moyen 45,3 dB), sa planche et l'aperçu rendus/apercus/M2-R11-keep-showing-up-apercu.mp4. Drive : 2 requêtes bornées (7359 et 7362, 92 Mo), aucun refus. Rien n'est branché dans Metricool : le mp4 attend l'accord de Maxime.",
+ "_choix": "Karaoké blanc cassé et jaune, tranché par Maxime le 14/10 : mots en blanc cassé, mots clés en jaune, mot en cours en jaune, comme M1, M3, M4 et D1 ; la variante tout en jaune est écartée. Sortie de bloc en coupe sèche au changement de plan (REFERENCE.md §3), une coupe par carte, aucune au milieu d'un bloc. Cadence : 0,35 à 0,4 s par mot, plus après une virgule ou un point, bloc complet tenu 0,95 à 1,5 s ; plus long sur les deux cartes d'une ligne qui portent le fils (« He's my little boy. » 2,55 s, « Because of him. » 1,98 s). Expositions par plan contrôlées sur le rendu (médiane hors bande de texte 41 à 68, sauf la carte 5, sol noir, 30, et la fin de la carte 8, tête baissée, 31).",
  "a_trancher": [
   "Variante v1 de la carte 2 « He's asleep / when I train. » : seulement si Pierre confirme par écrit l'heure de ses séances (feuille du 26-10).",
-  "Habillage : mots en blanc cassé, mots clés en jaune, mot en cours en jaune (karaoké des reels voisins de @rundadlift), comme M1, M3 et D1. La couverture mesurée met tous les mots en jaune : passer \"mots_jaunes\": \"*\" et \"mot_en_cours\": false si Maxime préfère.",
   "Musique : sortie muette, Maxime pose la valse au piano dans Instagram.",
-  "Identité : Pierre = débardeur noir, brassard gris au bras droit, reconnu par la tenue (PLANS.md). Brassard vu à l'étape voir du 13/10 sur les cartes 1, 4, 6, 8 et 9 ; carte 3 (7345, A2, bras cachés) : « probable » ; à confirmer par Maxime.",
-  "Carte 8 : Antoine reste visible derrière Pierre sous « I want him to see ». Le « him » est posé sur le fils par la carte 7, désormais sur le noir ; à confirmer par Maxime.",
-  "Logos en fond : bannières et matériel de l'événement (PUMA, MYPROTEIN, CENTR, HYROX) sur les cartes 1, 3, 4, 6, 8 et 9, petit logo de marque sur le débardeur de la carte 3. Aucun indice de l'employeur de Pierre connu du dépôt : Maxime confirme d'un mot. Le short à logo de marque de la carte 2 est sorti du cadre.",
-  "Doublon de 7350 avec la carte 6 de M3 : RÉGLÉ le 13/10, la carte 9 passe de 33,32 à 44,05 s (voir plans). Reste un recouvrement de 0,27 s de 7348 avec la carte 6 de M4 (7,3 à 7,57 s), qui disparaît avec la recale de M4 prévue au point 2 de LIVRAISON.md."
+  "Identité : Pierre = débardeur noir, brassard gris au bras droit, reconnu par la tenue (PLANS.md). Cartes 1 et 8 : gros plans de son visage, le même que sur les cartes 6 et 9 (brassard visible) ; carte 3 (7345, A2, bras cachés) : « probable », à confirmer par Maxime.",
+  "Prises partagées, sans seconde commune : la carte 8 (7359, Pierre qui boit) est le même moment que la carte 4 de M4 (« Too much time / between stations. », 01/11), en plan large ; le hook (7362, gros plan au rameur, regard caméra) ressemble au hook de M4 (7361, même poste, trois jours plus tard) et finit là où commence la carte 7 de D1 (22/10). À accepter ou à recaler par Maxime.",
+  "Tranché le 14/10 par Maxime, pour mémoire : karaoké blanc cassé et jaune ; Antoine visible avec Pierre sous une phrase à la première personne accepté (il ne l'est plus sur la carte 8, où Pierre est seul) ; logos de l'événement et des sponsors en fond (PUMA, MYPROTEIN, CENTR, HYROX, bannières floues de la carte 8) et petit logo de marque sur les débardeurs acceptés, ce ne sont pas des indices de l'employeur. Le short à logo de marque de la carte 2 reste hors du cadre.",
+  "Doublons de rush réglés : 7350 de la carte 9 (44,05 à 45,15 s) n'a aucune seconde commune avec M3 (26,1 à 26,9 s et 37,0 à 37,92 s) ; 7348 n'est plus partagé avec M4."
  ]
 }

@@ -1,5 +1,5 @@
 {
- "_doc": "M1-R7-after-the-line : After the line, les minutes qui suivent l'arrivée à Rome, Antoine et moi, vidés. Gabarit monologue de scripts/pierre-reel-ralenti.py (référence @rundadlift DeHgY1RxPfB). Corrections des vérificateurs du 13/10/2026 appliquées : carte 4 « Trying to take in / what we just did. », légende « This is what all the work is for. », aucun plan de sled push ni de couloir de traîneaux sous un texte d'après la ligne, aucun plan d'Antoine sous un « I ». Plans calés à l'image sur les rushes lus par plages HTTP (voir `pourquoi`). Sortie muette, aucune voix.",
+ "_doc": "M1-R7-after-the-line : After the line, les minutes qui suivent l'arrivée à Rome, Antoine et moi, vidés. Gabarit monologue de scripts/pierre-reel-ralenti.py (référence @rundadlift DeHgY1RxPfB). Corrections des vérificateurs du 13/10/2026 appliquées : carte 4 « Trying to take in / what we just did. », légende « This is what all the work is for. », aucun plan de sled push ni de couloir de traîneaux sous un texte d'après la ligne, aucun plan d'Antoine sous un « I ». Second tour du 14/10 : aucun regard vers une montre sous ou juste avant « no clock, no plan. ». Huit cartes de texte sur dix plans (cartes 2 et 4 en deux plans chacune). Plans calés à l'image sur les rushes lus par plages HTTP (voir `pourquoi`). Sortie muette, aucune voix.",
  "_titre": "M1-R7 After the line",
  "slot": "R7 · mar. 20/10/2026 12:30 · Metricool 388250104 · PH-03 de la feuille du 19-10",
  "gabarit": "monologue",
@@ -20,18 +20,28 @@
   },
   {
    "clip": "7378",
-   "debut": 1.6,
-   "duree": 1.18,
+   "debut": 2.22,
+   "duree": 0.56,
    "ralenti": 4,
    "x": 0.66,
    "statut": "vu",
-   "pourquoi": "Carte 2 « For a few minutes, / no clock, no plan. » (aucun « I »). Recalé le 14/10 de 2,12-3,30 s à 1,60-2,78 s : de 3,0 à 3,3 s, Antoine lève le poignet et regarde sa montre, sous « no clock, no plan. » (contresens). Désormais : l'animateur (débardeur blanc, casquette) serre la main droite de Pierre pendant que Pierre lève son propre poing gauche devant la poitrine et le regarde (bracelet rouge et blanc, sans montre ; corrigé le 14/10 : ce n'est pas le poing d'Antoine), puis l'animateur et Pierre se congratulent ; Antoine entre à droite à 2,7 s. « no clock, » tombe sur 2,17 à 2,27 s, « no plan. » sur 2,47 à 2,57 s : personne ne regarde de montre. Exposition en rampe (moteur, 14/10) : 60 jusqu'à 2,10 s puis 23 à 2,78 s, parce que la caméra passe du fond noir à la zone FINISH éclairée (à exposition fixe, médiane 19 au début contre 44 à la fin). Flou de bougé de l'animateur et de Pierre de 2,23 à 2,43 s du rush (5,6 à 6,4 s du reel, sous « no clock, ») ; à l'exposition 60, grain fort et hautes lumières brûlées au début de la carte. Risque de lecture « il regarde l'heure » quand Pierre regarde son poignet juste avant « no clock, » : à valider à l'œil par Maxime.",
-   "exposition": 60,
+   "pourquoi": "Carte 2, début : « For a few minutes, » (3,08 à 5,32 s du reel ; aucun « I »). Second tour du 14/10 : l'ancienne fenêtre partait de 1,60 s ; de 1,85 à 2,10 s du rush, Pierre levait son poing gauche devant la poitrine et regardait son poignet, juste avant « no clock, ». Ce poignet gauche porte sa montre à cadran noir (vue au même poignet, bras sans brassard, en 7378 de 7,8 à 8,0 s et de 11,7 à 12,0 s), avec le bracelet rouge et blanc (couleur : `_travail-M1/look/r2/`) : contresens, même défaut que la montre d'Antoine corrigée le 13/10. Le plan commence donc à 2,22 s : l'animateur (débardeur blanc, casquette Red Bull) serre la main droite de Pierre, Pierre garde le poing gauche levé mais lève la tête vers lui (2,14 à 2,30 s), la caméra suit (léger flou de mouvement de 2,34 à 2,46 s, soit 3,6 à 4,0 s du reel, sous « a »), puis Pierre se tourne vers Antoine qui entre à droite (dès 2,5 s). Personne ne regarde de montre. L'athlète blond torse nu reste en haut du cadre ; le crâne rasé de l'athlète accroupi entre en bas de 4,2 à 5,3 s du reel, sous la ligne 1 (la ligne 2 n'est pas encore écrite). Exposition 45 (au lieu de 60 : moins de grain), puis rampe jusqu'à 23 de 2,22 à 2,70 s (fond noir puis zone FINISH éclairée) : médianes hors bande 51 à 71.",
+   "exposition": 45,
    "exposition_fin": 23,
    "rampe": [
-    2.1,
-    2.78
+    2.22,
+    2.7
    ]
+  },
+  {
+   "clip": "7378",
+   "debut": 10.45,
+   "duree": 0.62,
+   "ralenti": 4,
+   "x": 0.47,
+   "statut": "vu",
+   "pourquoi": "Carte 2, fin : « no clock, no plan. » (5,32 à 7,80 s du reel ; « no clock, » s'allume à 5,35 et 5,74 s, « no plan. » à 6,57 et 6,95 s ; aucun « I »). Second tour du 14/10 : Pierre seul, qui sourit et tourne la tête, l'animateur de dos derrière lui (débardeur blanc, casquette) ; aucun poignet de Pierre à l'image, aucun regard vers une montre. C'était le début de l'ancienne carte 4 (10,45 à 11,38 s). Texte sur l'épaule et le bras, visage au-dessus de 0,45 H. Net (aucune image sous 0,6 de la netteté médiane du plan). D1 prend la même prise de 9,66 à 10,42 s : aucune seconde commune (0,03 s d'écart). Exposition 7 : médianes hors bande 42 à 73, 32 % des images sous 50 (fond noir de la régie).",
+   "exposition": 7
   },
   {
    "clip": "7378",
@@ -45,13 +55,28 @@
   },
   {
    "clip": "7378",
-   "debut": 10.45,
-   "duree": 0.93,
+   "debut": 11.07,
+   "duree": 0.44,
    "ralenti": 4,
    "x": 0.47,
    "statut": "vu",
-   "pourquoi": "Carte 4 « Trying to take in / what we just did. » Pierre seul au premier plan, qui se retourne et regarde autour de lui, l'animateur de dos derrière ; texte sur l'épaule et le bras, visage entre 0,25 et 0,45 H. Exposition 7.",
+   "pourquoi": "Carte 4, début : « Trying to take in » (11,40 à 13,16 s du reel). Second tour du 14/10 : suite du plan de la fin de la carte 2, même x, même exposition : Pierre seul, tête baissée, qui reprend son souffle, l'animateur de dos derrière lui ; un frigo de canettes entre en haut à gauche. Visage au-dessus de 0,45 H, texte sur le buste. Médianes hors bande 60 à 92.",
    "exposition": 7
+  },
+  {
+   "clip": "7378",
+   "debut": 7.53,
+   "duree": 0.49,
+   "ralenti": 4,
+   "x": 0.55,
+   "statut": "vu",
+   "pourquoi": "Carte 4, fin : « what we just did. » (13,16 à 15,12 s du reel ; la coupe tombe sur « what », 13,15 s). Second tour du 14/10 : la fin de l'accolade de l'animateur (casquette Red Bull), qui parle à l'oreille de Pierre ; Antoine (débardeur vert, chaîne) de profil au bord droit au début (13,16 à 13,6 s) : « we » se lit sur les deux ; puis Pierre se tourne vers l'animateur qui lève la main pour la taper ; une athlète blonde au second plan derrière Pierre (dès 13,9 s, sans doute l'athlète au chignon des cartes 7 et 8). La montre de Pierre (poignet gauche) passe sous « did. » de 14,0 à 15,1 s : il ne la regarde pas, il regarde l'animateur. La barbe de l'animateur reste à environ 150 px au-dessus du texte au début du plan (de 7,0 à 7,5 s, fenêtre écartée le 14/10 pour la carte 7, son menton descendait à 20 px du texte). Le plan s'arrête avant le filé (8,04 s). Exposition 9, puis rampe jusqu'à 11 de 7,86 à 8,02 s ; médianes hors bande 54 à 76.",
+   "exposition": 9,
+   "exposition_fin": 11,
+   "rampe": [
+    7.86,
+    8.02
+   ]
   },
   {
    "clip": "7378",
@@ -65,12 +90,12 @@
   },
   {
    "clip": "7378",
-   "debut": 11.56,
-   "duree": 0.72,
+   "debut": 11.51,
+   "duree": 0.77,
    "ralenti": 4,
    "x": 0.47,
    "statut": "vu",
-   "pourquoi": "Carte 6 « I remember / what comes after. » Pierre seul (visage, souffle), aucun Antoine dans le cadre ; un frigo de canettes en haut à gauche, sans logo lisible dans le recadrage. Exposition 6,5, puis rampe jusqu'à 15 de 12,00 à 12,28 s (14/10) : en fin de plan la caméra passe sur le fond noir de la régie et la médiane tombait à 25.",
+   "pourquoi": "Carte 6 « I remember / what comes after. » (18,00 à 21,08 s du reel). Pierre seul (visage, souffle), aucun Antoine dans le cadre ; un frigo de canettes en haut à gauche, sans logo lisible dans le recadrage. Second tour du 14/10 : commence à 11,51 s (au lieu de 11,56), dans la continuité du début de la carte 4. De 11,7 à 12,0 s du rush (18,8 à 20,0 s du reel), Pierre tend le bras gauche, montre au poignet, et regarde devant lui, pas sa montre. Exposition 6,5, puis rampe jusqu'à 15 de 12,00 à 12,28 s (14/10) : en fin de plan la caméra passe sur le fond noir de la régie.",
    "exposition": 6.5,
    "exposition_fin": 15,
    "rampe": [
@@ -85,7 +110,7 @@
    "ralenti": 4,
    "x": 0.47,
    "statut": "vu",
-   "pourquoi": "Carte 7 « This is what / all the work is for. » (aucun « I »). Recalé au tour de correction du 14/10 : l'ancienne fenêtre (8,72 à 9,75 s) était filée en entier de 9,36 à 9,46 s et de 9,62 à 9,75 s, soit 23,44 à 23,84 s et 24,48 à 25,00 s du reel, sous « all the work » et sous la phrase complète. La seule fenêtre libre et nette avant 9,36 s (7,00 à 8,02 s) posait le menton de l'animateur à 20 px au-dessus de « This is what » ; elle est écartée. Désormais : le plan de la carte 6 continue sans coupe (même x, rampe d'exposition enchaînée), Pierre seul qui sourit devant la régie, puis l'athlète inconnue au chignon entre à gauche dès 13,0 s et il lui pose la main sur l'épaule. Visages au-dessus de 0,45 H, texte sur le bras et l'épaule de Pierre. Aucun filé : léger bougé du visage de Pierre qui tourne la tête vers 12,5 à 12,7 s (21,7 à 22,6 s du reel), l'image reste nette autour. Exposition 15 (fin de la rampe de la carte 6) puis rampe jusqu'à 20 de 12,28 à 12,40 s.",
+   "pourquoi": "Carte 7 « This is what / all the work is for. » (aucun « I » ; 21,08 à 25,20 s du reel : la coupe d'entrée tombe sur « This », la coupe de sortie sur « What's »). Recalé au premier tour du 14/10 : l'ancienne fenêtre (8,72 à 9,75 s) était filée de 9,36 à 9,46 s et de 9,62 à 9,75 s, sous la chute ; la seule fenêtre libre et nette avant 9,36 s (7,00 à 8,02 s) posait le menton de l'animateur à 20 px au-dessus de « This is what ». Désormais : le plan de la carte 6 continue sans coupe (même x, rampe d'exposition enchaînée), Pierre seul qui sourit devant la régie, puis l'athlète inconnue au chignon entre à gauche dès 13,0 s (24,0 s du reel) et il lui pose la main sur l'épaule, montre au poignet. Visages au-dessus de 0,45 H, texte sur le bras et l'épaule de Pierre. Aucun filé. Léger flou de mouvement du visage de Pierre qui tourne la tête, de 12,61 à 12,71 s du rush (22,4 à 22,8 s du reel, sous « all » et « the »), visible au visage, invisible sur la netteté de l'image entière : non corrigé au second tour, aucune autre fenêtre nette de 1,03 s dans le cache ne garde la continuité avec la carte 6 sans ramener le menton de l'animateur sur le texte. Exposition 15 (fin de la rampe de la carte 6) puis rampe jusqu'à 20 de 12,28 à 12,40 s.",
    "exposition": 15,
    "exposition_fin": 20,
    "rampe": [
@@ -95,12 +120,12 @@
   },
   {
    "clip": "7378",
-   "debut": 13.7,
-   "duree": 0.92,
+   "debut": 13.75,
+   "duree": 0.87,
    "ralenti": 4,
    "x": 0.36,
    "statut": "vu",
-   "pourquoi": "Carte 8, question finale « What's your favourite / part of race day? ». Recalée au tour de correction du 14/10 parce que la carte 7 prend désormais 12,28 à 13,31 s (l'ancienne carte 8). Fenêtre lue sur Drive le 14/10 (7378 de 13,8 à 15,4 s, 3 requêtes bornées, 67 Mo, aucun refus). L'athlète inconnue au chignon (la même qu'en carte 7) lève le pouce à gauche, Pierre arrive par la droite en riant, un mouchoir contre la bouche, puis reste seul au centre jusqu'à la fin. Les 4 premières images (13,70 à 13,73 s, fin d'un panoramique) sont floues, avant tout texte ; le reel finit sur une image nette (14,61 s ; filé dès 14,62 s, hors du plan). x 0,36 : l'athlète à la queue de cheval qui entre à droite vers 14,47 s reste presque hors du cadre (son bras, puis son profil, nez, bouche et menton, coupé au bord droit en haut dès 14,52 s, soit 28,3 à 28,68 s du reel), Pierre est coupé au bord droit pendant qu'il entre dans le cadre (13,92 à 14,05 s). Visages au-dessus de 0,45 H, texte sur le buste de Pierre. Fond noir de la régie : exposition 16, puis rampe jusqu'à 34 de 13,80 à 14,06 s.",
+   "pourquoi": "Carte 8, question finale « What's your favourite / part of race day? » (25,20 à 28,68 s du reel). Second tour du 14/10 : commence à 13,75 s (au lieu de 13,70), sur l'image même où s'allume « What's » (25,20 s) : les images filées de la fin du panoramique (13,70 et 13,71 s) et le flou d'avant le texte (25,00 à 25,20 s du v3) sont sortis du reel. Reste, sous « What's » et « your » (25,2 à 25,8 s), le flou de mouvement de l'athlète au chignon qui marche en levant le pouce (netteté 0,4 à 0,6 du reste de la carte), net dès 26,0 s. Pierre arrive par la droite en riant, un mouchoir contre la bouche (coupé au bord droit de 25,9 à 26,4 s), puis reste seul au centre jusqu'à la fin. Le reel finit sur une image nette (14,61 s ; filé dès 14,62 s). x 0,36 : l'athlète à la queue de cheval qui entre à droite vers 14,47 s reste presque hors du cadre (son profil, nez, bouche et menton, coupé au bord droit en haut dès 14,52 s, soit 28,3 à 28,68 s du reel). Visages au-dessus de 0,45 H, texte sur le buste de Pierre. Fond noir de la régie : exposition 16, puis rampe jusqu'à 34 de 13,80 à 14,06 s. Fenêtre lue sur Drive au premier tour du 14/10 (7378 de 13,8 à 15,4 s, 3 requêtes bornées, 67 Mo, aucun refus).",
    "exposition": 16,
    "exposition_fin": 34,
    "rampe": [
@@ -270,14 +295,14 @@
  ],
  "legende": "The minutes after the finish line are my favourite part.\n\nNo clock, no plan. Just @antoine_bhna and me, completely empty, realising what we just did ❤️\n\nThis is what all the work is for.\n\nIf you race too, I'd love to know your favourite part. I read everything 🙏\n\n#hyrox #hyroxrome #finishline #hyroxdoubles #roadtohongkong",
  "note_lint": 84,
- "verdict_lint": "84/100 🟢 (renoté le 14/10 sur le rendu, textes inchangés : hook 16, structure 16, format 20, CTA 17, preuve 15 ; l'ancien 90 ne se reproduit pas)",
+ "verdict_lint": "84/100 🟢 (mesurée le 14/10 sur le rendu v4, textes inchangés : hook 16, « 53:34 » dans la première phrase mais allumé à 2,23 s seulement, promesse implicite ; structure 16, trois temps et la relance « Everyone remembers / I remember » de 15,3 à 20,9 s, cartes 2 à 4 dans le même registre ; format 20, 52 mots pour 28,68 s ; CTA 17, une question ouverte reprise dans la légende, sans mot à taper ; preuve 15, un seul chiffre vérifié, la scène reste à confirmer par Pierre. Les nouveaux plans des cartes 2 et 4 retirent un contresens à l'image, ils ne changent pas la note)",
  "a_trancher": [
   "M1 affirme une scène vécue (les minutes après la ligne, « completely empty », « my favourite part ») écrite par nous le 05/10. Pierre doit la confirmer par écrit dans la feuille du 19-10, au même titre que la variante de M2. On peut montrer le reel à Maxime, pas le publier avant la réponse de Pierre.",
   "Musique : sortie muette, Maxime pose la valse au piano dans Instagram.",
-  "Personnes à l'image (Maxime confirme d'un mot qu'elles peuvent rester) : l'animateur de l'arrivée (débardeur gris clair HYROX, casquette Red Bull, patch ORACLE Red Bull Racing au dos) sur les cartes 2, 4 et 5 ; l'athlète inconnue au chignon, au premier plan, en fin de carte 7 (dès 23,8 s) et au début de la carte 8 (25,0 à 26,2 s) ; des inconnus au visage reconnaissable relevés au contrôle du 14/10 : carte 1, une jeune spectatrice au bord droit (0 à 1,4 s) ; carte 2, l'athlète blond torse nu, net, en haut au centre (3,08 à 4,5 s) et l'athlète accroupi dont le haut du crâne touche la ligne 2 (6,6 à 7,6 s, visage environ 140 px sous le texte) ; carte 3, un athlète brun torse nu de profil (7,8 à 8,6 s) et une spectatrice floue au fond à gauche ; carte 5, une femme blonde au bord droit (17,5 à 18,0 s) ; carte 8, le profil (nez, bouche, menton) d'une athlète à la queue de cheval, coupé au bord droit en haut (28,3 à 28,68 s). Les logos de l'événement et des sponsors sont acceptés (décision de Maxime du 14/10).",
-  "Carte 2, de 3,1 à 5,3 s, sous « For a few minutes, » : Pierre lève son propre poignet gauche (bracelet rouge et blanc, sans montre) et le regarde, juste avant « no clock, ». Pas de montre, mais une lecture « il regarde l'heure » reste possible : à valider à l'œil par Maxime. À l'exposition 60, le début de la carte 2 a un grain fort et des hautes lumières brûlées (débardeur de l'animateur).",
-  "Carte 3, de 7,80 à 8,1 s du reel, avant tout texte : Antoine finit le geste vers son poignet (la montre qui tombait le 13/10 sous « no clock, no plan. ») puis relève la tête sous « Just ». La carte 3 n'a pas bougé : la décaler ferait arriver Pierre après « and me, ».",
-  "Carte 1 et D1 : D1 (22/10) prend 7377 de 78,74 à 79,10 s et de 80,17 à 80,57 s, de part et d'autre de la carte 1 de M1 (79,39 à 80,16 s, 20/10). Aucune seconde commune, mais la même scène (station 23, écran 99 puis GO) passerait dans deux reels à deux jours d'écart : à trancher par D1 ou par Maxime."
+  "Personnes à l'image (Maxime confirme d'un mot qu'elles peuvent rester) : l'animateur de l'arrivée (débardeur gris clair HYROX, casquette Red Bull, patch ORACLE Red Bull Racing au dos) sur les cartes 2, 4 et 5 ; l'athlète inconnue au chignon, au premier plan, en fin de carte 7 (dès 24,0 s) et au début de la carte 8 (25,2 à 26,2 s), et sans doute la même au second plan derrière Pierre en fin de carte 4 (13,9 à 15,1 s) ; des inconnus au visage reconnaissable relevés au contrôle du 14/10 : carte 1, une jeune spectatrice au bord droit (0 à 1,4 s) ; carte 2, l'athlète blond torse nu, en haut du cadre (3,08 à 5,3 s) et l'athlète accroupi au crâne rasé, en bas (4,2 à 5,3 s, sous la ligne 1, la ligne 2 n'étant pas encore écrite) ; carte 3, un athlète brun torse nu de profil (7,8 à 8,6 s) et une spectatrice floue au fond à gauche ; carte 5, une femme blonde au bord droit (17,5 à 18,0 s) ; carte 8, le profil (nez, bouche, menton) d'une athlète à la queue de cheval, coupé au bord droit en haut (28,3 à 28,68 s). Les logos de l'événement et des sponsors sont acceptés (décision de Maxime du 14/10).",
+  "Carte 2, corrigé au second tour du 14/10 (bloquant de la critique) : dans l'ancienne fenêtre (7378 de 1,60 à 2,78 s), Pierre levait son poing gauche et regardait son poignet de 1,85 à 2,10 s du rush, sous « For a few minutes, » et juste avant « no clock, ». Ce poignet gauche porte sa montre à cadran noir, avec le bracelet rouge et blanc (montre vue au même poignet, bras sans brassard, en 7378 de 7,8 à 8,0 s et de 11,7 à 12,0 s) : la mention « sans montre » des versions précédentes était fausse. La carte 2 ne garde de cette prise que 2,22 à 2,78 s (Pierre lève la tête vers l'animateur puis vers Antoine, il ne regarde plus son poignet), et « no clock, no plan. » tombe sur Pierre seul qui sourit (7378 de 10,45 à 11,07 s), sans poignet à l'image. Les plans où la montre de Pierre reste visible portent d'autres phrases (carte 4, « what we just did. » ; carte 6, « I remember » ; carte 7, « all the work is for. ») et il ne la regarde dans aucun.",
+  "Carte 3, de 7,80 à 8,1 s du reel, avant tout texte : Antoine finit le geste vers son poignet (la montre qui tombait le 13/10 sous « no clock, no plan. ») puis relève la tête sous « Just ». « no clock, no plan. » a quitté l'écran à 7,80 s : le geste suit le texte de 0 à 0,3 s, à voir à l'œil par Maxime. La carte 3 n'a pas bougé : la décaler ferait arriver Pierre après « and me, ».",
+  "Carte 1 et D1 : D1 (22/10) prend 7377 de 78,74 à 79,10 s et de 80,17 à 80,41 s (D1 v3), de part et d'autre de la carte 1 de M1 (79,39 à 80,16 s, 20/10). Aucune seconde commune, mais la même scène (station 23, écran 99 puis GO) passerait dans deux reels à deux jours d'écart : à trancher par D1 ou par Maxime. Même chose pour 7378 : D1 prend Pierre seul de 9,66 à 10,42 s, M1 reprend la même prise dès 10,45 s (fin de la carte 2), 0,03 s plus loin."
  ],
- "statut_rendu": "RENDU v3 le 14/10/2026 à 10:15 UTC (tour de correction) sur les vrais rushes de Rome (rendus/M1-R7-after-the-line.mp4, 28,68 s, 717 images, 1080x1920, 25 i/s, aucune piste audio : -map 0:a échoue ; rendus précédents gardés en rendus/M1-R7-after-the-line-v2.mp4, 14/10 08:20 UTC, et -v1.mp4, 13/10). Bloquant corrigé : la carte 7 (7378 de 8,72 à 9,75 s) était filée en entier de 23,44 à 23,84 s et de 24,48 à 25,00 s du reel, sous « all the work » et sous la phrase complète. Elle prend désormais 7378 de 12,28 à 13,31 s, suite sans coupe de la carte 6 (Pierre seul qui sourit, puis l'athlète au chignon), et la carte 8 passe sur 7378 de 13,70 à 14,62 s (fenêtre lue sur Drive le 14/10 : 3 requêtes bornées, 67 Mo, aucun refus). Cartes 1 à 6 identiques au v2 (écart image nul). Textes et légende inchangés, karaoké blanc cassé et jaune. Contrôlé sur le rendu : planche de 12 images, première et dernière, bande de texte toutes les 0,2 s sur tout le reel : texte jamais sur un visage ; contraste du texte 4,5 à 5,5 au pire pixel ; médianes hors bande par carte 45-101, 53-78, 39-70, 42-92, 55-78, 56-79, 46-64, 45-99 (12 % des images sous 50) ; chroma 0 à 0,5 ; aucun carton ; aucun filé sous les cartes 7 et 8 (seules les 4 premières images de la carte 8, avant tout texte, sont floues). La MAQUETTE est périmée."
+ "statut_rendu": "RENDU v4 le 14/10/2026 à 13:54 UTC (second tour, après la critique de complétude) sur les vrais rushes de Rome (rendus/M1-R7-after-the-line.mp4, md5 48676e46…, 28,68 s, 717 images, 1080x1920, 25 i/s, aucune piste audio : -map 0:a échoue ; rendus précédents gardés : -v3.mp4, 14/10 10:15 UTC, md5 b24e5dba… ; -v2.mp4 ; -v1.mp4). Bloquant corrigé : sur la carte 2, Pierre regardait son poignet gauche, celui de sa montre, juste avant « no clock, ». Carte 2 en deux plans (7378 de 2,22 à 2,78 s, puis de 10,45 à 11,07 s) ; carte 4 en deux plans (7378 de 11,07 à 11,51 s, puis de 7,53 à 8,02 s) ; carte 6 dès 11,51 s ; carte 8 de 13,75 à 14,62 s, coupe sur l'image où s'allume « What's » (25,20 s), début flou retiré. Cartes 1, 3, 5 et 7 : mêmes secondes de rush qu'au v3 (écart image moyen 0,2 à 0,4 sur 255 pour 1, 3 et 5 ; la carte 7 est décalée de 0,2 s sous son texte). Léger flou de mouvement du visage en carte 7 (22,4 à 22,8 s) non corrigé. Aucune lecture Drive (0 requête, 0 octet). Textes et légende inchangés, karaoké blanc cassé et jaune. Contrôlé sur le rendu : planche (12 images, première, dernière, milieu de chaque plan), bande de texte toutes les 0,2 s sur tout le reel : texte jamais sur un visage, aucun regard vers une montre sous un texte ; contraste du texte 4,5 à 5,5 au pire pixel ; médianes hors bande par carte 45-101, 42-73, 39-70, 54-92, 55-78, 56-79, 46-64, 45-79 (12 % des images sous 50) ; chroma 0 à 0,6 ; aucun carton. Fichier de livraison refait (rendus/livraison/M1-R7-after-the-line.mp4, md5 a6889eea…, 69,4 Mo, 19,4 Mb/s en moyenne, pic de 29,3 Mb/s sur 1 s à 3,12 s, SSIM 0,951, PSNR moyen 38,5 dB), aperçu et planche refaits. La MAQUETTE est périmée."
 }
