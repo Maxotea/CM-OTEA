@@ -22,6 +22,7 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/social-media-ceo/05-rituels.md` | les boucles quotidienne, hebdo, mensuelle, trimestrielle |
 | `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
 | `.claude/references/organisation-claude.md` | où faire quoi entre Claude Code, Cowork, conversation, routines et Actions ; le plan de migration issu de l'audit du 16/10/2026 |
+| `.claude/references/kit-cowork.md` | ce qui passe en Projet Claude ou en tâche Cowork, avec les instructions à coller |
 
 ## Ce dépôt est le moteur, pas le bureau
 
