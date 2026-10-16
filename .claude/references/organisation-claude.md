@@ -204,3 +204,26 @@ répond non aux trois est justifiée.
   deux semaines après.
 - Nombre de routines échouées pour limite d'usage (aujourd'hui : 2 ce matin). Objectif : zéro.
 - Sessions de routines par semaine : 58 avant, environ 14 visé.
+
+## 9. Modèle par routine (appliqué le 16/10/2026)
+
+Maxime a laissé le choix. Sonnet 5.5 est posé sur les routines qui créent une nouvelle session à
+chaque lancement. Les autres gardent le modèle de leur conversation attachée : le changement n'a
+pas d'effet sur elles, il se fait dans la conversation elle-même.
+
+| Routine | Modèle | Pourquoi |
+|---|---|---|
+| Résumé matinal | Sonnet 5.5 | lecture d'agenda et de mails, rendu d'une page |
+| Point du matin | Sonnet 5.5 | tri de boîte mail avec règles strictes et mise à la corbeille |
+| Point du midi | Sonnet 5.5 | dictées vocales à corriger, actions possibles par mail |
+| Point du soir | Sonnet 5.5 | idem, plus la ligne cash |
+| Revue quotidienne de l'outil CM | Sonnet 5.5 | revue et petits correctifs testés |
+| Upgrade quotidien de La Chasse | Sonnet 5.5 | améliorations incrémentales, PR relue par Maxime |
+| ExpliqueMoi | Sonnet 5.5 | chaîne de production balisée par des règles écrites |
+| POST CM-OTEA | inchangé | rédaction client, une fois par semaine, qualité d'abord |
+| Point compta, Point tâches, BNI, Review du vendredi | inchangé | conversation attachée, voir ci-dessus |
+
+Aucune routine sur Haiku : chacune mêle des mails (dictées à corriger, mise à la corbeille, envoi
+possible au nom de Maxime) ou des chiffres de compta, où une erreur coûte plus que les tokens
+économisés. Haiku devient pertinent après la fusion des bilans, pour une routine de tri de boîte
+mail seule, en lecture et en étiquetage.
