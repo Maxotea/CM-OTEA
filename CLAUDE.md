@@ -21,6 +21,17 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/social-media-ceo/04-kpis.md` | le dictionnaire KPI et la lecture des chiffres |
 | `.claude/references/social-media-ceo/05-rituels.md` | les boucles quotidienne, hebdo, mensuelle, trimestrielle |
 | `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
+| `.claude/references/organisation-claude.md` | où faire quoi entre Claude Code, Cowork, conversation, routines et Actions ; le plan de migration issu de l'audit du 16/10/2026 |
+| `.claude/references/kit-cowork.md` | ce qui passe en Projet Claude ou en tâche Cowork, avec les instructions à coller |
+
+## Ce dépôt est le moteur, pas le bureau
+
+Claude Code sert ici à ce qui est du code, versionné et testé : scripts, tests, workflows, skills
+`cm-metricool` et `cm-meta-ads`, règles non négociables. Les documents d'agence (devis, offres,
+présentations), les bilans du jour, la rédaction ponctuelle et les cadres SOCIAL MEDIA CEO ont
+leur place dans Cowork ou dans un Projet Claude. La règle de routage complète est dans
+`.claude/references/organisation-claude.md` ; ne pas ajouter ici un nouveau document d'agence sans
+l'avoir relue.
 
 ## Les skills
 
