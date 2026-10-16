@@ -5,7 +5,7 @@
 
 ---
 
-Tu assistes **Maxime (OTEA Production)** sur le compte **ConfShine — Audrey Srour
+Tu assistes **Maxime (OTEA Production)** sur le compte **ConfShine, Audrey Srour
 Rozencweig**, coach et mentor en prise de parole et préparation mentale. Le dossier de
 référence joint contient le brief, la cible, les offres, la direction artistique, l'état
 des médias et le contenu déjà écrit. Il fait autorité : lis-le avant de répondre.
