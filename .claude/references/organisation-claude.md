@@ -134,3 +134,73 @@ attendent Maxime. Si Metricool ou le dépôt ne répondent pas, dis-le et arrêt
 - Le plugin small-business (une quarantaine de skills orientés Gusto, Xero, MYOB, QuickBooks,
   Square) est chargé dans cette session alors que tu utilises Pennylane, Qonto et Zapier : à
   désactiver dans Code, à garder éventuellement dans Cowork.
+
+## 8. Économiser les tokens
+
+L'audit initial n'avait pas mesuré la consommation. Ce chapitre reprend les leviers que les
+fichiers et les routines permettent d'établir. Aucun chiffre de tokens ici : la consommation
+réelle par routine se lit dans les réglages d'usage du compte, à comparer avant et après.
+
+### Ce qui explique le pic de fin de semaine
+
+Nombre de sessions lancées seules par les routines, avant plan :
+
+| Jour | Sessions | Détail |
+|---|---|---|
+| Lundi à jeudi | 9 par jour | résumé matinal, point du matin, compta, tâches, midi, soir, revue d'outil, La Chasse, ExpliqueMoi |
+| Vendredi | 11 | les 9 ci-dessus, plus la préparation de la review et la routine BNI |
+| Samedi et dimanche | 5 par jour | point du matin, midi, soir, revue d'outil, La Chasse |
+| Lundi, en plus | 1 | POST CM-OTEA |
+
+Total : environ 58 sessions par semaine avant la première conversation de la journée. Les
+routines du vendredi, les plus lourdes (review, base64, BNI), s'ajoutent à des journées déjà
+pleines, d'où l'impression d'un quota qui fond en fin de semaine. Après le plan du §3 : environ
+14 sessions par semaine.
+
+### Les leviers, du plus rentable au moins rentable
+
+1. **Choisir le modèle par tâche.** Toutes les routines ont le champ modèle vide, donc le modèle
+   par défaut du compte. Un bilan du matin (lire mails et agenda, classer, écrire 20 lignes) n'a
+   pas besoin du modèle le plus puissant : Sonnet suffit, et Haiku pour le tri de boîte mail. Le
+   modèle le plus puissant se réserve au code difficile, aux montages et à la stratégie. Cet audit
+   lui-même a été mené sur le niveau le plus haut ; la rédaction du plan pouvait se faire sur
+   Sonnet. Changer le modèle d'une routine demande ton accord explicite.
+2. **Supprimer les sessions, pas les raccourcir.** Fusionner les quatre bilans du matin
+   (§3) retire 3 sessions par jour ouvré, chacune avec son propre chargement de connecteurs, de
+   Gmail et d'agenda. Passer la revue d'outil et La Chasse en hebdomadaire retire 12 sessions par
+   semaine. Arrêter le midi retire 7 sessions par semaine.
+3. **Mettre ExpliqueMoi en pause ou en lot.** Une vidéo par jour ouvré, c'est la routine qui
+   enchaîne le plus d'appels d'outils (génération, mesures de voix en deux prises, assemblage,
+   publication, relecture). Produire cinq épisodes un jour par semaine coûte le même nombre
+   d'appels de création mais un seul chargement de contexte.
+4. **Réduire les connecteurs attachés.** Chaque serveur connecté ajoute ses instructions et la
+   liste de ses outils au contexte de la session. Les bilans en portent 22 à 25 alors qu'ils en
+   utilisent 4. Les retirer économise du contexte à chaque session et supprime le risque Meta Ads.
+5. **Ne plus faire passer des fichiers par le modèle.** La copie des xlsx en base64 vers Drive
+   fait lire puis réécrire le contenu du fichier plusieurs fois par client chaque vendredi. Un
+   Google Sheet natif ou l'envoi en validation Metricool supprime ce poste entier.
+6. **Sortir le « contexte connu » des prompts.** Environ 3 à 4 Ko de faits datés sont recopiés
+   dans quatre prompts et relus à chaque passage, pour des informations périmées. Un seul
+   Projet « OTEA, pilotage » les porte, chargé à la demande.
+7. **Garder la session Code légère.** Moins de skills listés (retirer les six `smc-*` et le
+   plugin small-business de Code), `CLAUDE.md` court, `cm-metricool/SKILL.md` (17 Ko) découpé pour
+   que le détail de la review et des carrousels ne se charge que quand on en a besoin, et une
+   session par tâche : `/clear` entre deux sujets plutôt qu'une conversation de plusieurs heures
+   dont tout l'historique est relu à chaque message.
+8. **Déléguer les balayages.** Pour « où est telle règle dans le dépôt » ou « qu'est-ce qui a
+   changé cette semaine », un sous-agent d'exploration renvoie la conclusion sans faire entrer
+   les fichiers dans la conversation principale.
+
+### Règle de décision pour la suite
+
+Avant de créer une routine ou un script avec un modèle dedans, poser trois questions : est-ce
+que du code ordinaire le ferait sans modèle (Actions) ? est-ce que le modèle le plus petit y
+arrive ? est-ce qu'une session par semaine suffit au lieu d'une par jour ? Une routine qui
+répond non aux trois est justifiée.
+
+### À mesurer avant et après
+
+- Consommation hebdomadaire du forfait, relevée le lundi, avant de toucher aux routines puis
+  deux semaines après.
+- Nombre de routines échouées pour limite d'usage (aujourd'hui : 2 ce matin). Objectif : zéro.
+- Sessions de routines par semaine : 58 avant, environ 14 visé.

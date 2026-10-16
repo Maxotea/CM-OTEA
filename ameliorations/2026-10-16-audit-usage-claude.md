@@ -12,7 +12,9 @@ les PR, les connecteurs attachés à chaque routine.
 
 Pas vu : les tâches planifiées locales de Cowork, les Projets et conversations de claude.ai, le
 contenu des 19 skills `anthropic-skills:*` du compte, les statistiques de consommation du
-forfait. Tout ce qui touche à ces points est marqué « à vérifier ».
+forfait. Tout ce qui touche à ces points est marqué « à vérifier ». La consommation de tokens n'a pas été
+mesurée : le chapitre 8 de `organisation-claude.md` la traite par les leviers qu'on peut établir
+sans ces chiffres.
 
 ## 1. Photographie
 
