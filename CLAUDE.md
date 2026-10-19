@@ -21,18 +21,29 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/social-media-ceo/04-kpis.md` | le dictionnaire KPI et la lecture des chiffres |
 | `.claude/references/social-media-ceo/05-rituels.md` | les boucles quotidienne, hebdo, mensuelle, trimestrielle |
 | `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
+| `.claude/references/organisation-claude.md` | où faire quoi entre Claude Code, Cowork, conversation, routines et Actions ; le plan de migration issu de l'audit du 16/10/2026 |
+| `.claude/references/kit-cowork.md` | ce qui passe en Projet Claude ou en tâche Cowork, avec les instructions à coller |
+
+## Ce dépôt est le moteur, pas le bureau
+
+Claude Code sert ici à ce qui est du code, versionné et testé : scripts, tests, workflows, skills
+`cm-metricool` et `cm-meta-ads`, règles non négociables. Les documents d'agence (devis, offres,
+présentations), les bilans du jour, la rédaction ponctuelle et les cadres SOCIAL MEDIA CEO ont
+leur place dans Cowork ou dans un Projet Claude. La règle de routage complète est dans
+`.claude/references/organisation-claude.md` ; ne pas ajouter ici un nouveau document d'agence sans
+l'avoir relue.
 
 ## Les skills
 
 | Skill | Déclenche sur |
 |---|---|
-| `smc-contenu` | idée, calendrier, piliers, validation client, hashtags, recyclage |
-| `smc-client` | prospect, relance, devis, onboarding, mission, réponse client, témoignage |
-| `smc-kpi-review` | bilan du mois, performances, reporting client, OKR |
-| `smc-ceo-day` | point hebdo, tri des idées, planification trimestrielle |
-| `smc-ops-finance` | devis, facture, impayé, TVA, trésorerie, clôture |
-| `smc-veille` | analyse concurrent, offre ou lancement du marché |
+| `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
 | `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
+
+Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
+`smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils
+vivent dans `.claude/references/social-media-ceo/cadres/` et sont chargés dans le Projet Claude
+« OTEA, pilotage » (voir `kit-cowork.md`). Aucun script ne les appelait.
 
 ## Articulation avec les skills existants
 
