@@ -205,6 +205,18 @@
       "type": "Story",
       "resultat": "publication programmée (version 399005149)",
       "post_id": 399005149
+    },
+    "2026-11-02T10:00:00|383263840": {
+      "quand": "2026-10-19T10:09:24",
+      "type": "Story",
+      "resultat": "publication programmée (version 399845636)",
+      "post_id": 399845636
+    },
+    "2026-11-02T12:00:00|390382400": {
+      "quand": "2026-10-19T10:09:26",
+      "type": "Post",
+      "resultat": "publication programmée (version 399845659)",
+      "post_id": 399845659
     }
   }
 }
