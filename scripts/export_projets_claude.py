@@ -53,13 +53,13 @@ def instructions_client(nom_client: str, nom_config: str | None) -> str:
 def projets() -> dict:
     sm = REF / "social-media-ceo"
     pilotage = [(f.name, f) for f in sorted(sm.glob("0*.md"))]
-    pilotage += [(f"{d.name}.md", d / "SKILL.md") for d in sorted(SKILLS.glob("smc-*"))]
+    pilotage += [(f.name, f) for f in sorted((sm / "cadres").glob("smc-*.md"))]
     pilotage += [(f"offre-{f.name}", f) for f in sorted((RACINE / "offre").glob("*.md"))]
     return {
         "01-OTEA-pilotage": {"instr": bloc_du_kit("2."), "fichiers": pilotage},
         "02-Compta-OTEA": {
             "instr": bloc_du_kit("3."),
-            "fichiers": [("smc-ops-finance.md", SKILLS / "smc-ops-finance" / "SKILL.md")],
+            "fichiers": [("smc-ops-finance.md", sm / "cadres" / "smc-ops-finance.md")],
         },
         "03-J-Lawson-Golf": {
             "instr": instructions_client("J Lawson Golf", "J Lawson Golf"),

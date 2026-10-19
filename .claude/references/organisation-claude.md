@@ -227,3 +227,37 @@ Aucune routine sur Haiku : chacune mêle des mails (dictées à corriger, mise �
 possible au nom de Maxime) ou des chiffres de compta, où une erreur coûte plus que les tokens
 économisés. Haiku devient pertinent après la fusion des bilans, pour une routine de tri de boîte
 mail seule, en lecture et en étiquetage.
+
+## 10. Mise en place du 19/10/2026 (ce qui est fait, ce qui reste)
+
+Fait ce matin, sur demande de Maxime (« relance et mets tout en place ») :
+
+| Routine | Avant | Après |
+|---|---|---|
+| Point du matin | 07h00 UTC, contexte daté du 23/09 | **Bilan du matin**, 07h00 Paris, fusionne matin, compta et tâches ; compta complète le mardi ; repères stables sans montants datés |
+| Résumé matinal | 05h30 Paris | désactivée (doublon du bilan) |
+| Point compta du matin | 08h00 Paris | désactivée (fondue dans le bilan ; sa conversation reste ouverte pour les questions à la demande) |
+| Point tâches quotidien | 08h30 Paris | désactivée (fondue dans le bilan) |
+| Point du midi | 12h30 | désactivée pour deux semaines, à rétablir si Maxime le regrette |
+| Point du soir | 16h30 UTC | inchangée, cron en heure de Paris (18h30) |
+| Revue quotidienne de l'outil CM | tous les jours 07h UTC | **hebdomadaire**, lundi 10h00 Paris |
+| Upgrade quotidien de La Chasse | tous les jours 07h UTC | **hebdomadaire**, lundi 11h00 Paris |
+| Review, préparation du vendredi | 06h UTC | inchangée, cron en heure de Paris (08h00) |
+| Review, envoi du lundi | coupée depuis le 24/08 | supprimée |
+| ExpliqueMoi | quotidienne | désactivée depuis le 16/10 |
+| POST CM-OTEA | prompt d'une ligne, 03h UTC | **inchangée, à modifier par Maxime** : la routine a été créée hors agent, aucune session ne peut la modifier, et une routine jumelle créée depuis ici partirait sans connecteur Zapier, donc sans Metricool (essayé puis supprimé ce matin). Texte prêt au §6, à coller ici : https://claude.ai/code/routines/trig_013MDZrKLaYrcSJ9LY5vvLCG |
+
+Sessions de routines par semaine : 58 avant, 19 maintenant (bilan et soir chaque jour, plus
+revue d'outil, La Chasse et POST le lundi, BNI et review le vendredi).
+
+Vérifié ce matin : la routine POST CM-OTEA du 19/10 (03h02 UTC, ancien prompt) n'a rien créé ni
+modifié dans Metricool ; elle a seulement relu les deux semaines et signalé 12 brouillons sans
+média (Le Loft 3, La Galerie 4, Pierre Huiban 5), à attacher par Maxime.
+
+Ce que je ne peux pas faire depuis ici :
+- retirer les connecteurs attachés aux routines (le paramètre n'existe pas pour ce compte) : à
+  faire dans la page de chaque routine, en ne gardant que Gmail, Agenda, Drive, Todoist, Zapier
+  et Finary pour le bilan du matin ;
+- créer les Projets Claude et la tâche Cowork : zips prêts dans `o/projets-claude/`, texte dans
+  `kit-cowork.md` ;
+- poser les préférences personnelles du compte (texte au §5).

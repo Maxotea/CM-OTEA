@@ -37,13 +37,13 @@ l'avoir relue.
 
 | Skill | Déclenche sur |
 |---|---|
-| `smc-contenu` | idée, calendrier, piliers, validation client, hashtags, recyclage |
-| `smc-client` | prospect, relance, devis, onboarding, mission, réponse client, témoignage |
-| `smc-kpi-review` | bilan du mois, performances, reporting client, OKR |
-| `smc-ceo-day` | point hebdo, tri des idées, planification trimestrielle |
-| `smc-ops-finance` | devis, facture, impayé, TVA, trésorerie, clôture |
-| `smc-veille` | analyse concurrent, offre ou lancement du marché |
+| `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
 | `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
+
+Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
+`smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils
+vivent dans `.claude/references/social-media-ceo/cadres/` et sont chargés dans le Projet Claude
+« OTEA, pilotage » (voir `kit-cowork.md`). Aucun script ne les appelait.
 
 ## Articulation avec les skills existants
 

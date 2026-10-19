@@ -2,7 +2,9 @@
 
 Suite de `organisation-claude.md`. Je ne peux pas créer de Projet ni de tâche Cowork depuis ce
 compte (le seul environnement visible est « Default », en nuage). Ce fichier contient donc tout
-ce qu'il faut coller, et le tri de ce qui vaut la peine d'être déplacé.
+ce qu'il faut coller, et le tri de ce qui vaut la peine d'être déplacé. Les dossiers prêts à
+importer se régénèrent avec `python3 scripts/export_projets_claude.py` (un zip par Projet dans
+`o/projets-claude/`).
 
 ## 1. Ce qui se déplace, ce qui reste
 
@@ -45,7 +47,7 @@ d'abord), une chose à ne pas faire aujourd'hui, une question unique à la fin.
 
 **Base de connaissances à charger** (depuis le dépôt, fichiers texte) :
 - les 6 fichiers de `.claude/references/social-media-ceo/`
-- les 6 `SKILL.md` `smc-*` (ils servent de modes d'emploi : « applique smc-client à ce prospect »)
+- les 6 cadres `.claude/references/social-media-ceo/cadres/smc-*.md` (modes d'emploi : « applique smc-client à ce prospect »)
 - `offre/` pour les offres et les tarifs
 - une page **que tu rédiges** « Où j'en suis » : clients actifs, devis en attente, échéances. Elle
   remplace le « contexte connu au 23 septembre » recopié dans quatre prompts. À remettre à jour
@@ -131,6 +133,6 @@ clone local est à jour (`git pull` le dimanche soir).
 | Désactiver la routine « Point compta du matin » après 3 jours concluants | Claude sur demande | 2 min |
 | Créer les Projets clients (un à la fois, en commençant par La Galerie et J Lawson) | Maxime | 10 min chacun |
 | Créer la tâche Cowork du lundi, lancer un essai à la main | Maxime | 15 min |
-| Retirer les `smc-*` du dépôt une fois le Projet pilotage en service | Claude sur demande | 5 min |
+| Retirer les `smc-*` des skills du dépôt | fait le 19/10/2026 (déplacés dans les références) | |
 
 Les routines actuelles restent actives jusqu'à ce que leur remplaçant ait tourné trois jours.
