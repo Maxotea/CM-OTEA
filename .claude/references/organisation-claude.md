@@ -261,3 +261,22 @@ Ce que je ne peux pas faire depuis ici :
 - créer les Projets Claude et la tâche Cowork : zips prêts dans `o/projets-claude/`, texte dans
   `kit-cowork.md` ;
 - poser les préférences personnelles du compte (texte au §5).
+
+## 11. La carte des dépôts (audit intégral du 19/10/2026)
+
+Détail : `ameliorations/2026-10-19-audit-integral-code-cowork.md`.
+
+| Dépôt | Rôle | Statut |
+|---|---|---|
+| CM-OTEA | moteur CM, skills `cm-metricool`, `cm-meta-ads`, `cm-hyrox` | source unique du CM |
+| PROSPECTION (OTEA Moteur) | prospection, CRM, « Ma journée » | code ; doublon partiel avec le Bilan du matin, à trancher |
+| MONTAGE-OTEA (PostCam) | montage, DaVinci, splits HYROX | code ; reçoit le skill `hyrox-splits` du kit |
+| TRESORIE-PARFAITE | plan de trésorerie | code ; `docs/etude-prix-cm.md` à rapatrier dans `offre/` |
+| ACHILLE, RECMYRUN, makepeople-game | produits annexes | code ; le CM de MAKE PEOPLE sort du dépôt du jeu |
+| COMMENT- | données de la chaîne ExpliqueMoi | reste tant que la routine existe |
+| CM-BTOC | ancien dépôt B2C | fondu dans CM-OTEA le 19/10, à archiver |
+| MAKEPEOPLE, SITE-OTEA-PRODUCTION | vides ou remplacés | à archiver |
+| STRUCTUREOTEA | journal de bord (un README) | pas un dépôt : dossier Cowork « Journal » |
+
+Skills du compte : `reel-script` et `reel-lint` restent ; `cm-otea` et `cm-b2c` deviennent des
+aiguillages (kit) ; `hyrox-splits-montage` et `morning` sortent. Kit : `.claude/cowork-kit/`.

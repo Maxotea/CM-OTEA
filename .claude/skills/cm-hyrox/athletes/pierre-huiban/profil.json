@@ -1,0 +1,106 @@
+{
+  "_note": "Pré-rempli au 06/08/2026 avec ce qui est vérifié dans references/clients/pierre-huiban.md. Tout champ à null est à obtenir via templates/dossier-athlete.md. Ne rien inventer : un champ vide est exploitable, un champ faux ne l'est pas.",
+
+  "slug": "pierre-huiban",
+  "nom": "Pierre Huiban",
+  "blog_id": 6572293,
+  "instagram": "pierrehuiban89",
+  "reseaux": ["instagram"],
+  "naissance": null,
+
+  "division": "doubles-pro-homme",
+  "partenaire": { "nom": "Antoine", "naissance": null, "instagram": null },
+  "groupe_age_solo": "35-39",
+  "groupe_age_doubles": null,
+
+  "objectif_saison": "Requalification aux Mondiaux de Hong Kong, en Doubles Pro Homme avec Antoine",
+  "palmares": ["Qualifié et présent aux Mondiaux de Stockholm, 18-21 juin 2026"],
+
+  "entrainement": { "coach": "Quentin", "club": null, "salles": [], "creneaux": [] },
+  "historique": [],
+  "chiffres": { "splits": null, "pb": null },
+
+  "horaires": { "story": "06:00", "post": "00:30", "carrousel": "18:00" },
+
+  "da": {
+    "bg": "#0A0A0A",
+    "fg": "#FFFFFF",
+    "muted": "#9A9A9A",
+    "accent": "#DC2626",
+    "cta_bg": "#DC2626",
+    "cta_fg": "#0A0A0A",
+    "font_family": ["Anton", "Impact", "Liberation Sans Narrow", "DejaVu Sans"],
+    "mono_family": ["JetBrains Mono", "Menlo", "DejaVu Sans Mono", "Liberation Mono"],
+    "uppercase_titles": true,
+    "rule": false,
+    "note": "Pitch Black + Rouge Sang, Anton uppercase, stats en mono. Énergie brute, aucune mise en scène."
+  },
+
+  "mantra": "LFG",
+  "tics": ["LFG"],
+  "voix": "Tutoiement, énergie brute, aucune mise en scène, aucun bullshit. La rage silencieuse : l'intensité plutôt que le discours. La donnée comme preuve, jamais la promesse.",
+
+  "persona": "Communauté HYROX France — pratiquants amateurs qui travaillent à plein temps",
+  "niveau_cible": null,
+  "questions_recurrentes": [],
+
+  "positions_ok": [],
+  "interdits": [
+    "sponsoring déguisé non assumé",
+    "prix ou partenariat inventé",
+    "chrono, charge ou date de Mondiaux non vérifiés"
+  ],
+  "contraintes": ["Double vie professionnelle : commercial Europe — cadre à préciser"],
+
+  "sponsors": [
+    {
+      "marque": "KAIRYN",
+      "site": "kairyn.fr",
+      "categorie": "complements-sport",
+      "produit_phare": "IGNITE (pré-workout)",
+      "handle": null,
+      "hashtag": "#partenariat",
+      "obligations": null,
+      "echeance": null,
+      "photos_produit": false,
+      "dans_assiette": false
+    },
+    {
+      "marque": "GX SOCIETY",
+      "site": null,
+      "categorie": "recuperation-pressotherapie",
+      "produit_phare": null,
+      "handle": null,
+      "hashtag": "#partenariat",
+      "obligations": null,
+      "echeance": null,
+      "photos_produit": false,
+      "dans_assiette": false
+    },
+    {
+      "marque": "SPLIT NUTRITION",
+      "site": null,
+      "categorie": "repas-livres",
+      "produit_phare": null,
+      "handle": null,
+      "hashtag": "#partenariat",
+      "obligations": null,
+      "echeance": null,
+      "photos_produit": false,
+      "dans_assiette": true
+    }
+  ],
+
+  "materiel": { "micro_cravate": null, "mode_son": null, "lieux": [] },
+
+  "media": {
+    "banque": "CM-OTEA/medias/pierre-huiban/",
+    "photos_inventoriees": 81,
+    "trous": ["famille / double vie", "photos sponsors Kairyn", "photos sponsors GX Society", "photos sponsors Split Nutrition"],
+    "ia_autorisee": false
+  },
+
+  "palier": null,
+  "vitrine": true,
+  "t0_fige": false
+}

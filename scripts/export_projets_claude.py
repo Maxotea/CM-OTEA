@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prépare un dossier prêt à importer pour chaque Projet Claude (ou Cowork) d'OTEA.
 
-Pour chaque Projet : INSTRUCTIONS.md (le texte à coller dans le champ instructions) et les
+Un zip du kit Cowork (.claude/cowork-kit), puis pour chaque Projet : INSTRUCTIONS.md (le texte à coller dans le champ instructions) et les
 fichiers de la base de connaissances, plus un zip. Les sources restent dans le dépôt : on
 régénère après toute modification, on ne retouche jamais les copies.
 
@@ -105,6 +105,13 @@ def exporter(sortie: Path) -> list[Path]:
         shutil.rmtree(sortie)
     sortie.mkdir(parents=True)
     zips = []
+    kit = RACINE / ".claude" / "cowork-kit"
+    archive = sortie / "00-cowork-kit.zip"
+    with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(kit.rglob("*")):
+            if f.is_file():
+                z.write(f, f"cowork-kit/{f.relative_to(kit)}")
+    zips.append(archive)
     for nom, p in projets().items():
         dossier = sortie / nom
         dossier.mkdir()
