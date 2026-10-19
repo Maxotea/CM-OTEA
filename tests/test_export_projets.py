@@ -11,10 +11,14 @@ spec.loader.exec_module(export_projets)
 
 def test_export_complet(tmp_path):
     zips = export_projets.exporter(tmp_path / "out")
-    assert len(zips) == 8
+    assert len(zips) == 9
     for z in zips:
         with zipfile.ZipFile(z) as archive:
             noms = archive.namelist()
+            if z.name.startswith("00-"):
+                assert any(n.endswith("README.md") for n in noms), z.name
+                assert sum(n.endswith("SKILL.md") for n in noms) >= 8, z.name
+                continue
             assert any(n.endswith("INSTRUCTIONS.md") for n in noms), z.name
             assert len(noms) >= 2, z.name
 

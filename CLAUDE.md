@@ -23,6 +23,7 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
 | `.claude/references/organisation-claude.md` | où faire quoi entre Claude Code, Cowork, conversation, routines et Actions ; le plan de migration issu de l'audit du 16/10/2026 |
 | `.claude/references/kit-cowork.md` | ce qui passe en Projet Claude ou en tâche Cowork, avec les instructions à coller |
+| `.claude/cowork-kit/` | le dossier de travail Cowork à copier : agents, skills d'aiguillage du compte, skill hyrox pour MONTAGE-OTEA |
 
 ## Ce dépôt est le moteur, pas le bureau
 
@@ -39,6 +40,7 @@ l'avoir relue.
 |---|---|
 | `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
 | `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
+| `cm-hyrox` | client athlète HYROX ou hybride, Pierre Huiban, une course, dossier de sponsoring, offre « CM athlète » (importé de CM-BTOC le 19/10/2026) |
 
 Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
 `smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils

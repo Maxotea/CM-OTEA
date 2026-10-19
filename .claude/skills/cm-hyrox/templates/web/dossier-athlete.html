@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossier Athlète — OTEA Production</title>
+<meta name="description" content="Ce qu'on te demande pour construire ton compte : six minutes par séance, cinq lignes par semaine, et trois minutes de vidéo pour démarrer.">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dossier Athlète — OTEA Production">
+<meta property="og:description" content="Ce qu'on te demande pour construire ton compte : six minutes par séance, cinq lignes par semaine, et trois minutes de vidéo pour démarrer.">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+
+<meta name="theme-color" content="#EFEFEC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D0E10" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%81%3C/text%3E%3C/svg%3E">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body, h1, h2, p, dl, dd, ol, ul { margin: 0; }
+  ol, ul { padding: 0; }
+</style>
+
+<style>
+  :root {
+    --paper:      #EFEFEC;
+    --paper-2:    #E4E4DF;
+    --ink:        #16171A;
+    --ink-soft:   #55565C;
+    --ink-faint:  #8A8B90;
+    --rule:       #C9C9C2;
+    --spot:       #D8401A;
+    --spot-ink:   #FFFFFF;
+
+    --measure: 34rem;
+    --step--1: 0.8125rem;
+    --step-0:  1.0625rem;
+    --step-1:  1.375rem;
+    --step-2:  2rem;
+    --step-3:  clamp(2.75rem, 9vw, 4.25rem);
+
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --cond: "Arial Narrow", "Helvetica Neue", Impact, var(--sans);
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:     #0D0E10;
+      --paper-2:   #16181B;
+      --ink:       #ECECE8;
+      --ink-soft:  #A3A4A8;
+      --ink-faint: #6D6E73;
+      --rule:      #2A2C30;
+      --spot:      #FF6440;
+      --spot-ink:  #0D0E10;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:     #0D0E10;
+    --paper-2:   #16181B;
+    --ink:       #ECECE8;
+    --ink-soft:  #A3A4A8;
+    --ink-faint: #6D6E73;
+    --rule:      #2A2C30;
+    --spot:      #FF6440;
+    --spot-ink:  #0D0E10;
+  }
+  :root[data-theme="light"] {
+    --paper:     #EFEFEC;
+    --paper-2:   #E4E4DF;
+    --ink:       #16171A;
+    --ink-soft:  #55565C;
+    --ink-faint: #8A8B90;
+    --rule:      #C9C9C2;
+    --spot:      #D8401A;
+    --spot-ink:  #FFFFFF;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--step-0);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(1.75rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3rem) 5rem;
+  }
+
+  /* ---- en-tête : une feuille de départ ---- */
+
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--ink);
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .masthead b { color: var(--ink); font-weight: 600; }
+
+  h1 {
+    font-family: var(--cond);
+    font-size: var(--step-3);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-wrap: balance;
+    margin: 1.5rem 0 0;
+  }
+  .lede {
+    max-width: var(--measure);
+    font-size: var(--step-1);
+    line-height: 1.45;
+    color: var(--ink-soft);
+    margin: 1rem 0 0;
+    text-wrap: pretty;
+  }
+  .lede strong { color: var(--ink); font-weight: 600; }
+
+  /* ---- le pacte : trois chiffres, format tableau de chrono ---- */
+
+  .pact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 2.5rem;
+  }
+  .pact > div { background: var(--paper); padding: 1.25rem 1.1rem; }
+  .pact dt {
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .pact dd {
+    font-family: var(--cond);
+    font-size: var(--step-2);
+    font-weight: 700;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin: 0.4rem 0 0.25rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .pact p { font-size: var(--step--1); color: var(--ink-soft); margin: 0; line-height: 1.45; }
+
+  /* ---- sections numérotées : l'ordre compte, c'est un parcours ---- */
+
+  section { margin-top: 3.5rem; }
+
+  .head {
+    display: grid;
+    grid-template-columns: 3.25rem 1fr;
+    align-items: start;
+    gap: 0 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--rule);
+  }
+  .num {
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--spot);
+    letter-spacing: 0.05em;
+    padding-top: 0.35rem;
+    font-variant-numeric: tabular-nums;
+  }
+  h2 {
+    font-family: var(--cond);
+    font-size: var(--step-2);
+    font-weight: 700;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -0.005em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .meta {
+    grid-column: 2;
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0.5rem 0 0;
+  }
+  .body { grid-column: 2; max-width: var(--measure); }
+  .body > * + * { margin-top: 0.9rem; }
+  .body p { margin: 0; text-wrap: pretty; }
+  .body strong { font-weight: 600; }
+
+  ul.items { list-style: none; margin: 1rem 0 0; padding: 0; }
+  ul.items li {
+    padding: 0.55rem 0 0.55rem 1.4rem;
+    border-top: 1px solid var(--rule);
+    position: relative;
+    color: var(--ink-soft);
+  }
+  ul.items li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 1.15rem;
+    width: 0.55rem; height: 1px;
+    background: var(--spot);
+  }
+  ul.items li b { color: var(--ink); font-weight: 600; }
+
+  /* ---- le bloc voix : la seule chose qui ne se fait pas par écrit ---- */
+
+  .voice {
+    background: var(--paper-2);
+    border-left: 3px solid var(--spot);
+    padding: 1.4rem 1.5rem;
+    margin-top: 1.25rem;
+  }
+  .voice p { margin: 0; }
+  .voice p + p { margin-top: 0.75rem; }
+  .voice .q {
+    font-family: var(--cond);
+    font-size: var(--step-1);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.15;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  /* ---- les cinq lignes du dimanche : une feuille de splits ---- */
+
+  .splits {
+    margin-top: 1.25rem;
+    border: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: var(--step--1);
+  }
+  .splits div {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    align-items: baseline;
+  }
+  .splits div + div { border-top: 1px solid var(--rule); }
+  .splits span { color: var(--spot); font-variant-numeric: tabular-nums; }
+  .splits b { font-weight: 500; color: var(--ink); }
+
+  /* ---- clôture ---- */
+
+  .close {
+    margin-top: 3.5rem;
+    padding-top: 1.25rem;
+    border-top: 2px solid var(--ink);
+  }
+  ol.steps { margin: 1.25rem 0 0; padding: 0; list-style: none; counter-reset: s; }
+  ol.steps li {
+    counter-increment: s;
+    display: grid;
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0.75rem;
+    padding: 0.85rem 0;
+    max-width: var(--measure);
+  }
+  ol.steps li + li { border-top: 1px solid var(--rule); }
+  ol.steps li::before {
+    content: counter(s);
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    color: var(--spot-ink);
+    background: var(--spot);
+    width: 1.55rem; height: 1.55rem;
+    display: grid; place-items: center;
+    font-weight: 600;
+  }
+  ol.steps b { font-weight: 600; }
+  ol.steps p { margin: 0.2rem 0 0; color: var(--ink-soft); font-size: var(--step--1); }
+
+  .cta {
+    display: inline-block;
+    margin-top: 0.85rem;
+    padding: 0.7rem 1.35rem;
+    background: var(--spot);
+    color: var(--spot-ink);
+    text-decoration: none;
+    font-family: var(--cond);
+    font-size: var(--step-1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    transition: filter 0.15s ease;
+  }
+  .cta:hover { filter: brightness(1.12); }
+  .cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .cta { transition: none; } }
+
+  footer {
+    margin-top: 3rem;
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 34rem) {
+    .head { grid-template-columns: 1fr; }
+    .num { padding-top: 0; }
+    .meta, .body { grid-column: 1; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="sheet">
+
+  <header>
+    <div class="masthead">
+      <span><b>OTEA Production</b> — accompagnement athlète</span>
+      <span>Saison 26/27</span>
+    </div>
+
+    <h1>Dossier<br>Athlète</h1>
+
+    <p class="lede">Pour que ce qu'on publie sur ton compte sonne comme <strong>toi</strong>, et pas
+      comme une agence. Tes mots, tes chiffres, tes prises de position — pas les nôtres.</p>
+
+    <dl class="pact">
+      <div>
+        <dt>Par séance</dt>
+        <dd>6 min</dd>
+        <p>Trois plans, toujours les mêmes, sur une séance que tu faisais déjà.</p>
+      </div>
+      <div>
+        <dt>Par semaine</dt>
+        <dd>5 lignes</dd>
+        <p>Un message le dimanche soir. Trente secondes.</p>
+      </div>
+      <div>
+        <dt>Pour démarrer</dt>
+        <dd>3 min</dd>
+        <p>Une vidéo, cinq questions, une seule prise.</p>
+      </div>
+    </dl>
+  </header>
+
+  <section>
+    <div class="head">
+      <div class="num">01</div>
+      <h2>Toi, en compétition</h2>
+      <p class="meta">Formulaire — 10 min</p>
+      <div class="body">
+        <p>Les faits, et on ne te les redemande plus&#8239;: ta division, ton partenaire si tu cours en
+          doubles, ton coach, tes créneaux de séance.</p>
+        <p>Puis <strong>tes chiffres</strong> — tes trois dernières courses, tes splits si tu les as
+          gardés, ton record. Ce sont eux qui ouvriront tes contenus. Un chrono à toi vaut mieux que
+          n'importe quelle accroche qu'on pourrait écrire.</p>
+        <p>Et ta saison&#8239;: les courses où tu es inscrit, celles que tu vises, et ton objectif en un
+          seul chiffre.</p>
+      </div>
+    </div>
+  </section>
+
+    <section>
+    <div class="head">
+      <div class="num">02</div>
+      <h2>Ta voix, en vidéo</h2>
+      <p class="meta">3 min &#8239;— seul avec ton téléphone &#8239;— pas de rendez-vous</p>
+      <div class="body">
+        <p>Tu lances l&#39;enregistrement, tu réponds aux cinq questions à la suite, tu envoies.
+          C&#39;est tout.</p>
+
+        <div class="voice">
+          <p class="q">Ce n&#39;est pas une présentation.</p>
+          <p>On ne veut pas que tu te vendes &#8239;— on veut t&#39;entendre parler normalement.
+            Une prise brute vaut dix fois mieux qu&#39;une belle prise.</p>
+        </div>
+
+        <p><strong>Les quatre règles comptent plus que tes réponses&#8239;:</strong></p>
+        <ul class="items">
+          <li><b>Une seule prise.</b> Tu ne recommences pas. Si tu bafouilles, tu continues.</li>
+          <li><b>Tu ne coupes pas</b> entre les questions, tu enchaînes.</li>
+          <li><b>3 minutes en tout.</b> Ne prépare rien à l&#39;avance.</li>
+          <li><b>Cette vidéo ne sera jamais publiée.</b> Elle sert à nous, pour apprendre à écrire
+            comme toi.</li>
+        </ul>
+
+        <p>Téléphone vertical, cadre poitrine, là où tu es.</p>
+
+        <div class="splits">
+          <div><span>01</span><b>Au sixième kilomètre, quand ça fait vraiment mal &#8239;— qu&#39;est-ce que tu te dis dans ta tête&#8239;?</b></div>
+          <div><span>02</span><b>Qu&#39;est-ce qui t&#39;énerve dans le milieu&#8239;?</b></div>
+          <div><span>03</span><b>Sur quoi tout le monde se trompe, d&#39;après toi&#8239;?</b></div>
+          <div><span>04</span><b>Le jour où tu as failli arrêter &#8239;— c&#39;était quand, et pourquoi tu as continué&#8239;?</b></div>
+          <div><span>05</span><b>Décris la dernière personne qui t&#39;a écrit en DM.</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section>
+    <div class="head">
+      <div class="num">03</div>
+      <h2>Tes limites</h2>
+      <p class="meta">Formulaire — 5 min</p>
+      <div class="body">
+        <p>La partie qui nous empêche de faire une bêtise en ton nom. Sois franc&#8239;: rien ici ne sort
+          d'entre nous.</p>
+        <ul class="items">
+          <li><b>Deux sujets</b> sur lesquels tu acceptes de prendre position publiquement, quitte
+            à ce que ça fasse débat.</li>
+          <li><b>Trois sujets</b> sur lesquels on ne parle jamais en ton nom.</li>
+          <li><b>Ce qu'on ne montre jamais</b> — personnes, lieux, vie privée.</li>
+          <li><b>Tes partenaires</b>, leur @ exact, ce que tu leur dois et à quelle échéance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <div class="num">04</div>
+      <h2>Ton matériel</h2>
+      <p class="meta">Formulaire — 2 min</p>
+      <div class="body">
+        <p>Ton téléphone suffit. Le seul achat qu'on te demande, c'est un
+          <strong>micro-cravate sans fil</strong>, autour de 50 € — le son est ce qui fait décrocher
+          une vidéo, jamais l'image.</p>
+        <p>Et si tu n'aimes pas parler en salle&#8239;: tu filmes muet, tu enregistres ta voix au calme le
+          soir. Ça prend 90 secondes et le rendu est souvent meilleur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head">
+      <div class="num">05</div>
+      <h2>Le rituel</h2>
+      <p class="meta">Une fois lancé — c'est tout ce qu'on te demande</p>
+      <div class="body">
+        <p>Chaque dimanche soir, un message. Toujours le même format, et il alimente tout ce qu'on
+          publie la semaine suivante&#8239;:</p>
+
+        <div class="splits">
+          <div><span>01</span><b>Mes séances de la semaine</b></div>
+          <div><span>02</span><b>Mon chiffre de la semaine — un chrono, une charge, un volume</b></div>
+          <div><span>03</span><b>Ce qui a été dur</b></div>
+          <div><span>04</span><b>Une question qu'on m'a posée</b></div>
+          <div><span>05</span><b>Ce qui arrive la semaine prochaine</b></div>
+        </div>
+
+        <p>Et tes trois plans quand tu y penses&#8239;: <strong>un large, un serré sur l'effort, un plan de
+          fin.</strong> Déposés dans le dossier partagé.</p>
+        <p>Si tu ne déposes rien une semaine, ce n'est pas grave — ton compte continue de tourner.
+          Tu n'auras simplement pas de vidéo de toi.</p>
+        <p>Après chaque course&#8239;: tes splits, et ton ressenti à chaud, même en vocal décousu de trente
+          secondes. C'est le contenu qui marche le mieux de toute la saison, et il ne se reconstitue
+          pas trois jours après.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>Ce qui se passe maintenant</h2>
+    <ol class="steps">
+      <li><div><b>Tu remplis le formulaire</b>
+        <p>Dix minutes, une seule fois. Les parties 01, 03 et 04 — les faits.</p>
+        <a class="cta" href="https://forms.gle/ahBDrTegxhhNCYU76">Remplir le dossier</a></div></li>
+      <li><div><b>Tu tournes ta vidéo de 3 minutes</b>
+        <p>Cinq questions, une prise, chez toi. Pas de rendez-vous à caler.</p></div></li>
+      <li><div><b>On te renvoie ta ligne éditoriale</b>
+        <p>Tes piliers, ta bio réécrite, et le calendrier de ta saison calé sur tes courses. Tu
+          valides, et on lance.</p></div></li>
+    </ol>
+  </div>
+
+  <footer>OTEA Production — à mettre à jour à chaque changement de saison ou d'objectif</footer>
+
+</div>
+
+</body>
+</html>
