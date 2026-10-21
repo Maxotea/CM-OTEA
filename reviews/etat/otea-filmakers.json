@@ -91,6 +91,12 @@
       "type": "Story",
       "resultat": "publication programmée (version 401937063)",
       "post_id": 401937063
+    },
+    "2026-11-04T18:00:00|402269700": {
+      "quand": "2026-10-21T20:18:53",
+      "type": "Carrousel (3 visuels)",
+      "resultat": "publication programmée (version 402528523)",
+      "post_id": 402528523
     }
   }
 }

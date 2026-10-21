@@ -1,0 +1,108 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {},
+  "auto": {
+    "2026-10-22T06:00:00|388534515": {
+      "quand": "2026-10-21T20:18:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528131)",
+      "post_id": 402528131
+    },
+    "2026-10-23T06:00:00|388534533": {
+      "quand": "2026-10-21T20:18:24",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528149)",
+      "post_id": 402528149
+    },
+    "2026-10-24T06:00:00|388534578": {
+      "quand": "2026-10-21T20:18:25",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528173)",
+      "post_id": 402528173
+    },
+    "2026-10-25T06:00:00|388534613": {
+      "quand": "2026-10-21T20:18:27",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528207)",
+      "post_id": 402528207
+    },
+    "2026-10-26T06:00:00|388534627": {
+      "quand": "2026-10-21T20:18:28",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528222)",
+      "post_id": 402528222
+    },
+    "2026-10-27T06:00:00|388534652": {
+      "quand": "2026-10-21T20:18:30",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528241)",
+      "post_id": 402528241
+    },
+    "2026-10-28T06:00:00|388534671": {
+      "quand": "2026-10-21T20:18:31",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528257)",
+      "post_id": 402528257
+    },
+    "2026-10-29T06:00:00|388534771": {
+      "quand": "2026-10-21T20:18:33",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528277)",
+      "post_id": 402528277
+    },
+    "2026-10-30T06:00:00|388534791": {
+      "quand": "2026-10-21T20:18:34",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528297)",
+      "post_id": 402528297
+    },
+    "2026-10-31T06:00:00|388534818": {
+      "quand": "2026-10-21T20:18:36",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528315)",
+      "post_id": 402528315
+    },
+    "2026-11-01T06:00:00|388534843": {
+      "quand": "2026-10-21T20:18:37",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528334)",
+      "post_id": 402528334
+    },
+    "2026-11-02T06:00:00|388534861": {
+      "quand": "2026-10-21T20:18:39",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528356)",
+      "post_id": 402528356
+    },
+    "2026-11-03T06:00:00|388534877": {
+      "quand": "2026-10-21T20:18:43",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528368)",
+      "post_id": 402528368
+    },
+    "2026-11-04T06:00:00|388534894": {
+      "quand": "2026-10-21T20:18:45",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528413)",
+      "post_id": 402528413
+    },
+    "2026-10-23T18:00:00|402235896": {
+      "quand": "2026-10-21T20:18:46",
+      "type": "Carrousel (7 visuels)",
+      "resultat": "publication programmée (version 402528436)",
+      "post_id": 402528436
+    },
+    "2026-10-28T18:00:00|402236607": {
+      "quand": "2026-10-21T20:18:48",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 402528457)",
+      "post_id": 402528457
+    },
+    "2026-11-04T18:00:00|402236839": {
+      "quand": "2026-10-21T20:18:49",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528474)",
+      "post_id": 402528474
+    }
+  }
+}
