@@ -1,7 +1,7 @@
 {
  "_doc": "M2-R11-keep-showing-up, reel « monologue » de Pierre Huiban (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube (--drive-index rushes-drive.json, ou --rushes DOSSIER avec des rushes lus par plages). Muet : la valse au piano se pose dans Instagram. Textes : script reel-script, corrigé par les deux vérificateurs du 13/10 (voir corrections_lint).",
  "id": "M2-R11-keep-showing-up",
- "slot": "R11 · jeu. 29/10/2026 12:30 · Metricool 388250135 · feuille du 26-10 (version Rome, repli prévu par calendrier/REELS.md §4.1)",
+ "slot": "R11 · jeu. 29/10/2026 12:30 · Metricool 402005051, BRANCHÉ le 21/10/2026 : brouillon (draft true, autoPublish false), type REEL, vidéo de livraison (md5 c35797c16ef904a42e1e39c4e0532474, hébergée https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7efe0c22-48e9-47c7-af81-dcfa40759aee.mp4, recopiée par Metricool à l'identique), légende = `legende` de cette spec, couverture à 1,7 s · semaine du 26-10 (tableau pas encore généré). Ancien id 388250135.",
  "theme": "Keep showing up : un père qui s'entraîne avec un petit garçon et un métier, et pourquoi il continue",
  "hooks": [
   "53:34 in Rome. / Then I'm Dad again.",

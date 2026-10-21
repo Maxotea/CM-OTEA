@@ -1,7 +1,7 @@
 {
  "_doc": "M4-R12-221-days, reel « monologue » de Pierre Huiban (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube (--drive-index rushes-drive.json, ou --rushes DOSSIER avec des rushes lus par plages). Muet : la valse au piano se pose dans Instagram. Textes : script reel-script, corrigé par les deux vérificateurs du 13/10 (voir corrections_lint).",
  "id": "M4-R12-221-days",
- "slot": "R12 · dim. 01/11/2026 18:00 · Metricool 388250148 · feuille du 26-10",
+ "slot": "R12 · dim. 01/11/2026 18:00 · Metricool 402005104, BRANCHÉ le 21/10/2026 : brouillon (draft true, autoPublish false), type REEL, vidéo de livraison (md5 3f3522352ff591de819111e64d71f2ab, hébergée https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ce0d5fd7-e0aa-4def-8541-6c81413677d1.mp4, recopiée par Metricool à l'identique), légende = `legende` de cette spec, couverture à 2,0 s · semaine du 26-10 (tableau pas encore généré). Ancien id 388250148.",
  "theme": "Hong Kong 2027 : 221 jours, ce que Rome a appris (sled push, transitions), novembre est pour le travail",
  "hooks": [
   "221 days / to Hong Kong.",

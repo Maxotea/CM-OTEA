@@ -92,7 +92,7 @@ d'entraînement (export Garmin ou Strava).
 Référence donnée par Maxime : @rundadlift, reel DeHgY1RxPfB (monologue intérieur
 d'un père qui court, noir et blanc, sous-titres jaunes à empattements centrés,
 valse au piano). Cinq specs dans `projets/pierre-huiban/reels-monologue/` :
-M3-R6 (18/10, brouillon 395043919), M1-R7 (20/10, 388250104), D1-R8 (22/10,
+M3-R6 (27/10, REEL 401840603), M1-R7 (20/10, 388250104, non branché), D1-R8 (22/10,
 388353604), M2-R11 (29/10, 388250135), M4-R12 (01/11, 388250148). Moteur :
 gabarit `monologue` de `scripts/pierre-reel-ralenti.py`, mode d'emploi dans
 `projets/pierre-huiban/reels-dialogue/README.md`. Sorties muettes, aucune voix
@@ -303,6 +303,7 @@ Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un
   stories de décembre ne sont pas créés : aucune vidéo de fond.
 - **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
   liens n'ont pas été envoyés, le courriel perso de Pierre manque.
+- **Reels monologue branchés le 21/10** (brouillons, type REEL, vidéo de livraison vérifiée au md5 sur le CDN et dans la copie Metricool) : D1 « Rome, split by split » 402004284 (jeu. 22/10 12:30, PH-07 du tableau du 19-10 mis à jour), M3 « Two engines » 401840603 (déplacé du 18/10, passé, au mar. 27/10 12:30), M2 « Keep showing up » 402005051 (jeu. 29/10 12:30), M4 « 221 days » 402005104 (dim. 01/11 18:00). M1 « After the line » n'est pas branché : Pierre doit confirmer la scène. R5 « Sled pull » (388250088) et R10 « The hidden station » (388250126), sans vidéo, sont supprimés sur décision de Maxime du 15/10 (mêmes rushes et mêmes idées que M3 et D1).
 - **Corrigé le 13/10** (décision de Maxime : « je ne sais pas, corrige ») : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice », sans la phrase de chute « Rome was one more » qui laissait croire à une troisième qualification. « this season » devient « this year » dans la légende, et le sur-titre de la slide 02 « THE SEASON » devient « 2026 » : Pierre compte Rome comme la course n° 1 d'une nouvelle saison (30/09), et HYROX classe Paris (23 au 26/04/2026) et Lyon (20 au 24/05/2026) en saison 25/26. Les quatre courses sont toutes en 2026. Carrousel du 14/10 : **395138284** (slides 02 et 06 re-rendues, spec `projets/pierre-huiban/carrousels-v2/2026-10-14-quatre-courses-avec-antoine.json`) ; reel du 18/10 : **395043919** (`instagramData.type` encore POST, à passer en REEL au branchement de la vidéo). Tableau du 12-10 mis à jour (_tech B10, B16, E10, E16 ; G6, G12 ; lien F6 vers une planche des 7 slides), `legende_modifiee` reste faux.
 - **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
   321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié
