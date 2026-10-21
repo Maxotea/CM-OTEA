@@ -61,14 +61,14 @@
     {
       "blog_id": 6563137,
       "nom": "J Lawson Golf",
-      "recap_client": true,
+      "recap_client": false,
       "email": "jlawsongolfpro@gmail.com",
       "email_cc": null,
       "email_confirme": true,
       "envoi_review_auto": false,
       "email_suggere": "jlawsongolfpro@gmail.com",
       "ton": "vouvoiement pro, passionné golf, phrases courtes (John est anglophone)",
-      "note": "Email et WhatsApp confirmés par Maxime le 03/08/2026. John est anglophone : phrases courtes. Le drapeau email_confirme est passé a true le 11/09/2026 : la note dit la confirmation acquise depuis le 03/08, seul le drapeau etait reste a false. envoi_review_auto reste false.",
+      "note": "COMPTE DESACTIVE le 21/10/2026 sur demande de Maxime : on ne travaille plus ensemble. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. Brouillons Metricool laisses en place, tous en draft. Note precedente : Email et WhatsApp confirmés par Maxime le 03/08/2026. John est anglophone : phrases courtes. Le drapeau email_confirme est passé a true le 11/09/2026 : la note dit la confirmation acquise depuis le 03/08, seul le drapeau etait reste a false. envoi_review_auto reste false.",
       "canal": "les deux",
       "whatsapp": "33611726562",
       "whatsapp_confirme": true,
@@ -78,18 +78,19 @@
         "max_remplacements_semaine": 4,
         "animer_stories": false,
         "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)"
-      }
+      },
+      "actif": false
     },
     {
       "blog_id": 5733302,
       "nom": "La Galerie Immobilière",
-      "recap_client": true,
+      "recap_client": false,
       "email": "sabrina.khalfa@lagalerieimmobiliere.com",
       "email_cc": "remi.lerer@lagalerieimmobiliere.com",
       "email_confirme": true,
       "envoi_review_auto": false,
       "ton": "vouvoiement élégant",
-      "note": "Fournis par Maxime le 03/08/2026. Sabrina Khalfa (fondatrice) en destinataire principal, Rémi Lerer (directeur associé) en copie. Le 06 45 68 49 66 était déjà identifié comme celui de Rémi via sa signature mail : le 06 59 00 93 49 est donc celui de Sabrina. Un seul lien wa.me est généré, vers Sabrina. Adresses confirmées par l'usage : Maxime a envoyé lui-même la review à Sabrina, Rémi en copie, les 25/08 et 28/08/2026 - le champ « À » des brouillons est donc rempli. envoi_review_auto reste false : l'envoi du lundi passe toujours par Maxime.",
+      "note": "COMPTE DESACTIVE le 21/10/2026 sur demande de Maxime : on ne travaille plus ensemble. Ne plus produire, ne plus brancher de medias, ne plus generer de compte rendu client. Brouillons Metricool laisses en place, tous en draft. Note precedente : Fournis par Maxime le 03/08/2026. Sabrina Khalfa (fondatrice) en destinataire principal, Rémi Lerer (directeur associé) en copie. Le 06 45 68 49 66 était déjà identifié comme celui de Rémi via sa signature mail : le 06 59 00 93 49 est donc celui de Sabrina. Un seul lien wa.me est généré, vers Sabrina. Adresses confirmées par l'usage : Maxime a envoyé lui-même la review à Sabrina, Rémi en copie, les 25/08 et 28/08/2026 - le champ « À » des brouillons est donc rempli. envoi_review_auto reste false : l'envoi du lundi passe toujours par Maxime.",
       "canal": "les deux",
       "whatsapp": "33659009349",
       "whatsapp_confirme": true,
@@ -101,7 +102,8 @@
         "_doc": "actif=brancher les nouvelles photos sur les brouillons de la semaine ; max=plafond de remplacements par semaine (garde le volume relisible) ; animer_stories=convertir les cartes photo en vidéo 5s (coûte ~7,5 crédits Higgsfield par story, à activer à la demande)",
         "note": "Photos de biens réels = posts feed uniquement, jamais présentées comme un bien à vendre si générique."
       },
-      "whatsapp_cc": "33645684966"
+      "whatsapp_cc": "33645684966",
+      "actif": false
     },
     {
       "blog_id": 6572293,
