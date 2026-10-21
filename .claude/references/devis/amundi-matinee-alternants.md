@@ -119,3 +119,31 @@ fixer au 25 octobre pour laisser une semaine avant l'événement.
 2. Le devis Pennylane, à créer avec `pennylane_create_quote_json` (prix en
    chaîne de caractères).
 3. Le mail d'envoi à Eva, Aude et Lucile en copie.
+
+## Point de calage du mercredi 21 octobre 2026, 14h (Teams Amundi)
+
+Invitation d'Eva du 19/10 (18h37) : « nous avons pu étudier plus amplement ta
+nouvelle proposition ». Participants invités : Eva Darcel, Aude Poujade, Lucile
+Wuillemier et une nouvelle personne, Delphine Tordjman (adresse « -ext »,
+prestataire extérieure d'Amundi, rôle inconnu).
+
+État au 21/10 au matin :
+- Devis 05153 à 1 400 € HT accepté : bon de commande 10065515903 reçu le 14/10
+  d'Alexandre Tchirbachian (Communication & Budget). Facture après le 2/11,
+  libellée AMUNDI AM Comptabilité Fournisseurs, PDF à
+  suppliers-invoices.fr@amundi.com, copie pole-achats.communication@amundi.com.
+  Maxime a confirmé le 16/10.
+- Documents envoyés le 7/10 : le déroulé « animation allégée » (PDF) et le devis.
+  C'est la seule proposition qu'Amundi a entre les mains.
+- Pas encore produit : la liste définitive des défis (le document en propose
+  60), les 3 questions Amundi du Burger Quiz, la maquette des cartes.
+- Pas encore dans l'agenda : la matinée du 2/11 (8h-13h) et la préparation du
+  matériel le 30/10.
+
+Ordre du jour proposé pour les 30 minutes : 1) leur retour sur la proposition,
+2) validation des défis (60 proposés, 10 par carte, 6 familles), 3) les 3
+questions Amundi du quiz, 4) la logistique côté Amundi (micro, enceinte,
+estrade, émargement à 4 ou 5, fermeture petit-déjeuner 9h, portes du buffet
+11h55-12h15, stands sur tables hautes), 5) la photo LinkedIn (validation
+juridique), 6) le rôle de Delphine Tordjman, 7) heure d'arrivée et contact sur
+place le 2/11.
