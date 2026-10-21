@@ -108,3 +108,35 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   lecture KPI, non appliqué : feed à 11:00 (LinkedIn 11h vaut 2 à 2,4 fois 12h).
 - **Publicité** : deux specs en brouillon, `campagnes/otea-production/2026-11-seminaires-janvier.json` et
   `2026-12-vacances-hiver.json`. Rien n'est créé dans Meta.
+
+## Correction et rattrapage du 21/10/2026
+
+Décision de Maxime : « rattraper tout ce qui n'a pas été publié ». Source : audit du 21/10 au matin. Journal des ids
+dans le scratchpad de la session (`otea-2110/journal-ids.json`).
+
+- **Connexion** : Instagram et Facebook toujours absents de la marque à 15:05 UTC (`getBrandSettings` : LinkedIn,
+  TikTok, YouTube seulement). Rien n'a été recréé pour contourner la panne. Les providers instagram et facebook sont
+  restés dans tous les posts, Metricool les accepte encore en écriture.
+- **CTA** : « lien en bio » devient « écrivez-nous en message » dans 16 légendes à venir, état de publication
+  conservé. Armés : 23/10 402251845, 26/10 402249588, 28/10 402251900, 30/10 402250284 (SATIS : CTA seul, photo
+  9ea5ec6b gardée en attendant que Maxime confirme), 02/11 402250335. Brouillons : 04/11 402250385, 06/11 402249319,
+  09/11 402250439, 12/11 402250488, 13/11 402250537, 16/11 402250584, 18/11 402250636, 20/11 402250671,
+  23/11 402250697, 25/11 402250737, 27/11 402250797, 30/11 402250849. Le 21/10 (393966788) était déjà passé.
+- **Carrousel du 28/10** : slide 8 re-rendue par `scripts/carrousel.py` (thème otea-production, Inter Display, Q5),
+  même spec que le 13/10 au mot près sauf « Lien en bio. » devenu « Écrivez-nous en message. ». Les slides 1 à 7
+  re-rendues sortent identiques au bit près aux PNG publiés. Nouvelle slide 8 : `7dcc4be2-a341-4637-bd3a-2e881c3564bb.png`
+  (md5 0f5f8a036b851e09c718ae9d6d540aab, contrôlé sur CloudFront). La spec reste hors dépôt (bac à sable du 12/10).
+- **Doublon 9ea5ec6b** : le 23/10 passe sur la photo 03 (171bb0cd, salle de conférence, orateur et public).
+- **02/11** : réécrit sur le tri des images de l'année, ne reprend plus la slide 5 de l'A8.
+- **Rattrapage, en brouillon** (la relève les arme) : 03/11 Noël IG+FB 402253293 (photo 08, 2dd6e51e, au lieu de
+  5f97a127 qui ouvre le carrousel du 13/11 ; J-46 avant le 19/12) ; 05/11 « Les 3 questions » IG+FB 402253328
+  (LinkedIn publié le 21/10) ; 10/11 « On n'a rien d'intéressant à filmer » 402253695 (sans tiret cadratin, photo 21
+  62ec4b1e au lieu de la 42 en 2:3 déjà slide 7 de l'A8) ; 17/11 aftermovie 402253740 (photo 12, 42e049a6, à la place
+  du visuel IA de juillet) ; 24/11 « La cohérence visuelle » 402253810 (photo 01, 08decdeb). Toutes en 3:2.
+- **Contrôle final** : 21/10 au 30/11, 64 contenus (41 stories intactes, 23 posts), un post feed par créneau, aucun
+  doublon, aucun post sans média, aucun placeholder.
+- **Reste à traiter** : les 13 légendes de décembre portent encore « lien en bio » (et sans doute la dernière slide
+  des carrousels du 02, 09, 16, 23 et 30/12) ; images en 2:3 hors de la plage feed : 26/10 (ba99c54d, déjà armé),
+  13/11 (1fb3c4bc en 6e image) et 30/11 (96fe141e), ces deux derniers seront retenus par la relève ; le 12/11 reprend
+  toujours la slide 4 de l'A8 ; 17 brouillons du 01 au 12/10 et stories en erreur des 18 au 21/10 non supprimés
+  (proposition à Maxime).
