@@ -1,6 +1,5 @@
 # Memory Index
 
-- [Projet MAKE PEOPLE](project_make_people.md) : Outil de suivi d'action pour améliorer la productivité tout en préservant le bien-être
 - [Héberger photos réelles pour Metricool](hebergement-photos-reelles-metricool.md) : pipeline media_upload → PUT → media_confirm pour attacher de vraies photos (pas que de l'IA)
 - [Bulk stories Metricool](bulk-schedule-stories-metricool.md) : code action sur mesure : stories en masse, brouillon + média, heure Paris exacte (pas de bug +7h)
 - [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish

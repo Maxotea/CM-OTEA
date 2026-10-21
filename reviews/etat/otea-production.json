@@ -115,6 +115,120 @@
       "type": "Post",
       "resultat": "publication programmée (version 393966813)",
       "post_id": 393966813
+    },
+    "2026-10-16T12:00:00|394179336": {
+      "quand": "2026-10-12T23:08:34",
+      "type": "Post",
+      "resultat": "publication programmée (version 394461848)",
+      "post_id": 394461848
+    },
+    "2026-10-27T10:00:00|383262923": {
+      "quand": "2026-10-13T12:03:11",
+      "type": "Story",
+      "resultat": "publication programmée (version 394877956)",
+      "post_id": 394877956
+    },
+    "2026-10-24T10:00:00|394726897": {
+      "quand": "2026-10-13T12:03:13",
+      "type": "Story",
+      "resultat": "publication programmée (version 394877979)",
+      "post_id": 394877979
+    },
+    "2026-10-14T10:00:00|394867405": {
+      "quand": "2026-10-13T12:03:15",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878015)",
+      "post_id": 394878015
+    },
+    "2026-10-16T10:00:00|394867627": {
+      "quand": "2026-10-13T12:03:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878048)",
+      "post_id": 394878048
+    },
+    "2026-10-17T10:00:00|394867637": {
+      "quand": "2026-10-13T12:03:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878083)",
+      "post_id": 394878083
+    },
+    "2026-10-21T10:00:00|394867651": {
+      "quand": "2026-10-13T12:03:21",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878113)",
+      "post_id": 394878113
+    },
+    "2026-10-23T10:00:00|394867664": {
+      "quand": "2026-10-13T12:03:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 394878134)",
+      "post_id": 394878134
+    },
+    "2026-10-28T10:00:00|394867984": {
+      "quand": "2026-10-14T09:39:34",
+      "type": "Story",
+      "resultat": "publication programmée (version 395704228)",
+      "post_id": 395704228
+    },
+    "2026-10-28T12:00:00|394672845": {
+      "quand": "2026-10-14T15:21:57",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 395994536)",
+      "post_id": 395994536
+    },
+    "2026-10-29T10:00:00|383262947": {
+      "quand": "2026-10-15T09:18:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 396646201)",
+      "post_id": 396646201
+    },
+    "2026-10-30T10:00:00|394868356": {
+      "quand": "2026-10-16T09:11:53",
+      "type": "Story",
+      "resultat": "publication programmée (version 397556863)",
+      "post_id": 397556863
+    },
+    "2026-10-30T12:00:00|390382368": {
+      "quand": "2026-10-16T14:58:08",
+      "type": "Post",
+      "resultat": "publication programmée (version 397842425)",
+      "post_id": 397842425
+    },
+    "2026-10-31T10:00:00|394727280": {
+      "quand": "2026-10-17T08:43:56",
+      "type": "Story",
+      "resultat": "publication programmée (version 398387996)",
+      "post_id": 398387996
+    },
+    "2026-11-01T10:00:00|383263823": {
+      "quand": "2026-10-18T08:59:32",
+      "type": "Story",
+      "resultat": "publication programmée (version 399005149)",
+      "post_id": 399005149
+    },
+    "2026-11-02T10:00:00|383263840": {
+      "quand": "2026-10-19T10:09:24",
+      "type": "Story",
+      "resultat": "publication programmée (version 399845636)",
+      "post_id": 399845636
+    },
+    "2026-11-02T12:00:00|390382400": {
+      "quand": "2026-10-19T10:09:26",
+      "type": "Post",
+      "resultat": "publication programmée (version 399845659)",
+      "post_id": 399845659
+    },
+    "2026-11-03T10:00:00|383263849": {
+      "quand": "2026-10-20T09:34:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 400897145)",
+      "post_id": 400897145
+    },
+    "2026-11-04T10:00:00|394868255": {
+      "quand": "2026-10-21T09:30:03",
+      "type": "Story",
+      "resultat": "publication programmée (version 401937034)",
+      "post_id": 401937034
     }
   }
 }
