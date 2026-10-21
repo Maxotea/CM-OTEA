@@ -1,0 +1,67 @@
+{
+ "source": "Metricool blog 6572293 (Pierre Huiban, Instagram). Contenus supprimés le 21/10/2026, archivés avant suppression (texte, médias, post Metricool complet).",
+ "posts": [
+  {
+   "id": 394698681,
+   "uuid": "8760906723771108540",
+   "date": "2026-11-07T09:00:00",
+   "kind": "POST",
+   "draft": true,
+   "autoPublish": false,
+   "text": "Ask me anything 🙏\n\nTraining around a job and a family. Racing Pro Doubles with @antoine_bhna. Rome and its 53:34. The road to Hong Kong in June.\n\nIf you've ever wanted to ask me something about any of it, leave your question in the comments. I'll answer as many as I can, as honestly as I can.\n\nI read everything ❤️\n\n#hyrox #askmeanything #hyroxdoubles #workingdad #roadtohongkong",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/43f2339b-3aa7-4e91-9cf9-81c2b77507b1.jpg",
+     "md5": "720e923cc4bf561948acd1b76a957339",
+     "dimensions": "960x1440 (2:3)"
+    }
+   ],
+   "raison": "Post « Ask me anything » du 07/11 09:00 : il engage Pierre à répondre aux questions en commentaire, ce qu'il ne fera pas (consigne du 21/10/2026, avant le passage du compte en publication automatique). Photo en 2:3, hors plage feed de l'API Instagram.",
+   "supprime_le": "2026-10-21",
+   "post_metricool_complet": {
+    "id": 394698681,
+    "publicationDate": {
+     "dateTime": "2026-11-07T09:00:00",
+     "timezone": "Europe/Paris"
+    },
+    "creationDate": {
+     "dateTime": "2026-10-13T10:13:00",
+     "timezone": "Europe/Paris"
+    },
+    "text": "Ask me anything 🙏\n\nTraining around a job and a family. Racing Pro Doubles with @antoine_bhna. Rome and its 53:34. The road to Hong Kong in June.\n\nIf you've ever wanted to ask me something about any of it, leave your question in the comments. I'll answer as many as I can, as honestly as I can.\n\nI read everything ❤️\n\n#hyrox #askmeanything #hyroxdoubles #workingdad #roadtohongkong",
+    "firstCommentText": "",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "PENDING",
+      "detailedStatus": "Pending"
+     }
+    ],
+    "media": [
+     "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/43f2339b-3aa7-4e91-9cf9-81c2b77507b1.jpg"
+    ],
+    "autoPublish": false,
+    "saveExternalMediaFiles": false,
+    "mediaAltText": [
+     null
+    ],
+    "shortener": false,
+    "draft": true,
+    "twitterData": {
+     "type": "POST"
+    },
+    "instagramData": {
+     "autoPublish": false,
+     "type": "POST",
+     "showReelOnFeed": true,
+     "isAiGenerated": false
+    },
+    "hasNotReadNotes": false,
+    "uuid": "8760906723771108540",
+    "creatorUserMail": "contact@oteaproduction.com",
+    "creatorUserId": 3689627,
+    "brandTags": []
+   }
+  }
+ ]
+}

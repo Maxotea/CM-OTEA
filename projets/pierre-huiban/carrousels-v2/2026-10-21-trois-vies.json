@@ -1,7 +1,7 @@
 {
   "client": "pierre-huiban", "slug": "2026-10-21-trois-vies", "da": "v2-trois-vies",
-  "date_time": "2026-10-21T18:00:00", "facette": "FATHER",
-  "source": "Persona écrit par Pierre, transmis par Maxime le 03/10/2026. Aucun horaire, aucun chiffre ajouté. Employeur volontairement non nommé (à valider avec Pierre).",
+  "date_time": "2026-10-23T18:00:00", "facette": "FATHER",
+  "source": "Persona écrit par Pierre, transmis par Maxime le 03/10/2026. Aucun horaire, aucun chiffre ajouté. Employeur volontairement non nommé. Le 21/10/2026, l'intitulé de poste de la slide 4 (« Head of Strategic Accounts, Southern Europe ») est remplacé par « Sales leader, Southern Europe » : trop précis, il pouvait mener à l'employeur via LinkedIn. Carrousel décalé au vendredi 23/10 18:00 (Metricool 402051962).",
   "slides": [
     {"fond": "ink", "kicker": "Who I am", "titre": "Father. Executive. **Athlete.**", "titre_taille": 104,
      "texte": "Three parts of the same life. None of them is optional."},
@@ -9,7 +9,7 @@
      "texte": "While keeping a very full professional and family life. Since then, the project has become something else."},
     {"facette": "FATHER", "kicker": "The father", "titre": "Sport is not my **full-time job.**", "titre_taille": 84,
      "texte": "I'm married and dad to a little boy. My training has to find its place in a family life I care about deeply."},
-    {"facette": "EXECUTIVE", "kicker": "The executive", "titre": "Head of Strategic Accounts, Southern Europe.", "titre_taille": 76,
+    {"facette": "EXECUTIVE", "kicker": "The executive", "titre": "Sales leader, Southern Europe.", "titre_taille": 76,
      "texte": "A sales team and key accounts across France, Spain and Italy. An international, demanding environment, built on performance."},
     {"kicker": "What it takes", "titre": "Early sessions. Travel. A family that is **part of the adventure.**", "titre_taille": 76,
      "texte": "Behind the races and the podiums, there is mostly organisation."},
