@@ -1,5 +1,13 @@
 # La Galerie Immobilière — fiche client
 
+> ## ⛔ COMPTE DÉSACTIVÉ · 21/10/2026
+>
+> Maxime a mis fin à la collaboration le 21/10/2026 (« on ne travaille plus ensemble »). **Ne plus produire de contenu, ne plus programmer, ne plus brancher de média, ne plus générer de tableau de validation ni de compte rendu client.** Le compte est sorti de la relève (`reviews/config.json`, `actif: false`), du récap du lundi et de la détection de nouveaux médias (`recaps/clients-config.json`, `actif: false`).
+>
+> **Ce qui restait dans Metricool au 21/10/2026 :** 59 contenus du 21/10 au 06/12, dont 47 stories et 12 posts ou reels (10 sans média). **Tous en brouillon, aucun en publication automatique** : rien ne partira tout seul. Ces brouillons n'ont pas été supprimés : la suppression est irréversible et Maxime ne l'a pas demandée.
+>
+> La fiche ci-dessous est conservée telle quelle, au cas où le compte reviendrait.
+
 ## Profil (vérifié web juillet 2026 — lagalerieimmobiliere.com, IG @lagalerieimmobiliere)
 - Positionnement : **« L'art de l'immobilier à Paris & Île-de-France »** — agence de prestige. Secteur : Paris 16e, Puteaux (92), Hauts-de-Seine. Services : transaction, location, gestion.
 - Fondatrice : **Sabrina**, 15+ ans d'expérience, formée en immobilier **et architecture d'intérieur** → angle déco/mise en valeur des biens à exploiter dans le contenu.

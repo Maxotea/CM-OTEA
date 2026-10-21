@@ -41,6 +41,8 @@ BLOG_IDS = {
     "la-galerie-immobiliere": 5733302,
     "otea-production": 5733269,
     "pierre-huiban": 6572293,
+    "otea-filmakers": 4728418,
+    "run-on-invest": 6636615,
 }
 
 
@@ -237,7 +239,7 @@ def main():
                          "carrousel déjà validé par le client.")
     ap.add_argument("--client", help="ne traiter qu'un compte, ex. le-loft. "
                                      "À utiliser pour le premier run réel : on vérifie sur un "
-                                     "compte avant d'écrire sur les six.")
+                                     "compte avant d'écrire sur les autres.")
     args = ap.parse_args()
 
     requis = ["METRICOOL_USER_ID", "METRICOOL_TOKEN"] + ([] if args.dry_run else ["IMGBB_API_KEY"])

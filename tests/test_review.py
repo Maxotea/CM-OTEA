@@ -170,6 +170,38 @@ def test_corps_de_sort_du_brouillon_et_garde_le_type():
     assert corps["firstCommentText"] == "premier commentaire"
 
 
+def test_corps_de_garde_la_couverture_et_le_mode_notification():
+    post = {"id": 1, "media": ["https://x/1.mp4"], "instagramData": {"type": "REEL"},
+            "providers": [{"network": "instagram"}], "videoCoverMilliseconds": 2400,
+            "publicationDate": {"dateTime": "2026-10-24T12:30:00", "timezone": "Europe/Paris"}}
+    corps = review.corps_de(post, "texte", "2026-10-24T12:30:00", True, notification=True)
+    # notification : sort du brouillon, mais Metricool notifie au lieu de publier
+    assert corps["draft"] is False and corps["autoPublish"] is False
+    assert corps["videoCoverMilliseconds"] == 2400
+    assert "isAiGenerated" not in corps["instagramData"]
+
+
+def test_corps_de_coche_contenu_ia_sur_instagram_seulement():
+    post = {"id": 1, "media": ["https://x/1.png"], "instagramData": {"type": "POST"},
+            "providers": [{"network": "instagram"}, {"network": "facebook"}]}
+    corps = review.corps_de(post, "texte", "2026-10-24T12:30:00", True, contenu_ia=True)
+    assert corps["instagramData"] == {"type": "POST", "isAiGenerated": True}
+    assert post["instagramData"] == {"type": "POST"}        # la lecture n'est pas modifiée
+    sans_ig = {**post, "providers": [{"network": "facebook"}]}
+    assert "isAiGenerated" not in review.corps_de(sans_ig, "t", "2026-10-24T12:30:00", True,
+                                                  contenu_ia=True)["instagramData"]
+
+
+def test_reel_instagram_sans_son():
+    reel = {"providers": [{"network": "instagram"}], "instagramData": {"type": "REEL"}}
+    assert review.est_reel_instagram_sans_son(reel)
+    assert review.est_reel_instagram_sans_son({**reel, "instagramData": {"type": "TRIAL_REEL"}})
+    avec_son = {**reel, "instagramData": {"type": "REEL", "audioConfiguration": {"id": "x"}}}
+    assert not review.est_reel_instagram_sans_son(avec_son)
+    assert not review.est_reel_instagram_sans_son({**reel, "instagramData": {"type": "POST"}})
+    assert not review.est_reel_instagram_sans_son({**reel, "providers": [{"network": "tiktok"}]})
+
+
 # ---------------------------------------------------------------- aller-retour Excel
 
 COMPTE = {"slug": "test-client", "nom": "Client Test", "prefixe": "TC", "blog_id": 42}
@@ -310,7 +342,35 @@ def test_a_valider_auto_trie_et_garde_les_garde_fous():
                                        "visuel IA à remplacer par une vraie photo"]
 
 
+def test_a_valider_auto_retient_une_image_hors_format_feed():
+    maintenant = datetime(2026, 10, 7, 12, 0)
+    tailles = {"carre.jpg": (1080, 1080), "portrait.jpg": (1080, 1350),
+               "trop-haut.jpg": (1080, 1920), "illisible.jpg": None}
+    posts = [_brouillon("2026-10-08T12:00:00", media=("carre.jpg",)),
+             _brouillon("2026-10-08T13:00:00", media=("portrait.jpg",)),
+             _brouillon("2026-10-08T14:00:00", media=("portrait.jpg", "trop-haut.jpg")),
+             _brouillon("2026-10-08T15:00:00", media=("illisible.jpg",)),
+             _brouillon("2026-10-08T16:00:00", media=("trop-haut.jpg",), kind="STORY"),
+             _brouillon("2026-10-08T17:00:00", media=("trop-haut.jpg",), kind="REEL"),
+             _brouillon("2026-10-08T18:00:00", media=("clip.mp4",))]
+    a_publier, retenus = review.a_valider_auto(posts, maintenant, mesurer=tailles.get)
+    assert [p["id"] for p in a_publier] == [
+        "2026-10-08T12:00:00", "2026-10-08T13:00:00", "2026-10-08T15:00:00",
+        "2026-10-08T16:00:00", "2026-10-08T17:00:00", "2026-10-08T18:00:00"]
+    assert [(p["id"], r) for p, r in retenus] == [
+        ("2026-10-08T14:00:00",
+         "image hors du format feed d'Instagram (0.56, à recadrer entre 4:5 et 1.91:1)")]
+
+
+def test_dimensions_image_lit_un_fichier_local(tmp_path):
+    image = pytest.importorskip("PIL.Image")
+    chemin = tmp_path / "photo.jpg"
+    image.new("RGB", (1080, 1350), "white").save(chemin)
+    assert review.dimensions_image(chemin.as_uri()) == (1080, 1350)
+    assert review.dimensions_image((tmp_path / "absente.jpg").as_uri()) is None
+
+
 def test_comptes_auto_hors_du_circuit_des_tableaux():
     auto = {c["slug"] for c in review.comptes_auto()}
-    assert auto == {"otea-production", "otea-filmakers"}
+    assert auto == {"otea-production", "otea-filmakers", "pierre-huiban", "run-on-invest"}
     assert not auto & {c["slug"] for c in review.charger_comptes()}

@@ -44,4 +44,6 @@ Otéa `201523269`, page OTEA Production). Fiche organique :
 ## Historique des campagnes
 | Mois | Spec | Objectif | Dépense | Résultats | Coût / résultat | Ce qu'on retient |
 |---|---|---|---:|---:|---:|---|
-| 2026-09 | `campagnes/otea-production/2026-09-voeux-2027.json` | Interaction · messages Messenger | (brouillon) | | | première campagne du compte, 5 € par jour, 7 jours ; basculée du site vers Messenger le 02/09 (site down) |
+| 2026-09 | `campagnes/otea-production/2026-09-voeux-2027.json` | Interaction · messages Messenger | (brouillon) | | | première campagne du compte, 5 € par jour, 7 jours ; basculée du site vers Messenger le 02/09 (site down) ; dates passées, jamais créée (constat du 13/10) |
+| 2026-11 | `campagnes/otea-production/2026-11-seminaires-janvier.json` | Interaction · boost du post publié du 04/09 | (brouillon) | | | proposée le 13/10 : 42 € sur 7 jours (16 au 22/11, J-56 à J-50 du 11/01) ; attend une destination vivante pour le lien en bio et l'accord publicitaire pour la photo 19 |
+| 2026-12 | `campagnes/otea-production/2026-12-vacances-hiver.json` | Interaction · boost du carrousel publié du 02/09 | (brouillon) | | | proposée le 13/10 : 42 € sur 7 jours (08 au 14/12, J-60 à J-54 du 06/02) ; ne se crée que si Maxime confirme qu'OTEA tourne du 06 au 22/02 |

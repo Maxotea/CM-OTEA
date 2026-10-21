@@ -1,5 +1,13 @@
 # J Lawson Golf — fiche client
 
+> ## ⛔ COMPTE DÉSACTIVÉ · 21/10/2026
+>
+> Maxime a mis fin à la collaboration le 21/10/2026 (« on ne travaille plus ensemble »). **Ne plus produire de contenu, ne plus programmer, ne plus brancher de média, ne plus générer de tableau de validation ni de compte rendu client.** Le compte est sorti de la relève (`reviews/config.json`, `actif: false`), du récap du lundi et de la détection de nouveaux médias (`recaps/clients-config.json`, `actif: false`).
+>
+> **Ce qui restait dans Metricool au 21/10/2026 :** 67 contenus du 21/10 au 06/12, dont 47 stories et 20 posts. **Tous en brouillon, aucun en publication automatique** : rien ne partira tout seul. Ces brouillons n'ont pas été supprimés : la suppression est irréversible et Maxime ne l'a pas demandée.
+>
+> La fiche ci-dessous est conservée telle quelle, au cas où le compte reviendrait.
+
 ## ✍️ Voix éditoriale — LA VOIX DE JOHN (règle client, 03/08/2026)
 Le client a fourni son texte de référence (post AIG Women's Open du 03/08) et demandé que **tous les posts** adoptent ce style. Les 33 brouillons feed (10/08 → 23/10) ont été réécrits en conséquence. Codification :
 - **Première personne du fitteur** : « je », « ce que je retiens », « je mesure », « j'y serai ». Plus de « on » d'agence ni de « le studio vous… » désincarné.

@@ -1,0 +1,469 @@
+{
+ "_doc": "D1-R8, reel « données » de Pierre Huiban dans l'habillage du monologue (référence @rundadlift DeHgY1RxPfB, demande de Maxime du 13/10/2026). Titre « Rome, split by split » depuis le 14/10/2026 (le reel ne fait plus 30 s ; le fichier garde son nom D1-R8-rome-in-30-seconds). Récap de Rome en images continues : les 8 runs regroupés en une carte « 8 KM · 27:59 » (temps de course officiel), les 8 stations avec leur temps officiel dans l'ordre de la course, l'arrivée (53:34, 1ers des 35-39), puis la carte de repli « The full splits / are in the caption. ». Aucun carton noir. Rendu : python3 scripts/pierre-reel-ralenti.py SPEC --polices fonts --lut slog3.cube --drive-index rushes-drive.json (ou --rushes DOSSIER avec les rushes lus par plages). Muet : la musique se pose dans Instagram. Hook « 53:34 in Rome, / split by split. » depuis le 15/10/2026 (décision de Maxime).",
+ "id": "D1-R8-rome-in-30-seconds",
+ "titre": "Rome, split by split",
+ "slot": "R8 · jeu. 22/10/2026 12:30 · Metricool 402181744, BRANCHÉ le 21/10/2026 en mode notification (draft false, autoPublish false : Metricool notifie Maxime à l'heure prévue, il pose la musique dans Instagram et publie ; règle du 21/10/2026), type REEL, vidéo de livraison v4 (md5 61a4e36a864a354525e762bccc8bacb6, hébergée https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c0f90ae9-f7d9-433f-9c1b-761fac25200c.mp4, recopiée par Metricool à l'identique), légende = `legende` de cette spec, couverture à 1,5 s · PH-07 de la feuille du 19-10 mis à jour le 21/10 (_tech B12 et E12, onglet D8 à G8 ; relève simulée : retrouvé par id, légende non modifiée). Ancien id 388353604. Id du brouillon avant le passage en notification : 402004284.",
+ "theme": "Rome, split by split : 8 km de course en 27:59, les 8 stations, 53:34 et 1ers des 35-39, habillage N&B et sous-titres à empattements centrés, karaoké blanc cassé et jaune",
+ "hooks": [
+  "Rome: 8 runs, / 8 stations.",
+  "53:34 in Rome, / split by split.",
+  "8 km, 8 stations, / 1 finish line."
+ ],
+ "hook_retenu": "53:34 in Rome, / split by split.",
+ "gabarit": "monologue",
+ "sortie": "D1-R8-rome-in-30-seconds.mp4",
+ "ralenti": 4,
+ "mot_en_cours": false,
+ "fondu_sortie": 0,
+ "plans": [
+  {
+   "clip": "7351",
+   "debut": 13.64,
+   "duree": 0.46,
+   "ralenti": 4,
+   "x": 0.46,
+   "exposition": 1.0,
+   "pourquoi": "Carte 1 (hook « 53:34 in Rome, / split by split. » depuis le 15/10, « Rome: 8 runs, / 8 stations. » jusqu'au v3) · A1 : Pierre (débardeur noir, brassard gris au bras droit) tire la corde du sled pull face caméra, Antoine derrière lui, un juge à gauche : l'officiel chauve et barbu à grosses lunettes noires (t-shirt clair), visage net en haut à gauche, bien au-dessus du texte, dès la première image ; aucune phrase de la carte ne le désigne (ni « him », ni « I », ni « Antoine »). Fenêtre nette vue le 13/10 (13,64 à 14,14 s, après le passant flou de 13,2 à 13,6 s), raccourcie à 13,64 à 14,10 s le 14/10 (1,84 s à l'écran). Visage de Pierre entre 0,2 et 0,45 H, texte sur les cuisses et la corde. Aucune seconde commune avec les autres reels sur 7351 (M3 : 5,80 à 6,73 s ; M4 : 2,00 à 2,63 et 10,15 à 10,97 s ; M2 ne l'utilise plus depuis son v2 du 14/10). Exposition 1,0. Disques CENTR (sponsor, accepté) sous la corde, pas sous le texte."
+  },
+  {
+   "clip": "7373",
+   "debut": 39.18,
+   "duree": 0.42,
+   "ralenti": 4,
+   "x": 0.0,
+   "exposition": 2.0,
+   "pourquoi": "Carte 2 « 8 KM · 27:59 » (les 8 runs, temps de course officiel) · 7373 (registre : chrono caméra 47:22 à 48:04, soit 45:52 à 46:34 corrigé ; les sandbag lunges finissent à 46:23 dans le JSON, donc le départ du Run 8) : un débardeur noir, brassard clair au bras droit, cheveux ondulés, court de dos vers la porte de sortie qui mène à la boucle de course, devant la colonne PUMA (sponsor de l'événement, accepté). C'est la signature de Pierre dans les rushes (débardeur noir, brassard gris au bras droit), au moment où il part sur le Run 8 : Pierre très probable, jamais vu de face (dos et trois quarts arrière ; profil au bord haut du cadre de 39,18 à 39,26 s, loin du texte). Lu sur Drive le 14/10 (images clés de 0,5 à 41,3 s, puis la fenêtre bornée 39,0 à 40,3 s, 78 Mo). 39,18 à 39,60 s en ralenti ×4 : il entre par la gauche et traverse le cadre en courant, net image par image ; dès 39,62 s la mise au point décroche, d'où la fin à 39,60 s. x 0 : le coureur au centre du 9:16, texte sur le short et les cuisses, aucun visage dans la bande. Exposition 2,0 (médiane hors bande 29 à 138 sur le rendu : débardeur et colonne noirs, puis le mur clair qui entre à la fin). Rush jamais utilisé par un autre reel. Remplace 7370 de 0,10 à 0,52 s (deux coureurs inconnus de dos, flous et presque fixes), relevé par la critique du 14/10 : la décision 3 de Maxime demandait un plan de course qui bouge."
+  },
+  {
+   "clip": "7373",
+   "debut": 35.52,
+   "duree": 0.32,
+   "ralenti": 4,
+   "x": 0.62,
+   "exposition": 1.3,
+   "pourquoi": "Carte 3 « SKIERG 3:33 » · aucun rush du SkiErg (7302 à 7344 absents du Drive). Plan neutre de transition : 7373, la porte de sortie vers la boucle de course, sous l'arche gonflable « OUT », ouverte sur la nuit (un lampadaire, les barrières « HYROX » en bas du cadre), personne dans le 9:16, aucune station. Lu sur Drive le 14/10 (fenêtre bornée 35,3 à 36,4 s, 76 Mo). 35,52 à 35,84 s : la caméra finit de descendre de l'arche sur la porte ; le bord bas de la porte traverse la bande de 35,52 à 35,55 s, quand le texte commence à peine son fondu (35,54 s) ; ensuite le texte se pose sur le noir de l'ouverture (contraste 9,7 au pire pixel, aucun voile). Les lettres HYROX des barrières restent sous la bande (vers 0,84 H) et n'y entrent qu'après 35,84 s, d'où la fin du plan. Image sombre et douce (la nuit, la caméra en mouvement), pas floue : porte, lampadaire et barrières se lisent. x 0,62 (la spectatrice de dos et la colonne PUMA restent hors du cadre, à gauche). Exposition 1,3 (médiane hors bande 36 à 49 sur le rendu : la carte la plus sombre avec la carte 13). Ni Pierre ni Antoine. Remplace 7356 (le filé qui se posait sur la zone des burpees sous « SKIERG », relevé par la critique du 14/10)."
+  },
+  {
+   "clip": "7345",
+   "debut": 4.1,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.46,
+   "exposition": 1.7,
+   "pourquoi": "Carte 4 « SLED PUSH 2:10 » · A2 : Pierre plié sur le traîneau, tête basse vue de dessus, texte sur le haut des disques (vu le 13/10, 4,1 à 4,86 s) ; raccourci à 4,10 à 4,74 s. Finit avant la carte 3 de M4 (4,92 s). Exposition 1,7. Disques CENTR (sponsor, accepté) sous le texte et petit logo de marque sur le short."
+  },
+  {
+   "clip": "7348",
+   "debut": 10.0,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.3,
+   "exposition": 1.6,
+   "pourquoi": "Carte 5 « SLED PULL 2:53 » · A8 : corde et basket au ras du sol (vu le 13/10, 10,0 à 10,76 s), raccourci à 10,00 à 10,64 s, aucun visage. r01 prend 8,5 à 9,5 s. Exposition 1,6. Logo graphique de la basket, sans nom lisible."
+  },
+  {
+   "clip": "7352",
+   "debut": 0.3,
+   "duree": 0.72,
+   "ralenti": 2,
+   "x": 0.5,
+   "exposition": 5.0,
+   "pourquoi": "Carte 6 « BURPEE BROAD / JUMPS 1:55 » · 7352, vertical natif (déjà en 9:16, x sans effet), zone des burpees sous l'arche « BURPEES 04 », athlètes anonymes à mi-distance (vu le 13/10, 0,3 à 1,06 s) ; raccourci à 0,30 à 1,02 s. Le bloc passe sur des dos et des têtes vues de dessus. Exposition 5,0. Netteté vue image par image au troisième tour du 14/10 (rendu v3 et fichier de livraison) : secousse de la caméra, image entière floue de 8,40 à 8,60 s du reel (6 images, netteté 0,35 à 0,5 de celle du reste de la carte), un peu moins floue à 8,64 et 8,68 s (0,65 à 0,75), puis de nouveau floue à 8,72 et 8,76 s, jusqu'à la coupe (8,80 s), une fois le texte éteint (8,72 s) ; léger creux de 7,92 à 8,00 s (3 images, 0,5 à 0,6, image lisible). Le bloc complet (dès 7,72 s) reste net de 7,72 à 8,36 s, puis passe 0,32 s sur l'image floue. Le décompte du second tour (« 4 images, de 8,44 à 8,60 s ») était faux."
+  },
+  {
+   "clip": "7362",
+   "debut": 3.78,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.36,
+   "exposition": 12.0,
+   "pourquoi": "Carte 7 « ROWING 4:00 » · B3 : Pierre au rameur (débardeur noir, brassard gris), tête baissée qui se relève, texte sur l'épaule et le cou, menton au-dessus de 0,70 H (vu le 13/10, 3,78 à 4,54 s) ; raccourci à 3,78 à 4,42 s. r01 prend 1,5 à 2,5 et 5,6 à 6,6 s. Exposition 12. Petit logo de marque sur le débardeur."
+  },
+  {
+   "clip": "7365",
+   "debut": 9.66,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.5,
+   "exposition": 1.8,
+   "pourquoi": "Carte 8 « FARMERS CARRY 1:21 » · 7365 (farmers carry, chrono corrigé 38:39), lu sur Drive le 14/10 (images clés 0,02 à 12,50 s, puis la fenêtre 9,62 à 10,46 s) : plan bas, deux athlètes torse nu viennent vers la caméra, kettlebells CENTR à la main, cadrés des épaules aux chevilles. Ni Pierre ni Antoine : un plan de la station, comme le sled pull de la carte 5. Aucun visage dans le cadre 9:16 (têtes hors champ en haut), texte sur les genoux. Kettlebell CENTR (sponsor, accepté) au-dessus du texte, pas dessous ; barrières « amazon » floues sur le côté (sponsor, accepté). Exposition 1,8 (médiane 45 à 80)."
+  },
+  {
+   "clip": "7372",
+   "debut": 4.7,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.5,
+   "exposition": 3.0,
+   "pourquoi": "Carte 9 « SANDBAG LUNGES 2:17 » · 7372 : Pierre (débardeur noir, tatouage de l'avant-bras gauche) avance en fente vers l'objectif, le sac sur les épaules, Antoine juste derrière (vu le 13/10, 4,70 à 5,46 s) ; raccourci à 4,70 à 5,34 s. Visage de Pierre entre 0,27 et 0,65 H, texte sur le torse et le sac. Exposition 3,0. Logo de marque sur le short."
+  },
+  {
+   "clip": "7376",
+   "debut": 25.68,
+   "duree": 0.64,
+   "ralenti": 2,
+   "x": 0.46,
+   "exposition": 4.0,
+   "pourquoi": "Carte 10 « WALL BALLS 3:22 » · 7376 : Pierre de dos lance la balle, brassard gris au bras droit, Antoine à côté (vu le 13/10, 25,68 à 26,44 s) ; raccourci à 25,68 à 26,32 s. Tête entre 0,2 et 0,6 H, texte sur le dos. r01 prend 19,0 à 20,0 s. Exposition 4,0."
+  },
+  {
+   "clip": "7377",
+   "debut": 78.74,
+   "duree": 0.36,
+   "ralenti": 4,
+   "x": 0.62,
+   "exposition": 3.5,
+   "pourquoi": "Carte 11 « And then / the line. » · 7377, les dernières balles, juste AVANT les secondes de M1 (79,39 à 80,16 s, publiées le 20/10) : 78,74 à 79,10 s, l'écran de la station 23 affiche 99 sur 100 en haut du cadre, une main lance la balle au premier plan à 78,76 s, puis le mur. x 0,62 : le visage de Pierre (79,0 à 79,4 s, à gauche du plein cadre) reste hors du 9:16, seule son épaule floue entre au bord gauche ; une spectatrice debout en bas à droite, visage à environ 0,9 H, sous le texte. Aucun « I ». Exposition 3,5 (médiane 72 à 99 sur le rendu)."
+  },
+  {
+   "clip": "7377",
+   "debut": 80.17,
+   "duree": 0.24,
+   "ralenti": 4,
+   "x": 0.52,
+   "exposition": 3.5,
+   "pourquoi": "Carte 12 « 53:34 with Antoine. » · 7377, juste APRÈS les secondes de M1 (carte 1, 79,39 à 80,16 s, publiée le 20/10 ; aucune image commune : M1 s'arrête à l'image 80,15 s, D1 reprend à 80,17 s, l'image 80,16 s n'est dans aucun des deux) : 80,17 à 80,41 s, l'écran de la station passe à GO à 80,17 s (la 100e balle), Antoine (débardeur vert, chaîne, de dos) au centre, texte sur son dos ; Pierre (débardeur noir) derrière lui, son visage au bord gauche de 80,17 à 80,25 s, à hauteur du bloc mais à environ 180 px à gauche de « 53:34 » (mesuré sur le rendu), puis caché par Antoine. Identité tranchée par M1 le 14/10 (preuve en couleur : _travail-M1/look/e14/preuve-7377-79.7-80.7.jpg). Recalé le 14/10 au second tour : « Antoine. » s'allumait à 16,22 s (80,385 s du rush), Antoine déjà sorti à gauche, et le plan finissait sur un membre du staff (t-shirt clair) sous « with Antoine. ». Désormais « 53:34 » à 15,44 s, « with » à 15,60 s, « Antoine. » à 15,76 s en fondu (80,27 s du rush ; lisible dès 15,84 s, complet à 15,92 s), et le plan s'arrête à 80,41 s : le membre du staff n'entre sous le texte qu'à partir de 80,44 s (vu image par image de 80,37 à 80,48 s). Le bloc reste 0,32 s de plus sur le plan suivant, l'écran des résultats (16,32 à 16,64 s), où « Pierre H. / Antoine B. » est sur la première ligne : aucune personne sous « Antoine. » après la coupe. Revu image par image au troisième tour du 14/10 : de 15,84 à 16,32 s, « Antoine. » tombe sur le mur, juste au-dessus de l'épaule droite d'Antoine, de dos, qui glisse vers la gauche (tête et dos dans le tiers gauche dès 16,0 s) ; à environ 150 à 190 px à droite du mot, le bras levé d'une inconnue au bracelet, visage hors cadre ; personne sous le mot, aucun visage. « Antoine de dos au centre du 9:16 » sous le mot, écrit au second tour, était faux : Antoine est au centre sous « 53:34 » (15,44 s), plus sous « Antoine. ». x 0,52, exposition 3,5 (médiane 75 au milieu de la carte)."
+  },
+  {
+   "clip": "7377",
+   "debut": 94.86,
+   "duree": 0.4,
+   "ralenti": 4,
+   "x": 0.36,
+   "exposition": 3.0,
+   "pourquoi": "Carte 13 « First in our / age group. » · 7377, écran des résultats sous les lettres FINISH, lu sur Drive le 14/10 (fenêtre 94,10 à 96,37 s ; jamais utilisé par un autre reel) : « Athletes / Pierre H. / Antoine B. » sur la première ligne d'un écran qui liste les dernières équipes arrivées, pas un classement (colonne Time hors du 9:16 à x 0,36, lue en plein cadre à 95,0 s : 00:53:34 pour Pierre et Antoine, puis des équipes plus rapides plus bas, 00:53:30, 00:52:27, 00:51:38) ; la 1re place des 35-39 vient du JSON officiel, l'écran ne la prouve pas ; logos amazon et amazfit en haut de l'écran (sponsors, acceptés), un drapeau agité devant la liste. Net dès 94,85 s (flou de mise au point avant). 94,86 à 95,26 s : la liste finit au-dessus de la bande et le texte se pose sur le haut des lettres FINISH ; après 95,33 s la caméra descend et la dernière ligne de la liste entre dans la bande (essayé au premier rendu v2 du 14/10, où le CTA restait sur ce plan : « The full splits » passait sur « Elisa M. / Solene C. », lisible mais chargé ; le CTA est passé sur 7378, carte 14, et ce plan s'arrête à 95,26 s ; à 95,30 s la dernière ligne touche déjà le haut du bloc, vu le 14/10 au second tour). Noms d'autres équipes lisibles sur l'écran (abréviations de l'écran officiel) ; foule de dos en bas, aucun visage. Exposition 3,0 (médiane 37 : écran noir, texte de l'écran à 255). Second tour du 14/10 : le plan commence à 16,32 s (au lieu de 16,96 s) ; il porte d'abord la fin du bloc « 53:34 with Antoine. » (16,32 à 16,64 s), puis « First in our / age group. » de 16,72 s à la coupe (17,92 s), bloc complet à 17,78 s."
+  },
+  {
+   "clip": "7378",
+   "debut": 9.66,
+   "duree": 0.76,
+   "ralenti": 4,
+   "x": 0.5,
+   "exposition": 7.0,
+   "pourquoi": "Carte 14 (CTA « The full splits / are in the caption. », carte de repli, décision 2 de Maxime) · 7378, zone FINISH environ une minute après la ligne, 9,66 à 10,42 s : Pierre (débardeur noir), de profil, la main posée dans le dos de l'animateur (débardeur clair, casquette), puis de trois quarts, tête baissée ; une athlète inconnue passe par moments en haut à droite (visage de 0,1 à 0,3 H), loin du texte. Le bloc « First in our / age group. » y déborde de 17,92 à 18,20 s, puis le CTA s'allume sur le même plan, sans coupe (18,28 s, complet à 19,62 s, tenu jusqu'à la fin). Allongé au second tour du 14/10, de 9,76-10,36 s à 9,66-10,42 s, pour rendre au reel les 0,64 s ôtées à la carte 12 ; décodé depuis le cache (aucune lecture Drive). Voisins dans M1 (publié le 20/10, même scène) : carte 5 (5,93 à 6,65 s) et fin de la carte 4 (7,53 à 8,02 s) avant, fin de la carte 2 (10,45 à 11,07 s) puis début de la carte 4 (11,07 à 11,51 s) après ; D1 s'arrête à 10,42 s (dernière image 10,41 s) et M1 reprend à 10,45 s : aucune image commune, mais le même plan à trois images près, deux jours plus tard. Visage de Pierre entre 0,15 et 0,45 H, texte sur son bras et son débardeur ; aucun « I » ni « my ». x 0,5, exposition 7 (médiane 68 au milieu de la carte)."
+  }
+ ],
+ "sous_titres": [
+  {
+   "t": 0.2,
+   "fin": 1.76,
+   "lignes": [
+    "53:34 in Rome,",
+    "split by split."
+   ],
+   "mots_jaunes": [
+    "53:34",
+    "split"
+   ],
+   "horodatages": [
+    0.2,
+    0.46,
+    0.6,
+    0.86,
+    1.02,
+    1.14
+   ],
+   "mot_en_cours": true,
+   "_role": "Hook chiffré, le résultat dès la 1re seconde (décision de Maxime du 15/10 ; « Rome: 8 runs, / 8 stations. » jusqu'au v3), lisible en moins de 2 s"
+  },
+  {
+   "t": 1.92,
+   "fin": 3.44,
+   "lignes": [
+    "8 KM · 27:59"
+   ],
+   "mots_jaunes": [
+    "27:59"
+   ],
+   "horodatages": [
+    1.92,
+    1.92,
+    1.92,
+    2.2
+   ],
+   "mot_en_cours": false,
+   "_role": "Les 8 runs regroupés : temps de course officiel (running total) (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 3.6,
+   "fin": 4.72,
+   "lignes": [
+    "SKIERG 3:33"
+   ],
+   "mots_jaunes": [
+    "3:33"
+   ],
+   "horodatages": [
+    3.6,
+    3.88
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 1, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 4.88,
+   "fin": 6.0,
+   "lignes": [
+    "SLED PUSH 2:10"
+   ],
+   "mots_jaunes": [
+    "2:10"
+   ],
+   "horodatages": [
+    4.88,
+    4.88,
+    5.16
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 2, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 6.16,
+   "fin": 7.28,
+   "lignes": [
+    "SLED PULL 2:53"
+   ],
+   "mots_jaunes": [
+    "2:53"
+   ],
+   "horodatages": [
+    6.16,
+    6.16,
+    6.44
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 3, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 7.44,
+   "fin": 8.72,
+   "lignes": [
+    "BURPEE BROAD",
+    "JUMPS 1:55"
+   ],
+   "mots_jaunes": [
+    "1:55"
+   ],
+   "horodatages": [
+    7.44,
+    7.44,
+    7.44,
+    7.72
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 4, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 8.88,
+   "fin": 10.0,
+   "lignes": [
+    "ROWING 4:00"
+   ],
+   "mots_jaunes": [
+    "4:00"
+   ],
+   "horodatages": [
+    8.88,
+    9.16
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 5, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 10.16,
+   "fin": 11.28,
+   "lignes": [
+    "FARMERS CARRY 1:21"
+   ],
+   "mots_jaunes": [
+    "1:21"
+   ],
+   "horodatages": [
+    10.16,
+    10.16,
+    10.44
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 6, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 11.44,
+   "fin": 12.56,
+   "lignes": [
+    "SANDBAG LUNGES 2:17"
+   ],
+   "mots_jaunes": [
+    "2:17"
+   ],
+   "horodatages": [
+    11.44,
+    11.44,
+    11.72
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 7, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 12.72,
+   "fin": 13.84,
+   "lignes": [
+    "WALL BALLS 3:22"
+   ],
+   "mots_jaunes": [
+    "3:22"
+   ],
+   "horodatages": [
+    12.72,
+    12.72,
+    13.0
+   ],
+   "mot_en_cours": false,
+   "_role": "Station 8, temps officiel (assets/hyrox/hyrox_pierre-huiban_rome_2026.json)"
+  },
+  {
+   "t": 14.0,
+   "fin": 15.28,
+   "lignes": [
+    "And then",
+    "the line."
+   ],
+   "mots_jaunes": [
+    "line."
+   ],
+   "horodatages": [
+    14.0,
+    14.25,
+    14.6,
+    14.85
+   ],
+   "mot_en_cours": true,
+   "_role": "Bascule (cliffhanger)"
+  },
+  {
+   "t": 15.44,
+   "fin": 16.64,
+   "lignes": [
+    "53:34 with Antoine."
+   ],
+   "mots_jaunes": [
+    "53:34"
+   ],
+   "horodatages": [
+    15.44,
+    15.6,
+    15.76
+   ],
+   "mot_en_cours": true,
+   "_role": "Révélation, le temps officiel"
+  },
+  {
+   "t": 16.72,
+   "fin": 18.2,
+   "lignes": [
+    "First in our",
+    "age group."
+   ],
+   "mots_jaunes": [
+    "First"
+   ],
+   "horodatages": [
+    16.72,
+    16.97,
+    17.15,
+    17.4,
+    17.62
+   ],
+   "mot_en_cours": true,
+   "_role": "Preuve, 1ers des 35-39"
+  },
+  {
+   "t": 18.28,
+   "fin": 20.96,
+   "lignes": [
+    "The full splits",
+    "are in the caption."
+   ],
+   "mots_jaunes": [
+    "caption."
+   ],
+   "horodatages": [
+    18.28,
+    18.48,
+    18.66,
+    19.0,
+    19.16,
+    19.28,
+    19.46
+   ],
+   "mot_en_cours": true,
+   "_role": "CTA (carte de repli : le carrousel du 07/10 n'est pas publié)"
+  }
+ ],
+ "legende": "Rome. 53:34 with @antoine_bhna. First in our age group ❤️\n\nEvery split, in race order:\nRun 1 · 4:24\nSkiErg · 3:33\nRun 2 · 3:06\nSled Push · 2:10\nRun 3 · 3:18\nSled Pull · 2:53\nRun 4 · 3:20\nBurpee Broad Jumps · 1:55\nRun 5 · 3:24\nRowing · 4:00\nRun 6 · 3:23\nFarmers Carry · 1:21\nRun 7 · 3:23\nSandbag Lunges · 2:17\nRun 8 · 3:45\nWall Balls · 3:22\nRoxzone, all transitions · 4:04\n\nIf you race HYROX too, which station costs you the most time? I read everything 🙏\n\n#hyrox #hyroxrome #hyroxdoubles #roadtohongkong",
+ "decisions_maxime_14_10": [
+  "Habillage : pas de préférence ; karaoké blanc cassé et jaune comme les reels voisins de Pierre, plus de variante tout en jaune.",
+  "Carte de repli à la fin (le carrousel « Rome. 53:34 » du 07/10 n'est pas publié) : « The full splits / are in the caption. », légende avec les 16 temps, aucun renvoi au carrousel.",
+  "Les 8 runs regroupés en une seule carte « 8 KM · 27:59 » (temps de course officiel, running total du JSON) sur un plan de course qui bouge ; les 8 stations gardées ; le reel ne fait plus 30 s, hook réécrit puis renoté.",
+  "Antoine visible avec Pierre sous une phrase à la première personne : gardé (binôme). Sans objet ici : aucune carte de D1 n'a de « I » ni de « my »."
+ ],
+ "decisions_maxime_15_10": [
+  "Hook : « 53:34 in Rome, / split by split. » à la place de « Rome: 8 runs, / 8 stations. » (le 2e des trois hooks proposés, mieux noté par le contrôle de contenu). Seul ce texte change : même plan (7351, 13,64 à 14,10 s), mêmes temps (0,20 à 1,76 s), mots jaunes logiques 53:34 et split. Titre « Rome, split by split » gardé (il colle au hook), fichier non renommé."
+ ],
+ "note_lint": 86,
+ "verdict_lint": "86/100 🟢, mesuré le 15/10/2026 sur le vrai rendu v4 (20,96 s, 524 images, 51 mots), hook lu image par image (images 0 à 49), les 14 cartes lues sur la planche",
+ "detail_lint": {
+  "hook": "19/20 : chiffre concret en premier mot : « 53:34 » s'allume en fondu à 0,20 s, net et jaune dès 0,36 s ; « 53:34 in Rome, / split by split. » complet à 1,30 s, tenu jusqu'à 1,76 s (0,46 s complet), lu image par image sur le rendu v4 ; promesse claire (le détail suit, split par split) et crédible (temps officiel). Perte : la première image partage le cadre entre Pierre et le visage net de l'officiel à lunettes, en haut à gauche (plan inchangé)",
+  "structure": "14/20 : trois étapes, les runs (1 carte, 1,68 s), les 8 stations (10,40 s), l'arrivée (2,56 s de plans), et le cliffhanger « And then / the line. » avant la révélation ; mais le hook donne maintenant le résultat : « 53:34 with Antoine. » devient un rappel, la nouveauté de la fin tient à « with Antoine » et à « First in our / age group. », et le cliffhanger relance moins (1 point de moins qu'au v3) ; toujours très déséquilibré (8 cartes de liste d'affilée, temps complet 0,84 s chacune, 1,00 s aux burpees) et révélation lue vite (0,72 s puis 0,42 s complets)",
+  "format": "20/20 : 51 mots à l'écran (le « · » de la carte 2 non compté), 20,96 s, très en dessous du format 60 s",
+  "cta": "15/20 : inchangé ; un seul CTA, un geste (ouvrir la légende), complet à 19,62 s et tenu 1,34 s jusqu'à la fin ; c'est un renvoi, pas un appel à commenter : la question (« which station costs you the most time? ») n'est que dans la légende",
+  "preuve": "18/20 : inchangé ; les 16 temps officiels et la Roxzone (JSON HYRESULT), 27:59 de course, 53:34, 1ers des 35-39 ; mais à l'écran, l'écran des résultats est le fil des arrivées (il ne prouve pas la 1re place), et 4 des 9 cartes de temps ne montrent ni Pierre ni Antoine (cartes 3, 5, 6, 8 ; sur les cartes 6 et 8, ses temps sont posés sur d'autres athlètes)",
+  "corrections_indicatives": [
+   "Pour gagner des commentaires : poser la question de la légende à l'écran à la place du renvoi (le texte de la carte 14 est celui de la décision 2 de Maxime, gardé tel quel).",
+   "Pour rendre de la surprise à la fin : la carte 12 pourrait laisser 53:34 au hook (« With Antoine. » seul, par exemple) ; non fait, la décision du 15/10 ne change que le hook.",
+   "Ouverture : M2-R11 (29/10) commence par les mêmes mots (« 53:34 in Rome. / Then I'm Dad again. ») et M1-R7 (20/10) finit son hook sur « at 53:34. » : trois reels en dix jours sur 53:34 (voir a_trancher).",
+   "Les cartes de station durent 1,28 s (1,44 s pour les burpees), temps allumé complet 0,84 s (1,00 s) : rapide à dessein (récap, relecture), les 16 temps et la Roxzone sont dans la légende."
+  ]
+ },
+ "_corrections": [
+  "v1, libellés du .srt du dépôt « SLED 2:10 » et « SLED 2:53 » : ambigus (SKILLS.md §5). Devenus « SLED PUSH 2:10 » et « SLED PULL 2:53 » ; « BURPEE » devenu « BURPEE BROAD JUMPS », « WALL » devenu « WALL BALLS ».",
+  "v1, 7357 sous « RUN 5 » : c'est la sortie de l'arche des burpees, pas une course. Remplacé par un carton noir.",
+  "v1, Farmers Carry et Sandbag Lunges en carton : avec le décalage caméra de 90 s, ce sont les runs qui n'ont aucune image. Lunges sur 7372 sous condition.",
+  "v1 à 31,0 s pour un reel intitulé « Rome in 30 seconds » : cartes finales resserrées, total 30,0 s.",
+  "v1, « 53:34 » seul sur une ligne : devenu « 53:34 with Antoine. ».",
+  "Vérif. 13/10 (Antoine sous un « my ») : carte 21 sur 7351 à 13,5 s (A1, Pierre à la corde) au lieu de 7346 à 18,4 s (A9, Antoine).",
+  "Vérif. 13/10 (aucune seconde de rush réutilisée, dialogue r01 du 03/11 compris) : 7362 de 1,5 à 3,2 s ; 7366 remplacé par un carton noir de 1,52 s (r01 prend 0,4 à 1,4 sur 1,44 s) ; 7376 de 19,0 à 21,0 s.",
+  "Vérif. 13/10 (mineur) : légende sans l'émoji ⏱, décoratif, hors du registre de la fiche (🔊 ❤️ 🙏).",
+  "Vérif. 13/10 (facultatif, retenu) : « 1:55 » n'est plus seul sur sa ligne, carte 9 « BURPEE BROAD / JUMPS 1:55 ».",
+  "Vérif. 13/10 (facultatif, retenu) : carte 18 « And then / the line. » au lieu de « And then / the clock stops. », qui répétait le hook de M1 deux jours plus tôt.",
+  "Vérif. 13/10 (rythme) : les cartes de split ne s'allument plus d'un bloc : le libellé, puis le temps en jaune 0,2 s (cartes de run) ou 0,28 s (stations) plus tard. CTA complet dès 29,1 s et tenu jusqu'à la fin (0,9 s au lieu de 0,52 s).",
+  "Note reel-lint recalculée par le vérificateur : 87 (Hook 20, Structure 15, Format 20, CTA 12, Preuve 20).",
+  "Étape voir et rendu du 13/10 (20:10 à 20:45 UTC) : carte 1 (hook) 7351 de 13,0 → 13,64 s (passant flou devant l'objectif de 13,2 à 13,6 s) ; carte 11 7362 de 3,2 → 3,78 s, x 0,4 → 0,36 ; carte 15 7372 de 4,0 → 4,70 s (athlète torse nu devant l'objectif jusqu'à 4,6 s) ; carte 17 7376 de 21,0 → 25,68 s, x 0,5 → 0,46 (nuque de Pierre dans la bande à 21 s) ; cartes 18 et 19 en CARTON NOIR (7377 : aucune image de Pierre ni de l'arrivée de 78,7 à 88,3 s) ; carte 21 (CTA) 7351 de 13,5 s → 7362 de 2,95 s (passant flou, puis 7351 de 8,66 s flou) ; expositions posées plan par plan. Textes et légende inchangés.",
+  "14/10, décision 2 de Maxime (le carrousel du 07/10 n'est pas publié) : la carte de repli devient la carte finale « The full splits / are in the caption. » ; légende réécrite avec les 16 temps officiels en liste, sans renvoi au carrousel ; le champ repli_si_carrousel_absent disparaît.",
+  "14/10, décision 3 de Maxime : les 8 cartes de run (8 cartons noirs sur 12) deviennent UNE carte « 8 KM · 27:59 » (running total officiel du JSON, 1679 s) sur 7370, deux coureurs de dos dans le couloir de course ; les 8 stations gardées, chacune 1,28 s, dans l'ordre de la course ; reel de 30,00 à 20,96 s.",
+  "14/10 : hook réécrit (reel-script) « Rome in / 30 seconds. » devenu « Rome: 8 runs, / 8 stations. » ; titre « Rome in 30 seconds » devenu « Rome, split by split » (fichier inchangé).",
+  "14/10 : SkiErg sur un plan voisin qui bouge (7356, filé de fin des burpees) au lieu d'un carton ; Farmers Carry sur un plan de la station (7365, kettlebells, sans visage) au lieu d'un carton ; plus aucun carton noir.",
+  "14/10 : l'arrivée sur 7377 de part et d'autre des secondes de M1 (78,74 à 79,10 s : écran à 99 ; 80,17 à 80,57 s : GO, Antoine et Pierre) ; « First in our / age group. » sur l'écran des résultats (7377, 94,86 à 95,26 s, Pierre H. / Antoine B. sur la première ligne du fil des arrivées) ; CTA sur 7378 de 9,76 à 10,36 s, entre deux cartes de M1. Ancienne carte 20 (7350) et ancien CTA (7362 de 2,95 s) abandonnés.",
+  "14/10, premier rendu v2 (09:00 UTC) : CTA sur l'écran des résultats (même plan que la carte 13) ; la caméra descend après 95,33 s et « The full splits » passait sur la dernière ligne de la liste (« Elisa M. / Solene C. ») : lisible mais chargé. Remplacé par 7378 (planche gardée dans _travail-D1/look/planche-rendu-v2a-cta-sur-ecran.jpg).",
+  "14/10, second tour (critique de complétude) : carte 2 « 8 KM · 27:59 » passée de 7370 (deux inconnus de dos, flous, presque fixes) à 7373 de 39,18 à 39,60 s : un débardeur noir au brassard clair au bras droit, Pierre très probable, court de dos vers la sortie du Run 8, net. Lecture Drive bornée (images clés, puis 39,0 à 40,3 s).",
+  "14/10, second tour : carte 3 « SKIERG 3:33 » passée de 7356 (la zone des burpees) à 7373 de 35,52 à 35,84 s : la porte de sortie vers la boucle de course, de nuit, personne, aucune station.",
+  "14/10, second tour : carte 12, « Antoine. » allumé à 15,76 s au lieu de 16,22 s (il tombe sur Antoine de dos, au centre) ; plan raccourci de 80,17-80,57 à 80,17-80,41 s (le membre du staff n'entre plus) ; le bloc reste 0,32 s sur l'écran des résultats.",
+  "14/10, second tour : cartes 13 et 14 avancées (« First in our / age group. » de 16,72 à 18,20 s, CTA de 18,28 à 20,96 s) ; carte 14 allongée sur 7378 de 9,66 à 10,42 s ; durée totale inchangée, 20,96 s.",
+  "14/10, second tour : légende, « Roxzone, all transitions · 4:04 » ajouté après les 16 temps (roxzone.total du JSON officiel) : « Every split » devient vrai.",
+  "14/10, second tour : note reel-lint mesurée sur le rendu v3, 85 (au lieu de 90 dans la spec et de 83 au contrôle de contenu du v2) ; textes périmés corrigés (cartes 1, 13 et 14, logos, voisins de M1, _choix).",
+  "14/10, troisième tour (seconde critique de complétude), sans nouveau rendu : carte 6, flou décompté image par image (image entière floue de 8,40 à 8,60 s, puis 8,72 et 8,76 s jusqu'à la coupe, creux de 7,92 à 8,00 s ; « 4 images, de 8,44 à 8,60 s » était faux), ajouté à a_trancher ; carte 12, « Antoine. » tombe sur le mur juste au-dessus de l'épaule d'Antoine de dos, le bras levé d'une inconnue à 150 à 190 px à droite (pas « Antoine centré sous le mot ») ; voisins : M2 n'utilise plus 7351, la carte 6 de M4 est à 10,15-10,97 s, la carte 14 jouxte la fin de la carte 2 de M1 (10,45 à 11,07 s) et non sa carte 4 ; _statut cite le fichier de livraison réellement livré (md5 c4fadd12…).",
+  "15/10, décision de Maxime : hook « Rome: 8 runs, / 8 stations. » devenu « 53:34 in Rome, / split by split. » (2e des trois hooks proposés). Même plan (7351, 13,64 à 14,10 s) et mêmes bornes (0,20 à 1,76 s) ; mots jaunes 53:34 et split (les deux) ; horodatages 0,20, 0,46, 0,60, 0,86, 1,02 et 1,14 s (bloc complet à 1,30 s au lieu de 1,26 s). Titre « Rome, split by split » gardé (il colle au hook, fichier non renommé). Légende inchangée : sa première ligne « Rome. 53:34 with @antoine_bhna. First in our age group ❤️ » reprend le hook sans le contredire, et « Every split, in race order: » tient sa promesse. Rendu v4 sur le cache local, livraison et aperçu refaits, note reel-lint 86 (hook 19, structure 14)."
+ ],
+ "_choix": "Deux tons comme M2, M3 et M4 : libellés en blanc cassé, temps et mots clés en jaune ; karaoké (mot en cours en jaune) sur les cartes de texte seulement, pas sur les splits où il ferait clignoter le libellé (le libellé, puis le temps en jaune 0,28 s plus tard). Coupe sèche au changement de plan. Deux blocs passent une coupe, pour garder le temps de lecture malgré la carte 12 raccourcie : « 53:34 with Antoine. » reste 0,32 s sur l'écran des résultats (16,32 à 16,64 s) et « First in our / age group. » 0,28 s sur 7378 (17,92 à 18,20 s) ; le CTA s'allume ensuite sur ce même plan, sans coupe. Dernier bloc tenu jusqu'à la fin.",
+ "_statut": "RENDU v4 le 15/10/2026 à 09:08 UTC (décision de Maxime du 15/10 : hook « 53:34 in Rome, / split by split. ») sur les rushes du cache local, aucune lecture Drive (lire_fenetres.py en mode sec, sans réseau : les 14 fenêtres présentes, 0 requête) : rendus/D1-R8-rome-in-30-seconds.mp4, md5 3334f83194d22e2b00ab02bcd31dc196, 20,96 s, 524 images, 1080x1920, 25 i/s, aucune piste audio (-map 0:a échoue, code 234), 0 image noire, contraste du hook 4,8 au pire pixel (voile 0). Seules les images 0 à 46 diffèrent du v3 : la carte 1, et l'image 46 (première du plan 2) à 10/255 au plus (encodage) ; les images 47 à 523 sont identiques au pixel près. Le v3 du 14/10 (11:50 UTC) est gardé en rendus/D1-R8-rome-in-30-seconds-v3.mp4 (md5 37e87d5b…) avec rendus/D1-R8-rome-in-30-seconds-v3-planche.jpg ; le v2 en -v2.mp4. Fichier à brancher : rendus/livraison/D1-R8-rome-in-30-seconds.mp4 (md5 61a4e36a864a354525e762bccc8bacb6), refait le 15/10 à 09:11 UTC à la recette commune (H.264 High, yuv420p, CRF 18, maxrate 18M, bufsize 18M, vbv-init 0,1, image clé toutes les 2 s, faststart, ni audio ni métadonnées) : 524 images, 45,6 Mo, 17,4 Mb/s en moyenne, pic de 24,2 Mb/s sur 1 s (dès 8,24 s, ordre d'affichage ; 23,8 dans l'ordre de décodage), aucune fenêtre de 1 s à 25 Mb/s ou plus, SSIM 0,981 (luminance 0,971) et PSNR moyen 44,4 dB contre le rendu v4 (rendus/livraison/controle/verification.json). Il remplace celui du 14/10 (md5 c4fadd12…, hook v3), supprimé ; le -v3.mp4 en reste la source. Aperçu : rendus/apercus/D1-R8-rome-in-30-seconds-apercu.mp4 (md5 cbc57397…, 720x1280, CRF 24, faststart, muet, 524 images, 5,6 Mo). Contrôlé sur le rendu v4 : hook image par image, plein cadre et bande de texte, de 0 à 1,96 s (_travail-D1/controle-v4/hook/) : texte lisible, sur le genou, la cuisse et la corde, jamais sur un visage (visages de l'officiel, de Pierre et d'Antoine entre 0,03 et 0,47 H, encre du bloc entre 0,72 et 0,78 H) ; planche des 14 cartes plus la première et la dernière image, sur le rendu et sur le fichier de livraison. Note reel-lint 86/100 🟢 mesurée sur le rendu v4. Inchangés depuis le v3 : plans, cartes 2 à 14, légende, titre. Historique du v3 : _corrections.",
+ "a_trancher": [
+  "Accord de Maxime pour brancher rendus/livraison/D1-R8-rome-in-30-seconds.mp4 (v4, hook « 53:34 in Rome, / split by split. », md5 61a4e36a…) sur le brouillon 388353604 (jeu. 22/10 12:30), avec la légende (16 temps et la Roxzone, inchangée depuis le v3) et le passage en REEL ; puis validation de Pierre.",
+  "Ouverture commune, depuis le hook du 15/10 : D1 (jeu. 22/10) commence par « 53:34 in Rome, », comme M2-R11 (jeu. 29/10, « 53:34 in Rome. / Then I'm Dad again. ») une semaine plus tard ; M1-R7 (mar. 20/10) finit son hook sur « at 53:34. ». Trois reels en dix jours sur 53:34, dont deux qui s'ouvrent sur les mêmes mots. Et dans D1, 53:34 revient à la carte 12 (« 53:34 with Antoine. »), en rappel. À dire par Maxime : garder, ou retoucher le hook de M2 ou la carte 12 de D1 (nouveau rendu).",
+  "Carte 2 « 8 KM · 27:59 » : Pierre très probable (débardeur noir, brassard clair au bras droit, au départ du Run 8), jamais vu de face. À confirmer d'un mot par Maxime.",
+  "27:59 est le temps de course officiel ; les 8 runs de la légende font 28:03 additionnés (écart de 4 s documenté dans le JSON : arrondis, et Run 8 qui inclut la Roxzone d'avant les wall balls). Avec la Roxzone (4:04) et les stations (21:31), la légende additionne 53:38 pour 53:34. Un abonné attentif peut le relever.",
+  "Cartes 3 (SKIERG, 7373 : la porte de sortie vers la course, de nuit, aucun rush du SkiErg n'existe), 5 (SLED PULL, corde et basket), 6 (burpees, athlètes anonymes) et 8 (FARMERS CARRY, 7365 : deux athlètes inconnus, cadrés des épaules aux chevilles) ne montrent ni Pierre ni Antoine ; sur les cartes 6 et 8, ses temps sont posés sur d'autres athlètes.",
+  "Carte 6 « BURPEE BROAD / JUMPS 1:55 » : secousse de la caméra, image entière floue de 8,40 à 8,60 s sous le bloc complet (6 images), un peu moins floue à 8,64 et 8,68 s, de nouveau floue à 8,72 et 8,76 s jusqu'à la coupe (texte éteint) ; léger creux de 7,92 à 8,00 s. Le bloc complet reste net de 7,72 à 8,36 s. À dire par Maxime : garder, ou couper le flou (nouveau rendu).",
+  "Personnes inconnues visibles, aucune sous un « him », un « I » ou « Antoine » (D1 n'a ni « I » ni « him » ; « Antoine. » tombe sur le mur juste au-dessus de l'épaule d'Antoine, de dos, et le bras levé d'une inconnue au bracelet, visage hors cadre, passe à 150 à 190 px à droite du mot, de 15,84 à 16,32 s) : l'officiel chauve et barbu à grosses lunettes en haut à gauche de la carte 1 (visage net, dès la première image) ; des athlètes face caméra sur la carte 6 ; un homme barbu sur la carte 10 (relevé au contrôle du v2, plan inchangé) ; une spectatrice en bas à droite de la carte 11 ; une athlète en haut à droite de la carte 14 ; les noms abrégés d'autres équipes sur l'écran des résultats (carte 13). Le membre du staff de la carte 12 n'est plus à l'image. À confirmer d'un mot par Maxime.",
+  "Répétitions avec les reels voisins, aucune image commune (secondes comparées aux cinq specs le 14/10) : le hook (7351, 13,64 à 14,10 s) reprend le sled pull de M3 (5,80 à 6,73 s) et de M4 (2,00 à 2,63 et 10,15 à 10,97 s), M2 n'utilisant plus 7351 ; les cartes 11 (7377, 78,74 à 79,10 s) et 12 (80,17 à 80,41 s) encadrent la carte 1 de M1 (79,39 à 80,16 s), la carte 12 reprenant à 80,17 s, deux images après la dernière de M1 (80,15 s) ; la carte 14 (7378, 9,66 à 10,42 s) est entre la fin de la carte 4 de M1 (7,53 à 8,02 s) et la fin de sa carte 2 (10,45 à 11,07 s), même scène (l'animateur et Pierre), à trois images de la carte 2 de M1, deux jours plus tard.",
+  "Logos acceptés (sponsors et événement) : CENTR (cartes 1, 4, 8 ; net juste sous « SLED PUSH 2:10 », sur les disques, relevé de 5,5 à 6,04 s au contrôle du v2 et visible à 5,28 s sur la planche du v3 ; texte lisible), PUMA (colonne derrière Pierre, carte 2), HYROX (barrières sous le texte, carte 3), amazon et amazfit (carte 13, en haut de l'écran), BURPEES (carte 6) ; petits logos de marque sur les shorts et le débardeur de Pierre (cartes 2, 4, 7, 9)."
+ ]
+}

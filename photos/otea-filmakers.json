@@ -1,0 +1,3300 @@
+{
+  "_doc": "Fonds photo des carrousels et des stories d'Otea Filmakers. Même banque que photos/otea-production.json (mêmes clés, mêmes originaux Drive, story.cache partagé), limitée aux photos que la banque ouvre à Otea Filmakers. provenance=client : vraies photos, aucune image IA. url = recadrage 4:5 1080x1350 BRUT depuis l'original (photos brutes, contraste_corps 4,5 du thème), hébergé sur cloudfront. Stories : scripts/story-photo.py lit l'original (url_originale) et le recadre avec decalage_916 ; visage_916 relevé sur ce recadrage. Filmakers ne montre que Maxime : tant qu'il n'a pas dit lequel il est sur les photos (Q4), qui reste « à confirmer par Maxime » et aucune story n'est attribuée, sauf 26 et 34 proposées pour le vendredi sous condition. Jamais une photo de la rotation OTEA Production du même jour. Champs identiques au manifeste OTEA Production, sans fond_45. carrousel_controle : rendu réel par carrousel.py (thème du dépôt, Inter Display) de quatre slides types (couverture titre et corps, corps de 20 mots, titre seul sur trois lignes, titre court d'une ligne) et règle de story-photo.py (option verifier-carrousel) (aucun visage sous le voile, qui commence 150 px au-dessus du bloc) ; ok, contraste insuffisant ou visage sous le voile. Le bloc ne descend jamais sous y=606 environ : un visage qui finit plus bas que y=456 exclut la photo de toute slide à texte.",
+  "client": "otea-filmakers",
+  "source": "originaux Drive HOME SANFAUTE et portrait pro (dossier CM-OTEA/medias/otea-production), appariés aux aperçus cloudfront de la banque du 12/10/2026",
+  "releve": "2026-10-12",
+  "drive_dossier": "1_0BHQiHAwDs-4pXp6cXBIfMC7u7ezydY",
+  "_appariement": {
+    "methode": "corrélation sur vignettes en niveaux de gris (72x48) et dHash, aperçu cloudfront contre original Drive ; seuil 0,99",
+    "photos_uniques": 32,
+    "avec_original": 27,
+    "apercu_seul": [
+      "16",
+      "29",
+      "30",
+      "31",
+      "33"
+    ],
+    "apercu_seul_raison": "séance studio absente du dossier Drive et des dossiers jlawson-golf et Reportage complet (vignettes comparées le 12/10/2026)",
+    "doublons_confirmes_par_l_original": {
+      "15": "12",
+      "22": "13",
+      "24": "21",
+      "28": "20",
+      "32": "08",
+      "36": "19",
+      "37": "34",
+      "38": "04",
+      "39": "14",
+      "43": "01",
+      "45": "41"
+    },
+    "cartes_composees": [
+      "25",
+      "35",
+      "46"
+    ],
+    "originaux_hors_banque": 4
+  },
+  "_doublons_exclus": {
+    "15": {
+      "meme_photo_que": "12",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/534d9142-263e-4afa-a5f6-b330749640b2.jpg"
+    },
+    "22": {
+      "meme_photo_que": "13",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/676e5ffa-4124-411e-8b95-61ae7eab2026.jpg"
+    },
+    "24": {
+      "meme_photo_que": "21",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/67883a1c-87bf-40f4-a2b0-126fa900f178.jpg"
+    },
+    "28": {
+      "meme_photo_que": "20",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/8f1a3f08-5fb1-4139-9672-a384904ab957.jpg"
+    },
+    "32": {
+      "meme_photo_que": "08",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b9e5af86-b375-43e9-9ff2-153887173575.jpg"
+    },
+    "36": {
+      "meme_photo_que": "19",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c70ad012-3fdc-4a6e-a2f1-983921ece56a.jpg"
+    },
+    "37": {
+      "meme_photo_que": "34",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cae481cc-0698-4b9d-a537-0bf7c390ab8f.jpg"
+    },
+    "38": {
+      "meme_photo_que": "04",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cbcbc3c9-fbc7-47ea-a3eb-3d1009c6b3ec.jpg"
+    },
+    "39": {
+      "meme_photo_que": "14",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/d9e733c9-dded-447f-8f88-07f44357d33a.jpg"
+    },
+    "43": {
+      "meme_photo_que": "01",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f1a56bd9-829d-4ed3-870c-713e9e41b8aa.jpg"
+    },
+    "45": {
+      "meme_photo_que": "41",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f33d12e4-34ec-45f1-bea0-4c24a3ed4153.jpg"
+    }
+  },
+  "_cartes_composees_exclues": {
+    "25": {
+      "texte_incruste": "PARLONS PROJET · Devis clair, sans surprise",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/757efa2f-8f91-4782-83aa-cb014766960e.jpg"
+    },
+    "35": {
+      "texte_incruste": "COULISSES · Une image sincère, forte, mémorable",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c57f5f1e-6c67-42ce-ae05-5218a5ca2fe8.jpg"
+    },
+    "46": {
+      "texte_incruste": "CAPTATION ÉVÉNEMENT · Vos moments méritent le cinéma",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f371495e-6d31-48ae-a295-ce3aef0aa1bd.jpg"
+    }
+  },
+  "_originaux_hors_banque": [
+    {
+      "drive_id": "10Rhmj5RNE5Ts6FoDdB1wiwOEJv_LU1QA",
+      "drive_nom": "HOME-SANFAUTE-260506-153801-01231.jpg",
+      "empreinte": "69fc168523a2b5a7",
+      "url_originale": "https://drive.google.com/uc?export=download&id=10Rhmj5RNE5Ts6FoDdB1wiwOEJv_LU1QA",
+      "taille": [
+        3265,
+        4898
+      ],
+      "date_nom_fichier": "2026-05-06",
+      "sujet": "Vertical : un homme en casquette blanche et t-shirt blanc opère un gimbal avec caméra devant un rideau de bambou (même journée que 05, 21 et 42).",
+      "statut": "jamais publiée, absente de la banque cloudfront : à qualifier par Maxime avant tout usage"
+    },
+    {
+      "drive_id": "1qhS2tMdRkdMf9jk2BSI6xFfGeXi9CH61",
+      "drive_nom": "HOME-SANFAUTE-251107-091425-00018.jpg",
+      "empreinte": "a15de0c9807d3c47",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1qhS2tMdRkdMf9jk2BSI6xFfGeXi9CH61",
+      "taille": [
+        4898,
+        3265
+      ],
+      "date_nom_fichier": "2025-11-07",
+      "sujet": "Atelier en open space : groupe de participantes autour d'un homme en casquette qui tend une feuille, fenêtres claires (même journée que 04, 09, 10, 13, 18).",
+      "statut": "jamais publiée, absente de la banque cloudfront : à qualifier par Maxime avant tout usage"
+    },
+    {
+      "drive_id": "1rlrtYh4K5chWRpwXWGoWoKmljkPVka12",
+      "drive_nom": "HOME-SANFAUTE-251003-075414-4347.jpg",
+      "empreinte": "86de89df5b714911",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1rlrtYh4K5chWRpwXWGoWoKmljkPVka12",
+      "taille": [
+        4898,
+        3265
+      ],
+      "date_nom_fichier": "2025-10-03",
+      "sujet": "Salle d'événement lambrissée : un homme en chemise sombre applaudit debout près de deux hommes en costume, public attablé, écrans (même journée que 12 et 20).",
+      "statut": "jamais publiée, absente de la banque cloudfront : à qualifier par Maxime avant tout usage"
+    },
+    {
+      "drive_id": "1rvU6wJcTsbXFH-QfpoeOTFPk9F0YXMau",
+      "drive_nom": "HOME-SANFAUTE_250627-223423-3839.jpg",
+      "empreinte": "1445d68b40df2f7d",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1rvU6wJcTsbXFH-QfpoeOTFPk9F0YXMau",
+      "taille": [
+        4898,
+        3265
+      ],
+      "date_nom_fichier": "2025-06-27",
+      "sujet": "Sur scène : un homme en chemise blanche et casquette retournée lève le poing, micro à la main ; à l'écran, un portrait et un nom de tiers en clair.",
+      "statut": "jamais publiée, absente de la banque cloudfront : à qualifier par Maxime avant tout usage"
+    }
+  ],
+  "_nouvelles_2026_10": {
+    "_doc": "Instantanés ajoutés le 13/10/2026 (check-up du Mac et de l'appli Photos), validés par Maxime planche par planche. Entrées au format des boîtes de dépôt (drive_id, drive_nom, sujet, pilier), plus lieu_date, visible, accord_a_obtenir, usage et source ; cle = nom du fichier sans extension. drive_id reste vide tant que les fichiers ne sont pas déposés dans le Drive : scripts/drive_sync.py ignore ces entrées, puis remplit empreinte et url au premier passage après le dépôt. Une entrée sans url ne sert ni de fond de carrousel ni de story. accord_a_obtenir = true : un tiers identifiable est visible, la photo ne part pas sans son accord. Q4 répondue le 13/10/2026 : Maxime est le vidéaste barbu, avec ou sans casquette jaune (photo 01 de la banque) ; les champs qui des entrées plus anciennes restent à mettre à jour. Fiche : .claude/skills/cm-metricool/references/clients/banque-photos-otea.md",
+    "releve": "2026-10-13",
+    "photos": 73,
+    "accord_a_obtenir": 0,
+    "dossier_local": "medias/otea-filmakers/nouvelles-2026-10",
+    "drive_dossier": "1Wq8guc34Q-up063lZCJSo7flAgZdr1j_",
+    "drive_dossier_parent": "1-EZ4yNxzUf6yy2idMD1nAaUNmDvCLv5E",
+    "drive_chemin": "CM-OTEA / medias / otea-filmakers / nouvelles-2026-10",
+    "depot_drive": "à faire : glisser le dossier local dans drive_chemin, puis relever les drive_id par le connecteur Drive (le nom de fichier est drive_nom)"
+  },
+  "photos": [
+    {
+      "cle": "01",
+      "slug": "interview-bibliotheque-intervenante",
+      "sujet": "Plateau d'interview en bibliothèque de bureau : intervenante assise à une table haute, softbox parabolique et réflecteur, caméra sur trépied",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ed247fc1-6042-45a0-b5a0-505e2c6716ae.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/112d43ae-74ef-4fb3-92b5-6d41a634abb9.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/08decdeb-f160-4171-a9c4-c11b1b6e324f.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1Qca2XqElYnzA0OOieE6PUauLwAQYDOwV",
+      "drive_id": "1Qca2XqElYnzA0OOieE6PUauLwAQYDOwV",
+      "drive_nom": "HOME-SANFAUTE-260702-103350-00186.jpg",
+      "empreinte": "14450c48be412d3d",
+      "type": "jpg",
+      "date_nom_fichier": "2026-07-02",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "08decdeb",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 83.5,
+      "detail": {
+        "haut": 8.8,
+        "milieu": 11.0,
+        "bas": 12.3
+      },
+      "luminance_916": 96.0,
+      "detail_916": {
+        "haut": 8.3,
+        "milieu": 10.5,
+        "bas": 13.5
+      },
+      "qui": "Maxime : le vidéaste barbu en t-shirt noir, sans casquette, derrière la caméra (réponse du 13/10/2026)",
+      "personnes_visibles": [
+        "intervenante blonde en blazer noir",
+        "vidéaste barbu accroupi derrière la caméra, hors des recadrages 4:5 et 9:16"
+      ],
+      "visage_45": [
+        [
+          278,
+          320,
+          387,
+          492
+        ]
+      ],
+      "visage_916": [
+        [
+          372,
+          455,
+          528,
+          700
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.05,
+      "cadre_45": [
+        114,
+        0,
+        2726,
+        3265
+      ],
+      "decalage_916": 0.05,
+      "cadre_916": [
+        153,
+        0,
+        1990,
+        3265
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "option_916_bande_nette": {
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/a4daf5d4-2da9-42fd-8677-e15322c7868d.jpg",
+        "cadre": [
+          153,
+          0,
+          1893,
+          3094
+        ],
+        "zoom": 1.06,
+        "visage_916": [
+          [
+            393,
+            480,
+            557,
+            739
+          ]
+        ],
+        "usage": "story-photo.py avec cette URL en PHOTO et une option visage par boîte ci-dessus : le fichier est déjà en 1080x1920"
+      },
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "05",
+      "slug": "videaste-camera-en-main",
+      "sujet": "Gros plan : un vidéaste en casquette blanche règle l'objectif d'une caméra tenue à hauteur de poitrine",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9eea19b5-249f-4c2b-b762-7a095504eb3c.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/3e9d8fbc-37fc-496a-8382-9241b8b5b4c0.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/1eb5f9cc-8a50-4acd-be80-dcb326e16c55.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1VUBcI2znda6RaXX2IbKhxmBVYimthJ5W",
+      "drive_id": "1VUBcI2znda6RaXX2IbKhxmBVYimthJ5W",
+      "drive_nom": "HOME-SANFAUTE-260506-163201-01152.jpg",
+      "empreinte": "1db73d62f0509a29",
+      "type": "jpg",
+      "date_nom_fichier": "2026-05-06",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "1eb5f9cc",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 134.4,
+      "detail": {
+        "haut": 13.0,
+        "milieu": 13.1,
+        "bas": 13.6
+      },
+      "luminance_916": 130.8,
+      "detail_916": {
+        "haut": 15.9,
+        "milieu": 15.9,
+        "bas": 16.0
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette blanche et t-shirt blanc, visage de face en partie sous la visière"
+      ],
+      "visage_45": [
+        [
+          319,
+          85,
+          780,
+          663
+        ]
+      ],
+      "visage_916": [
+        [
+          278,
+          261,
+          825,
+          945
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "élevé",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "06",
+      "slug": "terrasse-duo-monopode-face",
+      "sujet": "Terrasse devant une façade vitrée : une intervenante et un vidéaste avec monopode, caméra et tube LED, face à l'objectif",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/74c36adc-4119-469e-8044-499ca8788390.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/1fb3c4bc-751d-4292-adbe-1a283892a851.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1vvqysgLEooAfa7p6wBbmE7C-dMqc9ivx",
+      "drive_id": "1vvqysgLEooAfa7p6wBbmE7C-dMqc9ivx",
+      "drive_nom": "HOME-SANFAUTE-251107-102549-00825.jpg",
+      "empreinte": "9f6cd386b3e2f373",
+      "type": "jpg",
+      "date_nom_fichier": "2025-11-07",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "1fb3c4bc",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 117.6,
+      "detail": {
+        "haut": 15.2,
+        "milieu": 24.7,
+        "bas": 32.7
+      },
+      "luminance_916": 124.2,
+      "detail_916": {
+        "haut": 12.5,
+        "milieu": 22.0,
+        "bas": 28.6
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "femme en veste kaki",
+        "homme en casquette jaune et veste noire, monopode en main"
+      ],
+      "visage_45": [
+        [
+          213,
+          306,
+          325,
+          487
+        ],
+        [
+          649,
+          232,
+          771,
+          402
+        ]
+      ],
+      "visage_916": [
+        [
+          152,
+          523,
+          285,
+          737
+        ],
+        [
+          669,
+          435,
+          814,
+          637
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "07",
+      "slug": "micro-briques-de-verre",
+      "sujet": "Prise de parole au micro devant un mur de briques de verre",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/1f7342ce-aca2-45cb-9621-c852c94245d7.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/60506acf-9e22-4982-948a-b9bb159f3e5e.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/23a1e003-ff1e-4583-a333-0610e5c89fc1.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1Efxx-650Xk60fo6HO2_h6oZswH5aZvKK",
+      "drive_id": "1Efxx-650Xk60fo6HO2_h6oZswH5aZvKK",
+      "drive_nom": "HOME-SANFAUTE_250627-211425-3419.jpg",
+      "empreinte": "eb1f61d1a9286d6f",
+      "type": "jpg",
+      "date_nom_fichier": "2025-06-27",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "23a1e003",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 142.8,
+      "detail": {
+        "haut": 11.9,
+        "milieu": 19.9,
+        "bas": 13.5
+      },
+      "luminance_916": 137.1,
+      "detail_916": {
+        "haut": 12.9,
+        "milieu": 23.4,
+        "bas": 14.7
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en chemise blanche et casquette jaune retournée",
+        "silhouettes du public en bas"
+      ],
+      "visage_45": [
+        [
+          464,
+          69,
+          666,
+          362
+        ]
+      ],
+      "visage_916": [
+        [
+          450,
+          242,
+          689,
+          589
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "non",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "11",
+      "slug": "scene-bras-ouverts",
+      "sujet": "Sur scène, bras ouverts, regard vers le haut, fond gris-bleu lisse",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/e24bd014-a091-49d6-b5d6-e52169315c55.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/0c90e7c0-5812-485d-8cd0-913d368c478c.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/405967bc-87d3-45cd-93c8-130ac9202361.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1VDiKiUSS394Lqie3S7-gulLDx7X76y8A",
+      "drive_id": "1VDiKiUSS394Lqie3S7-gulLDx7X76y8A",
+      "drive_nom": "HOME-SANFAUTE-251009-190502-1136.jpg",
+      "empreinte": "82bf071de022749c",
+      "type": "jpg",
+      "date_nom_fichier": "2025-10-09",
+      "source_recadrages": "original",
+      "taille_source": [
+        5616,
+        3744
+      ],
+      "cle_banque": "405967bc",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 74.9,
+      "detail": {
+        "haut": 16.4,
+        "milieu": 16.9,
+        "bas": 15.7
+      },
+      "luminance_916": 80.6,
+      "detail_916": {
+        "haut": 23.0,
+        "milieu": 22.4,
+        "bas": 21.4
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette jaune retournée, t-shirt sombre et pendentif"
+      ],
+      "visage_45": [
+        [
+          225,
+          127,
+          598,
+          618
+        ]
+      ],
+      "visage_916": [
+        [
+          92,
+          181,
+          622,
+          878
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1310,
+        0,
+        4306,
+        3744
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        1755,
+        0,
+        3861,
+        3744
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "visage sous le voile (voile dès y=439)"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "13",
+      "slug": "camera-cine-bureau-duo",
+      "sujet": "Open space : un cadreur tient une caméra cinéma à hauteur d'œil, à côté un homme sourit",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/bcdbf581-3208-4349-8ae3-bbd3f6a7e77e.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/4fd78d61-bdbf-4fd3-b598-376ed9c0f8a2.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1Y79xHgWxGt96oVKedz3-gGDDBKX1nog9",
+      "drive_id": "1Y79xHgWxGt96oVKedz3-gGDDBKX1nog9",
+      "drive_nom": "HOME-SANFAUTE-251107-092201-00080.jpg",
+      "empreinte": "d3472f600d4e7973",
+      "type": "jpg",
+      "date_nom_fichier": "2025-11-07",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "4fd78d61",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 120.9,
+      "detail": {
+        "haut": 6.7,
+        "milieu": 12.1,
+        "bas": 10.2
+      },
+      "luminance_916": 113.4,
+      "detail_916": {
+        "haut": 8.2,
+        "milieu": 13.4,
+        "bas": 10.3
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette verte avec badge visiteur, caméra en main",
+        "homme en casquette jaune, t-shirt sombre et pendentif"
+      ],
+      "visage_45": [
+        [
+          136,
+          255,
+          389,
+          653
+        ],
+        [
+          556,
+          377,
+          788,
+          683
+        ]
+      ],
+      "visage_916": [
+        [
+          145,
+          363,
+          504,
+          928
+        ],
+        [
+          743,
+          536,
+          1073,
+          972
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1143,
+        0,
+        3755,
+        3265
+      ],
+      "decalage_916": 0.4,
+      "cadre_916": [
+        1225,
+        0,
+        3061,
+        3265
+      ],
+      "i2v_risque": "faible",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "14",
+      "slug": "terrasse-duo-monopode-profil",
+      "sujet": "Terrasse : une intervenante parle à un vidéaste qui tient un monopode avec caméra et tube LED",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b28b0231-737d-4f08-8c92-972a6bc19485.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/506b62b5-2857-46af-8fd5-c16bedb0eb35.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1mixw3L6Y-shrw5t4_E3I8L8QW8CYXQnO",
+      "drive_id": "1mixw3L6Y-shrw5t4_E3I8L8QW8CYXQnO",
+      "drive_nom": "HOME-SANFAUTE-251107-102543-00818.jpg",
+      "empreinte": "581b6805945b0e93",
+      "type": "jpg",
+      "date_nom_fichier": "2025-11-07",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "506b62b5",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 126.5,
+      "detail": {
+        "haut": 16.2,
+        "milieu": 25.3,
+        "bas": 29.0
+      },
+      "luminance_916": 131.6,
+      "detail_916": {
+        "haut": 12.5,
+        "milieu": 22.4,
+        "bas": 26.9
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "femme en veste kaki, de profil",
+        "homme en casquette jaune, monopode en main"
+      ],
+      "visage_45": [
+        [
+          191,
+          280,
+          286,
+          490
+        ],
+        [
+          712,
+          229,
+          829,
+          398
+        ]
+      ],
+      "visage_916": [
+        [
+          126,
+          492,
+          239,
+          741
+        ],
+        [
+          744,
+          432,
+          883,
+          632
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "16",
+      "slug": "studio-console-softbox-large",
+      "sujet": "Studio d'enregistrement : un homme assis à la console, un autre debout avec une tablette devant un grand softbox rond",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7462f8a0-bdcf-4c57-849a-10d09832715c.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/54df9acf-c816-4b97-998a-c888b4296153.jpg",
+      "url_originale": null,
+      "drive_id": null,
+      "drive_nom": null,
+      "empreinte": "apercu-7a8302d28406313a",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "apercu",
+      "taille_source": [
+        1440,
+        960
+      ],
+      "cle_banque": "54df9acf",
+      "provenance": "client",
+      "credit": "OTEA Production, séance studio (original absent du Drive, photographe à confirmer)",
+      "matiere": true,
+      "luminance": 102.0,
+      "detail": {
+        "haut": 8.9,
+        "milieu": 9.9,
+        "bas": 5.4
+      },
+      "luminance_916": 110.8,
+      "detail_916": {
+        "haut": 7.2,
+        "milieu": 6.8,
+        "bas": 3.3
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme aux cheveux longs en t-shirt gris, regard caméra",
+        "homme barbu en t-shirt noir avec tablette"
+      ],
+      "visage_45": [
+        [
+          120,
+          532,
+          350,
+          869
+        ],
+        [
+          763,
+          238,
+          924,
+          484
+        ]
+      ],
+      "visage_916": [
+        [
+          522,
+          339,
+          750,
+          688
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.25,
+      "cadre_45": [
+        168,
+        0,
+        936,
+        960
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        450,
+        0,
+        990,
+        960
+      ],
+      "i2v_risque": "moyen",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "aperçu seulement : le 9:16 ne garde que 540x960 px, insuffisant pour une story plein cadre",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "17",
+      "slug": "salle-cinema-captation",
+      "sujet": "Salle de cinéma sombre : un intervenant appuyé contre les fauteuils, un cadreur derrière une caméra sur trépied",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9f4893ae-b7b1-4360-84a1-74c87ab3f513.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/4140451b-4cde-48eb-9060-72df39c27d4c.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/58835f73-b68f-4f5d-8272-4af0e4433f47.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1r7AM3T8n8sUy3EsMhwebwn8QCaQ6RsRh",
+      "drive_id": "1r7AM3T8n8sUy3EsMhwebwn8QCaQ6RsRh",
+      "drive_nom": "HOME-SANFAUTE-251009-174320-7052.jpg",
+      "empreinte": "f30b864a0c255704",
+      "type": "jpg",
+      "date_nom_fichier": "2025-10-09",
+      "source_recadrages": "original",
+      "taille_source": [
+        6106,
+        4071
+      ],
+      "cle_banque": "58835f73",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 33.0,
+      "detail": {
+        "haut": 8.0,
+        "milieu": 15.1,
+        "bas": 17.3
+      },
+      "luminance_916": 33.1,
+      "detail_916": {
+        "haut": 8.8,
+        "milieu": 17.5,
+        "bas": 24.8
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en t-shirt gris, hors du 4:5 et du 9:16",
+        "cadreur en chemise bleue, visage hors du 9:16"
+      ],
+      "visage_45": [
+        [
+          615,
+          151,
+          740,
+          407
+        ]
+      ],
+      "visage_916": [],
+      "visage_916_bande_nette": true,
+      "decalage_45": 1.0,
+      "cadre_45": [
+        2849,
+        0,
+        6106,
+        4071
+      ],
+      "decalage_916": 0.6,
+      "cadre_916": [
+        2290,
+        0,
+        4580,
+        4071
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "ok"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "19",
+      "slug": "noir-et-blanc-micro-poing",
+      "sujet": "Noir et blanc : prise de parole au micro, poing levé, fond noir",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ffb6a802-edf9-4fa3-8666-a7c86af57452.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/d5763b5e-b5a8-4736-b4b6-1f9e76e37fb6.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/61c77629-8b0b-4b47-86e4-33426c46db88.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1i_WhL7ZDcC6sJblEdFVHuZZmJTHzv079",
+      "drive_id": "1i_WhL7ZDcC6sJblEdFVHuZZmJTHzv079",
+      "drive_nom": "HOME-SANFAUTE-251009-202808-2128.jpg",
+      "empreinte": "2215d2dc295d6576",
+      "type": "jpg",
+      "date_nom_fichier": "2025-10-09",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "61c77629",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 23.3,
+      "detail": {
+        "haut": 11.2,
+        "milieu": 16.1,
+        "bas": 12.1
+      },
+      "luminance_916": 27.9,
+      "detail_916": {
+        "haut": 15.8,
+        "milieu": 21.9,
+        "bas": 15.4
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette retournée, t-shirt sombre et pendentif"
+      ],
+      "visage_45": [
+        [
+          406,
+          91,
+          715,
+          589
+        ]
+      ],
+      "visage_916": [
+        [
+          170,
+          129,
+          609,
+          837
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1143,
+        0,
+        3755,
+        3265
+      ],
+      "decalage_916": 0.6,
+      "cadre_916": [
+        1837,
+        0,
+        3673,
+        3265
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "visage sous le voile (voile dès y=439)"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "21",
+      "slug": "golf-gimbal-tournage",
+      "sujet": "Boutique de golf : un opérateur au gimbal filme un homme bras croisés",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ff4b0e0a-a038-45fc-b812-c5775f778f30.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/62ec4b1e-6c1b-48d2-9f7b-4ab0887e1a07.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1cj3E-LMMJ8TS6OdrnJE3UAAKsbzjse20",
+      "drive_id": "1cj3E-LMMJ8TS6OdrnJE3UAAKsbzjse20",
+      "drive_nom": "HOME-SANFAUTE-260506-153735-01222.jpg",
+      "empreinte": "101dd7841f542e9a",
+      "type": "jpg",
+      "date_nom_fichier": "2026-05-06",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "62ec4b1e",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 99.9,
+      "detail": {
+        "haut": 12.5,
+        "milieu": 13.5,
+        "bas": 11.3
+      },
+      "luminance_916": 104.9,
+      "detail_916": {
+        "haut": 13.0,
+        "milieu": 13.4,
+        "bas": 12.4
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette blanche et t-shirt blanc au gimbal",
+        "homme plus âgé en polo blanc, de profil, hors du 4:5 et du 9:16"
+      ],
+      "visage_45": [
+        [
+          701,
+          198,
+          867,
+          442
+        ]
+      ],
+      "visage_916": [
+        [
+          812,
+          282,
+          1048,
+          628
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.8,
+      "cadre_45": [
+        1829,
+        0,
+        4441,
+        3265
+      ],
+      "decalage_916": 0.7,
+      "cadre_916": [
+        2143,
+        0,
+        3980,
+        3265
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "visage sous le voile (voile dès y=439)"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "23",
+      "slug": "scene-rire-chemise-blanche",
+      "sujet": "Sur scène : rire au micro, main sur la casquette, fond gris-bleu",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/6aa55883-110c-4663-956c-87e958d7a367.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/677200e9-1c55-4786-9f11-ff2a7d521929.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1swOggQYYwihF5RP1IJzjlmRWiRr7fQtg",
+      "drive_id": "1swOggQYYwihF5RP1IJzjlmRWiRr7fQtg",
+      "drive_nom": "HOME-SANFAUTE_250627-223104-3789.jpg",
+      "empreinte": "3f3154d14dfc56d1",
+      "type": "jpg",
+      "date_nom_fichier": "2025-06-27",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "677200e9",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 152.4,
+      "detail": {
+        "haut": 9.7,
+        "milieu": 14.1,
+        "bas": 8.6
+      },
+      "luminance_916": 173.6,
+      "detail_916": {
+        "haut": 13.4,
+        "milieu": 16.7,
+        "bas": 7.6
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en chemise blanche et casquette retournée"
+      ],
+      "visage_45": [
+        [
+          73,
+          202,
+          389,
+          726
+        ]
+      ],
+      "visage_916": [
+        [
+          146,
+          287,
+          595,
+          1032
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1143,
+        0,
+        3755,
+        3265
+      ],
+      "decalage_916": 0.35,
+      "cadre_916": [
+        1072,
+        0,
+        2908,
+        3265
+      ],
+      "i2v_risque": "non",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "26",
+      "slug": "sourire-derriere-camera",
+      "sujet": "Un homme mains jointes, sourire, devant une caméra sur trépied, fenêtre en contre-jour",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/d7ba1f0e-f0ce-48bf-a949-138cdc3dd7a0.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c4288e56-f6c3-430f-a21b-8d77e1eaa406.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7678cfe5-9d91-4b32-ab94-edbbc352fb04.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1Z4FdOJZAs-qYOxBmv0X-vQPXtG0d__bU",
+      "drive_id": "1Z4FdOJZAs-qYOxBmv0X-vQPXtG0d__bU",
+      "drive_nom": "HOME-SANFAUTE-260702-153855-00975.jpg",
+      "empreinte": "99249c56a19e4cf1",
+      "type": "jpg",
+      "date_nom_fichier": "2026-07-02",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "7678cfe5",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 155.9,
+      "detail": {
+        "haut": 7.1,
+        "milieu": 14.3,
+        "bas": 12.4
+      },
+      "luminance_916": 153.0,
+      "detail_916": {
+        "haut": 8.7,
+        "milieu": 17.2,
+        "bas": 14.1
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme barbu en t-shirt gris foncé"
+      ],
+      "visage_45": [
+        [
+          435,
+          174,
+          851,
+          652
+        ]
+      ],
+      "visage_916": [
+        [
+          174,
+          248,
+          767,
+          926
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1143,
+        0,
+        3755,
+        3265
+      ],
+      "decalage_916": 0.62,
+      "cadre_916": [
+        1898,
+        0,
+        3735,
+        3265
+      ],
+      "i2v_risque": "faible",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": "ven",
+      "story_condition": "Q4 : seulement si Maxime confirme que c'est lui"
+    },
+    {
+      "cle": "27",
+      "slug": "medaille-mordue",
+      "sujet": "Extérieur sur les toits : un participant mord une médaille à ruban bleu",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f5dee8fa-2678-495c-9de9-b720eda0e5d4.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7e24e107-0ff3-426d-97f1-49ee8e5efdd8.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1avEqBZEMh3dUrYJobwU6lb8DD6aa2GWr",
+      "drive_id": "1avEqBZEMh3dUrYJobwU6lb8DD6aa2GWr",
+      "drive_nom": "HOME-SANFAUTE_250627-183045-1121 (1).jpg",
+      "empreinte": "a34d0d4a7968f9a4",
+      "type": "jpg",
+      "date_nom_fichier": "2025-06-27",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "7e24e107",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 150.7,
+      "detail": {
+        "haut": 10.2,
+        "milieu": 15.9,
+        "bas": 16.7
+      },
+      "luminance_916": 158.7,
+      "detail_916": {
+        "haut": 9.6,
+        "milieu": 15.5,
+        "bas": 15.2
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme barbu en casquette beige et polo blanc",
+        "personnes floues derrière"
+      ],
+      "visage_45": [
+        [
+          106,
+          465,
+          199,
+          610
+        ],
+        [
+          175,
+          0,
+          685,
+          579
+        ]
+      ],
+      "visage_916": [
+        [
+          25,
+          712,
+          135,
+          883
+        ],
+        [
+          108,
+          81,
+          712,
+          846
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "non",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "hors rotation : recadrage non hébergé (refaire depuis url_originale avec decalage_916)",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "29",
+      "slug": "studio-direction-tablette",
+      "sujet": "Studio : un homme tient une tablette et dirige d'une main levée, à côté d'un grand softbox rond",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/198c8ae1-b622-4224-a7a2-7d4277b28e53.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/cf539da0-f253-4c8a-b4dd-bf200564e89a.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/96fe141e-e7c2-472c-9153-9c05129c223c.jpg",
+      "url_originale": null,
+      "drive_id": null,
+      "drive_nom": null,
+      "empreinte": "apercu-ead639efd2282f32",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "apercu",
+      "taille_source": [
+        960,
+        1440
+      ],
+      "cle_banque": "96fe141e",
+      "provenance": "client",
+      "credit": "OTEA Production, séance studio (original absent du Drive, photographe à confirmer)",
+      "matiere": true,
+      "luminance": 104.5,
+      "detail": {
+        "haut": 13.7,
+        "milieu": 12.7,
+        "bas": 12.3
+      },
+      "luminance_916": 115.4,
+      "detail_916": {
+        "haut": 12.1,
+        "milieu": 10.8,
+        "bas": 8.9
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme barbu en t-shirt noir"
+      ],
+      "visage_45": [
+        [
+          254,
+          120,
+          458,
+          438
+        ]
+      ],
+      "visage_916": [
+        [
+          201,
+          303,
+          443,
+          679
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        120,
+        960,
+        1320
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        75,
+        0,
+        885,
+        1440
+      ],
+      "i2v_risque": "moyen",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_note": "recadrage tiré de l'aperçu 960x1440 (810 px utiles agrandis x1,33) : pas d'original sur le Drive",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "30",
+      "slug": "studio-tournage-a-deux",
+      "sujet": "Plan large du studio : un homme à la console, un autre debout avec une tablette sous le softbox",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/681c8012-eebb-41b0-a35c-688a299d2213.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9ea5ec6b-5f97-4044-9579-7203931a13be.jpg",
+      "url_originale": null,
+      "drive_id": null,
+      "drive_nom": null,
+      "empreinte": "apercu-70fe0fea9a8c733e",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "apercu",
+      "taille_source": [
+        1440,
+        960
+      ],
+      "cle_banque": "9ea5ec6b",
+      "provenance": "client",
+      "credit": "OTEA Production, séance studio (original absent du Drive, photographe à confirmer)",
+      "matiere": true,
+      "luminance": 107.9,
+      "detail": {
+        "haut": 7.7,
+        "milieu": 9.9,
+        "bas": 14.4
+      },
+      "luminance_916": 123.3,
+      "detail_916": {
+        "haut": 5.0,
+        "milieu": 3.5,
+        "bas": 11.6
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme aux cheveux longs à la console",
+        "homme barbu en t-shirt noir avec tablette",
+        "silhouette au bord gauche"
+      ],
+      "visage_45": [
+        [
+          16,
+          457,
+          97,
+          547
+        ],
+        [
+          110,
+          412,
+          337,
+          749
+        ],
+        [
+          596,
+          167,
+          742,
+          383
+        ]
+      ],
+      "visage_916": [
+        [
+          262,
+          238,
+          468,
+          545
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.3,
+      "cadre_45": [
+        202,
+        0,
+        970,
+        960
+      ],
+      "decalage_916": 0.55,
+      "cadre_916": [
+        495,
+        0,
+        1035,
+        960
+      ],
+      "i2v_risque": "faible",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "aperçu seulement : le 9:16 ne garde que 540x960 px, insuffisant pour une story plein cadre",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "contraste insuffisant",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "31",
+      "slug": "studio-tablette-regard",
+      "sujet": "Plan rapproché en studio : un homme tient une tablette et regarde l'objectif, softbox à droite",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ad6b896f-79a4-499f-8e2a-6375fab0507c.jpg",
+      "url_916": null,
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b2136390-30c8-42da-9fcc-708c1b405fda.jpg",
+      "url_originale": null,
+      "drive_id": null,
+      "drive_nom": null,
+      "empreinte": "apercu-5e85a9234bac3a56",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "apercu",
+      "taille_source": [
+        1440,
+        960
+      ],
+      "cle_banque": "b2136390",
+      "provenance": "client",
+      "credit": "OTEA Production, séance studio (original absent du Drive, photographe à confirmer)",
+      "matiere": true,
+      "luminance": 116.8,
+      "detail": {
+        "haut": 10.0,
+        "milieu": 7.6,
+        "bas": 6.4
+      },
+      "luminance_916": 103.0,
+      "detail_916": {
+        "haut": 8.0,
+        "milieu": 5.6,
+        "bas": 4.3
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme barbu en t-shirt noir, regard caméra"
+      ],
+      "visage_45": [
+        [
+          30,
+          58,
+          399,
+          613
+        ]
+      ],
+      "visage_916": [
+        [
+          0,
+          83,
+          520,
+          872
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        336,
+        0,
+        1104,
+        960
+      ],
+      "decalage_916": 0.4,
+      "cadre_916": [
+        360,
+        0,
+        900,
+        960
+      ],
+      "i2v_risque": "non",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_absent": "aperçu seulement : le 9:16 ne garde que 540x960 px, insuffisant pour une story plein cadre",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "33",
+      "slug": "studio-rire-tablette",
+      "sujet": "Studio : un homme rit, tablette en main, devant le grand softbox rond",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c133870e-3311-4cbb-acf7-96398a3552a6.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/6f0bd8f1-acb5-4224-ba12-8fdc9a7b231f.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ba99c54d-59ce-4557-a2ac-28334ac4ef09.jpg",
+      "url_originale": null,
+      "drive_id": null,
+      "drive_nom": null,
+      "empreinte": "apercu-aab51e64d1b91d84",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "apercu",
+      "taille_source": [
+        960,
+        1440
+      ],
+      "cle_banque": "ba99c54d",
+      "provenance": "client",
+      "credit": "OTEA Production, séance studio (original absent du Drive, photographe à confirmer)",
+      "matiere": true,
+      "luminance": 97.0,
+      "detail": {
+        "haut": 10.0,
+        "milieu": 7.8,
+        "bas": 6.9
+      },
+      "luminance_916": 99.1,
+      "detail_916": {
+        "haut": 7.9,
+        "milieu": 6.7,
+        "bas": 5.6
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme barbu en t-shirt noir"
+      ],
+      "visage_45": [
+        [
+          493,
+          14,
+          813,
+          505
+        ]
+      ],
+      "visage_916": [
+        [
+          485,
+          176,
+          863,
+          758
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        120,
+        960,
+        1320
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        75,
+        0,
+        885,
+        1440
+      ],
+      "i2v_risque": "moyen",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "url_916_note": "recadrage tiré de l'aperçu 960x1440 (810 px utiles agrandis x1,33) : pas d'original sur le Drive",
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "34",
+      "slug": "portrait-pro-noir-et-blanc",
+      "sujet": "Portrait professionnel en noir et blanc, sweat à capuche, fond noir",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/054a70bb-c8cf-4cf8-bf15-e50f58c7612a.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/388e0f09-a1a4-474a-9a12-f9ee61f7b95b.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c000eed6-d1a6-4ecc-b88c-e0218c50aa4a.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1EDpnM6om9LHWs_EflJ1je8dPL7Zk_SEj",
+      "drive_id": "1EDpnM6om9LHWs_EflJ1je8dPL7Zk_SEj",
+      "drive_nom": "portrait-pro-videaste-independant-agnes-colombo-photographe-paris-61-2.jpg",
+      "empreinte": "d1e0cb319371cc30",
+      "type": "jpg",
+      "date_nom_fichier": null,
+      "source_recadrages": "original",
+      "taille_source": [
+        3000,
+        4500
+      ],
+      "cle_banque": "c000eed6",
+      "provenance": "client",
+      "credit": "Agnès Colombo, photographe (d'après le nom du fichier Drive), portrait pro",
+      "matiere": true,
+      "luminance": 36.8,
+      "detail": {
+        "haut": 11.3,
+        "milieu": 7.5,
+        "bas": 3.7
+      },
+      "luminance_916": 36.2,
+      "detail_916": {
+        "haut": 12.5,
+        "milieu": 7.8,
+        "bas": 4.2
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en sweat à capuche noir"
+      ],
+      "visage_45": [
+        [
+          402,
+          0,
+          956,
+          769
+        ]
+      ],
+      "visage_916": [
+        [
+          377,
+          1,
+          1033,
+          1071
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        375,
+        3000,
+        4125
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        234,
+        0,
+        2766,
+        4500
+      ],
+      "i2v_risque": "non",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "visage sous le voile (voile dès y=439)"
+      },
+      "story_slot": "ven",
+      "story_condition": "Q4 : seulement si Maxime confirme que c'est lui"
+    },
+    {
+      "cle": "41",
+      "slug": "interview-bibliotheque-intervenant",
+      "sujet": "Même plateau bibliothèque que 01 : intervenant assis au tabouret, de profil, softbox parabolique, caméra sur trépied",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/7c9b980e-e461-40c5-89bd-d986fe4f32d8.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/dc3c185b-8a21-4d25-871d-494810cf2da0.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/e6ac255a-5e52-47ec-9a0d-8b0ea663bbde.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1YMM7ncuc1CmvHobP-O6m2Cwn7ysk85qs",
+      "drive_id": "1YMM7ncuc1CmvHobP-O6m2Cwn7ysk85qs",
+      "drive_nom": "HOME-SANFAUTE-260702-115058-00471.jpg",
+      "empreinte": "bbedc043c39c1e5c",
+      "type": "jpg",
+      "date_nom_fichier": "2026-07-02",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "e6ac255a",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 86.3,
+      "detail": {
+        "haut": 6.6,
+        "milieu": 9.9,
+        "bas": 9.7
+      },
+      "luminance_916": 84.9,
+      "detail_916": {
+        "haut": 5.6,
+        "milieu": 9.0,
+        "bas": 8.7
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en polo bleu, de profil",
+        "vidéaste barbu derrière la caméra, hors des recadrages"
+      ],
+      "visage_45": [
+        [
+          279,
+          266,
+          402,
+          480
+        ]
+      ],
+      "visage_916": [
+        [
+          82,
+          379,
+          257,
+          682
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.1,
+      "cadre_45": [
+        229,
+        0,
+        2841,
+        3265
+      ],
+      "decalage_916": 0.25,
+      "cadre_916": [
+        765,
+        0,
+        2602,
+        3265
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "option_916_bande_nette": {
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c6912b25-8960-42c0-a323-c4c08ebbd018.jpg",
+        "cadre": [
+          692,
+          1,
+          2138,
+          2572
+        ],
+        "zoom": 1.27,
+        "visage_916": [
+          [
+            159,
+            481,
+            380,
+            865
+          ]
+        ],
+        "usage": "story-photo.py avec cette URL en PHOTO et une option visage par boîte ci-dessus : le fichier est déjà en 1080x1920"
+      },
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "42",
+      "slug": "plongee-tapis-golf",
+      "sujet": "Vue en plongée : un homme bras levés, caméra en main, sur un tapis de putting, suspension en rotin",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/63e3f31e-418f-494a-9ea6-ac873361963c.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c8af6837-bb30-48a5-b43b-f9439893a6e9.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f10ad33e-6df4-447b-9adb-c5e430569307.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1bO0ulnvd-dfpxIpUIdyOnosLmchl86a8",
+      "drive_id": "1bO0ulnvd-dfpxIpUIdyOnosLmchl86a8",
+      "drive_nom": "HOME-SANFAUTE-260506-155121-00851.jpg",
+      "empreinte": "d5c18c695c8d8ed5",
+      "type": "jpg",
+      "date_nom_fichier": "2026-05-06",
+      "source_recadrages": "original",
+      "taille_source": [
+        3265,
+        4898
+      ],
+      "cle_banque": "f10ad33e",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 66.8,
+      "detail": {
+        "haut": 15.9,
+        "milieu": 11.2,
+        "bas": 13.0
+      },
+      "luminance_916": 65.3,
+      "detail_916": {
+        "haut": 15.2,
+        "milieu": 12.5,
+        "bas": 13.2
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en casquette blanche et t-shirt blanc"
+      ],
+      "visage_45": [
+        [
+          554,
+          219,
+          686,
+          404
+        ]
+      ],
+      "visage_916": [
+        [
+          557,
+          419,
+          713,
+          639
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        0,
+        408,
+        3265,
+        4490
+      ],
+      "decalage_916": 0.5,
+      "cadre_916": [
+        255,
+        0,
+        3010,
+        4898
+      ],
+      "i2v_risque": "faible",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "option_916_bande_nette": {
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/00f90665-2ac3-48f9-9135-b034c5ae2503.jpg",
+        "cadre": [
+          255,
+          0,
+          2659,
+          4274
+        ],
+        "zoom": 1.15,
+        "visage_916": [
+          [
+            638,
+            481,
+            817,
+            732
+          ]
+        ],
+        "usage": "story-photo.py avec cette URL en PHOTO et une option visage par boîte ci-dessus : le fichier est déjà en 1080x1920"
+      },
+      "carrousel_controle": {
+        "couverture": "visage sous le voile (voile dès y=211)",
+        "corps": "contraste insuffisant",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "ok"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "44",
+      "slug": "plateau-bibliotheque-fond-bleu",
+      "sujet": "Plateau bibliothèque : un intervenant assis à une table haute devant un panneau bleu-gris",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/b4c7c046-f357-4d3e-9e0b-9bcac4c35fa6.jpg",
+      "url_916": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/1559eb4e-705c-4420-b638-ef8dd6b55148.jpg",
+      "url_apercu": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f31bae6f-77f3-480d-a284-f0b44be711ea.jpg",
+      "url_originale": "https://drive.google.com/uc?export=download&id=1OIy_Hz1L2aNv-4AybYNrJXmOnHChZK81",
+      "drive_id": "1OIy_Hz1L2aNv-4AybYNrJXmOnHChZK81",
+      "drive_nom": "HOME-SANFAUTE-260702-152646-00869.jpg",
+      "empreinte": "24cecc6fe1270c62",
+      "type": "jpg",
+      "date_nom_fichier": "2026-07-02",
+      "source_recadrages": "original",
+      "taille_source": [
+        4898,
+        3265
+      ],
+      "cle_banque": "f31bae6f",
+      "provenance": "client",
+      "credit": "OTEA Production, shooting HOME SANFAUTE",
+      "matiere": true,
+      "luminance": 92.0,
+      "detail": {
+        "haut": 16.4,
+        "milieu": 15.0,
+        "bas": 12.7
+      },
+      "luminance_916": 102.6,
+      "detail_916": {
+        "haut": 18.4,
+        "milieu": 17.4,
+        "bas": 15.6
+      },
+      "qui": "à confirmer par Maxime",
+      "personnes_visibles": [
+        "homme en t-shirt gris assis",
+        "femme en robe beige debout, hors du 4:5 et du 9:16"
+      ],
+      "visage_45": [
+        [
+          607,
+          191,
+          742,
+          413
+        ]
+      ],
+      "visage_916": [
+        [
+          455,
+          272,
+          647,
+          586
+        ]
+      ],
+      "visage_916_bande_nette": false,
+      "decalage_45": 0.5,
+      "cadre_45": [
+        1143,
+        0,
+        3755,
+        3265
+      ],
+      "decalage_916": 0.6,
+      "cadre_916": [
+        1837,
+        0,
+        3673,
+        3265
+      ],
+      "i2v_risque": "à juger",
+      "comptes": [
+        "otea-production",
+        "otea-filmakers"
+      ],
+      "carrousel_controle": {
+        "couverture": "contraste insuffisant",
+        "corps": "visage sous le voile (voile dès y=301)",
+        "titre_long": "visage sous le voile (voile dès y=396)",
+        "titre_court": "contraste insuffisant"
+      },
+      "story_slot": null,
+      "story_condition": null
+    },
+    {
+      "cle": "20250113-coucher-soleil-paris-hauteur",
+      "drive_id": null,
+      "drive_nom": "20250113-coucher-soleil-paris-hauteur.jpg",
+      "type": "jpg",
+      "sujet": "Coucher de soleil sur Paris depuis les hauteurs",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Puteaux, 13 janvier 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250113-coucher-soleil-paris-hauteur.jpg"
+    },
+    {
+      "cle": "20250114-selfie-miroir-camera",
+      "drive_id": null,
+      "drive_nom": "20250114-selfie-miroir-camera.jpg",
+      "type": "jpg",
+      "sujet": "Selfie miroir, la caméra équipée dans l'autre main",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Puteaux, 14 janvier 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250114-selfie-miroir-camera.jpg"
+    },
+    {
+      "cle": "20250131-laptop-route-de-nuit",
+      "drive_id": null,
+      "drive_nom": "20250131-laptop-route-de-nuit.jpg",
+      "type": "jpg",
+      "sujet": "Le portable ouvert sur les genoux, la route de nuit devant",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "route de La Clusaz, 31 janvier 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250131-laptop-route-de-nuit.jpg"
+    },
+    {
+      "cle": "20250202-eglise-la-clusaz-aube",
+      "drive_id": null,
+      "drive_nom": "20250202-eglise-la-clusaz-aube.jpg",
+      "type": "jpg",
+      "sujet": "L'église de La Clusaz à l'aube, montagnes enneigées derrière",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "La Clusaz, 2 février 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250202-eglise-la-clusaz-aube.jpg"
+    },
+    {
+      "cle": "20250204-osmo-pocket-neige-aube",
+      "drive_id": null,
+      "drive_nom": "20250204-osmo-pocket-neige-aube.jpg",
+      "type": "jpg",
+      "sujet": "L'Osmo Pocket plantée dans la neige, montagnes floues à l'aube",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "La Clusaz, 4 février 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250204-osmo-pocket-neige-aube.jpg"
+    },
+    {
+      "cle": "20250206-chapelle-neige-lumiere",
+      "drive_id": null,
+      "drive_nom": "20250206-chapelle-neige-lumiere.jpg",
+      "type": "jpg",
+      "sujet": "La chapelle sous la neige, lumière du matin",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "La Clusaz, 6 février 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250206-chapelle-neige-lumiere.jpg"
+    },
+    {
+      "cle": "20250414-montage-dans-l-avion",
+      "drive_id": null,
+      "drive_nom": "20250414-montage-dans-l-avion.jpg",
+      "type": "jpg",
+      "sujet": "Le montage continue dans l'avion, timeline ouverte",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "vol vers la Polynésie, 14 avril 2025",
+      "visible": "rushes à l'écran (petits)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250414-montage-dans-l-avion.jpg"
+    },
+    {
+      "cle": "20250415-hublot-moorea",
+      "drive_id": null,
+      "drive_nom": "20250415-hublot-moorea.jpg",
+      "type": "jpg",
+      "sujet": "Par le hublot : l'île, le récif et les nuages",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "approche de Tahiti, 15 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250415-hublot-moorea.jpg"
+    },
+    {
+      "cle": "20250415-selfie-bateau-collier-fleurs",
+      "drive_id": null,
+      "drive_nom": "20250415-selfie-bateau-collier-fleurs.jpg",
+      "type": "jpg",
+      "sujet": "Selfie à l'arrière du bateau, collier de fleurs et sillage",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "arrivée à Maupiti, 15 avril 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250415-selfie-bateau-collier-fleurs.jpg"
+    },
+    {
+      "cle": "20250416-montage-sous-paillote",
+      "drive_id": null,
+      "drive_nom": "20250416-montage-sous-paillote.jpg",
+      "type": "jpg",
+      "sujet": "Le montage continue sous la paillote, portable ouvert face au lagon",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 16 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250416-montage-sous-paillote.jpg"
+    },
+    {
+      "cle": "20250421-avion-piste-lagon-maupiti",
+      "drive_id": null,
+      "drive_nom": "20250421-avion-piste-lagon-maupiti.jpg",
+      "type": "jpg",
+      "sujet": "L'avion d'Air Tahiti posé au bord du lagon",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "aérodrome de Maupiti, 21 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250421-avion-piste-lagon-maupiti.jpg"
+    },
+    {
+      "cle": "20250422-lever-soleil-rose-lagon",
+      "drive_id": null,
+      "drive_nom": "20250422-lever-soleil-rose-lagon.jpg",
+      "type": "jpg",
+      "sujet": "Ciel rose et doré au lever du soleil, la ligne des cocotiers en contre-jour",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 22 avril 2025 au lever du jour",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250422-lever-soleil-rose-lagon.jpg"
+    },
+    {
+      "cle": "20250422-pov-pieds-herbe-lagon",
+      "drive_id": null,
+      "drive_nom": "20250422-pov-pieds-herbe-lagon.jpg",
+      "type": "jpg",
+      "sujet": "Mes pieds dans l'herbe face au lagon, le ponton au fond",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 22 avril 2025",
+      "visible": "Maxime (pieds)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250422-pov-pieds-herbe-lagon.jpg"
+    },
+    {
+      "cle": "20250422-rocher-maupiti-contre-plongee",
+      "drive_id": null,
+      "drive_nom": "20250422-rocher-maupiti-contre-plongee.jpg",
+      "type": "jpg",
+      "sujet": "Le rocher de Maupiti en contre-plongée, falaise couverte de végétation",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 22 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250422-rocher-maupiti-contre-plongee.jpg"
+    },
+    {
+      "cle": "20250422-route-rocher-maupiti",
+      "drive_id": null,
+      "drive_nom": "20250422-route-rocher-maupiti.jpg",
+      "type": "jpg",
+      "sujet": "La route du bord de mer qui file vers le rocher",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 22 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250422-route-rocher-maupiti.jpg"
+    },
+    {
+      "cle": "20250422-route-vallee-verte",
+      "drive_id": null,
+      "drive_nom": "20250422-route-vallee-verte.jpg",
+      "type": "jpg",
+      "sujet": "La route qui monte dans la vallée, nuages accrochés aux crêtes",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 22 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250422-route-vallee-verte.jpg"
+    },
+    {
+      "cle": "20250423-selfie-poing-rocher",
+      "drive_id": null,
+      "drive_nom": "20250423-selfie-poing-rocher.jpg",
+      "type": "jpg",
+      "sujet": "Selfie poing levé au pied du rocher",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 23 avril 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250423-selfie-poing-rocher.jpg"
+    },
+    {
+      "cle": "20250427-voie-lactee-maupiti",
+      "drive_id": null,
+      "drive_nom": "20250427-voie-lactee-maupiti.jpg",
+      "type": "jpg",
+      "sujet": "Voie lactée au-dessus du lagon, pose longue",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, nuit du 27 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250427-voie-lactee-maupiti.jpg"
+    },
+    {
+      "cle": "20250427-vue-bungalow-plage",
+      "drive_id": null,
+      "drive_nom": "20250427-vue-bungalow-plage.jpg",
+      "type": "jpg",
+      "sujet": "La plage vue depuis la porte du bungalow",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 27 avril 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250427-vue-bungalow-plage.jpg"
+    },
+    {
+      "cle": "20250501-piscine-hotel-nuit",
+      "drive_id": null,
+      "drive_nom": "20250501-piscine-hotel-nuit.jpg",
+      "type": "jpg",
+      "sujet": "Piscine d'hôtel éclairée la nuit, palmes en amorce",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Tahiti, 1er mai 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "fond carrousel",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250501-piscine-hotel-nuit.jpg"
+    },
+    {
+      "cle": "20250502-hublot-aile-iles",
+      "drive_id": null,
+      "drive_nom": "20250502-hublot-aile-iles.jpg",
+      "type": "jpg",
+      "sujet": "Par le hublot : l'aile au-dessus des îles, lumière rasante",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "vol retour de Polynésie, 2 mai 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 13",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250502-hublot-aile-iles.jpg"
+    },
+    {
+      "cle": "20250502-selfie-casque-retour",
+      "drive_id": null,
+      "drive_nom": "20250502-selfie-casque-retour.jpg",
+      "type": "jpg",
+      "sujet": "Selfie fatigué, casque sur les oreilles, en pleine nuit avant le vol retour",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Tahiti, 2 mai 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250502-selfie-casque-retour.jpg"
+    },
+    {
+      "cle": "20250503-selfie-opera-sydney",
+      "drive_id": null,
+      "drive_nom": "20250503-selfie-opera-sydney.jpg",
+      "type": "jpg",
+      "sujet": "Selfie shaka devant l'Opéra de Sydney",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Sydney, 3 mai 2025",
+      "visible": "Maxime + passants lointains",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250503-selfie-opera-sydney.jpg"
+    },
+    {
+      "cle": "20250508-poste-secours-plage-aube",
+      "drive_id": null,
+      "drive_nom": "20250508-poste-secours-plage-aube.jpg",
+      "type": "jpg",
+      "sujet": "Le poste de secours sur la plage au lever du soleil",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Barcelone, 8 mai 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250508-poste-secours-plage-aube.jpg"
+    },
+    {
+      "cle": "20250508-rue-doree-barcelone",
+      "drive_id": null,
+      "drive_nom": "20250508-rue-doree-barcelone.jpg",
+      "type": "jpg",
+      "sujet": "Une rue vide qui file vers le soleil levant",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Barcelone, 8 mai 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250508-rue-doree-barcelone.jpg"
+    },
+    {
+      "cle": "20250611-selfie-teleobjectif-salon",
+      "drive_id": null,
+      "drive_nom": "20250611-selfie-teleobjectif-salon.jpg",
+      "type": "jpg",
+      "sujet": "Selfie casquette, le téléobjectif à la main, au milieu du salon",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Paris Expo Porte de Versailles, 11 juin 2025",
+      "visible": "Maxime + visiteurs flous",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250611-selfie-teleobjectif-salon.jpg"
+    },
+    {
+      "cle": "20250617-ombre-filmeur-damier",
+      "drive_id": null,
+      "drive_nom": "20250617-ombre-filmeur-damier.jpg",
+      "type": "jpg",
+      "sujet": "Mon ombre en train de filmer sur l'esplanade en damier",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "esplanade de l'hôtel de ville, Puteaux, 17 juin 2025",
+      "visible": "Maxime (ombre)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250617-ombre-filmeur-damier.jpg"
+    },
+    {
+      "cle": "20250619-aile-avion-montagnes-tromso",
+      "drive_id": null,
+      "drive_nom": "20250619-aile-avion-montagnes-tromso.jpg",
+      "type": "jpg",
+      "sujet": "L'aile de l'avion, montagnes enneigées à l'arrivée",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "aéroport de Tromsø, 19 juin 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250619-aile-avion-montagnes-tromso.jpg"
+    },
+    {
+      "cle": "20250620-cathedrale-arctique-tromso",
+      "drive_id": null,
+      "drive_nom": "20250620-cathedrale-arctique-tromso.jpg",
+      "type": "jpg",
+      "sujet": "La cathédrale arctique en contre-plongée, ciel bleu",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Tromsø, 20 juin 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250620-cathedrale-arctique-tromso.jpg"
+    },
+    {
+      "cle": "20250621-kit-course-sur-le-lit",
+      "drive_id": null,
+      "drive_nom": "20250621-kit-course-sur-le-lit.jpg",
+      "type": "jpg",
+      "sujet": "Le kit de course étalé sur le lit la veille du départ",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Tromsø, 21 juin 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250621-kit-course-sur-le-lit.jpg"
+    },
+    {
+      "cle": "20250621-selfie-arche-depart-tromso",
+      "drive_id": null,
+      "drive_nom": "20250621-selfie-arche-depart-tromso.jpg",
+      "type": "jpg",
+      "sujet": "Selfie sous l'arche de départ, sourire et shaka",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Midnight Sun Marathon, Tromsø, 21 juin 2025",
+      "visible": "Maxime + coureurs flous",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250621-selfie-arche-depart-tromso.jpg"
+    },
+    {
+      "cle": "20250622-maxime-arrivee-mains-tete",
+      "drive_id": null,
+      "drive_nom": "20250622-maxime-arrivee-mains-tete.jpg",
+      "type": "jpg",
+      "sujet": "Maxime à l'arrivée, mains sur la tête, émotion brute",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Cap Nord, Tromsø, course du 21 au 22 juin 2025",
+      "visible": "Maxime + coureurs flous",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250622-maxime-arrivee-mains-tete.jpg"
+    },
+    {
+      "cle": "20250622-maxime-casquette-tete-basse",
+      "drive_id": null,
+      "drive_nom": "20250622-maxime-casquette-tete-basse.jpg",
+      "type": "jpg",
+      "sujet": "Maxime tête basse après l'arrivée, casquette",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Cap Nord, Tromsø, course du 21 au 22 juin 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250622-maxime-casquette-tete-basse.jpg"
+    },
+    {
+      "cle": "20250622-maxime-larmes-arrivee",
+      "drive_id": null,
+      "drive_nom": "20250622-maxime-larmes-arrivee.jpg",
+      "type": "jpg",
+      "sujet": "Maxime en larmes à l'arrivée",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Cap Nord, Tromsø, course du 21 au 22 juin 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250622-maxime-larmes-arrivee.jpg"
+    },
+    {
+      "cle": "20250622-maxime-mord-medaille",
+      "drive_id": null,
+      "drive_nom": "20250622-maxime-mord-medaille.jpg",
+      "type": "jpg",
+      "sujet": "Je mords la médaille à l'arrivée, épuisé et heureux",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Midnight Sun Marathon, Tromsø, 21 juin 2025",
+      "visible": "Maxime + public flou",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250622-maxime-mord-medaille.jpg"
+    },
+    {
+      "cle": "20250622-tromso-fjord-nuages",
+      "drive_id": null,
+      "drive_nom": "20250622-tromso-fjord-nuages.jpg",
+      "type": "jpg",
+      "sujet": "Fjord de Tromsø sous les nuages, soleil de minuit",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Cap Nord, Tromsø, course du 21 au 22 juin 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250622-tromso-fjord-nuages.jpg"
+    },
+    {
+      "cle": "20250726-selfie-maillot-totalenergies",
+      "drive_id": null,
+      "drive_nom": "20250726-selfie-maillot-totalenergies.jpg",
+      "type": "jpg",
+      "sujet": "Selfie poing levé en maillot TotalEnergies, après une journée sur le Tour",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "26 juillet 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250726-selfie-maillot-totalenergies.jpg"
+    },
+    {
+      "cle": "20250806-ile-lagon-depuis-ferry",
+      "drive_id": null,
+      "drive_nom": "20250806-ile-lagon-depuis-ferry.jpg",
+      "type": "jpg",
+      "sujet": "L'île et ses voiliers depuis le ferry",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Huahine, Polynésie, 6 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250806-ile-lagon-depuis-ferry.jpg"
+    },
+    {
+      "cle": "20250809-barque-lagon-lever-soleil",
+      "drive_id": null,
+      "drive_nom": "20250809-barque-lagon-lever-soleil.jpg",
+      "type": "jpg",
+      "sujet": "Une barque sur le lagon au lever du soleil",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 9 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250809-barque-lagon-lever-soleil.jpg"
+    },
+    {
+      "cle": "20250812-lagon-depuis-bateau",
+      "drive_id": null,
+      "drive_nom": "20250812-lagon-depuis-bateau.jpg",
+      "type": "jpg",
+      "sujet": "Le lagon depuis le bateau, dégradé turquoise",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 12 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "fond carrousel",
+      "source": "export Lightroom, Sony A7 IV",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250812-lagon-depuis-bateau.jpg"
+    },
+    {
+      "cle": "20250813-maxime-selfie-arbre",
+      "drive_id": null,
+      "drive_nom": "20250813-maxime-selfie-arbre.jpg",
+      "type": "jpg",
+      "sujet": "Selfie de Maxime sous l'arbre, grand angle",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 13 août 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "export Lightroom, Sony A7 IV",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250813-maxime-selfie-arbre.jpg"
+    },
+    {
+      "cle": "20250814-plage-mont-maupiti",
+      "drive_id": null,
+      "drive_nom": "20250814-plage-mont-maupiti.jpg",
+      "type": "jpg",
+      "sujet": "La plage et le mont Teurafaatiu, lumière douce",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 14 août 2025",
+      "visible": "silhouette lointaine",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom, Sony A7 IV",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250814-plage-mont-maupiti.jpg"
+    },
+    {
+      "cle": "20250814-selfie-rire-sous-les-arbres",
+      "drive_id": null,
+      "drive_nom": "20250814-selfie-rire-sous-les-arbres.jpg",
+      "type": "jpg",
+      "sujet": "Selfie grand angle sous les arbres, grand sourire",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 14 août 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "original HIF du Sony A7 IV (ORANGE SSD, POLYNESIE/PHOTO)",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250814-selfie-rire-sous-les-arbres.jpg"
+    },
+    {
+      "cle": "20250816-raie-manta-lagon",
+      "drive_id": null,
+      "drive_nom": "20250816-raie-manta-lagon.jpg",
+      "type": "jpg",
+      "sujet": "Raie manta dans le lagon, sous l'eau",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 16 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "export Lightroom (sans EXIF)",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250816-raie-manta-lagon.jpg"
+    },
+    {
+      "cle": "20250818-coucher-soleil-orange",
+      "drive_id": null,
+      "drive_nom": "20250818-coucher-soleil-orange.jpg",
+      "type": "jpg",
+      "sujet": "Coucher de soleil orange sur le lagon",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "fond carrousel",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-coucher-soleil-orange.jpg"
+    },
+    {
+      "cle": "20250818-drone-motu-lagon",
+      "drive_id": null,
+      "drive_nom": "20250818-drone-motu-lagon.jpg",
+      "type": "jpg",
+      "sujet": "Vue drone sur le motu et le lagon",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, drone DJI",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-drone-motu-lagon.jpg"
+    },
+    {
+      "cle": "20250818-drone-village-cote",
+      "drive_id": null,
+      "drive_nom": "20250818-drone-village-cote.jpg",
+      "type": "jpg",
+      "sujet": "Vue drone sur le village et la côte",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, drone DJI",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-drone-village-cote.jpg"
+    },
+    {
+      "cle": "20250818-fleche-mountain",
+      "drive_id": null,
+      "drive_nom": "20250818-fleche-mountain.jpg",
+      "type": "jpg",
+      "sujet": "La flèche « Mountain » peinte au sol, départ du sentier",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-fleche-mountain.jpg"
+    },
+    {
+      "cle": "20250818-selfie-shaka-jungle",
+      "drive_id": null,
+      "drive_nom": "20250818-selfie-shaka-jungle.jpg",
+      "type": "jpg",
+      "sujet": "Selfie shaka au milieu de la jungle",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "original HIF du Sony A7 IV (ORANGE SSD, POLYNESIE/PHOTO)",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-selfie-shaka-jungle.jpg"
+    },
+    {
+      "cle": "20250818-table-coucher-soleil",
+      "drive_id": null,
+      "drive_nom": "20250818-table-coucher-soleil.jpg",
+      "type": "jpg",
+      "sujet": "Table face au coucher de soleil, bar de plage",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 18 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "export Lightroom, Sony FX3",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250818-table-coucher-soleil.jpg"
+    },
+    {
+      "cle": "20250820-calandre-camion-palmiers",
+      "drive_id": null,
+      "drive_nom": "20250820-calandre-camion-palmiers.jpg",
+      "type": "jpg",
+      "sujet": "La calandre d'un vieux camion Mercedes sous les palmiers",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Maupiti, Polynésie, 20 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, album Lightroom (Sony FX3)",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250820-calandre-camion-palmiers.jpg"
+    },
+    {
+      "cle": "20250823-selfie-teahupoo",
+      "drive_id": null,
+      "drive_nom": "20250823-selfie-teahupoo.jpg",
+      "type": "jpg",
+      "sujet": "Selfie shaka devant le panneau de Teahupoo",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Teahupoo, Tahiti, 23 août 2025",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250823-selfie-teahupoo.jpg"
+    },
+    {
+      "cle": "20250825-panorama-lagon-moorea",
+      "drive_id": null,
+      "drive_nom": "20250825-panorama-lagon-moorea.jpg",
+      "type": "jpg",
+      "sujet": "Le lagon et les bungalows sur pilotis vus de la colline",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Moorea, Polynésie, 25 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250825-panorama-lagon-moorea.jpg"
+    },
+    {
+      "cle": "20250826-vague-teahupoo",
+      "drive_id": null,
+      "drive_nom": "20250826-vague-teahupoo.jpg",
+      "type": "jpg",
+      "sujet": "La vague de Teahupoo vue depuis le bateau",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Teahupoo, Tahiti, 26 août 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "feed",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250826-vague-teahupoo.jpg"
+    },
+    {
+      "cle": "20250915-tour-eiffel-ciel-rose",
+      "drive_id": null,
+      "drive_nom": "20250915-tour-eiffel-ciel-rose.jpg",
+      "type": "jpg",
+      "sujet": "La tour Eiffel sous un ciel rose, à l'aube",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Paris, 15 septembre 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, album Lightroom (Sony A7 IV)",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20250915-tour-eiffel-ciel-rose.jpg"
+    },
+    {
+      "cle": "20251212-mer-de-nuages-hublot",
+      "drive_id": null,
+      "drive_nom": "20251212-mer-de-nuages-hublot.jpg",
+      "type": "jpg",
+      "sujet": "Une mer de nuages vue du hublot",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "vol vers Poznań, 12 décembre 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "fond carrousel",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20251212-mer-de-nuages-hublot.jpg"
+    },
+    {
+      "cle": "20251213-badge-hyrox-press",
+      "drive_id": null,
+      "drive_nom": "20251213-badge-hyrox-press.jpg",
+      "type": "jpg",
+      "sujet": "Le badge presse en main, à l'hôtel",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "HYROX Poznań, 13 décembre 2025",
+      "visible": "personne (main)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20251213-badge-hyrox-press.jpg"
+    },
+    {
+      "cle": "20251214-chateau-poznan",
+      "drive_id": null,
+      "drive_nom": "20251214-chateau-poznan.jpg",
+      "type": "jpg",
+      "sujet": "La tour du château impérial sous un ciel d'hiver",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Poznań, Pologne, 14 décembre 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20251214-chateau-poznan.jpg"
+    },
+    {
+      "cle": "20251230-montage-dans-la-penombre",
+      "drive_id": null,
+      "drive_nom": "20251230-montage-dans-la-penombre.jpg",
+      "type": "jpg",
+      "sujet": "La timeline ouverte dans la pénombre, montage du soir",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Puteaux, 30 décembre 2025",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20251230-montage-dans-la-penombre.jpg"
+    },
+    {
+      "cle": "20260130-selfie-neige-chapelle-aube",
+      "drive_id": null,
+      "drive_nom": "20260130-selfie-neige-chapelle-aube.jpg",
+      "type": "jpg",
+      "sujet": "Selfie sous la neige devant la chapelle éclairée, avant le lever du jour",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "La Clusaz, 30 janvier 2026",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260130-selfie-neige-chapelle-aube.jpg"
+    },
+    {
+      "cle": "20260212-promenade-nice-aube",
+      "drive_id": null,
+      "drive_nom": "20260212-promenade-nice-aube.jpg",
+      "type": "jpg",
+      "sujet": "Les drapeaux de la Promenade des Anglais à l'aube",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Nice, 12 février 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260212-promenade-nice-aube.jpg"
+    },
+    {
+      "cle": "20260318-montage-tablette-en-route",
+      "drive_id": null,
+      "drive_nom": "20260318-montage-tablette-en-route.jpg",
+      "type": "jpg",
+      "sujet": "Le montage sur la tablette, en route vers Toulouse",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "en route vers Toulouse, 18 mars 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260318-montage-tablette-en-route.jpg"
+    },
+    {
+      "cle": "20260425-verriere-grand-palais",
+      "drive_id": null,
+      "drive_nom": "20260425-verriere-grand-palais.jpg",
+      "type": "jpg",
+      "sujet": "La verrière du Grand Palais en contre-plongée",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Paris, 25 avril 2026",
+      "visible": "foule lointaine",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260425-verriere-grand-palais.jpg"
+    },
+    {
+      "cle": "20260507-ecran-camera-face-mer",
+      "drive_id": null,
+      "drive_nom": "20260507-ecran-camera-face-mer.jpg",
+      "type": "jpg",
+      "sujet": "L'écran de la caméra face à la mer, la terrasse cadrée",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Majorque, 7 mai 2026",
+      "visible": "personne (main)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260507-ecran-camera-face-mer.jpg"
+    },
+    {
+      "cle": "20260510-cathedrale-palma-contre-plongee",
+      "drive_id": null,
+      "drive_nom": "20260510-cathedrale-palma-contre-plongee.jpg",
+      "type": "jpg",
+      "sujet": "La cathédrale de Palma en contre-plongée, soleil derrière la flèche",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Palma de Majorque, 10 mai 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260510-cathedrale-palma-contre-plongee.jpg"
+    },
+    {
+      "cle": "20260512-camera-main-facade-paris",
+      "drive_id": null,
+      "drive_nom": "20260512-camera-main-facade-paris.jpg",
+      "type": "jpg",
+      "sujet": "La caméra en main devant une façade haussmannienne",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Paris, quartier de l'Opéra, 12 mai 2026",
+      "visible": "personne (main)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260512-camera-main-facade-paris.jpg"
+    },
+    {
+      "cle": "20260618-cafe-hotel-de-ville-stockholm",
+      "drive_id": null,
+      "drive_nom": "20260618-cafe-hotel-de-ville-stockholm.jpg",
+      "type": "jpg",
+      "sujet": "Le café levé face à l'hôtel de ville de Stockholm",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Stockholm, 18 juin 2026",
+      "visible": "personne (main)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260618-cafe-hotel-de-ville-stockholm.jpg"
+    },
+    {
+      "cle": "20260620-materiel-table-stockholm",
+      "drive_id": null,
+      "drive_nom": "20260620-materiel-table-stockholm.jpg",
+      "type": "jpg",
+      "sujet": "Le matériel étalé sur la table près de la fenêtre, la veille des championnats",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "HYROX World Championships, Stockholm, 20 juin 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260620-materiel-table-stockholm.jpg"
+    },
+    {
+      "cle": "20260804-tablette-bord-piscine",
+      "drive_id": null,
+      "drive_nom": "20260804-tablette-bord-piscine.jpg",
+      "type": "jpg",
+      "sujet": "La tablette et son clavier ouverts au bord de la piscine",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Xàbia, Espagne, 4 août 2026",
+      "visible": "personne (main)",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260804-tablette-bord-piscine.jpg"
+    },
+    {
+      "cle": "20260805-statue-promenade-soleil-bas",
+      "drive_id": null,
+      "drive_nom": "20260805-statue-promenade-soleil-bas.jpg",
+      "type": "jpg",
+      "sujet": "Silhouette de la statue sur la promenade, soleil bas sur la mer",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Xàbia, Espagne, 5 août 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260805-statue-promenade-soleil-bas.jpg"
+    },
+    {
+      "cle": "20260812-selfie-bord-de-mer-velo",
+      "drive_id": null,
+      "drive_nom": "20260812-selfie-bord-de-mer-velo.jpg",
+      "type": "jpg",
+      "sujet": "Selfie au bord de la mer, pause à vélo",
+      "pilier": "P3 mindset créatif",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Xàbia, Espagne, 12 août 2026",
+      "visible": "Maxime",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260812-selfie-bord-de-mer-velo.jpg"
+    },
+    {
+      "cle": "20260812-velo-corniche-mer",
+      "drive_id": null,
+      "drive_nom": "20260812-velo-corniche-mer.jpg",
+      "type": "jpg",
+      "sujet": "Le vélo posé sur la corniche, la mer derrière",
+      "pilier": "P2 voyage/lieux/lumière",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Xàbia, Espagne, 12 août 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260812-velo-corniche-mer.jpg"
+    },
+    {
+      "cle": "20260930-sac-hyrox-place-bourse",
+      "drive_id": null,
+      "drive_nom": "20260930-sac-hyrox-place-bourse.jpg",
+      "type": "jpg",
+      "sujet": "Le sac HYROX posé face à la place de la Bourse, le matin de la captation",
+      "pilier": "P1 craft/coulisses métier",
+      "provenance": "client",
+      "instantane": true,
+      "lieu_date": "Bordeaux, 30 septembre 2026",
+      "visible": "personne",
+      "accord_a_obtenir": false,
+      "usage": "story",
+      "source": "appli Photos, iPhone 15 Pro Max",
+      "fichier": "medias/otea-filmakers/nouvelles-2026-10/20260930-sac-hyrox-place-bourse.jpg"
+    }
+  ]
+}

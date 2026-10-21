@@ -1,0 +1,65 @@
+{
+  "client": "otea-production",
+  "slug": "voeux-2027",
+  "titre": "Vœux vidéo 2027 : se tourner en octobre",
+  "mois": "2026-10",
+  "objectif_business": "Des demandes de devis pour des vidéos de vœux 2027 (tournage fin octobre et novembre, jamais en décembre). Aucune publicité concurrente active sur « vidéo de vœux » au 13/10/2026 (veille). oteaproduction.com n'affiche qu'une installation WordPress vierge au 13/10/2026 : la demande arrive par message sur la page.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "CONVERSATIONS",
+  "destination": "MESSENGER",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "journalier",
+    "montant_eur": 5,
+    "debut": "2026-10-20",
+    "fin": "2026-11-02"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 28,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Cible : dirigeants et responsables communication de PME. Sans pixel ni audience personnalisée, on reste large et on laisse Meta optimiser ; ciblage par intérêts seulement avec des identifiants réels."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Vœux 2027, tournage en octobre",
+      "format": "video",
+      "media": {
+        "type": "video",
+        "fichier": "medias/otea-production/pubs/voeux-2027-maxime-camera-8s.mp4",
+        "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/ec35f871-1a4d-4679-945a-f6e99bb72c28.mp4",
+        "hash": null,
+        "video_id": "1382714390272396",
+        "vignette_url": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/846506041_1719038472519016_8691692985828666231_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1701c7&_nc_ohc=wfwO-XeWKlQQ7kNvwHKSOex&_nc_oc=AdoZb429rvVNZgfH4bsSV92yXVo0LXmxEIIHHbFP_6TqqdHtPcQK4QoHy0QfQBoIY6g&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=AEZPnVgEAAAA&_nc_gid=U2wAcua5xYuOgZllasKGRw&_nc_tpa=Q5bMBQLP__AzL4z96xJ3YuiM8ZvA3OV-RQb3lsPqrcQUtvngOVv_iOkQCVhGdXLlS2uTx5K1ZPSUhTfImg&oh=00_AQOEO6A0pastpuZz5U85r3zssJUB4er1Fmper54QCHxvrg&oe=6AD41F3B",
+        "note": "Vidéo 8 s, 1080x1350, muette : instantané réel de Maxime à la caméra (20260702-maxime-camera-sourire, photographe Jean-Philippe Homé-Sanfaute, commande OTEA), léger zoom, bandeau d'encre #201E1E avec « VOS VŒUX 2027 / SE TOURNENT MAINTENANT. / Pas en décembre. » (Inter Display). Image fixe abandonnée : l'hébergeur bloque les robots de Meta."
+      },
+      "texte": "Vos vœux 2027 en vidéo se tournent maintenant, pas en décembre. Envoyez-nous votre date en message : devis sous 24 h.",
+      "titre": "Vœux 2027 : tournez avant décembre",
+      "description": "Devis sous 24 h",
+      "cta": "MESSAGE_PAGE",
+      "lien": "https://m.me/994117790447204",
+      "lien_affiche": null,
+      "ia_generative": "OPT_OUT",
+      "note_destination": "Site hors ligne (02/09/2026) : le clic ouvre Messenger sur la page OTEA Production. Le lien m.me/<page_id> est la forme la plus sûre avec le connecteur, qui n'expose pas le message d'accueil Messenger ; à confirmer à la première création, repli possible sur Interaction · POST_ENGAGEMENT · ON_POST. Revenir à Trafic · LINK_CLICKS · WEBSITE quand le site est en ligne et vérifié."
+    }
+  ],
+  "validation": {
+    "brief_valide_par": "Maxime",
+    "brief_valide_le": "2026-10-13",
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

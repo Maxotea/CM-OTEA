@@ -5,8 +5,14 @@
 - Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
+## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
+Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
+- Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
+- Le compte est la **vitrine de l'offre athlètes** (Course Signature 290 €, Saison Athlète 59 €/mois, `paliers-offre-athlete.md`) : un post sur quatre au plus porte un appel à réserver par message, jamais d'appel ni de visio.
+- **2 reels par semaine**, montés depuis les disques de Maxime ; un post photo sur deux du calendrier existant est remplacé par un reel dès qu'il est prêt. Chaque reel finit par une question binaire.
+
 ## Ligne éditoriale
-- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. PAS de pitch commercial (ça, c'est OTEA PRODUCTION).
+- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. Pas de pitch B2B entreprise (ça, c'est OTEA PRODUCTION) ; l'offre athlètes est permise dans la limite du cap du 13/10.
 - Ton : première personne "je", tutoiement de l'audience, intime, cinématique, passionné. Réflexion sur le métier, la lumière, la liberté/discipline, le voyage.
 - Priorité format : REEL (marque visuelle créative). Mix reels + posts feed réflexifs/carrousels.
 - ⚠️ Règle "jamais inventer" renforcée : c'est une voix PERSO. Ne jamais fabriquer de faux souvenir/voyage/anecdote précis. Là où un vrai vécu est nécessaire, laisser un [crochet] à remplir par Maxime.
@@ -18,7 +24,7 @@
 
 ## Assets / banque
 - État : AUCUN rush prêt — "à tourner". Les brouillons contiennent le texte final + une idée de plan "🎬 À tourner : …" en fin de caption, qui sert de shot-list. Maxime tourne, attache le média dans Metricool, valide.
-- À créer : une banque-photos-otea-filmakers.md quand les premiers rushes existeront.
+- Banque photos : `banque-photos-otea.md`, section Otea Filmakers (73 instantanés validés par Maxime le 13/10/2026 : voyages, lumière, montage en route, Maxime seul). Aucune personne d'autre que Maxime. Les reels, eux, restent à tourner.
 
 ## Saisonnalité exploitée (vérifiée)
 - Rentrée septembre, automne/golden hour (angle fort vidéaste), vacances Toussaint (17/10→02/11).
@@ -42,3 +48,34 @@ Les prochains reels de ce compte reprennent les styles listés pour lui dans `..
 Maxime est le client de ce compte : même règle qu'OTEA Production, `validation_auto` dans `reviews/config.json` (PR #56). Plus de tableau. Les brouillons des 14 jours à venir partent en publication automatique s'ils passent les garde-fous.
 - 07/10 : tirets cadratins retirés des posts du 09/10 et du 19/10 (nouveaux ids 390382826 et 390382868).
 - ⚠️ Les posts du 09/10 (marche caméra) et du 06/11 (cadrage) portent « 🎬 À tourner : … » dans la légende : bloqués tant que la vidéo n'est pas tournée et la note retirée.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
+
+- **DA photo** : Vert et Noir, voix « je », tutoiement. Même banque que OTEA Production (`photos/otea-filmakers.json`,
+  22 photos ouvertes au compte, plus les 73 instantanés validés le 13/10). Q4 répondue : Maxime = le vidéaste barbu
+  en t-shirt noir, sans casquette (photo 01), réponse du 13/10/2026 ; seule personne présentable en « je » sur
+  Filmakers (ailleurs il porte parfois une casquette jaune ou orange, planche d'identité dans
+  `banque-photos-otea.md`). Aucun « je » sous une autre personne visible. Q3 : tout vécu non confirmé est écrit au
+  neutre.
+- **Stories** : lun, mer, ven à 10:00, Instagram seul (Q9). Mer (mp4 e5955e06) et ven (ac9af476) en i2v plein cadre,
+  muettes, sans personne, du 28/10 au 27/11 : 394728098 à 394728497 (10 stories). Le lundi est refusé (le softbox
+  bouge) et sa carte « Je commence par regarder la lumière » est à neutraliser. Aucune story en décembre.
+- **Feed** : carrousel A1 sans personne au 23/10 (394878177, armé) ; 26/10 neutralisé (394878203, armé) ; 28/10 neutralisé
+  (394868991, texte F01) ; les quatre posts « À tourner » sortis du blocage (06/11 394681603, 16/11 394681230, 23/11
+  394681256, 25/11 394681284) ; 11/11 394681208 et 30/11 394681306 au neutre. Décembre posé en brouillon : 14 posts
+  à 18:00, IG et TikTok, 394815812 à 394817242 ; cartes typographiques et une seule vraie photo (03, le 25/12), pour ne
+  pas reprendre une photo du feed OTEA de décembre. Trois reels à tourner (R1 04/12, R2 21/12, R3 01/01), une carte
+  de repli occupe chaque créneau.
+- **Décisions de Maxime** : Q3 (texte neutre), Q8 (22,5 crédits pour ce compte, dépensés), Q9 (stories lun, mer, ven
+  10:00 dès le 26/10), Q4 (13/10, voir DA photo).
+- **Chiffres (13/09 au 12/10)** : 3 800 abonnés Instagram (61 gagnés, 113 perdus). Les deux reels de sport (Rome
+  27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction (le post
+  du 12/10 y est parti), pas @oteafilmakers.
+- **Reste** : 30/10 383270198 (photo, avant le 16/10 6h30), 02/11 383270388 (photo, avant le 19/10), 04/11 383270407
+  (texte, avant le 21/10), 13/11 394182835 (photo 3d299617 commune avec OTEA, avant le 30/10), 18/11 383270536
+  (texte), 20/11 383270550 (photo), 27/11 383270617 (texte et photo, avant le 13/11) ; média du 28/10 (54df9acf,
+  doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11. Banque propre faite le 13/10 depuis
+  le Mac (73 instantanés).
+  Après tout `bulk_replace_posts` sur ce compte, relire `tiktokData` : l'action le perd.

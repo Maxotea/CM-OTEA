@@ -1,5 +1,15 @@
 # Run On Invest (R.O.I.) — fiche client (onboardé 03/08/2026)
 
+## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
+
+« Oui, passe R.O.I. en auto. » La relève (`validation_auto: true` dans
+`reviews/config.json`) passe en publication les brouillons des 14 jours à venir, avec
+les garde-fous de la review (média présent, pas de placeholder ni de tiret cadratin,
+image de feed entre 4:5 et 1.91:1). `contenu_ia: true` : les visuels du compte sont
+générés (aucune banque photo, accord du 04/08/2026), la mention « contenu IA »
+d'Instagram est cochée d'office à la publication. Reels en mode notification, musique
+posée dans Instagram. On continue de tout créer en brouillon.
+
 > **Source de vérité : le brief client** (plateforme de marque V2.1, fourni par Maxime le 03/08/2026).
 > Tout contenu doit le respecter à la lettre. Cette fiche n'en est que le résumé opérationnel.
 
@@ -178,3 +188,34 @@ sources dans `scripts/roi-photo-habillage.py`.
 visuels du compte, pas seulement ceux de la vague en cours. La liste des
 9 visuels venait du script ; les deux visuels manquants venaient d'une vague
 antérieure qui n'était pas dans le script.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
+
+- **Décision Q10 (12/10)** : rien de ce qui n'est pas dans la fiche n'est publiable (app, Early Bird, 21,5 km,
+  septembre 2027, prix, jauge). Les 12 brouillons qui l'affirmaient ont été remplacés le 12/10.
+- **DA photo** : kit V2.1 posé par `finitions/roi/travail/rendu4.py` (habillage de `scripts/roi-photo-habillage.py`),
+  photos IA du manifeste `photos/run-on-invest.json` : b, g, j, k partout, f et l en 4:5 seulement, d, c, e, h écartées.
+  Jamais une personne identifiable, jamais un faux lettrage. Réserves : g (skyline) et k (arche) ne ressemblent pas à
+  La Défense ; l revient trop souvent.
+- **Feed** : tout est en brouillon, Instagram seul, plus rien sur LinkedIn. 19/10 : 383334471 (armé, IG et LinkedIn,
+  en-tête fantôme) remplacé le 13/10 par 394684571 en brouillon, même texte. 30/10, 09/11, 11/11, 20/11 refaits :
+  394685105, 394685139, 394685167, 394685194. Décembre posé en brouillon : 14 posts à 08:00 du 02/12 au 01/01,
+  394845511 à 394847210, dont 5 carrousels du mercredi ; le 14/12 est une image de repli (394846246) en attendant le
+  reel « zéro pitch » (88/100 à reel-lint).
+- **Stories** : 12:00, Instagram seul. Les 14 stories bloquantes remplacées par les cartes s2 à s10 (394685994 à
+  394687426), en JPG fixe : les 8 animations i2v prévues (60 crédits) ne sont pas faites, le solde est au plancher
+  de 100. Aucune story de décembre créée : elles ne se créeront qu'avec leur mp4 muet, jamais en JPG ni en zoompan.
+- **Stories animées (13/10 après-midi, plancher Higgsfield ramené à 40 par Maxime)** : en mp4 i2v muet, brouillon vérifié, 394984820 (16/10 s3), 394985442 (23/10 s6), 394985454 (26/10 s4), 394985476 (02/11 s7), 394985486 (04/11 s2), 394985506 (13/11 s4), 394985519 (16/11 s6), 394985545 (25/11 s7), 394985557 (30/11 s2) ; anciens JPG supprimés 394685994, 394686402, 394686414, 394686447, 394686459, 394687372, 394687378, 394687413, 394687426 ; restent en JPG fixe 394686419 (28/10 s9), 394686431 (30/10 s10), 394687392 (20/11 s9), 394687406 (23/11 s8), 394687421 (27/11 s10) ; mp4 Higgsfield s3 2fea5a89-ab4f-4868-a4b4-fcecff317a39, s6 40774b87-206a-49eb-9ef7-2b2f1f49a95d, s4 75276d56-502d-4a62-b4ab-222d9ae2436a, s7 8e0bd117-86dc-41d5-9020-a47db0b34c56, s2 9da07465-00fd-4567-9df5-b41c3799ab8d ; jobs i2v f af03059e-ce36-429a-bad5-b9d577f40d26 (retenu après coupe), l 76fbbe21-5bc5-4232-abf0-7cd97f4d5f16 (retenu), k large bb691351-2a9b-450c-9dd7-89cad4170902 (retenu), k haut c98bae3f-e3bb-4df8-9bc5-93df32f3b4c7 (refusé), g 95e33bf6-f83e-45dd-aa30-fcdea9dc8324 (refusé), j 794a4c8a-3068-40cf-81d4-d90d82efa575 (refusé) ; fonds hébergés f 09947fdf-ed8b-4f8c-b621-d546e54add54, l d364f604-06ba-471a-9914-d3461fc224a1, k haut ab8c3926-739c-4702-8738-49211ff915b6, g e2c7800e-6175-4729-9732-f63ad2d4a926, k large a0287380-50a3-4c8e-b51f-1705de4d55b1, j f5710657-18ec-4147-a44d-8ff1d5ecb2cc.
+- **État final des stories au 13/10 au soir** (remplace la ligne précédente pour les ids) : 55 contenus, 55 brouillons, 0 en publication automatique, solde Higgsfield 40,25 (plancher atteint, plus aucune génération). Animées en mp4 muet : s3 394984820 (16/10), s6 394985442 (23/10) et 394985519 (16/11), s2 394985486 (04/11) et 394985557 (30/11), s9 395113571 (28/10) et 395114360 (20/11, plan k large sous le calque s9), s8 395117359 (23/11, nouveau cadrage de j). En JPG fixe : s4 395145392 (26/10) et 395145794 (13/11), s7 395145779 (02/11) et 395145815 (25/11), s10 394686431 (30/10) et 394687421 (27/11). Le plan l de s4 et s7 est retiré : une silhouette sombre s'y forme et se déforme entre deux coureurs de f050 à f124, et l'enseigne « DH » se redessinait en fausses lettres ; leurs JPG ont l'enseigne neutralisée. Le plan g de s10 est refusé deux fois. Les 7 libellés V4, V5, C7 et C3 passent au point médian (395042333, 395042690, 395042725, 395042763, 395042793, 395042829, 395042862). À trancher par Maxime : s9 (souligné du calque à 2,44 pour une cible de 3, jambes de coureurs derrière « ÉCHANGE » sur la première seconde) garde l'animation ou revient au JPG 792884fe, toujours hébergé.
+- **Décisions de Maxime** : Q10 (ci-dessus) ; Q12 oui, cocher « contenu IA » sur chaque visuel, pas encore fait
+  (`isAiGenerated` n'est pas exposé par les actions Zapier : connecteur Metricool officiel ou case cochée à la
+  validation) ; Q13 oui, 4 à 6 photos IA neuves, pas encore faites ; Q14 Artlist à réautoriser. Q11 ouverte, mais le
+  19/10 est déjà revenu en brouillon : s'il l'avait validé lui-même, il lui suffit de valider 394684571.
+- **Chiffres** : 25 abonnés, inchangés depuis le 30/08 ; aucun post n'a apporté d'abonné ; portée par post 18,2 en
+  P0 puis 8,0 en P1 (5 posts contre 12) ; 0 reel, 0 story publiée.
+- **Reste** : validation de Maxime dans l'interface (rien ne part sans lui) ; 383334008 publié le 12/10 sur IG et
+  LinkedIn (à garder, archiver ou supprimer) et les publications en ligne qui contredisent Q10 ; 394314653 (18/11,
+  « sort tout seul au 4e km ») à reprendre avant le 15/11 ; carrousel A4 non branché (394204763 toujours au 21/10) ;
+  7 libellés de stories avec un tiret cadratin ; registre publicitaire vide pour ce client.

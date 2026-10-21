@@ -23,9 +23,13 @@ Garde-fous, dans l'ordre où ils ont été décidés :
   - un ✅ sur un texte à placeholders ([VAINQUEUR]…) ou sans média est bloqué et signalé,
     pas publié — publier un trou de texte fait plus de dégâts qu'un retard ;
   - idempotence par reviews/etat/<client>.json : une décision déjà appliquée à l'identique
-    n'est pas rejouée, une décision changée est rejouée.
+    n'est pas rejouée, une décision changée est rejouée ;
+  - un reel Instagram part en mode notification, jamais en publication automatique : la
+    musique se pose dans Instagram, jamais dans le fichier (Maxime, 21/10/2026) ;
+  - une image de feed hors de la plage 4:5 à 1.91:1 n'est pas publiée en automatique.
 
-Secrets attendus : METRICOOL_USER_ID, METRICOOL_TOKEN. Dépendance : openpyxl.
+Secrets attendus : METRICOOL_USER_ID, METRICOOL_TOKEN. Dépendances : openpyxl, et Pillow
+pour mesurer le format des images (sans Pillow, ce contrôle est sauté).
 """
 
 import argparse
@@ -78,6 +82,11 @@ PARIS = ZoneInfo("Europe/Paris")
 # (un post à moins de 30 minutes n'est plus touché, Metricool pourrait le publier deux fois).
 HORIZON_AUTO_JOURS = 14
 MARGE_AUTO = timedelta(minutes=30)
+# Plage de format (largeur / hauteur) qu'accepte l'API Instagram pour une image de feed.
+# Un 2:3 (0,67) passe dans l'appli mais est refusé ou recadré par l'API (audit du 21/10).
+RATIO_FEED = (4 / 5, 1.91)
+# Champs de couverture d'une vidéo, à recopier tels quels à chaque réécriture du post.
+CHAMPS_COUVERTURE = ("videoCoverMilliseconds", "videoThumbnailUrl")
 
 
 # ---------------------------------------------------------------- lecture Metricool
@@ -438,32 +447,106 @@ def lire_decision(cellule):
 
 # ---------------------------------------------------------------- application Metricool
 
-def corps_de(post, texte, date_time, publier_auto):
+def vise_instagram(post):
+    return any(pr.get("network") == "instagram" for pr in post.get("providers") or [])
+
+
+def est_reel_instagram_sans_son(post):
+    """Un reel Instagram dont la musique reste à poser dans Instagram.
+
+    Règle de Maxime (21/10/2026, déjà dite avant) : la musique d'un reel se prend dans la
+    bibliothèque d'Instagram et ne s'intègre jamais au fichier, pour que le reel porte un
+    son Instagram et non un « audio d'origine ». Seule exception : un reel dont Metricool
+    pose lui-même le son Instagram (instagramData.audioConfiguration).
+    """
+    donnees = post.get("instagramData") or {}
+    return (vise_instagram(post) and donnees.get("type") in ("REEL", "TRIAL_REEL")
+            and not donnees.get("audioConfiguration"))
+
+
+def corps_de(post, texte, date_time, publier_auto, notification=False, contenu_ia=False):
     """Le corps d'écriture d'un post, à partir de sa version lue dans Metricool.
 
     Même socle que publier.py (text, publicationDate, draft, autoPublish, media, providers)
     plus les blocs *Data : c'est là que vit le type POST/REEL/STORY, le perdre transforme
-    un reel en post feed.
+    un reel en post feed. La couverture d'une vidéo se recopie aussi : la perdre remet la
+    première image en couverture.
+
+    `notification` : le post sort du brouillon sans publication automatique. Metricool
+    envoie alors une notification à Maxime à l'heure prévue, il ajoute la musique dans
+    Instagram et publie. `contenu_ia` : compte dont les visuels sont générés par IA
+    (Run On Invest) ; la mention « contenu IA » d'Instagram est alors toujours cochée.
     """
     corps = {
         "text": texte,
         "publicationDate": {"dateTime": date_time,
                             "timezone": post.get("publicationDate", {}).get("timezone", "Europe/Paris")},
         "draft": not publier_auto,
-        "autoPublish": publier_auto,
+        "autoPublish": publier_auto and not notification,
         "media": post.get("media") or [],
         "providers": [{"network": pr["network"]} for pr in post.get("providers", []) if pr.get("network")],
     }
     for cle, valeur in post.items():
         if cle.endswith("Data") and isinstance(valeur, dict):
             corps[cle] = valeur
+    for cle in CHAMPS_COUVERTURE:
+        if post.get(cle) is not None:
+            corps[cle] = post[cle]
+    if contenu_ia and vise_instagram(post):
+        corps["instagramData"] = {**corps.get("instagramData", {}), "isAiGenerated": True}
     if post.get("firstCommentText"):
         corps["firstCommentText"] = post["firstCommentText"]
     return corps
 
 
-def passer_en_publication(blog_id, post, texte, date_time):
+def dimensions_image(url, plafond=2_000_000):
+    """(largeur, hauteur) d'une image distante, en ne lisant que son en-tête ; None si
+    l'image est illisible, inaccessible, ou si Pillow manque."""
+    try:
+        from PIL import ImageFile
+    except ImportError:
+        return None
+    analyseur = ImageFile.Parser()
+    try:
+        with urllib.request.urlopen(url, timeout=20) as reponse:
+            lu = 0
+            while lu < plafond:
+                bloc = reponse.read(65536)
+                if not bloc:
+                    break
+                lu += len(bloc)
+                analyseur.feed(bloc)
+                if analyseur.image is not None:
+                    return analyseur.image.size
+    except Exception:
+        return None
+    return analyseur.image.size if analyseur.image is not None else None
+
+
+def format_hors_feed(post, mesurer):
+    """Le format (largeur / hauteur) de la première image hors plage feed, sinon None.
+
+    Ne regarde que les posts feed et carrousels visant Instagram ; une story ou un reel
+    a sa propre plage. Une image qu'on n'arrive pas à mesurer ne bloque pas.
+    """
+    if not vise_instagram(post) or type_du(post) in ("Story", "Reel"):
+        return None
+    for url in post.get("media") or []:
+        if re.search(r"\.(mp4|mov|m4v)(\?|$)", url, re.IGNORECASE):
+            continue
+        taille = mesurer(url)
+        if taille and taille[1]:
+            ratio = taille[0] / taille[1]
+            if not RATIO_FEED[0] - 0.01 <= ratio <= RATIO_FEED[1] + 0.01:
+                return ratio
+    return None
+
+
+def passer_en_publication(blog_id, post, texte, date_time, contenu_ia=False):
     """Applique texte/horaire et sort le post du brouillon. Retourne (résultat, post_id).
+
+    Un reel Instagram sans son Instagram posé par Metricool sort en mode notification
+    (draft false, autoPublish false) : Maxime ajoute la musique dans Instagram et publie.
 
     ⚠️ Constaté au premier test réel (post 355355797 → 359735766, OTEA, 08/08/2026) : le
     PUT de l'API ne modifie PAS l'entrée existante — il crée une NOUVELLE entrée de
@@ -484,12 +567,17 @@ def passer_en_publication(blog_id, post, texte, date_time):
     """
     ancien_id = post["id"]
     jour = date_time[:10]
+    notification = est_reel_instagram_sans_son(post)
+    libelle = ("notification programmée, musique à poser dans Instagram" if notification
+               else "publication programmée")
+    corps = corps_de(post, texte, date_time, True, notification=notification,
+                     contenu_ia=contenu_ia)
 
     def etat_du_jour():
         posts_jour = metricool("/scheduler/posts", blogId=blog_id,
                                start=f"{jour}T00:00:00", end=f"{jour}T23:59:59").get("data", [])
         publiables = [p for p in posts_jour
-                      if p.get("autoPublish") and not p.get("draft")
+                      if not p.get("draft") and bool(p.get("autoPublish")) != notification
                       and p.get("publicationDate", {}).get("dateTime") == date_time
                       and normaliser_texte(p.get("text")) == normaliser_texte(texte)]
         reste = any(p.get("id") == ancien_id and p.get("draft") for p in posts_jour)
@@ -498,15 +586,13 @@ def passer_en_publication(blog_id, post, texte, date_time):
     publiables, reste = etat_du_jour()
     if not publiables:
         try:
-            metricool(f"/scheduler/posts/{ancien_id}", "PUT",
-                      corps_de(post, texte, date_time, True), blogId=blog_id)
+            metricool(f"/scheduler/posts/{ancien_id}", "PUT", corps, blogId=blog_id)
         except RuntimeError as exc:
             print(f"    (mise à jour refusée — {exc} — suppression puis recréation)")
             metricool(f"/scheduler/posts/{ancien_id}", "DELETE", blogId=blog_id)
-            cree = metricool("/scheduler/posts", "POST",
-                             corps_de(post, texte, date_time, True), blogId=blog_id)
+            cree = metricool("/scheduler/posts", "POST", corps, blogId=blog_id)
             nouveau = cree.get("data", {}).get("id")
-            return f"publication programmée (recréé, nouvel id {nouveau})", nouveau
+            return f"{libelle} (recréé, nouvel id {nouveau})", nouveau
         publiables, reste = etat_du_jour()
     if not publiables:
         raise RuntimeError(f"aucune version publiable en place après la mise à jour du "
@@ -517,9 +603,9 @@ def passer_en_publication(blog_id, post, texte, date_time):
         metricool(f"/scheduler/posts/{doublon['id']}", "DELETE", blogId=blog_id)
     if reste and version["id"] != ancien_id:
         metricool(f"/scheduler/posts/{ancien_id}", "DELETE", blogId=blog_id)
-        return (f"publication programmée (version {version['id']}, ancien brouillon "
+        return (f"{libelle} (version {version['id']}, ancien brouillon "
                 f"{ancien_id} retiré)"), version["id"]
-    return f"publication programmée (version {version['id']})", version["id"]
+    return f"{libelle} (version {version['id']})", version["id"]
 
 
 def retrouver_post(posts, original):
@@ -680,7 +766,8 @@ def appliquer_compte(compte, dry_run=False):
                 else:
                     try:
                         resultat, post_id = passer_en_publication(
-                            compte["blog_id"], post, texte_final, nouvelle_date)
+                            compte["blog_id"], post, texte_final, nouvelle_date,
+                            contenu_ia=compte.get("contenu_ia", False))
                         entree["resultat"], entree["post_id"] = resultat, post_id
                         compteurs["publies"] += 1
                         detail = " — légende du client" if legende_modifiee else ""
@@ -719,7 +806,8 @@ def resumer(lignes):
         with open(chemin, "a", encoding="utf-8") as f:
             f.write("\n".join(lignes) + "\n")
 
-def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_retenus=()):
+def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_retenus=(),
+                   mesurer=None):
     """Tri des brouillons d'un compte en validation automatique.
 
     Retourne (a_publier, retenus), retenus étant une liste de (post, raison). Seuls les
@@ -727,7 +815,8 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_r
     garde-fous de la review restent : texte à placeholders ou sans média = retenu. S'ajoute
     le tiret cadratin, qui ne compte pas pour une story (Instagram n'affiche pas son texte),
     et les visuels listés dans `medias_retenus` du compte (morceaux d'URL : visuels IA
-    interdits sur un compte qui a de vraies photos, règle du 21/08/2026).
+    interdits sur un compte qui a de vraies photos, règle du 21/08/2026). Avec `mesurer`
+    (url → (largeur, hauteur)), une image de feed hors de la plage Instagram est retenue.
     """
     limite = maintenant + timedelta(days=horizon_jours)
     a_publier, retenus = [], []
@@ -748,6 +837,9 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_r
             retenus.append((post, "note de tournage dans la légende (vidéo à tourner)"))
         elif TIRET.search(texte) and type_du(post) != "Story":
             retenus.append((post, "tiret cadratin dans la légende (règle de rédaction)"))
+        elif mesurer and (ratio := format_hors_feed(post, mesurer)) is not None:
+            retenus.append((post, f"image hors du format feed d'Instagram ({ratio:.2f}, "
+                                  f"à recadrer entre 4:5 et 1.91:1)"))
         else:
             a_publier.append(post)
     return a_publier, retenus
@@ -757,7 +849,9 @@ def valider_auto(compte, dry_run=False, maintenant=None):
     """Compte dont Maxime est lui-même le client : chaque brouillon vaut ✅.
 
     Décision de Maxime du 07/10/2026 pour OTEA Production et Otea Filmakers : « tu peux
-    considérer que c'est validé à chaque fois, car c'est moi ». Pas de tableau ; à chaque
+    considérer que c'est validé à chaque fois, car c'est moi ». Étendue le 21/10/2026 à
+    Pierre Huiban, qui ne validait pas ses tableaux, et à Run On Invest (contenu_ia : la
+    mention « contenu IA » est cochée à chaque passage). Pas de tableau ; à chaque
     relève, les brouillons des deux semaines à venir qui passent les garde-fous partent en
     publication automatique, par le même chemin qu'un ✅ client (passer_en_publication).
     """
@@ -767,7 +861,8 @@ def valider_auto(compte, dry_run=False, maintenant=None):
     posts = metricool("/scheduler/posts", blogId=compte["blog_id"],
                       start=f"{debut}T00:00:00", end=f"{fin}T23:59:59").get("data", [])
     a_publier, retenus = a_valider_auto(posts, maintenant,
-                                        medias_retenus=compte.get("medias_retenus") or ())
+                                        medias_retenus=compte.get("medias_retenus") or (),
+                                        mesurer=dimensions_image)
     compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
                  "sans_decision": 0, "en_attente": len(retenus)}
     print(f"{compte['nom']} — validation automatique : {len(a_publier)} à publier, "
@@ -783,7 +878,8 @@ def valider_auto(compte, dry_run=False, maintenant=None):
             continue
         try:
             resultat, post_id = passer_en_publication(compte["blog_id"], post,
-                                                      post.get("text") or "", quand)
+                                                      post.get("text") or "", quand,
+                                                      contenu_ia=compte.get("contenu_ia", False))
             compteurs["publies"] += 1
             journal[quand + "|" + str(post["id"])] = {
                 "quand": datetime.now().isoformat(timespec="seconds"),

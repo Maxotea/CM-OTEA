@@ -73,16 +73,19 @@ vivent dans `.claude/references/social-media-ceo/cadres/` et sont chargés dans 
 
 ## Règles permanentes du CM (non négociables)
 
-Ces deux règles priment sur toute autre considération d'exécution. Elles
+Ces règles priment sur toute autre considération d'exécution. Elles
 vivaient dans les mémoires Claude, hors du repo — elles sont désormais
 versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 
 1. **Tout contenu créé dans Metricool reste en BROUILLON** (`draft:true`,
    jamais `autoPublish`). Maxime valide lui-même dans l'interface. Toute code
    action qui crée du contenu doit vérifier le `draft` après création.
-   Seule exception (07/10/2026) : OTEA Production et Otea Filmakers, dont
-   Maxime est le client. Le contenu y est créé en brouillon, puis la relève
-   GitHub le passe en publication automatique (`validation_auto`).
+   Exceptions : OTEA Production et Otea Filmakers (07/10/2026), dont Maxime
+   est le client, puis Pierre Huiban et Run On Invest (21/10/2026, décision
+   de Maxime : Pierre ne validait pas). Le contenu y est créé en brouillon,
+   puis la relève GitHub le passe en publication automatique
+   (`validation_auto`). Run On Invest porte `contenu_ia` : la mention
+   « contenu IA » d'Instagram est cochée d'office.
    → `.claude/memories/autonomie-decisions-cm.md`
 2. **Les stories partent des VRAIES photos du client, animées en IA.**
    Deux choses distinctes, à ne pas confondre (règle reprécisée le 21/08/2026) :
@@ -108,6 +111,18 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 3. **Aucune bande son sur les vidéos de story.** Elles partent muettes, Maxime
    ajoute l'audio dans Instagram au moment de valider.
    → `.claude/memories/stories-sans-son.md`
+   **Même règle pour les reels (21/10/2026)** : la musique se prend dans
+   Instagram, jamais intégrée au fichier (pas d'« audio d'origine »). Un reel
+   Instagram programmé sort en mode notification (`draft:false`,
+   `autoPublish:false`) : Maxime pose la musique et publie.
+   → `.claude/memories/reels-musique-instagram.md`
+4. **Un à deux mois d'avance sur tout événement** (vacances scolaires, vœux,
+   galette des rois, séminaires, salons, événements corpo). Une offre liée à un
+   temps fort se publie entre J-60 et J-30, jamais pendant : un prospect qui
+   lit « c'est le moment de filmer » le premier jour des vacances ne peut plus
+   rien en faire (Maxime, 12/10/2026). Seule une actualité annoncée pour
+   information sort à J-7 / J.
+   → `.claude/memories/anticipation-evenements.md`
 
 Index complet des mémoires : `.claude/memories/MEMORY.md`.
 

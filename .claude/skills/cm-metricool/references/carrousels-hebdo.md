@@ -86,7 +86,7 @@ doit en coûter vingt minutes.
 | A5 | **Le guide de choix** | P1/P2 | Sauvegarde + DM | La cible doit décider entre plusieurs options et ne sait pas comment |
 | A6 | **Le décryptage chiffré** | P2 | Partage + autorité | Une actualité ou une donnée du secteur, lue pour la cible |
 | A7 | **Les coulisses expliquées** | P3 | Attachement | Ce que le client ne voit jamais et qui justifie le prix |
-| A8 | **La checklist saisonnière** | P4 | Sauvegarde | Un temps fort approche, la cible a quelque chose à préparer |
+| A8 | **La checklist saisonnière** | P4 | Sauvegarde | Un temps fort approche, la cible a quelque chose à préparer. Le carrousel sort un à deux mois avant le temps fort (J-60 à J-30), jamais la semaine même : publié pendant, il n'est plus actionnable (règle de Maxime, 12/10/2026, `.claude/memories/anticipation-evenements.md`) |
 
 **Rotation conseillée sur un mois** : A2, A1 ou A5, A6 ou A7, A8 ou A3. Ne jamais servir deux fois
 le même archétype dans le mois — l'audience le sent avant de savoir le nommer.

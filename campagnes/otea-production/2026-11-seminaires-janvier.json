@@ -1,0 +1,99 @@
+{
+  "client": "otea-production",
+  "slug": "seminaires-janvier",
+  "titre": "Séminaires et kick-off de janvier",
+  "mois": "2026-11",
+  "objectif_business": "Des prospects qualifiés (un message ou un commentaire qui demande une date, un devis ou un échange) pour la captation des séminaires, kick-off et conventions de janvier 2027, au moment où ces dates se réservent. Fenêtre d'offre J-60 à J-30 avant le 11/01/2027, campagne placée de J-56 à J-50.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "POST_ENGAGEMENT",
+  "destination": "ON_POST",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "total",
+    "montant_eur": 42,
+    "debut": "2026-11-16",
+    "fin": "2026-11-22",
+    "note": "Proposition à valider : 6 € par jour sur 7 jours, budget total (opération datée). Repère du skill pour une première campagne : 5 à 10 € par jour, 7 jours. Plafonds du registre (20 € par jour, 300 € par campagne) respectés. Budget payé à Meta sur le compte pub Maks Otéa ; aucune prestation d'agence facturée (OTEA est son propre client)."
+  },
+  "fenetre_anticipation": {
+    "temps_fort": "Séminaires de rentrée, kick-off, conventions de janvier 2027",
+    "date": "11 au 29/01/2027 (période supposée, aucune source : cadrage §4)",
+    "type": "offre",
+    "fenetre_offre": "12/11 au 30/12/2026 selon le cadrage ; de préférence J-60 à J-45 du 11/01, soit du 12/11 au 27/11",
+    "position_campagne": "J-56 au J-50 du 11/01/2027",
+    "organique_associe": "post du 20/11 « Votre séminaire de janvier ne doit pas rester dans la salle » (394180869, brouillon) ; rappel kick-off du 04/12 (394836479, brouillon)"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 28,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Dirigeants, RH et responsables communication de PME. Aucun identifiant d'intérêt réel disponible dans la session : ciblage large, Advantage+ audience actif, aucun intérêt inventé. Sans compte Instagram rattaché au compte pub (ads_get_ig_accounts vide le 13/10), la publicité ne diffuse que sur Facebook et Messenger. Zone : France tant que Maxime n'a pas dit s'il vend surtout en Île-de-France (question ouverte de la fiche publicité) ; une restriction régionale exige la clé Meta de la région, à relever dans Ads Manager, jamais inventée."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Boost du 04/09, prise de parole au micro",
+      "format": "post_existant",
+      "post_id": "994117790447204_122135235087226897",
+      "post": {
+        "publie_le": "2026-09-04 10:01 (UTC), page Facebook OTEA Production",
+        "lien": "https://facebook.com/122093650317226897/posts/122135235087226897",
+        "reseaux": "Facebook et LinkedIn ; Instagram resté en mode notification, jamais parti",
+        "validation": "publié depuis Metricool, donc validé par Maxime (règle d'août : le gérant valide au fil de l'eau)",
+        "visuel": "vraie photo 19 de la banque (noir et blanc, prise de parole au micro, poing levé, fond noir), shooting HOME SANFAUTE ; aucune IA",
+        "texte": "🔍 Zoom matière : le style cinématique OTEA.\n\nProfondeur de champ maîtrisée, mouvements fluides, étalonnage chaud, son travaillé : notre signature visuelle vient du cinéma et du voyage. Vos contenus d'entreprise n'ont aucune raison d'être ennuyeux.\n\n💼 Voir le portfolio, lien en bio.\n\n#cinematique #signature #realisateur #oteaproduction",
+        "controle_texte": "aucun tiret cadratin ni demi-cadratin, aucun chiffre, aucun tarif, aucun délai",
+        "portee_organique": "Facebook : portée 0, aucune interaction (Metricool, 13/10) ; la page n'a quasiment pas d'audience, le boost lui donne sa première diffusion",
+        "pourquoi_ce_post": "Une prise de parole au micro, c'est l'image d'un kick-off ou d'un séminaire ; le texte dit qu'un contenu d'entreprise n'a pas à être ennuyeux, l'argument d'un film de séminaire qui sert au-delà de la salle."
+      },
+      "condition": "Accord pour un usage PUBLICITAIRE de l'image de la personne photographiée (droit à l'image). La question ne suppose rien de son identité (Q4 reste ouverte). Sans accord confirmé par Maxime : remplacer post_id par l'alternative ci-dessous, sans autre changement.",
+      "alternative": {
+        "post_id": "994117790447204_122134964355226897",
+        "post": "carrousel A7 du 02/09 « Ce qui se passe le jour du tournage », typographique, sans personne (voir la spec 2026-12-vacances-hiver)"
+      },
+      "ia_generative": "OPT_OUT",
+      "note_ia": "Proposé : photo réelle, aucune retouche IA. La déclaration reste une décision de Maxime ; pour un boost de post existant, le plan du script ne la transmet pas."
+    }
+  ],
+  "a_ajouter_apres_publication": {
+    "quoi": "Le post organique du 20/11 « Votre séminaire de janvier ne doit pas rester dans la salle » (394180869), une fois PUBLIÉ et vu par Maxime : il porte exactement le message de la campagne.",
+    "comment": "Une seconde publicité dans le même ensemble (on ajoute, on ne modifie pas), post_id relu sur la page Facebook après publication, créée en PAUSE et activée seulement sur une phrase de Maxime. Jamais tant que le post est un brouillon."
+  },
+  "kpi": {
+    "resultat_meta": "Interactions avec la publication (optimisation POST_ENGAGEMENT) ; coût par résultat lu via ads_get_ad_entities",
+    "indicateur_decisif": "Coût par lead (dictionnaire KPI, bloc MARKETING COMMERCIAL) = dépense ÷ prospects qualifiés",
+    "prospect_qualifie": "message Messenger reçu sur la page OTEA Production, DM Instagram ou commentaire qui demande une date, un devis ou un échange, de l'activation à J+7 après la fin ; relevé à la main dans la boîte de réception (les mesures de messagerie de Meta sont partielles en Europe)",
+    "cout_par_lead_cible_eur": {
+      "moyen": 42,
+      "bien": 21,
+      "wow": 14,
+      "lecture": "Moyen = 1 prospect qualifié pour le budget, Bien = 2, Wow = 3 ou plus. Paliers proposés, à valider : ils deviennent un vrai seuil quand la fourchette de devis moyen sera renseignée (fiche publicité OTEA : aucun coût par résultat acceptable ne se calcule sans elle)."
+    },
+    "garde_fous": "Répétition au plus 3 sur la semaine ; CTR (tous) comparé au repère interne du compte (2,3 à 4 % sur du contenu voyage en 2025 ; une pub B2B fera moins, c'est attendu) ; aucune conclusion avant J+3, aucune décision avant J+7.",
+    "decision_fin": "0 prospect qualifié : on ne refait pas de boost d'interaction, on passe à une creative avec bouton Message (spec du type Vœux 2027) quand la page aura un message d'accueil. 1 ou plus : on garde le format pour la campagne de décembre."
+  },
+  "prerequis": [
+    "Destination du « lien en bio » : oteaproduction.com répond 200 mais sert un WordPress vierge (vérifié le 13/10). Mettre dans la bio Instagram ET dans le site web de la page Facebook une destination vivante (m.me/994117790447204, page de réservation de call ou portfolio).",
+    "Rattacher @oteaproduction au compte pub (ads_get_ig_accounts vide le 13/10) : sans lui, diffusion Facebook seulement.",
+    "La page OTEA Production n'est toujours pas listée sous le compte pub (ads_get_ad_account_pages, 13/10) ; elle est utilisable en pub par Maxime (ads_get_user_pages). La première ads_create_creative tranchera.",
+    "Accord droit à l'image de la personne de la photo 19, ou bascule sur l'alternative A7."
+  ],
+  "validation": {
+    "brief_valide_par": null,
+    "brief_valide_le": null,
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

@@ -2,7 +2,7 @@
 
 - [Héberger photos réelles pour Metricool](hebergement-photos-reelles-metricool.md) : pipeline media_upload → PUT → media_confirm pour attacher de vraies photos (pas que de l'IA)
 - [Bulk stories Metricool](bulk-schedule-stories-metricool.md) : code action sur mesure : stories en masse, brouillon + média, heure Paris exacte (pas de bug +7h)
-- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish
+- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish, sauf relève auto d'OTEA Production, Otea Filmakers (07/10), Pierre Huiban et Run On Invest (21/10)
 - [Charte Otea Production](otea-brand-identity.md) : Palette (#FF5800), police Forma DJR, monogramme koru, emplacements des assets
 - [Stories : vraies photos du client](stories-vraies-photos-sans-ia.md) : animer LEURS photos en i2v (méthode standard, tous comptes) ; images 100 % IA interdites sur un compte qui a des photos ; jamais le visage d'une personne réelle
 - [Story vidéo plein cadre](story-video-plein-cadre.md) : process validé par Maxime le 28/08/2026 : crop 9:16 PIL → i2v caméra verrouillée → plein cadre 1080×1920 → texte en overlay → muette → brouillon
@@ -12,3 +12,5 @@
 - [Devis validé : blocs agenda](devis-valide-blocs-agenda.md) : dès qu'un devis est accepté, poser le jour même les blocs préprod, prod, post et livraison dans l'agenda, selon la grille du fichier
 - `posture-solution-jamais-excuse.md` : dans un mail client, ouvrir sur la solution et un engagement daté, jamais sur une excuse ou un « je ne peux pas » (règle de Maxime, 5 octobre 2026).
 - [Meta Ads : jamais d'activation sans OK](meta-ads-jamais-activer-sans-ok.md) : toute campagne est créée en PAUSE ; seule une phrase explicite de Maxime, nommant la campagne, déclenche l'activation et donc la dépense
+- [Anticipation des événements](anticipation-evenements.md) : une offre liée à un temps fort (vacances, vœux, galette, séminaire, salon, événement corpo) se publie J-60 à J-30 avant, jamais pendant ; seule une actualité pour information sort J-7 à J (règle de Maxime, 12/10/2026)
+- [Reels : musique via Instagram](reels-musique-instagram.md) : un reel se rend muet, la musique se pose dans Instagram (jamais d'audio d'origine) ; programmé en mode notification (règle de Maxime, 21/10/2026)
