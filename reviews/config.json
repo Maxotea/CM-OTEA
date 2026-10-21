@@ -50,7 +50,7 @@
       "blog_id": 6572293,
       "nom": "Pierre Huiban",
       "prefixe": "PH",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1VGThaVWofkwv3sUqZQo-R0_sST5nvytB",
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
       "semaines_avance": 2,
@@ -58,7 +58,8 @@
         "1cUzldtSeQMOalcy3Dv7TIHQUkGknwV0_s7A49d1yZnY",
         "1Ixx34cQVds23XhsS3Vj79k5_SUVWFWY0sSWKkoN6NJg"
       ],
-      "note": "Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = les tableaux ouverts, du plus ancien au plus récent : semaine du 12-10 (1cUzldtS…, déposé le 05/10), semaine du 19-10 (1Ixx34cQ…, déposé le 12/10, 11 lignes relues après dépôt). Le 12-10 part en Archives quand le 26-10 arrive ; celui du 05-10 est parti en Archives le 09/10, celui du 02-10 (10hnadMp…) y était déjà. Depuis la fusion de la PR #56 (12/10/2026), la relève lit tous les tableaux de drive_fichiers. Email perso toujours manquant : le champ « À » du brouillon reste vide."
+      "note": "PUBLICATION AUTOMATIQUE depuis le 21/10/2026, décision de Maxime : « on va faire l'automatisation des posts avec Pierre parce qu'il ne les valide pas » (aucune ligne cochée depuis le 05/10). Plus de tableau de semaine : la relève arme les brouillons des 14 jours à venir qui passent les garde-fous ; les reels partent en mode notification, Maxime pose la musique dans Instagram. Les deux derniers tableaux (drive_fichiers) sont gardés pour mémoire. Note précédente : Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = les tableaux ouverts, du plus ancien au plus récent : semaine du 12-10 (1cUzldtS…, déposé le 05/10), semaine du 19-10 (1Ixx34cQ…, déposé le 12/10, 11 lignes relues après dépôt). Le 12-10 part en Archives quand le 26-10 arrive ; celui du 05-10 est parti en Archives le 09/10, celui du 02-10 (10hnadMp…) y était déjà. Depuis la fusion de la PR #56 (12/10/2026), la relève lit tous les tableaux de drive_fichiers. Email perso toujours manquant : le champ « À » du brouillon reste vide.",
+      "validation_auto": true
     },
     {
       "slug": "otea-production",
@@ -97,8 +98,9 @@
       "nom": "Run On Invest",
       "prefixe": "ROI",
       "actif": false,
-      "validation_auto": false,
-      "note": "Inscrit le 12/10/2026 pour que publier.BLOG_IDS (carrousels sur photo du moteur story-photo) et cette configuration restent alignés (tests/test_coherence.py). Ni tableau de review (actif: false) ni publication automatique : validation_auto doit rester à false, le compte reste en BROUILLON tant que Maxime n'a pas validé lui-même (confidentialité stricte, voir recaps/clients-config.json). Aucun dossier Drive de validation."
+      "validation_auto": true,
+      "note": "PUBLICATION AUTOMATIQUE depuis le 21/10/2026, décision de Maxime (« Oui, passe R.O.I. en auto »). Visuels générés par IA autorisés sur ce compte (04/08/2026), d'où contenu_ia : la relève coche toujours la mention « contenu IA » d'Instagram (instagramData.isAiGenerated). Inscrit le 12/10/2026 pour que publier.BLOG_IDS (carrousels sur photo du moteur story-photo) et cette configuration restent alignés (tests/test_coherence.py). Ni tableau de review (actif: false) ni publication automatique : validation_auto doit rester à false, le compte reste en BROUILLON tant que Maxime n'a pas validé lui-même (confidentialité stricte, voir recaps/clients-config.json). Aucun dossier Drive de validation.",
+      "contenu_ia": true
     }
   ]
 }

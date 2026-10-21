@@ -1,5 +1,17 @@
 # Pierre Huiban — fiche d'onboarding
 
+## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
+
+« On va faire l'automatisation des postes avec Pierre parce qu'il ne les valide pas […]
+on va les publier. » Pierre ne reçoit plus de tableau hebdo (`actif: false` dans
+`reviews/config.json`) ; la relève (`validation_auto: true`) passe en publication les
+brouillons des 14 jours à venir, avec les garde-fous de la review (média présent, pas
+de placeholder ni de tiret cadratin, image de feed entre 4:5 et 1.91:1). Les **reels**
+sortent en **mode notification** : Metricool notifie Maxime à l'heure prévue, il pose la
+musique dans Instagram et publie (le compte n'est pas relié à une page Facebook, le son
+Instagram ne peut pas être posé par Metricool : 403 le 21/10). On continue de tout
+créer en brouillon.
+
 ## ✅ RELANCE « ROAD TO HONG KONG » — 05/10/2026 (décision Maxime)
 
 Maxime relance l'accompagnement à fond : Pierre est qualifié pour les Mondiaux
@@ -303,7 +315,7 @@ Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un
   stories de décembre ne sont pas créés : aucune vidéo de fond.
 - **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
   liens n'ont pas été envoyés, le courriel perso de Pierre manque.
-- **Reels monologue branchés le 21/10** (brouillons, type REEL, vidéo de livraison vérifiée au md5 sur le CDN et dans la copie Metricool) : D1 « Rome, split by split » 402004284 (jeu. 22/10 12:30, PH-07 du tableau du 19-10 mis à jour), M3 « Two engines » 401840603 (déplacé du 18/10, passé, au mar. 27/10 12:30), M2 « Keep showing up » 402005051 (jeu. 29/10 12:30), M4 « 221 days » 402005104 (dim. 01/11 18:00). M1 « After the line » n'est pas branché : Pierre doit confirmer la scène. R5 « Sled pull » (388250088) et R10 « The hidden station » (388250126), sans vidéo, sont supprimés sur décision de Maxime du 15/10 (mêmes rushes et mêmes idées que M3 et D1).
+- **Reels monologue branchés le 21/10** (type REEL, vidéo de livraison vérifiée au md5 sur le CDN et dans la copie Metricool, puis passés en **mode notification** le même jour, musique à poser dans Instagram) : D1 « Rome, split by split » **402181744** (jeu. 22/10 12:30, couverture 1,5 s), M1 « After the line » **402226693** (sam. 24/10 12:30, couverture 2,4 s, publié sur décision de Maxime sans attendre Pierre), M3 « Two engines » **402224390** (mar. 27/10 12:30, couverture 6,67 s), M2 « Keep showing up » **402224788** (jeu. 29/10 12:30, couverture 1,7 s), M4 « 221 days » **402224853** (dim. 01/11 18:00, couverture 2,0 s). Ids des brouillons d'avant : 402004284, 401840603, 402005051, 402005104. R5 « Sled pull » (388250088) et R10 « The hidden station » (388250126), sans vidéo, sont supprimés sur décision de Maxime du 15/10 (mêmes rushes et mêmes idées que M3 et D1).
 - **Corrigé le 13/10** (décision de Maxime : « je ne sais pas, corrige ») : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice », sans la phrase de chute « Rome was one more » qui laissait croire à une troisième qualification. « this season » devient « this year » dans la légende, et le sur-titre de la slide 02 « THE SEASON » devient « 2026 » : Pierre compte Rome comme la course n° 1 d'une nouvelle saison (30/09), et HYROX classe Paris (23 au 26/04/2026) et Lyon (20 au 24/05/2026) en saison 25/26. Les quatre courses sont toutes en 2026. Carrousel du 14/10 : **395138284** (slides 02 et 06 re-rendues, spec `projets/pierre-huiban/carrousels-v2/2026-10-14-quatre-courses-avec-antoine.json`) ; reel du 18/10 : **395043919** (`instagramData.type` encore POST, à passer en REEL au branchement de la vidéo). Tableau du 12-10 mis à jour (_tech B10, B16, E10, E16 ; G6, G12 ; lien F6 vers une planche des 7 slides), `legende_modifiee` reste faux.
 - **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
   321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié

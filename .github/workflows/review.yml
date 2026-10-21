@@ -63,7 +63,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install openpyxl
+      - run: pip install openpyxl pillow
 
       # Planifié (vendredi) : --a-venir, soit le lundi SUIVANT, plus les semaines d'après
       # pour les comptes à semaines_avance > 1. Lancé à la main : la semaine demandée, ou
@@ -125,7 +125,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install openpyxl
+      - run: pip install openpyxl pillow
 
       - name: Appliquer les décisions clients
         env:

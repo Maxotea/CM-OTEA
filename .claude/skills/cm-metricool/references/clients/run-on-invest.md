@@ -1,5 +1,15 @@
 # Run On Invest (R.O.I.) — fiche client (onboardé 03/08/2026)
 
+## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
+
+« Oui, passe R.O.I. en auto. » La relève (`validation_auto: true` dans
+`reviews/config.json`) passe en publication les brouillons des 14 jours à venir, avec
+les garde-fous de la review (média présent, pas de placeholder ni de tiret cadratin,
+image de feed entre 4:5 et 1.91:1). `contenu_ia: true` : les visuels du compte sont
+générés (aucune banque photo, accord du 04/08/2026), la mention « contenu IA »
+d'Instagram est cochée d'office à la publication. Reels en mode notification, musique
+posée dans Instagram. On continue de tout créer en brouillon.
+
 > **Source de vérité : le brief client** (plateforme de marque V2.1, fourni par Maxime le 03/08/2026).
 > Tout contenu doit le respecter à la lettre. Cette fiche n'en est que le résumé opérationnel.
 
