@@ -14,3 +14,4 @@
 - [Meta Ads : jamais d'activation sans OK](meta-ads-jamais-activer-sans-ok.md) : toute campagne est créée en PAUSE ; seule une phrase explicite de Maxime, nommant la campagne, déclenche l'activation et donc la dépense
 - [Anticipation des événements](anticipation-evenements.md) : une offre liée à un temps fort (vacances, vœux, galette, séminaire, salon, événement corpo) se publie J-60 à J-30 avant, jamais pendant ; seule une actualité pour information sort J-7 à J (règle de Maxime, 12/10/2026)
 - [Reels : musique via Instagram](reels-musique-instagram.md) : un reel se rend muet, la musique se pose dans Instagram (jamais d'audio d'origine) ; programmé en mode notification (règle de Maxime, 21/10/2026)
+- [Récap photo du mois](recap-photo-mensuel.md) : le 28 de chaque mois, tâche Cowork : carrousel « récap du mois » OTEA Production (12:00) et Otea Filmakers (18:00) depuis la galerie Photos du Mac, coulisses intimistes mais corporate (demande de Maxime, 22/10/2026)

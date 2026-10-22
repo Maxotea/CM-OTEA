@@ -32,6 +32,7 @@ travaillent dedans (`git pull` avant, commit après).
 | `devis-otea` | à la demande | un devis ou une proposition depuis la grille 2026, en docx ou pdf | `Devis et offres/` |
 | `tri-medias` | à la demande | range `Médias clients/`, détecte les nouveaux, qualifie sujet et pilier | `photos/<client>.json` du dépôt |
 | `compta-semaine` | mardi, à la demande | import CSV Qonto dans Trésorerie parfaite, lecture du plan, mise à jour du tableau de bord | `Compta/`, tableau de bord |
+| `recap-photo-mois` | le 28 de chaque mois, 9h | récap photo du mois depuis l'appli Photos, un carrousel OTEA Production et un Otea Filmakers en brouillon | `Médias clients/`, Metricool (brouillons), `recaps/medias-index.json` |
 
 Les deux premiers remplacent des routines cloud : la routine « Review, préparation du vendredi »
 se désactive une fois `review-vendredi` passé deux vendredis de suite.

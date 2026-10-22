@@ -133,6 +133,32 @@ clone local est à jour (`git pull` le dimanche soir).
 | Désactiver la routine « Point compta du matin » après 3 jours concluants | Claude sur demande | 2 min |
 | Créer les Projets clients (un à la fois, en commençant par La Galerie et J Lawson) | Maxime | 10 min chacun |
 | Créer la tâche Cowork du lundi, lancer un essai à la main | Maxime | 15 min |
+| Copier l'agent `recap-photo-mois`, créer la tâche Cowork du 28 (§7), premier passage le 28/10 | Maxime | 10 min |
 | Retirer les `smc-*` des skills du dépôt | fait le 19/10/2026 (déplacés dans les références) | |
 
 Les routines actuelles restent actives jusqu'à ce que leur remplaçant ait tourné trois jours.
+
+## 7. Tâche Cowork « Récap photo du mois »
+
+Demandée par Maxime le 22/10/2026 : chaque fin de mois, un carrousel « récap du mois » sur OTEA
+Production et Otea Filmakers, tiré de sa galerie (iPhone, tournages, projets), humain, coulisses,
+intimiste mais corporate. La galerie est l'appli Photos du Mac, invisible depuis une session
+cloud : c'est donc une tâche Cowork, pas une routine.
+
+À créer dans Cowork, dossier de travail « OTEA », **le 28 de chaque mois à 09h00**, ordinateur
+allumé. Copier d'abord `cowork-kit/agents/recap-photo-mois/` dans `OTEA/.claude/skills/`.
+
+```
+Le 28 de chaque mois, fais le récap photo du mois pour OTEA Production et Otea Filmakers en
+suivant le skill recap-photo-mois. Pars de l'appli Photos du Mac (photos du mois : iPhone,
+lunettes, drone), des tournages rangés dans Médias clients/ et de l'agenda du mois pour les
+faits. Un carrousel par compte, 6 à 10 vraies photos recadrées en 4:5, créé en BROUILLON dans
+Metricool : OTEA Production le dernier jour du mois à 12:00, Otea Filmakers à 18:00. Aucune
+personne d'autre que moi sur Filmakers, aucun tiers sans accord sur OTEA, ni famille ni vie
+privée. Aucun fait inventé, pas de tiret cadratin. Envoie-moi les deux planches et les deux
+légendes avant la date de publication.
+```
+
+À vérifier avant le premier passage (28/10/2026) : que Cowork a accès à l'appli Photos, et voit
+les connecteurs Metricool, Zapier, Higgsfield et Google Agenda.
+

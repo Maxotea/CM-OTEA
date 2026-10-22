@@ -140,3 +140,6 @@ dans le scratchpad de la session (`otea-2110/journal-ids.json`).
   13/11 (1fb3c4bc en 6e image) et 30/11 (96fe141e), ces deux derniers seront retenus par la relève ; le 12/11 reprend
   toujours la slide 4 de l'A8 ; 17 brouillons du 01 au 12/10 et stories en erreur des 18 au 21/10 non supprimés
   (proposition à Maxime).
+
+## Rendez-vous mensuel
+- **Récap photo du mois** (demande de Maxime, 22/10/2026) : chaque dernier jour du mois à 12:00, un carrousel de 6 à 10 vraies photos du mois (coulisses, tournages, lieux), vouvoiement, « nous », CTA « écrivez-nous en message ». Préparé le 28 par la tâche Cowork `recap-photo-mois`, publié par la relève. Aucun tiers identifiable sans accord noté.
