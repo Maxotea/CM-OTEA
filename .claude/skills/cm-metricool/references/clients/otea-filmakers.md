@@ -79,3 +79,6 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11. Banque propre faite le 13/10 depuis
   le Mac (73 instantanés).
   Après tout `bulk_replace_posts` sur ce compte, relire `tiktokData` : l'action le perd.
+
+## Rendez-vous mensuel
+- **Récap photo du mois** (demande de Maxime, 22/10/2026) : chaque dernier jour du mois à 18:00, un carrousel de 6 à 10 vraies photos du mois, « je », tutoiement, intime, Instagram seul. Préparé le 28 par la tâche Cowork `recap-photo-mois`, publié par la relève. Aucune personne d'autre que Maxime.
