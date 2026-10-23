@@ -12,3 +12,4 @@
 - [Rédaction sans tirets](redaction-sans-tirets.md) : aucun tiret cadratin (U+2014) ni « -- » dans les textes rédigés (légendes, messages clients) ; virgule, deux-points ou deux phrases à la place
 - [Devis validé : blocs agenda](devis-valide-blocs-agenda.md) : dès qu'un devis est accepté, poser le jour même les blocs préprod, prod, post et livraison dans l'agenda, selon la grille du fichier
 - `posture-solution-jamais-excuse.md` : dans un mail client, ouvrir sur la solution et un engagement daté, jamais sur une excuse ou un « je ne peux pas » (règle de Maxime, 5 octobre 2026).
+- [R.O.I. · Dan et Elodie en copie](roi-mails-copie-dan-elodie.md) : chaque mail de la campagne R.O.I. part avec d.haarfi@asgcourtage.com et e.pereira@dplavocats.fr en copie (règle du 23/10/2026)
