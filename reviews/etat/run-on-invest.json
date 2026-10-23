@@ -97,6 +97,12 @@
       "type": "Post",
       "resultat": "publication programmée (version 402958755)",
       "post_id": 402958755
+    },
+    "2026-11-06T08:00:00|402271754": {
+      "quand": "2026-10-23T09:29:22",
+      "type": "Post",
+      "resultat": "publication programmée (version 403969718)",
+      "post_id": 403969718
     }
   }
 }
