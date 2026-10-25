@@ -5,6 +5,27 @@
 - Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
+## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
+Maxime, 25/10/2026 : « OTEA Filmakers et OTEA Production, ils sont inversés […] Filmakers est axé
+B2C. Et là, le carrousel, il est B2B, donc c'est très OTEA Production. Sur OTEA Filmakers, mettre
+en avant les prises de vue pour les compétitions de sport, type HYROX et tout autre événement,
+mais moins axé B2B. » Les carrousels du 23/10 (« Ce que je regarde avant d'allumer la caméra ») et
+du 25/10 (« Un plateau, cinq détails ») étaient du B2B publié ici par erreur.
+- **Filmakers = B2C** : Maxime filme les compétitions de sport (HYROX d'abord, puis courses,
+  marathons, trails, tout événement sportif) pour les athlètes, plus son métier, la lumière et le
+  voyage vus de l'intérieur, au « je » et au tutoiement.
+- **Jamais sur l'Instagram de Filmakers** : plateau d'entreprise, interview en bureau, « client »,
+  film de marque, conférence, séminaire, salon professionnel (SATIS), délais de livraison, vidéos
+  pour Noël. Tout cela va sur **OTEA Production**, au vouvoiement. Seule exception : le LinkedIn
+  personnel de Maxime, branché dans cette marque Metricool, qui reçoit une publication B2B par
+  semaine (plan de bataille).
+- **Personnes visibles** : les instantanés de la banque restent « Maxime seul ». Des athlètes
+  apparaissent dans les contenus de compétition déjà validés par Maxime (reels HYROX Bordeaux,
+  teaser F1, accord du 13/10) ou avec un accord noté ; jamais un intervenant d'un tournage
+  d'entreprise.
+- Test avant chaque post : un athlète ou un passionné de sport a-t-il envie de le lire ? Un
+  directeur de la communication est-il la cible ? Si c'est le second, c'est OTEA Production.
+
 ## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
 - Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.

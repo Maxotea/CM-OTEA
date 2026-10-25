@@ -48,9 +48,13 @@ travail. « Intimiste » veut dire le ressenti des coulisses, pas la vie privée
   que si son accord est noté dans `banque-photos-otea.md` (colonne Accord) ou dans le devis. Sinon,
   une photo où elle est de dos, floue ou lointaine, ou une autre photo.
 
-**Otea Filmakers** (blogId 4728418, Instagram seul) : 6 à 10 photos.
-- **Aucune personne d'autre que Maxime** (règle du 13/10/2026). Voyages, lumière, matériel en
-  main, montage en route, Maxime seul.
+**Otea Filmakers** (blogId 4728418, Instagram seul) : 6 à 10 photos. Compte **B2C** (décision
+du 25/10/2026) : les **compétitions de sport filmées dans le mois** d'abord (HYROX, courses,
+marathons, trails), puis voyages, lumière, matériel en main, montage en route.
+- Rien de corporate : ni plateau d'entreprise, ni interview, ni intervenant client. Ces photos
+  vont au récap d'OTEA Production.
+- Personnes : Maxime, et les athlètes seulement si Maxime a déjà validé leur film ou si leur
+  accord est noté. Sinon, l'athlète de dos, flou ou lointain, ou une autre photo.
 - Pas de TikTok : le TikTok branché à la marque est celui d'OTEA Production.
 
 **Pour les deux** :
@@ -89,10 +93,11 @@ Aucun placeholder.
   (`.claude/memories/anticipation-evenements.md`).
 - Trois à cinq hashtags.
 
-**Otea Filmakers** : « je », tutoiement, intime et cinématique.
+**Otea Filmakers** : « je », tutoiement, intime et cinématique, tourné vers les athlètes.
 - Ouverture : « <Mois>, en vrai. »
-- Trois à cinq lignes courtes sur ce que le mois a été derrière la caméra : une lumière, un
-  doute, une route, un plan qui a tenu.
+- Trois à cinq lignes courtes sur ce que le mois a été derrière la caméra : les courses filmées
+  (nom de l'événement et ville s'ils viennent de l'agenda), une lumière, une route, un plan qui a
+  tenu.
 - Une question à la communauté : « Et toi, ton mois ? »
 - Trois à cinq hashtags.
 

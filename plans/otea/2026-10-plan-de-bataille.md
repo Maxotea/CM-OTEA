@@ -33,6 +33,7 @@ Veille concurrentielle complète : rapport du 13/10/2026 (agent de veille), rés
 - CTA : tant que le site est vierge, **« écrivez-nous en message »** et non « lien en bio ».
 
 ### Otea Filmakers : « le HYROX, côté caméra »
+- **Correction du 25/10/2026** : le calendrier n'appliquait pas ce cap (deux carrousels de plateau d'entreprise publiés ici les 23 et 25/10). Filmakers est B2C, compétitions de sport d'abord ; tout le corporate va sur OTEA Production. Voir `.claude/memories/positionnement-filmakers-production.md`.
 - Recentrage validé par Maxime le 13/10 : **environ 60 % sport et HYROX, 40 % métier, lumière et voyage.** Personne ne filme le HYROX du point de vue du vidéaste (Nick Bare raconte l'athlète, HYROX France couvre l'événement) : c'est la place à prendre.
 - Le compte est la **vitrine de l'offre athlètes** (`paliers-offre-athlete.md`, branche moteur v2) : Course Signature 290 €, Saison Athlète 59 €/mois. Un post sur quatre au plus porte un appel à réserver ; les autres racontent.
 - Séries : « Road to Hong Kong » (Pierre Huiban et Antoine, qualifiés à Rome pour les championnats du monde), HYROX Nice du 29/10 au 01/11, HYROX Paris du 12 au 20/12 (dates de la veille, à reconfirmer), « côté caméra » (le matériel en roxzone, ce qui a raté, le dérush du soir).
