@@ -21,7 +21,9 @@
    "motif": "post mindset générique, registre « conseils » arrêté par le cap du 13/10 ; photo de Bordeaux sans lien avec le texte",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406272740-1.jpeg"
-   ]
+   ],
+   "nouvel_id": 406865016,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
   },
   {
    "id": 406274769,
@@ -40,7 +42,9 @@
    "motif": "texte générique sans question finale, post le plus faible de la semaine du 16/11",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406274769-1.jpg"
-   ]
+   ],
+   "nouvel_id": 406870059,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
   },
   {
    "id": 406412430,
@@ -59,7 +63,9 @@
    "motif": "même sujet, enfin montré à l'image au lieu d'être raconté",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406412430-1.jpeg"
-   ]
+   ],
+   "nouvel_id": 406870529,
+   "nouvel_etat": "REEL Instagram, mode notification (draft false, autoPublish false), couverture 2800 ms"
   },
   {
    "id": 406412476,
@@ -78,7 +84,9 @@
    "motif": "« le matériel suit, il ne précède jamais » contredit la série matériel demandée le 26/10",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406412476-1.jpeg"
-   ]
+   ],
+   "nouvel_id": 406884157,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
   },
   {
    "id": 406505944,
@@ -97,7 +105,9 @@
    "motif": "doublon du récap photo du 30/11 et du carrousel bilan du 09/12 ; aucun post de sport du 01/12 au 18/12",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406505944-1.jpeg"
-   ]
+   ],
+   "nouvel_id": 406887425,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
   },
   {
    "id": 394816489,
@@ -121,7 +131,16 @@
    "motif": "même idée « une seule focale » ramenée au sport ; le remplaçant part sur Instagram seul (TikTok de la marque = @oteaproduction)",
    "copie_locale": [
     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/394816489-1.jpg"
-   ]
+   ],
+   "nouvel_id": 406907581,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
   }
- ]
+ ],
+ "ajout_sans_remplacement": {
+  "date": "2026-11-02T18:00:00",
+  "uuid": "2940330472543766182",
+  "id_cree": 406863814,
+  "id_apres_releve": 406888157,
+  "note": "A1, carrousel avant / après créé sur un créneau libre ; armé par la relève à 17:52 le 26/10 (draft false, autoPublish true)."
+ }
 }
