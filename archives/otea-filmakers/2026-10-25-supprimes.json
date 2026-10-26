@@ -136,7 +136,8 @@
    "valeur_b2b": false,
    "reprise": "Filmakers : même démonstration (centré puis décalé) sur une photo de la banque Filmakers, Maxime seul ou paysage.",
    "supprime": false,
-   "suite_2026_10_26": "Non supprimé. Même créneau 06/11 18:00, armé, nouvel id 406274592 : les deux photos de la salle de cinéma remplacées par une image de HYROX Bordeaux, centrée puis décalée."
+   "suite_2026_10_26": "Non supprimé. Même créneau 06/11 18:00, armé, nouvel id 406274592 : les deux photos de la salle de cinéma remplacées par une image de HYROX Bordeaux, centrée puis décalée.",
+   "suite_2026_10_26_b": "Seconde passe du 26/10 : texte réécrit en version compétition (cadrage sur une station HYROX), photos réexportées en 1080x864 depuis la vidéo du reel @sgamard, même ordre ; nouvel id 406412231, toujours armé."
   },
   {
    "id": 402274280,
@@ -179,7 +180,8 @@
    "valeur_b2b": false,
    "reprise": "Filmakers : texte réutilisable avec une photo de montage de la banque Filmakers (timeline dans la pénombre, montage dans l'avion ou sous la paillote).",
    "supprime": false,
-   "suite_2026_10_26": "Non supprimé. Même créneau 13/11 18:00, brouillon, nouvel id 406274752 : photo remplacée par une image du teaser « Ton HYROX. Ton film. »."
+   "suite_2026_10_26": "Non supprimé. Même créneau 13/11 18:00, brouillon, nouvel id 406274752 : photo remplacée par une image du teaser « Ton HYROX. Ton film. ».",
+   "suite_2026_10_26_b": "Seconde passe du 26/10 : texte réécrit en version compétition (le dérush du soir après une course) ; nouvel id 406412319, brouillon."
   },
   {
    "id": 402279832,
@@ -222,7 +224,8 @@
    "valeur_b2b": false,
    "reprise": "Filmakers ou OTEA Production : le texte vaut pour les deux ; sur Filmakers, avec une photo de matériel de la banque Filmakers.",
    "supprime": false,
-   "suite_2026_10_26": "Non supprimé. Même créneau 17/11 18:00, armé, nouvel id 406274756 : photo remplacée par une image de HYROX Bordeaux."
+   "suite_2026_10_26": "Non supprimé. Même créneau 17/11 18:00, armé, nouvel id 406274756 : photo remplacée par une image de HYROX Bordeaux.",
+   "suite_2026_10_26_b": "Seconde passe du 26/10 : texte réécrit en version compétition (le son d'une arène HYROX) ; nouvel id 406412351, toujours armé."
   },
   {
    "id": 402279916,
@@ -317,7 +320,8 @@
    "valeur_b2b": false,
    "reprise": "Filmakers : à refaire en avant/après étalonnage sur un plan de Maupiti ou de Tromsø (reel F5 du plan de bataille).",
    "supprime": false,
-   "suite_2026_10_26": "Non supprimé. Même créneau 25/11 18:00, brouillon, nouvel id 406275199 : TikTok retiré, photo remplacée par une image de HYROX Nice (février 2026) en noir et blanc."
+   "suite_2026_10_26": "Non supprimé. Même créneau 25/11 18:00, brouillon, nouvel id 406275199 : TikTok retiré, photo remplacée par une image de HYROX Nice (février 2026) en noir et blanc.",
+   "suite_2026_10_26_b": "Seconde passe du 26/10 : texte réécrit en version compétition (l'étalonnage d'un plan d'arène) ; nouvel id 406412430, brouillon."
   },
   {
    "id": 383270617,
@@ -340,8 +344,176 @@
    "valeur_b2b": false,
    "reprise": "Filmakers : texte réutilisable (« même sans projet ») avec une photo de matériel de la banque Filmakers, pour le 27/11 si les photos arrivent à temps.",
    "supprime": false,
-   "suite_2026_10_26": "Non supprimé. Même créneau 27/11 18:00, brouillon, nouvel id 406275280 : TikTok retiré, « même sans client » devenu « même sans commande », photo remplacée par une image du teaser."
+   "suite_2026_10_26": "Non supprimé. Même créneau 27/11 18:00, brouillon, nouvel id 406275280 : TikTok retiré, « même sans client » devenu « même sans commande », photo remplacée par une image du teaser.",
+   "suite_2026_10_26_b": "Seconde passe du 26/10 : « même sans commande » devenu « même sans projet », première ligne au neutre (« L'achat qui change le plus les images : aucun. ») ; nouvel id 406412476, brouillon."
   }
  ],
- "date_correction": "2026-10-26"
+ "date_correction": "2026-10-26",
+ "erreurs_retirees_2026_10_26": {
+  "_doc": "Six entrées Metricool d'Otea Filmakers en statut ERROR (session Instagram invalidée les 18 au 20/10), encore armées avec l'ancien texte du jeu concours et des classements non vérifiés. Archivées le 26/10/2026 avant suppression une par une. supprime = true : suppression confirmée par relecture ; false : non supprimée (voir note).",
+  "posts": [
+   {
+    "id": 396060769,
+    "uuid": "-5433397481068608104",
+    "date": "2026-10-19T12:00:00",
+    "etat": "ERROR, armé (draft false, autoPublish true, showReelOnFeed false)",
+    "type": "REEL",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "Instagram was disconnected"
+     }
+    ],
+    "text": "HYROX Bordeaux 2026. 3e aux burpee broad jumps. 🔥\n\n@sgamard, filmé station par station, du premier run à la ligne d'arrivée.\n\nTon HYROX mérite mieux qu'une story floue. Je serai à HYROX Nice dès le 30 octobre et je fais gagner un shooting photo + vidéo pendant ta course. Toutes les infos sont sur le post du jeu concours (fin le 21/10 à 23h59).\n\n#hyrox #hyroxbordeaux #hyroxfrance #hyroxathlete",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-740299422494872352.mp4"
+    ],
+    "md5": [
+     "eebbe9409216862aa48ffe0478f80e5f"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-740299422494872352.mp4"
+    ],
+    "motif": "Ancien reel du jeu concours HYROX Nice (clos le 21/10) avec un classement non vérifié dans le texte et dans la vidéo ; en erreur de publication mais encore armé : un « Réessayer » le publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   },
+   {
+    "id": 396060790,
+    "uuid": "-8085509818769915363",
+    "date": "2026-10-20T12:00:00",
+    "etat": "ERROR, armé (draft false, autoPublish true, showReelOnFeed false)",
+    "type": "REEL",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
+     }
+    ],
+    "text": "HYROX Bordeaux 2026. Quentin Nantois, 3e de sa catégorie 40-44. ⏱️\n\nChaque station, chaque chrono, gardés en souvenir.\n\nTon HYROX mérite mieux qu'une story floue. Je serai à HYROX Nice dès le 30 octobre et je fais gagner un shooting photo + vidéo pendant ta course. Toutes les infos sont sur le post du jeu concours. Dernier jour demain !\n\n#hyrox #hyroxbordeaux #hyroxfrance #hyroxathlete",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-2755882185673094546.mp4"
+    ],
+    "md5": [
+     "3ca7939c03e17539f6675a7325220614"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-2755882185673094546.mp4"
+    ],
+    "motif": "Ancien reel du jeu concours HYROX Nice (clos le 21/10) avec un classement non vérifié dans le texte et dans la vidéo ; en erreur de publication mais encore armé : un « Réessayer » le publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   },
+   {
+    "id": 395984185,
+    "uuid": "4722349814355804320",
+    "date": "2026-10-18T18:00:00",
+    "etat": "ERROR, armé (draft false, autoPublish true)",
+    "type": "STORY",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+     }
+    ],
+    "text": "",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-8900182466679368640.jpeg"
+    ],
+    "md5": [
+     "1a999b159378f72f9b8d9329d6ff6cd0"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-8900182466679368640.jpeg"
+    ],
+    "motif": "Ancienne story du jeu concours HYROX Nice (clos le 21/10) ; en erreur de publication mais encore armée : un « Réessayer » la publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   },
+   {
+    "id": 395984215,
+    "uuid": "-5880875452528639909",
+    "date": "2026-10-20T18:00:00",
+    "etat": "ERROR, armé (draft false, autoPublish true)",
+    "type": "STORY",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
+     }
+    ],
+    "text": "",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-10107157181555268844.jpeg"
+    ],
+    "md5": [
+     "2df002be8f794f7ab2d131ec9a9a7eb0"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-10107157181555268844.jpeg"
+    ],
+    "motif": "Ancienne story du jeu concours HYROX Nice (clos le 21/10) ; en erreur de publication mais encore armée : un « Réessayer » la publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   },
+   {
+    "id": 396061049,
+    "uuid": "1454357901768541915",
+    "date": "2026-10-19T12:05:00",
+    "etat": "ERROR, armé (draft false, autoPublish true)",
+    "type": "STORY",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "Instagram was disconnected"
+     }
+    ],
+    "text": "",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-10000746108858650731.mp4"
+    ],
+    "md5": [
+     "eebbe9409216862aa48ffe0478f80e5f"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-10000746108858650731.mp4"
+    ],
+    "motif": "Ancienne story du jeu concours HYROX Nice (clos le 21/10) ; en erreur de publication mais encore armée : un « Réessayer » la publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   },
+   {
+    "id": 396061140,
+    "uuid": "-8360605737756504428",
+    "date": "2026-10-20T12:05:00",
+    "etat": "ERROR, armé (draft false, autoPublish true)",
+    "type": "STORY",
+    "providers": [
+     {
+      "network": "instagram",
+      "status": "ERROR",
+      "detailedStatus": "Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons."
+     }
+    ],
+    "text": "",
+    "media": [
+     "https://static.metricool.com/planner/202610/4728418-file-17743976495240486400.mp4"
+    ],
+    "md5": [
+     "3ca7939c03e17539f6675a7325220614"
+    ],
+    "copie_locale": [
+     "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2610b/archive-dl/4728418-file-17743976495240486400.mp4"
+    ],
+    "motif": "Ancienne story du jeu concours HYROX Nice (clos le 21/10) ; en erreur de publication mais encore armée : un « Réessayer » la publierait.",
+    "supprime": true,
+    "verification": "Supprimé le 26/10/2026 par delete_post (un seul id, réponse 200), absence confirmée par relecture de list_scheduled_posts du 18/10 au 21/10 après chaque suppression."
+   }
+  ]
+ }
 }
