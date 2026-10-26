@@ -1,0 +1,146 @@
+{
+ "_doc": "Posts d'Otea Filmakers (blog Metricool 4728418) remplacés le 26/10/2026 par la série « avant / après, matériel, je t'accompagne » dictée par Maxime le 26/10 (fiche otea-filmakers.md, section du 26/10). Remplacement par updateScheduledPost : même uuid, nouvel id (voir nouvel_id). Chaque entrée garde le texte, la date, les providers, l'état et les URL des médias tels qu'ils étaient avant le remplacement ; copie_locale = fichiers téléchargés dans le scratchpad de la session (non versionnés). Aucun post supprimé.",
+ "compte": "otea-filmakers",
+ "blog_id": 4728418,
+ "date_remplacement": "2026-10-26",
+ "posts": [
+  {
+   "id": 406272740,
+   "uuid": "6059222798293616939",
+   "date": "2026-11-09T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Le talent démarre un projet. L'habitude le termine.\n\nTout le monde a des idées. Peu les tournent, encore moins les montent, presque personne ne les publie. La différence n'est pas le don. C'est finir.\n\nEt toi, combien de projets attendent dans un dossier ?\n\n#discipline #videaste #createur #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-1581793749136128864.jpeg"
+   ],
+   "remplace_par": "B1, la FX3 expliquée (carrousel 6 slides)",
+   "motif": "post mindset générique, registre « conseils » arrêté par le cap du 13/10 ; photo de Bordeaux sans lien avec le texte",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406272740-1.jpeg"
+   ],
+   "nouvel_id": 406865016,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
+  },
+  {
+   "id": 406274769,
+   "uuid": "6878481262520782739",
+   "date": "2026-11-20T18:00:00",
+   "etat": "brouillon (draft true, autoPublish false)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Pourquoi je montre les coulisses alors que le film devrait suffire ?\n\nParce que les gens ne se connectent pas à des images parfaites. Ils se connectent à celui qui les fait. La vulnérabilité derrière la caméra vaut tous les plans léchés.\n\n#coulisses #storytelling #videaste #oteafilmakers",
+   "media": [
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/3bf4c282-c94d-4b70-a669-171ff20499b7.jpg"
+   ],
+   "remplace_par": "C1, je t'accompagne (photo, seul appel à réserver de la série)",
+   "motif": "texte générique sans question finale, post le plus faible de la semaine du 16/11",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406274769-1.jpg"
+   ],
+   "nouvel_id": 406870059,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
+  },
+  {
+   "id": 406412430,
+   "uuid": "6417583479028599017",
+   "date": "2026-11-25T18:00:00",
+   "etat": "brouillon (draft true, autoPublish false)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Étalonner un plan d'arène, c'est d'abord se battre avec la lumière.\n\nNéons froids, LED de couleur, écrans géants : sous un même toit, plusieurs températures se croisent. Avant de chercher un look, j'unifie les peaux, pour qu'un athlète garde la même couleur du premier au dernier run. Parfois, je passe tout en noir et blanc : il ne reste que l'effort et la lumière.\n\nEt toi, ta course, tu la revois en couleur ou en noir et blanc ?\n\n#etalonnage #hyrox #colorgrading #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-13765823835837572122.jpeg"
+   ],
+   "remplace_par": "A2, reel avant / après muet (idée « j'unifie les peaux » reprise)",
+   "motif": "même sujet, enfin montré à l'image au lieu d'être raconté",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406412430-1.jpeg"
+   ],
+   "nouvel_id": 406870529,
+   "nouvel_etat": "REEL Instagram, mode notification (draft false, autoPublish false), couverture 2800 ms"
+  },
+  {
+   "id": 406412476,
+   "uuid": "2999143641081135997",
+   "date": "2026-11-27T18:00:00",
+   "etat": "brouillon (draft true, autoPublish false)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Black Friday. L'achat qui change le plus les images : aucun.\n\nUne habitude, oui. Tourner un peu chaque semaine, même sans projet, même sans idée. Le matériel suit. Il ne précède jamais.\n\nQu'est-ce que tu achèterais quand même, si tu devais ?\n\n#blackfriday #materiel #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-5803044225353444480.jpeg"
+   ],
+   "remplace_par": "B3, Black Friday : le matériel qui a vraiment filmé Rome (version de repli sur images de Rome, en attendant les photos du sac)",
+   "motif": "« le matériel suit, il ne précède jamais » contredit la série matériel demandée le 26/10",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406412476-1.jpeg"
+   ],
+   "nouvel_id": 406884157,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
+  },
+  {
+   "id": 406505944,
+   "uuid": "-3070236058668873156",
+   "date": "2026-12-01T18:00:00",
+   "etat": "brouillon (draft true, autoPublish false)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Décembre arrive. Le moment de rouvrir les images de l'année.\n\nLes courses, les visages, les lumières qu'on a chassées. Un an de rushes, c'est un an de vie, et de quoi se faire un montage rien que pour soi.\n\nEt toi, tu fais un bilan en images ?\n\n#bilan #retrospective #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-12873315192187711151.jpeg"
+   ],
+   "remplace_par": "C2, les pointures que je suis : Pierre Huiban et Antoine Bouhana (carrousel 4 slides)",
+   "motif": "doublon du récap photo du 30/11 et du carrousel bilan du 09/12 ; aucun post de sport du 01/12 au 18/12",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/406505944-1.jpeg"
+   ],
+   "nouvel_id": 406887425,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
+  },
+  {
+   "id": 394816489,
+   "uuid": "9209659815396329296",
+   "date": "2026-12-11T18:00:00",
+   "etat": "brouillon (draft true, autoPublish false)",
+   "type": "POST",
+   "providers": [
+    "instagram",
+    "tiktok"
+   ],
+   "text": "Une seule optique jusqu'à la fin de l'année. Essaie.\n\nPas de zoom, pas de deuxième objectif, pas de « je change pour ce plan ». Tu avances, tu recules, tu cherches l'angle avec tes pieds. Au bout de quelques jours, tu commences à voir à travers cette focale avant même de lever la caméra.\n\nLa contrainte ne bride pas le regard. Elle l'oblige à choisir.\n\nEt toi, si tu ne gardais qu'une focale, ce serait laquelle ?\n\n#cadrage #creativite #createurdecontenu #cinematography #videaste #oteafilmakers",
+   "media": [
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/9c58cc88-89e0-4ebc-a0df-99b622a0b152.jpg"
+   ],
+   "tiktokData": {
+    "privacyOption": "PUBLIC_TO_EVERYONE",
+    "photoCoverIndex": 0
+   },
+   "remplace_par": "B2, le 70-200 GM II, veille de HYROX Paris (carrousel 6 slides, Instagram seul)",
+   "motif": "même idée « une seule focale » ramenée au sport ; le remplaçant part sur Instagram seul (TikTok de la marque = @oteaproduction)",
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/serie-2610/archive-dl/394816489-1.jpg"
+   ],
+   "nouvel_id": 406907581,
+   "nouvel_etat": "brouillon Instagram seul (draft true, autoPublish false), la relève validation_auto l'arme dans les 14 jours"
+  }
+ ],
+ "ajout_sans_remplacement": {
+  "date": "2026-11-02T18:00:00",
+  "uuid": "2940330472543766182",
+  "id_cree": 406863814,
+  "id_apres_releve": 406888157,
+  "note": "A1, carrousel avant / après créé sur un créneau libre ; armé par la relève à 17:52 le 26/10 (draft false, autoPublish true)."
+ }
+}

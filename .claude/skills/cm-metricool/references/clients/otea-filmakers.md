@@ -26,6 +26,23 @@ du 25/10 (« Un plateau, cinq détails ») étaient du B2B publié ici par erreu
 - Test avant chaque post : un athlète ou un passionné de sport a-t-il envie de le lire ? Un
   directeur de la communication est-il la cible ? Si c'est le second, c'est OTEA Production.
 
+## Ce que le public aime, ligne de contenu du 26/10/2026 (Maxime)
+« Ce qu'ils aiment bien dans la communication sur Otea Filmakers, ça va être le avant / après,
+ramener beaucoup de valeur, dire que je les accompagne, la qualité de l'image aussi. » Quatre
+familles de contenus, sur des images de compétition :
+- **Avant / après** : le même plan en S-Log3 brut, puis étalonné (et stabilisé quand un vrai plan
+  brut le montre). L'« avant » est toujours le vrai fichier caméra, jamais une image dégradée.
+- **Le matériel, expliqué** : la FX3 (« pour moi, l'un des meilleurs boîtiers au monde pour ce
+  type de contenu »), le 70-200 GM II stabilisé (pourquoi, comment : plans serrés depuis le bord
+  de l'arène), le 100p pour le ralenti, le S-Log3 pour l'étalonnage. Chiffres techniques
+  seulement s'ils viennent d'une source officielle Sony.
+- **Je t'accompagne** : ce que Maxime fait pour un athlète, de la préparation au film livré.
+- **Les pointures que je suis** : athlètes et coachs HYROX filmés par Maxime. Seuls Pierre Huiban
+  et Antoine Bouhana sont documentés (qualifiés pour les championnats du monde de Hong Kong) ;
+  aucun autre nom sans la liste de Maxime.
+Matière disponible d'ici : les rushes FX3 de HYROX Rome (4K 100p S-Log3, 70-200), dossier Drive
+« PIERRE », lus par le pipeline `projets/pierre-huiban/reels-dialogue/`.
+
 ## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
 - Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
