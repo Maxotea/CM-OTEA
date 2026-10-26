@@ -1,5 +1,5 @@
 {
- "_doc": "Posts retirés d'Otea Filmakers (blog Metricool 4728418) le 25/10/2026, à la demande de Maxime : Filmakers est la marque B2C sport (HYROX et compétitions), le contenu corporate revient à OTEA Production. Chaque entrée garde le texte, la date, les providers, l'état de publication et les URL des médias au moment de la suppression ; copie_locale = fichiers téléchargés dans le scratchpad de la session (non versionnés). valeur_b2b = true : à reprendre par l'agent OTEA Production ; false : texte créateur à reprogrammer sur Filmakers avec une photo de la banque Filmakers.",
+ "_doc": "Posts d'Otea Filmakers (blog Metricool 4728418) mis en cause le 25/10/2026, à la demande de Maxime : Filmakers est la marque B2C sport (HYROX et compétitions), le contenu corporate revient à OTEA Production. Chaque entrée garde le texte, la date, les providers, l'état de publication et les URL des médias au 25/10 ; copie_locale = fichiers téléchargés dans le scratchpad de la session (non versionnés). supprime = true : le post a bien été supprimé de Metricool le 25/10 (7 posts : 402271997, 402272900, 402272974, 402528523, 402274280, 402279832, 394681256). supprime = false : le post N'A PAS été supprimé (une suppression en masse a été refusée par le garde-fou le 25/10) ; il a été corrigé sur place le 26/10, voir suite_2026_10_26 (8 posts). valeur_b2b = true : à reprendre par l'agent OTEA Production ; false : texte créateur gardé sur Filmakers avec une image de compétition. Corrigé le 26/10/2026.",
  "compte": "otea-filmakers",
  "blog_id": 4728418,
  "date_suppression": "2026-10-25",
@@ -22,7 +22,8 @@
    ],
    "motif": "Texte B2B (« entre deux rendez-vous »), photo de plateau d'entreprise vide.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : post lumière d'hiver pour les tournages d'entreprise (date passée : à recaler, le passage à l'heure d'hiver était le 25/10)."
+   "reprise": "OTEA Production : post lumière d'hiver pour les tournages d'entreprise (date passée : à recaler, le passage à l'heure d'hiver était le 25/10).",
+   "supprime": true
   },
   {
    "id": 402272087,
@@ -42,7 +43,9 @@
    ],
    "motif": "Texte créateur, à garder ; photo corporate : Maxime au micro sur scène, noir et blanc (prise de parole du 09/10/2025, photo 19 de la banque).",
    "valeur_b2b": false,
-   "reprise": "Filmakers : texte réutilisable tel quel avec une photo de la banque d'instantanés Filmakers (Maxime seul, sans scène ni micro), une fois les 73 photos déposées sur le Drive."
+   "reprise": "Filmakers : texte réutilisable tel quel avec une photo de la banque d'instantanés Filmakers (Maxime seul, sans scène ni micro), une fois les 73 photos déposées sur le Drive.",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Texte gardé, déplacé le 26/10 du 28/10 au 09/11 18:00 (nouvel id 406272740, armé), photo remplacée par une image de HYROX Bordeaux."
   },
   {
    "id": 402272900,
@@ -62,7 +65,8 @@
    ],
    "motif": "Interview en entreprise dans le texte ; photo d'un intervenant du shooting HOME SANFAUTE (photo 12, ouverte à OTEA Production seulement). Créneau repris par le post HYROX Nice.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : angle interview, à recaler (Halloween passé le 31/10)."
+   "reprise": "OTEA Production : angle interview, à recaler (Halloween passé le 31/10).",
+   "supprime": true
   },
   {
    "id": 402272974,
@@ -82,7 +86,8 @@
    ],
    "motif": "Salon professionnel de l'audiovisuel (SATIS, 4 et 5/11/2026, Docks de Paris), B2B ; image 2:3 hors format Instagram.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : post SATIS le 02 ou 03/11 si l'agent OTEA le juge utile (actualité annoncée pour information, J-7 à J)."
+   "reprise": "OTEA Production : post SATIS le 02 ou 03/11 si l'agent OTEA le juge utile (actualité annoncée pour information, J-7 à J).",
+   "supprime": true
   },
   {
    "id": 402528523,
@@ -106,7 +111,8 @@
    ],
    "motif": "Installation d'interview en entreprise (terrasse, intervenante, plateau intérieur). Créneau repris par le carrousel HYROX Paris.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : carrousel de méthode du mercredi (léger contre plateau complet), vouvoiement et « nous » à réécrire."
+   "reprise": "OTEA Production : carrousel de méthode du mercredi (léger contre plateau complet), vouvoiement et « nous » à réécrire.",
+   "supprime": true
   },
   {
    "id": 404517694,
@@ -128,7 +134,9 @@
    ],
    "motif": "Texte créateur, à garder ; photo d'une captation en salle de cinéma, Maxime micro en main en intervenant (photo 17, 09/10/2025) : salle de conférence.",
    "valeur_b2b": false,
-   "reprise": "Filmakers : même démonstration (centré puis décalé) sur une photo de la banque Filmakers, Maxime seul ou paysage."
+   "reprise": "Filmakers : même démonstration (centré puis décalé) sur une photo de la banque Filmakers, Maxime seul ou paysage.",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 06/11 18:00, armé, nouvel id 406274592 : les deux photos de la salle de cinéma remplacées par une image de HYROX Bordeaux, centrée puis décalée."
   },
   {
    "id": 402274280,
@@ -148,7 +156,8 @@
    ],
    "motif": "Délais de livraison client avant Noël : B2B.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : post délais de post-production (en novembre, pour les vidéos de fin d'année), vouvoiement."
+   "reprise": "OTEA Production : post délais de post-production (en novembre, pour les vidéos de fin d'année), vouvoiement.",
+   "supprime": true
   },
   {
    "id": 402279770,
@@ -168,7 +177,9 @@
    ],
    "motif": "Texte créateur, à garder ; photo d'un tournage d'entreprise en salle de réunion avec une cliente identifiable qui applaudit.",
    "valeur_b2b": false,
-   "reprise": "Filmakers : texte réutilisable avec une photo de montage de la banque Filmakers (timeline dans la pénombre, montage dans l'avion ou sous la paillote)."
+   "reprise": "Filmakers : texte réutilisable avec une photo de montage de la banque Filmakers (timeline dans la pénombre, montage dans l'avion ou sous la paillote).",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 13/11 18:00, brouillon, nouvel id 406274752 : photo remplacée par une image du teaser « Ton HYROX. Ton film. »."
   },
   {
    "id": 402279832,
@@ -188,7 +199,8 @@
    ],
    "motif": "« Quelqu'un qui parle de son métier » : portrait métier d'entreprise ; image 2:3 hors format.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : angle portrait métier sur une terrasse, vouvoiement."
+   "reprise": "OTEA Production : angle portrait métier sur une terrasse, vouvoiement.",
+   "supprime": true
   },
   {
    "id": 402273681,
@@ -208,7 +220,9 @@
    ],
    "motif": "Texte créateur ; photo de Maxime micro en main dans la salle de cinéma de la captation du 09/10/2025 (même série que le 06/11) : salle de conférence.",
    "valeur_b2b": false,
-   "reprise": "Filmakers ou OTEA Production : le texte vaut pour les deux ; sur Filmakers, avec une photo de matériel de la banque Filmakers."
+   "reprise": "Filmakers ou OTEA Production : le texte vaut pour les deux ; sur Filmakers, avec une photo de matériel de la banque Filmakers.",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 17/11 18:00, armé, nouvel id 406274756 : photo remplacée par une image de HYROX Bordeaux."
   },
   {
    "id": 402279916,
@@ -234,7 +248,9 @@
    ],
    "motif": "Événement d'entreprise : public et participants identifiables, prises de parole au micro ; formats mélangés 3:2 et 2:3.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : carrousel captation d'événement d'entreprise (avec accords). Sur Filmakers, l'idée peut revenir avec des images de course (médaille mordue à Tromsø, banque Filmakers)."
+   "reprise": "OTEA Production : carrousel captation d'événement d'entreprise (avec accords). Sur Filmakers, l'idée peut revenir avec des images de course (médaille mordue à Tromsø, banque Filmakers).",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 18/11 18:00, brouillon, nouvel id 406275121 : réécrit en version compétition (trois images de HYROX Bordeaux)."
   },
   {
    "id": 402280112,
@@ -254,7 +270,9 @@
    ],
    "motif": "Texte créateur ; photo de Maxime en conférence devant un écran (prise de parole du 09/10/2025).",
    "valeur_b2b": false,
-   "reprise": "Filmakers : texte réutilisable avec une photo coulisses côté caméra de la banque Filmakers (badge presse HYROX, sac HYROX place de la Bourse)."
+   "reprise": "Filmakers : texte réutilisable avec une photo coulisses côté caméra de la banque Filmakers (badge presse HYROX, sac HYROX place de la Bourse).",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 20/11 18:00, brouillon, nouvel id 406274769 : photo remplacée par une image de HYROX Bordeaux."
   },
   {
    "id": 394681256,
@@ -275,7 +293,8 @@
    ],
    "motif": "Film de marque et conférence dans le texte : B2B ; TikTok branché sur @oteaproduction.",
    "valeur_b2b": true,
-   "reprise": "OTEA Production : storytelling d'un film de marque en trois temps, vouvoiement."
+   "reprise": "OTEA Production : storytelling d'un film de marque en trois temps, vouvoiement.",
+   "supprime": true
   },
   {
    "id": 394681284,
@@ -296,7 +315,9 @@
    ],
    "motif": "Texte créateur ; photo de Maxime au micro sur scène, noir et blanc (même prise de parole que le 28/10) ; TikTok branché sur @oteaproduction.",
    "valeur_b2b": false,
-   "reprise": "Filmakers : à refaire en avant/après étalonnage sur un plan de Maupiti ou de Tromsø (reel F5 du plan de bataille)."
+   "reprise": "Filmakers : à refaire en avant/après étalonnage sur un plan de Maupiti ou de Tromsø (reel F5 du plan de bataille).",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 25/11 18:00, brouillon, nouvel id 406275199 : TikTok retiré, photo remplacée par une image de HYROX Nice (février 2026) en noir et blanc."
   },
   {
    "id": 383270617,
@@ -317,7 +338,10 @@
    ],
    "motif": "Photo d'un tournage client (boutique J Lawson Golf, client visible) ; « même sans client » ; TikTok branché sur @oteaproduction.",
    "valeur_b2b": false,
-   "reprise": "Filmakers : texte réutilisable (« même sans projet ») avec une photo de matériel de la banque Filmakers, pour le 27/11 si les photos arrivent à temps."
+   "reprise": "Filmakers : texte réutilisable (« même sans projet ») avec une photo de matériel de la banque Filmakers, pour le 27/11 si les photos arrivent à temps.",
+   "supprime": false,
+   "suite_2026_10_26": "Non supprimé. Même créneau 27/11 18:00, brouillon, nouvel id 406275280 : TikTok retiré, « même sans client » devenu « même sans commande », photo remplacée par une image du teaser."
   }
- ]
+ ],
+ "date_correction": "2026-10-26"
 }
