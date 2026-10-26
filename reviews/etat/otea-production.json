@@ -277,6 +277,24 @@
       "type": "Story",
       "resultat": "publication programmée (version 405539858)",
       "post_id": 405539858
+    },
+    "2026-11-09T10:00:00|383263951": {
+      "quand": "2026-10-26T10:23:34",
+      "type": "Story",
+      "resultat": "publication programmée (version 406442313)",
+      "post_id": 406442313
+    },
+    "2026-10-27T12:00:00|406264259": {
+      "quand": "2026-10-26T10:23:36",
+      "type": "Post",
+      "resultat": "publication programmée (version 406442334)",
+      "post_id": 406442334
+    },
+    "2026-10-29T12:00:00|406264772": {
+      "quand": "2026-10-26T10:23:38",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 406442369)",
+      "post_id": 406442369
     }
   }
 }

@@ -109,6 +109,24 @@
       "type": "Carrousel (2 visuels)",
       "resultat": "publication programmée (version 404517694)",
       "post_id": 404517694
+    },
+    "2026-10-28T18:00:00|406273943": {
+      "quand": "2026-10-26T10:23:42",
+      "type": "Carrousel (2 visuels)",
+      "resultat": "publication programmée (version 406442442)",
+      "post_id": 406442442
+    },
+    "2026-11-04T18:00:00|406274236": {
+      "quand": "2026-10-26T10:23:44",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 406442471)",
+      "post_id": 406442471
+    },
+    "2026-10-30T18:00:00|406412195": {
+      "quand": "2026-10-26T10:23:45",
+      "type": "Post",
+      "resultat": "publication programmée (version 406442499)",
+      "post_id": 406442499
     }
   }
 }
