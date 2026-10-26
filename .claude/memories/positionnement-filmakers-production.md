@@ -29,3 +29,9 @@ calendrier parlait interviews en bureau, SATIS, délais de livraison pour Noël.
 - Test avant chaque post : si la cible est un directeur de la communication, c'est OTEA
   Production ; si c'est un athlète, c'est Filmakers.
 - Détails : fiches `otea-filmakers.md` et `otea-production.md`, section du 25/10/2026.
+
+## Ce que le public de Filmakers aime (Maxime, 26/10/2026)
+Avant / après (S-Log3 brut contre étalonné, sur le même plan, jamais un « avant » fabriqué), le
+matériel expliqué (FX3, 70-200 GM II stabilisé, 100p, S-Log3, chiffres sourcés Sony), « je
+t'accompagne », la qualité de l'image, et les athlètes et coachs HYROX que Maxime suit (seuls
+Pierre Huiban et Antoine Bouhana sont documentés). Détail : fiche `otea-filmakers.md`.
