@@ -6,6 +6,13 @@
 - Typologie ROI : B2B projet — devis variables (demander les fourchettes de devis moyens au user) ; 1 projet signé couvre largement la prestation CM ; compter aussi les leads qualifiés (DM, calls découverte).
 - Temps forts annuels : rentrée = budgets Q4/plans com ; SEPT-OCT = pousser les VŒUX vidéo de fin d'année (se tournent en oct-nov, jamais en déc) ; salons d'automne ; janvier = plans annuels.
 
+## Répartition avec Otea Filmakers, correction du 25/10/2026
+Tout le contenu B2B et corporate (plateau d'entreprise, interview, repérage d'un bureau, délais de
+post-production, salons professionnels, captation d'événement pour un organisateur ou une marque)
+se publie ici, au vouvoiement et au « nous ». Otea Filmakers est B2C : compétitions de sport
+(HYROX et autres), métier, lumière et voyage au « je ». Les carrousels B2B publiés par erreur sur
+Filmakers les 23 et 25/10 sont repris ici (décision de Maxime du 25/10/2026).
+
 ## Cap du 13/10/2026 : montrer au lieu de dire (prime sur les habitudes ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool (81 abonnés Instagram, 20 sur la page LinkedIn, portée moyenne 34 par post photo contre 180 pour le seul reel de l'été, aucune publication du 02/09 au 12/10). Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
 - **2 reels par semaine** de coulisses réelles (jour J, plateau, retour moniteur, rush brut contre film livré avec accord du client), montés depuis les disques de Maxime ; un post photo sur deux est remplacé par un reel dès qu'il est prêt. Les carrousels de méthode du mercredi restent.

@@ -807,7 +807,7 @@ def resumer(lignes):
             f.write("\n".join(lignes) + "\n")
 
 def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_retenus=(),
-                   mesurer=None):
+                   mesurer=None, en_attente=None):
     """Tri des brouillons d'un compte en validation automatique.
 
     Retourne (a_publier, retenus), retenus étant une liste de (post, raison). Seuls les
@@ -817,7 +817,11 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_r
     et les visuels listés dans `medias_retenus` du compte (morceaux d'URL : visuels IA
     interdits sur un compte qui a de vraies photos, règle du 21/08/2026). Avec `mesurer`
     (url → (largeur, hauteur)), une image de feed hors de la plage Instagram est retenue.
+    `en_attente` ({uuid: motif}) retient un post mis de côté exprès : l'uuid survit aux
+    mises à jour Metricool, l'id non (reels HYROX Bordeaux du 26/10/2026, classements à
+    confirmer par Maxime).
     """
+    en_attente = en_attente or {}
     limite = maintenant + timedelta(days=horizon_jours)
     a_publier, retenus = [], []
     for post in posts:
@@ -827,7 +831,9 @@ def a_valider_auto(posts, maintenant, horizon_jours=HORIZON_AUTO_JOURS, medias_r
         if quand <= maintenant + MARGE_AUTO or quand > limite:
             continue
         texte = post.get("text") or ""
-        if PLACEHOLDER.search(texte):
+        if str(post.get("uuid")) in en_attente:
+            retenus.append((post, f"en attente : {en_attente[str(post.get('uuid'))]}"))
+        elif PLACEHOLDER.search(texte):
             retenus.append((post, "texte à placeholders"))
         elif not post.get("media"):
             retenus.append((post, "aucun média attaché"))
@@ -862,6 +868,8 @@ def valider_auto(compte, dry_run=False, maintenant=None):
                       start=f"{debut}T00:00:00", end=f"{fin}T23:59:59").get("data", [])
     a_publier, retenus = a_valider_auto(posts, maintenant,
                                         medias_retenus=compte.get("medias_retenus") or (),
+                                        en_attente={str(e["uuid"]): e.get("motif", "mis de côté")
+                                                    for e in compte.get("en_attente") or []},
                                         mesurer=dimensions_image)
     compteurs = {"publies": 0, "a_corriger": 0, "refuses": 0, "erreurs": 0,
                  "sans_decision": 0, "en_attente": len(retenus)}

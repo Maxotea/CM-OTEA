@@ -362,6 +362,22 @@ def test_a_valider_auto_retient_une_image_hors_format_feed():
          "image hors du format feed d'Instagram (0.56, à recadrer entre 4:5 et 1.91:1)")]
 
 
+def test_a_valider_auto_retient_un_post_mis_en_attente_par_uuid():
+    maintenant = datetime(2026, 10, 30, 12, 0)
+    reel = {**_brouillon("2026-11-05T18:00:00", kind="REEL"), "uuid": "-6129530836021719121"}
+    autre = {**_brouillon("2026-11-06T18:00:00"), "uuid": "42"}
+    a_publier, retenus = review.a_valider_auto(
+        [reel, autre], maintenant, en_attente={"-6129530836021719121": "classements à confirmer"})
+    assert [p["uuid"] for p in a_publier] == ["42"]
+    assert retenus == [(reel, "en attente : classements à confirmer")]
+
+
+def test_les_posts_en_attente_de_la_config_ont_un_uuid_et_un_motif():
+    for compte in review.comptes_auto():
+        for entree in compte.get("en_attente") or []:
+            assert str(entree["uuid"]) and entree.get("motif")
+
+
 def test_dimensions_image_lit_un_fichier_local(tmp_path):
     image = pytest.importorskip("PIL.Image")
     chemin = tmp_path / "photo.jpg"

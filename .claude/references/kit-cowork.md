@@ -153,9 +153,9 @@ Le 28 de chaque mois, fais le récap photo du mois pour OTEA Production et Otea 
 suivant le skill recap-photo-mois. Pars de l'appli Photos du Mac (photos du mois : iPhone,
 lunettes, drone), des tournages rangés dans Médias clients/ et de l'agenda du mois pour les
 faits. Un carrousel par compte, 6 à 10 vraies photos recadrées en 4:5, créé en BROUILLON dans
-Metricool : OTEA Production le dernier jour du mois à 12:00, Otea Filmakers à 18:00. Aucune
-personne d'autre que moi sur Filmakers, aucun tiers sans accord sur OTEA, ni famille ni vie
-privée. Aucun fait inventé, pas de tiret cadratin. Envoie-moi les deux planches et les deux
+Metricool : OTEA Production le dernier jour du mois à 12:00 (le B2B, les tournages
+d'entreprise), Otea Filmakers à 18:00 (le B2C : les compétitions de sport filmées, HYROX et autres,
+puis le voyage et la lumière). Aucun tiers sans accord, ni famille ni vie privée. Aucun fait inventé, pas de tiret cadratin. Envoie-moi les deux planches et les deux
 légendes avant la date de publication.
 ```
 
