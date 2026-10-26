@@ -1,0 +1,323 @@
+{
+ "_doc": "Posts retirés d'Otea Filmakers (blog Metricool 4728418) le 25/10/2026, à la demande de Maxime : Filmakers est la marque B2C sport (HYROX et compétitions), le contenu corporate revient à OTEA Production. Chaque entrée garde le texte, la date, les providers, l'état de publication et les URL des médias au moment de la suppression ; copie_locale = fichiers téléchargés dans le scratchpad de la session (non versionnés). valeur_b2b = true : à reprendre par l'agent OTEA Production ; false : texte créateur à reprogrammer sur Filmakers avec une photo de la banque Filmakers.",
+ "compte": "otea-filmakers",
+ "blog_id": 4728418,
+ "date_suppression": "2026-10-25",
+ "posts": [
+  {
+   "id": 402271997,
+   "uuid": "-4060131805289689929",
+   "date": "2026-10-26T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Depuis hier, le soleil se couche vers 17h40.\n\nHeure d'hiver : la golden hour se cale en plein après-midi, entre deux rendez-vous. C'est la saison où l'on avance les extérieurs et où l'on apprend à aimer la lumière artificielle.\n\nL'hiver est une bonne école pour ça.\n\nEt toi, tu tournes plus tôt ?\n\n#heuredhiver #lumiere #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-2413864742565763731.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1026-hiver.jpg"
+   ],
+   "motif": "Texte B2B (« entre deux rendez-vous »), photo de plateau d'entreprise vide.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : post lumière d'hiver pour les tournages d'entreprise (date passée : à recaler, le passage à l'heure d'hiver était le 25/10)."
+  },
+  {
+   "id": 402272087,
+   "uuid": "6059222798293616939",
+   "date": "2026-10-28T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Le talent démarre un projet. L'habitude le termine.\n\nTout le monde a des idées. Peu les tournent, encore moins les montent, presque personne ne les publie. La différence n'est pas le don. C'est finir.\n\nEt toi, combien de projets attendent dans un dossier ?\n\n#discipline #videaste #createur #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-9860242469837754997.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1028-talent.jpg"
+   ],
+   "motif": "Texte créateur, à garder ; photo corporate : Maxime au micro sur scène, noir et blanc (prise de parole du 09/10/2025, photo 19 de la banque).",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : texte réutilisable tel quel avec une photo de la banque d'instantanés Filmakers (Maxime seul, sans scène ni micro), une fois les 73 photos déposées sur le Drive."
+  },
+  {
+   "id": 402272900,
+   "uuid": "-6965455961968916004",
+   "date": "2026-10-30T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Halloween. Le plan qui me hante, ce n'est pas celui que j'ai raté.\n\nC'est celui que je n'ai pas osé faire. Le cadre trop serré, le mouvement trop lent, la question trop directe en interview.\n\nLa prudence ne fait pas de beaux films.\n\n#halloween #videaste #creativite #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-95865637297542212.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1030-halloween.jpg"
+   ],
+   "motif": "Interview en entreprise dans le texte ; photo d'un intervenant du shooting HOME SANFAUTE (photo 12, ouverte à OTEA Production seulement). Créneau repris par le post HYROX Nice.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : angle interview, à recaler (Halloween passé le 31/10)."
+  },
+  {
+   "id": 402272974,
+   "uuid": "395390236014757383",
+   "date": "2026-11-02T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Le SATIS ouvre mercredi. Le salon de l'audiovisuel.\n\nCe que je regarde dans ce genre d'endroit, que j'y aille ou pas : pas la nouveauté, mais ce qui me fait gagner une heure par tournage. La nouveauté passe. L'heure, je la garde.\n\n#SATIS #audiovisuel #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-11804353256435389513.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1102-satis.jpg"
+   ],
+   "motif": "Salon professionnel de l'audiovisuel (SATIS, 4 et 5/11/2026, Docks de Paris), B2B ; image 2:3 hors format Instagram.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : post SATIS le 02 ou 03/11 si l'agent OTEA le juge utile (actualité annoncée pour information, J-7 à J)."
+  },
+  {
+   "id": 402528523,
+   "uuid": "6594019587907538185",
+   "date": "2026-11-04T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST (carrousel 3)",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Partir léger, ou tout installer ?\n\nSur une terrasse, la lumière du jour fait déjà presque tout. Un monopode, la caméra, un tube LED pour déboucher le visage, et on tourne.\n\nEn intérieur, la logique s'inverse : un trépied, une softbox, un réflecteur, un fond. La lumière se construit avant que la personne s'assoie.\n\nSwipe. Deux façons de tourner, une même règle : le matériel doit laisser toute l'attention à la personne filmée.\n\nEt toi, plutôt léger ou plutôt tout le kit ?\n\n#lumiere #tournage #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-8018319793703439509.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-3042141552076583173.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-64382323882899416.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1104-leger-1.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1104-leger-2.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1104-leger-3.jpg"
+   ],
+   "motif": "Installation d'interview en entreprise (terrasse, intervenante, plateau intérieur). Créneau repris par le carrousel HYROX Paris.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : carrousel de méthode du mercredi (léger contre plateau complet), vouvoiement et « nous » à réécrire."
+  },
+  {
+   "id": 404517694,
+   "uuid": "139168177244947494",
+   "date": "2026-11-06T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST (carrousel 2)",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Centrer le sujet n'est presque jamais le bon choix.\n\nUn cadre légèrement décalé, la règle des tiers respectée, un peu d'espace devant le regard : des détails qui ne se remarquent pas, mais qui font qu'une image respire au lieu d'être plate.\n\nSwipe : la même image, centrée puis décalée. Laquelle respire ?\n\n#cadrage #composition #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-1403589288162940770.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-10444980503987590196.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1106-cadrage-1.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1106-cadrage-2.jpg"
+   ],
+   "motif": "Texte créateur, à garder ; photo d'une captation en salle de cinéma, Maxime micro en main en intervenant (photo 17, 09/10/2025) : salle de conférence.",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : même démonstration (centré puis décalé) sur une photo de la banque Filmakers, Maxime seul ou paysage."
+  },
+  {
+   "id": 402274280,
+   "uuid": "3383389694682417561",
+   "date": "2026-11-09T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "« Elle sera prête quand, la vidéo ? »\n\nLe tournage, c'est la partie visible. Le dérushage, le montage, l'étalonnage et les retours prennent souvent plus de temps que la journée de tournage elle-même. Compter large, c'est déjà bien travailler.\n\nEt en novembre, tout le monde veut sa vidéo pour Noël.\n\n#postproduction #delais #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-16467980949498664373.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1109-delais.jpg"
+   ],
+   "motif": "Délais de livraison client avant Noël : B2B.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : post délais de post-production (en novembre, pour les vidéos de fin d'année), vouvoiement."
+  },
+  {
+   "id": 402279770,
+   "uuid": "-807449336228262753",
+   "date": "2026-11-13T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Vendredi. La semaine a été dense, les rushes s'accumulent.\n\nAvant le week-end, un seul réflexe : ranger et nommer les fichiers de la semaine tant que tout est encore frais. Le lundi, on retrouve la bonne prise au lieu de la chercher.\n\nEt toi, comment tu fermes ta semaine ?\n\n#weekend #rushes #organisation #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-8371860387556079307.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1113-rushes.jpg"
+   ],
+   "motif": "Texte créateur, à garder ; photo d'un tournage d'entreprise en salle de réunion avec une cliente identifiable qui applaudit.",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : texte réutilisable avec une photo de montage de la banque Filmakers (timeline dans la pénombre, montage dans l'avion ou sous la paillote)."
+  },
+  {
+   "id": 402279832,
+   "uuid": "3129626925277922857",
+   "date": "2026-11-16T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "On croit qu'il faut aller loin pour de belles images.\n\nUne terrasse d'immeuble, une lumière de novembre, quelqu'un qui parle de son métier avec passion : ça suffit. Les beaux plans sont souvent à dix minutes de chez soi.\n\nEt toi, quel lieu banal près de chez toi mériterait d'être filmé comme un décor de cinéma ?\n\n#proximite #cinematography #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-9507051479407540099.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1116-metier.jpg"
+   ],
+   "motif": "« Quelqu'un qui parle de son métier » : portrait métier d'entreprise ; image 2:3 hors format.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : angle portrait métier sur une terrasse, vouvoiement."
+  },
+  {
+   "id": 402273681,
+   "uuid": "-8210220578185982627",
+   "date": "2026-11-17T18:00:00",
+   "etat": "armé (draft false, autoPublish true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Le son mal fait se voit autant qu'une image floue.\n\nUn public pardonne un cadre imparfait. Il ne pardonne pas un dialogue inaudible ou un souffle de vent qui couvre la voix. Le son, c'est la moitié de l'image, et personne n'y pense en premier.\n\nQuel détail technique tu négliges le plus souvent ?\n\n#son #tournage #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-9600760698964555537.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1117-son.jpg"
+   ],
+   "motif": "Texte créateur ; photo de Maxime micro en main dans la salle de cinéma de la captation du 09/10/2025 (même série que le 06/11) : salle de conférence.",
+   "valeur_b2b": false,
+   "reprise": "Filmakers ou OTEA Production : le texte vaut pour les deux ; sur Filmakers, avec une photo de matériel de la banque Filmakers."
+  },
+  {
+   "id": 402279916,
+   "uuid": "-2115229722783170440",
+   "date": "2026-11-18T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST (carrousel 4)",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Ce que je garde, ce que je coupe.\n\nJe garde : l'hésitation avant une phrase importante, le rire qui n'était pas prévu, la médaille mordue à la fin.\nJe coupe : tout ce qui est parfait et vide.\n\nQuatre images d'un événement, quatre raisons de garder.\n\nSwipe.\n\n#montage #evenement #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-1620078243584004033.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-933870447292345918.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-8898102303385073149.jpeg",
+    "https://static.metricool.com/planner/202610/4728418-file-13013276359452015831.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1118-garder-1.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1118-garder-2.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1118-garder-3.jpg",
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1118-garder-4.jpg"
+   ],
+   "motif": "Événement d'entreprise : public et participants identifiables, prises de parole au micro ; formats mélangés 3:2 et 2:3.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : carrousel captation d'événement d'entreprise (avec accords). Sur Filmakers, l'idée peut revenir avec des images de course (médaille mordue à Tromsø, banque Filmakers)."
+  },
+  {
+   "id": 402280112,
+   "uuid": "6878481262520782739",
+   "date": "2026-11-20T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram"
+   ],
+   "text": "Pourquoi je montre les coulisses alors que le film devrait suffire ?\n\nParce que les gens ne se connectent pas à des images parfaites. Ils se connectent à celui qui les fait. La vulnérabilité derrière la caméra vaut tous les plans léchés.\n\n#coulisses #storytelling #videaste #oteafilmakers",
+   "media": [
+    "https://static.metricool.com/planner/202610/4728418-file-3916791620295858675.jpeg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1120-coulisses.jpg"
+   ],
+   "motif": "Texte créateur ; photo de Maxime en conférence devant un écran (prise de parole du 09/10/2025).",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : texte réutilisable avec une photo coulisses côté caméra de la banque Filmakers (badge presse HYROX, sac HYROX place de la Bourse)."
+  },
+  {
+   "id": 394681256,
+   "uuid": "8471389064467007021",
+   "date": "2026-11-23T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram",
+    "tiktok"
+   ],
+   "text": "Une histoire tient en trois temps : où on était, ce qui a changé, où on est arrivé. Même en quinze secondes.\n\nC'est vrai pour un film de marque, pour une conférence, pour ta journée.\n\nEt toi, ta journée en trois plans, ce serait lesquels ?\n\n#storytelling #reels #videaste #oteafilmakers",
+   "media": [
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/8f1a3f08-5fb1-4139-9672-a384904ab957.jpg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1123-story.jpg"
+   ],
+   "motif": "Film de marque et conférence dans le texte : B2B ; TikTok branché sur @oteaproduction.",
+   "valeur_b2b": true,
+   "reprise": "OTEA Production : storytelling d'un film de marque en trois temps, vouvoiement."
+  },
+  {
+   "id": 394681284,
+   "uuid": "6417583479028599017",
+   "date": "2026-11-25T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram",
+    "tiktok"
+   ],
+   "text": "Étalonnage : le moment où l'image passe de « jolie » à « cinéma ».\n\nLe même plan, brut puis étalonné, c'est deux mondes. Le noir et blanc, lui, ne triche pas : il ne reste que la lumière et l'intention.\n\nEt toi, tu étalonnes tes images ou tu les publies brutes ?\n\n#etalonnage #colorgrading #videaste #oteafilmakers",
+   "media": [
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c70ad012-3fdc-4a6e-a2f1-983921ece56a.jpg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1125-etalonnage.jpg"
+   ],
+   "motif": "Texte créateur ; photo de Maxime au micro sur scène, noir et blanc (même prise de parole que le 28/10) ; TikTok branché sur @oteaproduction.",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : à refaire en avant/après étalonnage sur un plan de Maupiti ou de Tromsø (reel F5 du plan de bataille)."
+  },
+  {
+   "id": 383270617,
+   "uuid": "2999143641081135997",
+   "date": "2026-11-27T18:00:00",
+   "etat": "brouillon (draft true)",
+   "type": "POST",
+   "providers": [
+    "instagram",
+    "tiktok"
+   ],
+   "text": "Black Friday. Le seul achat qui a changé mes images : aucun.\n\nUne habitude, oui. Tourner un peu chaque semaine, même sans client, même sans idée. Le matériel suit. Il ne précède jamais.\n\nQu'est-ce que tu achèterais quand même, si tu devais ?\n\n#blackfriday #materiel #videaste #oteafilmakers",
+   "media": [
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/67883a1c-87bf-40f4-a2b0-126fa900f178.jpg"
+   ],
+   "copie_locale": [
+    "/tmp/claude-0/-home-user-CM-OTEA/5d260eaa-a401-5488-9c85-8ed7413f4910/scratchpad/filmakers-2510/dl/posts/1127-blackfriday.jpg"
+   ],
+   "motif": "Photo d'un tournage client (boutique J Lawson Golf, client visible) ; « même sans client » ; TikTok branché sur @oteaproduction.",
+   "valeur_b2b": false,
+   "reprise": "Filmakers : texte réutilisable (« même sans projet ») avec une photo de matériel de la banque Filmakers, pour le 27/11 si les photos arrivent à temps."
+  }
+ ]
+}
