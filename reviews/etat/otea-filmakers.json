@@ -133,6 +133,18 @@
       "type": "Carrousel (8 visuels)",
       "resultat": "publication programmée (version 406888157)",
       "post_id": 406888157
+    },
+    "2026-11-02T18:00:00|407504670": {
+      "quand": "2026-10-27T15:58:03",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 407992428)",
+      "post_id": 407992428
+    },
+    "2026-11-09T18:00:00|407631270": {
+      "quand": "2026-10-27T15:58:04",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 407992482)",
+      "post_id": 407992482
     }
   }
 }
