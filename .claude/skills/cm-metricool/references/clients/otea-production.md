@@ -73,7 +73,7 @@ déjà muettes — non touchées. Anciens brouillons supprimés : 355805250, …
 
 ## 🎬 Inspirations de montage
 
-Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
+Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026 pour les reels d'ambiance, n°4 au 27/10/2026 pour les aftermovies corporate à compteurs chiffrés). La relire avant chaque script.
 
 ## Validation automatique (07/10/2026)
 Maxime est le client de ce compte : « tu peux considérer que c'est validé à chaque fois, car c'est moi », puis choix explicite de la publication automatique. Plus de tableau de validation (le dossier « Validation hebdo — OTEA PRODUCTION » et ses tableaux du 12-10 et du 19-10 restent en place, sans usage). Le contenu est toujours créé en brouillon ; la relève GitHub (`validation_auto` dans `reviews/config.json`, PR #56) passe en publication les brouillons des 14 jours à venir qui passent les garde-fous : média présent, pas de placeholder, pas de tiret cadratin dans une légende, pas de note « À tourner », pas de visuel IA de juillet (`medias_retenus`).

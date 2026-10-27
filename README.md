@@ -67,6 +67,10 @@ sans refaire l'analyse. `--vertical` sort un 1080×1920 pour un reel,
 Ce sont les rushs du client et rien d'autre : aucune image générée. Le film
 n'est pas une story, il garde le son.
 
+Référence de montage à relire avant un aftermovie corporate : l'inspiration n° 4
+(aftermovie à compteurs chiffrés, décrit plan par plan) dans
+`.claude/skills/cm-metricool/references/inspirations-montage.md`.
+
 ### Habillage dynamique et voix off (deuxième passe)
 
 Une fois le bout-à-bout validé, `scripts/habillage.py` incruste des textes
