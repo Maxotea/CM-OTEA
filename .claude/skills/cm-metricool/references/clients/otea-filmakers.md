@@ -40,6 +40,15 @@ familles de contenus, sur des images de compétition :
 - **Les pointures que je suis** : athlètes et coachs HYROX filmés par Maxime. Seuls Pierre Huiban
   et Antoine Bouhana sont documentés (qualifiés pour les championnats du monde de Hong Kong) ;
   aucun autre nom sans la liste de Maxime.
+**Réponses de Maxime du 27/10/2026** :
+- Pierre Huiban et Antoine Bouhana sont d'accord pour apparaître sur Otea Filmakers, y compris
+  dans un post qui vend l'offre (« ok »).
+- Le déroulé de l'accompagnement est validé tel quel : avant, on s'écrit (heure de départ,
+  tenue, stations) ; pendant, Maxime suit la course de station en station ; le soir, le dérush ;
+  après, l'étalonnage, le montage, les photos et le film.
+- La FX3 était à HYROX Nice en février 2026 et y retourne du 29/10 au 01/11.
+- La liste des coachs et athlètes à citer viendra plus tard : d'ici là, aucun autre nom que
+  Pierre et Antoine.
 Matière disponible d'ici : les rushes FX3 de HYROX Rome (4K 100p S-Log3, 70-200), dossier Drive
 « PIERRE », lus par le pipeline `projets/pierre-huiban/reels-dialogue/`.
 
