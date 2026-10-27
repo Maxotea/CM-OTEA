@@ -52,6 +52,20 @@ familles de contenus, sur des images de compétition :
 Matière disponible d'ici : les rushes FX3 de HYROX Rome (4K 100p S-Log3, 70-200), dossier Drive
 « PIERRE », lus par le pipeline `projets/pierre-huiban/reels-dialogue/`.
 
+## Série avant / après et matériel, vérifiée le 27/10/2026
+Les 7 contenus relus dans Metricool (tous en brouillon, Instagram seul, aucun TikTok sur le compte en décembre) :
+A1 02/11 carrousel avant/après 407504670 (uuid 2940330472543766182, carte 8 sans « peau »), B1 09/11 carrousel FX3
+**407631270** (uuid 6059222798293616939), C1 20/11 « je t'accompagne » 407612665, A2 25/11 reel avant/après 407042888
+(13 s, muet, part en mode notification par la relève), B3 27/11 matériel 407608209 (slide 3 nette), C2 01/12 Pierre
+et Antoine 407609693 (53:34, premiers des 35-39, 12es sur 292, Stockholm 16es : conforme à `pierre-huiban.md`),
+B2 11/12 70-200 407610968. Aucun « je » posé sur une carte où Pierre ou Antoine sont visibles ; deux avis de Maxime
+seulement (FX3 sur la carte 6 de B1, 70-200 GM II sur la carte 6 de B2). Correction du jour sur B1 : la carte 6 et la
+légende disaient « Je l'avais à HYROX Poznań, à Nice et à Rome » ; Poznań n'est pas dans les réponses de Maxime, la
+phrase devient « Je l'avais à HYROX Nice en février et à Rome » (carte refaite, hébergée en cloudfront puis recopiée
+par Metricool, md5 vérifié). À dire à Maxime si la FX3 était bien à Poznań en décembre 2025. La carte 1 de B1 montre
+un spectateur à lunettes, identifiable, à gauche de Pierre : à signaler. Les 7 uuids sont sortis de `en_attente`
+(`reviews/config.json`), seuls les deux reels Bordeaux y restent.
+
 ## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
 - Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
