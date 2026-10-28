@@ -87,6 +87,23 @@ sans rendre tout le film. Le fichier de référence du projet Salomon est
 `aftermovies/salomon/habillage.json` ; les EDL `o/*.montage.json` sont
 versionnées, les rendus mp4 non.
 
+### Logo qui se dessine en néon sur le décor (VFX, inspiration n° 4)
+
+`scripts/vfx-logo.py` pose le logo du client sur une vraie surface du plan (un
+mur, une façade, une banderole) : le contour s'allume en néon lettre par
+lettre, puis le logo se remplit et reste incrusté. Le logo est mis en
+perspective sur 4 coins et suit le mouvement de caméra tout seul (repères
+suivis, recalés, renouvelés quand ils sortent du cadre).
+
+```bash
+python3 scripts/vfx-logo.py plan.mp4 logo-client.png --debut 0.4 --reperes o/reperes.png
+python3 scripts/vfx-logo.py plan.mp4 logo-client.png --debut 0.4 \
+    --coins "212,80 610,140 590,330 190,300" --sortie o/plan-vfx.mp4
+```
+
+La recette complète (choix du plan, réglages, ce que l'outil ne fait pas) est
+dans `.claude/skills/cm-metricool/references/inspirations-montage.md`.
+
 ## Reel client depuis un dossier de rushs (prises multiples, stéréo, étalonnage)
 
 `scripts/reel-montage.py` est le pendant vertical de l'aftermovie, pour un
