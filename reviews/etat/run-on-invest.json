@@ -145,6 +145,18 @@
       "type": "Story",
       "resultat": "publication programmée (version 411675002)",
       "post_id": 411675002
+    },
+    "2026-11-16T08:00:00|402272731": {
+      "quand": "2026-11-02T12:46:17",
+      "type": "Post",
+      "resultat": "publication programmée (version 413921810)",
+      "post_id": 413921810
+    },
+    "2026-11-16T12:00:00|402272771": {
+      "quand": "2026-11-02T12:46:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 413921859)",
+      "post_id": 413921859
     }
   }
 }
