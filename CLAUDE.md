@@ -123,6 +123,13 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
    rien en faire (Maxime, 12/10/2026). Seule une actualité annoncée pour
    information sort à J-7 / J.
    → `.claude/memories/anticipation-evenements.md`
+5. **Un jeu concours ne part jamais seul (04/11/2026).** Il part avec toute la
+   mécanique de partage : chaque ami identifié en commentaire donne une chance
+   en plus, le partage en story avec identification du compte donne une chance
+   en plus et un repartage, chaque story de relance porte le bandeau
+   (`scripts/concours-bandeau.py`), chaque légende de la période rappelle le
+   levier, le tirage compte les chances (`scripts/tirage-concours.py`).
+   → `.claude/memories/jeu-concours-mecanique-virale.md`
 
 Index complet des mémoires : `.claude/memories/MEMORY.md`.
 
