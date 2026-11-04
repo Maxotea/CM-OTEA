@@ -175,6 +175,12 @@
       "type": "Post",
       "resultat": "publication programmée (version 411674976)",
       "post_id": 411674976
+    },
+    "2026-11-18T10:00:00|406404303": {
+      "quand": "2026-11-04T12:24:37",
+      "type": "Story",
+      "resultat": "publication programmée (version 416434528)",
+      "post_id": 416434528
     }
   }
 }
