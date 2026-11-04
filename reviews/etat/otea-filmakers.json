@@ -181,6 +181,72 @@
       "type": "Story",
       "resultat": "publication programmée (version 416434528)",
       "post_id": 416434528
+    },
+    "2026-11-12T18:00:00|416548924": {
+      "quand": "2026-11-04T14:16:35",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 416560400)",
+      "post_id": 416560400
+    },
+    "2026-11-04T18:30:00|416548966": {
+      "quand": "2026-11-04T14:16:37",
+      "type": "Carrousel (7 visuels)",
+      "resultat": "publication programmée (version 416560450)",
+      "post_id": 416560450
+    },
+    "2026-11-04T18:35:00|416549589": {
+      "quand": "2026-11-04T14:16:39",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560493)",
+      "post_id": 416560493
+    },
+    "2026-11-05T12:30:00|416549619": {
+      "quand": "2026-11-04T14:16:41",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560545)",
+      "post_id": 416560545
+    },
+    "2026-11-06T12:30:00|416549642": {
+      "quand": "2026-11-04T14:16:43",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560631)",
+      "post_id": 416560631
+    },
+    "2026-11-08T12:30:00|416549670": {
+      "quand": "2026-11-04T14:16:45",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560668)",
+      "post_id": 416560668
+    },
+    "2026-11-09T12:30:00|416549705": {
+      "quand": "2026-11-04T14:16:48",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560710)",
+      "post_id": 416560710
+    },
+    "2026-11-10T18:05:00|416549727": {
+      "quand": "2026-11-04T14:16:49",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560750)",
+      "post_id": 416560750
+    },
+    "2026-11-11T12:00:00|416549750": {
+      "quand": "2026-11-04T14:16:51",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560785)",
+      "post_id": 416560785
+    },
+    "2026-11-05T18:00:00|416555991": {
+      "quand": "2026-11-04T14:16:54",
+      "type": "Reel",
+      "resultat": "notification programmée, musique à poser dans Instagram (version 416560816)",
+      "post_id": 416560816
+    },
+    "2026-11-08T18:00:00|416556078": {
+      "quand": "2026-11-04T14:16:56",
+      "type": "Reel",
+      "resultat": "notification programmée, musique à poser dans Instagram (version 416560864)",
+      "post_id": 416560864
     }
   }
 }
