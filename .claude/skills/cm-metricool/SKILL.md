@@ -83,7 +83,7 @@ pièges mesurés : `.claude/memories/story-video-plein-cadre.md`.
 
 ## Étape 5 — Écriture
 
-Scripts de reels : relire d'abord `references/inspirations-montage.md` (les styles de montage repérés par Maxime, à reprendre en priorité), puis passer par le skill `reel-script` (hook chiffré, 3 étapes, cliffhanger, ≤175 mots), puis `reel-lint` avant tournage. Légendes : hook + valeur + 1 seul CTA + 4-6 hashtags niche. Toujours finir la légende par le pont vers l'offre du client (fitting, RDV, visite…).
+Scripts de reels : relire d'abord `references/inspirations-montage.md` (les styles de montage repérés par Maxime, à reprendre en priorité), puis passer par le skill `reel-script` (hook chiffré, 3 étapes, cliffhanger, ≤175 mots), puis `reel-lint` avant tournage. Légendes : hook + valeur + 1 seul CTA + 4-6 hashtags niche. Toujours finir la légende par le pont vers l'offre du client (fitting, RDV, visite…). Photo de Jean-Philippe Homé-Sanfaute (`HOME-SANFAUTE-*`) : ajouter la ligne de crédit `Photos : @…` (LinkedIn : `Photos : @Jean-Philippe Homé-Sanfaute`) avant les hashtags (`scripts/credits.py`, `photos/photographes.json`).
 
 ## Étape 6 — Planification Metricool
 
