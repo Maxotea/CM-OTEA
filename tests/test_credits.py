@@ -22,13 +22,13 @@ def test_legende_creditee_une_seule_fois_avec_le_compte():
     jp = dict(JP, instagram="@compte")
     photos = [{"drive_nom": "HOME-SANFAUTE-1.jpg"}, {"drive_nom": "HOME-SANFAUTE-2.jpg"}]
     une = credits.crediter("Texte.", photos, [jp])
-    assert une == "Texte.\n\n📸 Photo : Jean-Philippe Homé-Sanfaute (@compte)"
+    assert une == "Texte.\n\nPhotos : @compte"
     assert credits.crediter(une, photos, [jp]) == une
 
 
 def test_sans_compte_le_nom_suffit_et_le_manque_est_signale():
     photos = [{"drive_nom": "HOME-SANFAUTE-1.jpg"}]
-    assert credits.ligne_credit(photos, [JP]) == "📸 Photo : Jean-Philippe Homé-Sanfaute"
+    assert credits.ligne_credit(photos, [JP]) == "Photos : Jean-Philippe Homé-Sanfaute"
     assert credits.comptes_manquants(photos, [JP]) == ["Jean-Philippe Homé-Sanfaute"]
     assert credits.crediter("Texte.", [{"drive_nom": "autre.jpg"}], [JP]) == "Texte."
 
@@ -46,3 +46,9 @@ def test_toutes_ses_photos_des_manifestes_sont_creditees():
 def test_registre_sans_tiret_cadratin():
     texte = (ROOT / "photos" / "photographes.json").read_text(encoding="utf-8")
     assert "—" not in texte and "–" not in texte
+
+
+def test_formule_linkedin_donnee_par_jean_philippe():
+    jp = next(p for p in credits.charger() if p["cle"] == "home-sanfaute")
+    photos = [{"drive_nom": "HOME-SANFAUTE-1.jpg"}]
+    assert credits.ligne_credit(photos, [jp], reseau="linkedin") == "Photos : @Jean-Philippe Homé-Sanfaute"

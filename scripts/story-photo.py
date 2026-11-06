@@ -720,6 +720,9 @@ def main(argv=None):
         # une story n'a pas de légende : le crédit passe par le sticker mention, posé
         # dans Instagram à la validation, et par le texte du brouillon Metricool
         print(f"  CRÉDIT À POSER (sticker mention) : {ligne}")
+        lk = credits.ligne_credit([entree], reseau="linkedin")
+        if lk != ligne:
+            print(f"  sur LinkedIn : {lk} (taper le @ et choisir son profil)")
     print(f"{sortie} : voile (haut, bas) = {rendu['voile']}")
     print("  contrastes : " + ", ".join(f"{e} {v}:1 (cible {c})" for e, (v, c) in rendu["mesures"].items()))
     info = {k: v for k, v in rendu["info"].items() if k != "polices"}

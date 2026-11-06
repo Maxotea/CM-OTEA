@@ -126,7 +126,7 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 
 5. **Créditer le photographe.** Toute photo de Jean-Philippe Homé-Sanfaute (fichiers
    `HOME-SANFAUTE-*`, champ `credit` à son nom) le cite dans le post, avec son compte
-   Instagram : ligne `📸 Photo : …` en fin de légende, sticker mention en story.
+   Instagram : ligne `Photos : @…` en fin de légende (sur LinkedIn : `Photos : @Jean-Philippe Homé-Sanfaute`, tag choisi dans la liste), sticker mention en story.
    `scripts/carrousel.py` la pose d'office ; son compte vit dans `photos/photographes.json`.
    → `.claude/memories/credit-photographe-home-sanfaute.md`
 
