@@ -15,7 +15,11 @@ qui ne passent pas par le modèle :
     # 1. le prompt et les réglages Higgsfield d'un plan, prêts à coller
     python3 scripts/logo-reveal.py prompt --style pieces --logo "le logo rond vert"
 
-    # 2. le contrôle et le montage, une fois les plans i2v téléchargés
+    # 2. l'image de début : la même photo, logo effacé (zone = ellipse cx,cy,rx,ry)
+    python3 scripts/logo-reveal.py effacer photo-916.jpg --zone 100,662,200,205 \\
+        --sortie photo-sans-logo.jpg
+
+    # 3. le contrôle et le montage, une fois les plans i2v téléchargés
     python3 scripts/logo-reveal.py assembler \\
         plan1.mp4:facade.jpg plan2.mp4:enseigne.jpg plan3.mp4:logo.jpg \\
         --sortie o/otea-logo-reveal.mp4
@@ -139,6 +143,47 @@ def verdict(valeur, seuil=SEUIL_ECART):
                    "le plan avec la photo sans logo en image de début")
 
 
+def lire_zone(texte):
+    try:
+        cx, cy, rx, ry = (int(v) for v in texte.split(","))
+    except ValueError:
+        raise ValueError(f"« {texte} » : donne la zone du logo sous la forme cx,cy,rx,ry "
+                         "(centre et demi-largeurs en pixels, ex. 100,662,200,205)")
+    return cx, cy, rx, ry
+
+
+def effacer_logo(source, zone, sortie):
+    """Efface le logo d'un mur uni : reconstruction du mur autour (OpenCV), lissage,
+    grain rendu, fondu des bords. Testé le 07/11 sur le mur rose de Gossip : écart de
+    2,0 entre l'image produite et la première image du plan Kling. Ne convient qu'à un
+    fond uni ou en dégradé ; sur un fond texturé (brique, bois), passer par un
+    remplissage génératif."""
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        sys.exit("Il manque OpenCV pour effacer le logo. Installe-le une fois avec "
+                 "« pip install opencv-python-headless », puis relance.")
+    im = cv2.imread(str(source))
+    if im is None:
+        sys.exit(f"Impossible de lire {source}. Vérifie le chemin et relance.")
+    cx, cy, rx, ry = zone
+    masque = np.zeros(im.shape[:2], np.uint8)
+    cv2.ellipse(masque, (cx, cy), (rx, ry), 0, 0, 360, 255, -1)
+    masque = cv2.dilate(masque, np.ones((9, 9), np.uint8))
+    petit = cv2.inpaint(cv2.resize(im, None, fx=0.5, fy=0.5),
+                        cv2.resize(masque, None, fx=0.5, fy=0.5), 25, cv2.INPAINT_TELEA)
+    mur = cv2.GaussianBlur(cv2.resize(petit, (im.shape[1], im.shape[0]),
+                                      interpolation=cv2.INTER_CUBIC), (0, 0), 6)
+    grain = np.random.default_rng(1).normal(0, 1.6, im.shape).astype(np.float32)
+    mur = np.clip(mur.astype(np.float32) + grain, 0, 255)
+    alpha = cv2.GaussianBlur(masque.astype(np.float32) / 255, (0, 0), 8)[..., None]
+    sortie_img = (mur * alpha + im.astype(np.float32) * (1 - alpha)).astype(np.uint8)
+    Path(sortie).parent.mkdir(parents=True, exist_ok=True)
+    cv2.imwrite(str(sortie), sortie_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
+    print(f"Photo sans logo : {sortie}. Regarde-la : rien d'autre ne doit avoir changé.")
+
+
 def lire_couple(texte):
     if ":" not in texte:
         raise ValueError(f"« {texte} » : donne chaque plan sous la forme video.mp4:photo.jpg")
@@ -222,6 +267,11 @@ def main():
     pp.add_argument("--mode", choices=sorted(DEBUT), default="debut-fin")
     pp.add_argument("--duree", type=int, default=6)
 
+    pe = sp.add_parser("effacer", help="la photo sans le logo, pour l'image de début")
+    pe.add_argument("photo")
+    pe.add_argument("--zone", required=True, help="ellipse du logo : cx,cy,rx,ry en pixels")
+    pe.add_argument("--sortie", required=True)
+
     pa = sp.add_parser("assembler", help="contrôle et montage des plans i2v")
     pa.add_argument("plans", nargs="+", help="video.mp4:photo.jpg, dans l'ordre du montage")
     pa.add_argument("--sortie", required=True)
@@ -236,6 +286,13 @@ def main():
         print()
         print(json.dumps(reglages_higgsfield(args.mode, args.duree), indent=2,
                          ensure_ascii=False))
+        return
+    if args.commande == "effacer":
+        try:
+            zone = lire_zone(args.zone)
+        except ValueError as e:
+            sys.exit(str(e))
+        effacer_logo(args.photo, zone, args.sortie)
         return
     ffprobe = str(Path(args.ffmpeg).with_name("ffprobe")) if "/" in args.ffmpeg else "ffprobe"
     try:

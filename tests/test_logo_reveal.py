@@ -75,3 +75,9 @@ def test_couple_video_photo():
                                                           Path("b/facade.jpg"))
     with pytest.raises(ValueError, match="video.mp4:photo.jpg"):
         lr.lire_couple("plan1.mp4")
+
+
+def test_zone_du_logo():
+    assert lr.lire_zone("100,662,200,205") == (100, 662, 200, 205)
+    with pytest.raises(ValueError, match="cx,cy,rx,ry"):
+        lr.lire_zone("100,662")

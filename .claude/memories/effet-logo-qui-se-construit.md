@@ -45,10 +45,13 @@ cadre, choisir une autre photo : le modèle déforme les visages
    la scène, le kakémono sur un événement). Recadrer en 9:16 dans PIL **avant**
    tout (piège mesuré du 28/08 : un i2v 9:16 lancé depuis une photo paysage
    réinvente le lieu).
-2. **Fabriquer l'image de début : la même photo, sans le logo.** Remplissage
-   génératif limité à la zone du logo (Adobe `image_fill_area`, ou l'édition
-   d'image Higgsfield), consigne « mur nu, même matière, même lumière, sans
-   logo ni texte ». Vérifier à l'œil que rien d'autre n'a changé.
+2. **Fabriquer l'image de début : la même photo, sans le logo.** Sur un mur uni
+   ou en dégradé : `python3 scripts/logo-reveal.py effacer photo-916.jpg --zone
+   cx,cy,rx,ry --sortie photo-sans-logo.jpg` (OpenCV, en local, zéro crédit ; la
+   zone est l'ellipse du logo et de son halo, en pixels). Sur un fond texturé
+   (brique, bois), remplissage génératif limité à la zone du logo. Attention :
+   `image_fill_area` d'Adobe ne remplit qu'en couleur unie, il ne convient pas.
+   Vérifier à l'œil que rien d'autre n'a changé.
 3. **Prompt et réglages :** `python3 scripts/logo-reveal.py prompt --style <style>
    --logo "<ce qui s'anime, en anglais>"`. Styles : `pieces`, `lettres`, `disque`,
    `neon` (les trois du reel, plus le néon simple). Varier le style d'un plan à
@@ -68,6 +71,26 @@ cadre, choisir une autre photo : le modèle déforme les visages
 6. **Son :** aucun dans le fichier. Sur un reel, Maxime pose la musique dans
    Instagram (`reels-musique-instagram.md`). Le moment fort à caler sur le son est
    l'instant où le logo se pose : vers 4,5 à 5 s de chaque plan.
+
+## Premier essai, 07/11/2026 : réussi
+
+Photo d'origine de la cliente Gossip Beauty Center (salon rose, logo rond
+« GOSSIP Beauty Center » éclairé au mur, personne dans le cadre ; fichier
+i.ibb.co du manifeste `photos/gossip-beauty-center.json`). Pas la version
+« luxe » retouchée en IA (fichier `hf_…png`) : on part toujours de l'originale.
+
+- Recadrage 9:16 **calé à gauche**, pas centré : le logo touchait le bord gauche,
+  un recadrage centré l'aurait coupé. Toujours vérifier que le logo entier, halo
+  compris, reste dans le cadre.
+- Effacement : `--zone 100,662,200,205` sur l'image 1080×1920.
+- Kling 3.0, style `pieces`, 6 s : un disque se creuse dans le mur, des éclats
+  arrivent, « GOSSIP » se monte (lettres un peu espacées en cours de route), le
+  disque s'éclaire et retombe sur le vrai logo. Plan
+  `hf_20261107_152434_8649e4a9-64ab-4bba-b8c9-b7c133f87641.mp4` sur
+  `d8j0ntlcm91z4.cloudfront.net`, réutilisable à zéro crédit.
+- Contrôles : 2,0 entre la première image et la photo sans logo, **1,9** entre la
+  dernière image et la vraie photo, 0,7 sur le décor (moitié droite) entre début
+  et fin. Montage final 6,6 s, 1080×1920, muet. Coût : un plan, environ 7,5 crédits.
 
 ## Où l'utiliser
 
