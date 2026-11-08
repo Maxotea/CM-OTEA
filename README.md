@@ -9,6 +9,7 @@ Skill Claude Code d'automatisation du community management (Metricool via Zapier
 - `.claude/skills/cm-metricool/references/clients/` — une fiche par client (+ banques photos)
 - `carrousels/<client>/*.json` — les specs de carrousels, un fichier par semaine et par compte
 - `scripts/carrousel.py` + `scripts/themes.json` — le générateur de slides et la DA de chaque compte
+- `scripts/carrousel_educatif.py` — le style « educatif » des carrousels (Otea Filmakers) : viseur, numéro en filigrane, chiffre géant, duel, CTA inversé ; programme dans `plans/otea/2026-11-filmakers-educatif.md`
 - `scripts/review.py` + `reviews/` — la review hebdo client : le fichier Excel de validation et son aller-retour avec Metricool
 - `.claude/skills/cm-metricool/references/review-hebdo.md` — le circuit complet de la review
 

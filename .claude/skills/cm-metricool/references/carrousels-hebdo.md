@@ -141,6 +141,22 @@ avec `scripts/carrousel.py`, ça reste lisible, et ça n'épuise pas la banque p
 réservée aux posts simples et aux reels. Une photo réelle peut s'insérer en couverture quand elle
 existe et sert le sujet — jamais une photo IA présentée comme un résultat client.
 
+### Le style « educatif » (Otea Filmakers, 08/11/2026)
+
+Pour les séries pédagogiques de Filmakers (programme `plans/otea/2026-11-filmakers-educatif.md`), un
+spec peut porter `"style": "educatif"`. Le rendu passe alors par `scripts/carrousel_educatif.py` : chaque
+slide est posée comme l'écran d'une caméra (repères de viseur, « REC » sur la couverture, mentions
+techniques en Space Mono, barre de progression et compteur en bas, grain 18). Six gabarits, un par
+slide : `couverture`, `chapitre` (numéro géant en filigrane, champ `numero`), `chiffre` (`chiffre` et
+`legende`), `liste` (`items`, 2 à 5), `duel` (`gauche` et `droite`, chacun `label` et `texte`), `cta`
+(fond inversé). Première slide couverture, dernière slide cta. Les champs `serie` et `mention` du spec
+remplacent ceux du bloc `educatif` du thème.
+
+Typographique par construction : pas de champ `photo`, les images de compétition restent aux reels et
+aux stories. Tout le reste de la doctrine s'applique : 8 slides, 40 mots, deux accents `**ainsi**`,
+aucun crochet, aucun tiret cadratin, un texte qui déborde fait échouer le rendu. Mêmes sorties
+(slides, `caption.txt`, `manifest.json` avec `style`), même planification par `publier.py`.
+
 ## 7. Production
 
 ```bash

@@ -260,6 +260,22 @@
       "filet_accent": true,
       "cache": "medias/otea-production/originaux",
       "_doc": "Grain 18 : le grain film 35 mm léger de la DA Filmakers du 08/08, sans IA, posé avant la mesure. cache partagé avec OTEA Production (mêmes originaux Drive, mêmes clés). Les stories d'une même semaine montrent Maxime seul, une fois qu'il a dit lequel il est sur les photos."
+    },
+    "educatif": {
+      "serie": "FILMER LE HYROX",
+      "mention": "OTEA FILMAKERS",
+      "pied": "@OTEAFILMAKERS",
+      "sauge": "#ACC1C0",
+      "graphite": "#2E2B2B",
+      "trait_inverse": "#CDD3D2",
+      "ghost_inverse": "#E2E6E5",
+      "mono_family": [
+        "Space Mono",
+        "DejaVu Sans Mono",
+        "Liberation Mono"
+      ],
+      "grain": 18,
+      "_doc": "Style « educatif » (scripts/carrousel_educatif.py), décidé le 08/11/2026 pour les séries pédagogiques du compte (programme plans/otea/2026-11-filmakers-educatif.md). Même palette Vert et Noir du Brandbook 2026 : fond encre #201E1E, texte #D5DEDD, accent blanc #F1F1F1, mentions en vert d'eau #ACC1C0 (8,9:1 sur l'encre), repères de viseur et filigranes en graphite #2E2B2B. Space Mono (OFL, fonts/space-mono/) pour les mentions techniques, Inter Display pour tout le reste. Grain 18 comme les stories. Slides typographiques sans photo : les images de compétition restent aux reels et aux stories. Les champs serie et mention se surchargent dans le spec."
     }
   },
   "run-on-invest": {
