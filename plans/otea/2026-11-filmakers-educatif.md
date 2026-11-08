@@ -111,6 +111,20 @@ Les huit épisodes se tournent **en une seule séance face caméra** : **lundi 0
 - Entre deux épisodes, **les plans de coupe** demandés en fin de chaque script (mains sur la FX3, l'objectif, le sac, la timeline) : 10 secondes chacun, ils tournent dans toute la saison.
 - Pour le détourage, **ne pas porter de noir sur fond noir** : le t-shirt noir de Maxime demande un fond clair ou coloré.
 
+### Les tournages dans l'agenda (posés le 08/11/2026)
+
+Chaque créneau porte la feuille, les scripts, les storyboards, la charte et la liste de mise en place,
+pour qu'aucun oubli ne dépende de la mémoire :
+
+| Quand | Agenda | Ce qu'on tourne |
+|---|---|---|
+| lun 09/11, 9 h à 10 h | « Tournage 1/2 · saison 1 » | les 8 épisodes face caméra et les 12 plans de coupe |
+| 12 au 20/12 (dates à confirmer) | « HYROX Paris · images de course pour la série » | roxzone, sled push en 100p et sa sortie, un plan brut S-Log3 gardé tel quel, le son, le point de vue caméra, les kilomètres à la montre |
+| lun 04/01/2027, 9 h à 10 h | « Tournage 2/2 · saison 2 » | les 8 épisodes de la saison 2, scripts à écrire avant le 21/12 |
+
+Les blocs « BNI » et « Devis, factures, relances » du lundi matin tombent sur les deux séances face
+caméra : Maxime les décale ou déplace la séance.
+
 ## 7. Ce qui reste à confirmer
 
 Les scripts ont été arrêtés le 08/11 **sans aucun crochet**, en version sans chiffre, pour la séance du 09/11. Rien n'est inventé ; ce qui n'était pas vérifié a été retiré de la phrase plutôt que supposé.
