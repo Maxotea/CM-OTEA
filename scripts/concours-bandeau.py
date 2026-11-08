@@ -35,7 +35,25 @@ def police(nom: str, taille: int) -> ImageFont.FreeTypeFont:
     raise SystemExit(f"Police {nom} introuvable : dépose-la dans assets/fonts/ puis relance.")
 
 
-def bandeau(source: Path, sortie: Path, compte: str, haut: int) -> None:
+# Les leviers ne sont pas les mêmes d'un réseau à l'autre (Maxime, 08/11/2026 : « ne pas faire
+# du copier-coller » d'Instagram sur TikTok). Sur TikTok, pas de story à repartager : on republie
+# (flèche de republication) ou on envoie la vidéo à un pote. Les zones libres changent aussi :
+# TikTok couvre la colonne de droite (icônes) et le bas de l'image (légende).
+PLATEFORMES = {
+    "instagram": {"marge_droite": 120, "bas_max": 1760},
+    "tiktok": {"marge_droite": 180, "bas_max": 1460},
+}
+
+
+def leviers(plateforme: str, compte: str) -> list[tuple[str, str]]:
+    if plateforme == "tiktok":
+        return [("1 POTE TAGUÉ EN COMMENTAIRE", "= 1 chance de plus"),
+                ("REPUBLIE OU ENVOIE À UN POTE", "= 1 chance de plus")]
+    return [("1 AMI TAGUÉ EN COMMENTAIRE", "= 1 chance de plus"),
+            ("TA STORY + " + compte.upper(), "= 1 chance, je repartage")]
+
+
+def bandeau(source: Path, sortie: Path, compte: str, haut: int, plateforme: str = "instagram") -> None:
     img = Image.open(source).convert("RGBA")
     largeur = img.width
     marge = 70
@@ -46,11 +64,11 @@ def bandeau(source: Path, sortie: Path, compte: str, haut: int) -> None:
     f_sous = police("InterDisplay-Medium.otf", 26)
     f_plus = police("InterDisplay-Black.otf", 40)
 
-    lignes = [
-        ("1 AMI TAGUÉ EN COMMENTAIRE", "= 1 chance de plus"),
-        ("TA STORY + " + compte.upper(), "= 1 chance, je repartage"),
-    ]
-    droite = largeur - marge - 50          # laisse libre le coin orange du cadre
+    if plateforme not in PLATEFORMES:
+        raise SystemExit(f"Réseau inconnu : {plateforme}. Choisis instagram ou tiktok.")
+    zone = PLATEFORMES[plateforme]
+    lignes = leviers(plateforme, compte)
+    droite = largeur - zone["marge_droite"]
     hauteur_ligne = 58
     d.rounded_rectangle((marge, haut, droite, haut + 24 + hauteur_ligne * len(lignes)), radius=12,
                         fill=(18, 18, 18, 230), outline=(255, 88, 0, 255), width=3)
@@ -73,8 +91,9 @@ def bandeau(source: Path, sortie: Path, compte: str, haut: int) -> None:
         y += hauteur_ligne
     y += 12
 
-    if y > img.height - 160:
-        raise SystemExit("Le bandeau déborde sur la barre de réponse d'Instagram : baisse --haut.")
+    if y > zone["bas_max"]:
+        raise SystemExit(f"Le bandeau déborde sur l'interface de {plateforme} (barre de réponse ou "
+                         f"légende) : remonte-le avec --haut.")
     Image.alpha_composite(img, calque).convert("RGB").save(sortie, quality=93)
 
 
@@ -83,9 +102,11 @@ def main() -> None:
     p.add_argument("source", type=Path)
     p.add_argument("sortie", type=Path)
     p.add_argument("--compte", default="@oteafilmakers")
-    p.add_argument("--haut", type=int, default=1606, help="ordonnée du haut du bandeau, en pixels")
+    p.add_argument("--haut", type=int, default=None, help="ordonnée du haut du bandeau, en pixels")
+    p.add_argument("--reseau", choices=sorted(PLATEFORMES), default="instagram")
     a = p.parse_args()
-    bandeau(a.source, a.sortie, a.compte, a.haut)
+    haut = a.haut if a.haut is not None else (1606 if a.reseau == "instagram" else 1310)
+    bandeau(a.source, a.sortie, a.compte, haut, a.reseau)
 
 
 if __name__ == "__main__":

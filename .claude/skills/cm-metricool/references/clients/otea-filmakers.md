@@ -183,7 +183,7 @@ dimanche 15/11 à 23h59, tirage le lundi 16/11. Dix stories refaites avec ses 4 
 jeu ; le post « jeu terminé » passe au 16/11 à 18h30. Légende du post du jeu : dates à corriger par
 Maxime dans l'app.
 
-**TikTok @oteafilmakers, concours HYROX Paris (08/11/2026).** Post du jeu en carrousel le 8/11 à 18h45
-(uuid 8678981755129971254) ; vidéos en notification les 9 et 10/11 à 19h30 ; carrousels de relance les
+**TikTok @oteafilmakers, concours HYROX Paris (08/11/2026).** Réécrit au format TikTok le même soir (visuels propres, légendes courtes, renvois vers la
+publication épinglée). Post du jeu en carrousel de 4 slides le 8/11 à 18h45 (uuid 8678981755129971254) ; vidéos en notification les 9 et 10/11 à 19h30 ; carrousels de relance les
 11/11 et 13/11 à 19h30, 15/11 à 12h00 et 20h30 ; posts FX3, gimbal, férié et rushes dupliqués à 12h00 ;
 post de fin le 16/11 à 18h30. Au tirage, additionner les chances Instagram et TikTok.

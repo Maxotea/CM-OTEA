@@ -40,21 +40,30 @@ les stories sont programmées prêtes à partir. Si Maxime veut d'autres photos,
 visuel, on ne met pas la campagne en pause plus de quelques heures. Si une pause a fait perdre des
 jours, on prolonge le jeu plutôt que de compresser la relance.
 
-## 0 bis. Instagram et TikTok en même temps
+## 0 bis. Instagram et TikTok en même temps, jamais en copier-coller
 
 Sur Otea Filmakers, un concours se lance **le même jour sur Instagram et sur TikTok
-(@oteafilmakers)** (Maxime, 08/11/2026 : « dupliquer sur le compte TikTok, tout ce qu'on a fait »).
-Avant de programmer, vérifier dans `getBrandSettings` que `tiktokData` de la marque vaut bien
-`oteafilmakers` : jusqu'au 08/11 c'était `oteaproduction`, et le contenu sport serait parti chez les
-prospects corporate.
+(@oteafilmakers)** (Maxime, 08/11/2026). Mais **jamais un copier-coller** : « bien faire gaffe au
+code TikTok, il est adapté à la publication » (Maxime, même jour). Avant de programmer, vérifier
+dans `getBrandSettings` que `tiktokData` vaut `oteafilmakers` (c'était `oteaproduction` jusqu'au
+08/11 : le contenu sport serait parti chez les prospects corporate).
 
-Ce qui change sur TikTok, Metricool ne publiant pas de story TikTok :
-- le post du jeu devient un carrousel photo (les visuels des stories), règles adaptées : like,
-  abonne-toi, tague tes potes en commentaire, partage ou republie ; « ni organisé ni sponsorisé par
-  TikTok » ; les chances des deux réseaux s'additionnent au tirage ;
-- les relances de stories deviennent des carrousels, un tous les deux jours plus le dernier jour ;
-- les vidéos partent en mode notification (`autoPublish: false`) : Maxime pose la musique dans TikTok ;
-- `tiktokData.title` est obligatoire, sinon Metricool refuse le post.
+| | Instagram | TikTok |
+|---|---|---|
+| Levier de partage | story avec identification, je repartage | republier (flèche) ou envoyer la vidéo à un pote |
+| Identifier | « tague un ami » | « tague un pote », « commente avec le pseudo de ton binôme » |
+| Renvoi | « tout est sur le post du jeu », lien en story | « publication épinglée » (Maxime l'épingle sur le profil) |
+| Visuels | story 9:16, texte jusqu'à y=1760 | carrousel photo : texte entre y=240 et y=1460, à gauche de x=900 (icônes à droite, légende en bas) |
+| Structure du post du jeu | un carrousel d'images produit, règles en légende | slide 1 accroche (« Gagne ton film »), slides produit, dernière slide « Comment jouer » |
+| Légende | longue, détaillée | première ligne = accroche, 3 à 6 lignes, une question pour faire commenter |
+| Hashtags | 5 | 3 ou 4 ciblés (#hyrox #hyroxparis …) |
+| Titre | aucun | `tiktokData.title` obligatoire (90 caractères), c'est le titre affiché du carrousel |
+| Vidéos | mode notification, musique dans Instagram | mode notification, musique dans TikTok |
+| Mention légale | « ni organisé ni sponsorisé par Instagram » | « … par TikTok » |
+
+Outils : `scripts/concours-story.py` avec `"reseau": "tiktok"` dans la spec (zones et voile
+propres à TikTok) ; `scripts/concours-bandeau.py --reseau tiktok` (« 1 pote tagué », « republie ou
+envoie à un pote »). Au tirage, les chances des deux réseaux s'additionnent.
 
 ## 1. Le post du concours : le bloc « Pour jouer » obligatoire
 
