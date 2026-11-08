@@ -18,6 +18,9 @@ qui ne passent pas par le modèle :
     # 2. l'image de début : la même photo, logo effacé (zone = ellipse cx,cy,rx,ry)
     python3 scripts/logo-reveal.py effacer photo-916.jpg --zone 100,662,200,205 \\
         --sortie photo-sans-logo.jpg
+    #    sur une moquette ou un tissu : masque du logo + rectangle de surface vide
+    python3 scripts/logo-reveal.py effacer photo.jpg --masque logo.png \\
+        --grain 1000,3950,2900,4880 --sortie photo-sans-logo.jpg
 
     # 3. le contrôle et le montage, une fois les plans i2v téléchargés
     python3 scripts/logo-reveal.py assembler \\
@@ -51,7 +54,22 @@ SEUIL_ECART = 8.0           # au-delà, la dernière image ne ressemble plus à 
 
 # Les styles repérés dans le reel. Chaque phrase décrit le mouvement du logo, jamais
 # celui du lieu : le reste de l'image ne doit pas bouger.
+# Maxime, 08/11/2026, sur l'essai Gossip : « la texture est trop 3D ». Les styles plats
+# (`trace`, `encre`) passent donc en premier ; `pieces`, `lettres` et `disque` donnent
+# du volume et ne servent que si on le demande.
+PLAT = ("Strictly flat 2D graphic animation, printed on the surface like paint or ink: "
+        "no extrusion, no thickness, no volume, no 3D pieces, no flying parts, no bounce, "
+        "no shadows cast by the logo, no glossy reflections")
+
 STYLES = {
+    "trace": (
+        "a thin line traces the outline of the logo on the surface in one continuous, "
+        "smooth stroke, then the shape fills in flat, and the lettering prints in from "
+        "left to right in reading order. " + PLAT),
+    "encre": (
+        "the logo soaks into the surface like ink spreading into fabric, from the center "
+        "outward, sharp edges forming last, then the lettering appears the same way. "
+        + PLAT),
     "pieces": (
         "the logo appears with a creative advertising animation: it assembles "
         "smoothly piece by piece, each part flying in with physical motion, a light "
@@ -152,12 +170,31 @@ def lire_zone(texte):
     return cx, cy, rx, ry
 
 
-def effacer_logo(source, zone, sortie):
-    """Efface le logo d'un mur uni : reconstruction du mur autour (OpenCV), lissage,
-    grain rendu, fondu des bords. Testé le 07/11 sur le mur rose de Gossip : écart de
-    2,0 entre l'image produite et la première image du plan Kling. Ne convient qu'à un
-    fond uni ou en dégradé ; sur un fond texturé (brique, bois), passer par un
-    remplissage génératif."""
+def lire_rectangle(texte):
+    try:
+        x0, y0, x1, y1 = (int(v) for v in texte.split(","))
+    except ValueError:
+        raise ValueError(f"« {texte} » : donne la zone de grain sous la forme x0,y0,x1,y1 "
+                         "(un rectangle de surface vide, sans logo ni objet)")
+    if x1 <= x0 or y1 <= y0:
+        raise ValueError(f"« {texte} » : le coin bas droit doit être après le coin haut gauche")
+    return x0, y0, x1, y1
+
+
+def effacer_logo(source, sortie, zone=None, masque=None, grain=None):
+    """Efface le logo : reconstruction de la surface autour (OpenCV), puis grain.
+
+    - `zone` (ellipse cx,cy,rx,ry) ou `masque` (PNG blanc sur noir, même taille que la
+      photo) dit où est le logo. Le masque sert dès que le logo n'est pas un rond :
+      lettrage en biais, symbole au sol.
+    - `grain` (rectangle x0,y0,x1,y1 de surface vide) recopie la texture réelle de cette
+      zone, répétée en miroir et ajustée à la lumière locale. Indispensable sur une
+      moquette, un tissu, un béton : sans lui, la zone effacée devient une tache floue.
+      Sans `grain`, un grain fin uniforme suffit sur un mur peint.
+
+    Testé le 07/11 sur le mur rose de Gossip (zone, sans grain) et le 08/11 sur la
+    moquette de J Lawson Golf (masque, grain pris dans la moquette vide du bas). Sur
+    une brique ou un bois à motif, passer par un remplissage génératif."""
     try:
         import cv2
         import numpy as np
@@ -167,18 +204,44 @@ def effacer_logo(source, zone, sortie):
     im = cv2.imread(str(source))
     if im is None:
         sys.exit(f"Impossible de lire {source}. Vérifie le chemin et relance.")
-    cx, cy, rx, ry = zone
-    masque = np.zeros(im.shape[:2], np.uint8)
-    cv2.ellipse(masque, (cx, cy), (rx, ry), 0, 0, 360, 255, -1)
-    masque = cv2.dilate(masque, np.ones((9, 9), np.uint8))
-    petit = cv2.inpaint(cv2.resize(im, None, fx=0.5, fy=0.5),
-                        cv2.resize(masque, None, fx=0.5, fy=0.5), 25, cv2.INPAINT_TELEA)
-    mur = cv2.GaussianBlur(cv2.resize(petit, (im.shape[1], im.shape[0]),
-                                      interpolation=cv2.INTER_CUBIC), (0, 0), 6)
-    grain = np.random.default_rng(1).normal(0, 1.6, im.shape).astype(np.float32)
-    mur = np.clip(mur.astype(np.float32) + grain, 0, 255)
-    alpha = cv2.GaussianBlur(masque.astype(np.float32) / 255, (0, 0), 8)[..., None]
-    sortie_img = (mur * alpha + im.astype(np.float32) * (1 - alpha)).astype(np.uint8)
+    H, W = im.shape[:2]
+    if masque is not None:
+        m = cv2.imread(str(masque), 0)
+        if m is None or m.shape != (H, W):
+            sys.exit(f"Le masque {masque} est illisible ou n'a pas la taille de la photo "
+                     f"({W}×{H}). Refais-le à la même taille et relance.")
+        m = (m > 127).astype(np.uint8) * 255
+    elif zone is not None:
+        cx, cy, rx, ry = zone
+        m = np.zeros((H, W), np.uint8)
+        cv2.ellipse(m, (cx, cy), (rx, ry), 0, 0, 360, 255, -1)
+        m = cv2.dilate(m, np.ones((9, 9), np.uint8))
+    else:
+        sys.exit("Dis où est le logo : --zone cx,cy,rx,ry ou --masque fichier.png.")
+    imf = im.astype(np.float32)
+    echelle = 0.5 if grain is None else 0.25
+    petit = cv2.inpaint(cv2.resize(im, None, fx=echelle, fy=echelle),
+                        cv2.resize(m, None, fx=echelle, fy=echelle),
+                        25 if grain is None else 15, cv2.INPAINT_TELEA)
+    fond = cv2.GaussianBlur(cv2.resize(petit, (W, H), interpolation=cv2.INTER_CUBIC)
+                            .astype(np.float32), (0, 0), 6 if grain is None else 12)
+    if grain is None:
+        bruit = np.random.default_rng(1).normal(0, 1.6, im.shape).astype(np.float32)
+        rempli = np.clip(fond + bruit, 0, 255)
+    else:
+        x0, y0, x1, y1 = grain
+        bloc = imf[y0:y1, x0:x1]
+        if bloc.size == 0:
+            sys.exit("La zone de grain sort de la photo. Choisis un rectangle à l'intérieur.")
+        base = cv2.GaussianBlur(bloc, (0, 0), 6)
+        relatif = (bloc - base) / np.maximum(base, 8)
+        motif = np.concatenate([relatif, relatif[::-1]], 0)
+        motif = np.concatenate([motif, motif[:, ::-1]], 1)
+        tuile = np.tile(motif, (H // motif.shape[0] + 1, W // motif.shape[1] + 1, 1))[:H, :W]
+        rempli = np.clip(fond * (1 + tuile), 0, 255)
+    alpha = cv2.GaussianBlur(m.astype(np.float32) / 255, (0, 0),
+                             8 if grain is None else 10)[..., None]
+    sortie_img = (rempli * alpha + imf * (1 - alpha)).astype(np.uint8)
     Path(sortie).parent.mkdir(parents=True, exist_ok=True)
     cv2.imwrite(str(sortie), sortie_img, [cv2.IMWRITE_JPEG_QUALITY, 95])
     print(f"Photo sans logo : {sortie}. Regarde-la : rien d'autre ne doit avoir changé.")
@@ -261,7 +324,7 @@ def main():
     sp = p.add_subparsers(dest="commande", required=True)
 
     pp = sp.add_parser("prompt", help="prompt et réglages d'un plan i2v")
-    pp.add_argument("--style", choices=sorted(STYLES), default="pieces")
+    pp.add_argument("--style", choices=sorted(STYLES), default="trace")
     pp.add_argument("--logo", default="the logo visible in the image",
                     help="ce qui doit s'animer, en anglais (ex. « the round green logo »)")
     pp.add_argument("--mode", choices=sorted(DEBUT), default="debut-fin")
@@ -269,7 +332,9 @@ def main():
 
     pe = sp.add_parser("effacer", help="la photo sans le logo, pour l'image de début")
     pe.add_argument("photo")
-    pe.add_argument("--zone", required=True, help="ellipse du logo : cx,cy,rx,ry en pixels")
+    pe.add_argument("--zone", help="ellipse du logo : cx,cy,rx,ry en pixels")
+    pe.add_argument("--masque", help="ou un masque PNG (blanc = logo), à la taille de la photo")
+    pe.add_argument("--grain", help="rectangle x0,y0,x1,y1 de surface vide dont copier la texture")
     pe.add_argument("--sortie", required=True)
 
     pa = sp.add_parser("assembler", help="contrôle et montage des plans i2v")
@@ -289,10 +354,11 @@ def main():
         return
     if args.commande == "effacer":
         try:
-            zone = lire_zone(args.zone)
+            zone = lire_zone(args.zone) if args.zone else None
+            grain = lire_rectangle(args.grain) if args.grain else None
         except ValueError as e:
             sys.exit(str(e))
-        effacer_logo(args.photo, zone, args.sortie)
+        effacer_logo(args.photo, args.sortie, zone=zone, masque=args.masque, grain=grain)
         return
     ffprobe = str(Path(args.ffmpeg).with_name("ffprobe")) if "/" in args.ffmpeg else "ffprobe"
     try:

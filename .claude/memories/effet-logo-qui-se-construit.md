@@ -31,6 +31,16 @@ after-movie et montages », sur le reel
   « JUST FOR UN ». Le modèle épelle mal tant que le logo n'est pas posé. Notre
   méthode règle ça (voir plus bas).
 
+## Les deux retours de Maxime sur le premier essai (08/11/2026)
+
+1. **Plus jamais le logo Gossip Beauty Center** pour cet effet. Les essais et les
+   démos se font sur **J Lawson Golf, OTEA Production ou Otea Filmakers**.
+2. **« La texture est trop 3D. »** Le logo qui sort du mur en volume, les éclats
+   qui volent : non. Style par défaut désormais **à plat** (`trace` ou `encre`) :
+   le logo se dessine dans la surface comme de la peinture ou de l'encre, sans
+   épaisseur ni rebond. Les styles `pieces`, `lettres`, `disque` restent dans
+   l'outil, uniquement sur demande.
+
 ## Pourquoi c'est permis par nos règles
 
 C'est la règle 2 de `CLAUDE.md` appliquée à un logo : **vraie photo du client,
@@ -53,9 +63,8 @@ cadre, choisir une autre photo : le modèle déforme les visages
    `image_fill_area` d'Adobe ne remplit qu'en couleur unie, il ne convient pas.
    Vérifier à l'œil que rien d'autre n'a changé.
 3. **Prompt et réglages :** `python3 scripts/logo-reveal.py prompt --style <style>
-   --logo "<ce qui s'anime, en anglais>"`. Styles : `pieces`, `lettres`, `disque`,
-   `neon` (les trois du reel, plus le néon simple). Varier le style d'un plan à
-   l'autre, comme dans le reel.
+   --logo "<ce qui s'anime, en anglais>"`. Par défaut `trace` (à plat) ; `encre`
+   aussi à plat ; `pieces`, `lettres`, `disque`, `neon` sur demande seulement.
 4. **Animer :** `generate_video`, modèle `kling3_0`, `mode: std`, `sound: off`,
    `duration: 6`, `aspect_ratio: "9:16"`, `use_unlim: false`,
    `medias: [{photo sans logo, start_image}, {vraie photo, end_image}]`.
@@ -92,14 +101,40 @@ i.ibb.co du manifeste `photos/gossip-beauty-center.json`). Pas la version
   dernière image et la vraie photo, 0,7 sur le décor (moitié droite) entre début
   et fin. Montage final 6,6 s, 1080×1920, muet. Coût : un plan, environ 7,5 crédits.
 
+## Deuxième essai, 08/11/2026 : J Lawson Golf, à plat
+
+Photo `HOME-SANFAUTE-260506-160020-01296.jpg` du shooting pro du 6 mai (dossier
+Drive « jlawson-golf », `1XuEVMRqJOtlD7wmAUbJFV1SUhHolmiZy`, 99 originaux
+téléchargeables par `https://drive.google.com/uc?export=download&id=<id>`) : le
+grand symbole et « J LAWSON GOLF » imprimés sur la moquette du fitting, personne
+dans le cadre. Les marques visibles au fond (Titleist, Ping) sont le vrai studio :
+elles ne bougent pas. Ne jamais partir des `jlawson-ia-*.png` du même dossier, ce
+sont des images IA.
+
+- Recadrage 9:16 décalé de 470 px depuis la gauche : le texte finit au bord droit,
+  on sacrifie le bout de la queue du symbole plutôt qu'une lettre.
+- Effacement : masque fait à la main (symbole repéré par sa couleur jaune pâle
+  dans le canal b du LAB, texte couvert par une bande), puis
+  `effacer --masque masque.png --grain 1000,3950,2900,4880`. Sans `--grain`, la
+  moquette devient une tache floue ; avec un grain pris trop près du logo, des
+  bouts de logo réapparaissent en fantôme. Prendre un rectangle **entièrement**
+  vide.
+- Kling 3.0, style `trace`, 6 s, 7,5 crédits. Rendu : début propre (2,5), une
+  silhouette sombre du symbole apparaît vers 0,5 s comme un pochoir, la couleur
+  coule dans le symbole, puis les lettres s'impriment (en commençant par GOLF,
+  pas par le J). Fin sur la vraie photo : écart **2,9**. Décor immobile : 1,1
+  en haut, 1,4 en bas. Plan
+  `hf_20261108_134903_e948b320-b437-417e-9748-79dff6dc6f9e.mp4`, réutilisable.
+
 ## Où l'utiliser
 
 - **Aftermovie d'événement** (`scripts/aftermovie.py`, `MONTAGE-OTEA/aiirf`) :
   en **ouverture** (le logo de l'événement ou du client se construit sur la photo
   du lieu, avant le premier plan de rushs) ou en **plan de fin** à la place du
   carton noir. Un seul plan suffit ; trois plans, c'est un reel à part entière.
-- **Reel « ouverture »** d'un commerce du portefeuille (Le Loft, Gossip Beauty
-  Center, J Lawson Golf, La Galerie Immobilière) : sa vraie façade, son vrai logo.
+- **Reel « ouverture »** de J Lawson Golf (son logo au sol, en premier), puis
+  d'autres commerces du portefeuille si Maxime le demande : leur vrai lieu,
+  leur vrai logo. Pas Gossip Beauty Center (retour du 08/11).
 - **Vitrine OTEA Production** : reel « on fait ça pour votre lieu », à poser
   dans la ligne des offres.
 

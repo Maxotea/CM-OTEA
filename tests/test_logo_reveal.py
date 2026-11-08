@@ -81,3 +81,15 @@ def test_zone_du_logo():
     assert lr.lire_zone("100,662,200,205") == (100, 662, 200, 205)
     with pytest.raises(ValueError, match="cx,cy,rx,ry"):
         lr.lire_zone("100,662")
+
+
+def test_les_styles_plats_interdisent_le_volume():
+    for style in ("trace", "encre"):
+        prompt = lr.construire_prompt(style, "the logo")
+        assert "Strictly flat 2D" in prompt and "no extrusion" in prompt
+
+
+def test_zone_de_grain():
+    assert lr.lire_rectangle("1000,3950,2900,4880") == (1000, 3950, 2900, 4880)
+    with pytest.raises(ValueError, match="bas droit"):
+        lr.lire_rectangle("10,10,5,20")
