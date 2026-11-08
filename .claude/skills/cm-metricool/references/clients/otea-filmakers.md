@@ -2,7 +2,7 @@
 
 ## Identité
 - blogId Metricool : 4728418
-- Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
+- Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers ; TikTok rebranché sur @oteafilmakers le 08/11/2026, avant c'était @oteaproduction). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
 ## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
@@ -150,8 +150,8 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 - **Décisions de Maxime** : Q3 (texte neutre), Q8 (22,5 crédits pour ce compte, dépensés), Q9 (stories lun, mer, ven
   10:00 dès le 26/10), Q4 (13/10, voir DA photo).
 - **Chiffres (13/09 au 12/10)** : 3 800 abonnés Instagram (61 gagnés, 113 perdus). Les deux reels de sport (Rome
-  27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction (le post
-  du 12/10 y est parti), pas @oteafilmakers.
+  27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction jusqu'au 08/11/2026,
+  rebranché ce jour-là sur @oteafilmakers par Maxime.
 - **Reste** : 30/10 383270198 (photo, avant le 16/10 6h30), 02/11 383270388 (photo, avant le 19/10), 04/11 383270407
   (texte, avant le 21/10), 13/11 394182835 (photo 3d299617 commune avec OTEA, avant le 30/10), 18/11 383270536
   (texte), 20/11 383270550 (photo), 27/11 383270617 (texte et photo, avant le 13/11) ; média du 28/10 (54df9acf,
@@ -182,3 +182,8 @@ dimanche 15/11 à 23h59, tirage le lundi 16/11. Dix stories refaites avec ses 4 
 -4987887533810364474 (3 heures). Le reel du 8/11 et les posts des 9, 10, 11 et 13/11 renvoient au
 jeu ; le post « jeu terminé » passe au 16/11 à 18h30. Légende du post du jeu : dates à corriger par
 Maxime dans l'app.
+
+**TikTok @oteafilmakers, concours HYROX Paris (08/11/2026).** Post du jeu en carrousel le 8/11 à 18h45
+(uuid 8678981755129971254) ; vidéos en notification les 9 et 10/11 à 19h30 ; carrousels de relance les
+11/11 et 13/11 à 19h30, 15/11 à 12h00 et 20h30 ; posts FX3, gimbal, férié et rushes dupliqués à 12h00 ;
+post de fin le 16/11 à 18h30. Au tirage, additionner les chances Instagram et TikTok.

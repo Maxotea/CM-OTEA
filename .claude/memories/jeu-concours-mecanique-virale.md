@@ -40,6 +40,22 @@ les stories sont programmées prêtes à partir. Si Maxime veut d'autres photos,
 visuel, on ne met pas la campagne en pause plus de quelques heures. Si une pause a fait perdre des
 jours, on prolonge le jeu plutôt que de compresser la relance.
 
+## 0 bis. Instagram et TikTok en même temps
+
+Sur Otea Filmakers, un concours se lance **le même jour sur Instagram et sur TikTok
+(@oteafilmakers)** (Maxime, 08/11/2026 : « dupliquer sur le compte TikTok, tout ce qu'on a fait »).
+Avant de programmer, vérifier dans `getBrandSettings` que `tiktokData` de la marque vaut bien
+`oteafilmakers` : jusqu'au 08/11 c'était `oteaproduction`, et le contenu sport serait parti chez les
+prospects corporate.
+
+Ce qui change sur TikTok, Metricool ne publiant pas de story TikTok :
+- le post du jeu devient un carrousel photo (les visuels des stories), règles adaptées : like,
+  abonne-toi, tague tes potes en commentaire, partage ou republie ; « ni organisé ni sponsorisé par
+  TikTok » ; les chances des deux réseaux s'additionnent au tirage ;
+- les relances de stories deviennent des carrousels, un tous les deux jours plus le dernier jour ;
+- les vidéos partent en mode notification (`autoPublish: false`) : Maxime pose la musique dans TikTok ;
+- `tiktokData.title` est obligatoire, sinon Metricool refuse le post.
+
 ## 1. Le post du concours : le bloc « Pour jouer » obligatoire
 
 ```
