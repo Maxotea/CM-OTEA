@@ -19,6 +19,27 @@ répétaient que « Like · Abonne-toi · Commente ». Maxime : « juste un jeu 
 fait, ça ne fonctionne pas ». La mécanique n'était écrite nulle part, elle s'est perdue entre Nice
 (octobre) et Paris. Cette fiche est là pour qu'elle ne se perde plus.
 
+## 0. Avant, pendant, après : le calendrier minimum
+
+Leçon du 08/11/2026 (HYROX Paris) : le post est parti, mais une seule story de concours est sortie
+en quatre jours (les autres attendaient une validation), aucun teasing avant, aucune relance. Maxime :
+« on n'a pas du tout fait assez de teasing ». Le jeu a dû être prolongé d'une semaine.
+
+| Moment | Ce qui sort |
+|---|---|
+| J-3 à J-1 avant le lancement | 2 ou 3 stories de teasing (« demain, je fais gagner quelque chose »), sans dévoiler le lot |
+| Jour du lancement | le post à 18h, une story « nouveau post » juste après, une story « tu as joué ? » le soir |
+| Chaque jour du jeu | au moins une story de relance à midi, avec le bandeau ; une deuxième le soir les deux derniers jours |
+| Chaque post et reel de la période | une ligne qui renvoie au jeu et rappelle le levier (amis tagués, story) |
+| Mi-parcours | une story de preuve sociale avec un chiffre réel lu dans les stats (commentaires, partages) |
+| J-2, J-1, dernier jour, 3 heures avant la fin | compte à rebours en story |
+| Lendemain de la fin | tirage en story, puis post « le jeu est terminé, ton film reste possible » |
+
+**Rien de ce calendrier ne doit attendre une validation.** Sur un compte en publication automatique,
+les stories sont programmées prêtes à partir. Si Maxime veut d'autres photos, on remplace le
+visuel, on ne met pas la campagne en pause plus de quelques heures. Si une pause a fait perdre des
+jours, on prolonge le jeu plutôt que de compresser la relance.
+
 ## 1. Le post du concours : le bloc « Pour jouer » obligatoire
 
 ```
