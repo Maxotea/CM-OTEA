@@ -122,8 +122,9 @@ pour qu'aucun oubli ne dépende de la mémoire :
 | 12 au 20/12 (dates à confirmer) | « HYROX Paris · images de course pour la série » | roxzone, sled push en 100p et sa sortie, un plan brut S-Log3 gardé tel quel, le son, le point de vue caméra, les kilomètres à la montre |
 | lun 04/01/2027, 9 h à 10 h | « Tournage 2/2 · saison 2 » | les 8 épisodes de la saison 2, scripts à écrire avant le 21/12 |
 
-Les blocs « BNI » et « Devis, factures, relances » du lundi matin tombent sur les deux séances face
-caméra : Maxime les décale ou déplace la séance.
+Le relevé des demandes BNI a quitté le lundi pour le vendredi 9 h, juste après la réunion BNI La
+Défense (décision de Maxime du 08/11). Seul le bloc « Devis, factures, relances » du lundi reste sur
+le créneau des deux séances face caméra : il se fait après le tournage, à 10 h.
 
 ## 7. Ce qui reste à confirmer
 
