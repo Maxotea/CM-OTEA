@@ -34,8 +34,10 @@ système motion design et posts. Plan complet : `plans/otea/2026-11-filmakers-ed
   de MONTAGE-OTEA : Maxime détouré, motion design derrière lui calé sur ses mots, images de course de
   Rome et Nice (Pierre et Antoine seulement) en inserts. Scripts `plans/otea/reels/educatif/E01` à `E08`,
   storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Ces reels
-  gardent la voix de Maxime et portent la signature sonore de la série, « Under the Sun » de Bakermat
-  feat. Kidda, en intro et en outro (décision du 08/11 ; droits à vérifier avant le premier montage).
+  gardent la voix de Maxime seule ; la signature sonore de la série, « Under the Sun » de Bakermat
+  feat. Kidda, se pose depuis la bibliothèque Instagram à la publication (pas de licence, confirmé le
+  08/11), et s'entend seule sous les cartes d'ouverture et de fin. Première séance de tournage des
+  huit épisodes : lundi 09/11/2026, 9 h à 10 h (`plans/otea/reels/educatif/TOURNAGE-2026-11-09.md`).
   Question binaire en fin, un appel à écrire en message sur quatre au plus.
 - **1 carrousel éducatif stylisé par semaine** (mercredi 18 h), style `educatif` de `carrousel.py`
   (viseur, numéro en filigrane, chiffre géant, duel, CTA inversé, grain 18, Space Mono) : specs dans

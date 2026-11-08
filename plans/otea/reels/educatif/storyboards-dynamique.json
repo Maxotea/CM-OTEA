@@ -1,6 +1,6 @@
 {
   "source": "Prise face caméra de Maxime, une séance pour les huit épisodes (plans/otea/2026-11-filmakers-educatif.md § 6). Masque calculé à part (outils/detourer.py).",
-  "principe": "Maxime toujours à l'écran, détouré, liseré givre. Derrière lui, un élément par idée, calé sur ses mots. Les images de course (Rome, Nice ; Pierre Huiban et Antoine Bouhana seulement) remplacent le fond 1 à 2 s quand le script parle d'un plan précis : type image_plein_cadre, hors moteur, inséré au montage. Jump cuts serrés, transition balayée à chaque scène, carte de fin avec la question binaire. Signature sonore : « Under the Sun » (Bakermat feat. Kidda) en intro et en outro, voix de Maxime seule entre les deux (commun.musique).",
+  "principe": "Maxime toujours à l'écran, détouré, liseré givre. Derrière lui, un élément par idée, calé sur ses mots. Les images de course (Rome, Nice ; Pierre Huiban et Antoine Bouhana seulement) remplacent le fond 1 à 2 s quand le script parle d'un plan précis : type image_plein_cadre, hors moteur, inséré au montage. Jump cuts serrés, transition balayée à chaque scène, carte de fin avec la question binaire. Signature sonore : « Under the Sun » (Bakermat feat. Kidda), posée dans Instagram à la publication, jamais dans le fichier (pas de licence) ; les cartes d'ouverture et de fin, sans voix, lui laissent la place (commun.musique).",
   "_statut": "Brouillon du 08/11/2026 : scènes et déclencheurs écrits depuis les scripts E01 à E08 ; les extraits (secondes) se calent après tournage ; les crochets suivent ceux des scripts.",
   "charte": "charte-dynamique-otea-filmakers.json (à copier dans MONTAGE-OTEA/chartes/)",
   "commun": {
@@ -13,23 +13,18 @@
       "titre": "Under the Sun",
       "artistes": "Bakermat feat. Kidda",
       "album": "The Ringmaster (2020)",
-      "decision": "Maxime, 08/11/2026 : en intro et en outro de chaque reel de la série",
+      "decision": "Maxime, 08/11/2026 : la signature sonore de la série. Pas de licence de synchronisation (confirmé par Maxime le 08/11) : le morceau n'entre PAS dans le fichier.",
+      "dans_le_fichier": "la voix de Maxime seule (micro-cravate), aucune musique",
+      "dans_instagram": "à la publication (mode notification), Maxime pose « Under the Sun » depuis la bibliothèque musicale d'Instagram, volume bas sous la voix, sur toute la durée ; l'intro et l'outro visuelles (carte d'ouverture, carte de fin) laissent 2 s et 2,5 s où la musique s'entend seule",
+      "si_absent_de_la_bibliotheque": "choisir un autre son de la bibliothèque et le noter ici pour toute la série",
       "intro": {
         "duree": 2.0,
-        "sous": "carte d'ouverture",
-        "extrait_debut": null,
-        "extrait_fin": null
+        "sous": "carte d'ouverture, sans voix : la musique Instagram s'y entend seule"
       },
       "outro": {
         "duree": 2.5,
-        "sous": "carte de fin et question binaire",
-        "extrait_debut": null,
-        "extrait_fin": null,
-        "fondu_sortie": 0.8
-      },
-      "sous_la_voix": "ducking : la musique descend sous la voix de Maxime et ne remonte qu'à la carte de fin",
-      "_a_caler": "extrait_debut et extrait_fin en secondes, repérés une fois pour toute la série",
-      "_droits": "sortie commerciale sans licence de synchronisation par défaut : vérifier la licence de Maxime avant le premier montage ; sinon voix seule dans le fichier et morceau posé depuis la bibliothèque Instagram (plan § 3.1)"
+        "sous": "carte de fin et question binaire, sans voix"
+      }
     }
   },
   "videos": [
@@ -217,7 +212,7 @@
           "elements": [
             {
               "type": "grand_mot",
-              "texte": "[heure]",
+              "texte": "Avant la|première vague",
               "a": "J'arrive",
               "y": 0.1
             },
@@ -252,7 +247,7 @@
               "pas": 0.08,
               "items": [
                 {
-                  "texte": "[nombre] batteries",
+                  "texte": "batteries",
                   "a": "batteries"
                 },
                 {
@@ -1033,13 +1028,10 @@
           "fond": "encre",
           "elements": [
             {
-              "type": "compteur",
-              "de": 0,
-              "vers": 0,
-              "a": "kilomètres",
-              "legende": "à pied dans l'arène",
-              "suffixe": " km",
-              "y": 0.2
+              "type": "grand_mot",
+              "texte": "Ma propre|course",
+              "a": "propre course",
+              "y": 0.1
             },
             {
               "type": "tampon",
@@ -1054,7 +1046,6 @@
         }
       ],
       "cta": "Tu cours Paris ? Ta vague en commentaire.",
-      "_a_remplir": "compteur de la dernière scène : vers = kilomètres mesurés par Maxime",
       "extraits": [],
       "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
     },
