@@ -1,0 +1,65 @@
+{
+  "client": "otea-filmakers",
+  "slug": "2026-12-09-ta-course-filmee-ce-que-je-te-demande",
+  "style": "educatif",
+  "serie": "FILMER LE HYROX · 03",
+  "archetype": "A7",
+  "pilier": "P1",
+  "date_time": "2026-12-09T18:00:00",
+  "cible": "Athlète qui envisage de faire filmer une course et ne sait pas ce que ça lui demande, ni ce qui se passe avant, pendant et après le jour J",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "kicker": "Coulisses",
+      "title": "Ta course filmée : **ce que je te demande**",
+      "body": "Et ce que je fais de ton côté, avant, pendant, après."
+    },
+    {
+      "gabarit": "liste",
+      "kicker": "Avant",
+      "title": "Trois infos, par message, **la veille**",
+      "items": [
+        "Ton **heure de départ** et ta vague.",
+        "Ta tenue, pour te retrouver dans l'arène en une seconde.",
+        "Les stations que tu veux absolument en vidéo."
+      ]
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "01",
+      "kicker": "Pendant",
+      "title": "Je suis ta course **de station en station**.",
+      "body": "Une course, une station, je me déplace, j'anticipe la suivante. Le rythme, c'est le tien. Tu ne me vois pas, tu cours."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "02",
+      "kicker": "Le soir",
+      "title": "Le dérush.",
+      "body": "Je regarde tout, je note les plans qui ont une émotion, un geste propre, un son qui raconte. **Le film se décide là**, pas au tournage."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "03",
+      "kicker": "Après",
+      "title": "Étalonnage, montage, photos, film.",
+      "body": "L'image brute de la caméra devient celle que tu as vécue. Tu reçois **tes photos et ton film**, à toi, pour de bon."
+    },
+    {
+      "gabarit": "duel",
+      "kicker": "Ce que ça change",
+      "title": "Sans et avec",
+      "gauche": {"label": "Sans", "texte": "Trois photos officielles au passage, une story floue, et ta course qui s'efface."},
+      "droite": {"label": "Avec", "texte": "Ta course, vue de l'extérieur, **une fois pour toutes**."}
+    },
+    {
+      "gabarit": "cta",
+      "kicker": "Je t'accompagne",
+      "title": "Tu cours. **Je filme.** Tu revois.",
+      "body": "Écris-moi en message avec ta prochaine course, on cale le reste ensemble."
+    }
+  ],
+  "caption": "Ce que je te demande quand je filme ta course : trois infos la veille, par message. Ton heure de départ, ta tenue, les stations que tu veux en vidéo.\n\nLe reste, c'est de mon côté : je te suis de station en station, je dérushe le soir, puis l'étalonnage, le montage, tes photos et ton film.\n\nTa prochaine course, c'est laquelle ? Dis-le en commentaire 👇",
+  "hashtags": ["#hyrox", "#hyroxfrance", "#hyroxtraining", "#filmmaker", "#oteafilmakers"],
+  "note": "Troisième carrousel du programme éducatif. Déroulé de l'accompagnement validé par Maxime le 27/10/2026 (avant on s'écrit : heure de départ, tenue, stations ; pendant de station en station ; le soir le dérush ; après étalonnage, montage, photos, film). Aucune date ni aucun prix : HYROX Paris commence le 12/12, un appel daté serait hors de la fenêtre J-60 à J-30."
+}

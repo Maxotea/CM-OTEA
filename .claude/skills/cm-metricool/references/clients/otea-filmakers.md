@@ -26,6 +26,22 @@ du 25/10 (« Un plateau, cinq détails ») étaient du B2B publié ici par erreu
 - Test avant chaque post : un athlète ou un passionné de sport a-t-il envie de le lire ? Un
   directeur de la communication est-il la cible ? Si c'est le second, c'est OTEA Production.
 
+## Programme éducatif « Filmer le HYROX », 08/11/2026 (Maxime)
+Demande du 08/11 : de l'éducatif sur le métier de vidéaste sportif et HYROX, vu de l'intérieur et dans
+le détail (pourquoi un vidéaste, mes journées, comment je filme, suivre un athlète, le matériel), avec le
+système motion design et posts. Plan complet : `plans/otea/2026-11-filmakers-educatif.md`.
+- **2 reels face caméra par semaine** (mardi et jeudi 18 h, créneaux libres), montés au format dynamique
+  de MONTAGE-OTEA : Maxime détouré, motion design derrière lui calé sur ses mots, images de course de
+  Rome et Nice (Pierre et Antoine seulement) en inserts. Scripts `plans/otea/reels/educatif/E01` à `E08`,
+  storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Reels muets,
+  musique dans Instagram, question binaire en fin, un appel à écrire en message sur quatre au plus.
+- **1 carrousel éducatif stylisé par semaine** (mercredi 18 h), style `educatif` de `carrousel.py`
+  (viseur, numéro en filigrane, chiffre géant, duel, CTA inversé, grain 18, Space Mono) : specs dans
+  `carrousels/otea-filmakers/`, saison 1 les 18/11, 02/12, 09/12 et 16/12. Typographiques, sans photo.
+- Faits à confirmer par Maxime avant tournage (crochets des scripts) : heure d'arrivée dans l'arène,
+  kilomètres marchés sur une course, batteries et cartes, chiffres Sony de la FX3 et du 70-200, dates
+  exactes de Paris, nombre de plans et durée du film livré.
+
 ## Ce que le public aime, ligne de contenu du 26/10/2026 (Maxime)
 « Ce qu'ils aiment bien dans la communication sur Otea Filmakers, ça va être le avant / après,
 ramener beaucoup de valeur, dire que je les accompagne, la qualité de l'image aussi. » Quatre

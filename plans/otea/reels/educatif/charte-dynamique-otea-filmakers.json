@@ -1,0 +1,76 @@
+{
+  "_statut": "Charte du format dynamique (MONTAGE-OTEA, src/dynamique.js) pour Otea Filmakers. À copier dans MONTAGE-OTEA/chartes/otea-filmakers.json. Le bloc dynamique (région, visage, exclusion) se règle sur la vraie prise : les valeurs ci-dessous supposent une prise 1920x1080, Maxime centré, et sont à ajuster après le premier détourage.",
+  "source": {
+    "titre": "Brandbook OTEA 2026, combinaison « Vert & Noir » du compte Otea Filmakers (scripts/themes.json, CM-OTEA)",
+    "couleurs": {
+      "encre": "#201E1E · fond principal",
+      "graphite": "#2E2B2B · second fond, filigranes",
+      "vert": "#D5DEDD · texte",
+      "sauge": "#ACC1C0 · mentions, labels",
+      "givre": "#F1F1F1 · accent, mots forts"
+    },
+    "polices": {
+      "titre": "Inter Display Bold (OFL, CM-OTEA/fonts/inter-display/)",
+      "contenu": "Inter Display Medium",
+      "mentions": "Space Mono Bold (OFL, CM-OTEA/fonts/space-mono/)"
+    },
+    "motifs": "lignes (le viseur), quadrillage (la grille de l'arène)",
+    "logo": "aucun logo à l'image : la signature est le pseudo @oteafilmakers"
+  },
+  "charte": {
+    "modele": "impact",
+    "police": "Inter Display",
+    "taille": "grande",
+    "majuscules": false,
+    "gras": true,
+    "couleur_texte": "#F1F1F1",
+    "couleur_actif": "#F1F1F1",
+    "couleur_fort": "#ACC1C0",
+    "couleur_contour": "#201E1E",
+    "contour": "epais",
+    "bandeau": "",
+    "mode_actif": "pastille",
+    "position": 0.84,
+    "pseudo": "@oteafilmakers",
+    "pseudo_position": "bas",
+    "couleur_pseudo": "#ACC1C0",
+    "barre": "#F1F1F1",
+    "accroche": false,
+    "couleur_accroche": "#F1F1F1",
+    "logo": false,
+    "mots_par_ligne": 3
+  },
+  "cartes": {
+    "fond_ouverture": "#201E1E",
+    "motif_ouverture": "lignes",
+    "couleur_motif_ouverture": "#2E2B2B",
+    "fond_chapitre": "#2E2B2B",
+    "motif_chapitre": "quadrillage",
+    "couleur_motif_chapitre": "#201E1E",
+    "fond_fin": "#F1F1F1",
+    "motif_fin": "lignes",
+    "couleur_motif_fin": "#D5DEDD",
+    "motif_bandeaux": "lignes",
+    "couleur_motif_bandeaux": "#2E2B2B",
+    "position_sous_titres": 0.84,
+    "position_mots_cles": 0.22
+  },
+  "palette": {
+    "encre": "#201E1E",
+    "graphite": "#2E2B2B",
+    "vert": "#D5DEDD",
+    "sauge": "#ACC1C0",
+    "givre": "#F1F1F1",
+    "texte": "#D5DEDD",
+    "sombre": "#201E1E",
+    "accent": "#F1F1F1",
+    "fort": "#ACC1C0"
+  },
+  "dynamique": {
+    "region": {"x": 360, "y": 0, "largeur": 1200, "hauteur": 1080},
+    "visage": {"x": 960, "y": 400},
+    "contour": {"couleur": "#F1F1F1", "epaisseur": 8},
+    "exclusion": [],
+    "note": "Maxime porte souvent un t-shirt noir : tourner sur fond clair ou coloré, jamais noir sur noir, sinon le détourage mange l'épaule. Le liseré givre sépare la personne du fond encre."
+  }
+}

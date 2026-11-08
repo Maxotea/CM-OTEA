@@ -1,0 +1,1181 @@
+{
+  "source": "Prise face caméra de Maxime, une séance pour les huit épisodes (plans/otea/2026-11-filmakers-educatif.md § 6). Masque calculé à part (outils/detourer.py).",
+  "principe": "Maxime toujours à l'écran, détouré, liseré givre. Derrière lui, un élément par idée, calé sur ses mots. Les images de course (Rome, Nice ; Pierre Huiban et Antoine Bouhana seulement) remplacent le fond 1 à 2 s quand le script parle d'un plan précis : type image_plein_cadre, hors moteur, inséré au montage. Jump cuts serrés, transition balayée à chaque scène, carte de fin avec la question binaire.",
+  "_statut": "Brouillon du 08/11/2026 : scènes et déclencheurs écrits depuis les scripts E01 à E08 ; les extraits (secondes) se calent après tournage ; les crochets suivent ceux des scripts.",
+  "charte": "charte-dynamique-otea-filmakers.json (à copier dans MONTAGE-OTEA/chartes/)",
+  "commun": {
+    "silence_min": 0.25,
+    "position_sous_titres": 0.84,
+    "mots_par_ligne": 3,
+    "cta": "Suis @oteafilmakers",
+    "duree_cta": 2.4
+  },
+  "videos": [
+    {
+      "nom": "E01-pourquoi-un-videaste",
+      "sur_titre": "filmer le hyrox · 01",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 8,
+              "a": "8 kilomètres",
+              "legende": "kilomètres",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 8,
+              "a": "8 stations",
+              "legende": "stations",
+              "suffixe": "",
+              "y": 0.42
+            }
+          ],
+          "motif": "lignes"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "tampon",
+              "texte": "3 photos floues",
+              "a": "trois photos",
+              "y": 0.3,
+              "rotation": 4
+            }
+          ],
+          "a": "trois photos floues"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "cliche",
+              "texte": "les photos officielles suffisent",
+              "a": "photos officielles",
+              "barrer_a": "pas à toi"
+            },
+            {
+              "type": "tampon",
+              "texte": "PAS À TOI",
+              "a": "appartiennent",
+              "y": 0.34,
+              "rotation": 4
+            }
+          ],
+          "a": "Les photos officielles",
+          "motif": "quadrillage"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "Personne|ne filme",
+              "a": "Personne ne filme",
+              "y": 0.1,
+              "couleur": "accent"
+            },
+            {
+              "type": "liste",
+              "y": 0.36,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "ton sled push",
+                  "a": "sled push"
+                },
+                {
+                  "texte": "ta roxzone",
+                  "a": "roxzone"
+                }
+              ]
+            }
+          ],
+          "a": "Personne ne filme"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "visage en effort, Rome",
+              "a": "jamais"
+            },
+            {
+              "type": "grand_mot",
+              "texte": "De l'extérieur",
+              "a": "extérieur",
+              "y": 0.12
+            }
+          ],
+          "a": "Tu ne revois jamais"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "fantome",
+              "texte": "une fois",
+              "y": 0.25
+            },
+            {
+              "type": "tampon",
+              "texte": "UNE SEULE FOIS",
+              "a": "une fois",
+              "y": 0.3,
+              "rotation": 4
+            }
+          ],
+          "a": "ça ne se rattrape pas"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "checklist",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "station par station",
+                  "a": "station par station"
+                },
+                {
+                  "texte": "ton film",
+                  "a": "ton film"
+                }
+              ]
+            }
+          ],
+          "a": "Écris-moi"
+        }
+      ],
+      "cta": "Team photos ou team vidéo ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E02-ma-journee-de-course",
+      "sur_titre": "filmer le hyrox · 02",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 16,
+              "a": "16 segments",
+              "legende": "segments",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 16,
+              "a": "16 fois",
+              "legende": "fois au bon endroit",
+              "suffixe": "",
+              "y": 0.42
+            }
+          ],
+          "motif": "lignes"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "[heure]",
+              "a": "J'arrive",
+              "y": 0.1
+            },
+            {
+              "type": "checklist",
+              "y": 0.3,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "les stations",
+                  "a": "stations"
+                },
+                {
+                  "texte": "la lumière",
+                  "a": "lumière"
+                },
+                {
+                  "texte": "où me mettre",
+                  "a": "sans gêner"
+                }
+              ]
+            }
+          ],
+          "a": "J'arrive"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "liste",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "[nombre] batteries",
+                  "a": "batteries"
+                },
+                {
+                  "texte": "cartes",
+                  "a": "cartes"
+                }
+              ]
+            }
+          ],
+          "a": "mes batteries"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "plan de course",
+              "a": "regarde"
+            },
+            {
+              "type": "jauge",
+              "legende": "une heure",
+              "a": "Une heure",
+              "jusqua": "suivante",
+              "de": 10,
+              "vers": 100,
+              "depasse": "FIN"
+            }
+          ],
+          "a": "Une heure environ"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "tampon",
+              "texte": "SON RYTHME, PAS LE MIEN",
+              "a": "le sien",
+              "y": 0.3,
+              "rotation": 4
+            }
+          ],
+          "a": "Le rythme",
+          "motif": "quadrillage"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "timeline le soir",
+              "a": "dérush"
+            },
+            {
+              "type": "grand_mot",
+              "texte": "Dérush",
+              "a": "dérush",
+              "y": 0.1
+            },
+            {
+              "type": "liste",
+              "y": 0.34,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "étalonnage",
+                  "a": "étalonnage"
+                },
+                {
+                  "texte": "montage",
+                  "a": "montage"
+                }
+              ]
+            }
+          ],
+          "a": "Le dérush"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "projecteur"
+            },
+            {
+              "type": "grand_mot",
+              "texte": "ROXZONE",
+              "a": "roxzone",
+              "y": 0.1,
+              "couleur": "accent"
+            }
+          ],
+          "a": "la roxzone"
+        }
+      ],
+      "cta": "La journée entière ou la course ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E03-le-sled-push",
+      "sur_titre": "filmer le hyrox · 03",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "regle",
+              "y": 0.3
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 50,
+              "a": "50 mètres",
+              "legende": "",
+              "suffixe": " m",
+              "y": 0.2
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "Au bord|le plus bas",
+              "a": "le plus bas",
+              "y": 0.1
+            },
+            {
+              "type": "fleche",
+              "texte": "vers toi",
+              "a": "serré"
+            }
+          ],
+          "a": "Au bord",
+          "motif": "lignes"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "visage en sortie de traîneau, 100p",
+              "a": "visage"
+            }
+          ],
+          "a": "dans ton visage"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 25,
+              "vers": 100,
+              "a": "100 images",
+              "legende": "images par seconde",
+              "suffixe": " i/s",
+              "y": 0.2
+            },
+            {
+              "type": "barres",
+              "a": "quatre fois",
+              "items": [
+                {
+                  "label": "réel",
+                  "valeur": 0.25
+                },
+                {
+                  "label": "ralenti",
+                  "valeur": 1
+                }
+              ]
+            }
+          ],
+          "a": "100 images"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "cliche",
+              "texte": "le traîneau",
+              "a": "Pas le traîneau",
+              "barrer_a": "Pas le traîneau"
+            },
+            {
+              "type": "liste",
+              "y": 0.34,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "ton visage",
+                  "a": "visage"
+                },
+                {
+                  "texte": "tes appuis",
+                  "a": "appuis"
+                }
+              ]
+            }
+          ],
+          "a": "Pas le traîneau",
+          "motif": "quadrillage"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "projecteur"
+            },
+            {
+              "type": "tampon",
+              "texte": "LA SORTIE",
+              "a": "sortie",
+              "y": 0.3,
+              "rotation": 4
+            },
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "sortie du sled en ralenti",
+              "a": "repars"
+            }
+          ],
+          "a": "la sortie"
+        }
+      ],
+      "cta": "Ralenti ou vitesse réelle ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E04-la-roxzone",
+      "sur_titre": "filmer le hyrox · 04",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 16,
+              "a": "16 passages",
+              "legende": "passages en roxzone",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "tampon",
+              "texte": "PERSONNE",
+              "a": "Personne",
+              "y": 0.46,
+              "rotation": 4
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "Course|Roxzone|Station",
+              "a": "la zone",
+              "y": 0.1
+            },
+            {
+              "type": "jauge",
+              "legende": "ton chrono tourne",
+              "a": "chrono",
+              "jusqua": "tourne",
+              "de": 10,
+              "vers": 100,
+              "depasse": "FIN"
+            }
+          ],
+          "a": "La roxzone, c'est",
+          "motif": "quadrillage"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "roxzone, athlète qui marche vite",
+              "a": "spectaculaire"
+            },
+            {
+              "type": "liste",
+              "y": 0.34,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "marche vite",
+                  "a": "marche"
+                },
+                {
+                  "texte": "respire",
+                  "a": "respire"
+                },
+                {
+                  "texte": "cherche sa ligne",
+                  "a": "ligne"
+                }
+              ]
+            }
+          ],
+          "a": "rien de spectaculaire"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "projecteur"
+            },
+            {
+              "type": "checklist",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "ta fatigue",
+                  "a": "fatigue"
+                },
+                {
+                  "texte": "ta décision",
+                  "a": "décision"
+                },
+                {
+                  "texte": "ton regard",
+                  "a": "regard"
+                }
+              ]
+            }
+          ],
+          "a": "c'est là qu'on voit"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "Elle est là",
+              "a": "elle est là",
+              "y": 0.1,
+              "couleur": "accent"
+            }
+          ],
+          "a": "L'histoire de ta course"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "fleche",
+              "texte": "station suivante",
+              "a": "suivante"
+            }
+          ],
+          "a": "je te perds",
+          "motif": "lignes"
+        }
+      ],
+      "cta": "Roxzone ou wall balls ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E05-un-boitier-un-objectif",
+      "sur_titre": "filmer le hyrox · 05",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 1,
+              "a": "seul boîtier",
+              "legende": "boîtier",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 1,
+              "a": "seul objectif",
+              "legende": "objectif",
+              "suffixe": "",
+              "y": 0.42
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "FX3",
+              "a": "FX3",
+              "y": 0.1,
+              "couleur": "accent"
+            },
+            {
+              "type": "checklist",
+              "y": 0.3,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "en main toute la journée",
+                  "a": "journée"
+                },
+                {
+                  "texte": "100 i/s",
+                  "a": "100 images"
+                },
+                {
+                  "texte": "S-Log3",
+                  "a": "S-Log3"
+                }
+              ]
+            }
+          ],
+          "a": "La FX3",
+          "motif": "lignes"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "plan serré au 70-200",
+              "a": "70-200"
+            },
+            {
+              "type": "tampon",
+              "texte": "STABILISÉ",
+              "a": "Stabilisé",
+              "y": 0.3,
+              "rotation": 4
+            },
+            {
+              "type": "fleche",
+              "texte": "depuis le bord",
+              "a": "bord"
+            }
+          ],
+          "a": "Le 70-200"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "barres",
+              "a": "après",
+              "items": [
+                {
+                  "label": "brut",
+                  "valeur": 0.35
+                },
+                {
+                  "label": "étalonné",
+                  "valeur": 1
+                }
+              ]
+            },
+            {
+              "type": "grand_mot",
+              "texte": "Grise|et plate",
+              "a": "grise",
+              "y": 0.08
+            }
+          ],
+          "a": "Le S-Log3"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "cliche",
+              "texte": "c'est le matériel",
+              "a": "pas le matériel",
+              "barrer_a": "pas le matériel"
+            },
+            {
+              "type": "tampon",
+              "texte": "OÙ JE ME METS",
+              "a": "me mets",
+              "y": 0.36,
+              "rotation": 4
+            }
+          ],
+          "a": "pas le matériel",
+          "motif": "quadrillage"
+        }
+      ],
+      "cta": "Boîtier ou objectif ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E06-brut-puis-etalonne",
+      "sur_titre": "filmer le hyrox · 06",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "volet brut à gauche, étalonné à droite",
+              "a": "2 images"
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 2,
+              "a": "2 images",
+              "legende": "images",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 1,
+              "a": "1 seul plan",
+              "legende": "plan",
+              "suffixe": "",
+              "y": 0.42
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "plan brut S-Log3",
+              "a": "Gris"
+            },
+            {
+              "type": "liste",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "gris",
+                  "a": "Gris"
+                },
+                {
+                  "texte": "plat",
+                  "a": "plat"
+                },
+                {
+                  "texte": "sans contraste",
+                  "a": "contraste"
+                }
+              ]
+            },
+            {
+              "type": "tampon",
+              "texte": "S-LOG3",
+              "a": "S-Log3",
+              "y": 0.46,
+              "rotation": 4
+            }
+          ],
+          "a": "Le brut"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "checklist",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "point noir",
+                  "a": "point noir"
+                },
+                {
+                  "texte": "contraste",
+                  "a": "contraste"
+                },
+                {
+                  "texte": "couleurs",
+                  "a": "couleurs"
+                }
+              ]
+            },
+            {
+              "type": "jauge",
+              "legende": "plan par plan",
+              "a": "Plan par plan",
+              "jusqua": "course",
+              "de": 10,
+              "vers": 100,
+              "depasse": "FIN"
+            }
+          ],
+          "a": "Je pose",
+          "motif": "lignes"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "plan étalonné",
+              "a": "vécue"
+            },
+            {
+              "type": "cliche",
+              "texte": "un filtre",
+              "a": "pas un filtre",
+              "barrer_a": "pas un filtre"
+            }
+          ],
+          "a": "Je cherche l'image"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "grand_mot",
+              "texte": "Si tu le vois,|il est raté",
+              "a": "raté",
+              "y": 0.1,
+              "couleur": "accent"
+            }
+          ],
+          "a": "d'en faire trop",
+          "motif": "quadrillage"
+        }
+      ],
+      "cta": "Brut ou étalonné ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E07-j-4-avant-paris",
+      "sur_titre": "filmer le hyrox · 07",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 4,
+              "vers": 0,
+              "a": "4 jours",
+              "legende": "jours",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "grand_mot",
+              "texte": "HYROX|Paris",
+              "a": "Paris",
+              "y": 0.36
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "checklist",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "heure de départ",
+                  "a": "heure de départ"
+                },
+                {
+                  "texte": "tenue",
+                  "a": "tenue"
+                },
+                {
+                  "texte": "stations",
+                  "a": "stations"
+                }
+              ]
+            },
+            {
+              "type": "tampon",
+              "texte": "EN UNE SECONDE",
+              "a": "une seconde",
+              "y": 0.46,
+              "rotation": 4
+            }
+          ],
+          "a": "Il m'écrit",
+          "motif": "lignes"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "arène vide",
+              "a": "repère"
+            },
+            {
+              "type": "liste",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "où je peux être",
+                  "a": "être"
+                },
+                {
+                  "texte": "la lumière",
+                  "a": "lumière"
+                },
+                {
+                  "texte": "le sac",
+                  "a": "sac"
+                }
+              ]
+            },
+            {
+              "type": "tampon",
+              "texte": "AVANT, JAMAIS SUR PLACE",
+              "a": "sur place",
+              "y": 0.5,
+              "rotation": 4
+            }
+          ],
+          "a": "Je repère"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "checklist",
+              "y": 0.12,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "batteries",
+                  "a": "Batteries"
+                },
+                {
+                  "texte": "cartes",
+                  "a": "cartes"
+                },
+                {
+                  "texte": "objectif",
+                  "a": "objectif"
+                }
+              ]
+            },
+            {
+              "type": "grand_mot",
+              "texte": "Plus rien|à décider",
+              "a": "plus rien",
+              "y": 0.4
+            }
+          ],
+          "a": "Batteries"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 0,
+              "a": "kilomètres",
+              "legende": "à pied dans l'arène",
+              "suffixe": " km",
+              "y": 0.2
+            },
+            {
+              "type": "tampon",
+              "texte": "SANS DOSSARD",
+              "a": "dossard",
+              "y": 0.46,
+              "rotation": 4
+            }
+          ],
+          "a": "ma propre course",
+          "motif": "quadrillage"
+        }
+      ],
+      "cta": "Tu cours Paris ? Ta vague en commentaire.",
+      "_a_remplir": "compteur de la dernière scène : vers = kilomètres mesurés par Maxime",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    },
+    {
+      "nom": "E08-le-derush",
+      "sur_titre": "filmer le hyrox · 08",
+      "scenes": [
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "compteur",
+              "de": 0,
+              "vers": 3,
+              "a": "3 règles",
+              "legende": "règles",
+              "suffixe": "",
+              "y": 0.2
+            },
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "la timeline",
+              "a": "film"
+            }
+          ]
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "visage qui lâche prise",
+              "a": "visage"
+            },
+            {
+              "type": "barres",
+              "a": "dix plans",
+              "items": [
+                {
+                  "label": "visage",
+                  "valeur": 1
+                },
+                {
+                  "label": "traîneau",
+                  "valeur": 0.1
+                }
+              ]
+            },
+            {
+              "type": "tampon",
+              "texte": "LE PLAN RESTE",
+              "a": "reste",
+              "y": 0.5,
+              "rotation": 4
+            }
+          ],
+          "a": "Un visage",
+          "motif": "lignes"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "regle",
+              "y": 0.3
+            },
+            {
+              "type": "grand_mot",
+              "texte": "Du début|à la fin",
+              "a": "à la fin",
+              "y": 0.1
+            },
+            {
+              "type": "cliche",
+              "texte": "coupé au milieu",
+              "a": "coupé",
+              "barrer_a": "ne tient pas"
+            }
+          ],
+          "a": "Une répétition"
+        },
+        {
+          "fond": "graphite",
+          "elements": [
+            {
+              "type": "signaux",
+              "a": "son"
+            },
+            {
+              "type": "liste",
+              "y": 0.3,
+              "pas": 0.08,
+              "items": [
+                {
+                  "texte": "le souffle",
+                  "a": "souffle"
+                },
+                {
+                  "texte": "le sac",
+                  "a": "sac"
+                },
+                {
+                  "texte": "la ligne",
+                  "a": "ligne"
+                }
+              ]
+            }
+          ],
+          "a": "Le souffle"
+        },
+        {
+          "fond": "encre",
+          "elements": [
+            {
+              "type": "image_plein_cadre",
+              "_hors_moteur": "insérée au montage à la place du fond, 1 à 2 s",
+              "source": "le plan raté, assumé",
+              "a": "raté"
+            },
+            {
+              "type": "tampon",
+              "texte": "EXPRÈS",
+              "a": "Exprès",
+              "y": 0.3,
+              "rotation": 4
+            },
+            {
+              "type": "grand_mot",
+              "texte": "La vérité|de ta course",
+              "a": "vérité",
+              "y": 0.4,
+              "couleur": "accent"
+            }
+          ],
+          "a": "un plan raté",
+          "motif": "quadrillage"
+        }
+      ],
+      "cta": "Le plan raté, dedans ou pas ?",
+      "extraits": [],
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+    }
+  ]
+}
