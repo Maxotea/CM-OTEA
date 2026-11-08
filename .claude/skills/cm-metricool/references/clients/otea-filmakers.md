@@ -161,3 +161,24 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 
 ## Rendez-vous mensuel
 - **Récap photo du mois** (demande de Maxime, 22/10/2026) : chaque dernier jour du mois à 18:00, un carrousel de 6 à 10 vraies photos du mois, « je », tutoiement, intime, Instagram seul. Préparé le 28 par la tâche Cowork `recap-photo-mois`, publié par la relève. Aucune personne d'autre que Maxime.
+
+## Jeu concours HYROX Paris (04/11 au 11/11/2026)
+
+Post publié le 04/11 à 18h30, parti sans la mécanique de partage. Corrigé le soir même : les six
+stories du 05 au 11/11 portent le bandeau « +1 chance » (uuids 2906913798917145731,
+436374908062683021, 6011576334233782358, 3336353067214980376, 1698370163353339750,
+7151451247721729304), les légendes des reels du 05 et du 08/11 rappellent l'identification d'amis
+et le repartage. La légende du post publié se corrige dans l'app Instagram (Metricool ne modifie pas
+un post en ligne). Tirage le 12/11 avec `scripts/tirage-concours.py`. Règle complète :
+`.claude/memories/jeu-concours-mecanique-virale.md`.
+
+**Relance du 08/11/2026.** Une seule story de concours était sortie (4/11) : les six autres étaient
+restées en brouillon le temps de remplacer les photos. Maxime a validé de prolonger le jeu jusqu'au
+dimanche 15/11 à 23h59, tirage le lundi 16/11. Dix stories refaites avec ses 4 photos
+(`scripts/concours-story.py`), une par jour du 8 au 15/11 plus des doublons le 8 et le 15 : uuids
+2906913798917145731 (prolongé), -2454613258636735341 (tu as joué ?), 436374908062683021,
+6011576334233782358, 3336353067214980376, 3584153249113917145 (preuve sociale),
+-8986379249090739953 (J-2), 1698370163353339750 (J-1), 7151451247721729304 (fin ce soir),
+-4987887533810364474 (3 heures). Le reel du 8/11 et les posts des 9, 10, 11 et 13/11 renvoient au
+jeu ; le post « jeu terminé » passe au 16/11 à 18h30. Légende du post du jeu : dates à corriger par
+Maxime dans l'app.
