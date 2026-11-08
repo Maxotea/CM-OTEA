@@ -33,8 +33,10 @@ système motion design et posts. Plan complet : `plans/otea/2026-11-filmakers-ed
 - **2 reels face caméra par semaine** (mardi et jeudi 18 h, créneaux libres), montés au format dynamique
   de MONTAGE-OTEA : Maxime détouré, motion design derrière lui calé sur ses mots, images de course de
   Rome et Nice (Pierre et Antoine seulement) en inserts. Scripts `plans/otea/reels/educatif/E01` à `E08`,
-  storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Reels muets,
-  musique dans Instagram, question binaire en fin, un appel à écrire en message sur quatre au plus.
+  storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Ces reels
+  gardent la voix de Maxime et portent la signature sonore de la série, « Under the Sun » de Bakermat
+  feat. Kidda, en intro et en outro (décision du 08/11 ; droits à vérifier avant le premier montage).
+  Question binaire en fin, un appel à écrire en message sur quatre au plus.
 - **1 carrousel éducatif stylisé par semaine** (mercredi 18 h), style `educatif` de `carrousel.py`
   (viseur, numéro en filigrane, chiffre géant, duel, CTA inversé, grain 18, Space Mono) : specs dans
   `carrousels/otea-filmakers/`, saison 1 les 18/11, 02/12, 09/12 et 16/12. Typographiques, sans photo.
