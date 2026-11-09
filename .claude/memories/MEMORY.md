@@ -13,3 +13,4 @@
 - [Devis validé : blocs agenda](devis-valide-blocs-agenda.md) : dès qu'un devis est accepté, poser le jour même les blocs préprod, prod, post et livraison dans l'agenda, selon la grille du fichier
 - `posture-solution-jamais-excuse.md` : dans un mail client, ouvrir sur la solution et un engagement daté, jamais sur une excuse ou un « je ne peux pas » (règle de Maxime, 5 octobre 2026).
 - [R.O.I. · Dan et Elodie en copie](roi-mails-copie-dan-elodie.md) : chaque mail de la campagne R.O.I. part avec d.haarfi@asgcourtage.com et e.pereira@dplavocats.fr en copie (règle du 23/10/2026)
+- [Relance de propal J+3 · OTEA seul](relance-propal-j3-otea-seul.md) : la propal se relance à J+3 seulement quand OTEA est seul ; un dossier partagé avec Memorem (Off Golf, Bellefontaine, Emergence, Lou ou Guillaume dans la boucle) n'est jamais relancé tout seul (règle du 09/11/2026)
