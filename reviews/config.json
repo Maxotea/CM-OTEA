@@ -78,7 +78,21 @@
         "1WAhFpk-WHlTqjn8-zaZbfc5P-1o-gEYqgsfK7jAEADo",
         "14UJlJKm4hCN2PP3yyA4eY1ae4okdQoaGjnmepvr7WIg"
       ],
-      "note": "SORTI DU CIRCUIT le 07/10/2026 : Maxime est le client de ce compte, « tu peux considérer que c'est validé à chaque fois, car c'est moi ». Plus de tableau à générer ni à relever ; dossier et tableaux des 12-10 et 19-10 conservés tels quels. validation_auto : à chaque relève, les brouillons des 14 jours à venir passent en publication automatique (garde-fous : média, placeholders, tiret cadratin, note de tournage), voir valider_auto dans scripts/review.py. medias_retenus : les visuels IA téléversés en juillet (11 posts gardés en IA le 29/07, faute de vraie photo correspondante) ne partent jamais seuls, il faut leur mettre une vraie photo. Historique : jusqu'au 07/10/2026 Maxime validait directement dans Metricool ; depuis, même circuit que Pierre Huiban à sa demande (« faire le même process pour OTEA Production et OTEA Filmakers ») : dossier Validation hebdo créé le 07/10, deux semaines ouvertes. A servi de banc d'essai réel le 08/08/2026 (post 359735766)."
+      "note": "SORTI DU CIRCUIT le 07/10/2026 : Maxime est le client de ce compte, « tu peux considérer que c'est validé à chaque fois, car c'est moi ». Plus de tableau à générer ni à relever ; dossier et tableaux des 12-10 et 19-10 conservés tels quels. validation_auto : à chaque relève, les brouillons des 14 jours à venir passent en publication automatique (garde-fous : média, placeholders, tiret cadratin, note de tournage), voir valider_auto dans scripts/review.py. medias_retenus : les visuels IA téléversés en juillet (11 posts gardés en IA le 29/07, faute de vraie photo correspondante) ne partent jamais seuls, il faut leur mettre une vraie photo. Historique : jusqu'au 07/10/2026 Maxime validait directement dans Metricool ; depuis, même circuit que Pierre Huiban à sa demande (« faire le même process pour OTEA Production et OTEA Filmakers ») : dossier Validation hebdo créé le 07/10, deux semaines ouvertes. A servi de banc d'essai réel le 08/08/2026 (post 359735766).",
+      "en_attente": [
+        {
+          "uuid": "4264688611609431379",
+          "motif": "mar 10/11 12h « On n'a rien d'intéressant à filmer » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        },
+        {
+          "uuid": "-3155615471557721545",
+          "motif": "jeu 12/11 12h « micro tendu » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        },
+        {
+          "uuid": "4735606945083113679",
+          "motif": "lun 16/11 12h « Tech Show Paris » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        }
+      ]
     },
     {
       "slug": "otea-filmakers",
