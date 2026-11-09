@@ -9,6 +9,7 @@ Skill Claude Code d'automatisation du community management (Metricool via Zapier
 - `.claude/skills/cm-metricool/references/clients/` — une fiche par client (+ banques photos)
 - `carrousels/<client>/*.json` — les specs de carrousels, un fichier par semaine et par compte
 - `scripts/carrousel.py` + `scripts/themes.json` — le générateur de slides et la DA de chaque compte
+- `scripts/carrousel_educatif.py` — le style « educatif » des carrousels (Otea Filmakers) : viseur, numéro en filigrane, chiffre géant, duel, CTA inversé ; programme dans `plans/otea/2026-11-filmakers-educatif.md`
 - `scripts/review.py` + `reviews/` — la review hebdo client : le fichier Excel de validation et son aller-retour avec Metricool
 - `.claude/skills/cm-metricool/references/review-hebdo.md` — le circuit complet de la review
 
@@ -86,6 +87,23 @@ python3 scripts/habillage.py o/salomon-aftermovie.mp4 aftermovies/salomon/habill
 sans rendre tout le film. Le fichier de référence du projet Salomon est
 `aftermovies/salomon/habillage.json` ; les EDL `o/*.montage.json` sont
 versionnées, les rendus mp4 non.
+
+### Logo qui se dessine en néon sur le décor (VFX, inspiration n° 4)
+
+`scripts/vfx-logo.py` pose le logo du client sur une vraie surface du plan (un
+mur, une façade, une banderole) : le contour s'allume en néon lettre par
+lettre, puis le logo se remplit et reste incrusté. Le logo est mis en
+perspective sur 4 coins et suit le mouvement de caméra tout seul (repères
+suivis, recalés, renouvelés quand ils sortent du cadre).
+
+```bash
+python3 scripts/vfx-logo.py plan.mp4 logo-client.png --debut 0.4 --reperes o/reperes.png
+python3 scripts/vfx-logo.py plan.mp4 logo-client.png --debut 0.4 \
+    --coins "212,80 610,140 590,330 190,300" --sortie o/plan-vfx.mp4
+```
+
+La recette complète (choix du plan, réglages, ce que l'outil ne fait pas) est
+dans `.claude/skills/cm-metricool/references/inspirations-montage.md`.
 
 ## Reel client depuis un dossier de rushs (prises multiples, stéréo, étalonnage)
 

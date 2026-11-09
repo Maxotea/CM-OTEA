@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Effet « le logo se construit tout seul » sur la vraie photo d'un lieu.
 
-Inspiration n° 4 de `.claude/skills/cm-metricool/references/inspirations-montage.md`
+Inspiration n° 5 de `.claude/skills/cm-metricool/references/inspirations-montage.md`
 (reel DeD1VHeuHfb, @welamall, 18 s). La façade, la salle ou le stand du client est
 une vraie photo, immobile ; seul le logo bouge : il est absent au départ, puis il
 s'assemble (pièces, lettres, disque qui pivote, néon qui s'allume) et se pose

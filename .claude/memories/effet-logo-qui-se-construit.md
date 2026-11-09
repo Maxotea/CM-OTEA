@@ -10,7 +10,7 @@ metadata:
 **Demande de Maxime, 07/11/2026 :** « Apprends à faire cet effet pour les prochains
 after-movie et montages », sur le reel
 [DeD1VHeuHfb](https://www.instagram.com/reel/DeD1VHeuHfb/) (@welamall, 18 s,
-2 827 j'aime). Inspiration n° 4 de
+2 827 j'aime). Inspiration n° 5 de
 `.claude/skills/cm-metricool/references/inspirations-montage.md`.
 
 ## Ce qu'on voit dans le reel (mesuré image par image)

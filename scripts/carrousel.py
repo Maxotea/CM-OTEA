@@ -21,6 +21,9 @@ from pathlib import Path
 
 import urllib.request
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import credits  # noqa: E402
+
 try:
     from PIL import Image, ImageDraw, ImageFilter, ImageFont
 except ImportError:
@@ -459,6 +462,15 @@ def load_themes():
 
 
 def validate(spec, themes, path):
+    # Le style « educatif » (séries pédagogiques d'Otea Filmakers) a ses propres gabarits
+    # et sa propre validation : scripts/carrousel_educatif.py. Mêmes sorties, même
+    # planification, seule la mise en page change.
+    if spec.get("style") == "educatif":
+        import carrousel_educatif
+        errs = carrousel_educatif.valider(spec, themes)
+        if errs:
+            raise ValueError(f"{path.name} :\n  - " + "\n  - ".join(errs))
+        return spec
     errs = []
     fonds = None
     theme = themes.get(spec.get("client")) or {}
@@ -530,12 +542,22 @@ def render_spec(path, themes, check_only=False):
     spec = validate(json.loads(path.read_text(encoding="utf-8")), themes, path)
     theme = themes[spec["client"]]
     slides = spec["slides"]
-    fonds = charger_manifeste(theme)
     out = ROOT / "medias" / spec["client"] / "carrousels" / spec["slug"]
+
+    if spec.get("style") == "educatif":
+        import carrousel_educatif
+
+        def rendre(slide, i, n):
+            return carrousel_educatif.rendre_slide(spec, slide, theme, i, n)
+    else:
+        fonds = charger_manifeste(theme)
+
+        def rendre(slide, i, n):
+            return render_slide(slide, theme, i, n, spec["slug"], fonds)
 
     files = []
     for i, slide in enumerate(slides, 1):
-        img = render_slide(slide, theme, i, len(slides), spec["slug"], fonds)
+        img = rendre(slide, i, len(slides))
         name = f"slide-{i:02d}.png"
         files.append(name)
         if not check_only:
@@ -546,6 +568,20 @@ def render_spec(path, themes, check_only=False):
         return out, files
 
     caption = spec["caption"].strip()
+    # le photographe d'une photo de fond est crédité d'office (règle du 06/11/2026)
+    utilisees = [fonds[s["photo"]] for s in slides if fonds and s.get("photo") in fonds]
+    reseaux = spec.get("networks", theme.get("networks", ["instagram"]))
+    # une seule légende part sur tous les réseaux : formule Instagram, sauf compte LinkedIn seul
+    principal = "linkedin" if reseaux == ["linkedin"] else "instagram"
+    caption = credits.crediter(caption, utilisees, reseau=principal)
+    for nom in credits.comptes_manquants(utilisees):
+        print(f"  ! {spec['slug']} : crédit de {nom} posé sans son compte Instagram "
+              f"(à renseigner dans photos/photographes.json)", file=sys.stderr)
+    ligne_linkedin = credits.ligne_credit(utilisees, reseau="linkedin")
+    if "linkedin" in reseaux and principal != "linkedin" and ligne_linkedin:
+        print(f"  ! {spec['slug']} : sur LinkedIn, remplacer la ligne de crédit par "
+              f"« {ligne_linkedin} » en tapant le @ et en choisissant son profil, "
+              f"sinon le tag ne prend pas", file=sys.stderr)
     tags = " ".join(spec.get("hashtags", []))
     (out / "caption.txt").write_text(f"{caption}\n\n{tags}\n".strip() + "\n", encoding="utf-8")
     (out / "manifest.json").write_text(json.dumps({
@@ -553,6 +589,7 @@ def render_spec(path, themes, check_only=False):
         "slug": spec["slug"],
         "archetype": spec["archetype"],
         "pilier": spec["pilier"],
+        "style": spec.get("style", "classique"),
         "date_time": spec["date_time"],
         "networks": spec.get("networks", theme.get("networks", ["instagram"])),
         "type": "POST",

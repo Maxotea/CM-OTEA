@@ -1,0 +1,74 @@
+{
+  "client": "otea-filmakers",
+  "slug": "2026-11-18-images-de-course-idees-recues",
+  "style": "educatif",
+  "serie": "FILMER LE HYROX · 01",
+  "archetype": "A4",
+  "pilier": "P1",
+  "date_time": "2026-11-18T18:00:00",
+  "cible": "Athlète HYROX amateur qui prépare Paris en décembre, pense que les photos officielles et la story d'un pote suffisent, et n'a jamais vu sa course de l'extérieur",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "kicker": "Idées reçues",
+      "title": "Tes images de course : **5 idées reçues**",
+      "body": "Ce qu'on croit avant la course. Ce qu'on constate après."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "01",
+      "kicker": "Idée reçue",
+      "title": "« Les photos officielles suffisent. »",
+      "body": "Elles appartiennent à l'organisateur. Tu ne choisis **ni le moment ni l'angle**, et tu n'y es qu'au passage devant le photographe."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "02",
+      "kicker": "Idée reçue",
+      "title": "« Un pote filme avec son téléphone. »",
+      "body": "Il filme ce qu'il voit depuis le public, à contre-jour, en vertical tremblé. **Il ne peut pas te suivre** de station en station."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "03",
+      "kicker": "Idée reçue",
+      "title": "« L'organisation filme l'événement. »",
+      "body": "Elle filme l'épreuve, pas ta course. Tes 8 stations et ta roxzone, **personne ne les cadre** si personne n'est là pour toi."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "04",
+      "kicker": "Idée reçue",
+      "title": "« Un film, c'est pour les pros. »",
+      "body": "Un pro a déjà des images. Toi, tu as **une course dans l'année**, des mois de préparation, et rien pour la revoir."
+    },
+    {
+      "gabarit": "duel",
+      "kicker": "Idée reçue 05",
+      "title": "« Ça se décide le jour J. »",
+      "gauche": {
+        "label": "Le jour J",
+        "texte": "Je suis déjà dans l'arène, avec un autre athlète."
+      },
+      "droite": {
+        "label": "Avant",
+        "texte": "On s'écrit : **heure de départ**, tenue, stations. J'arrive en sachant où me mettre."
+      }
+    },
+    {
+      "gabarit": "cta",
+      "kicker": "Ta course, ton film",
+      "title": "Je suis ta course **station par station**.",
+      "body": "Tu repars avec tes photos et ton film. Écris-moi en message, on cale ta prochaine course."
+    }
+  ],
+  "caption": "Cinq idées reçues sur les images de course, et ce que je constate à chaque HYROX.\n\nLa plus tenace : « les photos officielles suffisent ». Elles ne sont pas à toi, tu n'y es qu'au passage devant le photographe, et personne ne filme ta roxzone.\n\nSwipe, et dis-moi en commentaire laquelle tu croyais encore.\n\nTeam photos ou team vidéo ? 👇",
+  "hashtags": [
+    "#hyrox",
+    "#hyroxfrance",
+    "#hyroxparis",
+    "#filmmaker",
+    "#oteafilmakers"
+  ],
+  "note": "Premier carrousel du programme éducatif (plans/otea/2026-11-filmakers-educatif.md). Remplace le post texte du 18/11 (383270536, au neutre) selon la règle du mercredi. Aucun prix, aucune date de Paris dans le texte : l'appel reste « écris-moi en message » (règle d'un post sur quatre). Le nombre 8 est la structure officielle d'un HYROX (8 courses de 1 km, 8 stations)."
+}

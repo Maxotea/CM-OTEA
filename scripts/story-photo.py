@@ -57,6 +57,9 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageOps
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import credits  # noqa: E402
+
 ICI = Path(__file__).resolve().parent
 ROOT = ICI.parent
 POLICES_DEPOT = ROOT / "fonts"
@@ -712,6 +715,14 @@ def main(argv=None):
         cadrer(photo, decalage, a.basse_definition).save(a.fond, quality=95, subsampling=0)
         print(f"{a.fond} : recadrage 9:16 sans texte (entrée i2v)")
     rendu["image"].save(sortie, quality=92, subsampling=0)
+    ligne = credits.ligne_credit([entree] if entree else [])
+    if ligne:
+        # une story n'a pas de légende : le crédit passe par le sticker mention, posé
+        # dans Instagram à la validation, et par le texte du brouillon Metricool
+        print(f"  CRÉDIT À POSER (sticker mention) : {ligne}")
+        lk = credits.ligne_credit([entree], reseau="linkedin")
+        if lk != ligne:
+            print(f"  sur LinkedIn : {lk} (taper le @ et choisir son profil)")
     print(f"{sortie} : voile (haut, bas) = {rendu['voile']}")
     print("  contrastes : " + ", ".join(f"{e} {v}:1 (cible {c})" for e, (v, c) in rendu["mesures"].items()))
     info = {k: v for k, v in rendu["info"].items() if k != "polices"}

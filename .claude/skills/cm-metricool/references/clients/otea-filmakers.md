@@ -26,6 +26,24 @@ du 25/10 (« Un plateau, cinq détails ») étaient du B2B publié ici par erreu
 - Test avant chaque post : un athlète ou un passionné de sport a-t-il envie de le lire ? Un
   directeur de la communication est-il la cible ? Si c'est le second, c'est OTEA Production.
 
+## Programme éducatif « Filmer le HYROX », 08/11/2026 (Maxime)
+Demande du 08/11 : de l'éducatif sur le métier de vidéaste sportif et HYROX, vu de l'intérieur et dans
+le détail (pourquoi un vidéaste, mes journées, comment je filme, suivre un athlète, le matériel), avec le
+système motion design et posts. Plan complet : `plans/otea/2026-11-filmakers-educatif.md`.
+- **2 reels face caméra par semaine** (mardi et jeudi 18 h, créneaux libres), montés au format dynamique
+  de MONTAGE-OTEA : Maxime détouré, motion design derrière lui calé sur ses mots, images de course de
+  Rome et Nice (Pierre et Antoine seulement) en inserts. Scripts `plans/otea/reels/educatif/E01` à `E08`,
+  storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Ces reels
+  gardent la voix de Maxime et portent la signature sonore de la série, « Under the Sun » de Bakermat
+  feat. Kidda, en intro et en outro (décision du 08/11 ; droits à vérifier avant le premier montage).
+  Question binaire en fin, un appel à écrire en message sur quatre au plus.
+- **1 carrousel éducatif stylisé par semaine** (mercredi 18 h), style `educatif` de `carrousel.py`
+  (viseur, numéro en filigrane, chiffre géant, duel, CTA inversé, grain 18, Space Mono) : specs dans
+  `carrousels/otea-filmakers/`, saison 1 les 18/11, 02/12, 09/12 et 16/12. Typographiques, sans photo.
+- Faits à confirmer par Maxime avant tournage (crochets des scripts) : heure d'arrivée dans l'arène,
+  kilomètres marchés sur une course, batteries et cartes, chiffres Sony de la FX3 et du 70-200, dates
+  exactes de Paris, nombre de plans et durée du film livré.
+
 ## Ce que le public aime, ligne de contenu du 26/10/2026 (Maxime)
 « Ce qu'ils aiment bien dans la communication sur Otea Filmakers, ça va être le avant / après,
 ramener beaucoup de valeur, dire que je les accompagne, la qualité de l'image aussi. » Quatre
@@ -65,6 +83,20 @@ phrase devient « Je l'avais à HYROX Nice en février et à Rome » (carte refa
 par Metricool, md5 vérifié). À dire à Maxime si la FX3 était bien à Poznań en décembre 2025. La carte 1 de B1 montre
 un spectateur à lunettes, identifiable, à gauche de Pierre : à signaler. Les 7 uuids sont sortis de `en_attente`
 (`reviews/config.json`), seuls les deux reels Bordeaux y restent.
+
+## Avant / après : les photos, pas les rushes (Maxime, 02/11/2026)
+« J'aime pas les photos et la colorimétrie […] Sur les photos avant, après, où là on voit une réelle
+différence, c'est beaucoup plus joli. Là sur les vidéos, c'était pas beau. » Le carrousel A1 du 02/11
+(images tirées des rushes, étalonnage automatique) est parti à 18:00 : https://www.instagram.com/p/DfPzPShFcjC/.
+Metricool ne supprime pas un post publié : c'est à Maxime de le retirer dans l'appli Instagram.
+- **Règle** : tout avant / après de ce compte se fait sur les photos de Maxime, dossier Drive
+  « HYROX ROME 2026 » : `RETOUCHEES` (62 JPG, l'après) et `CAPTURES BRUTES (S-Log3 PNG 16 bits)`
+  (l'avant, même numéro avec `_RAW`). Jamais un étalonnage automatique (`etalonnage-punch.py`) en vitrine.
+- **Reel A2 du 25/11** (uuid 6417583479028599017, rushes étalonnés) : remplacé, décision du 03/11
+  (« mets-le avant le 25 […] pourquoi pas le remplacer »). Bloqué dans `en_attente` de `reviews/config.json`.
+  Le carrousel photos prend sa place, au plus tard le 25/11.
+- **Blocage** : les brutes font 9 à 38 Mo, trop lourdes pour le connecteur Drive. Il faut que Maxime partage
+  le dossier `CAPTURES BRUTES` en « tous ceux qui ont le lien » (ou qu'il en exporte quelques-unes en JPG).
 
 ## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
@@ -143,3 +175,24 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 
 ## Rendez-vous mensuel
 - **Récap photo du mois** (demande de Maxime, 22/10/2026) : chaque dernier jour du mois à 18:00, un carrousel de 6 à 10 vraies photos du mois, « je », tutoiement, intime, Instagram seul. Préparé le 28 par la tâche Cowork `recap-photo-mois`, publié par la relève. Aucune personne d'autre que Maxime.
+
+## Jeu concours HYROX Paris (04/11 au 11/11/2026)
+
+Post publié le 04/11 à 18h30, parti sans la mécanique de partage. Corrigé le soir même : les six
+stories du 05 au 11/11 portent le bandeau « +1 chance » (uuids 2906913798917145731,
+436374908062683021, 6011576334233782358, 3336353067214980376, 1698370163353339750,
+7151451247721729304), les légendes des reels du 05 et du 08/11 rappellent l'identification d'amis
+et le repartage. La légende du post publié se corrige dans l'app Instagram (Metricool ne modifie pas
+un post en ligne). Tirage le 12/11 avec `scripts/tirage-concours.py`. Règle complète :
+`.claude/memories/jeu-concours-mecanique-virale.md`.
+
+**Relance du 08/11/2026.** Une seule story de concours était sortie (4/11) : les six autres étaient
+restées en brouillon le temps de remplacer les photos. Maxime a validé de prolonger le jeu jusqu'au
+dimanche 15/11 à 23h59, tirage le lundi 16/11. Dix stories refaites avec ses 4 photos
+(`scripts/concours-story.py`), une par jour du 8 au 15/11 plus des doublons le 8 et le 15 : uuids
+2906913798917145731 (prolongé), -2454613258636735341 (tu as joué ?), 436374908062683021,
+6011576334233782358, 3336353067214980376, 3584153249113917145 (preuve sociale),
+-8986379249090739953 (J-2), 1698370163353339750 (J-1), 7151451247721729304 (fin ce soir),
+-4987887533810364474 (3 heures). Le reel du 8/11 et les posts des 9, 10, 11 et 13/11 renvoient au
+jeu ; le post « jeu terminé » passe au 16/11 à 18h30. Légende du post du jeu : dates à corriger par
+Maxime dans l'app.
