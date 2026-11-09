@@ -25,7 +25,8 @@ spec.json : liste de stories, chacune :
       {"type": "bouton", "texte": "TOUT EST SUR LE POST DU JEU", "couleur": "blanc"},
       {"type": "cartes", "numeros": true, "items": [["LIKE LE POST", "Le post du jeu"]]}
     ],
-    "bandeau": true
+    "bandeau": true,
+    "reseau": "instagram"       // ou "tiktok" : zones libres et leviers propres à TikTok
   }
 
 Règle complète : .claude/memories/jeu-concours-mecanique-virale.md
@@ -47,7 +48,10 @@ BLANC = (255, 255, 255)
 GRIS = (215, 215, 215)
 NOIR = (17, 17, 17)
 COULEURS = {"blanc": BLANC, "orange": ORANGE}
-HAUT_BANDEAU = 1606
+HAUT_BANDEAU = {"instagram": 1606, "tiktok": 1310}
+BAS_SANS_BANDEAU = {"instagram": 1730, "tiktok": 1440}
+LOGO_Y = {"instagram": 200, "tiktok": 240}      # TikTok pose ses onglets tout en haut
+DROITE = L - MARGE                               # bord droit du texte, fixé par composer()
 POLICES = Path("/usr/share/fonts/opentype/inter")
 
 ICI = Path(__file__).resolve().parent
@@ -93,14 +97,14 @@ def placer(photo: Path, cadre: dict) -> Image.Image:
     return fond
 
 
-def degrade(img: Image.Image) -> Image.Image:
+def degrade(img: Image.Image, debut: int = 820, longueur: int = 700) -> Image.Image:
     voile = Image.new("RGBA", (L, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(voile)
     for y in range(H):
         if y < 420:                                    # haut : lisibilité du logo
             a = int(150 * (1 - y / 420))
-        elif y > 820:                                  # bas : zone de texte
-            t = min(1, (y - 820) / 700)
+        elif y > debut:                                # bas : zone de texte
+            t = min(1, (y - debut) / longueur)
             a = int(235 * t ** 1.2)
         else:
             a = 0
@@ -125,7 +129,7 @@ def mesurer(d, bloc) -> int:
     if t == "titre":
         return len(bloc["lignes"]) * int(bloc.get("taille", 64) * 1.08)
     if t == "texte":
-        return len(couper(d, bloc["texte"], police("InterDisplay-Medium.otf", 34), L - 2 * MARGE)) * 44
+        return len(couper(d, bloc["texte"], police("InterDisplay-Medium.otf", 34), DROITE - MARGE)) * 44
     if t == "bouton":
         return 66
     if t == "cartes":
@@ -168,7 +172,7 @@ def dessiner(d, bloc, y) -> None:
             y += int(taille * 1.08)
     elif t == "texte":
         f = police("InterDisplay-Medium.otf", 34)
-        for ligne in couper(d, bloc["texte"], f, L - 2 * MARGE):
+        for ligne in couper(d, bloc["texte"], f, DROITE - MARGE):
             d.text((MARGE, y), ligne, font=f, fill=GRIS)
             y += 44
     elif t == "bouton":
@@ -181,7 +185,7 @@ def dessiner(d, bloc, y) -> None:
     elif t == "cartes":
         numeros = bloc.get("numeros", False)
         for i, (titre, sous) in enumerate(bloc["items"], 1):
-            d.rounded_rectangle((MARGE, y, L - MARGE, y + 104), radius=10,
+            d.rounded_rectangle((MARGE, y, DROITE, y + 104), radius=10,
                                 fill=(18, 18, 18, 215), outline=(255, 255, 255, 70), width=2)
             x = MARGE + 26
             if numeros:
@@ -189,30 +193,35 @@ def dessiner(d, bloc, y) -> None:
                 x += 64
             else:
                 d.rectangle((MARGE, y, MARGE + 8, y + 104), fill=ORANGE)
-            ft = ajuster(d, titre, "InterDisplay-Black.otf", 40, L - MARGE - 24 - x)
+            ft = ajuster(d, titre, "InterDisplay-Black.otf", 40, DROITE - 24 - x)
             d.text((x, y + 14), titre, font=ft, fill=BLANC)
             d.text((x, y + 64), sous, font=police("InterDisplay-Medium.otf", 27), fill=GRIS)
             y += 118
 
 
 def composer(story: dict, base: Path, sortie: Path) -> Path:
+    global DROITE
+    reseau = story.get("reseau", "instagram")
+    if reseau not in HAUT_BANDEAU:
+        raise SystemExit(f"Story {story.get('nom')} : réseau inconnu « {reseau} ». Mets instagram ou tiktok.")
+    DROITE = L - bandeau_mod.PLATEFORMES[reseau]["marge_droite"] if reseau == "tiktok" else L - MARGE
     photo = (base / story["photo"]).resolve()
     if not photo.exists():
         raise SystemExit(f"Photo introuvable : {photo}. Vérifie le chemin dans le fichier de stories.")
-    if story.get("cadre"):
-        img = degrade(placer(photo, story["cadre"]))
-    else:
-        img = degrade(recadrer(photo, story.get("centre_x", 0.5), story.get("zoom", 1.0)))
+    fond = placer(photo, story["cadre"]) if story.get("cadre") else \
+        recadrer(photo, story.get("centre_x", 0.5), story.get("zoom", 1.0))
+    # Sur TikTok le texte remonte (la légende couvre le bas) : le voile commence plus haut.
+    img = degrade(fond, 560, 620) if reseau == "tiktok" else degrade(fond)
     calque = Image.new("RGBA", (L, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(calque)
 
     if story.get("logo"):
         logo = Image.open((base / story["logo"]).resolve()).convert("RGBA")
         logo = logo.resize((300, int(300 * logo.height / logo.width)), Image.LANCZOS)
-        calque.alpha_composite(logo, (MARGE - 10, 200))
+        calque.alpha_composite(logo, (MARGE - 10, LOGO_Y[reseau]))
 
     avec_bandeau = story.get("bandeau", True)
-    bas = HAUT_BANDEAU - 34 if avec_bandeau else 1730
+    bas = HAUT_BANDEAU[reseau] - 34 if avec_bandeau else BAS_SANS_BANDEAU[reseau]
     ecart = 22
     hauteurs = [mesurer(d, b) for b in story["blocs"]]
     y = bas - sum(hauteurs) - ecart * (len(hauteurs) - 1)
@@ -226,7 +235,8 @@ def composer(story: dict, base: Path, sortie: Path) -> Path:
     fichier = sortie / f"story-{story['nom']}.jpg"
     rendu.save(fichier, quality=93)
     if avec_bandeau:
-        bandeau_mod.bandeau(fichier, fichier, story.get("compte", "@oteafilmakers"), HAUT_BANDEAU)
+        bandeau_mod.bandeau(fichier, fichier, story.get("compte", "@oteafilmakers"),
+                            HAUT_BANDEAU[reseau], reseau)
     return fichier
 
 
