@@ -462,6 +462,15 @@ def load_themes():
 
 
 def validate(spec, themes, path):
+    # Le style « educatif » (séries pédagogiques d'Otea Filmakers) a ses propres gabarits
+    # et sa propre validation : scripts/carrousel_educatif.py. Mêmes sorties, même
+    # planification, seule la mise en page change.
+    if spec.get("style") == "educatif":
+        import carrousel_educatif
+        errs = carrousel_educatif.valider(spec, themes)
+        if errs:
+            raise ValueError(f"{path.name} :\n  - " + "\n  - ".join(errs))
+        return spec
     errs = []
     fonds = None
     theme = themes.get(spec.get("client")) or {}
@@ -533,12 +542,22 @@ def render_spec(path, themes, check_only=False):
     spec = validate(json.loads(path.read_text(encoding="utf-8")), themes, path)
     theme = themes[spec["client"]]
     slides = spec["slides"]
-    fonds = charger_manifeste(theme)
     out = ROOT / "medias" / spec["client"] / "carrousels" / spec["slug"]
+
+    if spec.get("style") == "educatif":
+        import carrousel_educatif
+
+        def rendre(slide, i, n):
+            return carrousel_educatif.rendre_slide(spec, slide, theme, i, n)
+    else:
+        fonds = charger_manifeste(theme)
+
+        def rendre(slide, i, n):
+            return render_slide(slide, theme, i, n, spec["slug"], fonds)
 
     files = []
     for i, slide in enumerate(slides, 1):
-        img = render_slide(slide, theme, i, len(slides), spec["slug"], fonds)
+        img = rendre(slide, i, len(slides))
         name = f"slide-{i:02d}.png"
         files.append(name)
         if not check_only:
@@ -570,6 +589,7 @@ def render_spec(path, themes, check_only=False):
         "slug": spec["slug"],
         "archetype": spec["archetype"],
         "pilier": spec["pilier"],
+        "style": spec.get("style", "classique"),
         "date_time": spec["date_time"],
         "networks": spec.get("networks", theme.get("networks", ["instagram"])),
         "type": "POST",

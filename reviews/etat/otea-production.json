@@ -403,6 +403,30 @@
       "type": "Carrousel (3 visuels)",
       "resultat": "publication programmée (version 417680260)",
       "post_id": 417680260
+    },
+    "2026-11-20T10:00:00|394868414": {
+      "quand": "2026-11-06T12:22:00",
+      "type": "Story",
+      "resultat": "publication programmée (version 418862967)",
+      "post_id": 418862967
+    },
+    "2026-11-20T12:00:00|402250671": {
+      "quand": "2026-11-06T12:22:02",
+      "type": "Post",
+      "resultat": "publication programmée (version 418862999)",
+      "post_id": 418862999
+    },
+    "2026-11-21T10:00:00|406398890": {
+      "quand": "2026-11-07T11:15:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 419857988)",
+      "post_id": 419857988
+    },
+    "2026-11-22T10:00:00|383265499": {
+      "quand": "2026-11-08T11:27:12",
+      "type": "Story",
+      "resultat": "publication programmée (version 420660638)",
+      "post_id": 420660638
     }
   }
 }

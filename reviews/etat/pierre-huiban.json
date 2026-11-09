@@ -199,6 +199,24 @@
       "type": "Story",
       "resultat": "publication programmée (version 417680115)",
       "post_id": 417680115
+    },
+    "2026-11-20T06:00:00|388535508": {
+      "quand": "2026-11-06T12:21:58",
+      "type": "Story",
+      "resultat": "publication programmée (version 418862893)",
+      "post_id": 418862893
+    },
+    "2026-11-21T06:00:00|388535531": {
+      "quand": "2026-11-07T11:15:16",
+      "type": "Story",
+      "resultat": "publication programmée (version 419857893)",
+      "post_id": 419857893
+    },
+    "2026-11-22T06:00:00|388535580": {
+      "quand": "2026-11-08T11:27:08",
+      "type": "Story",
+      "resultat": "publication programmée (version 420660597)",
+      "post_id": 420660597
     }
   }
 }

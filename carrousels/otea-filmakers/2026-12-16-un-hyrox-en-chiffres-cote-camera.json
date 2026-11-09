@@ -1,0 +1,79 @@
+{
+  "client": "otea-filmakers",
+  "slug": "2026-12-16-un-hyrox-en-chiffres-cote-camera",
+  "style": "educatif",
+  "serie": "FILMER LE HYROX · 04",
+  "mention": "Paris · Porte de Versailles",
+  "archetype": "A6",
+  "pilier": "P1",
+  "date_time": "2026-12-16T18:00:00",
+  "cible": "Spectateur ou athlète de HYROX Paris, cette semaine même, qui connaît le format de la course et découvre ce qu'il impose à celui qui filme",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "kicker": "Décryptage",
+      "title": "Un HYROX **en chiffres**, côté caméra",
+      "body": "Le format officiel, lu depuis le bord de l'arène."
+    },
+    {
+      "gabarit": "chiffre",
+      "chiffre": "8 × 1 km",
+      "legende": "La course",
+      "title": "Huit kilomètres, coupés en huit.",
+      "body": "Entre chaque kilomètre, une station. Pour moi, **huit fois** le même problème : être au bon endroit quand tu arrives."
+    },
+    {
+      "gabarit": "liste",
+      "kicker": "Les stations",
+      "title": "Les 8 stations, **dans l'ordre**",
+      "items": [
+        "SkiErg, sled push, sled pull",
+        "Burpee broad jumps, rameur",
+        "Farmers carry, sandbag lunges",
+        "Wall balls : la dernière, celle où tout se joue."
+      ]
+    },
+    {
+      "gabarit": "chiffre",
+      "chiffre": "16",
+      "legende": "Déplacements",
+      "title": "Seize fois au bon endroit.",
+      "body": "Huit courses, huit stations. À chaque segment je me déplace, et je dois arriver **avant toi**."
+    },
+    {
+      "gabarit": "duel",
+      "kicker": "Les deux images",
+      "title": "La plus facile, la plus rare",
+      "gauche": {
+        "label": "La plus facile",
+        "texte": "Le passage de ligne. Tout le monde l'a, tout le monde la poste."
+      },
+      "droite": {
+        "label": "La plus rare",
+        "texte": "La roxzone, entre la course et la station. **Personne ne la filme.**"
+      }
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "06",
+      "kicker": "Le son",
+      "title": "Ce que le chrono ne dit pas.",
+      "body": "Le souffle en sortie de traîneau, le sac qui tombe, la ligne. Le film garde **ce que tu as entendu**, pas seulement ce que tu as fait."
+    },
+    {
+      "gabarit": "cta",
+      "kicker": "À retenir",
+      "title": "8 courses, 8 stations, **16 fois** au bon endroit.",
+      "body": "Enregistre ce carrousel pour ta prochaine course, et dis-moi en commentaire : ta station la plus dure ?"
+    }
+  ],
+  "caption": "Un HYROX en chiffres, vu de celui qui filme.\n\nHuit kilomètres coupés en huit, huit stations entre les deux, seize déplacements pour être au bon endroit avant toi. L'image la plus facile, c'est la ligne d'arrivée. La plus rare, c'est la roxzone : personne ne la filme.\n\nTa station la plus dure, c'est laquelle ? 👇",
+  "hashtags": [
+    "#hyrox",
+    "#hyroxparis",
+    "#hyroxfrance",
+    "#filmmaker",
+    "#oteafilmakers"
+  ],
+  "note": "Quatrième carrousel du programme éducatif, publié pendant HYROX Paris (12 au 20/12, dates de la veille du 13/10 à reconfirmer) : actualité pour information, aucun appel à réserver (règle J-60 à J-30 pour les offres). Format officiel HYROX : 8 courses de 1 km et 8 stations dans l'ordre SkiErg 1 000 m, sled push 50 m, sled pull 50 m, burpee broad jumps 80 m, rameur 1 000 m, farmers carry 200 m, sandbag lunges 100 m, wall balls (75 ou 100 répétitions selon la division, chiffre volontairement omis)."
+}
