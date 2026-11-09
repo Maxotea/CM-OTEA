@@ -84,6 +84,20 @@ par Metricool, md5 vérifié). À dire à Maxime si la FX3 était bien à Pozna�
 un spectateur à lunettes, identifiable, à gauche de Pierre : à signaler. Les 7 uuids sont sortis de `en_attente`
 (`reviews/config.json`), seuls les deux reels Bordeaux y restent.
 
+## Avant / après : les photos, pas les rushes (Maxime, 02/11/2026)
+« J'aime pas les photos et la colorimétrie […] Sur les photos avant, après, où là on voit une réelle
+différence, c'est beaucoup plus joli. Là sur les vidéos, c'était pas beau. » Le carrousel A1 du 02/11
+(images tirées des rushes, étalonnage automatique) est parti à 18:00 : https://www.instagram.com/p/DfPzPShFcjC/.
+Metricool ne supprime pas un post publié : c'est à Maxime de le retirer dans l'appli Instagram.
+- **Règle** : tout avant / après de ce compte se fait sur les photos de Maxime, dossier Drive
+  « HYROX ROME 2026 » : `RETOUCHEES` (62 JPG, l'après) et `CAPTURES BRUTES (S-Log3 PNG 16 bits)`
+  (l'avant, même numéro avec `_RAW`). Jamais un étalonnage automatique (`etalonnage-punch.py`) en vitrine.
+- **Reel A2 du 25/11** (uuid 6417583479028599017, rushes étalonnés) : remplacé, décision du 03/11
+  (« mets-le avant le 25 […] pourquoi pas le remplacer »). Bloqué dans `en_attente` de `reviews/config.json`.
+  Le carrousel photos prend sa place, au plus tard le 25/11.
+- **Blocage** : les brutes font 9 à 38 Mo, trop lourdes pour le connecteur Drive. Il faut que Maxime partage
+  le dossier `CAPTURES BRUTES` en « tous ceux qui ont le lien » (ou qu'il en exporte quelques-unes en JPG).
+
 ## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
 Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
 - Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
