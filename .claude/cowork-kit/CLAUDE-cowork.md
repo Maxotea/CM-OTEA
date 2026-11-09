@@ -21,6 +21,10 @@ CM-OTEA, cloné à côté : tu n'y modifies que ce que les agents de ce dossier 
 5. Distingue toujours facturé et encaissé. Sur le fiscal et le juridique, donne les règles et
    renvoie vers un professionnel.
 6. Règle Galec : on parle des versions définitives livrées, la facture suit.
+7. Une réponse automatique n'est pas une réponse. Absence, congés, accusé de réception,
+   « ne fait plus partie de » : ne dis jamais à Maxime que la personne a répondu. Dis « réponse
+   automatique » avec son contenu utile (date de retour, autre contact), et la relance reste à
+   faire. Voir `.claude/memories/reponses-automatiques.md` dans CM-OTEA.
 
 ## En fin de tâche : une ligne au journal
 
