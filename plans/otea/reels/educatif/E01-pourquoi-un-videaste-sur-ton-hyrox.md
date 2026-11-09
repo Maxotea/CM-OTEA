@@ -5,6 +5,12 @@
 - **Images de course derrière Maxime** : plan de visage de Pierre ou Antoine à Rome (accord du 27/10), un plan de roxzone, un passage de ligne. Rien d'autre.
 - **À vérifier avant tournage** : rien, aucun crochet.
 
+## Format et tournage (09/11/2026)
+
+**A · Face caméra dynamique, FX3 sur pied avec le setup.** C'est l'épisode d'argument : le regard
+convainc. Une prise, fond clair, micro-cravate. Inserts derrière Maxime : visage de Pierre ou Antoine
+à Rome, une roxzone, un passage de ligne.
+
 ## Trois hooks au choix
 
 1. « 8 kilomètres, 8 stations, et à l'arrivée tu as trois photos floues prises par un pote. »

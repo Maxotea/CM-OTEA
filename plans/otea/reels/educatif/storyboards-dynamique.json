@@ -1,6 +1,6 @@
 {
   "source": "Prise face caméra de Maxime, une séance pour les huit épisodes (plans/otea/2026-11-filmakers-educatif.md § 6). Masque calculé à part (outils/detourer.py).",
-  "principe": "Maxime toujours à l'écran, détouré, liseré givre. Derrière lui, un élément par idée, calé sur ses mots. Les images de course (Rome, Nice ; Pierre Huiban et Antoine Bouhana seulement) remplacent le fond 1 à 2 s quand le script parle d'un plan précis : type image_plein_cadre, hors moteur, inséré au montage. Jump cuts serrés, transition balayée à chaque scène, carte de fin avec la question binaire. Signature sonore : « Under the Sun » (Bakermat feat. Kidda), posée dans Instagram à la publication, jamais dans le fichier (pas de licence) ; les cartes d'ouverture et de fin, sans voix, lui laissent la place (commun.musique).",
+  "principe": "Maxime toujours à l'écran, détouré, liseré givre. Derrière lui, un élément par idée, calé sur ses mots. Les images de course (Rome, Nice ; Pierre Huiban et Antoine Bouhana seulement) remplacent le fond 1 à 2 s quand le script parle d'un plan précis : type image_plein_cadre, hors moteur, inséré au montage. Jump cuts serrés, transition balayée à chaque scène, carte de fin avec la question binaire. Signature sonore : « Under the Sun » (Bakermat feat. Kidda), posée dans Instagram à la publication, jamais dans le fichier (pas de licence) ; les cartes d'ouverture et de fin, sans voix, lui laissent la place (commun.musique). Depuis le 09/11, seuls les formats A (E01, E03) passent par le détourage : pour les autres, les mêmes éléments motion se posent directement sur l'image (plans lifestyle, rushes, écran), sans personne détourée.",
   "_statut": "Brouillon du 08/11/2026 : scènes et déclencheurs écrits depuis les scripts E01 à E08 ; les extraits (secondes) se calent après tournage ; les crochets suivent ceux des scripts.",
   "charte": "charte-dynamique-otea-filmakers.json (à copier dans MONTAGE-OTEA/chartes/)",
   "commun": {
@@ -177,7 +177,8 @@
       ],
       "cta": "Team photos ou team vidéo ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "A face caméra dynamique (FX3, setup)"
     },
     {
       "nom": "E02-ma-journee-de-course",
@@ -346,7 +347,8 @@
       ],
       "cta": "La journée entière ou la course ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "B lifestyle en voix off (téléphone)"
     },
     {
       "nom": "E03-le-sled-push",
@@ -482,7 +484,8 @@
       ],
       "cta": "Ralenti ou vitesse réelle ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "A face caméra dynamique avec inserts (FX3, setup)"
     },
     {
       "nom": "E04-la-roxzone",
@@ -618,7 +621,8 @@
       ],
       "cta": "Roxzone ou wall balls ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "F voix off sur images de course (voix au téléphone, rushes Rome)"
     },
     {
       "nom": "E05-un-boitier-un-objectif",
@@ -753,7 +757,8 @@
       ],
       "cta": "Boîtier ou objectif ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "D plan de table (téléphone)"
     },
     {
       "nom": "E06-brut-puis-etalonne",
@@ -896,7 +901,8 @@
       ],
       "cta": "Brut ou étalonné ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "E écran et voix off (capture Resolve + téléphone)"
     },
     {
       "nom": "E07-j-4-avant-paris",
@@ -1047,7 +1053,8 @@
       ],
       "cta": "Tu cours Paris ? Ta vague en commentaire.",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "C parlé en situation (téléphone à bout de bras)"
     },
     {
       "nom": "E08-le-derush",
@@ -1188,7 +1195,8 @@
       ],
       "cta": "Le plan raté, dedans ou pas ?",
       "extraits": [],
-      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage"
+      "_a_caler": "début et fin de l'épisode dans la prise, en secondes, après tournage",
+      "format": "C parlé en situation au bureau, inserts écran (téléphone posé)"
     }
   ]
 }

@@ -31,11 +31,46 @@ Ce qui ne va **pas** dans ce programme : le plateau d'entreprise, l'interview en
 
 ## 3. Les trois formats
 
-### 3.1 Le reel face caméra avec motion design (2 par semaine)
+### 3.1 Le reel éducatif : six manières de filmer (2 par semaine)
 
-Maxime se filme, une prise, un épisode. Le montage reprend le format dynamique du moteur de montage (MONTAGE-OTEA, `README.md` § « Format dynamique ») : **la personne reste à l'écran, détourée avec un liseré, et le motion design s'affiche derrière elle au rythme de ce qu'elle dit**. Coupes serrées (plans de 1,5 à 3 s, cadrage changé à chaque coupe), sous-titres qui surgissent mot à mot, transitions balayées à chaque nouvelle idée, signature en fin.
+**Précision de Maxime du 09/11/2026 : pas que de la face caméra.** La série alterne les manières de
+filmer, pour que le compte respire et qu'un épisode se tourne souvent sans monter le setup, au
+téléphone, là où Maxime se trouve. La règle de choix : **le format suit le sujet.** On montre un geste
+quand l'épisode parle d'un geste, un écran quand il parle d'étalonnage, un sac quand il parle de
+matériel, et on garde la face caméra pour les épisodes où c'est le regard qui convainc.
 
-La grammaire motion, restreinte volontairement pour que la série soit reconnaissable :
+| Format | À quoi ça ressemble | Quand | Appareil et setup |
+|---|---|---|---|
+| **A · Face caméra dynamique** | Maxime détouré, motion design derrière lui calé sur ses mots (MONTAGE-OTEA) | les épisodes d'argument et de conviction | **FX3 sur pied, fond clair, lumière, micro-cravate** : le détourage exige une image propre |
+| **B · Lifestyle en voix off** | des plans de la vraie vie (arène le matin, route, hôtel, timeline le soir) sous la voix de Maxime, sous-titres mot à mot, compteurs et grands mots posés sur l'image | les récits : une journée, une préparation | **téléphone** pour les plans et pour la voix (dictaphone au calme) ; rushes FX3 existants en renfort |
+| **C · Parlé en situation** | Maxime parle à la caméra tout en faisant (il prépare le sac, il dérushe), téléphone à bout de bras ou posé | les coulisses, quand le geste et la parole vont ensemble | **téléphone**, aucune installation, lumière du lieu |
+| **D · Plan de table** | les mains et le matériel sur une table, en plongée ou de face, voix off | le matériel | **téléphone** (la FX3 est devant l'objectif, elle ne peut pas se filmer) |
+| **E · Écran et voix off** | capture de DaVinci Resolve, volets avant/après, curseur qui avance, voix de Maxime | l'étalonnage, le montage, le dérush | capture d'écran du Mac + **téléphone** pour la voix |
+| **F · Voix off sur images de course** | les rushes HYROX seuls (Rome, Nice, Paris), monologue au « je » en sous-titres, aucun visage de Maxime | ce qui se passe dans l'arène : la roxzone, une station | rien à tourner, **la voix au téléphone** et les rushes existants |
+
+Les formats B à F se tournent **sans setup**, au téléphone, en quelques minutes. Seul le format A
+demande la FX3 installée. Sur ce compte, l'image de téléphone n'est pas un défaut : c'est la marque
+du « je », et la FX3 reste l'outil de la course, pas de l'autoportrait.
+
+**La saison 1, format par format** :
+
+| Épisode | Format | Ce qu'on tourne | Appareil |
+|---|---|---|---|
+| E01 Pourquoi un vidéaste | A face caméra | une prise, l'argument droit dans les yeux | FX3, setup |
+| E02 Ma journée de course | B lifestyle voix off | la voix au calme ; plans : arène vide, caméra en main, route, timeline le soir (rushes Nice et Rome, photos de la banque, 3 plans téléphone) | téléphone |
+| E03 Le sled push | A face caméra, inserts 100p | une prise, les trois décisions ; inserts de sled de Rome en ralenti | FX3, setup |
+| E04 La roxzone | F voix off sur images | la voix seule ; images de roxzone de Rome (Pierre et Antoine) | téléphone (voix) |
+| E05 Un boîtier, un objectif | D plan de table | le sac qui se vide, la FX3, le 70-200 vissé, les batteries, les cartes, en plongée ; la voix off | téléphone |
+| E06 Brut puis étalonné | E écran et voix off | capture Resolve : le même plan en volet brut et étalonné, les roues de couleur ; la voix | capture + téléphone |
+| E07 J-4 avant Paris | C parlé en situation | Maxime prépare vraiment son sac la veille, téléphone à bout de bras, deux prises du hook | téléphone |
+| E08 Le dérush | C parlé en situation, inserts E | le soir au bureau, téléphone posé à côté de l'écran, lumière de la timeline ; inserts d'écran | téléphone |
+
+Deux épisodes sur huit demandent le setup. Les six autres se tournent dans la semaine, au fil de la
+vraie vie, avec la liste de plans de chaque script (`reels/educatif/E0x` § « Format et tournage »).
+
+Pour le format A, Maxime se filme, une prise, un épisode. Le montage du format A reprend le format dynamique du moteur de montage (MONTAGE-OTEA, `README.md` § « Format dynamique ») : **la personne reste à l'écran, détourée avec un liseré, et le motion design s'affiche derrière elle au rythme de ce qu'elle dit**. Coupes serrées (plans de 1,5 à 3 s, cadrage changé à chaque coupe), sous-titres qui surgissent mot à mot, transitions balayées à chaque nouvelle idée, signature en fin.
+
+La grammaire motion, commune à tous les formats (derrière Maxime en A, posée sur l'image en B à F), restreinte volontairement pour que la série soit reconnaissable :
 
 | Élément | Quand | Exemple |
 |---|---|---|
@@ -104,7 +139,7 @@ Saison 2 (janvier) : le rameur et les wall balls (C), la journée de dérush com
 
 ## 6. Le tournage, en une séance
 
-Les huit épisodes se tournent **en une seule séance face caméra** : **lundi 09/11/2026, de 9 h à 10 h** (décidé le 08/11), feuille de tournage dans `reels/educatif/TOURNAGE-2026-11-09.md`. Le montage a ainsi une semaine d'avance sur le premier épisode du 17/11 :
+Depuis le 09/11, seuls E01 et E03 demandent la séance face caméra ; les six autres se tournent au téléphone, sans setup, au fil de la semaine (§ 3.1 et la feuille de tournage). La séance face caméra elle-même : les épisodes du format A se tournent **en une seule séance** : **lundi 09/11/2026, de 9 h à 10 h** (décidé le 08/11), feuille de tournage dans `reels/educatif/TOURNAGE-2026-11-09.md`. Le montage a ainsi une semaine d'avance sur le premier épisode du 17/11 :
 
 - FX3 ou iPhone, **vertical ou horizontal cadré large** (le format dynamique recadre : plein, serré, décalé à gauche ou à droite). Fond uni ou peu chargé, lumière de face, **micro-cravate** (le son direct est gardé : c'est la voix de Maxime ; la musique vient d'Instagram).
 - Une prise par épisode, lue au téléprompteur ou en points, sans chercher la prise parfaite : les silences sautent au montage.

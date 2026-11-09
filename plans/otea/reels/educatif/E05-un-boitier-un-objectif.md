@@ -5,6 +5,15 @@
 - **Images derrière Maxime** : la FX3 et le 70-200 en main (plans de coupe), photo `20260620-materiel-table-stockholm`, un plan serré de course au 70-200.
 - **À vérifier** : rien. Version sans chiffre Sony arrêtée le 08/11 pour la séance du 09/11 (la fiche interdit tout chiffre technique non sourcé Sony) ; seuls restent les faits de la pratique de Maxime : 100 images par seconde, S-Log3, stabilisé.
 
+## Format et tournage (09/11/2026)
+
+**D · Plan de table au téléphone, sans setup.** La FX3 ne peut pas se filmer : c'est le téléphone
+qui filme, en plongée au-dessus de la table (posé sur un verre, ou tenu à deux mains au-dessus),
+lumière de la fenêtre. Plans de 10 s chacun : le sac qui s'ouvre, la FX3 qu'on sort, le 70-200
+qu'on visse, la bague de zoom qu'on tourne, les batteries alignées, les cartes dans leur boîte, la
+main qui soulève l'ensemble. La voix lit le script au calme, à part. Le `compteur` 1 boîtier, 1
+objectif et la `checklist` se posent sur les mains.
+
 ## Trois hooks au choix
 
 1. « Un seul boîtier et un seul objectif pour filmer une course entière. »

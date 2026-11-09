@@ -5,6 +5,15 @@
 - **Images derrière Maxime** : plans de roxzone de Rome (Pierre et Antoine entre deux stations), un regard vers la station suivante.
 - **À vérifier** : rien. La roxzone est la zone de transition officielle entre la course et les stations ; son temps est compté dans le chrono (les résultats officiels l'affichent à part).
 
+## Format et tournage (09/11/2026)
+
+**F · Voix off sur images de course, rien à tourner.** Aucun visage de Maxime : les images de roxzone
+de Rome (Pierre et Antoine entre deux stations, le regard vers la station suivante) portent tout, la
+voix lit le script au calme (dictaphone du téléphone), les sous-titres s'allument mot à mot comme
+dans les reels monologue de Pierre. Le `compteur` 16 et le `tampon` « PERSONNE » se posent sur
+l'image. Si les plans de roxzone manquent à Rome, l'épisode attend HYROX Paris (bloc agenda du
+12 au 20/12, plan n° 1 de la liste).
+
 ## Trois hooks au choix
 
 1. « Ton chrono HYROX compte 16 passages en roxzone. Personne ne les filme. »

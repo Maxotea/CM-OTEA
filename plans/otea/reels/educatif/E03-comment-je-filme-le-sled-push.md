@@ -5,6 +5,12 @@
 - **Images derrière Maxime** : sled push de Rome ou de Nice en 100p (ralenti), plan de visage à la sortie du traîneau. Pierre ou Antoine seulement.
 - **À vérifier** : rien. 50 mètres est la longueur officielle du sled push, 100 images par seconde et le 70-200 sont la pratique de Maxime (fiche du 26/10). Aucun poids de traîneau cité.
 
+## Format et tournage (09/11/2026)
+
+**A · Face caméra dynamique avec inserts, FX3 sur pied avec le setup.** Maxime mime la position
+basse avec les mains ; les trois décisions sont dites face caméra. Inserts plein cadre : sled push de
+Rome en 100p, la sortie du traîneau. Même séance que E01.
+
 ## Trois hooks au choix
 
 1. « 50 mètres de sled push. J'ai 50 mètres pour faire un plan qui vaut la course. »

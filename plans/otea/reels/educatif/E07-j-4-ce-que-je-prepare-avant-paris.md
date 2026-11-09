@@ -5,6 +5,16 @@
 - **Images derrière Maxime** : le sac qui se remplit, la liste sur le téléphone, photo `20250930-sac-hyrox-place-bourse`, l'arène de Paris si une image existe (sinon Nice).
 - **À vérifier** : la date exacte du premier jour de HYROX Paris (12/12 d'après la veille du 13/10, le « 4 jours » en dépend). Au tournage du 09/11, enregistrer **deux prises du hook** : « Dans 4 jours » et « Dans quelques jours », le montage garde la bonne. Plus de crochet sur les kilomètres : version sans chiffre arrêtée le 08/11.
 
+## Format et tournage (09/11/2026)
+
+**C · Parlé en situation, au téléphone à bout de bras, sans setup.** À tourner **la veille ou
+l'avant-veille de Paris, en préparant vraiment le sac** (créneau agenda : lundi 07/12 au soir), pour
+que ce soit vrai. Téléphone tenu à bout de bras ou posé contre un objet, lumière de la pièce, Maxime
+parle en faisant : il sort les batteries en disant « batteries chargées », il montre le téléphone avec
+la conversation en disant « il m'écrit trois choses ». Deux prises du hook (« Dans 4 jours » et
+« Dans quelques jours »). Le son direct du téléphone suffit s'il n'y a pas de bruit de fond ; sinon
+micro-cravate.
+
 ## Trois hooks au choix
 
 1. « Dans 4 jours, HYROX Paris. Voilà ce que je fais avant d'allumer la caméra. »

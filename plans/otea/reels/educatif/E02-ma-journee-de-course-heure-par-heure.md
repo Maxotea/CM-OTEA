@@ -5,6 +5,19 @@
 - **Images derrière Maxime** : l'arène vide le matin (Nice ou Rome), un plan de course, la timeline ouverte le soir (photo `20251230-montage-dans-la-penombre` ou rush équivalent)
 - **À vérifier avant tournage** : rien. Version sans chiffre arrêtée le 08/11 pour la séance du 09/11 ; les variantes chiffrées (heure d'arrivée, kilomètres, batteries) reviendront dans une saison 2 quand Maxime les aura mesurées à Paris.
 
+## Format et tournage (09/11/2026)
+
+**B · Lifestyle en voix off, au téléphone, sans setup.** Maxime n'apparaît pas face caméra : sa voix
+lit le script au calme (dictaphone du téléphone, une pièce silencieuse, 2 minutes), et l'image
+raconte la journée. Plans à réunir :
+- l'arène vide le matin et la course : rushes FX3 de Nice et de Rome (Pierre et Antoine seulement) ;
+- la route, le sac, la caméra en main : photos de la banque (`20260930-sac-hyrox-place-bourse`,
+  `20260512-camera-main-facade-paris`, `20260318-montage-tablette-en-route`) animées, ou 3 plans
+  téléphone de 10 s à glaner cette semaine ;
+- le soir : la timeline ouverte dans la pénombre (`20251230-montage-dans-la-penombre` ou un plan
+  téléphone posé derrière l'écran, 10 s).
+Les compteurs (16 segments, 16 fois) et les grands mots se posent sur l'image. Sous-titres mot à mot.
+
 ## Trois hooks au choix
 
 1. « Sur un HYROX, l'athlète enchaîne 16 segments. Et moi, je dois être au bon endroit 16 fois. »

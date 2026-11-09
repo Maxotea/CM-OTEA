@@ -5,6 +5,14 @@
 - **Images derrière Maxime** : un plan de Rome ou de Nice en S-Log3 **brut** (le vrai fichier caméra, jamais une image dégradée), puis le même étalonné, en volet gauche-droite. Pierre ou Antoine.
 - **À vérifier** : rien.
 
+## Format et tournage (09/11/2026)
+
+**E · Écran et voix off, rien à installer.** Capture d'écran de DaVinci Resolve (QuickTime, écran
+entier, 1080p minimum) : le même plan de Rome en volet brut à gauche et étalonné à droite, puis
+les roues de couleur qu'on touche, le point noir qui descend, le contraste qui monte. 90 secondes de
+capture suffisent. La voix lit le script au calme (téléphone). Le brut est le vrai fichier caméra, jamais
+une image dégradée.
+
 ## Trois hooks au choix
 
 1. « 2 images, 1 seul plan. À gauche, ce que la caméra enregistre. À droite, ce que tu reçois. »

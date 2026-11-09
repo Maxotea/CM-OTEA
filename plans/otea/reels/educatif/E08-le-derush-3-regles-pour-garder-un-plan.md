@@ -5,6 +5,15 @@
 - **Images derrière Maxime** : la timeline en dérush, trois plans de Rome qui illustrent les trois règles (un visage, une répétition entière, un passage de ligne avec son son), et un plan « raté » (bougé, coupé) assumé.
 - **À vérifier** : rien. Hook 2 retenu pour la séance du 09/11 (le hook 1 attend le nombre réel de plans d'une course).
 
+## Format et tournage (09/11/2026)
+
+**C · Parlé en situation au bureau le soir, inserts d'écran, sans setup.** Téléphone posé à côté de
+l'écran, légèrement en hauteur, Maxime de trois quarts éclairé par la timeline (lumière de la pièce
+éteinte ou basse). Il parle en dérushant pour de vrai : il fait défiler les plans, s'arrête sur un
+visage, sur un ralenti coupé, sur un plan raté. Inserts : capture d'écran de la timeline (QuickTime)
+et les trois plans cités (visage, répétition entière, passage de ligne avec son son). À tourner un
+soir de cette semaine, 20 minutes.
+
 ## Trois hooks au choix
 
 1. « Une course filmée, c'est des centaines de plans. Le film en garde une poignée. Voilà comment je choisis. »
