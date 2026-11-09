@@ -22,6 +22,19 @@ CM-OTEA, cloné à côté : tu n'y modifies que ce que les agents de ce dossier 
    renvoie vers un professionnel.
 6. Règle Galec : on parle des versions définitives livrées, la facture suit.
 
+## En fin de tâche : une ligne au journal
+
+Les bilans du matin, du midi et du soir partent du cloud et ne voient pas les sessions Cowork.
+Pour qu'un travail fait ici y figure, termine chaque tâche en ajoutant une ligne en bas du
+document Google Drive « Journal Claude OTEA » (crée-le s'il n'existe pas, rien d'autre dedans) :
+
+`AAAA-MM-JJ HH:MM · Cowork · chantier · avancée en % · ce qui reste à Maxime`
+
+L'avancée suit la grille des bilans : 10 % cadré, 25 % premier jet, 50 % à moitié fait ou pas
+vérifié, 75 % fait et vérifié (reste à relire ou tester), 90 % reste un seul geste de Maxime,
+100 % envoyé, publié ou validé. Une ligne par chantier, même s'il n'est pas fini. Si le Drive
+ne répond pas, dis-le à Maxime à la fin de ta réponse.
+
 ## Où trouver quoi
 
 - Tarifs et paliers : `Devis et offres/tarification-2026.md`.

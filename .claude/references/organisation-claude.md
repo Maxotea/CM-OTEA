@@ -280,3 +280,28 @@ Détail : `ameliorations/2026-10-19-audit-integral-code-cowork.md`.
 
 Skills du compte : `reel-script` et `reel-lint` restent ; `cm-otea` et `cm-b2c` deviennent des
 aiguillages (kit) ; `hyrox-splits-montage` et `morning` sortent. Kit : `.claude/cowork-kit/`.
+
+## 12. La revue Claude dans les bilans (24/10/2026)
+
+Constat de Maxime : le bilan du 24/10 ne citait ni la création de Jarvis ni le reste du travail
+de la veille avec Claude. Les bilans lisaient Gmail, l'agenda et Todoist, jamais les sessions.
+
+Les consignes des trois tâches planifiées (matin 7h, midi 12h30, soir 18h30) portent désormais
+une section « Revue Claude » :
+
+- **Claude Code** : la liste des sessions du compte (titre, dernière activité) et la fin de
+  chaque conversation, plus les PR des dépôts Maxotea. Vérifié le 24/10 : une session lancée
+  par une tâche planifiée lit bien ces données.
+- **Cowork** : le filtre des sessions Cowork est refusé depuis le cloud. Les bilans lisent donc
+  le document Drive « Journal Claude OTEA », où chaque tâche Cowork ajoute une ligne en fin de
+  travail (règle dans `.claude/cowork-kit/CLAUDE-cowork.md`), et les fichiers Drive modifiés.
+- **Avancée** : une grille unique (10, 25, 50, 75, 90, 100 %), fondée sur des faits (dernier
+  message de Claude, état de la PR, document final), jamais sur le titre seul.
+
+Le mail du matin gagne une section « Claude depuis hier » (8 chantiers au plus, 45 lignes au
+total), le soir « Claude aujourd'hui » avec l'écart depuis le matin (28 lignes), le midi
+« Claude ce matin » (16 lignes). Le midi reste en pause (décision du 19/10) : ses consignes sont
+prêtes pour le jour où il est rallumé.
+
+À faire par Maxime : recopier `CLAUDE-cowork.md` à jour dans le dossier Cowork « OTEA » pour que
+Cowork tienne le journal.
