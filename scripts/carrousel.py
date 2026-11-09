@@ -21,6 +21,9 @@ from pathlib import Path
 
 import urllib.request
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import credits  # noqa: E402
+
 try:
     from PIL import Image, ImageDraw, ImageFilter, ImageFont
 except ImportError:
@@ -565,6 +568,20 @@ def render_spec(path, themes, check_only=False):
         return out, files
 
     caption = spec["caption"].strip()
+    # le photographe d'une photo de fond est crédité d'office (règle du 06/11/2026)
+    utilisees = [fonds[s["photo"]] for s in slides if fonds and s.get("photo") in fonds]
+    reseaux = spec.get("networks", theme.get("networks", ["instagram"]))
+    # une seule légende part sur tous les réseaux : formule Instagram, sauf compte LinkedIn seul
+    principal = "linkedin" if reseaux == ["linkedin"] else "instagram"
+    caption = credits.crediter(caption, utilisees, reseau=principal)
+    for nom in credits.comptes_manquants(utilisees):
+        print(f"  ! {spec['slug']} : crédit de {nom} posé sans son compte Instagram "
+              f"(à renseigner dans photos/photographes.json)", file=sys.stderr)
+    ligne_linkedin = credits.ligne_credit(utilisees, reseau="linkedin")
+    if "linkedin" in reseaux and principal != "linkedin" and ligne_linkedin:
+        print(f"  ! {spec['slug']} : sur LinkedIn, remplacer la ligne de crédit par "
+              f"« {ligne_linkedin} » en tapant le @ et en choisissant son profil, "
+              f"sinon le tag ne prend pas", file=sys.stderr)
     tags = " ".join(spec.get("hashtags", []))
     (out / "caption.txt").write_text(f"{caption}\n\n{tags}\n".strip() + "\n", encoding="utf-8")
     (out / "manifest.json").write_text(json.dumps({
