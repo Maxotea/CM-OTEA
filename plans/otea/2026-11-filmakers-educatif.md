@@ -51,9 +51,9 @@ Palette du format : fonds encre `#201E1E` et graphite `#2E2B2B`, texte vert `#D5
 
 **Les images de course s'insèrent derrière Maxime** (plein cadre, 1 à 2 s, à la place du fond animé) à chaque fois que le script parle d'un plan précis : rushes FX3 de Rome et de Nice, Pierre Huiban et Antoine Bouhana (accord du 27/10/2026), personne d'autre sans accord. Jamais une image générée.
 
-**Le son, décision de Maxime du 08/11/2026 : « Under the Sun » de Bakermat feat. Kidda en intro et en outro de chaque reel.** La signature sonore de la série : le morceau ouvre sous la carte d'ouverture (environ 2 s, sur l'accroche du titre), s'efface sous la voix de Maxime (ducking, la voix reste seule au centre), et revient sous la carte de fin et la question binaire (environ 2,5 s, fondu de sortie). Toujours le même extrait du morceau, repéré une fois et noté dans `storyboards-dynamique.json` (`commun.musique`), pour qu'on reconnaisse la série à l'oreille dès la première seconde. C'est l'exception prévue par `reels-musique-instagram.md` : ce reel porte la voix réelle de Maxime, le fichier garde donc son son, et la musique y est intégrée à sa demande. Conséquence assumée : le reel sort en « audio d'origine », il ne rejoint pas la page du son dans Instagram. **Point à régler avant le premier montage : les droits.** « Under the Sun » est une sortie commerciale (Dim Mak / Big Beat, 2020), sans licence de synchronisation par défaut. Deux cas : Maxime a une licence qui couvre ce titre (à noter dans la fiche), ou il ne l'a pas, et alors Instagram peut couper le son ou limiter la portée du reel comme pour « Bellatores » sur le teaser F1. Dans ce second cas, la solution de repli est de rendre le reel avec la voix seule et de poser « Under the Sun » depuis la bibliothèque d'Instagram, à faible volume, sur toute la durée (pas d'intro et d'outro seules possibles par ce chemin).
+**Le son, décisions de Maxime du 08/11/2026 : « Under the Sun » de Bakermat feat. Kidda (The Ringmaster, 2020) est la signature sonore de la série, en intro et en outro de chaque reel. Et il n'y a pas de licence de synchronisation sur ce titre.** Donc le morceau n'entre jamais dans le fichier : un son commercial incrusté sans licence expose le reel à une coupure du son ou à une portée bridée, comme « Bellatores » sur le teaser F1. Le fichier rendu porte **la voix de Maxime seule** (micro-cravate, aucune musique). À la publication, en mode notification, Maxime pose « Under the Sun » depuis la bibliothèque musicale d'Instagram, à volume bas sous la voix, sur toute la durée : c'est le chemin qui couvre les droits. La signature intro et outro se fait **par le montage image** : la carte d'ouverture (2 s) et la carte de fin avec la question binaire (2,5 s) sont sans voix, la musique s'y entend donc seule, et c'est ce qu'on reconnaît. Si le titre manque dans la bibliothèque le jour de la publication, choisir un autre son et le garder pour toute la série (le noter dans `storyboards-dynamique.json`, `commun.musique`). Cette façon de faire respecte la règle `reels-musique-instagram.md` : seule la voix réelle de Maxime est dans le fichier.
 
-Règles de publication : voix de Maxime et signature sonore dans le fichier (voir ci-dessus), mode notification (`reels-musique-instagram.md`). Chaque reel finit par une **question binaire** (plan de bataille). **Un reel sur quatre au plus** porte un appel à écrire en message, les autres racontent. Scripts : `reels/educatif/E01-…md` à `E08-…md`, au format `reel-script` (hook chiffré, trois étapes, cliffhanger, 175 mots maximum), à passer dans `reel-lint` avant tournage.
+Règles de publication : voix de Maxime seule dans le fichier, musique posée dans Instagram, mode notification (`reels-musique-instagram.md`). Chaque reel finit par une **question binaire** (plan de bataille). **Un reel sur quatre au plus** porte un appel à écrire en message, les autres racontent. Scripts : `reels/educatif/E01-…md` à `E08-…md`, au format `reel-script` (hook chiffré, trois étapes, cliffhanger, 175 mots maximum), à passer dans `reel-lint` avant tournage.
 
 ### 3.2 Le carrousel éducatif stylisé (1 par semaine)
 
@@ -104,23 +104,36 @@ Saison 2 (janvier) : le rameur et les wall balls (C), la journée de dérush com
 
 ## 6. Le tournage, en une séance
 
-Les huit épisodes se tournent **en une seule séance face caméra** (une heure), avant le 16/11, pour que le montage ait deux semaines d'avance :
+Les huit épisodes se tournent **en une seule séance face caméra** : **lundi 09/11/2026, de 9 h à 10 h** (décidé le 08/11), feuille de tournage dans `reels/educatif/TOURNAGE-2026-11-09.md`. Le montage a ainsi une semaine d'avance sur le premier épisode du 17/11 :
 
-- Repérer **une fois** l'extrait de « Under the Sun » (début, fin, en secondes) qui sert d'intro et d'outro à toute la série, et le noter dans `storyboards-dynamique.json`.
-- FX3 ou iPhone, **vertical ou horizontal cadré large** (le format dynamique recadre : plein, serré, décalé à gauche ou à droite). Fond uni ou peu chargé, lumière de face, **micro-cravate** (le son direct est gardé : c'est la voix de Maxime, avec la signature sonore en intro et en outro).
+- FX3 ou iPhone, **vertical ou horizontal cadré large** (le format dynamique recadre : plein, serré, décalé à gauche ou à droite). Fond uni ou peu chargé, lumière de face, **micro-cravate** (le son direct est gardé : c'est la voix de Maxime ; la musique vient d'Instagram).
 - Une prise par épisode, lue au téléprompteur ou en points, sans chercher la prise parfaite : les silences sautent au montage.
 - Entre deux épisodes, **les plans de coupe** demandés en fin de chaque script (mains sur la FX3, l'objectif, le sac, la timeline) : 10 secondes chacun, ils tournent dans toute la saison.
 - Pour le détourage, **ne pas porter de noir sur fond noir** : le t-shirt noir de Maxime demande un fond clair ou coloré.
 
-## 7. Ce que Maxime doit confirmer ou mesurer (les crochets des scripts)
+### Les tournages dans l'agenda (posés le 08/11/2026)
 
-Rien n'est inventé : chaque fait qui manque est entre crochets dans les scripts, et un script ne se tourne pas avec un crochet.
+Chaque créneau porte la feuille, les scripts, les storyboards, la charte et la liste de mise en place,
+pour qu'aucun oubli ne dépende de la mémoire :
 
-1. **E02 et E07** : l'heure d'arrivée dans l'arène, la distance marchée sur une course (à relever à la montre à Paris), le nombre de batteries et de cartes qu'il emporte.
-2. **E05** : la masse du 70-200 GM II et la cadence maximale de la FX3 en 4K, à recopier depuis sony.fr (la fiche interdit tout chiffre technique non sourcé Sony).
-3. **E07** : les dates exactes de HYROX Paris (12 au 20/12 d'après la veille du 13/10) et sa vague à lui, s'il a un athlète à filmer.
-4. **E08** : combien de plans sur une course, et la durée du film livré dans la Course Signature.
-5. Les coachs et athlètes qui peuvent apparaître en plus de Pierre Huiban et Antoine Bouhana (liste promise le 27/10). D'ici là, aucun autre nom, aucun autre visage en sujet principal.
+| Quand | Agenda | Ce qu'on tourne |
+|---|---|---|
+| lun 09/11, 9 h à 10 h | « Tournage 1/2 · saison 1 » | les 8 épisodes face caméra et les 12 plans de coupe |
+| 12 au 20/12 (dates à confirmer) | « HYROX Paris · images de course pour la série » | roxzone, sled push en 100p et sa sortie, un plan brut S-Log3 gardé tel quel, le son, le point de vue caméra, les kilomètres à la montre |
+| lun 04/01/2027, 9 h à 10 h | « Tournage 2/2 · saison 2 » | les 8 épisodes de la saison 2, scripts à écrire avant le 21/12 |
+
+Le relevé des demandes BNI a quitté le lundi pour le vendredi 9 h, juste après la réunion BNI La
+Défense (décision de Maxime du 08/11). Seul le bloc « Devis, factures, relances » du lundi reste sur
+le créneau des deux séances face caméra : il se fait après le tournage, à 10 h.
+
+## 7. Ce qui reste à confirmer
+
+Les scripts ont été arrêtés le 08/11 **sans aucun crochet**, en version sans chiffre, pour la séance du 09/11. Rien n'est inventé ; ce qui n'était pas vérifié a été retiré de la phrase plutôt que supposé.
+
+1. **E07** : la date exacte du premier jour de HYROX Paris (12/12 d'après la veille du 13/10). Deux prises du hook sont tournées (« Dans 4 jours » et « Dans quelques jours »), le montage garde la bonne.
+2. Pour une saison 2 chiffrée : l'heure d'arrivée dans l'arène, les kilomètres marchés sur une course (montre, à Paris), le nombre de batteries et de cartes, la masse du 70-200 et la cadence 4K de la FX3 copiées depuis sony.fr, le nombre de plans d'une course et la durée du film livré.
+3. Les coachs et athlètes qui peuvent apparaître en plus de Pierre Huiban et Antoine Bouhana (liste promise le 27/10). D'ici là, aucun autre nom, aucun autre visage en sujet principal.
+4. « Under the Sun » dans la bibliothèque musicale d'Instagram : à vérifier à la première publication.
 
 ## 8. Ce qu'on mesure
 

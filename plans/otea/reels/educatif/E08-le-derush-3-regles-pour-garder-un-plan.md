@@ -3,11 +3,11 @@
 - **Chapitre** : F, après la course · **Créneau** : jeudi 10/12/2026, 18 h
 - **Fin** : question binaire
 - **Images derrière Maxime** : la timeline en dérush, trois plans de Rome qui illustrent les trois règles (un visage, une répétition entière, un passage de ligne avec son son), et un plan « raté » (bougé, coupé) assumé.
-- **À vérifier** : le nombre de plans d'une course filmée et la durée du film livré (Course Signature), pour le hook 1 ; sinon prendre le hook 2.
+- **À vérifier** : rien. Hook 2 retenu pour la séance du 09/11 (le hook 1 attend le nombre réel de plans d'une course).
 
 ## Trois hooks au choix
 
-1. « Une course filmée, c'est [xxx] plans. Le film en garde [xx]. Voilà comment je choisis. »
+1. « Une course filmée, c'est des centaines de plans. Le film en garde une poignée. Voilà comment je choisis. »
 2. « 3 règles pour qu'un plan de course finisse dans ton film. »
 3. « Pour une minute de film, je regarde une heure de rushes. Et je trie avec 3 règles. »
 

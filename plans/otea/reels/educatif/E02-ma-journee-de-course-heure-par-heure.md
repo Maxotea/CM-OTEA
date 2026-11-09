@@ -3,13 +3,13 @@
 - **Chapitre** : B, mes journées · **Créneau** : jeudi 19/11/2026, 18 h
 - **Fin** : question binaire, pas d'appel
 - **Images derrière Maxime** : l'arène vide le matin (Nice ou Rome), un plan de course, la timeline ouverte le soir (photo `20251230-montage-dans-la-penombre` ou rush équivalent)
-- **À vérifier avant tournage** : les trois crochets ci-dessous, à relever par Maxime (montre, agenda) ou à retirer de la phrase.
+- **À vérifier avant tournage** : rien. Version sans chiffre arrêtée le 08/11 pour la séance du 09/11 ; les variantes chiffrées (heure d'arrivée, kilomètres, batteries) reviendront dans une saison 2 quand Maxime les aura mesurées à Paris.
 
 ## Trois hooks au choix
 
 1. « Sur un HYROX, l'athlète enchaîne 16 segments. Et moi, je dois être au bon endroit 16 fois. »
-2. « Une journée de course côté caméra, c'est [xx] kilomètres à pied. Sans dossard. »
-3. « L'athlète court une heure. Moi, ma journée commence à [heure] et finit sur une timeline. »
+2. « Une journée de course côté caméra, c'est des kilomètres à pied. Sans dossard. »
+3. « L'athlète court une heure. Moi, ma journée commence avant la première vague et finit sur une timeline. »
 
 ## Script (hook 1)
 
@@ -17,7 +17,7 @@
 Sur un HYROX, l'athlète enchaîne 16 segments. Et moi, je dois être au bon endroit 16 fois.
 
 **Étape 1 · Le matin**
-J'arrive à [heure], avant la première vague. Je repère les stations, la lumière, les endroits où je peux être sans gêner. Je vérifie l'heure de départ de mon athlète, mes [nombre] batteries, mes cartes.
+J'arrive avant la première vague. Je repère les stations, la lumière, les endroits où je peux être sans gêner. Je vérifie l'heure de départ de mon athlète, mes batteries, mes cartes.
 
 **Étape 2 · La course**
 Une heure environ où je ne regarde que lui. Un kilomètre, une station, je me déplace, j'anticipe la suivante. Le rythme, c'est le sien, pas le mien.
@@ -31,15 +31,15 @@ Le moment le plus dur de la journée, ce n'est pas la course. C'est la roxzone. 
 **CTA**
 Tu veux voir la journée en entier, ou seulement la course ? Dis-le en commentaire.
 
-**Compte de mots : 150** (crochets remplis à un mot chacun).
+**Compte de mots : 146.**
 
 ## Storyboard motion
 
 | Scène, au mot | Fond | Éléments |
 |---|---|---|
 | ouverture | encre, lignes | `compteur` 0 → 16, légende « segments », à « 16 segments » · `compteur` 0 → 16, légende « fois au bon endroit », à « 16 fois » |
-| « Le matin » | graphite | `grand_mot` « [heure] » à « J'arrive » · `checklist` : « stations » · « lumière » · « où me mettre », cochés à leur mot |
-| « mes batteries » | graphite | `liste` : « [nombre] batteries » à « batteries », « cartes » à « cartes » |
+| « Le matin » | graphite | `grand_mot` « Avant la\|première vague » à « J'arrive » · `checklist` : « stations » · « lumière » · « où me mettre », cochés à leur mot |
+| « mes batteries » | graphite | `liste` : « batteries » à « batteries », « cartes » à « cartes » |
 | « La course » | encre | image de course plein cadre · `jauge` légende « une heure », de 10 à 100, jusqu'à « suivante » |
 | « Le rythme, c'est le sien » | encre, quadrillage | `tampon` « SON RYTHME, PAS LE MIEN » à « le sien » |
 | « Le soir » | graphite | image de la timeline · `grand_mot` « Dérush » à « dérush » · `liste` : « étalonnage », « montage » |

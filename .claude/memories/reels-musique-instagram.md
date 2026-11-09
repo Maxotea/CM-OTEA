@@ -38,11 +38,10 @@ qu'Instagram donne aux reels qui utilisent sa bibliothèque.
 Tous les comptes. Complète [[stories-sans-son]] (stories muettes depuis le
 04/08/2026).
 
-## Exception : la série éducative d'Otea Filmakers (08/11/2026)
-Décision de Maxime : « en intro et en outro de chaque [reel], on va mettre Under the Sun de
-Bakermat et Kidda ». Ces reels portent sa voix réelle (face caméra au micro), le fichier garde donc
-son son, et la signature sonore y est intégrée : environ 2 s sous la carte d'ouverture, ducking sous
-la voix, environ 2,5 s sous la carte de fin. Ils sortent en « audio d'origine », en mode notification.
-Les droits du morceau (sortie commerciale 2020) sont à vérifier avant le premier montage ; sans
-licence, repli : voix seule dans le fichier, morceau posé depuis la bibliothèque Instagram sur toute
-la durée. Détail : `plans/otea/2026-11-filmakers-educatif.md` § 3.1.
+## La série éducative d'Otea Filmakers (08/11/2026) : pas une exception, un cas d'école
+Maxime voulait « Under the Sun » de Bakermat feat. Kidda en intro et en outro de chaque reel, puis
+a confirmé le même jour qu'il n'y a pas de licence sur ce titre. La règle s'applique donc telle
+quelle : le fichier ne porte que sa voix réelle (face caméra au micro), et il pose « Under the Sun »
+depuis la bibliothèque Instagram à la publication (mode notification), à volume bas sous la voix.
+L'intro et l'outro se font par l'image : carte d'ouverture (2 s) et carte de fin (2,5 s) sans voix,
+où la musique s'entend seule. Détail : `plans/otea/2026-11-filmakers-educatif.md` § 3.1.
