@@ -21,8 +21,8 @@ Style : sobre. Maxime a écarté le « vintage » imposé (« pas forcément »)
 
 ## Script (cartons texte, en français : le destinataire est Saucony France)
 
-Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V3 du
-10/11, 44,6 s : la propale présente les trois athlètes suivis par le documentaire, Pierre, Antoine
+Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V4 du
+10/11, 53,1 s (CTA de fin demandé par Maxime) : la propale présente les trois athlètes suivis par le documentaire, Pierre, Antoine
 et Julie, qui courent tous les trois en Saucony (Maxime, 10/11).
 
 | # | Carton | Rush | Image |
@@ -39,7 +39,10 @@ et Julie, qui courent tous les trois en Saucony (Maxime, 10/11).
 | 10 | De Rome à Nice, en Saucony. | Nice 7465 | Saucony orange au sled pull |
 | 11 | Prochain départ : championnat du monde, Hong Kong, juin 2027. | Nice 7464 | Pierre de dos |
 | 12 | Le documentaire : Comment devenir champion du monde HYROX. | Nice 0198 | podium |
-| 13 | Saucony × Pierre, Antoine et Julie. Run As One. / Un film OTEA Production | — | fond noir |
+| 13 | Saucony × Pierre, Antoine et Julie. Run As One. | — | fond noir |
+| 14 | Trois athlètes français. Un championnat du monde. Hong Kong, juin 2027. | — | fond noir, barre bleu-blanc-rouge |
+| 15 | Saucony, écrivons ce projet 2027 ensemble. Une visio, un appel : parlons-en. | — | fond noir (CTA) |
+| 16 | Maxime Dietrich, OTEA Production, contact@oteaproduction.com | — | fond noir |
 
 Chronos de la saison : HYRESULT (`assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json`).
 Paris, Lyon et Stockholm n'ont aucun rush de course sur le Drive au 10/11 : ils sont en texte.

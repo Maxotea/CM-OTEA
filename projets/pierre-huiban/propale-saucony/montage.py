@@ -111,8 +111,14 @@ def carton(c, i, fmt, dossier):
     sortie = os.path.join(dossier, f"{fmt}-fin-{i}.mp4")
     texte = filtre_texte(c["texte"], os.path.join(dossier, f"{fmt}-fin-{i}.txt"), W, H, c["duree"])
     texte = texte.replace("y=h-text_h-", "y=(h-text_h)/2+0*")
+    filtres = [texte]
+    if c.get("drapeau"):            # barre bleu-blanc-rouge au-dessus du texte
+        lw, bh = int(W * (0.09 if W < H else 0.05)), max(6, H // 200)
+        x0, y0 = (W - 3 * lw) // 2, int(H * (0.36 if W < H else 0.30))
+        filtres = [f"drawbox=x={x0 + i * lw}:y={y0}:w={lw}:h={bh}:color={col}:t=fill"
+                   for i, col in enumerate(("0x0055A4", "0xFFFFFF", "0xEF4135"))] + filtres
     ff("-f", "lavfi", "-i", f"color=c=black:s={W}x{H}:r={FPS}:d={c['duree']}",
-       "-vf", f"{texte},format=yuv420p", "-c:v", "libx264", "-crf", "16", sortie)
+       "-vf", ",".join(filtres + ["format=yuv420p"]), "-c:v", "libx264", "-crf", "16", sortie)
     return sortie
 
 

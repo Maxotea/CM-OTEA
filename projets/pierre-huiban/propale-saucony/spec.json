@@ -145,8 +145,17 @@
    "duree": 3.0
   },
   {
-   "texte": "Un film OTEA Production",
-   "duree": 2.0
+   "texte": "Trois athlètes français.\nUn championnat du monde.\nHong Kong, juin 2027.",
+   "duree": 3.0,
+   "drapeau": true
+  },
+  {
+   "texte": "Saucony, écrivons\nce projet 2027 ensemble.\nUne visio, un appel :\nparlons-en.",
+   "duree": 3.5
+  },
+  {
+   "texte": "Maxime Dietrich\nOTEA Production\ncontact@oteaproduction.com",
+   "duree": 4.0
   }
  ]
 }
