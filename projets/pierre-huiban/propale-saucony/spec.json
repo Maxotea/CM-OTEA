@@ -1,11 +1,14 @@
 {
- "_doc": "Propale vidéo Saucony (Pierre Huiban, HYROX Nice 31/10/2026). Rendu : python3 projets/pierre-huiban/propale-saucony/montage.py projets/pierre-huiban/propale-saucony/spec.json --sortie DOSSIER. Plans FX3 (4K 100p S-Log3) : LUT de pierre-reel-ralenti.py et ralenti x4 réel ; plans caméra 2 (1080 25p Rec.709) : vitesse réelle, sans LUT. Aucun plan où « TRAIN SWEAT EAT » (feutre sur la poitrine) ou « TEAM TSE » est lisible : la propale est pour Saucony. Muette.",
- "index": "rushes-nice-drive.json",
+ "_doc": "Propale vidéo Saucony (Pierre Huiban, HYROX Rome 26/09 et Nice 31/10/2026). Rendu : python3 projets/pierre-huiban/propale-saucony/montage.py projets/pierre-huiban/propale-saucony/spec.json --sortie DOSSIER. Plans FX3 (4K 100p S-Log3) : LUT de pierre-reel-ralenti.py et ralenti x4 réel ; plans caméra 2 (1080 25p Rec.709) : vitesse réelle, sans LUT. Aucun plan où « TRAIN SWEAT EAT » (feutre sur la poitrine) ou « TEAM TSE » est lisible : la propale est pour Saucony. Muette.",
+ "index": [
+  "rushes-nice-drive.json",
+  "rushes-rome-drive.json"
+ ],
  "exposition": 0.9,
  "plans": [
   {
    "id": "chaussures",
-   "clip": "7426",
+   "clip": "FX3POST20261031_7426",
    "debut": 1.0,
    "duree": 1.0,
    "ralenti": 4,
@@ -16,7 +19,7 @@
   },
   {
    "id": "lacage",
-   "clip": "7423",
+   "clip": "FX3POST20261031_7423",
    "debut": 5.0,
    "duree": 0.8,
    "ralenti": 4,
@@ -26,8 +29,41 @@
    "pourquoi": "Laçage, logo Saucony lisible sur le talon (planche à 0,35). Manchons BV Booster et chaussettes blanches, comme Pierre en 7428-7430 : à confirmer par Maxime."
   },
   {
+   "id": "saison",
+   "clip": "FX3POST20260926_7369",
+   "debut": 7.8,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.5,
+   "texte": "Paris 54:42.\nLyon 54:59.\nMondiaux de Stockholm : 55:29.",
+   "pourquoi": "Rome, couloir du farmers carry, Pierre et Antoine vers l'objectif (planche à 0,5). Chronos de la saison avec Antoine : HYRESULT, assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json. Aucun rush de course de Paris, Lyon ni Stockholm sur le Drive au 10/11 : ces courses n'existent qu'en texte."
+  },
+  {
+   "id": "rome-pieds",
+   "clip": "FX3POST20260926_7348",
+   "debut": 6.2,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.5,
+   "texte": "Rome, 26 septembre.\n53:34.",
+   "pourquoi": "Rome, sled pull : Saucony blanches à semelle turquoise (mêmes que le laçage de Nice, 7423), planche à 0,5 et 0,85. Pierre (débardeur noir) au sled en début de rush. Vu au rendu v2 : les jambes sous le débardeur turquoise, donc probablement Antoine (le binôme), pas Pierre. Logo Saucony non lisible sur ce plan : modèle reconnu à la couleur (même paire qu'en 7423). À confirmer par Maxime."
+  },
+  {
+   "id": "rome-visage",
+   "clip": "FX3POST20260926_7361",
+   "debut": 2.5,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.45,
+   "texte": "1ers des 35-39.",
+   "pourquoi": "Rome, Pierre assis au rameur, regard caméra de 2,6 à 3,2 s du rush (repris du hook de M4-R12, vérifié le 14/10). Débardeur noir, aucune marque lisible."
+  },
+  {
    "id": "depart",
-   "clip": "7449",
+   "clip": "FX3POST20261031_7449",
    "debut": 4.0,
    "duree": 3.6,
    "ralenti": 1,
@@ -38,7 +74,7 @@
   },
   {
    "id": "course",
-   "clip": "7463",
+   "clip": "FX3POST20261031_7463",
    "debut": 4.6,
    "duree": 0.8,
    "ralenti": 4,
@@ -49,7 +85,7 @@
   },
   {
    "id": "dos",
-   "clip": "7464",
+   "clip": "FX3POST20261031_7464",
    "debut": 0.6,
    "duree": 0.8,
    "ralenti": 4,
@@ -60,18 +96,18 @@
   },
   {
    "id": "sled",
-   "clip": "7465",
+   "clip": "FX3POST20261031_7465",
    "debut": 1.4,
    "duree": 0.8,
    "ralenti": 4,
    "log": true,
    "x": 0.16,
-   "texte": "Pour aller plus loin,\nil a choisi Saucony.",
-   "pourquoi": "Les Saucony orange au pied de la station sled pull (planche à 0,1)."
+   "texte": "De Rome à Nice,\nen Saucony.",
+   "pourquoi": "Les Saucony orange au pied de la station sled pull (planche à 0,1). Texte v2 (10/11) : la continuité Rome → Nice est montrée par 7348 (Rome), mêmes Saucony blanches que le laçage de Nice."
   },
   {
    "id": "hongkong",
-   "clip": "7464",
+   "clip": "FX3POST20261031_7464",
    "debut": 8.2,
    "duree": 0.8,
    "ralenti": 4,
@@ -82,7 +118,7 @@
   },
   {
    "id": "podium",
-   "clip": "0198",
+   "clip": "FX3POST20261031_0198",
    "debut": 0.9,
    "duree": 0.8,
    "ralenti": 4,

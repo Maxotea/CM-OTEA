@@ -127,8 +127,10 @@ def main():
     lut = os.path.join(args.sortie, f"slog3-e{spec.get('exposition', 0.9)}.cube")
     if not os.path.exists(lut):
         prr.ecrire_lut(lut, exposition=spec.get("exposition", 0.9))
-    index = prr.charger_index_drive(os.path.join(os.path.dirname(os.path.abspath(args.spec)),
-                                                 spec["index"]))
+    dossier_spec = os.path.dirname(os.path.abspath(args.spec))
+    index = {}
+    for nom in (spec["index"] if isinstance(spec["index"], list) else [spec["index"]]):
+        index.update(prr.charger_index_drive(os.path.join(dossier_spec, nom)))
     sources = prr.Sources(index=index, cache=os.path.join(args.sortie, "_cache_rushes"))
     try:
         inters = [intermediaire(p, sources, lut, args.sortie) for p in spec["plans"]]

@@ -21,21 +21,28 @@ Style : sobre. Maxime a écarté le « vintage » imposé (« pas forcément »)
 
 ## Script (cartons texte, en français : le destinataire est Saucony France)
 
-Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V1 du
-10/11, 31,8 s :
+Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V2 du
+10/11, 41,4 s : Maxime veut montrer une saison, pas une course isolée.
 
 | # | Carton | Rush | Image |
 |---|---|---|---|
-| 1 | Depuis 1898, Saucony chausse des coureurs. | 7426 | Saucony orange au premier plan, Pierre accroupi |
-| 2 | Pierre Huiban. Un travail à plein temps. Et une obsession : HYROX. | 7423 | laçage, logo Saucony sur le talon |
-| 3 | Nice, 31 octobre. | 7449 | sas de départ en plan large, compte à rebours |
-| 4 | 57:16. 6es sur 1 395 binômes. | 7463 | Pierre de dos en course |
-| 5 | 1ers de leur catégorie sur 235. | 7464 | Pierre de dos, face à la piste |
-| 6 | Pour aller plus loin, il a choisi Saucony. | 7465 | Saucony orange au sled pull |
-| 7 | Qualifié pour le championnat du monde. Hong Kong, juin 2027. | 7464 | Pierre de dos |
-| 8 | Le documentaire : Comment devenir champion du monde HYROX. | 0198 | podium |
-| 9 | Saucony × Pierre Huiban. Run As One. | — | fond noir |
-| 10 | Un film OTEA Production | — | fond noir |
+| 1 | Depuis 1898, Saucony chausse des coureurs. | Nice 7426 | Saucony orange au premier plan, Pierre accroupi |
+| 2 | Pierre Huiban. Un travail à plein temps. Et une obsession : HYROX. | Nice 7423 | laçage, logo Saucony sur le talon |
+| 3 | Paris 54:42. Lyon 54:59. Mondiaux de Stockholm : 55:29. | Rome 7369 | Pierre et Antoine au farmers carry |
+| 4 | Rome, 26 septembre. 53:34. | Rome 7348 | Saucony blanches au sled pull |
+| 5 | 1ers des 35-39. | Rome 7361 | Pierre au rameur, regard caméra |
+| 6 | Nice, 31 octobre. | Nice 7449 | sas de départ, compte à rebours |
+| 7 | 57:16. 6es sur 1 395 binômes. | Nice 7463 | Pierre de dos en course |
+| 8 | 1ers de leur catégorie sur 235. | Nice 7464 | Pierre de dos, face à la piste |
+| 9 | De Rome à Nice, en Saucony. | Nice 7465 | Saucony orange au sled pull |
+| 10 | Qualifié pour le championnat du monde. Hong Kong, juin 2027. | Nice 7464 | Pierre de dos |
+| 11 | Le documentaire : Comment devenir champion du monde HYROX. | Nice 0198 | podium |
+| 12 | Saucony × Pierre Huiban. Run As One. / Un film OTEA Production | — | fond noir |
+
+Chronos de la saison : HYRESULT (`assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json`).
+Paris, Lyon et Stockholm n'ont aucun rush de course sur le Drive au 10/11 : ils sont en texte.
+Rushs de Rome lisibles : dossier « PIERRE » (7345 à 7379). « AVANT HYROX » et HYROX ROME 2026
+refusent la lecture (fichiers non partagés par lien).
 
 ## Ce qu'on a écarté, et pourquoi
 
@@ -45,6 +52,9 @@ exclu, comme le stand TSE de l'échauffement. Écartés aussi : 7449 après 7,6 
 départ) et 7457 (grande bannière PUMA sur le bord du couloir).
 
 ## À confirmer par Maxime
+
+- Rome 7348 : les Saucony blanches semblent être aux pieds d'Antoine (débardeur turquoise au-dessus), logo non lisible ; modèle reconnu à la couleur.
+- Rome 7369 : petit logo Nike sur le short d'Antoine.
 
 - Les pieds du laçage (7423) : manchons BV Booster et chaussettes blanches, comme Pierre en
   7428-7430, mais le visage n'est pas dans le cadre.
