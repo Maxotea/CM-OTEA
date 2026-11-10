@@ -25,8 +25,19 @@
    "ralenti": 4,
    "log": true,
    "x": 0.55,
-   "texte": "Pierre Huiban.\nUn travail à plein temps.\nEt une obsession : HYROX.",
-   "pourquoi": "Laçage, logo Saucony lisible sur le talon (planche à 0,35). Manchons BV Booster et chaussettes blanches, comme Pierre en 7428-7430 : à confirmer par Maxime."
+   "texte": "Trois athlètes HYROX.\nTrois paires de Saucony.",
+   "pourquoi": "Laçage, logo Saucony lisible sur le talon (planche à 0,35). Pieds de Pierre ou de Julie : le carton ne nomme personne (Maxime, 10/11 : les trois portent des Saucony)."
+  },
+  {
+   "id": "rome-visage",
+   "clip": "FX3POST20260926_7361",
+   "debut": 2.5,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.45,
+   "texte": "Pierre Huiban.\nMondiaux de Stockholm 2026.\nDeux fois qualifié pour Hong Kong.",
+   "pourquoi": "Rome, Pierre assis au rameur, regard caméra de 2,6 à 3,2 s du rush (repris du hook de M4-R12, vérifié le 14/10). Débardeur noir, aucune marque lisible. Deux qualifications pour Hong Kong : doubles pro hommes 35-39 avec Antoine, puis doubles mixte pro 35-39 avec Julie à Nice (mail de Maxime à Puma du 09/11)."
   },
   {
    "id": "saison",
@@ -40,6 +51,17 @@
    "pourquoi": "Rome, couloir du farmers carry, Pierre et Antoine vers l'objectif (planche à 0,5). Chronos de la saison avec Antoine : HYRESULT, assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json. Aucun rush de course de Paris, Lyon ni Stockholm sur le Drive au 10/11 : ces courses n'existent qu'en texte."
   },
   {
+   "id": "antoine",
+   "clip": "FX3POST20260926_7364",
+   "debut": 9.8,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.6,
+   "texte": "Antoine Bouhana.\nAvec Pierre à Rome : 53:34,\n1ers des 35-39.",
+   "pourquoi": "Rome, Antoine (débardeur turquoise, chaîne) en gros plan, face caméra (planche à 0,85). Remplace 7363 le 10/11 : à 10,6 s, Antoine de dos et flou."
+  },
+  {
    "id": "rome-pieds",
    "clip": "FX3POST20260926_7348",
    "debut": 6.2,
@@ -47,19 +69,19 @@
    "ralenti": 4,
    "log": true,
    "x": 0.5,
-   "texte": "Rome, 26 septembre.\n53:34.",
+   "texte": "Rome, 26 septembre.",
    "pourquoi": "Rome, sled pull : Saucony blanches à semelle turquoise (mêmes que le laçage de Nice, 7423), planche à 0,5 et 0,85. Pierre (débardeur noir) au sled en début de rush. Vu au rendu v2 : les jambes sous le débardeur turquoise, donc probablement Antoine (le binôme), pas Pierre. Logo Saucony non lisible sur ce plan : modèle reconnu à la couleur (même paire qu'en 7423). À confirmer par Maxime."
   },
   {
-   "id": "rome-visage",
-   "clip": "FX3POST20260926_7361",
-   "debut": 2.5,
+   "id": "julie",
+   "clip": "FX3POST20261031_7438",
+   "debut": 1.2,
    "duree": 0.8,
    "ralenti": 4,
    "log": true,
-   "x": 0.45,
-   "texte": "1ers des 35-39.",
-   "pourquoi": "Rome, Pierre assis au rameur, regard caméra de 2,6 à 3,2 s du rush (repris du hook de M4-R12, vérifié le 14/10). Débardeur noir, aucune marque lisible."
+   "x": 0.22,
+   "texte": "Julie Pecmézian.\nAvec Pierre à Nice : 57:16,\n1ers sur 235 binômes.",
+   "pourquoi": "Nice, échauffement : Julie de profil en gros plan (planche à 0,1). Remplace 7437 le 10/11 (poignet et bracelets, pas de visage). Julie est athlète TSE : aucun logo TSE lisible à vérifier au rendu."
   },
   {
    "id": "depart",
@@ -80,19 +102,8 @@
    "ralenti": 4,
    "log": true,
    "x": 0.6,
-   "texte": "57:16.\n6es sur 1 395 binômes.",
+   "texte": "6es au général\nsur 1 395 binômes.",
    "pourquoi": "Pierre de dos en course (planche à 0,6). Remplace 7457 le 10/11 : grande bannière PUMA sur le bord gauche du couloir."
-  },
-  {
-   "id": "dos",
-   "clip": "FX3POST20261031_7464",
-   "debut": 0.6,
-   "duree": 0.8,
-   "ralenti": 4,
-   "log": true,
-   "x": 0.4,
-   "texte": "1ers de leur catégorie\nsur 235.",
-   "pourquoi": "Pierre de dos, brassard noir, face à la piste (planche à 0,1)."
   },
   {
    "id": "sled",
@@ -113,7 +124,7 @@
    "ralenti": 4,
    "log": true,
    "x": 0.5,
-   "texte": "Qualifié pour\nle championnat du monde.\nHong Kong, juin 2027.",
+   "texte": "Prochain départ :\nchampionnat du monde,\nHong Kong, juin 2027.",
    "pourquoi": "Pierre de dos face à la piste (planche à 0,85)."
   },
   {
@@ -130,7 +141,7 @@
  ],
  "cartons_fin": [
   {
-   "texte": "Saucony × Pierre Huiban\nRun As One.",
+   "texte": "Saucony × Pierre, Antoine et Julie\nRun As One.",
    "duree": 3.0
   },
   {

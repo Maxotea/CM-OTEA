@@ -21,23 +21,25 @@ Style : sobre. Maxime a écarté le « vintage » imposé (« pas forcément »)
 
 ## Script (cartons texte, en français : le destinataire est Saucony France)
 
-Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V2 du
-10/11, 41,4 s : Maxime veut montrer une saison, pas une course isolée.
+Le découpage exact (rush, point d'entrée, recadrage, raison du choix) est dans `spec.json`. V3 du
+10/11, 44,6 s : la propale présente les trois athlètes suivis par le documentaire, Pierre, Antoine
+et Julie, qui courent tous les trois en Saucony (Maxime, 10/11).
 
 | # | Carton | Rush | Image |
 |---|---|---|---|
-| 1 | Depuis 1898, Saucony chausse des coureurs. | Nice 7426 | Saucony orange au premier plan, Pierre accroupi |
-| 2 | Pierre Huiban. Un travail à plein temps. Et une obsession : HYROX. | Nice 7423 | laçage, logo Saucony sur le talon |
-| 3 | Paris 54:42. Lyon 54:59. Mondiaux de Stockholm : 55:29. | Rome 7369 | Pierre et Antoine au farmers carry |
-| 4 | Rome, 26 septembre. 53:34. | Rome 7348 | Saucony blanches au sled pull |
-| 5 | 1ers des 35-39. | Rome 7361 | Pierre au rameur, regard caméra |
-| 6 | Nice, 31 octobre. | Nice 7449 | sas de départ, compte à rebours |
-| 7 | 57:16. 6es sur 1 395 binômes. | Nice 7463 | Pierre de dos en course |
-| 8 | 1ers de leur catégorie sur 235. | Nice 7464 | Pierre de dos, face à la piste |
-| 9 | De Rome à Nice, en Saucony. | Nice 7465 | Saucony orange au sled pull |
-| 10 | Qualifié pour le championnat du monde. Hong Kong, juin 2027. | Nice 7464 | Pierre de dos |
-| 11 | Le documentaire : Comment devenir champion du monde HYROX. | Nice 0198 | podium |
-| 12 | Saucony × Pierre Huiban. Run As One. / Un film OTEA Production | — | fond noir |
+| 1 | Depuis 1898, Saucony chausse des coureurs. | Nice 7426 | Saucony orange au premier plan |
+| 2 | Trois athlètes HYROX. Trois paires de Saucony. | Nice 7423 | laçage, logo Saucony sur le talon |
+| 3 | Pierre Huiban. Mondiaux de Stockholm 2026. Deux fois qualifié pour Hong Kong. | Rome 7361 | Pierre au rameur, regard caméra |
+| 4 | Paris 54:42. Lyon 54:59. Mondiaux de Stockholm : 55:29. | Rome 7369 | Pierre et Antoine au farmers carry |
+| 5 | Antoine Bouhana. Avec Pierre à Rome : 53:34, 1ers des 35-39. | Rome 7364 | Antoine en gros plan |
+| 6 | Rome, 26 septembre. | Rome 7348 | Saucony blanches au sled pull |
+| 7 | Julie Pecmézian. Avec Pierre à Nice : 57:16, 1ers sur 235 binômes. | Nice 7438 | Julie de profil |
+| 8 | Nice, 31 octobre. | Nice 7449 | sas de départ |
+| 9 | 6es au général sur 1 395 binômes. | Nice 7463 | Pierre de dos en course |
+| 10 | De Rome à Nice, en Saucony. | Nice 7465 | Saucony orange au sled pull |
+| 11 | Prochain départ : championnat du monde, Hong Kong, juin 2027. | Nice 7464 | Pierre de dos |
+| 12 | Le documentaire : Comment devenir champion du monde HYROX. | Nice 0198 | podium |
+| 13 | Saucony × Pierre, Antoine et Julie. Run As One. / Un film OTEA Production | — | fond noir |
 
 Chronos de la saison : HYRESULT (`assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json`).
 Paris, Lyon et Stockholm n'ont aucun rush de course sur le Drive au 10/11 : ils sont en texte.
