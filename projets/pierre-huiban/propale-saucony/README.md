@@ -14,6 +14,19 @@ le profil de Pierre interdit les partenariats inventés. C'est la marque qui est
 
 Style : sobre. Maxime a écarté le « vintage » imposé (« pas forcément »).
 
+## Son (10/11)
+
+La propale part par mail, pas sur Instagram : elle a une bande-son (demande de Maxime). Les
+versions muettes restent disponibles pour les réseaux (règle reels-musique-instagram).
+
+- `musique.py` compose une piste originale en synthèse pure (aucun sample tiers, aucun droit),
+  calée sur les durées réelles des plans : 150 BPM, un plan = 2 mesures, impacts au départ de
+  Nice, sur Hong Kong et au début des cartons de fin.
+- Le son réel du sas de départ (rush 7449, de 4,0 à 7,6 s, synchrone avec l'image) est mixé par-dessus.
+- Écarté : « Take It - The Siege (Official Audio) » du dossier MUSIQUE de Bordeaux, morceau
+  commercial sans licence connue.
+- Assemblage : `-af loudnorm=I=-14:TP=-1.5`, fondu de sortie 1,8 s, AAC 192 k.
+
 ## Formats
 
 - `propale-saucony-9x16.mp4` : vertical, à regarder sur téléphone.
