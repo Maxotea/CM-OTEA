@@ -1,0 +1,105 @@
+{
+ "_doc": "Propale vidéo Saucony (Pierre Huiban, HYROX Nice 31/10/2026). Rendu : python3 projets/pierre-huiban/propale-saucony/montage.py projets/pierre-huiban/propale-saucony/spec.json --sortie DOSSIER. Plans FX3 (4K 100p S-Log3) : LUT de pierre-reel-ralenti.py et ralenti x4 réel ; plans caméra 2 (1080 25p Rec.709) : vitesse réelle, sans LUT. Aucun plan où « TRAIN SWEAT EAT » (feutre sur la poitrine) ou « TEAM TSE » est lisible : la propale est pour Saucony. Muette.",
+ "index": "rushes-nice-drive.json",
+ "exposition": 0.9,
+ "plans": [
+  {
+   "id": "chaussures",
+   "clip": "7426",
+   "debut": 1.0,
+   "duree": 1.0,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.68,
+   "texte": "Depuis 1898,\nSaucony chausse\ndes coureurs.",
+   "pourquoi": "La paire de Saucony orange au premier plan, Pierre accroupi derrière à l'échauffement (planche à 0,35 et 0,6 de la durée)."
+  },
+  {
+   "id": "lacage",
+   "clip": "7423",
+   "debut": 5.0,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.55,
+   "texte": "Pierre Huiban.\nUn travail à plein temps.\nEt une obsession : HYROX.",
+   "pourquoi": "Laçage, logo Saucony lisible sur le talon (planche à 0,35). Manchons BV Booster et chaussettes blanches, comme Pierre en 7428-7430 : à confirmer par Maxime."
+  },
+  {
+   "id": "depart",
+   "clip": "7449",
+   "debut": 4.0,
+   "duree": 3.6,
+   "ralenti": 1,
+   "log": false,
+   "x": 0.5,
+   "texte": "Nice, 31 octobre.",
+   "pourquoi": "Plan large du sas de départ Red Bull, compte à rebours de 4 à 1 (caméra 2, 25p). Plan large choisi le 10/11 : sur le départ (7,6 s et après), Pierre est au premier plan, short TEAM TSE et « TRAIN SWEAT EAT » lisible sur la poitrine."
+  },
+  {
+   "id": "course",
+   "clip": "7463",
+   "debut": 4.6,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.6,
+   "texte": "57:16.\n6es sur 1 395 binômes.",
+   "pourquoi": "Pierre de dos en course (planche à 0,6). Remplace 7457 le 10/11 : grande bannière PUMA sur le bord gauche du couloir."
+  },
+  {
+   "id": "dos",
+   "clip": "7464",
+   "debut": 0.6,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.4,
+   "texte": "1ers de leur catégorie\nsur 235.",
+   "pourquoi": "Pierre de dos, brassard noir, face à la piste (planche à 0,1)."
+  },
+  {
+   "id": "sled",
+   "clip": "7465",
+   "debut": 1.4,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.16,
+   "texte": "Pour aller plus loin,\nil a choisi Saucony.",
+   "pourquoi": "Les Saucony orange au pied de la station sled pull (planche à 0,1)."
+  },
+  {
+   "id": "hongkong",
+   "clip": "7464",
+   "debut": 8.2,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.5,
+   "texte": "Qualifié pour\nle championnat du monde.\nHong Kong, juin 2027.",
+   "pourquoi": "Pierre de dos face à la piste (planche à 0,85)."
+  },
+  {
+   "id": "podium",
+   "clip": "0198",
+   "debut": 0.9,
+   "duree": 0.8,
+   "ralenti": 4,
+   "log": true,
+   "x": 0.5,
+   "texte": "Le documentaire :\nComment devenir\nchampion du monde HYROX.",
+   "pourquoi": "Podium de Nice (rush vertical). Présenté comme le titre du documentaire, pas comme un résultat."
+  }
+ ],
+ "cartons_fin": [
+  {
+   "texte": "Saucony × Pierre Huiban\nRun As One.",
+   "duree": 3.0
+  },
+  {
+   "texte": "Un film OTEA Production",
+   "duree": 2.0
+  }
+ ]
+}
