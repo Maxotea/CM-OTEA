@@ -58,8 +58,8 @@
    "ralenti": 4,
    "log": true,
    "x": 0.6,
-   "texte": "Antoine Bouhana.\nAvec Pierre à Rome : 53:34,\n1ers des 35-39.",
-   "pourquoi": "Rome, Antoine (débardeur turquoise, chaîne) en gros plan, face caméra (planche à 0,85). Remplace 7363 le 10/11 : à 10,6 s, Antoine de dos et flou."
+   "texte": "Antoine Bouhana.\nÀ Rome, 1ers des 35-39\navec Pierre, en 53:34.\nQualifié en mixte\navec Camille Julien.",
+   "pourquoi": "Rome, Antoine (débardeur turquoise, chaîne) en gros plan, face caméra (planche à 0,85). Remplace 7363 le 10/11 : à 10,6 s, Antoine de dos et flou. Qualification en doubles mixte avec Camille Julien à Rome : confirmée par Maxime le 10/11 (chrono non relevé)."
   },
   {
    "id": "rome-pieds",
@@ -80,8 +80,8 @@
    "ralenti": 4,
    "log": true,
    "x": 0.22,
-   "texte": "Julie Pecmézian.\nAvec Pierre à Nice : 57:16,\n1ers sur 235 binômes.",
-   "pourquoi": "Nice, échauffement : Julie de profil en gros plan (planche à 0,1). Remplace 7437 le 10/11 (poignet et bracelets, pas de visage). Julie est athlète TSE : aucun logo TSE lisible à vérifier au rendu."
+   "texte": "Julie Pecmézian.\nQualifiée en solo pro\nà Bordeaux.\nAvec Pierre à Nice :\n1ers sur 235 binômes.",
+   "pourquoi": "Nice, échauffement : Julie de profil en gros plan (planche à 0,1). Remplace 7437 le 10/11 (poignet et bracelets, pas de visage). Julie est athlète TSE : aucun logo TSE lisible à vérifier au rendu. Bordeaux, 04/10/2026 : 1re des 35-39 en Pro Femme, 1:08:00, 10e Pro Femme (kit semaine du 12/10) ; qualification en solo pro confirmée par Maxime le 10/11 (offre au 1er non qualifié de la catégorie, règle HYROX depuis le 16/03/2026)."
   },
   {
    "id": "depart",

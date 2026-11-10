@@ -31,9 +31,9 @@ et Julie, qui courent tous les trois en Saucony (Maxime, 10/11).
 | 2 | Trois athlètes HYROX. Trois paires de Saucony. | Nice 7423 | laçage, logo Saucony sur le talon |
 | 3 | Pierre Huiban. Mondiaux de Stockholm 2026. Deux fois qualifié pour Hong Kong. | Rome 7361 | Pierre au rameur, regard caméra |
 | 4 | Paris 54:42. Lyon 54:59. Mondiaux de Stockholm : 55:29. | Rome 7369 | Pierre et Antoine au farmers carry |
-| 5 | Antoine Bouhana. Avec Pierre à Rome : 53:34, 1ers des 35-39. | Rome 7364 | Antoine en gros plan |
+| 5 | Antoine Bouhana. À Rome, 1ers des 35-39 avec Pierre, en 53:34. Qualifié en mixte avec Camille Julien. | Rome 7364 | Antoine en gros plan |
 | 6 | Rome, 26 septembre. | Rome 7348 | Saucony blanches au sled pull |
-| 7 | Julie Pecmézian. Avec Pierre à Nice : 57:16, 1ers sur 235 binômes. | Nice 7438 | Julie de profil |
+| 7 | Julie Pecmézian. Qualifiée en solo pro à Bordeaux. Avec Pierre à Nice : 1ers sur 235 binômes. | Nice 7438 | Julie de profil |
 | 8 | Nice, 31 octobre. | Nice 7449 | sas de départ |
 | 9 | 6es au général sur 1 395 binômes. | Nice 7463 | Pierre de dos en course |
 | 10 | De Rome à Nice, en Saucony. | Nice 7465 | Saucony orange au sled pull |
@@ -63,6 +63,10 @@ départ) et 7457 (grande bannière PUMA sur le bord du couloir).
 - Le podium (0198) : un inconnu est assis au premier plan.
 
 ## Faits utilisés et leur source
+
+- Antoine qualifié en doubles mixte avec Camille Julien à Rome, et Julie qualifiée en solo pro à
+  Bordeaux (1re des 35-39 en Pro Femme, 1:08:00, le 04/10/2026) : confirmés par Maxime le 10/11.
+  Introuvables en ligne (HYROX ne publie pas les qualifiés) ; chrono de Rome en mixte non relevé.
 
 - Saucony fondée en 1898, signature « People over podiums. Run As One. » : fiche officielle Saucony
   (relevée via FullEnrich le 10/11/2026).
