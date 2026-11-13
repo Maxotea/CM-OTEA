@@ -475,6 +475,18 @@
       "type": "Carrousel (3 visuels)",
       "resultat": "publication programmée (version 425664280)",
       "post_id": 425664280
+    },
+    "2026-11-27T10:00:00|394868447": {
+      "quand": "2026-11-13T12:30:26",
+      "type": "Story",
+      "resultat": "publication programmée (version 426907795)",
+      "post_id": 426907795
+    },
+    "2026-11-27T12:00:00|402250797": {
+      "quand": "2026-11-13T12:30:27",
+      "type": "Post",
+      "resultat": "publication programmée (version 426907842)",
+      "post_id": 426907842
     }
   }
 }
