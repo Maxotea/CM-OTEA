@@ -32,6 +32,9 @@ et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-desso
 ### DA « trois vies » (remplace Pitch Black / Rouge Sang)
 - Papier `#F2EEE6`, encre `#14171C`, un seul accent « aube » `#E8622C`.
 - Titres Fraunces SemiBold en casse normale, texte Inter, chiffres JetBrains Mono.
+- **Photo toujours en noir et blanc contrasté, léger masque qui relève Pierre, glow sur
+  les hautes lumières** (règle de Maxime, 14/11/2026, `.claude/memories/pierre-photo-nb-glow.md`).
+  La couleur ne vit que dans la typo.
 - Registre en tête de chaque visuel : `ATHLETE · FATHER · EXECUTIVE`, avec la
   facette du jour en couleur. Pied : `ROAD TO HONG KONG · JUNE 2027`.
 - Générateurs : `scripts/pierre-carousel-v2.py` (carrousels 1080×1350) et

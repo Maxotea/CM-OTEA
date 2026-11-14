@@ -1,0 +1,68 @@
+name: Veille résultats HYROX
+
+# Repère une nouvelle course de Pierre Huiban, Antoine Bouhana ou Julie Pekmezian sur
+# HYRESULT, en tire les chiffres, rend le visuel (DA « trois vies », photo N&B + masque +
+# glow) et pose le post Instagram en brouillon à H+1 dans Metricool, puis prévient Maxime.
+# Voir scripts/hyrox_veille.py et .claude/skills/hyrox-veille/SKILL.md.
+# Tourne ici et pas dans une session Claude : la politique réseau des sessions distantes
+# bloque app.metricool.com et l'hébergeur d'images, un runner Actions ne les bloque pas.
+
+on:
+  schedule:
+    # Toutes les 20 minutes de 6h à 22h UTC (les courses HYROX ont lieu en journée) : un
+    # résultat publié est repéré en moins de 20 minutes, le post est daté à H+1.
+    - cron: "*/20 6-22 * * *"
+  workflow_dispatch:
+    inputs:
+      resultat:
+        description: "Rejouer un résultat HYRESULT précis (ex. LR3MS4JI5CA8BD). Vide = veille normale."
+        required: false
+      dry_run:
+        description: "Montrer ce qui serait fait, sans rien publier ni commiter"
+        type: boolean
+        default: false
+
+# L'état (hyrox/veille-etat.json) est commité : un seul passage à la fois.
+concurrency: hyrox-veille
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow numpy openpyxl
+
+      - name: Passage de veille
+        env:
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
+          NOTIF_WEBHOOK: ${{ secrets.NOTIF_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/hyrox_veille.py \
+            ${{ inputs.resultat && format('--resultat {0}', inputs.resultat) || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commiter l'état et les visuels
+        if: ${{ always() && !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- hyrox/ && [ -z "$(git ls-files --others --exclude-standard hyrox/)" ]; then
+            echo "Rien de nouveau."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hyrox/
+          git commit -m "Veille HYROX : nouveau résultat traité"
+          git pull --rebase --autostash
+          git push

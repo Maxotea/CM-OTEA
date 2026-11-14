@@ -1,0 +1,183 @@
+{
+  "initialise": true,
+  "vus": {
+    "LR3MS4JI5CA8BD": {
+      "statut": "brouillon",
+      "vu_le": "2026-11-14T20:58",
+      "post": {
+        "id": 428351682,
+        "uuid": "-7915907012289282030",
+        "date": "2026-11-15T18:00:00",
+        "statut": "brouillon retenu (en_attente)"
+      },
+      "note": "posé à la main le 14/11/2026, avant la veille"
+    },
+    "LR3MS4JI5B4BD9": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI58942C": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI533BA3": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI51C764": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4F1CDE": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4EB93D": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI490D83": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI46C024": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI46BF06": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI448200": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4486AB": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI3F4102": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI3B9068": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI2E8E3D": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI2E9DDA": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "JGDMS4JI237FDC": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI59CF7B": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI58AD21": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI534154": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI502E2B": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI5026DB": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4ECA77": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI47CE22": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI467845": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4569DE": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI41BCD7": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI3B91E4": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI2C5990": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI59185A": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI579A30": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI51E3CF": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI50249A": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4F2329": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI4EB74F": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI495450": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI46B835": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI41D429": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI3BADCC": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI2EAB17": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "LR3MS4JI2B827C": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    },
+    "JGDMS4JI1C6E5D": {
+      "statut": "historique",
+      "vu_le": "2026-11-14T21:07"
+    }
+  },
+  "rotation": {
+    "pierre-huiban": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_doc": "Photos de Pierre Huiban prêtes pour un visuel automatique (veille résultats HYROX, scripts/hyrox_veille.py). Chaque photo : vraie photo de la banque de Pierre (aucune IA), hébergée en permanence sur le CDN Higgsfield (url), avec son masque de détourage (masque, fait par Higgsfield remove_background le 14/11/2026, blanc = Pierre) pour la règle N&B + masque + glow (.claude/memories/pierre-photo-nb-glow.md). decalage : position verticale du recadrage 4:5 (0 = haut). Ce ne sont PAS des photos de la course : le visuel d'une veille est provisoire, on le remplace dès que les photos de course arrivent. Sans 86 (rameur, compétition) : sujet à confirmer avant de l'ajouter. empreinte présente pour que drive_sync.py n'y touche pas.",
+  "client": "pierre-huiban",
+  "photos": [
+    {
+      "cle": "77",
+      "sujet": "Pierre court sur tapis devant le néon SE DÉPASSER SE SURPASSER, salle, profil 3/4",
+      "drive_nom": "Sans titre-77.jpg",
+      "drive_id": "1BHqK5XVS1_zaapgZtXQNjU4gJ1VOFTtJ",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/6f88a94a-df3f-4d24-9b9b-52e4427df2c5.jpg",
+      "empreinte": "fbd2104315993af6",
+      "masque": "photos/pierre-huiban/masques/sans-titre-77.png",
+      "decalage": 0.1,
+      "provenance": "reelle"
+    },
+    {
+      "cle": "85",
+      "sujet": "Pierre en course sous l'arche IN, profil, débardeur noir, compétition HYROX",
+      "drive_nom": "Sans titre-85.jpg",
+      "drive_id": "1Yhhqm-TlAC3lnAlXD599QEzRI8S49R3c",
+      "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/01a1ce5e-5fe8-4747-bb88-8217f880bc1f.jpg",
+      "empreinte": "41f7d8ecd4b510d5",
+      "masque": "photos/pierre-huiban/masques/sans-titre-85.png",
+      "decalage": 1.0,
+      "provenance": "reelle"
+    }
+  ]
+}

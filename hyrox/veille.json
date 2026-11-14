@@ -1,0 +1,20 @@
+{
+  "_doc": "Veille résultats HYROX (scripts/hyrox_veille.py, action .github/workflows/hyrox-veille.yml). Source : HYRESULT (hyresult.com), qui reprend les résultats officiels results.hyrox.com quelques minutes après l'arrivée. Une course n'est traitée qu'une fois, par son identifiant de résultat (un doubles Pierre + Antoine ne fait qu'un post). compte : la clé d'un compte de `comptes` sur lequel poster ; null = détection et notification seulement (pas de compte Metricool connu). armer_auto : false = le post reste en BROUILLON et Maxime le valide (règle n°1 du CLAUDE.md) ; true = publication automatique à l'heure, comme la relève validation_auto. Délai : le post est daté à maintenant + delai_minutes, dans la plage horaire du compte.",
+  "delai_minutes": 60,
+  "athletes": [
+    {"slug": "pierre-huiban", "nom": "Pierre Huiban", "prenom": "Pierre", "instagram": "@pierrehuiban89", "compte": "pierre-huiban"},
+    {"slug": "antoine-bouhana", "nom": "Antoine Bouhana", "prenom": "Antoine", "instagram": "@antoine_bhna", "compte": null},
+    {"slug": "julie-pekmezian", "nom": "Julie Pekmezian", "prenom": "Julie", "instagram": null, "compte": null}
+  ],
+  "comptes": {
+    "pierre-huiban": {
+      "blog_id": 6572293,
+      "athlete": "pierre-huiban",
+      "photos": "photos/pierre-huiban.json",
+      "plage": ["07:00", "22:30"],
+      "armer_auto": false,
+      "pied": "ROAD TO HONG KONG · JUNE 2027",
+      "hashtags": ["#hyrox", "#roadtohongkong"]
+    }
+  }
+}
