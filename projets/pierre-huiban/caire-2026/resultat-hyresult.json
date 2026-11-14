@@ -1,0 +1,18 @@
+{
+  "source": "https://www.hyresult.com/result/LR3MS4JI5CA8BD",
+  "officiel": "https://results.hyrox.com/season-9/?event=HPRO&meeting=LR3MS4JI192B&id=LR3MS4JI5CA8BD",
+  "releve_le": "2026-11-14",
+  "course": "HYROX Cairo 2026",
+  "division": "Pro Men",
+  "categorie": "35-39",
+  "temps": "1:06:12",
+  "rang": 30,
+  "partants_classes": 176,
+  "rang_categorie": 4,
+  "premiere_course_pro_solo": true,
+  "totaux": {"runs": "32:10", "stations": "29:09", "roxzone": "4:53"},
+  "runs": ["3:19", "3:49", "4:02", "4:06", "4:09", "4:06", "4:10", "4:33"],
+  "stations": {"SkiErg": ["3:58", 27], "Sled Push": ["3:31", 47], "Sled Pull": ["3:56", 33], "Burpee Broad Jump": ["3:33", 50], "Row": ["4:24", 65], "Farmers Carry": ["2:00", 75], "Sandbag Lunges": ["3:41", 35], "Wall Balls": ["4:06", 18]},
+  "metricool": {"post_id": 428347667, "uuid": "-7915907012289282030", "date": "2026-11-15T18:00 Europe/Paris", "draft": true, "en_attente": true},
+  "photo": "Sans titre-77.jpg (banque Pierre, Drive 1BHqK5XVS1_zaapgZtXQNjU4gJ1VOFTtJ), photo d'entraînement : à remplacer par une photo de la course"
+}
