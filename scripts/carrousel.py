@@ -544,6 +544,8 @@ def render_spec(path, themes, check_only=False):
     slides = spec["slides"]
     out = ROOT / "medias" / spec["client"] / "carrousels" / spec["slug"]
 
+    # le style educatif est typographique, sans photo de fond : rien à créditer
+    fonds = None
     if spec.get("style") == "educatif":
         import carrousel_educatif
 
