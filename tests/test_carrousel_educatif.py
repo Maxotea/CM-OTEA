@@ -101,3 +101,14 @@ def test_la_validation_classique_delegue_au_style_educatif(tmp_path):
     chemin.write_text(json.dumps(spec), encoding="utf-8")
     with pytest.raises(ValueError, match="gabarit"):
         carrousel.validate(spec, THEMES, chemin)
+
+
+def test_le_rendu_complet_educatif_ecrit_legende_et_manifeste(tmp_path, monkeypatch):
+    # Le workflow « Carrousels hebdo » est tombé le 13/11/2026 : le rendu complet (hors
+    # --check) lisait les fonds photo, jamais définis pour le style educatif.
+    monkeypatch.setattr(carrousel, "ROOT", tmp_path)
+    out, files = carrousel.render_spec(SPECS[0], THEMES)
+    assert (out / "caption.txt").exists()
+    manifeste = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
+    assert manifeste["draft"] is True and manifeste["auto_publish"] is False
+    assert manifeste["slides_in_order"] == files
