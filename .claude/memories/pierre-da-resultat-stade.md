@@ -31,4 +31,7 @@ piste B parmi trois.
   contraste un peu relevé et glow léger (`visuel_pistes.py --couleur`).
 - Bord du détourage : seuil franc, ni adouci (liseré de lettre) ni élargi (contour sombre).
 
+- **Photo en pied, Pierre au centre** (Cairo, couloirs du sled) : le chrono ne passe jamais derrière ses
+  jambes (le « 12 » devenait illisible) ; bloc du bas compact, calé à gauche avant ses jambes (`--bas-etroit`).
+
 Référence : `projets/pierre-huiban/caire-2026/visuel_pistes.py` (piste B).
