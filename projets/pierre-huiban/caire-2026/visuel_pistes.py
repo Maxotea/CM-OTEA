@@ -15,14 +15,28 @@ BL, GR = (245, 245, 243), (175, 175, 172)
 src = Image.open(f'{S}/cairo-arrivee.jpg').convert('RGB')
 m = Image.open(f'{S}/cut-cairo.png').getchannel('A').resize(src.size)
 box = (8, 330, 1128, 1730)
-fond = hv.etalonner(src.crop(box).resize((W, H), Image.LANCZOS), m.crop(box).resize((W, H)))
+COULEUR = '--couleur' in sys.argv
+if COULEUR:
+    # Version couleur : la photo d'origine, contraste un peu relevé et glow léger, sans désaturer
+    from PIL import ImageEnhance
+    _c = ImageEnhance.Contrast(src.crop(box).resize((W, H), Image.LANCZOS)).enhance(1.12)
+    _a = np.asarray(_c, np.float32) / 255
+    _y = _a.mean(-1)
+    _hl = np.clip((_y - 0.6) / 0.4, 0, 1) ** 1.4
+    _g = np.asarray(Image.fromarray((_hl * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(28)), np.float32) / 255
+    _a = 1 - (1 - _a) * (1 - np.clip(_g * 0.35, 0, 1)[..., None])
+    fond = Image.fromarray((np.clip(_a, 0, 1) * 255).astype(np.uint8))
+else:
+    fond = hv.etalonner(src.crop(box).resize((W, H), Image.LANCZOS), m.crop(box).resize((W, H)))
 mm = m.crop(box).resize((W, H))
 # Nettoyage du détourage : un spot au-dessus de la tête et un reflet près du O avaient été pris pour Pierre
 _a = np.asarray(mm, np.float32).copy()
 _a[:352, :] = 0                 # rien de Pierre au-dessus du haut de ses cheveux et de ses poings
 _a[505:575, 895:975] = 0        # reflet isolé à droite du bras
 mm = Image.fromarray(_a.astype(np.uint8))
-pm = np.asarray(mm.filter(ImageFilter.GaussianBlur(1.5)), np.float32) / 255
+# Bord du détourage durci (seuil) : un bord trop doux laissait un liseré de lettre autour de Pierre ; l'élargir faisait un contour sombre
+_pm = np.clip((np.asarray(mm, np.float32) / 255 - 0.3) / 0.3, 0, 1)
+pm = np.asarray(Image.fromarray((_pm * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.8)), np.float32) / 255
 
 def font(k, s): return ImageFont.truetype(F[k], s)
 
@@ -86,8 +100,10 @@ def piste(n):
     out.alpha_composite(derriere(der)); out.alpha_composite(dev)
     return out.convert('RGB')
 
-ims = {n: piste(n) for n in 'ABC'}
-for n, im in ims.items(): im.save(f'{S}/piste-{n}.jpg', quality=93)
+PISTES = 'ABC' if '--toutes' in sys.argv else 'B'   # A et C demandent des polices hors dépôt
+ims = {n: piste(n) for n in PISTES}
+for n, im in ims.items(): im.save(f'{S}/piste-{n}{"-couleur" if COULEUR else ""}.jpg', quality=93)
+if len(ims) < 3: sys.exit(0)
 pl = Image.new('RGB', (3 * 540 + 40, 675 + 70), (20, 20, 20)); dp = ImageDraw.Draw(pl)
 for i, n in enumerate('ABC'):
     pl.paste(ims[n].resize((540, 675), Image.LANCZOS), (10 + i * 550, 60))

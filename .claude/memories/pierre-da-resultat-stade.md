@@ -26,4 +26,8 @@ piste B parmi trois.
   pour Pierre et creusait une pointe noire dans le R. Effacer du masque ce qui dépasse le haut des
   cheveux et des poings, puis zoomer sur la tête avant de livrer.
 
+- **Version couleur** sur demande (Maxime, 15/11/2026) : même mise en page sur la photo d'origine,
+  contraste un peu relevé et glow léger (`visuel_pistes.py --couleur`).
+- Bord du détourage : seuil franc, ni adouci (liseré de lettre) ni élargi (contour sombre).
+
 Référence : `projets/pierre-huiban/caire-2026/visuel_pistes.py` (piste B).
