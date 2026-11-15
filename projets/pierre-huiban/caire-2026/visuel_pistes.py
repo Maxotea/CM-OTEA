@@ -1,0 +1,95 @@
+# Cairo 15/11/2026 : trois pistes typo (A dossard, B tableau de stade, C chrono officiel). Maxime a retenu la B.
+# Usage, depuis la racine : python3 projets/pierre-huiban/caire-2026/visuel_pistes.py DOSSIER (cairo-arrivee.jpg, cut-cairo.png)
+import sys
+sys.path.insert(0, 'scripts')
+import numpy as np
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+import hyrox_visuel as hv
+S = sys.argv[1]
+CF = 'fonts/big-shoulders/'  # piste B ; Boldonse, Tektur, Geist (pistes A et C) ne sont pas dans le dépôt
+F = {'expanded': 'fonts/archivo/Archivo_Expanded-Black.ttf', 'archivo': 'fonts/archivo/Archivo-Regular.ttf',
+     'shoulders': CF + 'BigShoulders-Bold.ttf', 'shoulders_r': CF + 'BigShoulders-Regular.ttf',
+     'boldonse': CF + 'Boldonse-Regular.ttf', 'tektur': CF + 'Tektur-Medium.ttf', 'geist': CF + 'GeistMono-Bold.ttf'}
+W, H = 1080, 1350
+BL, GR = (245, 245, 243), (175, 175, 172)
+src = Image.open(f'{S}/cairo-arrivee.jpg').convert('RGB')
+m = Image.open(f'{S}/cut-cairo.png').getchannel('A').resize(src.size)
+box = (8, 330, 1128, 1730)
+fond = hv.etalonner(src.crop(box).resize((W, H), Image.LANCZOS), m.crop(box).resize((W, H)))
+mm = m.crop(box).resize((W, H))
+# Nettoyage du détourage : un spot au-dessus de la tête et un reflet près du O avaient été pris pour Pierre
+_a = np.asarray(mm, np.float32).copy()
+_a[:352, :] = 0                 # rien de Pierre au-dessus du haut de ses cheveux et de ses poings
+_a[505:575, 895:975] = 0        # reflet isolé à droite du bras
+mm = Image.fromarray(_a.astype(np.uint8))
+pm = np.asarray(mm.filter(ImageFilter.GaussianBlur(1.5)), np.float32) / 255
+
+def font(k, s): return ImageFont.truetype(F[k], s)
+
+def fit(d, t, k, largeur, start=600, track=0):
+    s = start
+    while True:
+        f = font(k, s)
+        w = sum(d.textlength(c, font=f) + track for c in t) - track
+        if w <= largeur or s < 40: return f, w
+        s -= 4
+
+def spaced(d, xy, t, f, fill, track, **kw):
+    x, y = xy
+    for c in t:
+        d.text((x, y), c, font=f, fill=fill, **kw); x += d.textlength(c, font=f) + track
+    return x
+
+def derriere(layer):
+    a = np.asarray(layer.getchannel('A'), np.float32) * (1 - pm)
+    layer.putalpha(Image.fromarray(a.astype(np.uint8))); return layer
+
+def italique(layer, k=0.18, yc=300):
+    return layer.transform(layer.size, Image.AFFINE, (1, k, -k * yc, 0, 1, 0), Image.BICUBIC)
+
+def piste(n):
+    out = fond.convert('RGBA')
+    der = Image.new('RGBA', (W, H)); d = ImageDraw.Draw(der)
+    dev = Image.new('RGBA', (W, H)); v = ImageDraw.Draw(dev)
+    if n == 'A':   # dossard : Archivo Expanded Black, très large et lourd
+        f, w = fit(d, 'CAIRO', 'expanded', W - 90)
+        bb = d.textbbox((0, 0), 'CAIRO', font=f)
+        d.text(((W - w) / 2 - bb[0], 500 - bb[3]), 'CAIRO', font=f, fill=BL)
+        spaced(d, (48, 120), 'HYROX  ·  PRO MEN  ·  14.11.2026', font('archivo', 26), BL, 6)
+        fc, wc = fit(v, '1:06:12', 'expanded', 640, 200)
+        v.text((48, H - 300), '1:06:12', font=fc, fill=BL)
+        spaced(v, (52, H - 150), '30TH / 176    4TH AG 35-39', font('archivo', 30), GR, 5)
+        spaced(v, (52, H - 92), 'ROAD TO HONG KONG', font('archivo', 22), GR, 8)
+    elif n == 'B':  # tableau de stade : Big Shoulders condensé, italique de vitesse
+        f, w = fit(d, 'CAIRO', 'shoulders', W - 60, 900, 6)
+        bb = d.textbbox((0, 0), 'CAIRO', font=f)
+        spaced(d, ((W - w) / 2, 560 - bb[3]), 'CAIRO', f, BL, 6)
+        der = italique(der, 0.18, 330)
+        dd = ImageDraw.Draw(der)
+        spaced(dd, (44, 70), 'HYROX PRO MEN · EGYPT', font('shoulders_r', 40), BL, 8)
+        fc = font('shoulders', 230)
+        v.text((40, H - 345), '1:06:12', font=fc, fill=None, stroke_width=3, stroke_fill=BL)
+        spaced(v, (46, H - 110), '30TH OF 176   ·   4TH AG 35-39   ·   ROAD TO HONG KONG', font('shoulders_r', 36), GR, 3)
+        dev = italique(dev, 0.12, H - 230)
+    else:          # chrono officiel : Boldonse + Geist Mono
+        f, w = fit(d, 'CAIRO', 'boldonse', W - 80)
+        bb = d.textbbox((0, 0), 'CAIRO', font=f)
+        d.text(((W - w) / 2 - bb[0], 510 - bb[3]), 'CAIRO', font=f, fill=BL)
+        spaced(d, (48, 120), 'HYROX / PRO MEN', font('geist', 28), BL, 4)
+        v.rectangle([40, H - 260, W - 40, H - 258], fill=GR)
+        spaced(v, (44, H - 240), 'TIME', font('geist', 24), GR, 4)
+        spaced(v, (44, H - 205), '1:06:12', font('geist', 96), BL, 2)
+        spaced(v, (560, H - 240), 'RANK', font('geist', 24), GR, 4)
+        spaced(v, (560, H - 205), '30/176', font('geist', 64), BL, 1)
+        spaced(v, (560, H - 130), 'AG 35-39  4TH', font('geist', 30), BL, 2)
+        spaced(v, (44, H - 70), 'ROAD TO HONG KONG · 06.2027', font('geist', 22), GR, 3)
+    out.alpha_composite(derriere(der)); out.alpha_composite(dev)
+    return out.convert('RGB')
+
+ims = {n: piste(n) for n in 'ABC'}
+for n, im in ims.items(): im.save(f'{S}/piste-{n}.jpg', quality=93)
+pl = Image.new('RGB', (3 * 540 + 40, 675 + 70), (20, 20, 20)); dp = ImageDraw.Draw(pl)
+for i, n in enumerate('ABC'):
+    pl.paste(ims[n].resize((540, 675), Image.LANCZOS), (10 + i * 550, 60))
+    dp.text((10 + i * 550, 14), n, font=font('expanded', 34), fill=BL)
+pl.save(f'{S}/pistes.jpg', quality=92)

@@ -60,7 +60,7 @@
     ]
   },
   "metricool": {
-    "post_id": 428625823,
+    "post_id": 428627294,
     "uuid": "-7915907012289282030",
     "date": "2026-11-15T18:00 Europe/Paris",
     "draft": false,
@@ -68,5 +68,5 @@
     "autoPublish": false,
     "mode": "notification : Pierre publie lui-même sur son Instagram (Maxime, 15/11/2026), Metricool ne publie rien"
   },
-  "photo": "Photo d'arrivée fournie par Maxime le 15/11/2026, N&B contrasté + masque + glow ; chrono 1:06:12 géant DERRIÈRE Pierre (sa tête et ses poings repassent devant), rang 30th/176 et 4th AG 35-39 en bas (visuel_chrono_derriere.py)"
+  "photo": "Photo d'arrivée fournie par Maxime le 15/11/2026, N&B + masque + glow ; piste B retenue par Maxime : CAIRO géant en Big Shoulders italique derrière Pierre, chrono et rang en bas, blanc et gris, sans orange (visuel_pistes.py)"
 }
