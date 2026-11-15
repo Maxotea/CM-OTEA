@@ -11,12 +11,13 @@ description: Gestion des campagnes publicitaires Meta (Facebook, Instagram) pour
 qui nomme la campagne.** C'est le pendant du « brouillon Metricool » : préparer
 seul, dépenser jamais. Détail : `.claude/memories/meta-ads-jamais-activer-sans-ok.md`.
 
-## Les trois pièces de l'outil
+## Les pièces de l'outil
 
 | Pièce | Rôle |
 |---|---|
 | `campagnes/comptes.json` | le registre : un bloc par client, tous les identifiants Meta, les plafonds de budget, les catégories spéciales. Seule source des identifiants. |
 | `campagnes/<client>/<AAAA-MM>-<slug>.json` | une spec par campagne, en français et en euros. Modèle : `campagnes/_template.json`. |
+| `scripts/ads_analyse.py` | `diagnostic` lit un relevé de performances et rend le verdict chiffré, `taille` calcule le budget d'un test A/B lisible, `tableau` sort le tableau mensuel. |
 | `scripts/campagne.py` | `check` valide une spec contre le registre, `plan` imprime les appels du connecteur dans l'ordre avec les paramètres exacts, `journal` consigne les identifiants créés, `liste` donne l'état de tout le dépôt. |
 
 Le connecteur Meta Ads (outils `ads_*`) fait la partie authentifiée, dans la
@@ -177,6 +178,15 @@ client le demande, puis `journal --statut en_pause`.
 | J+3 | premières métriques (`references/reporting.md`) | **ne rien changer** : phase d'apprentissage |
 | J+7 | lecture complète, `ads_insights_performance_trend` | continuer, couper, ou +20 % de budget max (dans les plafonds, sur OK de Maxime) |
 | fin | bilan dans la spec (`meta.journal`) et `journal --statut terminee` | ce qu'on refait, ce qu'on ne refait pas |
+
+Chaque lecture passe par `scripts/ads_analyse.py diagnostic <spec> <relevé>` : le relevé
+`ads_get_ad_entities` (niveau pub) s'enregistre dans `campagnes/etat/releves/<client>/`, le
+script donne le rythme de dépense, les intervalles de confiance, la pub gagnante s'il y en a
+une, et le verdict. À J+7 et à la fin, `--prospects N` (relevés à la main) fait le coût par
+prospect face aux paliers de la spec. Avant de lancer un test A/B, `ads_analyse.py taille`
+dit s'il a une chance d'être lisible avec le budget prévu. Méthode et limites :
+`references/media-buyer.md`. Après chaque bilan, les chiffres mesurés entrent dans
+`campagnes/reperes.json` avec leur source.
 
 Un changement de ciblage ou de creative relance l'apprentissage : on
 préfère une nouvelle publicité dans le même ensemble à une modification.

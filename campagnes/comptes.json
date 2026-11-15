@@ -31,7 +31,7 @@
       "site": "https://oteaproduction.com",
       "site_indisponible_depuis": "2026-09-02",
       "paiement": "Compte pub personnel de Maxime, moyen de paiement enregistré (has_payment_method=true le 02/09/2026).",
-      "notes": "Audit du 02/09/2026 : la page OTEA Production est accessible pour la publicité (ads_get_user_pages) mais n'apparaît pas encore dans les pages rattachées au compte pub (ads_get_ad_account_pages ne liste que Otea Filmakers et Pension Papahani Maupiti) : à confirmer à la première création de creative. Aucun compte Instagram rattaché au compte pub, donc pas de boost de post Instagram tant que @oteaproduction n'est pas lié dans le Business Manager. Pas de pixel connu sur oteaproduction.com : objectifs limités à Trafic (clics) et Interaction tant qu'il n'est pas posé. ⚠️ 02/09/2026 : Maxime signale que oteaproduction.com est DOWN. Aucune campagne vers le site tant qu'il n'est pas remis en ligne et vérifié (une pub vers une page morte est refusée par Meta et brûle le budget) : destinations possibles en attendant, Messenger ou WhatsApp sur la page, interaction sur un post. Remettre site_indisponible_depuis à null une fois le site revenu et contrôlé."
+      "notes": "Audit du 02/09/2026 : la page OTEA Production est accessible pour la publicité (ads_get_user_pages) mais n'apparaît pas encore dans les pages rattachées au compte pub (ads_get_ad_account_pages ne liste que Otea Filmakers et Pension Papahani Maupiti) : à confirmer à la première création de creative. Aucun compte Instagram rattaché au compte pub, donc pas de boost de post Instagram tant que @oteaproduction n'est pas lié dans le Business Manager. Pas de pixel connu sur oteaproduction.com : objectifs limités à Trafic (clics) et Interaction tant qu'il n'est pas posé. ⚠️ 02/09/2026 : Maxime signale que oteaproduction.com est DOWN. Aucune campagne vers le site tant qu'il n'est pas remis en ligne et vérifié (une pub vers une page morte est refusée par Meta et brûle le budget) : destinations possibles en attendant, Messenger ou WhatsApp sur la page, interaction sur un post. Remettre site_indisponible_depuis à null une fois le site revenu et contrôlé. Vérifié le 15/11/2026 (ads_get_ad_accounts, ads_get_ad_account_pages, ads_get_ig_accounts, ads_get_datasets) : compte ACTIVE, paiement OK, minimum 0,90 € par jour ; toujours aucun Instagram rattaché, aucun pixel ; la page OTEA Production n'est toujours pas listée sous le compte pub ; aucune campagne créée depuis l'audit, rien ne dépense."
     },
     {
       "slug": "otea-filmakers",
@@ -63,7 +63,7 @@
       "site": null,
       "site_indisponible_depuis": null,
       "paiement": "Même compte pub que OTEA PRODUCTION (Maks Otéa).",
-      "notes": "Audit du 02/09/2026 : page rattachée au compte pub, leadgen_tos_accepted=false. Historique : trois boosts de publications en 2020 (vidéos, 0 € dépensé). Compte vitrine perso, reels-first : objectifs Interaction (ThruPlay) ou visites de profil Instagram, jamais de pitch commercial (c'est le rôle de OTEA PRODUCTION)."
+      "notes": "Audit du 02/09/2026 : page rattachée au compte pub, leadgen_tos_accepted=false. Historique : trois boosts de publications en 2020 (vidéos, 0 € dépensé). Compte vitrine perso, reels-first : objectifs Interaction (ThruPlay) ou visites de profil Instagram, jamais de pitch commercial (c'est le rôle de OTEA PRODUCTION). Vérifié le 15/11/2026 (ads_get_ad_accounts, ads_get_ad_account_pages, ads_get_ig_accounts, ads_get_datasets) : compte ACTIVE, paiement OK, minimum 0,90 € par jour ; toujours aucun Instagram rattaché, aucun pixel ; la page OTEA Production n'est toujours pas listée sous le compte pub ; aucune campagne créée depuis l'audit, rien ne dépense."
     },
     {
       "slug": "jlawsongolf",
@@ -129,7 +129,7 @@
       "site": "https://lagalerieimmobiliere.com",
       "site_indisponible_depuis": null,
       "paiement": null,
-      "notes": "Non rattaché. La page La Galerie Immobilière (106568921929695) est visible dans les pages de Maxime mais sous aucun compte pub connu. Catégorie spéciale HOUSING obligatoire (immobilier) : pas de ciblage par âge, sexe ni code postal, rayon minimal imposé par Meta. Déclarer special_ad_category_country FR."
+      "notes": "Non rattaché. La page La Galerie Immobilière (106568921929695) est visible dans les pages de Maxime mais sous aucun compte pub connu. Catégorie spéciale HOUSING obligatoire (immobilier) : pas de ciblage par âge, sexe ni code postal, rayon minimal imposé par Meta. Déclarer special_ad_category_country FR. 15/11/2026 : le connecteur voit deux comptes pub du Business Manager lagalerieimmobiliere, « PUB - Rémi » (2607287173056035, ACTIVE) et « PUB TEST » (1713240423122065, UNSETTLED, non interrogeable). Aucun rattachement fait : à trancher avec Maxime via onboarding-compte-pub.md."
     },
     {
       "slug": "pierre-huiban",
