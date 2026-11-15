@@ -24,7 +24,8 @@ piste B parmi trois.
   EXECUTIVE sur ce format.
 - **Contrôler le détourage au-dessus de la tête** : à Cairo, un spot de la structure avait été pris
   pour Pierre et creusait une pointe noire dans le R. Effacer du masque ce qui dépasse le haut des
-  cheveux et des poings, puis zoomer sur la tête avant de livrer.
+  cheveux et des poings, puis zoomer sur la tête ET les coudes avant de livrer : un nettoyage trop large
+  avait mangé le coude droit de Pierre (15/11).
 
 - **Version couleur** sur demande (Maxime, 15/11/2026) : même mise en page sur la photo d'origine,
   contraste un peu relevé et glow léger (`visuel_pistes.py --couleur`).

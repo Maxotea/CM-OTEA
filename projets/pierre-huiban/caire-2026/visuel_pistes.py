@@ -32,7 +32,7 @@ mm = m.crop(box).resize((W, H))
 # Nettoyage du détourage : un spot au-dessus de la tête et un reflet près du O avaient été pris pour Pierre
 _a = np.asarray(mm, np.float32).copy()
 _a[:352, :] = 0                 # rien de Pierre au-dessus du haut de ses cheveux et de ses poings
-_a[505:575, 895:975] = 0        # reflet isolé à droite du bras
+_a[522:550, 926:962] = 0        # reflet isolé à droite du coude (ne pas toucher au coude, qui finit à x=923)
 mm = Image.fromarray(_a.astype(np.uint8))
 # Bord du détourage durci (seuil) : un bord trop doux laissait un liseré de lettre autour de Pierre ; l'élargir faisait un contour sombre
 _pm = np.clip((np.asarray(mm, np.float32) / 255 - 0.3) / 0.3, 0, 1)
