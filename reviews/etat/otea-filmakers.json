@@ -283,6 +283,30 @@
       "type": "Carrousel (6 visuels)",
       "resultat": "publication programmée (version 427519705)",
       "post_id": 427519705
+    },
+    "2026-11-22T18:00:00|429820635": {
+      "quand": "2026-11-16T13:03:12",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 430039184)",
+      "post_id": 430039184
+    },
+    "2026-11-29T18:00:00|429820679": {
+      "quand": "2026-11-16T13:03:14",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 430039209)",
+      "post_id": 430039209
+    },
+    "2026-11-16T18:00:00|429976413": {
+      "quand": "2026-11-16T13:03:16",
+      "type": "Carrousel (2 visuels)",
+      "resultat": "publication programmée (version 430039236)",
+      "post_id": 430039236
+    },
+    "2026-11-16T18:05:00|429976541": {
+      "quand": "2026-11-16T13:03:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 430039259)",
+      "post_id": 430039259
     }
   }
 }
