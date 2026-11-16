@@ -211,6 +211,13 @@ Identique aux deux autres moteurs — même tunnel, mêmes pièges. Manuel compl
 Fin de session : récapitulatif à Maxime — date, réseau, contenu, média attaché ou à attacher,
 placeholders restants.
 
+### Résultat de course : la veille automatique
+
+Le post « résultat » ne s'écrit plus à la main : `hyrox-veille` repère la course sur HYRESULT,
+rend le visuel et pose le brouillon à H+1 (`.claude/skills/hyrox-veille/SKILL.md`). Sur Pierre,
+toute photo passe en **noir et blanc contrasté, léger masque sur lui, glow**
+(`.claude/memories/pierre-photo-nb-glow.md`).
+
 ## Étape 6 — Contrôle qualité avant livraison
 
 Checklist complète : `references/playbook-athlete.md`. Les cinq points qui coûtent un athlète : un

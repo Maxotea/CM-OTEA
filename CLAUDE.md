@@ -41,6 +41,7 @@ l'avoir relue.
 | `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
 | `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
 | `cm-hyrox` | client athlète HYROX ou hybride, Pierre Huiban, une course, dossier de sponsoring, offre « CM athlète » (importé de CM-BTOC le 19/10/2026) |
+| `hyrox-veille` | résultat ou chrono d'une course de Pierre, Antoine ou Julie, post « résultat », veille HYRESULT : détection toutes les 20 min et brouillon à H+1 (14/11/2026) |
 
 Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
 `smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils
