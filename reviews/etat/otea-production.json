@@ -511,6 +511,12 @@
       "type": "Post",
       "resultat": "publication programmée (version 431471240)",
       "post_id": 431471240
+    },
+    "2026-12-02T12:00:00|402271562": {
+      "quand": "2026-11-18T13:19:22",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 432821551)",
+      "post_id": 432821551
     }
   }
 }
