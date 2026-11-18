@@ -6,7 +6,7 @@
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
 ## Écrire HYROX (Maxime, 18/11/2026)
-« Combien d'HYROX », « il a fait un HYROX », « des HYROX », « trois images d'HYROX Bordeaux ». Jamais « de HYROX », « le HYROX », « au HYROX ». « à HYROX Bordeaux » et « en HYROX » restent corrects. Vaut pour les légendes ET le texte des cartes.
+« Combien d'HYROX », « il a fait un HYROX », « des HYROX ». Avec une ville : « trois images de l'HYROX de Bordeaux », « à l'HYROX de Rome », « tu cours l'HYROX de Paris ». Jamais « de HYROX », « le HYROX », « au HYROX », ni « HYROX Bordeaux » au milieu d'une phrase (seuls les hashtags gardent #hyroxbordeaux). « en HYROX » (la discipline) reste correct. Vaut pour les légendes, le texte des cartes et les textes alternatifs.
 
 ## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
 Maxime, 25/10/2026 : « OTEA Filmakers et OTEA Production, ils sont inversés […] Filmakers est axé

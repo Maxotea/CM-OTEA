@@ -51,7 +51,7 @@ plus de mal qu'un jour sans post.
   Le lien de l'appel découverte est en commentaire. »
 - Hébergement des médias : Higgsfield `media_upload` puis PUT (`Content-Type` + `If-None-Match: *`) puis
   `media_confirm`, et l'URL cloudfront dans Metricool.
-- Français : « combien d'HYROX », « un HYROX », « des HYROX » ; jamais « de HYROX », « le HYROX », « au HYROX » (règle de Maxime, 18/11/2026). Chercher `(de|le|du|au|que) HYROX` dans légendes et cartes avant de créer.
+- Français (règles de Maxime, 18/11/2026) : « combien d'HYROX », « un HYROX », « des HYROX », « l'HYROX de Bordeaux », « à l'HYROX de Rome ». Jamais « de HYROX », « le HYROX », « au HYROX », ni « HYROX Bordeaux » au milieu d'une phrase (hashtags exceptés). Chercher `(de|le|du|au|que) HYROX` et `HYROX [A-Z]` dans légendes, cartes et textes alternatifs avant de créer.
 - Mode : la tâche planifiée crée en **brouillon** (`draft: true`, `autoPublish: false`) ; seul Maxime, dans
   une conversation, fait passer en publication automatique.
 
