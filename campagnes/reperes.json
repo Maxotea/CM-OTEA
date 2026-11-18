@@ -1,0 +1,21 @@
+{
+  "_doc": "Repères de comparaison lus par scripts/ads_analyse.py. Un repère sans source n'a rien à faire ici : chaque valeur porte d'où elle vient. Un champ null n'est pas comparé, le diagnostic le dit. Mettre à jour après chaque campagne terminée (bilan) ou depuis ads_insights_industry_benchmark. Taux en proportion (0.023 = 2,3 %), montants en euros.",
+  "reperes": {
+    "otea-production": {
+      "libelle": "aucun historique B2B mesuré sur le compte",
+      "source": "audit du 02/09/2026 : les seules campagnes du compte Maks Otéa sont des boosts voyage (Pension Papahani Maupiti, mai 2025), non transposables à du B2B",
+      "ctr_min": null,
+      "cpm_max": null,
+      "a_faire": "renseigner après la première campagne terminée, ou depuis ads_insights_industry_benchmark"
+    },
+    "otea-filmakers": {
+      "libelle": "contenu visuel grand public, repère voyage du compte en attendant une mesure propre",
+      "source": "audit du 02/09/2026, boosts Instagram de mai 2025 : CTR 2,29 % à 4,05 %, CPM 3,9 à 5,8 €",
+      "ctr_min": null,
+      "cpm_max": null,
+      "ctr_reference": [0.0229, 0.0405],
+      "cpm_reference": [3.9, 5.8],
+      "a_faire": "ctr_min reste null tant qu'aucune campagne Otea Filmakers n'a été mesurée : le repère voyage informe, il ne juge pas"
+    }
+  }
+}
