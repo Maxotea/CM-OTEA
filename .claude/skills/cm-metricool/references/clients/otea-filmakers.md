@@ -5,6 +5,9 @@
 - Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers ; TikTok rebranché sur @oteafilmakers le 08/11/2026, avant c'était @oteaproduction). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
+## Écrire HYROX (Maxime, 18/11/2026)
+« Combien d'HYROX », « il a fait un HYROX », « des HYROX », « trois images d'HYROX Bordeaux ». Jamais « de HYROX », « le HYROX », « au HYROX ». « à HYROX Bordeaux » et « en HYROX » restent corrects. Vaut pour les légendes ET le texte des cartes.
+
 ## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
 Maxime, 25/10/2026 : « OTEA Filmakers et OTEA Production, ils sont inversés […] Filmakers est axé
 B2C. Et là, le carrousel, il est B2B, donc c'est très OTEA Production. Sur OTEA Filmakers, mettre
