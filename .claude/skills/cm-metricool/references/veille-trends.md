@@ -59,6 +59,12 @@ plus de mal qu'un jour sans post.
 
 | Date | Trend | Compte | Réseau | Publication | État |
 |---|---|---|---|---|---|
+| 19/11/2026 | Aucune trend retenue : rien créé (les deux calendriers ont déjà un post par jour du 19 au 26/11, sauf le 21 et le 22 sur OTEA Production) | les deux | | | rien à valider |
+| 19/11/2026 | « Then and now » sur « Time » de Pink Floyd (vieille photo, puis la même pose aujourd'hui, années à l'écran) | Otea Filmakers | Instagram | | écartée : trop proche du GTA 5 / GTA 6 de la veille, et demande une vraie photo ancienne de Maxime (ses premiers appareils à 16 ans). En attente de Maxime |
+| 19/11/2026 | « Lately on my SD card » (visuel de carte SD, puis une rafale d'images récentes) | Otea Filmakers | Instagram, Reel | | écartée : une seule source (New Engen, 13/11), et il faut des rushes vraiment récents montés en Reel. En attente de Maxime |
+| 19/11/2026 | Black Friday, vendredi 27/11 (« Add to cart », « Zoom in » avec code caché) | les deux | Instagram, LinkedIn | | écartée aujourd'hui : hors fenêtre de 7 jours, et aucune offre décidée. À revoir dès le 20/11 si Maxime fixe une offre athlètes ou un angle « une vidéo ne se solde pas » |
+| 19/11/2026 | « My moon, my man », « Paid me no mind », « It's time » et sons de Noël, « Housewife », planches de Thanksgiving (26/11) | les deux | | | écartées : couple, playback, Noël (interdit sur Filmakers) ou fête américaine, rien qui porte la course ou la vidéo d'entreprise |
+| 19/11/2026 | HYROX : Dallas du 18 au 22/11, Utrecht du 26 au 30/11 ; résultats du 13 au 15/11 (Le Caire, Dublin, Denver, Séoul, Barcelone) | Otea Filmakers | | | écartée : Maxime n'y filme pas, aucun athlète suivi cité par les sources |
 | 18/11/2026 | GTA 6 sort le 19/11 (mèmes « We got X before GTA 6 », « moi à la sortie de GTA 5 / de GTA 6 ») | Otea Filmakers | Instagram, carrousel 5 photos « On a eu HYROX avant GTA 6 » | 19/11 12 h (uuid -6016211617704819680) | armé, demandé par Maxime dans la conversation |
 | 18/11/2026 | idem | OTEA Production | Page LinkedIn, carrousel 6 cartes « 2013 / 2026 : la vidéo sur les réseaux » | 19/11 8 h 30 (uuid -3492881609517675769) | armé, demandé par Maxime |
 | 18/11/2026 | idem | OTEA Production | Instagram, même carrousel | 19/11 12 h 30 (uuid -2148991710398429454) | armé, demandé par Maxime |
