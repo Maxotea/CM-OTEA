@@ -59,6 +59,13 @@ plus de mal qu'un jour sans post.
 
 | Date | Trend | Compte | Réseau | Publication | État |
 |---|---|---|---|---|---|
+| 20/11/2026 | Aucune trend retenue : rien créé. Calendriers relus : Filmakers a un post les 20, 22, 23, 24, 25 et 27/11 (libres : 21 et 26), OTEA Production les 20, 23, 24, 25, 26 et 27/11 (libres : 21 et 22) | les deux | | | rien à valider |
+| 20/11/2026 | Black Friday, vendredi 27/11 (entré dans la fenêtre de 7 jours) | les deux | Instagram, LinkedIn | déjà au calendrier : Filmakers 27/11 18 h « le matériel qui a vraiment filmé l'HYROX de Rome » (uuid 2999143641081135997), OTEA Production 27/11 12 h « pas de promo chez nous. Une date, oui. » (uuid 1854608371791383726) | écartée : déjà faite sur les deux comptes, un second post doublerait le créneau |
+| 20/11/2026 | Son « Flower In A Hurricane » (bande originale de GTA VI), son le plus utilisé en Reels selon Virlo au 18/11 | les deux | Instagram, Reel | | écartée : GTA 6 déjà fait le 19/11 sur les deux comptes, une seule source, pas de Reel prêt |
+| 20/11/2026 | « I saw you on 8th Avenue » et « Entiende, corazón glow-up » (liste Postdom du 16/11) | Otea Filmakers | Instagram, Reel | | écartées : une seule source, aucune explication du format trouvée ailleurs ; le glow-up ferait doublon avec le Reel avant / après du 25/11 |
+| 20/11/2026 | Toujours en tête : « My moon, my man », « Time : then and now », « It's time » et sons de Noël | les deux | | | écartées le 19/11, mêmes raisons (couple, photo ancienne de Maxime à fournir, Noël) |
+| 20/11/2026 | HYROX : Dallas en cours (18 au 22/11), Utrecht du 26 au 30/11 | Otea Filmakers | | | écartée : Maxime n'y filme pas, aucun résultat officiel 2026 publié dans les sources |
+| 20/11/2026 | Sorties du 25/11 au cinéma (« Billie, à la croisée des mondes », « Mon beau-père, ma belle-fille et moi ») et « Quasimodo » sur Netflix le 27/11 | les deux | | | écartées : rien qui porte la course ou la vidéo d'entreprise, aucun mème associé repéré |
 | 19/11/2026 | Aucune trend retenue : rien créé (les deux calendriers ont déjà un post par jour du 19 au 26/11, sauf le 21 et le 22 sur OTEA Production) | les deux | | | rien à valider |
 | 19/11/2026 | « Then and now » sur « Time » de Pink Floyd (vieille photo, puis la même pose aujourd'hui, années à l'écran) | Otea Filmakers | Instagram | | écartée : trop proche du GTA 5 / GTA 6 de la veille, et demande une vraie photo ancienne de Maxime (ses premiers appareils à 16 ans). En attente de Maxime |
 | 19/11/2026 | « Lately on my SD card » (visuel de carte SD, puis une rafale d'images récentes) | Otea Filmakers | Instagram, Reel | | écartée : une seule source (New Engen, 13/11), et il faut des rushes vraiment récents montés en Reel. En attente de Maxime |
