@@ -1,0 +1,78 @@
+{
+  "client": "otea-filmakers",
+  "slug": "2026-12-02-comment-je-filme-une-station",
+  "style": "educatif",
+  "serie": "FILMER LE HYROX · 02",
+  "mention": "FX3 · 70-200 · 100P",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2026-12-02T18:00:00",
+  "cible": "Pratiquant HYROX curieux de la technique, qui filme ses séances au téléphone et veut comprendre pourquoi ses plans de sled ne ressemblent pas à ce qu'il a vécu",
+  "slides": [
+    {
+      "gabarit": "couverture",
+      "kicker": "Méthode",
+      "title": "Comment je filme **une station** HYROX",
+      "body": "Le sled push, 50 mètres, en 6 décisions."
+    },
+    {
+      "gabarit": "chiffre",
+      "chiffre": "50 m",
+      "legende": "Sled push",
+      "title": "J'ai **50 mètres** pour faire un plan qui vaut la course.",
+      "body": "Pas de deuxième passage. Tout se décide avant que tu poses les mains sur le traîneau."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "01",
+      "kicker": "Où je me mets",
+      "title": "Au bord, au bout de la ligne, **le plus bas possible**.",
+      "body": "Le 70-200 me laisse serré sur toi depuis le bord de l'arène. Je ne gêne personne et je suis dans ton visage."
+    },
+    {
+      "gabarit": "chapitre",
+      "numero": "02",
+      "kicker": "La cadence",
+      "title": "100 images par seconde.",
+      "body": "Au montage, le plan passe **quatre fois plus lentement**. L'effort se lit dans le ralenti, pas en vitesse réelle."
+    },
+    {
+      "gabarit": "duel",
+      "kicker": "Ce que je cadre",
+      "title": "Le traîneau ou toi ?",
+      "gauche": {
+        "label": "Ce que tu vois",
+        "texte": "Un traîneau chargé qui avance. La charge, on la devine."
+      },
+      "droite": {
+        "label": "Ce que je filme",
+        "texte": "Ton visage et tes appuis. **L'effort, on le voit.**"
+      }
+    },
+    {
+      "gabarit": "liste",
+      "kicker": "Les trois autres",
+      "title": "Avant, pendant, après",
+      "items": [
+        "Je suis en place **avant** que tu arrives de la course.",
+        "Je tiens le plan sur toute la poussée, sans couper.",
+        "Je garde la sortie : tu lâches le traîneau et tu repars."
+      ]
+    },
+    {
+      "gabarit": "cta",
+      "kicker": "À retenir",
+      "title": "Bas, serré, au ralenti, **sans couper**.",
+      "body": "Quatre règles pour une station. Enregistre ce carrousel et dis-moi en commentaire : ralenti ou vitesse réelle ?"
+    }
+  ],
+  "caption": "Comment je filme une station HYROX, le sled push en exemple.\n\nCinquante mètres, une seule poussée, pas de deuxième passage. Tout se joue avant : où je me mets, à quelle cadence je filme, et ce que je cadre. Le traîneau, on le devine. Ton visage et tes appuis, c'est là que l'effort se voit.\n\nRalenti ou vitesse réelle ? Dis-moi en commentaire 👇",
+  "hashtags": [
+    "#hyrox",
+    "#hyroxfrance",
+    "#sledpush",
+    "#sonyfx3",
+    "#oteafilmakers"
+  ],
+  "note": "Deuxième carrousel du programme éducatif. Pas de carrousel la semaine du 23/11 : le reel avant/après du 25/11 et le carrousel matériel du 27/11 déjà planifiés tiennent la place. 50 m : longueur officielle du sled push HYROX. 100 images par seconde et 70-200 : la pratique de Maxime (fiche du 26/10/2026). Aucun poids de traîneau cité : il varie selon la division."
+}

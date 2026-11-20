@@ -2,7 +2,8 @@ name: Review hebdo client
 
 # Le fichier Excel de validation hebdomadaire, dans les deux sens :
 #   - generer (vendredi matin) : lit les brouillons de la SEMAINE SUIVANTE dans Metricool
-#     et écrit un fichier par client dans reviews/a-envoyer/ — la routine Claude du
+#     (et de celle d'après pour un compte à semaines_avance: 2, voir reviews/config.json)
+#     et écrit un fichier par client et par semaine dans reviews/a-envoyer/ — la routine Claude du
 #     vendredi le dépose ensuite dans le dossier Drive permanent du client (l'ancien passe
 #     en Archives) et met reviews/config.json à jour ; le mail part le lundi matin ;
 #   - appliquer (3 fois par jour) : relit chaque fichier par son export public, pousse les
@@ -45,6 +46,9 @@ concurrency: review-hebdo
 
 permissions:
   contents: write
+  # La veille des retours clients ouvre un fil d'issue par client et par semaine : c'est
+  # le canal de notification qui marche sans réglage. Voir scripts/notifier.py.
+  issues: write
 
 jobs:
   generer:
@@ -59,19 +63,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install openpyxl
+      - run: pip install openpyxl pillow
 
-      # Planifié (vendredi) : le lundi SUIVANT. Lancé à la main : la semaine demandée,
-      # ou la semaine en cours si le champ est vide.
+      # Planifié (vendredi) : --a-venir, soit le lundi SUIVANT, plus les semaines d'après
+      # pour les comptes à semaines_avance > 1. Lancé à la main : la semaine demandée, ou
+      # la semaine en cours si le champ est vide.
       - name: Déterminer la semaine visée
         id: semaine
         run: |
           if [ -n "${{ inputs.semaine }}" ]; then
-            echo "date=${{ inputs.semaine }}" >> "$GITHUB_OUTPUT"
+            echo "arg=--semaine ${{ inputs.semaine }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "date=$(date -u -d 'next Monday' +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+            echo "arg=--a-venir" >> "$GITHUB_OUTPUT"
           else
-            echo "date=" >> "$GITHUB_OUTPUT"
+            echo "arg=" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Générer les fichiers de la semaine
@@ -80,7 +85,7 @@ jobs:
           METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
         run: |
           python3 scripts/review.py generer \
-            ${{ steps.semaine.outputs.date && format('--semaine {0}', steps.semaine.outputs.date) || '' }} \
+            ${{ steps.semaine.outputs.arg }} \
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
 
@@ -120,7 +125,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install openpyxl
+      - run: pip install openpyxl pillow
 
       - name: Appliquer les décisions clients
         env:
@@ -130,6 +135,17 @@ jobs:
           python3 scripts/review.py appliquer \
             ${{ inputs.client && format('--client {0}', inputs.client) || '' }} \
             ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      # Prévenir Maxime que le client a répondu, sans attendre le récap du lundi.
+      # Toujours joué, même si la relève a planté en cours de route : les signaux déjà
+      # déposés partent, et ceux qui échouent restent en file pour le passage suivant.
+      - name: Signaler les retours clients
+        if: ${{ always() && !inputs.dry_run }}
+        env:
+          NOTIF_WEBHOOK: ${{ secrets.NOTIF_WEBHOOK }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 scripts/notifier.py
 
       - name: Commiter le journal des décisions
         if: ${{ always() && !inputs.dry_run }}
@@ -143,6 +159,6 @@ jobs:
           git add reviews/etat/
           git commit \
             -m "Applique les décisions de la review client" \
-            -m "Journal par compte dans reviews/etat/ — matière du récap du lundi."
+            -m "Journal par compte dans reviews/etat/ — matière du récap du lundi. La veille (signature de relecture, case « j'ai fini ») et la file des signaux y vivent aussi."
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push

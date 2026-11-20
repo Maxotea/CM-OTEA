@@ -1,9 +1,8 @@
 # Memory Index
 
-- [Projet MAKE PEOPLE](project_make_people.md) : Outil de suivi d'action pour améliorer la productivité tout en préservant le bien-être
 - [Héberger photos réelles pour Metricool](hebergement-photos-reelles-metricool.md) : pipeline media_upload → PUT → media_confirm pour attacher de vraies photos (pas que de l'IA)
 - [Bulk stories Metricool](bulk-schedule-stories-metricool.md) : code action sur mesure : stories en masse, brouillon + média, heure Paris exacte (pas de bug +7h)
-- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish
+- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish, sauf relève auto d'OTEA Production, Otea Filmakers (07/10), Pierre Huiban et Run On Invest (21/10)
 - [Charte Otea Production](otea-brand-identity.md) : Palette (#FF5800), police Forma DJR, monogramme koru, emplacements des assets
 - [Stories : vraies photos du client](stories-vraies-photos-sans-ia.md) : animer LEURS photos en i2v (méthode standard, tous comptes) ; images 100 % IA interdites sur un compte qui a des photos ; jamais le visage d'une personne réelle
 - [Story vidéo plein cadre](story-video-plein-cadre.md) : process validé par Maxime le 28/08/2026 : crop 9:16 PIL → i2v caméra verrouillée → plein cadre 1080×1920 → texte en overlay → muette → brouillon
@@ -14,3 +13,12 @@
 - `posture-solution-jamais-excuse.md` : dans un mail client, ouvrir sur la solution et un engagement daté, jamais sur une excuse ou un « je ne peux pas » (règle de Maxime, 5 octobre 2026).
 - [R.O.I. · Dan et Elodie en copie](roi-mails-copie-dan-elodie.md) : chaque mail de la campagne R.O.I. part avec d.haarfi@asgcourtage.com et e.pereira@dplavocats.fr en copie (règle du 23/10/2026)
 - [Relance de propal J+3 · OTEA seul](relance-propal-j3-otea-seul.md) : la propal se relance à J+3 seulement quand OTEA est seul ; un dossier partagé avec Memorem (Off Golf, Bellefontaine, Emergence, Lou ou Guillaume dans la boucle) n'est jamais relancé tout seul (règle du 09/11/2026)
+- [Meta Ads : jamais d'activation sans OK](meta-ads-jamais-activer-sans-ok.md) : toute campagne est créée en PAUSE ; seule une phrase explicite de Maxime, nommant la campagne, déclenche l'activation et donc la dépense
+- [Anticipation des événements](anticipation-evenements.md) : une offre liée à un temps fort (vacances, vœux, galette, séminaire, salon, événement corpo) se publie J-60 à J-30 avant, jamais pendant ; seule une actualité pour information sort J-7 à J (règle de Maxime, 12/10/2026)
+- [Reels : musique via Instagram](reels-musique-instagram.md) : un reel se rend muet, la musique se pose dans Instagram (jamais d'audio d'origine) ; programmé en mode notification (règle de Maxime, 21/10/2026)
+- [Récap photo du mois](recap-photo-mensuel.md) : le 28 de chaque mois, tâche Cowork : carrousel « récap du mois » OTEA Production (12:00) et Otea Filmakers (18:00) depuis la galerie Photos du Mac, coulisses intimistes mais corporate (demande de Maxime, 22/10/2026)
+- [Filmakers B2C, Production B2B](positionnement-filmakers-production.md) : Filmakers = compétitions de sport (HYROX et autres), métier et voyage au « je » ; tout le corporate (plateau d'entreprise, interview, salons, délais) va sur OTEA Production (correction de Maxime, 25/10/2026)
+- [Effet logo qui se construit](effet-logo-qui-se-construit.md) : sur la VRAIE photo d'un lieu, le logo s'assemble tout seul ; i2v Kling 3.0 début sans logo + fin vraie photo, `scripts/logo-reveal.py` pour le prompt, le contrôle et le montage (demande de Maxime, 07/11/2026) ; rendu À PLAT, jamais en volume, et plus jamais sur le logo Gossip (08/11)
+- [Crédit photo Homé-Sanfaute](credit-photographe-home-sanfaute.md) : toute photo HOME-SANFAUTE-* crédite Jean-Philippe Homé-Sanfaute et son compte Instagram dans le post (légende, ou sticker mention en story) ; automatique dans carrousel.py (règle de Maxime, 06/11/2026)
+- [Jeu concours : mécanique virale](jeu-concours-mecanique-virale.md) : un concours ne part jamais seul ; ami identifié = chance en plus, story avec identification = chance en plus et repartage, bandeau sur chaque story, rappel dans chaque légende, tirage pondéré (règle de Maxime, 04/11/2026)
+- [Réponse automatique ≠ réponse](reponses-automatiques.md) : absence, congés, accusé de réception, départ : jamais « il a répondu » ; dire « réponse automatique », garder la date de retour ou le contact de remplacement, la relance continue (cas Hugo Boutet, Panenka, règle de Maxime, 09/11/2026)

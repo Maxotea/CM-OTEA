@@ -1,0 +1,252 @@
+{
+ "source": "Metricool blog 6636615 (Run On Invest, @runoninvest), brouillons relus le 21/10/2026 par getScheduledPosts (connecteur Metricool officiel) juste avant suppression. Archivés à la demande de l'étape 1 de la remise en ordre R.O.I. du 21/10/2026 (audit du 21/10, recommandation 5). Les médias sont copiés en local dans medias/ (ignoré par git) ; l'URL d'origine et le md5 sont notés ici.",
+ "date_archive": "2026-10-21",
+ "posts": [
+  {
+   "id": 383272195,
+   "uuid": "-563980577294496431",
+   "date": "2026-10-02T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. — C1",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/5c8b2cbd-ee77-46ef-9bd1-2162ae7fe490.jpg",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/5c8b2cbd-ee77-46ef-9bd1-2162ae7fe490.jpg",
+     "md5": "d14afab057f5f4a7c0e3c486371f3a21",
+     "octets": 101726,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "Fond bleu nuit (ancien kit V1). « EARLY BIRD JUSQU'AU 30 NOVEMBRE. » ; mention « 350 € · LIEN EN BIO ».",
+   "motif": "Prix et Early Bird, contraires à la décision Q10 ; ancien kit V1 ; brouillon jamais validé, créneau passé."
+  },
+  {
+   "id": 383272210,
+   "uuid": "-6987750803181517316",
+   "date": "2026-10-05T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. — V2",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/3d70a93a-73be-43d3-b216-6b56529fc66f.mp4",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/3d70a93a-73be-43d3-b216-6b56529fc66f.mp4",
+     "md5": "fc9cdd016d96a2dbc32339268bd9fa4a",
+     "octets": 2049273,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "mp4 muet 5 s 1080x1920 (aucune piste audio). Groupe de coureurs de dos dans une galerie vitrée, titre « PUIS ON SE POSE » en Archivo Thin, mention « PLÉNITUDE ARENA ». Faux lettrage IA sur un tee-shirt (« hive Fhnelofn »).",
+   "motif": "Faux lettrage IA ; titre en Archivo Thin (bug typo du 20/08) ; brouillon jamais validé, créneau passé ; remplacé par la série s2 à s10 du kit V2.1."
+  },
+  {
+   "id": 383271400,
+   "uuid": "-3500372224251179495",
+   "date": "2026-10-07T08:00:00",
+   "kind": "POST",
+   "networks": [
+    "instagram",
+    "linkedin"
+   ],
+   "statut_instagram": "PENDING",
+   "statut_linkedin": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "linkedinData": {
+    "previewIncluded": true,
+    "type": "POST"
+   },
+   "text": "Un seul prix, quelle que soit ta distance.\n\n350 € en Early Bird jusqu'au 30 novembre : la course, l'accès complet au temps fort networking, l'app et le matchmaking dès l'arrivée, le badge Fondateur à vie, le sas de départ prioritaire.\n\nEn décembre, ce sera 400 €. En février, 500 €.\n\nLien en bio.\n\n#runoninvest #earlybird #ladefense #entrepreneurs #course",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/e0395e0b-0c2d-4c6f-8434-7c7d61d68dd0.jpg",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/e0395e0b-0c2d-4c6f-8434-7c7d61d68dd0.jpg",
+     "md5": "424f40372e6d67f7d0a15165d82dbbba",
+     "octets": 94699,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "Fond bleu nuit. « 350 € JUSQU'AU 30 NOVEMBRE. » ; mention « EARLY BIRD · 1 000 DOSSARDS · 5, 10 OU 21,5 KM ».",
+   "motif": "Prix, Early Bird, app, jauge et 21,5 km, contraires à Q10 ; rattaché à LinkedIn alors que le compte est sur Instagram seul ; brouillon jamais validé, créneau passé."
+  },
+  {
+   "id": 383272238,
+   "uuid": "-5819741197384465029",
+   "date": "2026-10-12T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. — C3",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/851053af-2ca6-4fc7-943b-9a1eec212a6a.jpg",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/851053af-2ca6-4fc7-943b-9a1eec212a6a.jpg",
+     "md5": "b22a127922a530b1b954133b9cb04a20",
+     "octets": 395561,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "Ancien kit V1 : photo de l'arche en haut, fond bleu nuit en bas, « ZÉRO PITCH. », mention « ON COURT D'ABORD, ON PARLE ENSUITE ».",
+   "motif": "Doublon : même média que la story du 09/11 (395042793) ; ancien kit V1 ; brouillon jamais validé, créneau passé."
+  },
+  {
+   "id": 395042333,
+   "uuid": "-1679685712458660541",
+   "date": "2026-10-14T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. · V4",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/d5f1c1cd-a785-4bb5-8a0a-57f7b0264270.mp4",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/d5f1c1cd-a785-4bb5-8a0a-57f7b0264270.mp4",
+     "md5": "9c2a2483f172d8705f19a75263bcd595",
+     "octets": 1811226,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "mp4 muet 5 s 1080x1920 (aucune piste audio). Coureuse de dos sur une passerelle, titre « TON RYTHME » en Archivo Thin, mention « AUCUN CHRONO, AUCUN CLASSEMENT ».",
+   "motif": "Doublon : même média que la story du 06/11 (395042763) ; titre en Archivo Thin ; mention non confirmée par la fiche ; brouillon jamais validé, créneau passé."
+  },
+  {
+   "id": 394684571,
+   "uuid": "6818102388229030208",
+   "date": "2026-10-19T08:00:00",
+   "kind": "POST",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "POST",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Vacances de la Toussaint. Les bureaux se vident, les agendas respirent.\n\nC'est la meilleure semaine de l'automne pour caler trois sorties sans négocier avec personne.\n\nLa régularité se construit quand c'est facile. Elle tient quand ça ne l'est plus.\n\n#runoninvest #regularite #course #entrepreneurs #ladefense",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c6670690-7237-4c9b-b90d-c7c9eca9496a.jpg",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/c6670690-7237-4c9b-b90d-c7c9eca9496a.jpg",
+     "md5": "c39918c8868d0d669792aa6c1cd5d935",
+     "octets": 877089,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "Photo IA de tours et d'une passerelle, titre « LES BUREAUX SE VIDENT, LES AGENDAS RESPIRENT. », mention « VACANCES DE LA TOUSSAINT ».",
+   "motif": "Lié aux vacances de la Toussaint, déjà commencées (règle d'anticipation) ; brouillon jamais validé, créneau passé. Idée réutilisable pour les vacances de Noël, sans date et avec un nouveau visuel."
+  },
+  {
+   "id": 395042690,
+   "uuid": "-8160905264128244708",
+   "date": "2026-10-19T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. · V5",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/d82a940a-8271-430c-b00c-c2ba4e986578.mp4",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/d82a940a-8271-430c-b00c-c2ba4e986578.mp4",
+     "md5": "b345d281963bf7479c3437dd6a64223b",
+     "octets": 1810609,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "mp4 muet 5 s 1080x1920 (aucune piste audio). Coureurs sous l'arche, titre « TU VIENS ? » en Archivo Thin, mention « ÉCRIS-NOUS EN MESSAGE PRIVÉ ».",
+   "motif": "Doublon : même média que la story du 11/11 (395042829) ; titre en Archivo Thin ; brouillon jamais validé, créneau passé."
+  },
+  {
+   "id": 395042725,
+   "uuid": "-4574607897384301559",
+   "date": "2026-10-21T12:00:00",
+   "kind": "STORY",
+   "networks": [
+    "instagram"
+   ],
+   "statut_instagram": "PENDING",
+   "draft": true,
+   "autoPublish": false,
+   "instagramData": {
+    "autoPublish": false,
+    "type": "STORY",
+    "showReelOnFeed": true,
+    "isAiGenerated": false
+   },
+   "text": "Story R.O.I. · C7",
+   "media": [
+    {
+     "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/c9133606-9d16-4db0-9193-4dab14a3e67a.jpg",
+     "copie_locale": "medias/run-on-invest/archives-2026-10-21-supprimes/c9133606-9d16-4db0-9193-4dab14a3e67a.jpg",
+     "md5": "f10b12f081b728806ca0306661d73ce9",
+     "octets": 411201,
+     "http_au_21_10": 200
+    }
+   ],
+   "contenu_visuel": "Ancien kit V1 : photo de galerie vitrée en haut, fond bleu nuit en bas, « ÉCRIS-NOUS EN MESSAGE PRIVÉ. », mention « ON TE RÉPOND ».",
+   "motif": "Doublon : même média que la story du 18/11 (395042862) ; ancien kit V1 ; créneau de 12:00 passé sans publication."
+  }
+ ]
+}

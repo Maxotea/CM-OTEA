@@ -1,5 +1,13 @@
 # La Galerie Immobilière — fiche client
 
+> ## ⛔ COMPTE DÉSACTIVÉ · 21/10/2026
+>
+> Maxime a mis fin à la collaboration le 21/10/2026 (« on ne travaille plus ensemble »). **Ne plus produire de contenu, ne plus programmer, ne plus brancher de média, ne plus générer de tableau de validation ni de compte rendu client.** Le compte est sorti de la relève (`reviews/config.json`, `actif: false`), du récap du lundi et de la détection de nouveaux médias (`recaps/clients-config.json`, `actif: false`).
+>
+> **Ce qui restait dans Metricool au 21/10/2026 :** 59 contenus du 21/10 au 06/12, dont 47 stories et 12 posts ou reels (10 sans média). **Tous en brouillon, aucun en publication automatique** : rien ne partira tout seul. Ces brouillons n'ont pas été supprimés : la suppression est irréversible et Maxime ne l'a pas demandée.
+>
+> La fiche ci-dessous est conservée telle quelle, au cas où le compte reviendrait.
+
 ## Profil (vérifié web juillet 2026 — lagalerieimmobiliere.com, IG @lagalerieimmobiliere)
 - Positionnement : **« L'art de l'immobilier à Paris & Île-de-France »** — agence de prestige. Secteur : Paris 16e, Puteaux (92), Hauts-de-Seine. Services : transaction, location, gestion.
 - Fondatrice : **Sabrina**, 15+ ans d'expérience, formée en immobilier **et architecture d'intérieur** → angle déco/mise en valeur des biens à exploiter dans le contenu.
@@ -503,3 +511,155 @@ source de ces écritures n'est pas identifiée, **passer un
 - **Réserve de sujets** : DPE et réglementation (A6, **réglementation à vérifier par recherche web à la date de publication**) · « Acheter en fin d'année : ce qui change » (A8, novembre) · « Une visite réussie, du point de vue de l'acquéreur » (A5) · remise de clés commentée (A3, dès qu'un client accepte).
 - **Cadence particulière — le compte ne publie pas le mercredi.** Ses posts feed sortent le **vendredi à 12h30**. Le carrousel du mercredi ne remplace donc rien ici : il **s'ajoute**. C'est assumé, le compte est au **forfait maximum** (confirmé par Maxime, 06/08/2026) — la règle « le carrousel remplace le post du mercredi » ne s'y applique pas.
 - **Vigilance** : barème d'honoraires **non vérifié** → aucun honoraire cité. Aucun prix au m², aucun taux, aucun chiffre de marché sans source datée. Le prénom de la fondatrice n'apparaît pas encore dans les slides : à ajouter si elle le valide. Ne jamais illustrer un carrousel avec un visuel IA présenté comme un bien réel.
+
+### Le vendredi 12h30 est un post feed SIMPLE (règle du 07/08/2026)
+
+Une légende du vendredi ne doit **jamais** contenir « Swipez », « slides » ni « faites
+défiler ». Le lot planifié en juillet 2026 portait des légendes écrites pour un carrousel
+posées sur des posts à un seul média : à la lecture, le post promettait une suite qui
+n'existait pas — c'est ce qui a fait dire à Maxime « on dirait qu'il manque une partie ».
+Le moteur de carrousels n'existait pas encore à la date de ce lot. Même défaut relevé sur
+la fiche de Pierre Huiban. Le carrousel, c'est le mercredi 18h, section ci-dessus.
+`scripts/audit_posts.py` vérifie ce point.
+
+## 🎬 VIDÉO D'ANNONCE, UN MANDAT = UN REEL (proposition du 02/09/2026)
+
+Maxime a demandé de « proposer la même chose » que https://www.diane.estate/fr.
+Diane n'est pas une agence mais un logiciel de vidéos d'annonces par IA
+(narration, avatar, montage, 19 à 23 $ la vidéo). Transposition complète,
+prix proposé, message à Sabrina et pilote à zéro crédit sur le bien VM383 :
+`offre/video-annonce-la-galerie.md`.
+
+- Script d'assemblage : `scripts/lg-video-annonce.py` (intro, plans i2v en
+  fondu, texte incrusté, outro, musique, narration optionnelle, 9:16 et 16:9).
+- Spec du pilote : `videos-annonces/la-galerie-immobiliere/pilote-vm383.json`,
+  crochets à remplir depuis l'annonce, rien ne s'invente.
+- Ce qu'on ne reprend pas de Diane : l'avatar (jamais de visage généré), la
+  voix clonée, les vues drone inventées. Vraies photos, caméra verrouillée.
+- Ce format sert les créneaux REEL qui attendent des rushes depuis le 20/08 :
+  un reel qui ne demande rien à Sabrina.
+
+### Premier rendu d'essai, 03/09/2026 (zéro crédit)
+Vidéo : https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/00d39a03-d49b-4902-ad8f-f206e4cc84a4.mp4
+32,5 s, 1080×1920, six plans i2v du bien VM383 (photos 11, 15, 18, 13, 12,
+17), musique procédurale, texte incrusté, médaillon en haut à droite. Spec :
+`videos-annonces/la-galerie-immobiliere/essai-vm383.json`. Rendu dans la
+sandbox Higgsfield, vérifié frame par frame (photo pleine largeur en haut,
+voile sable, texte, médaillon sur chaque plan). **Aucun fait sur le bien
+n'est affiché**, ni ville ni « à vendre » : l'annonce n'a pas été relevée.
+Ce n'est pas la version à montrer à Rémi, c'est la preuve que la chaîne
+tourne. Reste : relever l'annonce, nommer les pièces, narration, brouillon
+Metricool.
+
+## 🖼️ CARROUSELS SUR FOND PHOTO — 02/09/2026
+
+Demande de Maxime : « plutôt mettre des photos de beaux biens immobiliers
+parisiens qu'un fond uni. le texte doit ressortir ».
+
+### Ce que le texte fait pour ressortir
+
+Le voile n'est pas choisi à l'œil, il est calculé, slide par slide :
+
+1. on mesure le **97e centile de luminance** de la zone réellement occupée par
+   le texte. Pas la moyenne : une moyenne ment. Un titre posé sur une fenêtre
+   surexposée passe la moyenne et reste illisible sur la fenêtre. Mesuré : sur
+   un fond sombre percé d'une fenêtre blanche, la moyenne dit 62, le 97e
+   centile dit 255 ;
+2. on résout par dichotomie l'opacité minimale du voile qui amène le rapport
+   WCAG à **7:1 pour le titre** et **4,5:1 pour le corps et l'accent** ;
+3. le voile est un dégradé qui monte sur 150 px au-dessus du bloc et ne
+   redescend jamais en dessous, sinon la fin d'une phrase retombe sur une zone
+   claire ;
+4. après composition **on remesure**, et la slide est refusée si le contraste
+   n'y est pas. Le script échouait déjà plutôt que de livrer un texte qui
+   déborde, il échoue maintenant aussi sur un texte illisible.
+
+Rendu réel sur leurs photos, mesuré le 02/09 : couverture (photo 01, façade)
+voile à 71 %, titre à **7,59:1** ; slide 3 (photo 20) voile à 67 %, titre à
+**7,59:1**, corps à 5,33:1, accent à 4,49:1.
+
+### ⚠️ Ce que leur banque photo permet, et ce qu'elle ne permet pas
+
+Les 19 photos viennent de **leurs propres mandats publiés** sur
+lagalerieimmobiliere.com. Aucune banque d'images : c'est un compte commercial.
+
+Deux limites, relevées à la mesure et à l'œil :
+
+- **Neuf des dix-neuf sont des logements vides** : murs blancs, pièces sans
+  meuble. Le détail mesuré y tombe sous 15 sur les trois bandes. Un mur nu ne
+  fait pas une image, il fait une tache grise. Le manifeste les marque
+  `matiere: false` et la validation les refuse comme fond. Restent **dix
+  photos exploitables** : 01, 11, 12, 13, 15, 17, 18, 20, 27, 30.
+- **Elles portent le filigrane « LA GALERIE IMMOBILIÈRE »** au centre. Sur
+  leur propre carrousel ce n'est pas un défaut, c'est leur signature, mais le
+  filigrane et le titre se disputent le même espace.
+
+Ce sont des photos de mandats à vendre, pas des intérieurs meublés
+aspirationnels. **Demander à Sabrina des photos de biens meublés ou vendus, et
+des extérieurs de quartier** reste la meilleure piste : ce sont les seules qui
+peuvent illustrer un bien précis.
+
+### 🌇 Fonds d'ambiance sous licence — 02/09/2026
+
+Maxime : « des photos qui ne sont pas obligatoirement des biens à la vente de
+La Galerie ; il faut que ces photos soient instagrammables / Pinterest ».
+
+**La distinction qui rend ça sain.** Ce qui a coûté Le Loft, c'est d'avoir fait
+passer des images pour SON salon. Un fond d'ambiance derrière un texte de
+conseil ne prétend rien de tel : c'est de l'habillage, pas un mandat. Deux
+provenances cohabitent donc dans le manifeste :
+
+| | `provenance: client` | `provenance: libre` |
+|---|---|---|
+| Origine | leurs mandats publiés | Pexels, licence commerciale |
+| Peut illustrer un bien précis | **oui** | **non, refusé par la validation** |
+| Champs obligatoires | — | `licence` + `credit` |
+
+**Le garde-fou.** Si le texte d'une slide contient « ce bien », « à vendre »,
+« en exclusivité », « coup de cœur » et compagnie, et que la slide porte un
+fond `libre`, la validation refuse et dit pourquoi. Testé sur trois cas :
+texte général + fond libre accepté, texte de mandat + fond libre refusé,
+texte de mandat + photo du client accepté.
+
+**⛔ Pinterest n'est pas une source.** Les images qui y sont épinglées
+appartiennent à des tiers. On y cherche l'esthétique, on prend les fichiers sur
+Pexels, dont la licence commerciale est explicite et gratuite.
+
+**Ce qui a été retenu.** Cinquante-huit références proposées, cinquante-six
+**téléchargées et mesurées une par une** : aucune référence inventée. Trente-
+quatre ont de la matière et entrent au manifeste sous les clés `P<id>` :
+toits de zinc, façades haussmanniennes, ferronneries, rues de Montmartre,
+voilages traversés par le soleil, cuisines chaleureuses, bibliothèques.
+
+Planche-contact des 34, avec identifiants et luminance :
+`https://d2ol7oe51mr4n9.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/f05400a8-f92c-4cf9-bc35-5f501f31d8a0.jpg`
+
+**L'effet du calcul de voile se voit ici.** Une façade claire (`P31058041`,
+luminance 205 sous le texte) demande 68 % de voile ; le voilage au soleil
+(`P3557507`, 116) n'en demande que 40 % et la photo reste largement lisible.
+Le titre tient à 7,59:1 dans les deux cas. C'est tout l'intérêt de mesurer
+plutôt que de fixer une opacité : la photo n'est jamais assombrie plus que
+nécessaire.
+
+### Où c'est câblé
+
+- `scripts/carrousel.py` — `_fond_pire_cas`, `_alpha_requis`, `poser_voile`,
+  `charger_fond`, et la vérification après composition dans `render_slide`.
+- `scripts/themes.json` — clé `fond` de `la-galerie-immobiliere` : couleurs de
+  texte sur photo et cibles de contraste.
+- `photos/la-galerie-immobiliere.json` — les 19 photos, leur URL sur le site du
+  client, leur luminance et leur détail mesurés, et le champ `matiere`.
+- Les quatre carrousels portent une clé `photo` par slide, sans répétition à
+  l'intérieur d'un même carrousel.
+
+Les cinq autres comptes ne sont pas touchés : tout est conditionné à la
+présence d'une clé `fond` dans le thème.
+
+**État au 12/10/2026 : la bascule n'est pas faite.** La clé `fond` n'a pas été ajoutée au
+thème de ce compte, et les quatre specs d'août restent sur fond plat. Raison : sur trois
+des quatre carrousels refaits en fond photo, le contrôle de contraste de
+`scripts/carrousel.py --check` refuse le rendu — 6,91:1 pour le titre et 4,09:1 pour le
+corps là où il faut 7,0:1 et 4,5:1, même après le voile. Les photos concernées (P30702969,
+P2265845, P19096629) sont trop claires sous la zone de texte. Le moteur sait faire le fond
+photo ; ce qui manque, c'est une sélection de photos qui passe le contrôle, ou un voile
+plus dense. À reprendre avec Maxime avant de rallumer la clé.

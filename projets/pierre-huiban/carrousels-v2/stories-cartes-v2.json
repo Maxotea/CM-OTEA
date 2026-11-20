@@ -1,0 +1,12 @@
+{
+ "_doc": "Cartes de story quotidiennes, DA trois vies. Remplacent les 7 cartes LFG de l'ancienne DA sur les stories Metricool (06:00). Textes génériques, à la première personne, sans chiffre : à faire valider par Pierre comme le reste.",
+ "cartes": [
+  {"cle": "lun", "jour": "Monday", "facette": "EXECUTIVE", "fond": "ink", "titre": "A new week starts **early.**", "texte": "Training first, then the team, then the rest of the day."},
+  {"cle": "mar", "jour": "Tuesday", "facette": "ATHLETE", "fond": "paper", "titre": "Session done before the **day starts.**", "texte": "That's how it fits with everything else."},
+  {"cle": "mer", "jour": "Wednesday", "facette": "ATHLETE", "fond": "paper", "titre": "The numbers tell me **where to work.**", "texte": "Not always the station I would have picked."},
+  {"cle": "jeu", "jour": "Thursday", "facette": "ATHLETE", "fond": "ink", "titre": "One station **at a time.**", "texte": "Eight of them. One kilometre between each."},
+  {"cle": "ven", "jour": "Friday", "facette": "EXECUTIVE", "fond": "paper", "titre": "One more session before the **weekend.**", "texte": "Busy week. Still on the plan."},
+  {"cle": "sam", "jour": "Saturday", "facette": "FATHER", "fond": "dawn", "titre": "Training, then **family time.**", "texte": "The weekend has room for both."},
+  {"cle": "dim", "jour": "Sunday", "facette": "FATHER", "fond": "paper", "titre": "Recovery is part of **the plan.**", "texte": "Rest, family, and a fresh start on Monday."}
+ ]
+}

@@ -21,17 +21,31 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
 | `.claude/references/social-media-ceo/04-kpis.md` | le dictionnaire KPI et la lecture des chiffres |
 | `.claude/references/social-media-ceo/05-rituels.md` | les boucles quotidienne, hebdo, mensuelle, trimestrielle |
 | `.claude/references/public-apis/README.md` | le catalogue public-apis (1 958 API gratuites), la sélection utile pour OTEA et comment le brancher sur Claude |
+| `.claude/references/organisation-claude.md` | où faire quoi entre Claude Code, Cowork, conversation, routines et Actions ; le plan de migration issu de l'audit du 16/10/2026 |
+| `.claude/references/kit-cowork.md` | ce qui passe en Projet Claude ou en tâche Cowork, avec les instructions à coller |
+| `.claude/cowork-kit/` | le dossier de travail Cowork à copier : agents, skills d'aiguillage du compte, skill hyrox pour MONTAGE-OTEA |
+
+## Ce dépôt est le moteur, pas le bureau
+
+Claude Code sert ici à ce qui est du code, versionné et testé : scripts, tests, workflows, skills
+`cm-metricool` et `cm-meta-ads`, règles non négociables. Les documents d'agence (devis, offres,
+présentations), les bilans du jour, la rédaction ponctuelle et les cadres SOCIAL MEDIA CEO ont
+leur place dans Cowork ou dans un Projet Claude. La règle de routage complète est dans
+`.claude/references/organisation-claude.md` ; ne pas ajouter ici un nouveau document d'agence sans
+l'avoir relue.
 
 ## Les skills
 
 | Skill | Déclenche sur |
 |---|---|
-| `smc-contenu` | idée, calendrier, piliers, validation client, hashtags, recyclage |
-| `smc-client` | prospect, relance, devis, onboarding, mission, réponse client, témoignage |
-| `smc-kpi-review` | bilan du mois, performances, reporting client, OKR |
-| `smc-ceo-day` | point hebdo, tri des idées, planification trimestrielle |
-| `smc-ops-finance` | devis, facture, impayé, TVA, trésorerie, clôture |
-| `smc-veille` | analyse concurrent, offre ou lancement du marché |
+| `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
+| `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
+| `cm-hyrox` | client athlète HYROX ou hybride, Pierre Huiban, une course, dossier de sponsoring, offre « CM athlète » (importé de CM-BTOC le 19/10/2026) |
+
+Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
+`smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils
+vivent dans `.claude/references/social-media-ceo/cadres/` et sont chargés dans le Projet Claude
+« OTEA, pilotage » (voir `kit-cowork.md`). Aucun script ne les appelait.
 
 ## Articulation avec les skills existants
 
@@ -48,16 +62,30 @@ bases de données partagées. Une donnée n'existe qu'à un seul endroit.
   `.claude/references/social-media-ceo/03-workflow-contenu.md`.
 - **`reel-script` / `reel-lint`** — l'écriture et la notation des vidéos courtes,
   appelées depuis le statut `Rédaction` / `Tournage`.
+- **`cm-meta-ads`** — la publicité Meta (Facebook, Instagram) par client :
+  registre `campagnes/comptes.json`, une spec JSON par campagne dans
+  `campagnes/<client>/`, `scripts/campagne.py` pour valider et planifier. Le pont
+  avec `cm-metricool` : un post publié et validé peut être boosté, jamais un
+  brouillon. Banc d'essai : OTEA PRODUCTION et Otea Filmakers (compte pub
+  Maks Otéa). Règle de même rang que le brouillon Metricool : **tout est créé
+  en PAUSE, seule une phrase explicite de Maxime nommant la campagne l'active.**
+  → `.claude/memories/meta-ads-jamais-activer-sans-ok.md`
 
 ## Règles permanentes du CM (non négociables)
 
-Ces deux règles priment sur toute autre considération d'exécution. Elles
+Ces règles priment sur toute autre considération d'exécution. Elles
 vivaient dans les mémoires Claude, hors du repo — elles sont désormais
 versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 
 1. **Tout contenu créé dans Metricool reste en BROUILLON** (`draft:true`,
    jamais `autoPublish`). Maxime valide lui-même dans l'interface. Toute code
    action qui crée du contenu doit vérifier le `draft` après création.
+   Exceptions : OTEA Production et Otea Filmakers (07/10/2026), dont Maxime
+   est le client, puis Pierre Huiban et Run On Invest (21/10/2026, décision
+   de Maxime : Pierre ne validait pas). Le contenu y est créé en brouillon,
+   puis la relève GitHub le passe en publication automatique
+   (`validation_auto`). Run On Invest porte `contenu_ia` : la mention
+   « contenu IA » d'Instagram est cochée d'office.
    → `.claude/memories/autonomie-decisions-cm.md`
 2. **Les stories partent des VRAIES photos du client, animées en IA.**
    Deux choses distinctes, à ne pas confondre (règle reprécisée le 21/08/2026) :
@@ -83,6 +111,31 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
 3. **Aucune bande son sur les vidéos de story.** Elles partent muettes, Maxime
    ajoute l'audio dans Instagram au moment de valider.
    → `.claude/memories/stories-sans-son.md`
+   **Même règle pour les reels (21/10/2026)** : la musique se prend dans
+   Instagram, jamais intégrée au fichier (pas d'« audio d'origine »). Un reel
+   Instagram programmé sort en mode notification (`draft:false`,
+   `autoPublish:false`) : Maxime pose la musique et publie.
+   → `.claude/memories/reels-musique-instagram.md`
+4. **Un à deux mois d'avance sur tout événement** (vacances scolaires, vœux,
+   galette des rois, séminaires, salons, événements corpo). Une offre liée à un
+   temps fort se publie entre J-60 et J-30, jamais pendant : un prospect qui
+   lit « c'est le moment de filmer » le premier jour des vacances ne peut plus
+   rien en faire (Maxime, 12/10/2026). Seule une actualité annoncée pour
+   information sort à J-7 / J.
+   → `.claude/memories/anticipation-evenements.md`
+5. **Un jeu concours ne part jamais seul (04/11/2026).** Il part avec toute la
+   mécanique de partage : chaque ami identifié en commentaire donne une chance
+   en plus, le partage en story avec identification du compte donne une chance
+   en plus et un repartage, chaque story de relance porte le bandeau
+   (`scripts/concours-bandeau.py`), chaque légende de la période rappelle le
+   levier, le tirage compte les chances (`scripts/tirage-concours.py`).
+   → `.claude/memories/jeu-concours-mecanique-virale.md`
+
+6. **Créditer le photographe.** Toute photo de Jean-Philippe Homé-Sanfaute (fichiers
+   `HOME-SANFAUTE-*`, champ `credit` à son nom) le cite dans le post, avec son compte
+   Instagram : ligne `Photos : @…` en fin de légende (sur LinkedIn : `Photos : @Jean-Philippe Homé-Sanfaute`, tag choisi dans la liste), sticker mention en story.
+   `scripts/carrousel.py` la pose d'office ; son compte vit dans `photos/photographes.json`.
+   → `.claude/memories/credit-photographe-home-sanfaute.md`
 
 Index complet des mémoires : `.claude/memories/MEMORY.md`.
 

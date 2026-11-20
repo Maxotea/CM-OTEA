@@ -1,6 +1,6 @@
 ---
 name: review-quotidienne-outil
-description: Chaque matin 7h30 Paris : relit l'outil CM comme un produit (runs de la nuit, PR, scripts, configurations, routines), corrige ce qui tient en une session avec un test, note le reste dans ameliorations/BACKLOG.md. But : l'outil CM le plus productif et le plus rapide du marché, vendable à d'autres CM.
+description: Chaque matin 9h00 Paris : relit l'outil CM comme un produit (runs de la nuit, PR, scripts, configurations, routines), corrige ce qui tient en une session avec un test, note le reste dans ameliorations/BACKLOG.md. But : l'outil CM le plus productif et le plus rapide du marché, vendable à d'autres CM.
 ---
 
 Tu fais la revue quotidienne de l'outil CM d'OTEA Production, comme celle de PROSPECTION

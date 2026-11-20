@@ -2,11 +2,115 @@
 
 ## Identité
 - blogId Metricool : 4728418
-- Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
+- Réseaux connectés : Instagram, Facebook, TikTok, LinkedIn (@oteafilmakers ; TikTok rebranché sur @oteafilmakers le 08/11/2026, avant c'était @oteaproduction). **Publication CM : Instagram + TikTok** (reels-first, on n'utilise pas FB/LinkedIn pour ce compte sauf demande).
 - Secteur / typologie : marque lifestyle du fondateur (Maxime) — vidéaste-voyageur. À NE PAS confondre avec OTEA PRODUCTION (compte B2B commercial de production vidéo).
 
+## Écrire HYROX (Maxime, 18/11/2026)
+« Combien d'HYROX », « il a fait un HYROX », « des HYROX ». Avec une ville : « trois images de l'HYROX de Bordeaux », « à l'HYROX de Rome », « tu cours l'HYROX de Paris ». Jamais « de HYROX », « le HYROX », « au HYROX », ni « HYROX Bordeaux » au milieu d'une phrase (seuls les hashtags gardent #hyroxbordeaux). « en HYROX » (la discipline) reste correct. Vaut pour les légendes, le texte des cartes et les textes alternatifs.
+
+## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
+Maxime, 25/10/2026 : « OTEA Filmakers et OTEA Production, ils sont inversés […] Filmakers est axé
+B2C. Et là, le carrousel, il est B2B, donc c'est très OTEA Production. Sur OTEA Filmakers, mettre
+en avant les prises de vue pour les compétitions de sport, type HYROX et tout autre événement,
+mais moins axé B2B. » Les carrousels du 23/10 (« Ce que je regarde avant d'allumer la caméra ») et
+du 25/10 (« Un plateau, cinq détails ») étaient du B2B publié ici par erreur.
+- **Filmakers = B2C** : Maxime filme les compétitions de sport (HYROX d'abord, puis courses,
+  marathons, trails, tout événement sportif) pour les athlètes, plus son métier, la lumière et le
+  voyage vus de l'intérieur, au « je » et au tutoiement.
+- **Jamais sur l'Instagram de Filmakers** : plateau d'entreprise, interview en bureau, « client »,
+  film de marque, conférence, séminaire, salon professionnel (SATIS), délais de livraison, vidéos
+  pour Noël. Tout cela va sur **OTEA Production**, au vouvoiement. Seule exception : le LinkedIn
+  personnel de Maxime, branché dans cette marque Metricool, qui reçoit une publication B2B par
+  semaine (plan de bataille).
+- **Personnes visibles** : les instantanés de la banque restent « Maxime seul ». Des athlètes
+  apparaissent dans les contenus de compétition déjà validés par Maxime (reels HYROX Bordeaux,
+  teaser F1, accord du 13/10) ou avec un accord noté ; jamais un intervenant d'un tournage
+  d'entreprise.
+- Test avant chaque post : un athlète ou un passionné de sport a-t-il envie de le lire ? Un
+  directeur de la communication est-il la cible ? Si c'est le second, c'est OTEA Production.
+
+## Programme éducatif « Filmer le HYROX », 08/11/2026 (Maxime)
+Demande du 08/11 : de l'éducatif sur le métier de vidéaste sportif et HYROX, vu de l'intérieur et dans
+le détail (pourquoi un vidéaste, mes journées, comment je filme, suivre un athlète, le matériel), avec le
+système motion design et posts. Plan complet : `plans/otea/2026-11-filmakers-educatif.md`.
+- **2 reels face caméra par semaine** (mardi et jeudi 18 h, créneaux libres), montés au format dynamique
+  de MONTAGE-OTEA : Maxime détouré, motion design derrière lui calé sur ses mots, images de course de
+  Rome et Nice (Pierre et Antoine seulement) en inserts. Scripts `plans/otea/reels/educatif/E01` à `E08`,
+  storyboards `storyboards-dynamique.json`, charte `charte-dynamique-otea-filmakers.json`. Ces reels
+  gardent la voix de Maxime seule ; la signature sonore de la série, « Under the Sun » de Bakermat
+  feat. Kidda, se pose depuis la bibliothèque Instagram à la publication (pas de licence, confirmé le
+  08/11), et s'entend seule sous les cartes d'ouverture et de fin. Première séance de tournage des
+  huit épisodes : lundi 09/11/2026, 9 h à 10 h (`plans/otea/reels/educatif/TOURNAGE-2026-11-09.md`).
+  Question binaire en fin, un appel à écrire en message sur quatre au plus.
+- **1 carrousel éducatif stylisé par semaine** (mercredi 18 h), style `educatif` de `carrousel.py`
+  (viseur, numéro en filigrane, chiffre géant, duel, CTA inversé, grain 18, Space Mono) : specs dans
+  `carrousels/otea-filmakers/`, saison 1 les 18/11, 02/12, 09/12 et 16/12. Typographiques, sans photo.
+- Faits à confirmer par Maxime avant tournage (crochets des scripts) : heure d'arrivée dans l'arène,
+  kilomètres marchés sur une course, batteries et cartes, chiffres Sony de la FX3 et du 70-200, dates
+  exactes de Paris, nombre de plans et durée du film livré.
+
+## Ce que le public aime, ligne de contenu du 26/10/2026 (Maxime)
+« Ce qu'ils aiment bien dans la communication sur Otea Filmakers, ça va être le avant / après,
+ramener beaucoup de valeur, dire que je les accompagne, la qualité de l'image aussi. » Quatre
+familles de contenus, sur des images de compétition :
+- **Avant / après** : le même plan en S-Log3 brut, puis étalonné (et stabilisé quand un vrai plan
+  brut le montre). L'« avant » est toujours le vrai fichier caméra, jamais une image dégradée.
+- **Le matériel, expliqué** : la FX3 (« pour moi, l'un des meilleurs boîtiers au monde pour ce
+  type de contenu »), le 70-200 GM II stabilisé (pourquoi, comment : plans serrés depuis le bord
+  de l'arène), le 100p pour le ralenti, le S-Log3 pour l'étalonnage. Chiffres techniques
+  seulement s'ils viennent d'une source officielle Sony.
+- **Je t'accompagne** : ce que Maxime fait pour un athlète, de la préparation au film livré.
+- **Les pointures que je suis** : athlètes et coachs HYROX filmés par Maxime. Seuls Pierre Huiban
+  et Antoine Bouhana sont documentés (qualifiés pour les championnats du monde de Hong Kong) ;
+  aucun autre nom sans la liste de Maxime.
+**Réponses de Maxime du 27/10/2026** :
+- Pierre Huiban et Antoine Bouhana sont d'accord pour apparaître sur Otea Filmakers, y compris
+  dans un post qui vend l'offre (« ok »).
+- Le déroulé de l'accompagnement est validé tel quel : avant, on s'écrit (heure de départ,
+  tenue, stations) ; pendant, Maxime suit la course de station en station ; le soir, le dérush ;
+  après, l'étalonnage, le montage, les photos et le film.
+- La FX3 était à HYROX Nice en février 2026 et y retourne du 29/10 au 01/11.
+- La liste des coachs et athlètes à citer viendra plus tard : d'ici là, aucun autre nom que
+  Pierre et Antoine.
+Matière disponible d'ici : les rushes FX3 de HYROX Rome (4K 100p S-Log3, 70-200), dossier Drive
+« PIERRE », lus par le pipeline `projets/pierre-huiban/reels-dialogue/`.
+
+## Série avant / après et matériel, vérifiée le 27/10/2026
+Les 7 contenus relus dans Metricool (tous en brouillon, Instagram seul, aucun TikTok sur le compte en décembre) :
+A1 02/11 carrousel avant/après 407504670 (uuid 2940330472543766182, carte 8 sans « peau »), B1 09/11 carrousel FX3
+**407631270** (uuid 6059222798293616939), C1 20/11 « je t'accompagne » 407612665, A2 25/11 reel avant/après 407042888
+(13 s, muet, part en mode notification par la relève), B3 27/11 matériel 407608209 (slide 3 nette), C2 01/12 Pierre
+et Antoine 407609693 (53:34, premiers des 35-39, 12es sur 292, Stockholm 16es : conforme à `pierre-huiban.md`),
+B2 11/12 70-200 407610968. Aucun « je » posé sur une carte où Pierre ou Antoine sont visibles ; deux avis de Maxime
+seulement (FX3 sur la carte 6 de B1, 70-200 GM II sur la carte 6 de B2). Correction du jour sur B1 : la carte 6 et la
+légende disaient « Je l'avais à HYROX Poznań, à Nice et à Rome » ; Poznań n'est pas dans les réponses de Maxime, la
+phrase devient « Je l'avais à HYROX Nice en février et à Rome » (carte refaite, hébergée en cloudfront puis recopiée
+par Metricool, md5 vérifié). À dire à Maxime si la FX3 était bien à Poznań en décembre 2025. La carte 1 de B1 montre
+un spectateur à lunettes, identifiable, à gauche de Pierre : à signaler. Les 7 uuids sont sortis de `en_attente`
+(`reviews/config.json`), seuls les deux reels Bordeaux y restent.
+
+## Avant / après : les photos, pas les rushes (Maxime, 02/11/2026)
+« J'aime pas les photos et la colorimétrie […] Sur les photos avant, après, où là on voit une réelle
+différence, c'est beaucoup plus joli. Là sur les vidéos, c'était pas beau. » Le carrousel A1 du 02/11
+(images tirées des rushes, étalonnage automatique) est parti à 18:00 : https://www.instagram.com/p/DfPzPShFcjC/.
+Metricool ne supprime pas un post publié : c'est à Maxime de le retirer dans l'appli Instagram.
+- **Règle** : tout avant / après de ce compte se fait sur les photos de Maxime, dossier Drive
+  « HYROX ROME 2026 » : `RETOUCHEES` (62 JPG, l'après) et `CAPTURES BRUTES (S-Log3 PNG 16 bits)`
+  (l'avant, même numéro avec `_RAW`). Jamais un étalonnage automatique (`etalonnage-punch.py`) en vitrine.
+- **Reel A2 du 25/11** (uuid 6417583479028599017, rushes étalonnés) : remplacé, décision du 03/11
+  (« mets-le avant le 25 […] pourquoi pas le remplacer »). Bloqué dans `en_attente` de `reviews/config.json`.
+  Le carrousel photos prend sa place, au plus tard le 25/11.
+- **Blocage** : les brutes font 9 à 38 Mo, trop lourdes pour le connecteur Drive. Il faut que Maxime partage
+  le dossier `CAPTURES BRUTES` en « tous ceux qui ont le lien » (ou qu'il en exporte quelques-unes en JPG).
+
+## Cap du 13/10/2026 : le HYROX, côté caméra (prime sur la ligne ci-dessous)
+Décidé avec Maxime le 13/10/2026 sur les chiffres Metricool : les reels HYROX touchent 3 000 à 5 300 personnes, les reels « conseils d'entrepreneur » 200 à 400, et le compte perd environ 70 abonnés par mois. Plan complet : `plans/otea/2026-10-plan-de-bataille.md`.
+- Environ **60 % sport et HYROX** (séries Road to Hong Kong, HYROX Nice 29/10-01/11, HYROX Paris 12-20/12, coulisses côté caméra), **40 % métier, lumière, voyage**. Les posts face caméra de conseils d'entrepreneur s'arrêtent.
+- Le compte est la **vitrine de l'offre athlètes** (Course Signature 290 €, Saison Athlète 59 €/mois, `paliers-offre-athlete.md`) : un post sur quatre au plus porte un appel à réserver par message, jamais d'appel ni de visio.
+- **2 reels par semaine**, montés depuis les disques de Maxime ; un post photo sur deux du calendrier existant est remplacé par un reel dès qu'il est prêt. Chaque reel finit par une question binaire.
+
 ## Ligne éditoriale
-- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. PAS de pitch commercial (ça, c'est OTEA PRODUCTION).
+- Angle : marque perso du réalisateur — parcours, vie de vidéaste-voyageur, storytelling personnel, communauté. Pas de pitch B2B entreprise (ça, c'est OTEA PRODUCTION) ; l'offre athlètes est permise dans la limite du cap du 13/10.
 - Ton : première personne "je", tutoiement de l'audience, intime, cinématique, passionné. Réflexion sur le métier, la lumière, la liberté/discipline, le voyage.
 - Priorité format : REEL (marque visuelle créative). Mix reels + posts feed réflexifs/carrousels.
 - ⚠️ Règle "jamais inventer" renforcée : c'est une voix PERSO. Ne jamais fabriquer de faux souvenir/voyage/anecdote précis. Là où un vrai vécu est nécessaire, laisser un [crochet] à remplir par Maxime.
@@ -18,7 +122,7 @@
 
 ## Assets / banque
 - État : AUCUN rush prêt — "à tourner". Les brouillons contiennent le texte final + une idée de plan "🎬 À tourner : …" en fin de caption, qui sert de shot-list. Maxime tourne, attache le média dans Metricool, valide.
-- À créer : une banque-photos-otea-filmakers.md quand les premiers rushes existeront.
+- Banque photos : `banque-photos-otea.md`, section Otea Filmakers (73 instantanés validés par Maxime le 13/10/2026 : voyages, lumière, montage en route, Maxime seul). Aucune personne d'autre que Maxime. Les reels, eux, restent à tourner.
 
 ## Saisonnalité exploitée (vérifiée)
 - Rentrée septembre, automne/golden hour (angle fort vidéaste), vacances Toussaint (17/10→02/11).
@@ -27,8 +131,78 @@
 - Généré en brouillon 22/07 → 18/09 (26 posts, batches 1 & 2).
 - Batch 3 (21/09 → 16/10, 12 posts) rédigé mais NON créé (rejeté). À reprendre si validation du ton.
 
+## 🎬 Inspirations de montage
+
+Les prochains reels de ce compte reprennent les styles listés pour lui dans `../inspirations-montage.md` (n°1 au 08/10/2026). La relire avant chaque script.
+
+
 ## Tarifs / ROI
 - Typologie B2B projet à la base, mais ce compte est une VITRINE de marque perso, pas une prestation CM facturée classique → pas de module ROI dédié pour l'instant (à clarifier si facturation).
 
 ## Note ROI (ancienne fiche, conservée — 02/08/2026)
 - Typologie B2B projet : 1 projet signé couvre largement la prestation ; ROI aussi mesurable en leads qualifiés (DM, formulaires).
+
+## Validation automatique (07/10/2026)
+Maxime est le client de ce compte : même règle qu'OTEA Production, `validation_auto` dans `reviews/config.json` (PR #56). Plus de tableau. Les brouillons des 14 jours à venir partent en publication automatique s'ils passent les garde-fous.
+- 07/10 : tirets cadratins retirés des posts du 09/10 et du 19/10 (nouveaux ids 390382826 et 390382868).
+- ⚠️ Les posts du 09/10 (marche caméra) et du 06/11 (cadrage) portent « 🎬 À tourner : … » dans la légende : bloqués tant que la vidéo n'est pas tournée et la note retirée.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, animation, décembre, clôture).
+
+- **DA photo** : Vert et Noir, voix « je », tutoiement. Même banque que OTEA Production (`photos/otea-filmakers.json`,
+  22 photos ouvertes au compte, plus les 73 instantanés validés le 13/10). Q4 répondue : Maxime = le vidéaste barbu
+  en t-shirt noir, sans casquette (photo 01), réponse du 13/10/2026 ; seule personne présentable en « je » sur
+  Filmakers (ailleurs il porte parfois une casquette jaune ou orange, planche d'identité dans
+  `banque-photos-otea.md`). Aucun « je » sous une autre personne visible. Q3 : tout vécu non confirmé est écrit au
+  neutre.
+- **Stories** : lun, mer, ven à 10:00, Instagram seul (Q9). Mer (mp4 e5955e06) et ven (ac9af476) en i2v plein cadre,
+  muettes, sans personne, du 28/10 au 27/11 : 394728098 à 394728497 (10 stories). Le lundi est refusé (le softbox
+  bouge) et sa carte « Je commence par regarder la lumière » est à neutraliser. Aucune story en décembre.
+- **Feed** : carrousel A1 sans personne au 23/10 (394878177, armé) ; 26/10 neutralisé (394878203, armé) ; 28/10 neutralisé
+  (394868991, texte F01) ; les quatre posts « À tourner » sortis du blocage (06/11 394681603, 16/11 394681230, 23/11
+  394681256, 25/11 394681284) ; 11/11 394681208 et 30/11 394681306 au neutre. Décembre posé en brouillon : 14 posts
+  à 18:00, IG et TikTok, 394815812 à 394817242 ; cartes typographiques et une seule vraie photo (03, le 25/12), pour ne
+  pas reprendre une photo du feed OTEA de décembre. Trois reels à tourner (R1 04/12, R2 21/12, R3 01/01), une carte
+  de repli occupe chaque créneau.
+- **Décisions de Maxime** : Q3 (texte neutre), Q8 (22,5 crédits pour ce compte, dépensés), Q9 (stories lun, mer, ven
+  10:00 dès le 26/10), Q4 (13/10, voir DA photo).
+- **Chiffres (13/09 au 12/10)** : 3 800 abonnés Instagram (61 gagnés, 113 perdus). Les deux reels de sport (Rome
+  27/09, Paris 12/09) touchent 11 à 12,5 fois la médiane des autres. TikTok branché au blog : @oteaproduction jusqu'au 08/11/2026,
+  rebranché ce jour-là sur @oteafilmakers par Maxime.
+- **Reste** : 30/10 383270198 (photo, avant le 16/10 6h30), 02/11 383270388 (photo, avant le 19/10), 04/11 383270407
+  (texte, avant le 21/10), 13/11 394182835 (photo 3d299617 commune avec OTEA, avant le 30/10), 18/11 383270536
+  (texte), 20/11 383270550 (photo), 27/11 383270617 (texte et photo, avant le 13/11) ; média du 28/10 (54df9acf,
+  doublon du 14/10 et d'OTEA 23/11) ; compte TikTok à vérifier avant le 18/11. Banque propre faite le 13/10 depuis
+  le Mac (73 instantanés).
+  Après tout `bulk_replace_posts` sur ce compte, relire `tiktokData` : l'action le perd.
+
+## Rendez-vous mensuel
+- **Récap photo du mois** (demande de Maxime, 22/10/2026) : chaque dernier jour du mois à 18:00, un carrousel de 6 à 10 vraies photos du mois, « je », tutoiement, intime, Instagram seul. Préparé le 28 par la tâche Cowork `recap-photo-mois`, publié par la relève. Aucune personne d'autre que Maxime.
+
+## Jeu concours HYROX Paris (04/11 au 11/11/2026)
+
+Post publié le 04/11 à 18h30, parti sans la mécanique de partage. Corrigé le soir même : les six
+stories du 05 au 11/11 portent le bandeau « +1 chance » (uuids 2906913798917145731,
+436374908062683021, 6011576334233782358, 3336353067214980376, 1698370163353339750,
+7151451247721729304), les légendes des reels du 05 et du 08/11 rappellent l'identification d'amis
+et le repartage. La légende du post publié se corrige dans l'app Instagram (Metricool ne modifie pas
+un post en ligne). Tirage le 12/11 avec `scripts/tirage-concours.py`. Règle complète :
+`.claude/memories/jeu-concours-mecanique-virale.md`.
+
+**Relance du 08/11/2026.** Une seule story de concours était sortie (4/11) : les six autres étaient
+restées en brouillon le temps de remplacer les photos. Maxime a validé de prolonger le jeu jusqu'au
+dimanche 15/11 à 23h59, tirage le lundi 16/11. Dix stories refaites avec ses 4 photos
+(`scripts/concours-story.py`), une par jour du 8 au 15/11 plus des doublons le 8 et le 15 : uuids
+2906913798917145731 (prolongé), -2454613258636735341 (tu as joué ?), 436374908062683021,
+6011576334233782358, 3336353067214980376, 3584153249113917145 (preuve sociale),
+-8986379249090739953 (J-2), 1698370163353339750 (J-1), 7151451247721729304 (fin ce soir),
+-4987887533810364474 (3 heures). Le reel du 8/11 et les posts des 9, 10, 11 et 13/11 renvoient au
+jeu ; le post « jeu terminé » passe au 16/11 à 18h30. Légende du post du jeu : dates à corriger par
+Maxime dans l'app.
+
+**TikTok @oteafilmakers, concours HYROX Paris (08/11/2026).** Réécrit au format TikTok le même soir (visuels propres, légendes courtes, renvois vers la
+publication épinglée). Post du jeu en carrousel de 4 slides le 8/11 à 18h45 (uuid 8678981755129971254) ; vidéos en notification les 9 et 10/11 à 19h30 ; carrousels de relance les
+11/11 et 13/11 à 19h30, 15/11 à 12h00 et 20h30 ; posts FX3, gimbal, férié et rushes dupliqués à 12h00 ;
+post de fin le 16/11 à 18h30. Au tirage, additionner les chances Instagram et TikTok.

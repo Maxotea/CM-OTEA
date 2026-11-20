@@ -1,0 +1,24 @@
+{
+  "_doc": "Photographes à créditer sur les posts. Une photo de la banque est à lui si son drive_nom commence par un des prefixes_fichier, ou si son champ credit contient son nom. scripts/credits.py lit ce fichier : carrousel.py ajoute la ligne de crédit à la légende, story-photo.py la rappelle pour le sticker mention. instagram : le compte à mentionner, sans le @ ; tant qu'il est vide, la légende Instagram crédite par le nom seul. mention_linkedin : la formule donnée par le photographe pour LinkedIn ; le tag ne prend que si, dans LinkedIn, on tape le @ et qu'on choisit son profil dans la liste (un texte envoyé par l'API reste du texte). Demande de Maxime du 06/11/2026, sur le retour de Jean-Philippe.",
+  "photographes": [
+    {
+      "cle": "home-sanfaute",
+      "nom": "Jean-Philippe Homé-Sanfaute",
+      "metier": "photographe portrait, événementiel, sport",
+      "site": "home-sanfaute.fr",
+      "linkedin": "jphomesanfaute",
+      "instagram": "",
+      "prefixes_fichier": [
+        "HOME-SANFAUTE"
+      ],
+      "dans_credit": [
+        "HOME SANFAUTE",
+        "HOME-SANFAUTE",
+        "Homé-Sanfaute"
+      ],
+      "mention_linkedin": "@Jean-Philippe Homé-Sanfaute",
+      "formule": "Photos : ",
+      "source_formule": "message de Jean-Philippe à Maxime, 06/11/2026 : « Sur LinkedIn tu peux mettre \"Photos : @Jean-Philippe Homé-Sanfaute\" pour que ça tague mon compte ». Compte Instagram pas encore donné."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "nom": "Rome",
+    "lieu": "Fiera di Roma",
+    "debut": "2026-09-24",
+    "fin": "2026-09-27",
+    "division": "doubles-pro-homme",
+    "objectif": "qualification-mondiaux",
+    "campagne_debut": "2026-07-30",
+    "vitrine": false,
+    "captation": null,
+    "note": "Piste de course en extérieur. Inscription et division à confirmer. Captation irremplaçable : une qualification ne se rejoue pas."
+  },
+  {
+    "nom": "Paris Porte de Versailles",
+    "lieu": "Paris Expo Porte de Versailles",
+    "debut": "2026-12-12",
+    "fin": "2026-12-20",
+    "division": null,
+    "objectif": null,
+    "campagne_debut": "2026-10-17",
+    "vitrine": true,
+    "captation": "prevue",
+    "note": "FITNESS PARK HYROX PARIS. Pause technique les 14 et 15. Plus gros événement HYROX de France, 7 jours."
+  },
+  {
+    "nom": "Mondiaux Hong Kong",
+    "lieu": "AsiaWorld-Expo",
+    "debut": "2027-06-10",
+    "fin": "2027-06-13",
+    "division": "doubles-pro-homme",
+    "objectif": "aboutissement",
+    "campagne_debut": null,
+    "vitrine": false,
+    "captation": null,
+    "note": "Conditionnée à la qualification. Qualification en doubles non-transférable : si Antoine déclare forfait, elle tombe pour les deux."
+  }
+]

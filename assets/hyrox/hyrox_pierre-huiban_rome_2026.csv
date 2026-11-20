@@ -1,0 +1,17 @@
+ordre,type,nom,duree_s,duree_affichee,cumul_s,cumul_affiche,rang_division
+1,run,Run 1,264,4:24,264,0:04:24,14
+2,station,SkiErg 1000 m,213,3:33,481,0:08:01,22
+3,run,Run 2,186,3:06,697,0:11:37,11
+4,station,Sled Push 50 m,130,2:10,831,0:13:51,51
+5,run,Run 3,198,3:18,1061,0:17:41,15
+6,station,Sled Pull 50 m,173,2:53,1241,0:20:41,15
+7,run,Run 4,200,3:20,1473,0:24:33,21
+8,station,Burpee Broad Jumps 80 m,115,1:55,1601,0:26:41,26
+9,run,Run 5,204,3:24,1815,0:30:15,26
+10,station,Rowing 1000 m,240,4:00,2071,0:34:31,37
+11,run,Run 6,203,3:23,2295,0:38:15,22
+12,station,Farmers Carry 200 m,81,1:21,2403,0:40:03,25
+13,run,Run 7,203,3:23,2617,0:43:37,20
+14,station,Sandbag Lunges 100 m,137,2:17,2783,0:46:23,13
+15,run,Run 8,225,3:45,3012,0:50:12,16
+16,station,Wall Balls 100 reps,202,3:22,3214,0:53:34,10

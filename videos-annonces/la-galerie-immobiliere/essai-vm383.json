@@ -1,0 +1,53 @@
+{
+ "_doc": "Rendu d'ESSAI du 03/09/2026 pour que Maxime voie le format. Aucun fait sur le bien (ni ville, ni surface, ni « à vendre ») : l'annonce n'a pas pu être relevée depuis l'environnement. Les titres des plans 11, 13 et 17 restent volontairement génériques, on ne nomme pas une pièce qu'on n'a pas vue.",
+ "slug": "essai-vm383",
+ "bien": {
+  "surtitre": "la galerie immobilière",
+  "titre": "un bien à découvrir",
+  "accroche": "Vidéo d'essai, à partir des photos de l'annonce.",
+  "ville": ""
+ },
+ "plans": [
+  {
+   "plan": "11",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_161732_564f82a9-fa35-49c3-99d0-ad42a0ad3aec.mp4",
+   "titre": "bienvenue",
+   "texte": "Un bien qui se découvre pièce après pièce."
+  },
+  {
+   "plan": "15",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_161732_865a72e8-0159-4223-a3cc-e09532d69e43.mp4",
+   "titre": "le salon",
+   "texte": "La lumière, le critère qu'on sous-estime le plus."
+  },
+  {
+   "plan": "18",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_161754_e64055db-afcd-425b-9319-d2c3788e6f73.mp4",
+   "titre": "la cuisine",
+   "texte": "Là où tout se passe."
+  },
+  {
+   "plan": "13",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_161733_852ec55a-885d-4ef6-9170-0365e2c75400.mp4",
+   "titre": "les volumes",
+   "texte": "De la place pour vos projets."
+  },
+  {
+   "plan": "12",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_142523_93b5998a-4acc-481d-99c0-e236590da8ce.mp4",
+   "titre": "la terrasse",
+   "texte": "Un extérieur, à quelques minutes de Paris."
+  },
+  {
+   "plan": "17",
+   "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260821_161732_a1684a36-d00c-42dc-90dd-7beb1c0dc685.mp4",
+   "titre": "le calme",
+   "texte": "Sans renoncer à la ville."
+  }
+ ],
+ "outro": {
+  "titre": "visite sur rendez-vous",
+  "texte": "La Galerie Immobilière, Puteaux."
+ },
+ "musique": true
+}

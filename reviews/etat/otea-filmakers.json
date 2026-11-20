@@ -1,0 +1,342 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {},
+  "auto": {
+    "2026-10-12T18:00:00|383270039": {
+      "quand": "2026-10-12T12:20:48",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966838)",
+      "post_id": 393966838
+    },
+    "2026-10-14T18:00:00|383270055": {
+      "quand": "2026-10-12T12:20:49",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 393966856)",
+      "post_id": 393966856
+    },
+    "2026-10-16T18:00:00|383270077": {
+      "quand": "2026-10-12T12:20:51",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966877)",
+      "post_id": 393966877
+    },
+    "2026-10-21T18:00:00|383270122": {
+      "quand": "2026-10-12T12:20:52",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966894)",
+      "post_id": 393966894
+    },
+    "2026-10-23T18:00:00|383270142": {
+      "quand": "2026-10-12T12:20:54",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966908)",
+      "post_id": 393966908
+    },
+    "2026-10-19T18:00:00|390382868": {
+      "quand": "2026-10-12T12:20:57",
+      "type": "Post",
+      "resultat": "publication programmée (version 393966926)",
+      "post_id": 393966926
+    },
+    "2026-10-26T18:00:00|383270155": {
+      "quand": "2026-10-12T23:08:35",
+      "type": "Post",
+      "resultat": "publication programmée (version 394461861)",
+      "post_id": 394461861
+    },
+    "2026-10-23T18:00:00|394679335": {
+      "quand": "2026-10-13T12:03:25",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 394878177)",
+      "post_id": 394878177
+    },
+    "2026-10-26T18:00:00|394871080": {
+      "quand": "2026-10-13T12:03:27",
+      "type": "Post",
+      "resultat": "publication programmée (version 394878203)",
+      "post_id": 394878203
+    },
+    "2026-10-28T10:00:00|394728098": {
+      "quand": "2026-10-14T09:39:36",
+      "type": "Story",
+      "resultat": "publication programmée (version 395704239)",
+      "post_id": 395704239
+    },
+    "2026-10-28T18:00:00|394868991": {
+      "quand": "2026-10-14T20:17:12",
+      "type": "Post",
+      "resultat": "publication programmée (version 396243798)",
+      "post_id": 396243798
+    },
+    "2026-10-30T10:00:00|394728396": {
+      "quand": "2026-10-16T09:11:55",
+      "type": "Story",
+      "resultat": "publication programmée (version 397556889)",
+      "post_id": 397556889
+    },
+    "2026-10-30T18:00:00|383270198": {
+      "quand": "2026-10-16T19:39:02",
+      "type": "Post",
+      "resultat": "publication programmée (version 398072593)",
+      "post_id": 398072593
+    },
+    "2026-11-02T18:00:00|383270388": {
+      "quand": "2026-10-19T17:05:28",
+      "type": "Post",
+      "resultat": "publication programmée (version 400268920)",
+      "post_id": 400268920
+    },
+    "2026-11-04T10:00:00|394728405": {
+      "quand": "2026-10-21T09:30:05",
+      "type": "Story",
+      "resultat": "publication programmée (version 401937063)",
+      "post_id": 401937063
+    },
+    "2026-11-04T18:00:00|402269700": {
+      "quand": "2026-10-21T20:18:53",
+      "type": "Carrousel (3 visuels)",
+      "resultat": "publication programmée (version 402528523)",
+      "post_id": 402528523
+    },
+    "2026-11-06T10:00:00|394728418": {
+      "quand": "2026-10-23T09:29:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 403969677)",
+      "post_id": 403969677
+    },
+    "2026-11-06T18:00:00|402274002": {
+      "quand": "2026-10-23T20:01:46",
+      "type": "Carrousel (2 visuels)",
+      "resultat": "publication programmée (version 404517694)",
+      "post_id": 404517694
+    },
+    "2026-10-28T18:00:00|406273943": {
+      "quand": "2026-10-26T10:23:42",
+      "type": "Carrousel (2 visuels)",
+      "resultat": "publication programmée (version 406442442)",
+      "post_id": 406442442
+    },
+    "2026-11-04T18:00:00|406274236": {
+      "quand": "2026-10-26T10:23:44",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 406442471)",
+      "post_id": 406442471
+    },
+    "2026-10-30T18:00:00|406412195": {
+      "quand": "2026-10-26T10:23:45",
+      "type": "Post",
+      "resultat": "publication programmée (version 406442499)",
+      "post_id": 406442499
+    },
+    "2026-11-02T18:00:00|406863814": {
+      "quand": "2026-10-26T16:52:32",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 406888157)",
+      "post_id": 406888157
+    },
+    "2026-11-02T18:00:00|407504670": {
+      "quand": "2026-10-27T15:58:03",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 407992428)",
+      "post_id": 407992428
+    },
+    "2026-11-09T18:00:00|407631270": {
+      "quand": "2026-10-27T15:58:04",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 407992482)",
+      "post_id": 407992482
+    },
+    "2026-11-10T18:00:00|406412260": {
+      "quand": "2026-10-27T20:50:50",
+      "type": "Post",
+      "resultat": "publication programmée (version 408281041)",
+      "post_id": 408281041
+    },
+    "2026-11-11T10:00:00|406404287": {
+      "quand": "2026-10-28T10:44:44",
+      "type": "Story",
+      "resultat": "publication programmée (version 408787440)",
+      "post_id": 408787440
+    },
+    "2026-11-11T18:00:00|406412291": {
+      "quand": "2026-10-28T21:14:55",
+      "type": "Post",
+      "resultat": "publication programmée (version 409424367)",
+      "post_id": 409424367
+    },
+    "2026-11-13T10:00:00|406404400": {
+      "quand": "2026-10-30T10:59:02",
+      "type": "Story",
+      "resultat": "publication programmée (version 411065746)",
+      "post_id": 411065746
+    },
+    "2026-11-13T18:00:00|406412319": {
+      "quand": "2026-10-30T20:58:48",
+      "type": "Post",
+      "resultat": "publication programmée (version 411674976)",
+      "post_id": 411674976
+    },
+    "2026-11-18T10:00:00|406404303": {
+      "quand": "2026-11-04T12:24:37",
+      "type": "Story",
+      "resultat": "publication programmée (version 416434528)",
+      "post_id": 416434528
+    },
+    "2026-11-12T18:00:00|416548924": {
+      "quand": "2026-11-04T14:16:35",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 416560400)",
+      "post_id": 416560400
+    },
+    "2026-11-04T18:30:00|416548966": {
+      "quand": "2026-11-04T14:16:37",
+      "type": "Carrousel (7 visuels)",
+      "resultat": "publication programmée (version 416560450)",
+      "post_id": 416560450
+    },
+    "2026-11-04T18:35:00|416549589": {
+      "quand": "2026-11-04T14:16:39",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560493)",
+      "post_id": 416560493
+    },
+    "2026-11-05T12:30:00|416549619": {
+      "quand": "2026-11-04T14:16:41",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560545)",
+      "post_id": 416560545
+    },
+    "2026-11-06T12:30:00|416549642": {
+      "quand": "2026-11-04T14:16:43",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560631)",
+      "post_id": 416560631
+    },
+    "2026-11-08T12:30:00|416549670": {
+      "quand": "2026-11-04T14:16:45",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560668)",
+      "post_id": 416560668
+    },
+    "2026-11-09T12:30:00|416549705": {
+      "quand": "2026-11-04T14:16:48",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560710)",
+      "post_id": 416560710
+    },
+    "2026-11-10T18:05:00|416549727": {
+      "quand": "2026-11-04T14:16:49",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560750)",
+      "post_id": 416560750
+    },
+    "2026-11-11T12:00:00|416549750": {
+      "quand": "2026-11-04T14:16:51",
+      "type": "Story",
+      "resultat": "publication programmée (version 416560785)",
+      "post_id": 416560785
+    },
+    "2026-11-05T18:00:00|416555991": {
+      "quand": "2026-11-04T14:16:54",
+      "type": "Reel",
+      "resultat": "notification programmée, musique à poser dans Instagram (version 416560816)",
+      "post_id": 416560816
+    },
+    "2026-11-08T18:00:00|416556078": {
+      "quand": "2026-11-04T14:16:56",
+      "type": "Reel",
+      "resultat": "notification programmée, musique à poser dans Instagram (version 416560864)",
+      "post_id": 416560864
+    },
+    "2026-11-18T18:00:00|406275121": {
+      "quand": "2026-11-04T22:03:51",
+      "type": "Carrousel (3 visuels)",
+      "resultat": "publication programmée (version 417074768)",
+      "post_id": 417074768
+    },
+    "2026-11-20T10:00:00|406404412": {
+      "quand": "2026-11-06T12:22:04",
+      "type": "Story",
+      "resultat": "publication programmée (version 418863040)",
+      "post_id": 418863040
+    },
+    "2026-11-20T18:00:00|407612665": {
+      "quand": "2026-11-06T21:42:25",
+      "type": "Post",
+      "resultat": "publication programmée (version 419443040)",
+      "post_id": 419443040
+    },
+    "2026-11-25T10:00:00|406404335": {
+      "quand": "2026-11-11T12:02:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 424338166)",
+      "post_id": 424338166
+    },
+    "2026-11-27T10:00:00|406404430": {
+      "quand": "2026-11-13T12:30:28",
+      "type": "Story",
+      "resultat": "publication programmée (version 426907885)",
+      "post_id": 426907885
+    },
+    "2026-11-27T18:00:00|407608209": {
+      "quand": "2026-11-13T22:05:22",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 427519705)",
+      "post_id": 427519705
+    },
+    "2026-11-22T18:00:00|429820635": {
+      "quand": "2026-11-16T13:03:12",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 430039184)",
+      "post_id": 430039184
+    },
+    "2026-11-29T18:00:00|429820679": {
+      "quand": "2026-11-16T13:03:14",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 430039209)",
+      "post_id": 430039209
+    },
+    "2026-11-16T18:00:00|429976413": {
+      "quand": "2026-11-16T13:03:16",
+      "type": "Carrousel (2 visuels)",
+      "resultat": "publication programmée (version 430039236)",
+      "post_id": 430039236
+    },
+    "2026-11-16T18:05:00|429976541": {
+      "quand": "2026-11-16T13:03:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 430039259)",
+      "post_id": 430039259
+    },
+    "2026-11-30T18:00:00|429709301": {
+      "quand": "2026-11-17T00:23:34",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 430848141)",
+      "post_id": 430848141
+    },
+    "2026-11-29T18:00:00|430268049": {
+      "quand": "2026-11-17T00:23:36",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 430848164)",
+      "post_id": 430848164
+    },
+    "2026-12-01T18:00:00|407609693": {
+      "quand": "2026-11-17T23:36:42",
+      "type": "Carrousel (4 visuels)",
+      "resultat": "publication programmée (version 432178360)",
+      "post_id": 432178360
+    },
+    "2026-12-02T18:00:00|406275566": {
+      "quand": "2026-11-18T23:01:21",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 433537218)",
+      "post_id": 433537218
+    },
+    "2026-12-03T18:00:00|432914829": {
+      "quand": "2026-11-19T23:09:46",
+      "type": "Post",
+      "resultat": "publication programmée (version 434884088)",
+      "post_id": 434884088
+    }
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "_doc": "Fonds photo des stories et des carrousels Run On Invest. provenance=ia : photos IA ultra réalistes, SEUL compte autorisé (Maxime, 04/08/2026), jamais une personne identifiable, jamais sur OTEA Production ni Otea Filmakers. Les 8 photos d'août retenues par le cadrage du 12/10/2026 (b, d, e, f, g, j, k, l) ont été relues octet pour octet sur le CDN Higgsfield (url = url_originale = le PNG 1152x2048 d'origine, exactement 9:16) et regardées une par une le 12/10/2026 : personne identifiable, faux lettrage, marques. Résultat : b, g, j, k utilisables partout ; f et l utilisables en carrousel (le recadrage 4:5 centré de carrousel.py, lignes 304 à 1744, exclut leur faux lettrage) mais pas en story plein cadre : visage_916 y est volontairement absent pour que story-photo.py refuse la clé, et cadre_916 donne le recadrage à passer en fichier local ; d hors liste (_hors_rotation : marques réelles) ; e, c et h exclues (_exclues). visage_45 et visage_916 : listes vides, aucun visage visible (coureurs de dos ou lointains). Le FOND-PROVISOIRE-aplat-encre du POC n'existe plus : aucune carte sur aplat, aucun aplat mêlé à une photo. luminance et detail : mesurés sur le recadrage 4:5 centré (moyenne de luminance ; moyenne du filtre FIND_EDGES par tiers). isAiGenerated : à déclarer sur chaque visuel (Q12). Aucune génération neuve (Q13 en attente). empreinte : sha256 tronqué à 16 caractères du PNG servi par url (l'original IA), comme dans les autres manifestes ; drive_sync.py la lit pour savoir qu'il n'y a rien à récupérer, ces photos ne viennent pas d'un Drive.",
+  "client": "run-on-invest",
+  "source": "générations Higgsfield text2image_soul_v2 du 19/08/2026, compte d'OTEA Production",
+  "releve": "2026-10-12",
+  "photos": [
+    {
+      "cle": "b",
+      "slug": "la-defense-aube-trois-coureurs-silhouette",
+      "sujet": "Aube entre deux rangées de tours de verre, soleil rasant au bout de la rue, ciel dégradé ; trois coureurs en silhouette, de dos, dans le bas du cadre (lignes 1440 à 1900 sur 2048) ; voitures garées à gauche, sans plaque lisible",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_061202_7a4cbd5c-5e4d-4a2b-94f7-1a96527ac368.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_061202_7a4cbd5c-5e4d-4a2b-94f7-1a96527ac368.png",
+      "empreinte": "ef314cb558c5d6ed",
+      "higgsfield_job": "7a4cbd5c-5e4d-4a2b-94f7-1a96527ac368",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage (trois têtes de dos, en contre-jour) ; aucun texte, aucune plaque, aucun logo",
+      "matiere": true,
+      "luminance": 78.9,
+      "detail": {
+        "haut": 8.8,
+        "milieu": 9.8,
+        "bas": 8.8
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "decalage_916": 0.5,
+      "visage_916": [],
+      "note_story": "plein cadre valide pour le moteur, mais les trois coureurs (lignes 1440 à 1900) tombent sous le voile du bas (0,91 mesuré) et disparaissent : écartée des stories du 12/10, gardée en carrousel",
+      "rendus_12_10": {
+        "stories": [],
+        "carrousel_a4": "slide 2"
+      }
+    },
+    {
+      "cle": "f",
+      "slug": "la-defense-escalier-coureurs-de-dos",
+      "sujet": "Grand escalier de béton entre deux tours, ciel bleu, lumière dure du matin : sept coureurs de dos qui montent (trois en haut des marches, deux au milieu, deux au premier plan)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_062210_d92d19d2-2b71-42ff-bc10-2b6882de0063.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_062210_d92d19d2-2b71-42ff-bc10-2b6882de0063.png",
+      "empreinte": "4b15fee40bcd52f5",
+      "higgsfield_job": "d92d19d2-2b71-42ff-bc10-2b6882de0063",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage (têtes de dos, une joue de trois quarts arrière à peine visible) ; FAUX LETTRAGE : enseigne « MALAI DCEFIESGH IIIIO » sur la tour de gauche, lignes 288 à 301, x 320 à 495 ; hors du recadrage 4:5 centré de carrousel.py (qui commence à la ligne 304), dans le plein cadre 9:16",
+      "matiere": true,
+      "luminance": 54.8,
+      "detail": {
+        "haut": 9.2,
+        "milieu": 8.9,
+        "bas": 7.1
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "faux_lettrage": {
+        "boite_source": [
+          320,
+          286,
+          496,
+          302
+        ],
+        "texte_vu": "MALAI DCEFIESGH IIIIO"
+      },
+      "story_plein_cadre": "refusé : le faux lettrage est dans le haut du plein cadre 9:16. visage_916 est volontairement absent pour que story-photo.py refuse la clé ; passer le recadrage cadre_916 en fichier local avec l'option sans-visage",
+      "cadre_916": [
+        90,
+        320,
+        1062,
+        2048
+      ],
+      "visage_916_recadre": [],
+      "rendus_12_10": {
+        "stories": [
+          "s3",
+          "s6"
+        ],
+        "carrousel_a4": "slide 4"
+      }
+    },
+    {
+      "cle": "g",
+      "slug": "esplanade-vide-coureur-lointain",
+      "sujet": "Esplanade immense et vide au lever du soleil, grandes ombres, ciel bleu et nuages ; ligne d'horizon de tours (silhouettes inventées par le modèle, ce n'est pas la vraie Défense) ; un seul coureur minuscule au loin (vers x 570, y 990)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_062216_9d594010-ca3c-4346-a997-52822c3be685.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_062216_9d594010-ca3c-4346-a997-52822c3be685.png",
+      "empreinte": "9be4b2b1270a7742",
+      "higgsfield_job": "9d594010-ca3c-4346-a997-52822c3be685",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage (coureur de 20 px) ; deux petits panneaux routiers à l'horizon, 10 à 15 px, rien de lisible ; aucun logo",
+      "matiere": true,
+      "luminance": 107.5,
+      "detail": {
+        "haut": 11.3,
+        "milieu": 14.3,
+        "bas": 12.5
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "decalage_916": 0.5,
+      "visage_916": [],
+      "rendus_12_10": {
+        "stories": [
+          "s1",
+          "s10"
+        ],
+        "carrousel_a4": "slide 5"
+      }
+    },
+    {
+      "cle": "j",
+      "slug": "passerelle-coureuse-seule-de-dos",
+      "sujet": "Passerelle dallée au petit matin dans une brume orangée, tours de part et d'autre ; une coureuse seule, de dos, au centre (lignes 900 à 1560), visière blanche, coupe-vent clair ; une silhouette lointaine derrière elle",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_093549_af7695fd-3b2b-46f7-a4a9-b9d0035cd182.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_093549_af7695fd-3b2b-46f7-a4a9-b9d0035cd182.png",
+      "empreinte": "07574c0c0077d1f7",
+      "higgsfield_job": "af7695fd-3b2b-46f7-a4a9-b9d0035cd182",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage ; aucun texte ; aucun logo lisible",
+      "matiere": true,
+      "luminance": 76.2,
+      "detail": {
+        "haut": 4.5,
+        "milieu": 5.0,
+        "bas": 8.1
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "decalage_916": 0.5,
+      "visage_916": [],
+      "option_916_haut_coupe": {
+        "cadre": [
+          90,
+          320,
+          1062,
+          2048
+        ],
+        "zoom": 1.185,
+        "visage_916": [],
+        "raison": "les coureurs remontent dans la bande nette au lieu de finir sous le voile du bas",
+        "usage": "recadrage passé en fichier local à story-photo.py avec l'option sans-visage (972 x 1728, au dessus du plancher de 1280 px du moteur)"
+      },
+      "rendus_12_10": {
+        "stories": [
+          "s8 (option_916_haut_coupe)"
+        ],
+        "carrousel_a4": "refusée par carrousel.py sur les slides 2 et 3 (accent 4,15 et 4,21:1, cible 4,5)"
+      }
+    },
+    {
+      "cle": "k",
+      "slug": "arche-beton-quatre-coureurs-de-dos",
+      "sujet": "Arche de béton monumentale en demi-cercle sur une esplanade dallée, contre-jour du lever, tours au loin sous l'arche ; quatre coureurs de dos au centre (lignes 1080 à 1300), trois silhouettes lointaines. Forme inventée par le modèle : ce n'est PAS la Grande Arche (un cube évidé)",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_093549_43d3c644-db6d-4dc0-912b-95a7f1ed1dc8.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_093549_43d3c644-db6d-4dc0-912b-95a7f1ed1dc8.png",
+      "empreinte": "84b6d11c15dde789",
+      "higgsfield_job": "43d3c644-db6d-4dc0-912b-95a7f1ed1dc8",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage ; aucun texte ; aucun logo",
+      "matiere": true,
+      "luminance": 96.2,
+      "detail": {
+        "haut": 9.1,
+        "milieu": 13.8,
+        "bas": 15.1
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "decalage_916": 0.5,
+      "visage_916": [],
+      "option_916_haut_coupe": {
+        "cadre": [
+          90,
+          320,
+          1062,
+          2048
+        ],
+        "zoom": 1.185,
+        "visage_916": [],
+        "raison": "les coureurs remontent dans la bande nette au lieu de finir sous le voile du bas",
+        "usage": "recadrage passé en fichier local à story-photo.py avec l'option sans-visage (972 x 1728, au dessus du plancher de 1280 px du moteur)"
+      },
+      "rendus_12_10": {
+        "stories": [
+          "s2",
+          "s9 (option_916_haut_coupe)"
+        ],
+        "carrousel_a4": "slide 3"
+      }
+    },
+    {
+      "cle": "l",
+      "slug": "parvis-groupe-de-coureurs-de-dos",
+      "sujet": "Parvis de béton en lumière rasante, deux tours de verre ; groupe d'une dizaine de coureurs de dos à mi-distance (lignes 960 à 1320), un coureur à casquette blanche à gauche, plots de chantier. Source du post feed du 21/08 (« la photo du 21/08 » du cadrage), générée le 19/08",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_061155_74804825-391b-4bf0-927e-79b4a0767335.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_061155_74804825-391b-4bf0-927e-79b4a0767335.png",
+      "empreinte": "85a7c8c414224e8d",
+      "higgsfield_job": "74804825-391b-4bf0-927e-79b4a0767335",
+      "modele": "text2image_soul_v2",
+      "date_generation": "2026-08-19",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "provenance": "ia",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, feed et stories, faute de banque photo ; jamais une personne identifiable",
+      "licence": "image générée par le compte Higgsfield d'OTEA Production (plan pro au relevé du 12/10/2026), modèle text2image_soul_v2 : aucune photo de stock, aucun auteur tiers ; droits d'usage selon les conditions Higgsfield du plan, non revérifiées le 12/10/2026",
+      "credit": "génération IA Higgsfield du 19/08/2026 pour Run On Invest, aucun photographe",
+      "isAiGenerated": "isAiGenerated : à cocher sur chaque visuel qui part de cette image (Q12 du cadrage, recommandation oui) ; le champ instagramData.isAiGenerated des brouillons R.O.I. est à false aujourd'hui",
+      "personne_identifiable": false,
+      "controle_oeil": "12/10/2026, planche et zooms x2 à x5, détecteur YuNet en second avis : aucun visage (têtes de dos ou de 10 px) ; FAUX LETTRAGE : « HALAE BEWISSINAN » et « GITI » en haut de la tour de droite, lignes 232 à 300, x 770 à 990 ; hors du recadrage 4:5 centré de carrousel.py (ligne 304), dans le plein cadre 9:16",
+      "matiere": true,
+      "luminance": 103.5,
+      "detail": {
+        "haut": 18.5,
+        "milieu": 19.5,
+        "bas": 10.0
+      },
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "visage_45": [],
+      "faux_lettrage": {
+        "boite_source": [
+          770,
+          228,
+          992,
+          302
+        ],
+        "texte_vu": "HALAE BEWISSINAN / GITI"
+      },
+      "story_plein_cadre": "refusé : le faux lettrage est dans le haut du plein cadre 9:16. visage_916 est volontairement absent pour que story-photo.py refuse la clé ; passer le recadrage cadre_916 en fichier local avec l'option sans-visage",
+      "cadre_916": [
+        90,
+        320,
+        1062,
+        2048
+      ],
+      "visage_916_recadre": [],
+      "rendus_12_10": {
+        "stories": [
+          "s4",
+          "s7"
+        ],
+        "carrousel_a4": "slide 1"
+      }
+    }
+  ],
+  "_hors_rotation": {
+    "d": {
+      "job": "hf_20260819_062155_d7f350d9-ae44-4f74-902e-039c6c66404d",
+      "sujet": "Jambes et chaussures de plusieurs coureurs sur dalle mouillée, contre-jour, reflets (aucun haut du corps)",
+      "raison": "MARQUES RÉELLES générées malgré le prompt (« no logos, no brands ») : virgule Nike blanche sur le cuissard de droite (lignes 248 à 270, x 1040 à 1110) et fleur de lys blanche sur le cuissard de gauche (lignes 298 à 350, x 590 à 635) ; bandes vertes « façon marque » sur les chaussures, sans nom lisible. Le recadrage 4:5 centré de carrousel.py commence à la ligne 304 et garde le bas de la fleur de lys : clé retirée de la liste photos pour qu'aucun moteur ne la pose telle quelle",
+      "usage_possible": "story seulement, depuis le recadrage cadre_916 (haut coupé à la ligne 360), passé en fichier local à story-photo.py avec l'option sans-visage ; jamais en plein cadre, jamais en 4:5 centré",
+      "cadre_916": [
+        101,
+        360,
+        1051,
+        2048
+      ],
+      "visage_916_recadre": [],
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20260819_062155_d7f350d9-ae44-4f74-902e-039c6c66404d.png",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "rendus_12_10": {
+        "stories": [
+          "s5 (cadre_916)"
+        ],
+        "carrousel_a4": "aucune"
+      }
+    }
+  },
+  "_exclues": {
+    "e": {
+      "job": "hf_20260819_062203_ab8461bc-f68b-41fa-96fa-4689a2c12734",
+      "raison": "contrôle à l'œil du 12/10/2026 : visage d'une femme de profil en plan moyen (à gauche, lignes 1010 à 1090) ; logo « adidas » au lettrage déformé sur le dos du coureur central ; faux lettrage sur les t-shirts de la foule ; une foule de course de masse, pas un petit groupe R.O.I. Cadrage : « b, d, e, f, g, j, k, l utilisables » corrigé pour e"
+    },
+    "c": {
+      "job": "hf_20260819_061209_5ae1591b-c2f4-4f81-8136-37ef6dd7653f",
+      "raison": "cadrage du 12/10/2026 : visages de profil en plan moyen"
+    },
+    "h": {
+      "job": "hf_20260819_062225_e79651fd-40dc-49c5-8b78-27c25a59a608",
+      "raison": "cadrage du 12/10/2026 : pseudo lettrage IA illisible sur l'arche, jamais un faux texte publié"
+    }
+  }
+}

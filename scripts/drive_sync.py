@@ -57,13 +57,29 @@ def telecharger(drive_id):
     return octets, EXTENSIONS[ctype]
 
 
+def _nom(m):
+    """Le nom à afficher pour un média, sans supposer qu'un champ existe."""
+    return m.get("drive_nom") or m.get("drive_id") or m.get("cle") or "?"
+
+
 def synchroniser(client, dry_run=False):
     manifeste = PHOTOS / f"{client}.json"
     spec = json.loads(manifeste.read_text(encoding="utf-8"))
-    medias = spec["photos"]
+    medias = spec.get("photos") if isinstance(spec, dict) else None
+    if not isinstance(medias, list):
+        # Un fichier de photos/ qui n'est pas un manifeste de dépôt (une note de banque, par
+        # exemple) n'a rien à récupérer : on le saute au lieu de faire tomber tout le job.
+        print(f"{client} : pas de liste « photos », rien à récupérer")
+        return 0
 
     connus = {m["empreinte"]: m for m in medias if m.get("empreinte")}
-    a_traiter = [m for m in medias if not m.get("empreinte")]
+    sans_empreinte = [m for m in medias if not m.get("empreinte")]
+    # Seul un média déposé dans le Drive porte un drive_id. Une photo hébergée ailleurs (banque
+    # cloudfront, image générée) n'a rien à télécharger ici : elle ne doit pas planter le job.
+    a_traiter = [m for m in sans_empreinte if m.get("drive_id")]
+    hors_drive = len(sans_empreinte) - len(a_traiter)
+    if hors_drive:
+        print(f"{client} : {hors_drive} média(s) sans drive_id ni empreinte, ignoré(s)")
     if not a_traiter:
         print(f"{client} : rien de nouveau ({len(connus)} média(s) déjà récupéré(s))")
         return 0
@@ -77,7 +93,7 @@ def synchroniser(client, dry_run=False):
             octets, ext = telecharger(m["drive_id"])
         except Exception as exc:
             echecs += 1
-            print(f"  ✗ {m.get('drive_nom', m['drive_id'])} : {exc}", file=sys.stderr)
+            print(f"  ✗ {_nom(m)} : {exc}", file=sys.stderr)
             continue
         empreinte = hashlib.sha256(octets).hexdigest()[:16]
         if empreinte in connus:
@@ -88,12 +104,12 @@ def synchroniser(client, dry_run=False):
         m.update(empreinte=empreinte, type=ext)
         connus[empreinte] = m
         prets.append((m, chemin))
-        print(f"  + {m.get('drive_nom', m['drive_id'])} → {empreinte}.{ext} "
+        print(f"  + {_nom(m)} → {empreinte}.{ext} "
               f"({len(octets) // 1024} Ko)")
 
     for m, deja in doublons:
-        print(f"  = {m.get('drive_nom', m['drive_id'])} — contenu identique à "
-              f"« {deja.get('drive_nom', deja['empreinte'])} », écarté")
+        print(f"  = {_nom(m)} — contenu identique à "
+              f"« {deja.get('drive_nom') or deja['empreinte']} », écarté")
     # Un doublon n'a pas à encombrer le manifeste : on le retire plutôt que de le garder vide.
     spec["photos"] = [m for m in medias if m not in [d for d, _ in doublons]]
 

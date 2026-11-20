@@ -1,0 +1,13 @@
+{
+  "accent": "#FF5800",
+  "police": null,
+  "voix": null,
+  "voix_decalage": 0.0,
+  "elements": [
+    {"t": 5.0, "duree": 2.4, "style": "punch", "texte": "KHADIJA\nSALOMON"},
+    {"t": 9.0, "duree": 3.5, "style": "bandeau", "texte": "Khadija Salomon", "sous": "Fondatrice"},
+    {"t": 15.0, "duree": 2.6, "style": "chiffre", "valeur": 120, "suffixe": "", "texte": "participants"},
+    {"t": 20.0, "duree": 2.2, "style": "mot", "texte": "Innovation", "position": "haut-droite"},
+    {"t": 30.0, "duree": 4.5, "style": "liste", "titre": "Au programme", "lignes": ["Ateliers", "Conférences", "Networking"]}
+  ]
+}

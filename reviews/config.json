@@ -1,5 +1,5 @@
 {
-  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
+  "_doc": "Comptes couverts par la review hebdo client (scripts/review.py). Champs : slug = identifiant commun au dépôt (mêmes valeurs que BLOG_IDS de publier.py), prefixe = préfixe des références de lignes (GBC-01…), actif = le compte reçoit un fichier de review. drive_dossier = dossier Drive PERMANENT « Validation hebdo — <Client> » : c'est LE lien stable donné au client (partage « tous les utilisateurs disposant du lien : éditeur » à activer UNE SEULE FOIS — hérité ensuite par tous les fichiers déposés dedans). drive_archives = son sous-dossier Archives. validation_auto = compte dont Maxime est lui-même le client (07/10/2026) : pas de tableau, chaque brouillon à venir vaut ✅ et part en publication automatique à la relève s'il passe les garde-fous. semaines_avance = nombre de semaines ouvertes à la fois devant le client (1 par défaut ; 2 = le vendredi génère le lundi suivant ET celui d'après). drive_fichiers = la liste des fichiers ouverts quand il y en a plusieurs (un par semaine, du plus ancien au plus récent) ; la relève les lit tous, plus drive_fichier s'il est encore renseigné (la semaine en cours, gardée jusqu'au vendredi où elle part en Archives). drive_fichier = le fichier de la semaine EN COURS de validation, dans ce dossier — remplacé chaque vendredi matin par la routine Claude (nouveau fichier déposé, l'ancien déplacé en Archives), c'est lui que les relèves lisent plusieurs fois par jour. Un drive_fichier périmé est sans danger : la semaine passée est rejouée à vide grâce au journal reviews/etat/. Le fichier peut aussi revenir par mail : le déposer alors dans reviews/retours/ sous le nom <slug>-<lundi>.xlsx. État du partage au 21/08/2026 : les cinq dossiers clients sont en « tous les utilisateurs disposant du lien : LECTEUR » — les relèves lisent bien, mais le client ne peut pas encore écrire dans son tableau ; passer chaque dossier en ÉDITEUR est le réglage manuel qui reste dû.",
   "comptes": [
     {
       "slug": "gossip-beauty-center",
@@ -28,31 +28,38 @@
       "blog_id": 6563137,
       "nom": "J Lawson Golf",
       "prefixe": "JLG",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1Q8KPPL1S2mrJ6afLObZoD3sokPULdcNG",
       "drive_archives": "1fbD-vdIeCEltDGWvEGRkzXy4_HMvF2XH",
-      "drive_fichier": "1XjaMDlhUpwPVTj0novW4WLtgsjQQ_xoFngBY9zI710s"
+      "drive_fichier": "1rtwIRYdhcqUSsSqdYpzbVSdmO30cC9umbwCjuxRhh70",
+      "note": "COMPTE DÉSACTIVÉ le 21/10/2026 sur demande de Maxime (« on ne travaille plus ensemble ») : ne plus produire, ne plus générer de review. Brouillons laissés en place dans Metricool, tous en draft et sans publication automatique. Dossier Drive et archives conservés tels quels si le compte revient."
     },
     {
       "slug": "la-galerie-immobiliere",
       "blog_id": 5733302,
       "nom": "La Galerie Immobilière",
       "prefixe": "LGI",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1B8WXZ0X1dYCtuzxQ3m8wmUOPFn34YrLO",
       "drive_archives": "1sQVmOw2WVIXNOeVpEMI5WPYG3XHRJAml",
-      "drive_fichier": "1XncHOuwk4tYtSbP2LKdJcWf-8-1zBe0wAJyajt_CmWs",
-      "note": "Seul compte réellement en service à ce jour : Sabrina et Rémi reçoivent le mail et ouvrent le tableau. Règle apprise le 28/08 : quand un tableau a déjà été envoyé à la cliente, c'est CE fichier que la routine garde, même si le job generer en produit une version plus fraîche — le remplacer ferait tomber leurs décisions dans un tableau que la relève ne lit plus."
+      "drive_fichier": "11WRC_cWIAqRiV9dt2TlOvKofzzIKqaKugUvQWlJNlfA",
+      "note": "COMPTE DÉSACTIVÉ le 21/10/2026 sur demande de Maxime (« on ne travaille plus ensemble ») : ne plus produire, ne plus générer de review. Brouillons laissés en place dans Metricool, tous en draft et sans publication automatique. Dossier Drive et archives conservés tels quels si le compte revient. Note précédente : Seul compte réellement en service à ce jour : Sabrina et Rémi reçoivent le mail et ouvrent le tableau. Règle apprise le 28/08 : quand un tableau a déjà été envoyé à la cliente, c'est CE fichier que la routine garde, même si le job generer en produit une version plus fraîche — le remplacer ferait tomber leurs décisions dans un tableau que la relève ne lit plus."
     },
     {
       "slug": "pierre-huiban",
       "blog_id": 6572293,
       "nom": "Pierre Huiban",
       "prefixe": "PH",
-      "actif": true,
+      "actif": false,
       "drive_dossier": "1VGThaVWofkwv3sUqZQo-R0_sST5nvytB",
       "drive_archives": "1IATgWRDRJObVb0u7v4tUZXNqfzKCalUT",
-      "drive_fichier": "1BSNsS3SKyQPF6GEq8wc_BxTbcdEEIDO1zZ5HeD7zrKw"
+      "semaines_avance": 2,
+      "drive_fichiers": [
+        "1cUzldtSeQMOalcy3Dv7TIHQUkGknwV0_s7A49d1yZnY",
+        "1Ixx34cQVds23XhsS3Vj79k5_SUVWFWY0sSWKkoN6NJg"
+      ],
+      "note": "PUBLICATION AUTOMATIQUE depuis le 21/10/2026, décision de Maxime : « on va faire l'automatisation des posts avec Pierre parce qu'il ne les valide pas » (aucune ligne cochée depuis le 05/10). Plus de tableau de semaine : la relève arme les brouillons des 14 jours à venir qui passent les garde-fous ; les reels partent en mode notification, Maxime pose la musique dans Instagram. Les deux derniers tableaux (drive_fichiers) sont gardés pour mémoire. Note précédente : Deux semaines ouvertes à la fois depuis le 05/10/2026 (Maxime : « on aura deux semaines d'avance »). drive_fichiers = les tableaux ouverts, du plus ancien au plus récent : semaine du 12-10 (1cUzldtS…, déposé le 05/10), semaine du 19-10 (1Ixx34cQ…, déposé le 12/10, 11 lignes relues après dépôt). Le 12-10 part en Archives quand le 26-10 arrive ; celui du 05-10 est parti en Archives le 09/10, celui du 02-10 (10hnadMp…) y était déjà. Depuis la fusion de la PR #56 (12/10/2026), la relève lit tous les tableaux de drive_fichiers. Email perso toujours manquant : le champ « À » du brouillon reste vide.",
+      "validation_auto": true
     },
     {
       "slug": "otea-production",
@@ -60,21 +67,68 @@
       "nom": "OTEA PRODUCTION",
       "prefixe": "OP",
       "actif": false,
-      "drive_dossier": null,
-      "drive_archives": null,
-      "drive_fichier": null,
-      "note": "Compte de l'agence — Maxime valide directement dans Metricool, pas de fichier client. A servi de banc d'essai réel le 08/08/2026 (post 359735766)."
+      "validation_auto": true,
+      "medias_retenus": [
+        "static.metricool.com/zapier/202607/"
+      ],
+      "drive_dossier": "1GeMYG_myNbXPTY9W3K8YLdSAm2jJwofw",
+      "drive_archives": "1JQI4xUCI1yuZ2MfBCNiv_UjXbScFIDfB",
+      "semaines_avance": 2,
+      "drive_fichiers": [
+        "1WAhFpk-WHlTqjn8-zaZbfc5P-1o-gEYqgsfK7jAEADo",
+        "14UJlJKm4hCN2PP3yyA4eY1ae4okdQoaGjnmepvr7WIg"
+      ],
+      "note": "SORTI DU CIRCUIT le 07/10/2026 : Maxime est le client de ce compte, « tu peux considérer que c'est validé à chaque fois, car c'est moi ». Plus de tableau à générer ni à relever ; dossier et tableaux des 12-10 et 19-10 conservés tels quels. validation_auto : à chaque relève, les brouillons des 14 jours à venir passent en publication automatique (garde-fous : média, placeholders, tiret cadratin, note de tournage), voir valider_auto dans scripts/review.py. medias_retenus : les visuels IA téléversés en juillet (11 posts gardés en IA le 29/07, faute de vraie photo correspondante) ne partent jamais seuls, il faut leur mettre une vraie photo. Historique : jusqu'au 07/10/2026 Maxime validait directement dans Metricool ; depuis, même circuit que Pierre Huiban à sa demande (« faire le même process pour OTEA Production et OTEA Filmakers ») : dossier Validation hebdo créé le 07/10, deux semaines ouvertes. A servi de banc d'essai réel le 08/08/2026 (post 359735766).",
+      "en_attente": [
+        {
+          "uuid": "4264688611609431379",
+          "motif": "mar 10/11 12h « On n'a rien d'intéressant à filmer » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        },
+        {
+          "uuid": "-3155615471557721545",
+          "motif": "jeu 12/11 12h « micro tendu » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        },
+        {
+          "uuid": "4735606945083113679",
+          "motif": "lun 16/11 12h « Tech Show Paris » : post image + texte retiré le 09/11/2026 par Maxime après /ig-audit (gabarit qui sous-performe) : rester en brouillon"
+        }
+      ]
     },
     {
       "slug": "otea-filmakers",
       "blog_id": 4728418,
       "nom": "Otea Filmakers",
       "prefixe": "OF",
-      "actif": true,
+      "actif": false,
+      "validation_auto": true,
       "drive_dossier": "1NgZ2ovwiuVH7J987AgFSR4Yr-X7FUOWj",
       "drive_archives": "1ictulW_TOV5FQyCsLjPTwv6MDcwcf1DW",
-      "drive_fichier": "1FfQWheBBqMGN8lg0H3fpRILtytDzxImcr6_9hVhXCZM",
-      "note": "Marque vitrine interne — banc d'essai du parcours client complet (Maxime joue le client dans le Google Sheet). BLOQUANT au 21/08/2026 : le dossier Validation hebdo n'a AUCUNE permission « tous les utilisateurs disposant du lien » (vérifié par get_file_permissions), la relève ne peut donc pas lire le fichier et le job appliquer sort en erreur à chaque passage depuis le 19/08. Réglage à faire une fois par Maxime sur le dossier : Partager → Accès général → Tous les utilisateurs disposant du lien → Éditeur."
+      "drive_fichier": "1jRbMi24_GMWKN7PTS6G-vV9g1tBvTzrpIPN3G7aRdms",
+      "note": "SORTI DU CIRCUIT DES TABLEAUX (décision de Maxime du 07/10/2026 : « tu peux considérer que c'est validé à chaque fois, car c'est moi », puis choix explicite de la publication automatique). actif: false depuis le 09/10 (PR #58) ; validation_auto depuis la fusion de la PR #56 le 12/10 : à chaque relève, les brouillons des 14 jours à venir passent en publication automatique s'ils passent les garde-fous de valider_auto (scripts/review.py) — média, placeholders, tiret cadratin, note « À tourner ». Historique : marque vitrine interne, banc d'essai du parcours client complet (Maxime jouait le client dans le Google Sheet). Le dossier Validation hebdo n'a jamais eu de permission « tous les utilisateurs disposant du lien » (vérifié le 21/08), ce qui rendait le fichier illisible pour la relève. Dossier, archives et tableaux des 12-10 et 19-10 conservés tels quels.",
+      "en_attente": [
+        {
+          "uuid": "5163270237495052803",
+          "motif": "reel HYROX Bordeaux @sgamard : classements incrustés dans la vidéo à confirmer par Maxime (26/10/2026)"
+        },
+        {
+          "uuid": "-6129530836021719121",
+          "motif": "reel HYROX Bordeaux Quentin Nantois : classements incrustés dans la vidéo à confirmer par Maxime (26/10/2026)"
+        },
+        {
+          "uuid": "6417583479028599017",
+          "motif": "reel avant / après du 25/11 (rushes vidéo étalonnés) : refusé par Maxime le 02/11/2026, remplacé par un carrousel avant / après sur les photos RETOUCHEES et CAPTURES BRUTES de HYROX Rome, en attente des brutes partagées par lien"
+        }
+      ]
+    },
+    {
+      "slug": "run-on-invest",
+      "blog_id": 6636615,
+      "nom": "Run On Invest",
+      "prefixe": "ROI",
+      "actif": false,
+      "validation_auto": true,
+      "note": "PUBLICATION AUTOMATIQUE depuis le 21/10/2026, décision de Maxime (« Oui, passe R.O.I. en auto »). Visuels générés par IA autorisés sur ce compte (04/08/2026), d'où contenu_ia : la relève coche toujours la mention « contenu IA » d'Instagram (instagramData.isAiGenerated). Inscrit le 12/10/2026 pour que publier.BLOG_IDS (carrousels sur photo du moteur story-photo) et cette configuration restent alignés (tests/test_coherence.py). Ni tableau de review (actif: false) ni publication automatique : validation_auto doit rester à false, le compte reste en BROUILLON tant que Maxime n'a pas validé lui-même (confidentialité stricte, voir recaps/clients-config.json). Aucun dossier Drive de validation.",
+      "contenu_ia": true
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "_note": "Les deux formulaires du dispositif, créés le 06/08/2026 par templates/creer-formulaires.gs. Communs à tous les athlètes. Le lien 'public' est celui qu'on envoie ; le lien 'edition' ne se transmet jamais à un athlète.",
+  "dossier": {
+    "titre": "Dossier Athlète — OTEA",
+    "public": "https://forms.gle/ahBDrTegxhhNCYU76",
+    "edition": "https://docs.google.com/forms/d/1mH9WpKs82c-hSgKV3kT72KCP36vOZhj_PZ7bW8f0tj4/edit",
+    "form_id": "1mH9WpKs82c-hSgKV3kT72KCP36vOZhj_PZ7bW8f0tj4",
+    "reponses": "https://docs.google.com/spreadsheets/d/1J25NjJPJpF01qEiMIcNjDa5Ht3547HUgU_M8cavu57o/edit",
+    "sheet_id": "1J25NjJPJpF01qEiMIcNjDa5Ht3547HUgU_M8cavu57o",
+    "destination": "athletes/<slug>/profil.json",
+    "frequence": "une fois, à l'onboarding"
+  },
+  "hebdo": {
+    "titre": "Point hebdo — OTEA",
+    "public": null,
+    "edition": "https://docs.google.com/forms/d/1eNeUNxUzUz-ggGbi8o-0b4MZ1D9dmrXhElb2Aex6kvA/edit",
+    "form_id": "1eNeUNxUzUz-ggGbi8o-0b4MZ1D9dmrXhElb2Aex6kvA",
+    "reponses": "https://docs.google.com/spreadsheets/d/1FreB-RK645deVVshBfj3-M7WL20NHkVIFF_J0T15zWY/edit",
+    "sheet_id": "1FreB-RK645deVVshBfj3-M7WL20NHkVIFF_J0T15zWY",
+    "destination": "athletes/<slug>/semaines/<ISO>.json",
+    "frequence": "chaque dimanche soir"
+  },
+  "page_publique": {
+    "fichier": "templates/web/dossier-athlete.html",
+    "a_heberger_sur": "oteaproduction.com — page autonome, aucune ressource externe, aucune mention tierce",
+    "url_en_ligne": null,
+    "note": "Google Drive ne peut pas héberger une page web depuis 2016 : un HTML y est téléchargé, pas affiché. Une fois en ligne, reporter l'URL ici et la transmettre avec le lien du formulaire — la page le contient déjà en bouton."
+  },
+  "_recalage": {
+    "date": "2026-08-06",
+    "methode": "lecture directe des en-têtes de la feuille de réponses",
+    "verifie": "31/31 colonnes du Dossier et 5/5 du Hebdo alignées sur le SCHEMA",
+    "modifications_relevees": [
+      "'Tes splits, si tu les as gardés' → 'Tes splits, ou séances types si tu les as gardés'",
+      "'Quand es-tu joignable 20 minutes' → '10 minutes'"
+    ]
+  },
+  "import": {
+    "genererProfil": "lit la dernière réponse au Dossier → profil.json prêt à coller",
+    "genererSemaine": "lit la dernière réponse au Hebdo → semaines/<ISO>.json",
+    "exporterFormulaires": "relit les formulaires vivants — à lancer après toute retouche manuelle",
+    "note": "Les fonctions vivent dans templates/creer-formulaires.gs et tournent dans le projet Apps Script. Elles n'inventent jamais un champ absent du formulaire : mantra, tics, DA et blog_id sortent à null et se remplissent après l'entretien oral."
+  },
+  "_facecam": {
+    "date": "2026-08-06",
+    "changement": "L'entretien téléphonique de 10 min est remplacé par un facecam de 3 min tourné par l'athlète : cinq questions, une seule prise, jamais publié.",
+    "pourquoi": "Asynchrone donc scalable ; teste l'aptitude au tournage avant la signature ; le délai de livraison prédit la régularité du rituel ; remplit materiel.* par la preuve.",
+    "piege": "Ne jamais demander « une présentation » — l'athlète livre alors une publicité pour lui-même, lissée en quatre prises. On demande cinq réponses en une prise.",
+    "a_repercuter_dans_le_formulaire_vivant": "La dernière section et ses deux champs (facecam_envoi, facecam_note) remplacent dispo_appel. Relancer creerFormulaires sur un nouveau formulaire, ou éditer la section à la main puis exporterFormulaires pour recaler."
+  }
+}

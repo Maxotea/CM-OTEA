@@ -1,5 +1,117 @@
 # Pierre Huiban — fiche d'onboarding
 
+## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
+
+« On va faire l'automatisation des postes avec Pierre parce qu'il ne les valide pas […]
+on va les publier. » Pierre ne reçoit plus de tableau hebdo (`actif: false` dans
+`reviews/config.json`) ; la relève (`validation_auto: true`) passe en publication les
+brouillons des 14 jours à venir, avec les garde-fous de la review (média présent, pas
+de placeholder ni de tiret cadratin, image de feed entre 4:5 et 1.91:1). Les **reels**
+sortent en **mode notification** : Metricool notifie Maxime à l'heure prévue, il pose la
+musique dans Instagram et publie (le compte n'est pas relié à une page Facebook, le son
+Instagram ne peut pas être posé par Metricool : 403 le 21/10). On continue de tout
+créer en brouillon.
+
+## ✅ RELANCE « ROAD TO HONG KONG » — 05/10/2026 (décision Maxime)
+
+Maxime relance l'accompagnement à fond : Pierre est qualifié pour les Mondiaux
+HYROX de Hong Kong (juin 2027). Deux consignes explicites : **« on oublie le LFG »**
+et **« une DA adaptée au texte que je t'ai envoyé »** (son persona, ci-dessous).
+
+### Persona (transmis par Maxime le 03/10/2026)
+- Père de famille, marié, un petit garçon.
+- Dirigeant commercial : équipe sur la France, l'Espagne et l'Italie. **L'employeur
+  n'est pas nommé dans les posts** tant que Pierre ne l'a pas validé.
+- Athlète HYROX en **Pro Doubles Men avec Antoine Bouhana**. Stockholm : premiers
+  Français de la catégorie 35-39, 16es mondiaux. Nouvelle victoire de catégorie et
+  nouvelle qualification à Rome.
+- Partenaire signé : **Fitness Park**. Recherche un petit nombre de partenaires,
+  « pas simplement un logo sur une tenue ».
+- Budget de saison : **jamais publié** (décision de Maxime du 05/10).
+
+### DA « trois vies » (remplace Pitch Black / Rouge Sang)
+- Papier `#F2EEE6`, encre `#14171C`, un seul accent « aube » `#E8622C`.
+- Titres Fraunces SemiBold en casse normale, texte Inter, chiffres JetBrains Mono.
+- Registre en tête de chaque visuel : `ATHLETE · FATHER · EXECUTIVE`, avec la
+  facette du jour en couleur. Pied : `ROAD TO HONG KONG · JUNE 2027`.
+- Générateurs : `scripts/pierre-carousel-v2.py` (carrousels 1080×1350) et
+  `scripts/pierre-story-photo-v2.py` (stories 1080×1920 sur vraie photo).
+  Aucune image générée, aucune retouche du visage.
+- **Stories : toujours une VRAIE photo d'entraînement de Pierre en fond**
+  (décision de Maxime du 05/10 : les cartes typographiques sur fond uni sont
+  « nulles, fades »). Photo de la banque recadrée 9:16, dégradé sombre en haut
+  et en bas, une seule phrase. `scripts/pierre-story-cards-v2.py` est périmé.
+
+### Données de course (source HYRESULT, vérifiées)
+- `assets/hyrox/hyrox_pierre-huiban_rome_2026.{json,csv,srt}` : Rome 26/09/2026,
+  **53:34**, 1er des 35-39, 12e sur 292 en Pro Doubles Men.
+- `assets/hyrox/pierre-huiban_saison-2026_avec-antoine.json` : Paris 54:42,
+  Lyon 54:59, Stockholm 55:29, Rome 53:34.
+- `assets/hyrox/rushes_rome_2026.json` : 34 rushes FX3 recalés sur le chrono.
+  Les vidéos 7302 à 7344 et 7347 manquent dans le Drive (seuls les XML y sont).
+- **Stats d'entraînement : aucune source.** Le Strava connecté est celui de
+  Maxime. Demander à Pierre des exports Garmin ou Strava, ou des captures.
+
+### Ce qui est dans Metricool (brouillons, vérifiés le 05/10)
+- 4 carrousels, mercredi 18:00 : 07/10 Rome station par station, 14/10 quatre
+  courses avec Antoine, 21/10 trois vies, 28/10 Road to Hong Kong (Fitness Park,
+  appel aux partenaires). Specs dans `projets/pierre-huiban/carrousels-v2/2026-10-*.json`.
+- 12 reels **sans vidéo** (06/10 au 01/11), légendes prêtes. Le montage revient à
+  Maxime à partir des rushes de Rome ; plan clip par clip dans
+  `plans/pierre-huiban/2026-10-reels.json`. À l'ajout de la vidéo, vérifier
+  que le post passe bien en type Reel.
+- 57 stories 06:00 (05/10 au 30/11) sur vraies photos d'entraînement, 21
+  visuels en rotation, libellés en anglais. Specs et calendrier appliqué :
+  `projets/pierre-huiban/carrousels-v2/stories-photos-v2.json`. 8 visuels prévus n'ont pas
+  pu être hébergés (mercredi, vendredi, samedi tournent sur 2 photos) : à
+  ajouter quand l'upload repasse.
+- Validation par Pierre : une feuille par semaine dans son dossier Drive
+  `1VGThaVWofkwv3sUqZQo-R0_sST5nvytB` (semaines du 05-10 et du 12-10 créées le
+  05/10, deux semaines d'avance). Colonne Format corrigée à la main (Story /
+  Reel / Carrousel) en attendant le correctif de `review.py`.
+- Supprimés : les 8 posts feed en français d'octobre (LFG, « rage silencieuse »,
+  « ma saison se joue plus tard » devenu faux après Rome). Textes archivés dans
+  `archives/pierre-huiban/metricool-brouillons-2026-10-05.json`.
+- ⚠️ **Restent 8 posts feed en français en novembre** (04, 07, 11, 14, 18, 21,
+  25, 28/11), ancienne ligne, dont 3 avec « LFG ». À réécrire ou remplacer dans
+  la nouvelle DA quand le plan de novembre sera fait.
+- ⚠️ Les cartes de story **LFG en français** étaient revenues sur octobre et
+  novembre alors qu'elles avaient été remplacées le 20/08 : nouvelle occurrence
+  du processus inconnu qui réécrit les calendriers.
+
+### Décisions de Maxime du 05/10/2026 (font foi)
+- **Langue : anglais.** Un peu de français de temps en temps, jamais en majorité.
+- **Employeur : jamais cité.** Ni nom, ni logo, ni indice permettant de le
+  retrouver. On peut parler du métier (équipe commerciale France, Espagne, Italie).
+- **Budget de saison : jamais public.** Il reste un argument de discussion en
+  privé avec les marques, jamais dans un post, une story ou une légende.
+- **Partenaires actuels : LE PREWORKOUT et Fitness Park.**
+  « LE PREWORKOUT » est le nom de la marque, donné tel quel par Maxime le 05/10.
+  Son compte Instagram n'est pas encore connu : citer la marque par son nom,
+  sans @ inventé. **Kairyn ne fait plus partie des partenaires** : ne plus la
+  citer ni la taguer. GX Society et Split Nutrition, non cités par Maxime, sont
+  considérés inactifs jusqu'à confirmation.
+- **Antoine Bouhana : @antoine_bhna** (donné par Maxime le 05/10). Tagué une
+  fois par légende, à la première mention ; les mentions suivantes restent
+  « Antoine ». Déjà fait sur les 5 brouillons qui le citent (07/10, 14/10,
+  reels du 06/10, 18/10 et 22/10).
+
+### Encore ouvert
+Compte Instagram de LE PREWORKOUT ; statut de GX Society et Split Nutrition ; tournage d'entraînement en novembre ; stats
+d'entraînement (export Garmin ou Strava).
+
+### Reels monologue (13/10/2026)
+Référence donnée par Maxime : @rundadlift, reel DeHgY1RxPfB (monologue intérieur
+d'un père qui court, noir et blanc, sous-titres jaunes à empattements centrés,
+valse au piano). Cinq specs dans `projets/pierre-huiban/reels-monologue/` :
+M3-R6 (27/10, REEL 401840603), M1-R7 (20/10, 388250104, non branché), D1-R8 (22/10,
+388353604), M2-R11 (29/10, 388250135), M4-R12 (01/11, 388250148). Moteur :
+gabarit `monologue` de `scripts/pierre-reel-ralenti.py`, mode d'emploi dans
+`projets/pierre-huiban/reels-dialogue/README.md`. Sorties muettes, aucune voix
+synthétisée, aucun plan d'Antoine sous un « I ». Au 13/10, aucun reel n'est
+rendu (Drive en « Quota exceeded ») et les légendes des brouillons sont encore
+les anciennes : les remplacer par la `legende` de chaque spec au branchement.
+
 ## Identité
 - blogId Metricool : 6572293
 - Réseaux connectés : Instagram (@pierrehuiban89)
@@ -25,12 +137,11 @@ plus bas ; ce qui suit est la ligne en vigueur.
   sponsorisé authentique.
 - Piliers : dépassement de soi, double vie (commercial + athlète + papa),
   coulisses d'entraînement, Road to Hong Kong.
-- Direction artistique : **inchangée** (Pitch Black #0A0A0A + Rouge Sang #DC2626,
-  capitales). Il n'a jamais reproché la DA. Ne pas la refaire sans lui demander.
-- Direction artistique (si supports visuels type carrousels/covers) : Pitch Black #0A0A0A + Rouge Sang #DC2626, typo display Anton (UPPERCASE), corps Inter, stats en JetBrains Mono
+- Direction artistique : ⛔ **remplacée le 05/10/2026** par la DA « trois vies »
+  (voir la section en tête). Pitch Black / Rouge Sang / Anton ne sert plus.
 - Interdits : jamais de sponsoring déguisé non assumé, jamais de prix/partenariat inventé
 
-## Partenariats / sponsors actuels (mise à jour 17/07/2026)
+## Partenariats / sponsors (historique du 17/07/2026, ⛔ périmé : voir les décisions du 05/10 en tête)
 - **KAIRYN** (site : kairyn.fr — attention à l'orthographe, pas "Kayrin") — marque française de compléments sport, slogan "Refuse The Average", fondée par un pratiquant Hyrox. Produit phare : pré-workout **IGNITE**. Intégré au post "7 incontournables" (angle pré-workout/compléments).
 - **GX SOCIETY** (SAS, Anglet, dirigeant Alexandre Gouaux) — PAS une marque de vêtements : matériel de **récupération / pressothérapie** ("La révolution de la récupération"). Intégré au post "7 incontournables" (angle outils de récup). Le post "setup d'entraînement" (chaussures/vêtements/accessoires) a été repassé en version sans mention sponsor — aucun des 3 partenaires ne correspond à cette catégorie.
 - **SPLIT NUTRITION** — repas sains livrés à domicile (pas des compléments). Mentionné pour l'instant uniquement dans l'annonce partenariat groupée du 21/07 — pas encore de post dédié qui lui correspond vraiment (aucun post actuel ne parle de repas/alimentation quotidienne). À créer quand plus d'infos/assets seront dispo.
@@ -187,3 +298,29 @@ partout · autoPublish:false partout · noMedia 0`.
 - **Planifiés (spec dans `carrousels/pierre-huiban/`)** : 12/08 A7 « Une semaine de prépa, vraiment » · 19/08 A2 « 5 erreurs qui te coûtent des minutes » · 26/08 A1 « Sled push : la station qui casse ta course » · 02/09 A5 « Quelle station bosser en priorité ».
 - **Ce que ça résout** : la fiche signalait que les posts « Swipez → » n'avaient qu'une photo de couverture, sans slides. Le format carrousel est désormais outillé — les anciens posts « Swipez » peuvent être repris avec ce moteur.
 - **Vigilance** : **tout le contenu technique doit être relu par Pierre avant publication** — c'est son expertise, pas la nôtre. Aucun chrono, aucune charge en kilos, aucune date de Mondiaux cités sans vérification. Aucun sponsor mentionné dans ces quatre carrousels : un carrousel sponsorisé exige les handles exacts, les règles de tag contractuelles et de vraies photos produit, tout cela encore manquant.
+
+## Relance du 13/10/2026
+
+Journaux complets : scratchpad de la session, `relance/` (état, exécution, décembre, clôture). Aucune question Q1 à
+Q16 du cadrage ne concerne Pierre. Les reels (chantier monologue) relèvent d'un autre chantier.
+
+- **DA** : « trois vies » inchangée. Stories sur vraies photos ; jamais d'IA sur son visage
+  (`recaps/clients-config.json`), donc des stories vidéo tirées de vrais ralentis, et l'i2v seulement sur des photos
+  sans visage (47, 50, 51), si Maxime le confirme. La section « Carrousel hebdo » plus bas (Pitch Black, Rouge Sang)
+  est périmée.
+- **Feed** : les 8 posts de novembre en français (ancienne ligne, LFG) réécrits en anglais le 13/10 : 394698312
+  (04/11), 394698681 (07/11, « ask me anything »), 394698708, 394698738, 394698771, 394698790, 394698816, 394698840.
+  Décembre posé en brouillon : 7 posts, 394831234 (C1, 02/12), 394832053 (C2 partenaires), 394832080 (J-180, 12/12),
+  394832122 (C3 en version repli), 394832144 (C4), 394832169 (C5 bilan), 394832189 (31/12). Les 3 reels et les 31
+  stories de décembre ne sont pas créés : aucune vidéo de fond.
+- **Validation** : rien de nos brouillons n'est parti depuis le 05/10. Le tableau du 19-10 est en lecture seule, les
+  liens n'ont pas été envoyés, le courriel perso de Pierre manque.
+- **Reels monologue branchés le 21/10** (type REEL, vidéo de livraison vérifiée au md5 sur le CDN et dans la copie Metricool, puis passés en **mode notification** le même jour, musique à poser dans Instagram) : D1 « Rome, split by split » **402181744** (jeu. 22/10 12:30, couverture 1,5 s), M1 « After the line » **402226693** (sam. 24/10 12:30, couverture 2,4 s, publié sur décision de Maxime sans attendre Pierre), M3 « Two engines » **402224390** (mar. 27/10 12:30, couverture 6,67 s), M2 « Keep showing up » **402224788** (jeu. 29/10 12:30, couverture 1,7 s), M4 « 221 days » **402224853** (dim. 01/11 18:00, couverture 2,0 s). Ids des brouillons d'avant : 402004284, 401840603, 402005051, 402005104. R5 « Sled pull » (388250088) et R10 « The hidden station » (388250126), sans vidéo, sont supprimés sur décision de Maxime du 15/10 (mêmes rushes et mêmes idées que M3 et D1).
+- **Corrigé le 13/10** (décision de Maxime : « je ne sais pas, corrige ») : « won several Pro Doubles races together », non documenté, devient « won our age group in Rome and qualified for the World Championships twice », sans la phrase de chute « Rome was one more » qui laissait croire à une troisième qualification. « this season » devient « this year » dans la légende, et le sur-titre de la slide 02 « THE SEASON » devient « 2026 » : Pierre compte Rome comme la course n° 1 d'une nouvelle saison (30/09), et HYROX classe Paris (23 au 26/04/2026) et Lyon (20 au 24/05/2026) en saison 25/26. Les quatre courses sont toutes en 2026. Carrousel du 14/10 : **395138284** (slides 02 et 06 re-rendues, spec `projets/pierre-huiban/carrousels-v2/2026-10-14-quatre-courses-avec-antoine.json`) ; reel du 18/10 : **395043919** (`instagramData.type` encore POST, à passer en REEL au branchement de la vidéo). Tableau du 12-10 mis à jour (_tech B10, B16, E10, E16 ; G6, G12 ; lien F6 vers une planche des 7 slides), `legende_modifiee` reste faux.
+- **Chiffres (13/09 au 12/10)** : 4 718 abonnés au 12/10, 97 gagnés et 321 perdus (perte qui ralentit : 458, 424,
+  321) ; ses carrousels font 1 423 de portée moyenne contre 840 pour ses reels ; tout ce qui a marché, il l'a publié
+  lui-même.
+- **Reste** : brief de tournage prêt (envoi par Maxime, tournage les 19 à 21/10 ou les 24 et 25/10) ; photos
+  Lightroom et rushes Rome 7302 à 7344 ; médias des posts de novembre (2:3 et doublons de stories, avant le 23/10) ;
+  11 stories qui répètent un visuel à moins de 28 jours ; calendrier de courses 2026-2027 ; compte Instagram de LE
+  PREWORKOUT. Son coach apparaît sous @leqiou_fit dans ses publications (la fiche dit « Quentin ») : à confirmer.

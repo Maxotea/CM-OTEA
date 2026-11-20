@@ -86,7 +86,7 @@ doit en coûter vingt minutes.
 | A5 | **Le guide de choix** | P1/P2 | Sauvegarde + DM | La cible doit décider entre plusieurs options et ne sait pas comment |
 | A6 | **Le décryptage chiffré** | P2 | Partage + autorité | Une actualité ou une donnée du secteur, lue pour la cible |
 | A7 | **Les coulisses expliquées** | P3 | Attachement | Ce que le client ne voit jamais et qui justifie le prix |
-| A8 | **La checklist saisonnière** | P4 | Sauvegarde | Un temps fort approche, la cible a quelque chose à préparer |
+| A8 | **La checklist saisonnière** | P4 | Sauvegarde | Un temps fort approche, la cible a quelque chose à préparer. Le carrousel sort un à deux mois avant le temps fort (J-60 à J-30), jamais la semaine même : publié pendant, il n'est plus actionnable (règle de Maxime, 12/10/2026, `.claude/memories/anticipation-evenements.md`) |
 
 **Rotation conseillée sur un mois** : A2, A1 ou A5, A6 ou A7, A8 ou A3. Ne jamais servir deux fois
 le même archétype dans le mois — l'audience le sent avant de savoir le nommer.
@@ -140,6 +140,22 @@ Les slides sont **typographiques**, pas photographiques. C'est délibéré : ça
 avec `scripts/carrousel.py`, ça reste lisible, et ça n'épuise pas la banque photos, qui reste
 réservée aux posts simples et aux reels. Une photo réelle peut s'insérer en couverture quand elle
 existe et sert le sujet — jamais une photo IA présentée comme un résultat client.
+
+### Le style « educatif » (Otea Filmakers, 08/11/2026)
+
+Pour les séries pédagogiques de Filmakers (programme `plans/otea/2026-11-filmakers-educatif.md`), un
+spec peut porter `"style": "educatif"`. Le rendu passe alors par `scripts/carrousel_educatif.py` : chaque
+slide est posée comme l'écran d'une caméra (repères de viseur, « REC » sur la couverture, mentions
+techniques en Space Mono, barre de progression et compteur en bas, grain 18). Six gabarits, un par
+slide : `couverture`, `chapitre` (numéro géant en filigrane, champ `numero`), `chiffre` (`chiffre` et
+`legende`), `liste` (`items`, 2 à 5), `duel` (`gauche` et `droite`, chacun `label` et `texte`), `cta`
+(fond inversé). Première slide couverture, dernière slide cta. Les champs `serie` et `mention` du spec
+remplacent ceux du bloc `educatif` du thème.
+
+Typographique par construction : pas de champ `photo`, les images de compétition restent aux reels et
+aux stories. Tout le reste de la doctrine s'applique : 8 slides, 40 mots, deux accents `**ainsi**`,
+aucun crochet, aucun tiret cadratin, un texte qui déborde fait échouer le rendu. Mêmes sorties
+(slides, `caption.txt`, `manifest.json` avec `style`), même planification par `publier.py`.
 
 ## 7. Production
 

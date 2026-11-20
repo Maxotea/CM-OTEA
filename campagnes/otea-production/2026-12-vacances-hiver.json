@@ -1,0 +1,95 @@
+{
+  "client": "otea-production",
+  "slug": "vacances-hiver",
+  "titre": "Vacances d'hiver, tourner sans bloquer les bureaux",
+  "mois": "2026-12",
+  "objectif_business": "Des prospects qualifiés pour un tournage dans les locaux pendant les vacances d'hiver de la zone C (du 06/02 au 22/02/2027, service-public F31952, relu le 13/10/2026), quand les bureaux sont plus calmes. Fenêtre d'offre J-60 à J-30 (08/12 au 07/01), campagne placée en tête de fenêtre et finie avant les congés de Noël (19/12), quand les décideurs sont encore là.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "POST_ENGAGEMENT",
+  "destination": "ON_POST",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "total",
+    "montant_eur": 42,
+    "debut": "2026-12-08",
+    "fin": "2026-12-14",
+    "note": "Proposition à valider : 6 € par jour sur 7 jours, budget total (opération datée). Plafonds du registre respectés. Si la campagne de novembre a donné au moins un prospect qualifié, Maxime peut relever ce budget dans la limite du registre ; sinon il reste à 42 €."
+  },
+  "fenetre_anticipation": {
+    "temps_fort": "Vacances d'hiver, zone C, dont l'Île-de-France",
+    "date": "06/02 au 22/02/2027 (service-public F31952)",
+    "type": "offre",
+    "fenetre_offre": "08/12/2026 au 07/01/2027",
+    "position_campagne": "J-60 au J-54 du 06/02/2027, avant les vacances de Noël (19/12 au 04/01)",
+    "organique_associe": "post du 11/12 « Offre vacances d'hiver zone C » (394836543, brouillon bloqué par « [À CONFIRMER DISPONIBILITÉ DU 06/02 AU 22/02] »)"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 28,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Même cible que la campagne de novembre, ciblage large, aucun intérêt inventé. Les vacances d'hiver ne tombent pas aux mêmes dates selon la zone ; le post boosté ne cite aucune date, il reste juste partout. Si Maxime vend surtout en Île-de-France, restreindre à la région demande sa clé Meta, à relever dans Ads Manager (scripts/campagne.py ne gère que les pays aujourd'hui). Sans compte Instagram rattaché : Facebook et Messenger seulement."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Boost du carrousel A7 du 02/09, le jour du tournage",
+      "format": "post_existant",
+      "post_id": "994117790447204_122134964355226897",
+      "post": {
+        "publie_le": "2026-09-02 10:02 (UTC), page Facebook OTEA Production (album de 8 slides)",
+        "lien": "https://facebook.com/122093650317226897/posts/122134964355226897",
+        "reseaux": "Instagram, Facebook et LinkedIn",
+        "validation": "publié depuis Metricool, donc validé par Maxime",
+        "visuel": "carrousel typographique A7 « Ce qui se passe le jour du tournage » (fond #201E1E, accent #FF5800), aucune personne, aucune IA ; spec archivée archives/carrousels/otea-production/2026-09-02-jour-de-tournage.json",
+        "texte": "La première objection à un tournage n'est presque jamais le budget. C'est : on va bloquer les bureaux toute la journée.\n\nAlors voici comment se déroule réellement une journée chez un client. Faites défiler.\n\nEn pratique : environ trente minutes par intervenant, et le reste des équipes continue de travailler.\n\nVoyons ce que cela donnerait chez vous, lien en bio.\n\n#tournage #videoentreprise #productionaudiovisuelle #marqueemployeur #interview #coulisses",
+        "controle_texte": "aucun tiret cadratin ni demi-cadratin, aucun tarif ; un chiffre déjà publié et validé (environ trente minutes par intervenant, « vingt à trente minutes » sur la slide 4), repris dans le post du 13/11 : à reconfirmer d'un mot à la validation du brief",
+        "portee_organique": "Instagram : portée 28, 102 vues, 2 interactions ; LinkedIn : 70 impressions, 3 clics ; Facebook : portée 1 (Metricool, 13/10)",
+        "pourquoi_ce_post": "C'est la réponse à l'objection que lève l'offre vacances d'hiver : tourner sans arrêter l'entreprise. Il ne cite ni date ni zone, il reste vrai pour tout le monde."
+      },
+      "ia_generative": "OPT_OUT",
+      "note_ia": "Proposé : visuel typographique, aucune IA. Décision de Maxime ; le plan du script ne la transmet pas pour un boost."
+    }
+  ],
+  "a_ajouter_apres_publication": {
+    "quoi": "Le post organique du 11/12 « Offre vacances d'hiver zone C » (394836543), une fois PUBLIÉ et vu par Maxime : il porte les dates et l'offre.",
+    "comment": "Seconde publicité dans le même ensemble, post_id relu sur la page Facebook après publication, créée en PAUSE, activée sur une phrase de Maxime. Jamais tant que le post est un brouillon ou porte sa ligne de confirmation."
+  },
+  "condition": "Maxime confirme qu'OTEA tourne entre le 06/02 et le 22/02/2027 (même question que le post du 11/12, réponse attendue avant le 26/11). Sans oui, la campagne ne se crée pas : une offre sans disponibilité réelle est un fait inventé.",
+  "kpi": {
+    "resultat_meta": "Interactions avec la publication (optimisation POST_ENGAGEMENT) ; coût par résultat lu via ads_get_ad_entities",
+    "indicateur_decisif": "Coût par lead (dictionnaire KPI, bloc MARKETING COMMERCIAL) = dépense ÷ prospects qualifiés",
+    "prospect_qualifie": "message Messenger, DM Instagram ou commentaire qui demande une date de février, un devis ou un échange, de l'activation à J+7 après la fin ; relevé à la main dans la boîte de réception (mesures de messagerie partielles en Europe)",
+    "cout_par_lead_cible_eur": {
+      "moyen": 42,
+      "bien": 21,
+      "wow": 14,
+      "lecture": "Moyen = 1 prospect qualifié pour le budget, Bien = 2, Wow = 3 ou plus. Paliers proposés, à valider, à recaler sur la fourchette de devis moyen dès qu'elle est renseignée et sur le résultat de la campagne de novembre."
+    },
+    "garde_fous": "Répétition au plus 3 sur la semaine ; aucune conclusion avant J+3, aucune décision avant J+7 ; coupure d'office (PAUSED, sans permission) si la dépense dépasse le budget prévu ou si la publicité est refusée.",
+    "decision_fin": "Le bilan se rattache à décembre 2026 (mois de diffusion) dans le compte rendu mensuel ; il décide de la campagne vacances de printemps (fenêtre d'offre 02/02 au 04/03/2027)."
+  },
+  "prerequis": [
+    "Oui de Maxime sur la disponibilité du 06/02 au 22/02/2027.",
+    "Destination du « lien en bio » vivante (le site sert un WordPress vierge au 13/10) : bio Instagram et site web de la page Facebook.",
+    "@oteaproduction rattaché au compte pub, sinon diffusion Facebook seulement.",
+    "Page OTEA Production utilisable par la creative (à trancher à la première ads_create_creative)."
+  ],
+  "validation": {
+    "brief_valide_par": null,
+    "brief_valide_le": null,
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

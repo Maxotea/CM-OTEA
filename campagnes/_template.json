@@ -1,0 +1,61 @@
+{
+  "_doc": "Spec d'une campagne Meta, un fichier par campagne dans campagnes/<client>/<AAAA-MM>-<slug>.json. Tout ce que le skill cm-meta-ads crée dans Meta part de ce fichier ; scripts/campagne.py check la valide contre campagnes/comptes.json, plan imprime les appels MCP à passer dans l'ordre, journal y consigne les identifiants créés. Les montants sont en euros ici, le script les convertit en centimes. Ne jamais mettre de texte à trous [ENTRE CROCHETS] dans une spec qu'on s'apprête à créer : check bloque. Supprimer ce champ _doc dans une vraie spec.",
+  "client": "slug-du-client",
+  "slug": "sujet-court",
+  "titre": "Titre lisible de la campagne",
+  "mois": "2026-09",
+  "objectif_business": "Ce que le client attend en une phrase (des devis, des visites, des vues).",
+  "objectif": "OUTCOME_TRAFFIC",
+  "optimisation": "LINK_CLICKS",
+  "destination": "WEBSITE",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "journalier",
+    "montant_eur": 5,
+    "debut": "2026-09-15",
+    "fin": "2026-09-21"
+  },
+  "ciblage": {
+    "pays": ["FR"],
+    "age_min": 25,
+    "age_max": 60,
+    "advantage_audience": true,
+    "note": "Pas d'identifiant d'intérêt inventé : ciblage large, Meta optimise. Les intérêts ne se posent qu'avec des identifiants réels."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Accroche courte qui identifie la pub",
+      "format": "image",
+      "media": {
+        "type": "image",
+        "fichier": "medias/<client>/<photo>.jpg",
+        "url": null,
+        "hash": null,
+        "note": "Vraie photo du client. url = lien public une fois hébergée (imgbb comme les slides), hash = renvoyé par ads_creative_upload_media."
+      },
+      "texte": "Texte principal, 125 caractères visibles avant le « voir plus ».",
+      "titre": "Titre, 40 caractères max",
+      "description": "Description courte, 30 caractères",
+      "cta": "LEARN_MORE",
+      "lien": "https://site-du-client.fr/page",
+      "lien_affiche": "site-du-client.fr",
+      "ia_generative": "OPT_OUT"
+    }
+  ],
+  "validation": {
+    "brief_valide_par": null,
+    "brief_valide_le": null,
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}

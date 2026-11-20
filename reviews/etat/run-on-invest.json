@@ -1,0 +1,240 @@
+{
+  "_doc": "Journal des décisions client appliquées par scripts/review.py — écrit par le workflow « Review hebdo client », ne pas éditer à la main. Sert d'idempotence (une décision déjà appliquée à l'identique n'est pas rejouée) et de matière au récap du lundi.",
+  "semaines": {},
+  "auto": {
+    "2026-10-23T08:00:00|402233453": {
+      "quand": "2026-10-21T20:18:59",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528591)",
+      "post_id": 402528591
+    },
+    "2026-10-22T08:00:00|402238282": {
+      "quand": "2026-10-21T20:19:01",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528606)",
+      "post_id": 402528606
+    },
+    "2026-10-22T12:00:00|402238349": {
+      "quand": "2026-10-21T20:19:02",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528623)",
+      "post_id": 402528623
+    },
+    "2026-10-27T08:00:00|402238439": {
+      "quand": "2026-10-21T20:19:04",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528639)",
+      "post_id": 402528639
+    },
+    "2026-10-23T12:00:00|402239274": {
+      "quand": "2026-10-21T20:19:05",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528674)",
+      "post_id": 402528674
+    },
+    "2026-10-26T08:00:00|402241976": {
+      "quand": "2026-10-21T20:19:07",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528692)",
+      "post_id": 402528692
+    },
+    "2026-10-26T12:00:00|402242048": {
+      "quand": "2026-10-21T20:19:08",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528707)",
+      "post_id": 402528707
+    },
+    "2026-10-28T08:00:00|402248035": {
+      "quand": "2026-10-21T20:19:10",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528719)",
+      "post_id": 402528719
+    },
+    "2026-10-28T12:00:00|402269667": {
+      "quand": "2026-10-21T20:19:11",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528728)",
+      "post_id": 402528728
+    },
+    "2026-10-30T08:00:00|402269734": {
+      "quand": "2026-10-21T20:19:12",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528740)",
+      "post_id": 402528740
+    },
+    "2026-10-30T12:00:00|402270065": {
+      "quand": "2026-10-21T20:19:14",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528756)",
+      "post_id": 402528756
+    },
+    "2026-11-02T08:00:00|402270389": {
+      "quand": "2026-10-21T20:19:15",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528788)",
+      "post_id": 402528788
+    },
+    "2026-11-02T12:00:00|402271506": {
+      "quand": "2026-10-21T20:19:17",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528803)",
+      "post_id": 402528803
+    },
+    "2026-11-04T08:00:00|402271574": {
+      "quand": "2026-10-21T20:19:18",
+      "type": "Post",
+      "resultat": "publication programmée (version 402528820)",
+      "post_id": 402528820
+    },
+    "2026-11-04T12:00:00|402271675": {
+      "quand": "2026-10-21T20:19:20",
+      "type": "Story",
+      "resultat": "publication programmée (version 402528836)",
+      "post_id": 402528836
+    },
+    "2026-11-05T08:00:00|402238539": {
+      "quand": "2026-10-22T09:33:16",
+      "type": "Post",
+      "resultat": "publication programmée (version 402958755)",
+      "post_id": 402958755
+    },
+    "2026-11-06T08:00:00|402271754": {
+      "quand": "2026-10-23T09:29:22",
+      "type": "Post",
+      "resultat": "publication programmée (version 403969718)",
+      "post_id": 403969718
+    },
+    "2026-11-06T12:00:00|402271819": {
+      "quand": "2026-10-23T15:22:30",
+      "type": "Story",
+      "resultat": "publication programmée (version 404280189)",
+      "post_id": 404280189
+    },
+    "2026-11-09T08:00:00|402271940": {
+      "quand": "2026-10-26T10:23:48",
+      "type": "Post",
+      "resultat": "publication programmée (version 406442558)",
+      "post_id": 406442558
+    },
+    "2026-11-09T12:00:00|402272023": {
+      "quand": "2026-10-26T16:52:35",
+      "type": "Story",
+      "resultat": "publication programmée (version 406888207)",
+      "post_id": 406888207
+    },
+    "2026-11-11T08:00:00|402272387": {
+      "quand": "2026-10-28T10:44:46",
+      "type": "Post",
+      "resultat": "publication programmée (version 408787469)",
+      "post_id": 408787469
+    },
+    "2026-11-11T12:00:00|402272526": {
+      "quand": "2026-10-28T21:14:59",
+      "type": "Story",
+      "resultat": "publication programmée (version 409424429)",
+      "post_id": 409424429
+    },
+    "2026-11-13T08:00:00|402272574": {
+      "quand": "2026-10-30T10:59:11",
+      "type": "Post",
+      "resultat": "publication programmée (version 411065869)",
+      "post_id": 411065869
+    },
+    "2026-11-13T12:00:00|402272670": {
+      "quand": "2026-10-30T20:58:50",
+      "type": "Story",
+      "resultat": "publication programmée (version 411675002)",
+      "post_id": 411675002
+    },
+    "2026-11-16T08:00:00|402272731": {
+      "quand": "2026-11-02T12:46:17",
+      "type": "Post",
+      "resultat": "publication programmée (version 413921810)",
+      "post_id": 413921810
+    },
+    "2026-11-16T12:00:00|402272771": {
+      "quand": "2026-11-02T12:46:19",
+      "type": "Story",
+      "resultat": "publication programmée (version 413921859)",
+      "post_id": 413921859
+    },
+    "2026-11-18T08:00:00|402272817": {
+      "quand": "2026-11-04T12:24:40",
+      "type": "Post",
+      "resultat": "publication programmée (version 416434586)",
+      "post_id": 416434586
+    },
+    "2026-11-18T12:00:00|402272881": {
+      "quand": "2026-11-04T12:24:42",
+      "type": "Story",
+      "resultat": "publication programmée (version 416434609)",
+      "post_id": 416434609
+    },
+    "2026-11-20T08:00:00|402273310": {
+      "quand": "2026-11-06T12:22:06",
+      "type": "Post",
+      "resultat": "publication programmée (version 418863073)",
+      "post_id": 418863073
+    },
+    "2026-11-20T12:00:00|402273359": {
+      "quand": "2026-11-06T12:22:07",
+      "type": "Story",
+      "resultat": "publication programmée (version 418863093)",
+      "post_id": 418863093
+    },
+    "2026-11-23T08:00:00|402273465": {
+      "quand": "2026-11-09T13:14:34",
+      "type": "Post",
+      "resultat": "publication programmée (version 421802513)",
+      "post_id": 421802513
+    },
+    "2026-11-23T12:00:00|402273522": {
+      "quand": "2026-11-09T13:14:36",
+      "type": "Story",
+      "resultat": "publication programmée (version 421802537)",
+      "post_id": 421802537
+    },
+    "2026-11-25T08:00:00|402273575": {
+      "quand": "2026-11-11T12:02:24",
+      "type": "Post",
+      "resultat": "publication programmée (version 424338214)",
+      "post_id": 424338214
+    },
+    "2026-11-25T12:00:00|402273642": {
+      "quand": "2026-11-11T12:02:26",
+      "type": "Story",
+      "resultat": "publication programmée (version 424338236)",
+      "post_id": 424338236
+    },
+    "2026-11-27T08:00:00|402273740": {
+      "quand": "2026-11-13T12:30:31",
+      "type": "Post",
+      "resultat": "publication programmée (version 426907925)",
+      "post_id": 426907925
+    },
+    "2026-11-27T12:00:00|402273812": {
+      "quand": "2026-11-13T12:30:32",
+      "type": "Story",
+      "resultat": "publication programmée (version 426907941)",
+      "post_id": 426907941
+    },
+    "2026-11-30T08:00:00|402273979": {
+      "quand": "2026-11-16T13:03:21",
+      "type": "Post",
+      "resultat": "publication programmée (version 430039317)",
+      "post_id": 430039317
+    },
+    "2026-11-30T12:00:00|402274022": {
+      "quand": "2026-11-16T13:03:22",
+      "type": "Story",
+      "resultat": "publication programmée (version 430039357)",
+      "post_id": 430039357
+    },
+    "2026-12-02T08:00:00|402279886": {
+      "quand": "2026-11-18T13:19:30",
+      "type": "Carrousel (6 visuels)",
+      "resultat": "publication programmée (version 432821757)",
+      "post_id": 432821757
+    }
+  }
+}

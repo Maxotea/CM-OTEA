@@ -1,0 +1,64 @@
+{
+  "client": "otea-filmakers",
+  "slug": "golden-hour",
+  "titre": "Golden hour d'automne, reel vitrine",
+  "mois": "2026-09",
+  "objectif_business": "Faire voir un reel de la marque perso à des gens qui aiment la vidéo et le voyage, gagner des vues complètes et des abonnés. Aucun pitch commercial sur ce compte.",
+  "objectif": "OUTCOME_ENGAGEMENT",
+  "optimisation": "THRUPLAY",
+  "destination": "ON_VIDEO",
+  "facturation": "IMPRESSIONS",
+  "budget": {
+    "type": "total",
+    "montant_eur": 30,
+    "debut": "2026-09-22",
+    "fin": "2026-09-28"
+  },
+  "ciblage": {
+    "pays": [
+      "FR"
+    ],
+    "age_min": 18,
+    "age_max": 45,
+    "advantage_audience": true,
+    "note": "Large, France. Le format vertical fait le tri tout seul."
+  },
+  "placements": "automatiques",
+  "publicites": [
+    {
+      "nom": "Golden hour, reel 15 s",
+      "format": "video",
+      "media": {
+        "type": "video",
+        "fichier": "medias/otea-filmakers/",
+        "url": null,
+        "hash": null,
+        "video_id": null,
+        "vignette_url": null,
+        "note": "Un vrai rush de Maxime (aucun rush prêt au 20/07 d'après la fiche : à tourner). Vidéo verticale 1080x1920, 15 s max, muette ou avec son libre de droits. Uploader via ads_creative_upload_media (URL publique) puis renseigner video_id ; la vignette est une frame de la vidéo, hébergée elle aussi."
+      },
+      "texte": "La lumière de 18h47 ne se rattrape pas. [À COMPLÉTER : une phrase de Maxime sur ce tournage]",
+      "titre": "Golden hour",
+      "description": "",
+      "cta": "NO_BUTTON",
+      "lien": null,
+      "lien_affiche": null,
+      "ia_generative": "OPT_OUT"
+    }
+  ],
+  "validation": {
+    "brief_valide_par": null,
+    "brief_valide_le": null,
+    "activation_ok_par": null,
+    "activation_ok_le": null
+  },
+  "meta": {
+    "statut": "brouillon",
+    "campaign_id": null,
+    "adset_id": null,
+    "creative_ids": [],
+    "ad_ids": [],
+    "preview_url": null,
+    "journal": []
+  }
+}
