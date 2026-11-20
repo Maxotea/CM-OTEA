@@ -1,21 +1,21 @@
 ---
 name: cm-metricool
-description: Workflow complet de community management multi-comptes — génère un calendrier éditorial calé sur l'actualité et la saisonnalité du secteur d'un client, écrit les légendes, et planifie les posts en brouillon dans Metricool via Zapier. Utilise ce skill dès que l'utilisateur demande de planifier, programmer ou publier du contenu, de créer/mettre à jour un calendrier éditorial, de réagir à un événement du secteur (tournoi, salon, fête, sortie produit), ou mentionne Metricool ou l'un de ses comptes clients (J Lawson Golf, Le Loft, Gossip Beauty Center, La Galerie Immobilière, Otea), même s'il ne dit pas explicitement "calendrier" ou "Metricool".
+description: Workflow complet de community management multi-comptes : génère un calendrier éditorial calé sur l'actualité et la saisonnalité du secteur d'un client, écrit les légendes, et planifie les posts en brouillon dans Metricool (connecteur direct en priorité, Zapier seulement pour ce qu'il ne sait pas faire). Utilise ce skill dès que l'utilisateur demande de planifier, programmer ou publier du contenu, de créer/mettre à jour un calendrier éditorial, de réagir à un événement du secteur (tournoi, salon, fête, sortie produit), ou mentionne Metricool ou l'un de ses comptes clients (J Lawson Golf, Le Loft, Gossip Beauty Center, La Galerie Immobilière, Otea), même s'il ne dit pas explicitement "calendrier" ou "Metricool".
 ---
 
 # CM Metricool — calendrier éditorial automatisé multi-comptes
 
 ## Étape 0 — Détection des nouveaux comptes & routine hebdomadaire
 
-**À CHAQUE session utilisant ce skill** : commencer par `list_brands_direct` et comparer aux marques connues (tableau Étape 1). Si une marque inconnue apparaît → lancer l'ONBOARDING avant toute autre chose :
+**À CHAQUE session utilisant ce skill** : commencer par lister les marques avec `getBrandSettings` (connecteur Metricool direct) et comparer aux marques connues (tableau Étape 1). Si une marque inconnue apparaît → lancer l'ONBOARDING avant toute autre chose :
 1. Poser les questions (via ask_user_input quand pertinent) : secteur/typologie du client ? saisonnalité et événements clés du secteur ? site web (pour vérifier les prix des services → ROI) ? banque photos disponible ? ton de marque ? prestation CM mensuelle facturée ?
 2. Rechercher sur le web l'actu et le calendrier événementiel du secteur.
-3. Générer 3 mois (~13 semaines) de posts en brouillon via `bulk_schedule_posts` (cadence lundi/mercredi/vendredi + déclencheurs événements).
+3. Générer 3 mois (~13 semaines) de posts en brouillon, méthode de l'Étape 6 (cadence lundi/mercredi/vendredi + déclencheurs événements).
 4. Créer la fiche du client dans `references/clients/` en dupliquant `_template-nouveau-client.md`, la remplir, et mettre à jour la mémoire.
 
 **Routine hebdomadaire** (déclenchée par « routine hebdo » ou équivalent — un rappel récurrent du lundi existe sur le téléphone de l'utilisateur) :
 0. **Le carrousel du mercredi de chaque compte est-il écrit, rendu et planifié ?** C'est le premier point de la routine, avant l'horizon : un carrousel manquant se voit dans le fil, un trou à la semaine 12 non. Voir `references/carrousels-hebdo.md`.
-1. Pour CHAQUE marque : `list_scheduled_posts` sur les 14 prochaines semaines → mesurer l'horizon couvert.
+1. Pour CHAQUE marque : `getScheduledPosts` (connecteur direct) sur les 14 prochaines semaines → mesurer l'horizon couvert.
 2. **Repérer les suppressions** en comparant avec ce qui avait été planifié : photo retirée d'un brouillon, ou brouillon disparu = un refus de l'utilisateur → appliquer les « Règles de recréation après suppression » ci-dessous.
 3. Compléter pour revenir à ~13 semaines d'avance (générer la ou les semaines manquantes avec l'actu fraîche du secteur, vérifiée par recherche web).
 4. Compléter les placeholders des événements du week-end écoulé ([VAINQUEUR], [RÉSULTAT]…) : rechercher le résultat réel, fournir le texte final, supprimer/recréer le brouillon concerné.
@@ -23,7 +23,7 @@ description: Workflow complet de community management multi-comptes — génère
 6. Rendre compte : posts ajoutés par compte, placeholders complétés, photos à attacher, contenus recréés après suppression.
 7. **Veille trends : TOUS LES JOURS depuis le 18/11/2026** (tâche locale `veille-trends-quotidienne`, 7 h 45) pour Otea Filmakers et OTEA Production, Instagram et LinkedIn : chercher les trends, mèmes, sons et dates des 7 jours, filtrer, fabriquer et créer en brouillon ce qui passe, noter tout dans le journal. Méthode, filtre et journal : `references/veille-trends.md`. Le lundi, relire ce journal au lieu de refaire la veille.
 
-**Capture de trend à tout moment** : quand l'utilisateur signale une trend (message, vocal transcrit, lien, description), immédiatement : 1) l'évaluer avec les critères de bonnes-pratiques-cm.md, 2) proposer son adaptation pour chaque compte pertinent (script/légende prêts), 3) planifier les posts validés via bulk_schedule_posts dans la semaine (les trends se périment en jours), 4) si c'est un enseignement durable (« ce format marche »), l'ajouter à la mémoire et aux bonnes pratiques.
+**Capture de trend à tout moment** : quand l'utilisateur signale une trend (message, vocal transcrit, lien, description), immédiatement : 1) l'évaluer avec les critères de bonnes-pratiques-cm.md, 2) proposer son adaptation pour chaque compte pertinent (script/légende prêts), 3) planifier les posts validés (Étape 6) dans la semaine (les trends se périment en jours), 4) si c'est un enseignement durable (« ce format marche »), l'ajouter à la mémoire et aux bonnes pratiques.
 
 ## Vue d'ensemble du flux
 
@@ -31,7 +31,7 @@ Idée / événement → actu vérifiée (web) → légende + script → photo r�
 
 ## Étape 1 — Identifier la marque
 
-Les outils Metricool passent par Zapier. Toujours appeler `Zapier:list_enabled_zapier_actions` d'abord, puis l'action `code_action_metricoolcliapi__list_brands_direct` pour obtenir les blogId à jour. Marques connues (juillet 2026) :
+Metricool se pilote d'abord par son connecteur direct, gratuit (décision du 18/11/2026). Appeler `getBrandSettings` pour obtenir les blogId à jour. Zapier ne sert plus qu'à supprimer, remplacer un visuel et contrôler : le partage exact est dans `references/metricool-en-direct.md`. Marques connues (juillet 2026) :
 
 | Marque | blogId | Réseaux | Secteur |
 |---|---|---|---|
@@ -67,7 +67,7 @@ Les **carrousels du mercredi** ne suivent pas cette hiérarchie : leurs slides s
 Pour CHAQUE post simple non-reel, choisir le visuel dans cet ordre :
 
 1. **Galerie du client d'abord** : photo de la banque classée par pilier (voir la fiche du client dans `references/clients/`), en rapport avec le texte. Rotation : pas de réutilisation à moins de 30 jours. Limite API : les photos locales n'ont pas d'URL publique → créer le post en brouillon et indiquer à l'utilisateur le fichier exact à attacher.
-2. **Photo trouvée si la galerie ne couvre pas le sujet** (événement externe, lieu, produit) : chercher via image_search/web une photo en rapport avec le texte, en privilégiant les sources libres de droits ou officielles (banques d'images libres, communiqués/press kits des marques) — jamais de photo de presse/agence protégée (Getty, AFP) pour un compte commercial. Avantage : une photo en ligne a une URL publique → elle peut être attachée directement au `schedule_post` (post planifié complet, plus besoin de brouillon). Toujours montrer la photo choisie à l'utilisateur dans la réponse.
+2. **Photo trouvée si la galerie ne couvre pas le sujet** (événement externe, lieu, produit) : chercher via image_search/web une photo en rapport avec le texte, en privilégiant les sources libres de droits ou officielles (banques d'images libres, communiqués/press kits des marques) — jamais de photo de presse/agence protégée (Getty, AFP) pour un compte commercial. Avantage : une photo en ligne a une URL publique → elle peut être attachée directement à la création, dans `media` (le post reste en brouillon, mais il est complet). Toujours montrer la photo choisie à l'utilisateur dans la réponse.
 3. **IA (Higgsfield) en tout dernier recours** : uniquement si rien d'existant ne convient (concepts abstraits, schémas pédagogiques). Utiliser l'élément de référence de la marque (ex. J Lawson Golf : élément "JLawson-Studio", rendu tech premium moderne, PAS de bois, métal noir mat, LED avec accent chaud, bleu marine et vert, launch monitor en fond). Une photo supprimée ensuite par l'utilisateur = refusée : en recréer une plus réaliste (voir « Règles de recréation après suppression »).
 
 Les reels restent tournés avec de vraies vidéos (script reel-script + B-roll listé depuis la banque).
@@ -87,21 +87,21 @@ Scripts de reels : relire d'abord `references/inspirations-montage.md` (les styl
 
 ## Étape 6 — Planification Metricool
 
-**Carrousel** : un carrousel = un seul appel `schedule_post` avec les slides dans `media01` … `media08`, DANS L'ORDRE (l'ordre des paramètres est l'ordre d'affichage). `bulk_schedule_posts` ne gère pas les médias et ne convient donc pas. Penser à supprimer le post feed déjà planifié ce mercredi-là, que le carrousel remplace. Procédure complète : `references/carrousels-hebdo.md`.
+**Carrousel** : les carrousels du mercredi sont rendus et planifiés tout seuls chaque lundi par l'action GitHub (`scripts/publier.py`), rien à faire à la main. Pour un carrousel planifié à la main : un seul `createScheduledPost` avec les slides dans `media`, DANS L'ORDRE d'affichage (pas encore vérifié en direct, donc relire le post créé et compter les slides). Penser à supprimer le post feed déjà planifié ce mercredi-là, que le carrousel remplace. Procédure complète : `references/carrousels-hebdo.md`.
 
-**Création en masse (préférée dès 3+ posts)** : code action personnalisé `code_action_metricoolcliapi__bulk_schedule_posts` (params : blog_id, posts = chaîne JSON `[{"date_time":"YYYY-MM-DDTHH:mm:ss","text":"...","type":"POST|REEL"}]`) — crée directement en brouillon (draft true, autoPublish false), Instagram+Facebook, fuseau Europe/Paris natif SANS bug horaire. C'est la méthode par défaut pour un calendrier.
-
-**Création unitaire** via `Zapier:execute_zapier_write_action`, action `schedule_post` :
-- `blogId` de la marque, réseaux de la marque à true, `type` POST/REEL/STORY
-- **`draft: true` + `autoPublish: false` OBLIGATOIRES** si le média n'est pas attaché (l'API exige une URL publique pour les médias — les photos locales du client ne peuvent pas être attachées par l'API, l'utilisateur les ajoute dans Metricool) ou si la légende contient des placeholders
+**Chemin par défaut : le connecteur Metricool direct**, gratuit, sans bug de fuseau. Gabarit, règles et limites : `references/metricool-en-direct.md`. En bref :
+- un appel `createScheduledPost` par post, avec le `blogId` de la marque, ses réseaux dans `providers`, le type (`POST`, `REEL`, `STORY`) et `publicationDate` en `Europe/Paris`
+- **`draft: true` + `autoPublish: false` à chaque création**, que le média soit attaché ou non, que la légende ait des placeholders ou non. Les photos locales du client n'ont pas d'adresse publique : le brouillon part sans média et l'utilisateur l'ajoute dans Metricool
 - Horaires par défaut : reels 9h00 ou 12h00, posts feed 18h00, heure de Paris, format `YYYY-MM-DDTHH:mm:ss`
-- Si Zapier renvoie une followUpQuestion demandant des URLs de médias : ré-exécuter en précisant dans instructions que le brouillon est créé SANS média (ajout manuel ensuite)
-- **⚠️ Bug de fuseau horaire connu** : `schedule_post` décale les heures de plusieurs heures. Après toute création de posts, TOUJOURS vérifier avec `code_action_metricoolcliapi__list_scheduled_posts` (params blogId, start, end) puis corriger avec le code action personnalisé `code_action_metricoolcliapi__bulk_update_post_times` (params : blog_id, updates = chaîne JSON `[{"post_id":123,"date_time":"YYYY-MM-DDTHH:mm:ss"}]` en heure de Paris). ATTENTION : cette correction fait sauter le statut brouillon → enchaîner OBLIGATOIREMENT avec `code_action_metricoolcliapi__bulk_set_draft` (params : blog_id, post_ids = chaîne JSON `[123,456]`) pour re-verrouiller les brouillons. Noter que les IDs des posts changent après correction.
+- **Relire après chaque création** avec `getScheduledPosts` : le post est bien en brouillon, à la bonne heure, avec le bon nombre de médias. Sinon corriger tout de suite avec `updateScheduledPost` et le signaler
+- Pas de création par lot en direct : créer le premier post, le relire, puis enchaîner les suivants un par un
 - Après chaque brouillon créé, lister à l'utilisateur : date, contenu, média à attacher, placeholders à compléter
+
+**Ce qui passe encore par Zapier** (2 tâches payantes par appel, donc à regrouper) : supprimer un post (`delete_post`, `bulk_delete_posts`), changer un visuel (`bulk_replace_posts`), le contrôle de fin de session (`audit_publication_safety`), envoyer une image sans adresse publique. Les anciennes actions de création (`schedule_post`, `bulk_schedule_posts`, `bulk_schedule_stories`) ne servent plus qu'en secours si le connecteur direct échoue : dans ce cas, appliquer la correction d'heure et le reverrouillage en brouillon décrits dans `.claude/memories/bulk-schedule-stories-metricool.md`.
 
 ## Étape 7 — Boucle post-événement
 
-Le lendemain d'un événement : rechercher le résultat réel sur le web, donner à l'utilisateur le texte final complété. Pour éditer un brouillon existant : supprimer/recréer via schedule_post (le texte n'est pas éditable directement), ou utiliser les code actions personnalisés pour la date et le statut brouillon.
+Le lendemain d'un événement : rechercher le résultat réel sur le web, donner à l'utilisateur le texte final complété. Pour éditer la légende ou l'heure d'un brouillon existant : `updateScheduledPost` (connecteur direct), en repartant du post relu par `getScheduledPosts` et en ne changeant que le champ voulu. Pour changer son visuel : remplacer puis supprimer (`bulk_replace_posts`, Zapier), jamais une mise à jour.
 
 ## Validation client — la review hebdo (fichier Excel ↔ Metricool)
 
@@ -119,7 +119,7 @@ vendredi et du lundi (dépôt Drive, `reviews/config.json`, envoi opt-in, exploi
 Les brouillons sont relus par l'utilisateur directement dans Metricool : une suppression n'est jamais un accident, c'est un refus à interpréter — pas besoin de demander pourquoi. Deux règles :
 
 1. **La photo d'une publication a été supprimée** (le brouillon existe encore, mais son média a disparu) → la photo ne convenait pas : **en recréer une plus réaliste** pour le même brouillon. Repasser par la hiérarchie de l'Étape 4 (vraie photo de la banque d'abord) ; si le visuel refusé était généré par IA, régénérer en gommant ce qui fait artificiel — lumière naturelle, cadrage type smartphone, textures imparfaites, pas de rendu lisse « publicité » — puis indiquer le nouveau fichier à attacher (ou attacher directement si URL publique).
-2. **Un post a été totalement supprimé** (il n'apparaît plus dans `list_scheduled_posts` alors qu'il avait été planifié) → le texte n'allait pas : **en réécrire un nouveau** sur le même créneau. Changer d'angle et de hook — pas une simple reformulation de la légende refusée.
+2. **Un post a été totalement supprimé** (il n'apparaît plus dans `getScheduledPosts` alors qu'il avait été planifié) → le texte n'allait pas : **en réécrire un nouveau** sur le même créneau. Changer d'angle et de hook — pas une simple reformulation de la légende refusée.
 
 Dans les deux cas : recréer sans attendre (le créneau reste dû au calendrier) et signaler dans le compte-rendu ce qui a été recréé et pourquoi.
 
