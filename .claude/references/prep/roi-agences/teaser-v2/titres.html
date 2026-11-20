@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>Titres R.O.I.</title>
+<!-- Couche titres du teaser v2, fond transparent, pilotée par seek(t).
+     Les groupes entrent sur les temps (138 BPM) et sortent en coupe sèche. -->
+<style>
+@font-face{font-family:Caladea;src:url(../teaser-src/fonts/caladea-700-normal.woff2);font-weight:700}
+@font-face{font-family:Caladea;src:url(../teaser-src/fonts/caladea-400-italic.woff2);font-weight:400;font-style:italic}
+@font-face{font-family:Carlito;src:url(../teaser-src/fonts/carlito-700-normal.woff2);font-weight:700}
+@font-face{font-family:Carlito;src:url(../teaser-src/fonts/carlito-400-normal.woff2);font-weight:400}
+:root{--red:#DC2626;--soft:#E5E5E5}
+html,body{margin:0;width:1920px;height:1080px;background:transparent;overflow:hidden}
+.g{position:absolute;inset:0;visibility:hidden}
+.t{position:absolute;white-space:nowrap;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.55)}
+.m{position:absolute;overflow:hidden;white-space:nowrap;padding:0 .08em .12em}
+.m>.t{position:relative}
+.c{left:0;width:1920px;text-align:center}
+.l{left:150px}
+.serif{font-family:Caladea;font-weight:700;line-height:1}
+.it{font-family:Caladea;font-style:italic;font-weight:400;line-height:1.1}
+.sans{font-family:Carlito;font-weight:700}
+.eb{font-family:Carlito;font-weight:700;text-transform:uppercase;letter-spacing:.34em;color:var(--red);font-size:40px;text-shadow:0 2px 18px rgba(0,0,0,.9),0 0 4px rgba(0,0,0,.6)}
+.caps{text-transform:uppercase}
+.red{color:var(--red)}
+.soft{color:var(--soft)}
+.scrim{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,0,0,.42),rgba(0,0,0,0) 75%)}
+.scrim.bas{background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0) 55%)}
+.scrim.gauche{background:linear-gradient(to right,rgba(0,0,0,.55),rgba(0,0,0,0) 65%)}
+.fond{position:absolute;inset:0;background:#0A0A0A}
+.barre{position:absolute;left:0;top:0;width:14px;height:1080px;background:var(--red)}
+</style></head>
+<body>
+<!-- data-a / data-b : entrée et sortie du groupe, en temps. data-d : décalage d'un élément, en temps.
+     data-x : slam (frappe), rise (montée sous masque), fade, count (compteur) -->
+
+<div class="g" data-a="0" data-b="4"><div class="scrim"></div>
+  <div class="t c serif" style="top:290px;font-size:300px" data-x="slam" data-d="0">10&#8239;000</div>
+  <div class="m c" style="top:625px"><div class="t c sans caps" style="font-size:70px;letter-spacing:.3em;padding-left:.3em" data-x="rise" data-d="1">entrepreneurs</div></div>
+</div>
+
+<div class="g" data-a="4" data-b="8"><div class="scrim"></div>
+  <div class="t c serif caps" style="top:300px;font-size:180px" data-x="slam" data-d="0">Une ligne</div>
+  <div class="t c serif caps red" style="top:500px;font-size:180px" data-x="slam" data-d="2">de départ.</div>
+</div>
+
+<div class="g" data-a="8" data-b="16"><div class="scrim gauche"></div>
+  <div class="t l eb" style="top:330px" data-x="fade" data-d="0">Course professionnelle</div>
+  <div class="m l" style="top:390px"><div class="t serif" style="font-size:150px" data-x="rise" data-d="0.5">Au cœur de</div></div>
+  <div class="m l" style="top:560px"><div class="t serif" style="font-size:150px" data-x="rise" data-d="1.5">La Défense<span class="red">.</span></div></div>
+</div>
+
+<div class="g" data-a="16" data-b="22"><div class="scrim"></div>
+  <div class="t c serif" style="top:230px;font-size:300px" data-x="slam" data-d="0">5&nbsp;KM</div>
+  <div class="t c serif red" style="top:540px;font-size:300px" data-x="slam" data-d="2">10&nbsp;KM</div>
+</div>
+
+<div class="g" data-a="28.6" data-b="32"><div class="scrim"></div>
+  <div class="t c eb" style="top:410px;padding-left:.34em" data-x="fade" data-d="0">Première édition</div>
+  <div class="m c" style="top:470px"><div class="t c serif" style="font-size:150px" data-x="rise" data-d="0.4">Automne 2027<span class="red">.</span></div></div>
+</div>
+
+<div class="g" data-a="36" data-b="44"><div class="scrim"></div>
+  <div class="t c eb" style="top:170px;padding-left:.34em" data-x="fade" data-d="0">Arrivée à la</div>
+  <div class="t c serif" style="top:225px;font-size:160px" data-x="slam" data-d="0.5">Plénitude Arena</div>
+</div>
+
+<div class="g" data-a="44" data-b="52"><div class="scrim bas"></div>
+  <div class="m c" style="top:735px"><div class="t c serif" style="font-size:112px" data-x="rise" data-d="0">Le networking commence</div></div>
+  <div class="m c" style="top:865px"><div class="t c it red" style="font-size:100px" data-x="rise" data-d="1">à la ligne d’arrivée.</div></div>
+</div>
+
+<div class="g" data-a="52" data-b="60"><div class="scrim"></div>
+  <div class="t c eb" style="top:240px;padding-left:.34em" data-x="fade" data-d="0">Objectif</div>
+  <div class="t c serif" style="top:300px;font-size:280px;font-variant-numeric:tabular-nums lining-nums" data-x="count" data-d="0.3">10&#8239;000</div>
+  <div class="m c" style="top:585px"><div class="t c serif" style="font-size:96px" data-x="rise" data-d="1.5">participants</div></div>
+  <div class="t c sans soft" style="top:745px;font-size:44px;letter-spacing:.04em" data-x="fade" data-d="4">entrepreneurs <span class="red">·</span> dirigeants <span class="red">·</span> cadres <span class="red">·</span> indépendants</div>
+</div>
+
+<div class="g" data-a="60" data-b="68"><div class="scrim gauche"></div>
+  <div class="m l" style="top:230px"><div class="t serif" style="font-size:124px" data-x="rise" data-d="0">Nous cherchons</div></div>
+  <div class="m l" style="top:370px"><div class="t serif" style="font-size:124px" data-x="rise" data-d="0.5">l’agence qui va</div></div>
+  <div class="m l" style="top:510px"><div class="t serif" style="font-size:124px" data-x="rise" data-d="1">l’écrire <span class="red">avec nous.</span></div></div>
+  <div class="t l sans soft" style="top:745px;font-size:40px;letter-spacing:.02em" data-x="fade" data-d="3">Mandataire unique <span class="red">·</span> groupement <span class="red">·</span> assistance à maîtrise d’ouvrage</div>
+</div>
+
+<div class="g" data-a="68" data-b="72"><div class="scrim"></div>
+  <div class="t c serif" style="top:330px;font-size:150px" data-x="slam" data-d="0">Il y a un</div>
+  <div class="t c serif" style="top:500px;font-size:150px" data-x="slam" data-d="1">dernier élément.</div>
+</div>
+
+<div class="g" data-a="72" data-b="76"><div class="scrim"></div>
+  <div class="m c" style="top:360px"><div class="t c serif" style="font-size:120px" data-x="rise" data-d="0">On vous le présente</div></div>
+  <div class="t c it red" style="top:520px;font-size:150px" data-x="slam" data-d="1.5">en visio.</div>
+</div>
+
+<div class="g" data-a="76" data-b="78"><div class="scrim"></div><div class="t c serif caps" style="top:400px;font-size:220px" data-x="slam" data-d="0">La Défense</div></div>
+<div class="g" data-a="78" data-b="80"><div class="scrim"></div><div class="t c serif" style="top:400px;font-size:220px" data-x="slam" data-d="0">5 <span class="red">·</span> 10&nbsp;KM</div></div>
+<div class="g" data-a="80" data-b="82"><div class="scrim"></div><div class="t c serif" style="top:400px;font-size:220px" data-x="slam" data-d="0">10&#8239;000</div></div>
+<div class="g" data-a="82" data-b="84"><div class="scrim"></div><div class="t c serif caps red" style="top:400px;font-size:220px" data-x="slam" data-d="0">Automne 2027</div></div>
+
+<div class="g" data-a="84" data-b="999"><div class="fond"></div><div class="barre"></div>
+  <div class="t c serif" style="top:150px;font-size:260px;letter-spacing:-.02em" data-x="slam" data-d="0">R.O.I.</div>
+  <div class="t c sans" style="top:430px;font-size:42px;letter-spacing:.42em;padding-left:.42em;color:var(--red)" data-x="fade" data-d="1">RUN ON INVESTMENT</div>
+  <div class="t c it soft" style="top:500px;font-size:54px" data-x="fade" data-d="2">la course qui connecte les entrepreneurs</div>
+  <div class="m c" style="top:665px"><div class="t c serif" style="font-size:88px" data-x="rise" data-d="4">On en parle <span class="red">30&nbsp;minutes</span>&#8239;?</div></div>
+  <div class="t c sans" style="top:815px;font-size:44px;letter-spacing:.06em" data-x="fade" data-d="6">Maxime Dietrich <span class="red">·</span> 07&nbsp;79&nbsp;97&nbsp;19&nbsp;61</div>
+</div>
+
+<script>
+(function () {
+  const T = 60 / 138;
+  window.DURATION = 97 * T;
+  const clamp = (x) => Math.min(1, Math.max(0, x));
+  const outExpo = (x) => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * x));
+  const outCubic = (x) => 1 - Math.pow(1 - x, 3);
+  const groups = [...document.querySelectorAll('.g')].map((g) => ({
+    g, a: +g.dataset.a * T, b: +g.dataset.b * T,
+    items: [...g.querySelectorAll('[data-x]')].map((n) => ({ n, x: n.dataset.x, d: +n.dataset.d * T, txt: n.innerHTML })),
+  }));
+  window.seek = function (t) {
+    for (const G of groups) {
+      const on = t >= G.a - 1e-6 && t < G.b - 1e-6;
+      G.g.style.visibility = on ? 'visible' : 'hidden';
+      if (!on) continue;
+      const life = (t - G.a) / (G.b - G.a);
+      for (const it of G.items) {
+        const lt = t - G.a - it.d;
+        const s = it.n.style;
+        if (lt < 0) { s.opacity = 0; continue; }
+        if (it.x === 'slam') {
+          const p = outExpo(clamp(lt / 0.18));
+          const drift = 1 + 0.035 * life;
+          s.opacity = clamp(lt / 0.05);
+          s.transform = `scale(${((1.32 - 0.32 * p) * drift).toFixed(4)})`;
+          s.filter = p < 0.98 ? `blur(${((1 - p) * 14).toFixed(2)}px)` : 'none';
+        } else if (it.x === 'rise') {
+          const p = outExpo(clamp(lt / 0.55));
+          s.opacity = 1;
+          s.transform = `translateY(${((1 - p) * 115).toFixed(2)}%)`;
+        } else if (it.x === 'fade') {
+          s.opacity = outCubic(clamp(lt / 0.35));
+          s.transform = `translateY(${((1 - outCubic(clamp(lt / 0.5))) * 18).toFixed(2)}px)`;
+        } else if (it.x === 'count') {
+          const p = outExpo(clamp(lt / 1.1));
+          const v = Math.round(10000 * p / 10) * 10;
+          it.n.textContent = v >= 1000 ? Math.floor(v / 1000) + ' ' + String(v % 1000).padStart(3, '0') : String(v);
+          s.opacity = clamp(lt / 0.05);
+          s.transform = `scale(${(1.12 - 0.12 * outExpo(clamp(lt / 0.3))).toFixed(4)})`;
+        }
+      }
+    }
+  };
+  window.ready = document.fonts.ready.then(() => { window.seek(0); return true; });
+})();
+</script>
+</body></html>

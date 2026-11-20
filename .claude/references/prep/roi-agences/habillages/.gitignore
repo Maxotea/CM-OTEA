@@ -1,0 +1,5 @@
+# ProRes 4444 trop lourds pour GitHub : ils se regénèrent depuis src/
+*.mov
+# version légère (codec PNG avec alpha) : suivie dans git
+!leger/
+!leger/*.mov

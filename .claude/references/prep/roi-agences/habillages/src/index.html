@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Habillages R.O.I.</title>
+<style>
+/* Polices locales (woff2, sous-ensemble latin) */
+@font-face{font-family:'Barlow Condensed';font-style:italic;font-weight:900;font-display:block;src:url(fonts/barlowcondensed-900-italic.woff2) format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:italic;font-weight:800;font-display:block;src:url(fonts/barlowcondensed-800-italic.woff2) format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:900;font-display:block;src:url(fonts/barlowcondensed-900-normal.woff2) format('woff2');}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:block;src:url(fonts/barlowcondensed-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Caladea';font-style:normal;font-weight:700;font-display:block;src:url(fonts/caladea-700-normal.woff2) format('woff2');}
+@font-face{font-family:'Caladea';font-style:italic;font-weight:400;font-display:block;src:url(fonts/caladea-400-italic.woff2) format('woff2');}
+@font-face{font-family:'Carlito';font-style:normal;font-weight:400;font-display:block;src:url(fonts/carlito-400-normal.woff2) format('woff2');}
+@font-face{font-family:'Carlito';font-style:normal;font-weight:700;font-display:block;src:url(fonts/carlito-700-normal.woff2) format('woff2');}
+
+/* Identité R.O.I. (marque.md) : noir, rouge seul accent, blanc, gris */
+:root{
+  --bg:#0A0A0A; --line:#2A2A2A; --red:#DC2626; --red-deep:#9F1414;
+  --grey:#9CA3AF; --grey-dark:#6B7280; --soft:#E5E5E5; --white:#FFFFFF;
+  --sport:'Barlow Condensed','Arial Narrow',sans-serif;
+  --serif:'Caladea',Georgia,serif;
+  --sans:'Carlito',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+body{color:var(--white);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:transparent}
+/* fond de contrôle (relecture seulement, jamais dans les rendus) */
+body.review #stage{background:linear-gradient(115deg,#d9d6cf 0%,#a9a49a 30%,#4b4a47 62%,#1d1d1d 100%)}
+
+.hab{position:absolute;inset:0;display:none}
+.hab.on{display:block}
+.blk{position:absolute;white-space:nowrap}
+.cx{left:0;width:1920px;text-align:center}
+
+/* Typo sport : grotesque condensée très grasse, italique, capitales */
+.sp{font-family:var(--sport);font-weight:900;font-style:italic;text-transform:uppercase;line-height:1;letter-spacing:-.004em;color:var(--white)}
+/* Typo corporate : libellés espacés */
+.lb{font-family:var(--sans);font-weight:700;text-transform:uppercase;letter-spacing:.34em;line-height:1;color:var(--grey)}
+.red{color:var(--red)}
+.white{color:var(--white)}
+
+/* Masques : chaque mot glisse dans sa fenêtre (coupe verticale seulement) */
+.m{display:inline-block;vertical-align:top;padding:.3em .22em .24em .12em;margin:-.3em -.22em -.24em -.12em}
+.m.clip{clip-path:inset(0 -4em 0 -4em)}
+.mi{display:inline-block;will-change:transform}
+
+/* Lisibilité : ombre portée très légère + voile sombre diffus derrière le bloc */
+.sh{text-shadow:0 3px 14px rgba(0,0,0,.30),0 1px 2px rgba(0,0,0,.22)}
+.shade{position:absolute;pointer-events:none;background:radial-gradient(closest-side,rgba(0,0,0,.34),rgba(0,0,0,.20) 45%,rgba(0,0,0,0) 100%)}
+
+/* Version légère (dossier leger/) : même animation, ombre plus serrée et sans voile, pour des fichiers plus petits */
+body.lite .shade{display:none}
+body.lite .sh{text-shadow:0 2px 8px rgba(0,0,0,.36),0 1px 2px rgba(0,0,0,.24)}
+.slab{position:absolute;background:var(--red)}
+.rule{position:absolute;background:var(--white)}
+.g{display:inline-block;width:.16em}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="habillages.js"></script>
+</body>
+</html>

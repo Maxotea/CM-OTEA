@@ -125,7 +125,7 @@ Tes points (ceux de Todoist à ton nom) :
 Ce que tu demandes aux autres : point lieu et préfecture (Marion), point
 juridique (E. Pereira, suite au TaT de lundi), point assurances (D. Haarfi).
 
-## 7. Visio Lucis · mercredi 11h · LA PROPOSITION EN UNE PAGE
+## 7. Visio Lucis · mercredi 14/10 à 11h · LA PROPOSITION EN UNE PAGE
 
 Avec Victor Muller (GTM, division sport et athlètes) et Philippine Breuil
 (Head of Marketing, réponse « peut-être »). Google Meet :
@@ -138,23 +138,37 @@ Trois athlètes HYROX qualifiés pour les Championnats du monde, Hong Kong,
 AsiaWorld-Expo, 10-13 juin 2027.
 
 **Les athlètes**
-- **Pierre Huiban et Antoine [nom]**, Doubles Pro Homme. Vainqueurs de leur
-  catégorie d'âge (35-39 ans) à Rome en septembre 2026, avec un record
-  national [à reconfirmer avec Pierre avant de l'écrire]. Pierre était déjà
-  aux Mondiaux de Stockholm en juin 2026 : c'est un retour, pas une
-  découverte. Commercial Europe, papa, et une histoire cardiaque qui donne
-  un sens concret à la prévention.
+- **Pierre Huiban et Antoine Bouhanna**, Doubles Pro Homme. Vainqueurs de
+  leur catégorie d'âge (35-39 ans) à Rome en septembre 2026, en 53:46
+  [chrono donné de mémoire par Maxime, à revérifier sur les résultats
+  HYROX ; record national à reconfirmer avec Pierre avant de l'écrire].
+  Ils ont déjà couru ensemble les Mondiaux de Stockholm en juin 2026 :
+  c'est un retour, pas une découverte. Pierre est commercial Europe, papa,
+  avec une histoire cardiaque qui donne un sens concret à la prévention.
 - **Julie Pekmezian**, Pro Femme. 1re de sa catégorie 35-39 à HYROX
   Bordeaux le 4 octobre 2026 (1:08:00, 10e Pro Femme toutes catégories).
-  13 courses HYROX en 3 saisons, 3 podiums de catégorie.
-  [Qualification à confirmer sur le site HYROX avant la visio.]
+  13 courses HYROX en 3 saisons, 3 podiums de catégorie. Sa place pour
+  Hong Kong est acceptée (confirmé par Maxime le 13/10).
 
 **Le public** : des actifs de 35-40 ans qui veulent performer sans négliger
 leur santé. Exactement la cible dont vous parliez en mai.
 
-**L'audience** : Pierre sur Instagram, @pierrehuiban89 :
-[abonnés] · [vues moyennes par reel] · [taux d'engagement].
-[Chiffres à relever dans Metricool lundi.]
+**L'audience** : Pierre sur Instagram, @pierrehuiban89 : environ 4 700
+abonnés, de 900 à 2 100 vues par reel, 4,5 % d'engagement sur les reels
+(Metricool, 12/10/2026). Chaque reel tourné avec OTEA depuis Rome touche
+entre 470 et 1 500 personnes.
+
+> Relevé Metricool du 13/10 (période 14/07 au 12/10) :
+> - abonnés : 4 718 le 12/10 (5 580 mi-juillet, en baisse sur l'été :
+>   ne pas mettre en avant l'historique, parler de la portée) ;
+> - 3 reels sur la période, tous tournés par OTEA : 891, 981 et
+>   2 091 vues ; portée moyenne 840 ; 114 interactions au total ;
+> - meilleur engagement : le reel « 6 months ago, we were strangers »
+>   (11,4 %), le duo Pierre et Antoine plaît.
+> - Pierre écrit dans ce post : « 4 races side by side, 2 World
+>   Championship qualifications, 1 World Championship raced together ».
+>   Antoine Bouhanna était donc déjà à Stockholm avec lui. Son compte :
+>   @antoine_bhna.
 
 **Le calendrier jusqu'aux Mondiaux**
 - Décembre 2026 : HYROX Paris, Porte de Versailles (12-20 déc.), la course
@@ -186,9 +200,11 @@ visio : « je vous envoie une proposition chiffrée sous 48 h »].
 
 ### Ce qu'il faut faire avant mercredi
 - Lundi : relever les chiffres Instagram de Pierre dans Metricool.
-- Lundi : reconfirmer avec Pierre le record national de Rome et le nom
-  complet d'Antoine (et son accord pour apparaître).
-- Lundi : vérifier la qualification de Julie sur le site HYROX.
+- Reste à faire : vérifier le chrono de Rome (53:46) sur les résultats
+  HYROX, reconfirmer le record national avec Pierre, et l'accord
+  d'Antoine pour apparaître.
+- Fait le 13/10 : chiffres Instagram de Pierre, nom d'Antoine (Bouhanna),
+  place de Julie pour Hong Kong acceptée.
 - Si tu veux la montrer à l'écran : je la mets en page en une slide.
 
 ## 8. BNI La Défense · vendredi 7h
