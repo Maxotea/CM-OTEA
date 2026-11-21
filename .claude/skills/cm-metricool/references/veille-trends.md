@@ -59,6 +59,11 @@ plus de mal qu'un jour sans post.
 
 | Date | Trend | Compte | Réseau | Publication | État |
 |---|---|---|---|---|---|
+| 21/11/2026 | Aucune trend retenue : rien créé. Calendriers relus : Filmakers a un post feed les 22, 23, 24, 25 et 27/11 (libres : 21, 26 et 28), OTEA Production les 23, 24, 25, 26 et 27/11 (libres : 21, 22 et 28) | les deux | | | rien à valider |
+| 21/11/2026 | « I feel like I haven't done much this year » (récap mois par mois de la pellicule, Later au 20/11) | Otea Filmakers | Instagram, carrousel ou Reel | | écartée : une seule source, et il faut savoir quelle course Maxime a filmée chaque mois de 2026 avec une vraie photo par mois. Idée qui attend Maxime, plutôt pour début décembre |
+| 21/11/2026 | « It's NO-vember », « Christmas Wrapping Paper Reveal », « Dear Santa », « Coming Up Roses » (Harry Styles), sons « Housewife », « Last Christmas » | les deux | | | écartées : Noël (interdit sur Filmakers), une seule source par format, rien qui porte la course ou la vidéo d'entreprise |
+| 21/11/2026 | « Purple Rain » riff, « I'm still Gibby », « Oops, wrong way », « Dame Hombro » | les deux | | | écartées : sources faibles (blog d'outil IA, presse espagnole), playback ou danse sans lien avec les deux comptes |
+| 21/11/2026 | Novemb'Run à Paris le 22/11 ; HYROX Dallas (18 au 22/11) puis Utrecht (26 au 30/11), aucun résultat 2026 publié | Otea Filmakers | | | écartée : Maxime n'y filme pas |
 | 20/11/2026 | Aucune trend retenue : rien créé. Calendriers relus : Filmakers a un post les 20, 22, 23, 24, 25 et 27/11 (libres : 21 et 26), OTEA Production les 20, 23, 24, 25, 26 et 27/11 (libres : 21 et 22) | les deux | | | rien à valider |
 | 20/11/2026 | Black Friday, vendredi 27/11 (entré dans la fenêtre de 7 jours) | les deux | Instagram, LinkedIn | déjà au calendrier : Filmakers 27/11 18 h « le matériel qui a vraiment filmé l'HYROX de Rome » (uuid 2999143641081135997), OTEA Production 27/11 12 h « pas de promo chez nous. Une date, oui. » (uuid 1854608371791383726) | écartée : déjà faite sur les deux comptes, un second post doublerait le créneau |
 | 20/11/2026 | Son « Flower In A Hurricane » (bande originale de GTA VI), son le plus utilisé en Reels selon Virlo au 18/11 | les deux | Instagram, Reel | | écartée : GTA 6 déjà fait le 19/11 sur les deux comptes, une seule source, pas de Reel prêt |
