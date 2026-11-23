@@ -70,7 +70,11 @@ JOURS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
 RESEAUX = {"instagram": "IG", "facebook": "FB", "tiktok": "TikTok", "linkedin": "LinkedIn",
            "youtube": "YT", "twitter": "X", "pinterest": "Pinterest", "threads": "Threads",
            "gmb": "GMB"}
-PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]")
+# Placeholder : [MAJUSCULES] (« [VAINQUEUR] »), ou consigne entre crochets de plusieurs mots
+# en minuscules (« [crédit du photographe] », « [Une phrase … : à compléter] »). Ces deux-là
+# sont passés en publication automatique le 23/11/2026 chez Otea Filmakers : l'ancien motif
+# ne voyait que les majuscules. Un mot seul en minuscules (« [lien] ») reste du texte.
+PLACEHOLDER = re.compile(r"\[[A-ZÀ-Ü0-9][A-ZÀ-Ü0-9 +/'-]*\]|\[[^\[\]\n]*\s[^\[\]\n]*\]")
 # Règle de rédaction de Maxime (mémoire redaction-sans-tirets) : aucun tiret cadratin ni
 # double tiret dans un texte publié. Une légende qui en contient n'est pas publiée seule.
 TIRET = re.compile(r"[—–]|--")
