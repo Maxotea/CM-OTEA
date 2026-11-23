@@ -59,6 +59,11 @@ plus de mal qu'un jour sans post.
 
 | Date | Trend | Compte | Réseau | Publication | État |
 |---|---|---|---|---|---|
+| 23/11/2026 | Aucune trend retenue : rien créé. Calendriers relus : Filmakers a un post feed les 23, 24, 25, 27, 29 et 30/11 (libres : 26 et 28), OTEA Production les 23, 24, 25, 26 et 27/11 (libres : 28, 29 et 30) | les deux | | | rien à valider |
+| 23/11/2026 | « Vlog timestamps » / journée racontée heure par heure (Later au 23/10, Inmagic au 16/11) | OTEA Production | Instagram, Reel | | écartée : pic passé (Later d'octobre), et il faut de vrais rushes horodatés d'une journée de tournage. Idée qui attend Maxime : filmer sa prochaine journée de tournage en plans courts avec l'heure |
+| 23/11/2026 | « I feel like I haven't done much this year » (Later), toujours une seule source | Otea Filmakers | Instagram | | déjà en attente de Maxime (21/11) : une vraie photo par mois de 2026 et la course filmée chaque mois |
+| 23/11/2026 | Spotify Wrapped 2026 : toujours aucune date officielle (prédiction 2/12, Official Charts, Techloy) ; HYROX Dallas fini, aucun résultat 2026 publié ; Hunger Games préquelle (date FR 18 ou 25/11 selon les sources) | les deux | | | écartées : date non confirmée, Maxime n'y filme pas, rien qui porte la course ou la vidéo d'entreprise |
+| 23/11/2026 | Toujours en tête : « Housewife », « Stop the Wedding », « Coming Up Roses », « Dear Santa », « My moon my man », transitions maquillage (Virlo au 18/11) ; LinkedIn : aucun format daté de novembre | les deux | | | écartées : mêmes raisons que les 21 et 22/11 |
 | 22/11/2026 | Aucune trend retenue : rien créé. Calendriers relus : Filmakers a un post feed les 22, 23, 24, 25, 27 et 29/11 (libres : 26 et 28), OTEA Production les 23, 24, 25, 26 et 27/11 (libres : 22, 28 et 29) | les deux | | | rien à valider |
 | 22/11/2026 | Spotify Wrapped 2026, date seulement prédite au mercredi 2/12 (Official Charts), aucune annonce de Spotify | les deux | Instagram, LinkedIn | | écartée : hors fenêtre de 7 jours et date non confirmée. À revoir dès que Spotify l'annonce (format « mon année en chiffres » possible si Maxime fournit ses vrais chiffres 2026) |
 | 22/11/2026 | « Yes… But » (écran partagé, l'attrait puis le revers) | Otea Filmakers | Instagram | | écartée : une seule source (SocialBee, liste du 29/10), pic passé |
