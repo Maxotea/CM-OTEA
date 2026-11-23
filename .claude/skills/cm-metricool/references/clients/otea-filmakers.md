@@ -8,6 +8,14 @@
 ## Écrire HYROX (Maxime, 18/11/2026)
 « Combien d'HYROX », « il a fait un HYROX », « des HYROX ». Avec une ville : « trois images de l'HYROX de Bordeaux », « à l'HYROX de Rome », « tu cours l'HYROX de Paris ». Jamais « de HYROX », « le HYROX », « au HYROX », ni « HYROX Bordeaux » au milieu d'une phrase (seuls les hashtags gardent #hyroxbordeaux). « en HYROX » (la discipline) reste correct. Vaut pour les légendes, le texte des cartes et les textes alternatifs.
 
+## Format : la vidéo d'abord (Maxime, 23/11/2026)
+« Un carrousel, ça marche pas. La story aussi, c'est pas utile. Il faut faire des vidéos. » Il précise qu'il le répète « presque à chaque fois ».
+- Toute com, annonce ou offre de ce compte sort en **Reel** : une vraie vidéo montée depuis ses rushs ou ses films finis, avec du texte à l'écran. Ni carrousel ni story à la place, et pas de carrousel « en attendant ».
+- Carrousel ou story seulement s'il le demande expressément.
+- Le fichier du Reel reste muet (règle du 21/10/2026 : la musique se pose dans Instagram), la relève l'envoie donc en notification.
+- Texte des cartons sans « je » quand un athlète est visible à l'image ; « on y sera » convient.
+- **HYROX de Londres, vendredi 4 décembre 2026** : déplacement validé le 23/11. Reel d'annonce de 13,8 s (uuid 7945899488570656173, 24/11 12:30), qui renvoie vers oteafilmakers.com (lien en bio) et non plus vers les messages. Le carrousel et les deux stories créés d'abord ont été écartés : les stories (uuids -7232213809446695145 et 2260121788797177737) portent « [À SUPPRIMER] » et restent retenues par le garde-fou des placeholders.
+
 ## ⛔ Positionnement B2C, correction du 25/10/2026 (prime sur tout le reste)
 Maxime, 25/10/2026 : « OTEA Filmakers et OTEA Production, ils sont inversés […] Filmakers est axé
 B2C. Et là, le carrousel, il est B2B, donc c'est très OTEA Production. Sur OTEA Filmakers, mettre
