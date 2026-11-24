@@ -319,9 +319,15 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   Instagram seule : le libellé interne « Story R.O.I. · … » a été retiré.
 - Photos utilisées : b, f, j, k, l du manifeste. g reste refusée (contraste et skyline).
 
+- Fin novembre refaite le même soir : posts des 25, 27 et 30/11 (`posts/run-on-invest/2026-11-fin.json`)
+  et leurs stories (`posts/run-on-invest/stories-2026-11-fin.json`), toujours en publication
+  automatique. Story du 25/11 sur un i2v neuf de la passerelle j (job bf469b86, 7,5 crédits).
+  i2v neuf de l'aube b (job 4aae1a78) écarté : ses coureurs sont en bas du cadre, sous le voile
+  du texte ; à réserver à une mise en page avec le texte en haut. Story du 27/11 sur l'escalier f,
+  du 30/11 sur l'arche k.
+
 ## Reste à faire
 - Aucune story créée après le 04/12 : à fabriquer en vidéo (bloc VIDÉOS).
-- Les posts et stories des 25, 27 et 30/11 partent encore en ancienne DA.
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
 - Déposer `Archivo-SemiBold.ttf` (Google Fonts, OFL) dans `fonts/archivo/` pour les repères en 600.

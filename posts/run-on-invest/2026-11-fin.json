@@ -1,0 +1,9 @@
+{
+  "client": "run-on-invest",
+  "note": "Posts image des 25, 27 et 30/11, refonte charte V3 du 24/11/2026, mêmes textes que les visuels V2.1.",
+  "posts": [
+    {"slug": "2026-11-25-effort-trace", "photo": "f", "kicker": "L'effort crée le lien", "title": "L'effort laisse une trace."},
+    {"slug": "2026-11-27-black-friday", "photo": "j", "kicker": "Black Friday", "title": "La régularité ne se solde pas."},
+    {"slug": "2026-11-30-ecouter-dabord", "photo": "k", "kicker": "Zéro pitch", "title": "Écouter d'abord."}
+  ]
+}
