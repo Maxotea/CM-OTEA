@@ -119,3 +119,6 @@ Deux pièges que ça évite :
 Un post `draft:true` **et** `autoPublish:true` ne part pas tout de suite — mais
 il part à la seconde où quelqu'un décoche « brouillon » dans l'interface. Les
 deux drapeaux se corrigent ensemble.
+
+## Texte derrière le sujet (Maxime, 24/11/2026)
+Sur les visuels de publication (photos et Reels), le grand texte passe un peu derrière la personne détourée, pour donner de la profondeur. Il doit rester lisible : environ 12 % masqué, un mot court sur une ligne, jamais de lettre entière cachée. Outil : `~/CLAUDE CODE/trends/outils/texte_derriere.py` (photo) ; en vidéo, le masque se recalcule à chaque image.

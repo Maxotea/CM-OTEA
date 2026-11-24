@@ -44,6 +44,7 @@ plus de mal qu'un jour sans post.
   « photo concours selection », Nice dans `~/Pictures/Adobe Lightroom/`) ; cartes Filmakers jaune
   #F2E600 et noir en Inter Black ; cartes OTEA en orange #FF5800 et encre #201E1E, Forma DJR, monogramme.
   Exemple de script : `~/CLAUDE CODE/trends/2026-11-19-gta6/rendu.py`.
+- **Texte derrière le sujet** (Maxime, 24/11/2026) : détourer l'athlète pour que le grand texte passe un peu derrière lui, pour la profondeur. Outil `~/CLAUDE CODE/trends/outils/texte_derriere.py` (`masque`, `placer` vise 12 % de texte caché, `derriere`). Un mot court sur une ligne marche le mieux ; jamais de lettre entière cachée ; regarder l'image. En vidéo, masque recalculé à chaque image.
 - Hooks : `~/.claude/skills/ig-reel/hookscore.py` (prendre le premier à 70 ou plus) ; légendes :
   `ig-caption/caption.py` (READY) puis `ig-human/detect.py` (PASS). Garder l'espace avant « ? : ! »,
   ne pas reprendre la sortie de `humanize.py` qui l'enlève.
