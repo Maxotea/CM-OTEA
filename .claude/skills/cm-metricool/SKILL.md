@@ -81,6 +81,16 @@ Jamais une carte typographique seule, jamais une photo de banque, jamais une
 vidéo logée dans une vignette, jamais un `zoompan` seul. Process complet et
 pièges mesurés : `.claude/memories/story-video-plein-cadre.md`.
 
+**Crédit photographe : contrôle obligatoire avant CHAQUE création (rappel de Maxime, 24/11/2026).**
+Dès qu'un post, un carrousel, un reel ou une story utilise une photo dont le nom contient
+`HOME-SANFAUTE` (Jean-Philippe Homé-Sanfaute), il est crédité et tagué, sur tous les réseaux,
+y compris dans les posts écrits à la main et ceux des tâches planifiées. Pas d'exception : il le
+réclame à chaque oubli. `python3 scripts/credits.py <fichiers des médias>` donne la ligne à poser
+en fin de légende, avant les hashtags : Instagram/Facebook `Photos : @homesanfaute_photography` ;
+LinkedIn `Photos : @Jean-Philippe Homé-Sanfaute`, tag à poser dans LinkedIn (un @ envoyé par
+Metricool reste du texte : le signaler à Maxime dans le récap) ; story = sticker mention
+@homesanfaute_photography, à rappeler dans le brouillon. Un post sans ce crédit n'est pas créé.
+
 ## Étape 5 — Écriture
 
 Scripts de reels : relire d'abord `references/inspirations-montage.md` (les styles de montage repérés par Maxime, à reprendre en priorité), puis passer par le skill `reel-script` (hook chiffré, 3 étapes, cliffhanger, ≤175 mots), puis `reel-lint` avant tournage. Légendes : hook + valeur + 1 seul CTA + 4-6 hashtags niche. Toujours finir la légende par le pont vers l'offre du client (fitting, RDV, visite…). Photo de Jean-Philippe Homé-Sanfaute (`HOME-SANFAUTE-*`) : ajouter la ligne de crédit `Photos : @…` (LinkedIn : `Photos : @Jean-Philippe Homé-Sanfaute`) avant les hashtags (`scripts/credits.py`, `photos/photographes.json`).

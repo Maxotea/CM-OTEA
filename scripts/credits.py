@@ -76,3 +76,11 @@ def comptes_manquants(entrees, photographes=None):
     """Photographes crédités dont le compte Instagram n'est pas encore renseigné."""
     return sorted({ph["nom"] for e in entrees
                    if (ph := photographe(e, photographes)) and not ph.get("instagram")})
+
+
+if __name__ == "__main__":
+    # python3 scripts/credits.py FICHIER... : la ligne de crédit à poser, par réseau
+    import sys
+    photos = [{"drive_nom": Path(f).name} for f in sys.argv[1:]]
+    for reseau in ("instagram", "linkedin"):
+        print(f"{reseau}: {ligne_credit(photos, reseau=reseau) or '(aucun crédit)'}")

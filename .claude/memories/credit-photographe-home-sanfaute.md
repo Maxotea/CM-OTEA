@@ -19,7 +19,7 @@ relation Pure Ocean du 22/10/2026), le citer entretient la relation.
 - **Formule donnée par Jean-Philippe (message du 06/11/2026)** : sur LinkedIn,
   `Photos : @Jean-Philippe Homé-Sanfaute`, en tapant le @ dans LinkedIn et en choisissant son
   profil dans la liste, sinon le tag ne prend pas (un texte envoyé par Metricool reste du texte).
-  Sur Instagram, `Photos : @compte` ; compte pas encore donné, donc nom seul en attendant.
+  Sur Instagram, `Photos : @homesanfaute_photography` (compte relevé le 24/11/2026 sur son site home-sanfaute.fr).
 - **Légende (carrousel, post simple, reel avec ses photos)** : ligne en fin de légende, avant
   les hashtags. Une légende qui part sur Instagram et LinkedIn à la fois prend la formule
   Instagram ; `carrousel.py` rappelle de corriger la ligne côté LinkedIn. `scripts/carrousel.py`
@@ -32,3 +32,11 @@ relation Pure Ocean du 22/10/2026), le citer entretient la relation.
   avertissement au rendu.
 - Crédit du PDF `_credit-photos-HOME-SANFAUTE_Jean-Philippe.pdf` (swisstransfer, Mac de Maxime)
   : s'il impose une formule différente, c'est elle qui fait foi, à reporter dans `credits.py`.
+
+**24/11/2026, rappel de Maxime :** la règle passait à la trappe, Jean-Philippe revient vers lui
+à chaque post non crédité. Causes : compte Instagram jamais renseigné (crédit par le nom seul,
+donc aucun tag), et règle appliquée seulement par `carrousel.py` et `story-photo.py`, pas par
+les posts écrits à la main ni les tâches (cm-hebdo, veille trends). Depuis : compte renseigné,
+contrôle obligatoire écrit dans `cm-metricool/SKILL.md` (avant l'Étape 5), et
+`python3 scripts/credits.py <fichiers>` donne la ligne par réseau. Vaut pour tous les comptes
+(OTEA Production, Otea Filmakers, LinkedIn de Maxime) et tous les formats, reels compris.
