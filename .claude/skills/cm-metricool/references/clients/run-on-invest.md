@@ -1,5 +1,91 @@
 # Run On Invest (R.O.I.) — fiche client (onboardé 03/08/2026)
 
+## 🎨 CHARTE V3 « TERRACOTTA » · validée en réunion le 19/11/2026 · FAIT FOI (mise à jour CM du 24/11/2026)
+
+Remplace le kit V2.1 (Blaze, Écru, Space Mono) décrit plus bas, qui n'est plus qu'un historique.
+Source : `~/CLAUDE CODE/run-on-invest/charte/` (HTML + PDF envoyé aux associés le 19/11) et
+l'artifact « Charte R.O.I. ». Tout visuel, carrousel, story ou vidéo créé à partir d'aujourd'hui
+suit ce bloc ; les visuels déjà programmés en Blaze partent tels quels (voir « Reste à faire »).
+
+**Couleurs** (proportions de la charte)
+| Nom | Hex | Part | Usage |
+|---|---|---|---|
+| Terracotta | `#B5412B` | 50 % | grands aplats, slide CTA, carton final des vidéos |
+| Terracotta clair | `#D9573C` | | accent sur fond Encre ou sur photo voilée (mots en accent, filet, flèche) |
+| Encre | `#111111` | 30 % | fonds, voile des photos |
+| Craie | `#EFEDE8` | 15 % | fond clair, texte sur Encre, sur photo et sur Terracotta |
+| Béton | `#8C877E` | 5 % | texte secondaire |
+- Texte Craie sur Terracotta, **jamais Encre sur Terracotta**.
+- La seule couleur d'une image R.O.I. est le Terracotta : **les photos et les vidéos sont en noir et blanc**.
+
+**Typographie** : Archivo et rien d'autre. Titres Archivo Expanded Black, capitales, interlettrage −3,5 %.
+Texte Archivo 400/500. Repères (horaires, distances, lieux) Archivo 600 en petites capitales espacées.
+Space Mono est retirée. Fichiers dans `fonts/archivo/` (Archivo SemiBold encore absent : les repères
+sortent en Archivo Regular en attendant, `scripts/themes.json` le prend dès qu'il est déposé).
+
+**Photo** : noir et blanc contrasté, avec du grain. Contre-jour, silhouettes, gens de dos.
+Avant la première édition : images générées, **sans aucune personne identifiable**, déclarées
+« contenu IA » sur Instagram (`isAiGenerated: true`). Dès la première édition, les vraies photos les
+remplacent avec le même traitement. Le passage en N&B est automatique dans `carrousel.py` et
+`story-photo.py` (`fond.noir_et_blanc: true` du thème) : on garde les originaux en couleur.
+
+**Logo et signature** : la charte V3 contient un nouveau logo et une nouvelle signature, validés
+le 19/11/2026. ⛔ **Rien de public avant le dépôt du logo à l'INPI** (charte §08), et ce dépôt est
+public : ils ne sont ni décrits ni versés ici. Le kit (PNG + SVG en Terracotta, Craie, Encre,
+symbole, avatars) est sur le Mac de Maxime dans `~/CLAUDE CODE/run-on-invest/logo-cm/`, la
+charte privée dans `~/CLAUDE CODE/run-on-invest/charte/`. Tant que le dépôt INPI n'est pas
+confirmé (Elodie, depuis le 23/11/2026), les visuels publics gardent « R.O.I. » composé en Archivo
+Expanded Black et la signature « On court d'abord. On parle ensuite. ».
+
+**Ton** (charte §07) : tutoiement toujours, phrases courtes, du concret. Légendes en français. Un emoji maximum, cinq hashtags maximum. « Invest » = du temps et de
+l'attention, jamais une promesse d'affaires. Interdits : « networking premium », « écosystème »,
+« disruptif », vocabulaire de club fermé, jargon d'initié (VMA, seuil, fractionné), vouvoiement,
+tiret cadratin. Trois piliers : l'effort crée le lien, zéro pitch, la régularité paie.
+
+**Ce qu'on peut dire** (charte §08, inchangé depuis la décision Q10 du 12/10) : lieu publiable
+(course à La Défense, échange à la Plénitude Arena). Dates, horaires, jauge, prix, Early Bird,
+fréquence, lien d'inscription, application : verrouillés. Partenaires : rien tant que ce n'est pas
+signé et validé pour annonce.
+
+## 🎬 VIDÉOS · Higgsfield ou Artlist, ultra réaliste et cinématographique (Maxime, 24/11/2026)
+
+Les nouveaux contenus vidéo de R.O.I. se fabriquent avec **Higgsfield** ou **Artlist** (génération
+image puis image vers vidéo, et banque Artlist 4K), au niveau des films déjà livrés. La vidéo passe
+avant le carrousel et la story (règle générale de Maxime du 23/11).
+
+**Référence de rendu** : le film partenaires charte V3 du 24/11/2026
+(`~/Downloads/ROI-film-partenaires-charteV3-16x9.mp4`, 42 s, privé) : fond Encre, titres Archivo Expanded
+Black en Craie, plans N&B contrastés à grain, carton final en aplat Terracotta. Le teaser
+« avant-première » du 17/11 (`~/Movies/ROI-teaser-entrepreneurs/`) est sur l'ancienne DA (serif,
+couleur) : ne plus le prendre comme modèle de look ; ses 8 plans Artlist 4K de La Défense
+(`ARTLIST/`) restent réutilisables, passés en N&B.
+
+**Prompt image verrouillé** (anglais, seul le sujet change) :
+> Cinematic photograph, shot on ARRI Alexa 35, 35mm anamorphic lens, La Défense business district
+> near Paris at sunrise, [SUJET], seen from behind or as backlit silhouettes, faces not visible,
+> long shadows, low golden light, shallow depth of field, photorealistic, subtle 35mm film grain,
+> no text, no signage, no logos, no brand names.
+
+Sujets qui marchent : escaliers et parvis entre les tours, passerelles vitrées, reflets dans les
+façades, chaussures au ras du sol, coureurs de dos qui remontent vers l'Arche, deux personnes côte à
+côte. À proscrire : visage net ou reconnaissable, enseigne ou lettrage (les modèles inventent de
+fausses lettres, incident des plans l et j d'octobre), coureur torse nu, logo de marque, skyline
+qui ne ressemble pas à La Défense (plans g et k refusés en octobre).
+
+**Image vers vidéo** : 5 s, mouvement de caméra lent (travelling ou push-in), cadrage verrouillé dans
+le prompt. On contrôle la première et la dernière frame et on regarde le plan en entier : silhouette
+qui se déforme, personne qui sort du cadre ou visage qui se forme = plan refusé (incidents s4, s7 et g
+du 13/10). Coût estimé et solde de crédits vérifiés avant chaque lot (plancher Higgsfield fixé par Maxime).
+
+**Finition** : génération en couleur, passage en N&B au montage (contraste et grain, par exemple
+ffmpeg `hue=s=0,eq=contrast=1.25,noise=alls=10:allf=t`), titres Archivo Expanded Black Craie,
+accents Terracotta clair, carton final Terracotta avec texte Craie. Reels : structure 15 à 45 s
+(accroche sous 2 s, un seul CTA « écris-nous en message privé »), musique Artlist posée au montage.
+Stories : muettes (`-an`). Chaque vidéo générée part avec la case « contenu IA ».
+Vrais rushs OTEA : seulement avec l'accord des personnes reconnaissables.
+
+---
+
 ## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
 
 « Oui, passe R.O.I. en auto. » La relève (`validation_auto: true` dans
@@ -15,9 +101,9 @@ posée dans Instagram. On continue de tout créer en brouillon.
 
 ## Identité
 - blogId Metricool : **6636615** (l'ancien « brand sans nom » de la passation — mystère résolu)
-- Réseaux : **Instagram uniquement** (@runoninvest). Logo posé dans Metricool en août.
+- Réseaux : Instagram (@runoninvest) et page LinkedIn connectés ; plus rien sur LinkedIn depuis le 12/10/2026. Logo posé dans Metricool en août (ancien logo : à changer après le dépôt INPI).
 - Concept : course + rencontre **réservée aux entrepreneurs et indépendants** — 5 ou 10 km à son rythme, puis un vrai temps d'échange. Ni club de running, ni afterwork.
-- Signature : *On court d'abord. On parle ensuite.* (sur visuels : *Courir d'abord. Parler ensuite.*)
+- Signature publique : *On court d'abord. On parle ensuite.* (sur visuels : *Courir d'abord. Parler ensuite.*). Nouvelle signature (charte privée) après le dépôt INPI seulement.
 - Descripteur verrouillé au logo : COURSE & NETWORKING — ENTREPRENEURS
 
 ## Ligne éditoriale
@@ -26,7 +112,7 @@ posée dans Instagram. On continue de tout créer en brouillon.
 - **Interdits** : « networking premium », « écosystème », « disruptif », vocabulaire de club fermé, promesses de business, jargon sportif d'initié (VMA, seuil, fractionné), vouvoiement.
 - Exemple validé à imiter : « Samedi, 8h30. 5 ou 10 km. Puis un petit-déj où personne ne pitche. 30 places, c'est tout. »
 
-## DA (typographique par design — les cartes typo sont l'identité, pas un pis-aller)
+## DA du kit V2.1 (HISTORIQUE, remplacée par la charte V3 du 19/11/2026 en tête de fiche)
 - Couleurs : Blaze `#FF4A17` (accent unique) · Encre `#111111` · Écru `#EDE7DD` (fond défaut) · Craie `#F7F4EF` · Béton `#8C877E` · Braise `#D93A0E` (rare). Équilibre 55 % Écru / 30 % Encre / 15 % Blaze.
 - 3 familles de visuels jamais mélangées : fond Écru / fond Encre / aplat Blaze.
 - Contraste : jamais de Blaze en petit corps sur Écru ; l'orange = aplat, gros titre ≥40 px, ou texte sur Encre.
@@ -219,3 +305,14 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   LinkedIn (à garder, archiver ou supprimer) et les publications en ligne qui contredisent Q10 ; 394314653 (18/11,
   « sort tout seul au 4e km ») à reprendre avant le 15/11 ; carrousel A4 non branché (394204763 toujours au 21/10) ;
   7 libellés de stories avec un tiret cadratin ; registre publicitaire vide pour ce client.
+
+## Reste à faire (mise à jour du 24/11/2026)
+- Programmé en publication automatique jusqu'au 07/12 (25/11, 27/11, 30/11, 02/12, 04/12, 07/12 et
+  leurs stories) : visuels en ancienne DA couleur + Blaze. Ils partent tels quels sauf décision de
+  Maxime ; les refaire en N&B Terracotta se fait ici, avec `carrousel.py` et `story-photo.py`.
+- Brouillons du 09/12 au 01/01 : même ancienne DA, à refaire en charte V3 avant validation.
+- Aucune story créée pour décembre : à fabriquer en vidéo (bloc VIDÉOS).
+- Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
+  nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
+- Déposer `Archivo-SemiBold.ttf` (Google Fonts, OFL) dans `fonts/archivo/` pour les repères en 600.
+

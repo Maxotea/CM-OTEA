@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import credits  # noqa: E402
 
 try:
-    from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 except ImportError:
     sys.exit("Pillow manquant : pip install pillow")
 
@@ -63,6 +63,7 @@ VOILE_MAX = 0.94           # au-delà, le fond photo ne sert plus à rien
 RAMPE_VOILE = 150          # dégradé au-dessus du bloc de texte, en pixels
 
 FONT_DIRS = [
+    Path(__file__).resolve().parent.parent / "fonts",  # polices déclarées du dépôt d'abord
     Path("/System/Library/Fonts"), Path("/Library/Fonts"), Path.home() / "Library/Fonts",
     Path("/usr/share/fonts"), Path("/usr/local/share/fonts"), Path.home() / ".fonts",
 ]
@@ -172,14 +173,24 @@ def _fond_sous_encre(img, masque, halo=3):
 
 
 def _alpha_requis(fond, texte, voile, cible):
-    """Plus petite opacité de voile qui amène le contraste à la cible."""
-    if _contraste(fond, texte) >= cible:
+    """Plus petite opacité de voile qui amène le contraste à la cible.
+
+    Le contraste compte dans le sens du voile : un texte moyen (Terracotta) a
+    3,9:1 sur du blanc, mais un voile sombre le fait passer par 1:1 avant de le
+    rendre lisible. On exige donc un fond du même côté que le voile."""
+    sombre = _luminance(voile) < _luminance(texte)
+
+    def ok(f):
+        cote = _luminance(f) <= _luminance(texte) if sombre else _luminance(f) >= _luminance(texte)
+        return cote and _contraste(f, texte) >= cible
+
+    if ok(fond):
         return 0.0
     bas, haut = 0.0, 1.0
     for _ in range(24):                       # dichotomie, 24 tours = 1e-7
         milieu = (bas + haut) / 2
         melange = tuple(f * (1 - milieu) + v * milieu for f, v in zip(fond, voile))
-        if _contraste(melange, texte) >= cible:
+        if ok(melange):
             haut = milieu
         else:
             bas = milieu
@@ -209,7 +220,14 @@ def charger_fond(conf, photo, slug):
     else:
         ch = int(lw * H / W)
         img = img.crop((0, (lh - ch) // 2, lw, (lh - ch) // 2 + ch))
-    return img.resize((W, H), Image.LANCZOS)
+    return noir_et_blanc(conf, img.resize((W, H), Image.LANCZOS))
+
+
+def noir_et_blanc(conf, img):
+    """Photo en N&B contrasté quand la charte du client le demande (fond.noir_et_blanc)."""
+    if not conf.get("noir_et_blanc"):
+        return img
+    return ImageOps.autocontrast(ImageOps.grayscale(img), cutoff=1).convert("RGB")
 
 
 def poser_voile(img, boite, alpha, voile):
@@ -414,10 +432,12 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
         pire = _fond_sous_encre(img, masque)
         cible_t = conf_fond.get("contraste_titre", CONTRASTE_TITRE)
         cible_c = conf_fond.get("contraste_corps", CONTRASTE_CORPS)
+        # accent = mots du titre et flèche, gros et gras : 3:1 WCAG suffit si le thème le déclare
+        cible_a = conf_fond.get("contraste_accent", cible_c)
         alpha = max(
             _alpha_requis(pire, _hex_rgb(couleurs["fg"]), voile, cible_t),
             _alpha_requis(pire, _hex_rgb(couleurs["corps"]), voile, cible_c),
-            _alpha_requis(pire, _hex_rgb(couleurs["accent"]), voile, cible_c),
+            _alpha_requis(pire, _hex_rgb(couleurs["accent"]), voile, cible_a),
         )
         if alpha > VOILE_MAX:
             raise ValueError(
@@ -429,13 +449,13 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
         # Contrôle après composition, sur les pixels et non sur le modèle.
         obtenu = _fond_sous_encre(img, masque)
         reel_t = _contraste(obtenu, _hex_rgb(couleurs["fg"]))
-        reel_c = min(_contraste(obtenu, _hex_rgb(couleurs["corps"])),
-                     _contraste(obtenu, _hex_rgb(couleurs["accent"])))
-        if reel_t < cible_t - 0.1 or reel_c < cible_c - 0.1:
+        reel_c = _contraste(obtenu, _hex_rgb(couleurs["corps"]))
+        reel_a = _contraste(obtenu, _hex_rgb(couleurs["accent"]))
+        if reel_t < cible_t - 0.1 or reel_c < cible_c - 0.1 or reel_a < cible_a - 0.1:
             raise ValueError(
                 f"{slug} · slide {index} : après voile, contraste mesuré sous le "
-                f"texte {reel_t:.2f}:1 pour le titre et {reel_c:.2f}:1 pour le corps, "
-                f"en dessous des cibles {cible_t}:1 et {cible_c}:1. "
+                f"texte {reel_t:.2f}:1 pour le titre, {reel_c:.2f}:1 pour le corps et "
+                f"{reel_a:.2f}:1 pour l'accent, cibles {cible_t}:1, {cible_c}:1 et {cible_a}:1. "
                 f"Photo « {photo['cle']} » à remplacer.")
         d = ImageDraw.Draw(img)
 

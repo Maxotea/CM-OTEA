@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Visuels Run On Invest — DA typographique du kit V2.1.
+"""⚠️ HISTORIQUE (kit V2.1, Blaze). Depuis la charte V3 du 19/11/2026 (Terracotta, photos N&B),
+les visuels R.O.I. se font avec scripts/carrousel.py et scripts/story-photo.py, thème run-on-invest.
+
+Visuels Run On Invest — DA typographique du kit V2.1.
 
 ⚠️ RÈGLE DU 04/08/2026 : les stories partent MUETTES. `wav()` et le `-map 1:a`
    de `build()` sont conservés pour l'historique et pour d'éventuels formats
