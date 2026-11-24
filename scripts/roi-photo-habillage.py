@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Run On Invest — habillage typographique par-dessus une photo IA.
+"""⚠️ HISTORIQUE (kit V2.1, Blaze). Depuis la charte V3 du 19/11/2026 (Terracotta, photos N&B),
+les visuels R.O.I. se font avec scripts/carrousel.py et scripts/story-photo.py, thème run-on-invest.
+
+Run On Invest — habillage typographique par-dessus une photo IA.
 
 Complète `roi-visuels.py` (cartes 100 % typographiques). Ici la DA du kit V2.1
 est posée sur une photo IA ultra réaliste, autorisée par Maxime le 04/08/2026

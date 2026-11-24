@@ -526,7 +526,7 @@ def composer(photo, theme, carte, extra=None, decalage=0.5, visages=None, voile_
     st = theme["story"]
     logo, secours = charger_logo(st)
     opts = {"logo": logo, "souligne": bool(st.get("registre_souligne")), "logo_couleur": couleur_logo(logo)}
-    fond = cadrer(photo, decalage, basse_definition)
+    fond = carrousel.noir_et_blanc(theme.get("fond", {}), cadrer(photo, decalage, basse_definition))
     base, col = couleurs(theme, opts)
     masq = masques(theme, carte, extra, opts)
     bande = controler_visages(masq, visages)

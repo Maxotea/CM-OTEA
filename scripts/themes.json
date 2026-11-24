@@ -284,12 +284,12 @@
       "instagram"
     ],
     "heure": "08:00",
-    "bg": "#EDE7DD",
+    "bg": "#EFEDE8",
     "fg": "#111111",
     "muted": "#8C877E",
-    "accent": "#FF4A17",
-    "cta_bg": "#FF4A17",
-    "cta_fg": "#111111",
+    "accent": "#B5412B",
+    "cta_bg": "#B5412B",
+    "cta_fg": "#EFEDE8",
     "font_family": [
       "Archivo Expanded",
       "Archivo",
@@ -298,17 +298,19 @@
     ],
     "uppercase_titles": true,
     "rule": true,
-    "note": "Kit V2.1 : Blaze #FF4A17 (accent unique), Encre #111111, Écru #EDE7DD, Craie #F7F4EF, Béton #8C877E. Titres en Archivo Expanded Black (fonts/archivo/Archivo_Expanded-Black.ttf), corps en Archivo 400 normal (Archivo-Regular.ttf) : Archivo_Expanded-Regular est volontairement absent de fonts/. Seul compte autorisé aux photos IA (Maxime, 04/08/2026), JAMAIS de personne identifiable. Compte en brouillon : rien ne part sans validation explicite de Maxime.",
+    "note": "Charte V3 validée en réunion le 19/11/2026 (source : ~/CLAUDE CODE/run-on-invest/charte/, artifact « Charte R.O.I. »), remplace le kit V2.1. Terracotta #B5412B en grands aplats (50 %), Encre #111111 (30 %), Craie #EFEDE8 (15 %), Béton #8C877E (5 %). Texte Craie sur Terracotta, jamais Encre. Sur fond Encre ou photo voilée, le Terracotta passe en version claire #D9573C. Une seule typo, Archivo (titres Expanded Black capitales −3,5 %, texte 400/500, repères 600 espacés) ; Space Mono retirée. Photos en noir et blanc contrasté avec grain : la seule couleur d'une image R.O.I. est le Terracotta (fond.noir_et_blanc). Images IA autorisées jusqu'à la première édition, jamais de personne identifiable, case « contenu IA » cochée. Nouveau logo et nouvelle signature : rien de public avant le dépôt INPI, ni dans ce dépôt public (voir la fiche).",
     "fond": {
       "manifeste": "photos/run-on-invest.json",
       "cache": "medias/run-on-invest/fonds",
-      "texte": "#F7F4EF",
-      "muted": "#EDE7DD",
-      "accent": "#FF4A17",
+      "texte": "#EFEDE8",
+      "muted": "#EFEDE8",
+      "accent": "#D9573C",
       "voile": "#111111",
       "contraste_titre": 7.0,
       "contraste_corps": 4.5,
-      "_doc": "Photo IA ultra réaliste (La Défense au petit matin, coureurs de dos ou en plan large) sous la DA du kit. Manifeste : provenance ia, champ autorisation, personne_identifiable false vérifié à l'œil. Photo sur chaque slide, jamais d'aplat, jamais photo et aplat dans un même carrousel."
+      "_doc": "Photo IA ultra réaliste (La Défense au petit matin, coureurs de dos ou en plan large) sous la DA du kit. Manifeste : provenance ia, champ autorisation, personne_identifiable false vérifié à l'œil. Photo sur chaque slide, jamais d'aplat, jamais photo et aplat dans un même carrousel. Depuis la charte V3 (19/11/2026) : noir_et_blanc true, la photo passe en N&B contrasté avant le voile, la barre et les accents restent Terracotta clair.",
+      "noir_et_blanc": true,
+      "contraste_accent": 3.0
     },
     "story": {
       "nom": "R.O.I.",
@@ -332,10 +334,12 @@
           "Archivo Expanded Black"
         ],
         "label": [
-          "Space Mono Bold"
+          "Archivo SemiBold",
+          "Archivo Regular"
         ],
         "mono": [
-          "Space Mono Regular"
+          "Archivo SemiBold",
+          "Archivo Regular"
         ]
       },
       "tracking_nom": -0.8,
@@ -351,7 +355,7 @@
       "cache": "medias/run-on-invest/originaux",
       "photos_ia_autorisees": true,
       "photos_ia_source": "Maxime, 04/08/2026 : seul compte autorisé aux images IA, faute de banque photo ; jamais une personne identifiable",
-      "_doc": "R.O.I. en Archivo Expanded Black (tracking -0,8 px, les -3,5 % du kit à 24 px). Grain 26 posé avant la mesure. cache : originaux IA téléchargés depuis url_originale du manifeste."
+      "_doc": "R.O.I. en Archivo Expanded Black (tracking -0,8 px, les -3,5 % du kit à 24 px). Grain 26 posé avant la mesure. cache : originaux IA téléchargés depuis url_originale du manifeste. Charte V3 : repères en Archivo 600 (Archivo SemiBold, repli Archivo Regular tant que le fichier n'est pas dans fonts/archivo), plus de Space Mono."
     }
   }
 }
