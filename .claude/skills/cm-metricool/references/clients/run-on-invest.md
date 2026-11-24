@@ -306,13 +306,22 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   « sort tout seul au 4e km ») à reprendre avant le 15/11 ; carrousel A4 non branché (394204763 toujours au 21/10) ;
   7 libellés de stories avec un tiret cadratin ; registre publicitaire vide pour ce client.
 
-## Reste à faire (mise à jour du 24/11/2026)
-- Programmé en publication automatique jusqu'au 07/12 (25/11, 27/11, 30/11, 02/12, 04/12, 07/12 et
-  leurs stories) : visuels en ancienne DA couleur + Blaze. Ils partent tels quels sauf décision de
-  Maxime ; les refaire en N&B Terracotta se fait ici, avec `carrousel.py` et `story-photo.py`.
-- Brouillons du 09/12 au 01/01 : même ancienne DA, à refaire en charte V3 avant validation.
-- Aucune story créée pour décembre : à fabriquer en vidéo (bloc VIDÉOS).
+## Décembre refait en charte V3 (24/11/2026, demande de Maxime)
+- 16 contenus de Metricool repassés en N&B Terracotta, mêmes textes, mêmes dates, même mode :
+  5 carrousels (02, 09, 16, 23, 30/12), 9 posts image (04, 07, 11, 14, 18, 21, 25, 28/12, 01/01),
+  2 stories vidéo (02 et 04/12, 12:00). Les 3 posts et 2 stories des 02, 04 et 07/12 restent en
+  publication automatique, les 11 autres en brouillon. « Contenu IA » coché partout (décision Q12).
+- Sources : `carrousels/run-on-invest/2026-12-*.json`, `posts/run-on-invest/2026-12.json`
+  (`scripts/post-photo.py`), `posts/run-on-invest/stories-2026-12.json`.
+- Stories : vidéos i2v d'octobre réutilisées sans crédit (arche k large bb691351, escalier f
+  af03059e coupé à 80 images car un coureur se déforme ensuite), N&B + grain + calque
+  `story-photo.py`, muettes. En publication automatique, Metricool refuse un texte sur une story
+  Instagram seule : le libellé interne « Story R.O.I. · … » a été retiré.
+- Photos utilisées : b, f, j, k, l du manifeste. g reste refusée (contraste et skyline).
+
+## Reste à faire
+- Aucune story créée après le 04/12 : à fabriquer en vidéo (bloc VIDÉOS).
+- Les posts et stories des 25, 27 et 30/11 partent encore en ancienne DA.
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
 - Déposer `Archivo-SemiBold.ttf` (Google Fonts, OFL) dans `fonts/archivo/` pour les repères en 600.
-

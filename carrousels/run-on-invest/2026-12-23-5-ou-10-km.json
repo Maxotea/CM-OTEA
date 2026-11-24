@@ -1,0 +1,57 @@
+{
+  "client": "run-on-invest",
+  "slug": "2026-12-23-5-ou-10-km",
+  "archetype": "A1",
+  "pilier": "P3",
+  "date_time": "2026-12-23T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "slides": [
+    {
+      "kicker": "5 ou 10 km",
+      "title": "Lequel choisir ?",
+      "body": "**Le bon**, c'est celui qui te fait revenir.",
+      "photo": "f",
+      "cover": true
+    },
+    {
+      "kicker": "Le principe",
+      "title": "Tu choisis ta distance.",
+      "body": "Chacun court **à son rythme**. Aucun niveau requis.",
+      "photo": "j"
+    },
+    {
+      "kicker": "Prends 5 km si",
+      "title": "Tu reprends, ou tu découvres.",
+      "body": "Ou si tu veux finir avec **du souffle pour parler**.",
+      "photo": "b"
+    },
+    {
+      "kicker": "Prends 10 km si",
+      "title": "Tu cours déjà chaque semaine.",
+      "body": "Et tu as envie d'une **vraie sortie**, sans forcer.",
+      "photo": "l"
+    },
+    {
+      "kicker": "Dans les deux cas",
+      "title": "Deux distances. Un seul échange.",
+      "body": "Tout le monde se retrouve à la **Plénitude Arena**.",
+      "photo": "k"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "**5 ou 10 km.** Ton rythme. Écris-nous en message privé.",
+      "photo": "f",
+      "cta": true
+    }
+  ],
+  "caption": "Légende inchangée : celle du post Metricool existant.",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#ladefense"
+  ],
+  "note": "Refonte charte V3 du 24/11/2026 : mêmes textes que le visuel kit V2.1 déjà posé dans Metricool, photos du manifeste en N&B."
+}

@@ -1,0 +1,60 @@
+{
+  "client": "run-on-invest",
+  "note": "Posts image seule de décembre, refonte charte V3 du 24/11/2026, mêmes textes que les visuels V2.1.",
+  "posts": [
+    {
+      "slug": "2026-12-04-cafe-5-km",
+      "photo": "l",
+      "kicker": "L'effort crée le lien",
+      "title": "Remplace un café par 5 km."
+    },
+    {
+      "slug": "2026-12-07-tu-fais-quoi",
+      "photo": "k",
+      "kicker": "Zéro pitch",
+      "title": "« Tu fais quoi ? » attendra."
+    },
+    {
+      "slug": "2026-12-11-corrida-de-noel",
+      "photo": "f",
+      "kicker": "Issy · 13 décembre",
+      "title": "Dimanche, la Corrida de Noël."
+    },
+    {
+      "slug": "2026-12-14-zero-pitch",
+      "photo": "b",
+      "kicker": "La Défense",
+      "title": "5 ou 10 km. Zéro pitch."
+    },
+    {
+      "slug": "2026-12-18-vacances-de-noel",
+      "photo": "j",
+      "kicker": "Vacances de Noël",
+      "title": "Une sortie courte suffit."
+    },
+    {
+      "slug": "2026-12-21-solstice",
+      "photo": "b",
+      "kicker": "Solstice d'hiver",
+      "title": "Le jour le plus court."
+    },
+    {
+      "slug": "2026-12-25-noel",
+      "photo": "l",
+      "kicker": "Joyeux Noël",
+      "title": "Sortie ou grasse matinée ?"
+    },
+    {
+      "slug": "2026-12-28-sans-rien-a-vendre",
+      "photo": "k",
+      "kicker": "Zéro pitch",
+      "title": "Sans rien à vendre."
+    },
+    {
+      "slug": "2027-01-01-une-regle",
+      "photo": "f",
+      "kicker": "La régularité paie",
+      "title": "Pas de résolution. Une règle."
+    }
+  ]
+}

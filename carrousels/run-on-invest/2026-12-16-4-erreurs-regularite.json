@@ -1,0 +1,57 @@
+{
+  "client": "run-on-invest",
+  "slug": "2026-12-16-4-erreurs-regularite",
+  "archetype": "A1",
+  "pilier": "P3",
+  "date_time": "2026-12-16T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "slides": [
+    {
+      "kicker": "La régularité paie",
+      "title": "4 erreurs qui cassent ta régularité.",
+      "body": "Et **la correction**, juste en dessous.",
+      "photo": "k",
+      "cover": true
+    },
+    {
+      "kicker": "Erreur 01",
+      "title": "Attendre d'avoir le temps.",
+      "body": "Tu ne l'auras pas. **Note ta sortie dans l'agenda**, comme un rendez-vous client.",
+      "photo": "b"
+    },
+    {
+      "kicker": "Erreur 02",
+      "title": "Viser trop loin, trop vite.",
+      "body": "Une sortie qui te donne envie de revenir vaut mieux qu'une sortie qui t'épuise. **Commence à 5 km.**",
+      "photo": "f"
+    },
+    {
+      "kicker": "Erreur 03",
+      "title": "Tout couper en décembre.",
+      "body": "Les fêtes passent, l'habitude reste. **Garde une sortie par semaine**, même courte.",
+      "photo": "j"
+    },
+    {
+      "kicker": "Erreur 04",
+      "title": "Courir toujours seul.",
+      "body": "Un rendez-vous partagé, **tu l'annules moins**. Quelqu'un compte sur toi.",
+      "photo": "l"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "La régularité paie. **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "Légende inchangée : celle du post Metricool existant.",
+  "hashtags": [
+    "#runoninvest",
+    "#regularite",
+    "#course",
+    "#entrepreneurs",
+    "#ladefense"
+  ],
+  "note": "Refonte charte V3 du 24/11/2026 : mêmes textes que le visuel kit V2.1 déjà posé dans Metricool, photos du manifeste en N&B."
+}

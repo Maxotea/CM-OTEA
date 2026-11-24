@@ -382,6 +382,8 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
     else:
         y = max(MARGIN + 60, (H - total_h) // 2)      # contenu : bloc centré verticalement
 
+    if kicker and sum(d.textlength(ch, font=kf) for ch in kicker) + 6 * (len(kicker) - 1) > CONTENT_W:
+        raise ValueError(f"{slug} · slide {index} : le kicker « {kicker} » dépasse la marge. Le raccourcir.")
     if y + total_h > floor:
         raise ValueError(
             f"{slug} · slide {index} : le texte déborde même à la taille minimale. "
@@ -411,7 +413,7 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
         if not is_cta:
             dessin.text((MARGIN, H - MARGIN - 34), f"{index}/{total}",
                         font=nf, fill=coul("muted"))
-        if is_cover:
+        if is_cover and total > 1:          # un post image seul n'a rien à faire défiler
             cue = "SWIPE →"
             dessin.text((W - MARGIN - dessin.textlength(cue, font=kf),
                          H - MARGIN - 40), cue, font=kf, fill=coul("accent"))
@@ -444,7 +446,9 @@ def render_slide(slide, theme, index, total, slug, fonds=None):
                 f"{slug} · slide {index} : la photo « {photo['cle']} » est trop claire "
                 f"sous le texte, il faudrait un voile à {alpha:.0%} et le fond "
                 f"disparaîtrait. Choisir une autre photo.")
-        img = poser_voile(img, (0, cadre[1], W, H), alpha, voile)
+        # plein dès 8 px au-dessus du texte : la mesure prend un halo de 3 px + flou, qui sinon
+        # tombe dans le dégradé du voile (un accent Terracotta y perdait 0,2:1 et échouait)
+        img = poser_voile(img, (0, max(0, cadre[1] - 8), W, H), alpha, voile)
 
         # Contrôle après composition, sur les pixels et non sur le modèle.
         obtenu = _fond_sous_encre(img, masque)
