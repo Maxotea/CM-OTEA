@@ -1,0 +1,57 @@
+{
+  "client": "run-on-invest",
+  "slug": "2026-12-09-au-3e-km",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2026-12-09T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "slides": [
+    {
+      "kicker": "L'effort crée le lien",
+      "title": "Au 3e km, plus personne ne joue un rôle.",
+      "body": "**Kilomètre par kilomètre.**",
+      "photo": "b",
+      "cover": true
+    },
+    {
+      "kicker": "Km 1",
+      "title": "On se jauge.",
+      "body": "Chacun cherche son rythme. **Le titre et la boîte** sont encore là.",
+      "photo": "j"
+    },
+    {
+      "kicker": "Km 2",
+      "title": "Le souffle s'installe.",
+      "body": "Les phrases raccourcissent. **On garde l'essentiel.**",
+      "photo": "k"
+    },
+    {
+      "kicker": "Km 3",
+      "title": "Plus personne ne joue un rôle.",
+      "body": "Il reste **deux personnes qui courent**, côte à côte.",
+      "photo": "l"
+    },
+    {
+      "kicker": "Après la ligne",
+      "title": "On se pose à la Plénitude Arena.",
+      "body": "La conversation part de **ce que tu viens de vivre**.",
+      "photo": "f"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "**5 ou 10 km**, puis un vrai temps d'échange. Écris-nous en message privé.",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Légende inchangée : celle du post Metricool existant.",
+  "hashtags": [
+    "#runoninvest",
+    "#entrepreneurs",
+    "#course",
+    "#ladefense",
+    "#independants"
+  ],
+  "note": "Refonte charte V3 du 24/11/2026 : mêmes textes que le visuel kit V2.1 déjà posé dans Metricool, photos du manifeste en N&B."
+}

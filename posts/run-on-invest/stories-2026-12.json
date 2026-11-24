@@ -1,0 +1,8 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories de décembre en charte V3 (24/11/2026). Vidéos i2v d'octobre réutilisées : s02 = arche k large (job bb691351), s04 = escalier f (job af03059e, coupé à 80 images : un coureur se déforme ensuite). N&B, calque story-photo, muet.",
+  "cartes": [
+    {"cle": "s02", "jour": "Aucun chrono", "phrase": "Ton rythme. Pas le **leur**.", "registre": "LA RÉGULARITÉ PAIE"},
+    {"cle": "s04", "jour": "Courir d'abord", "phrase": "Zéro **pitch**.", "registre": "ZÉRO PITCH"}
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "client": "run-on-invest",
+  "slug": "2026-12-02-idees-recues",
+  "archetype": "A1",
+  "pilier": "P2",
+  "date_time": "2026-12-02T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "slides": [
+    {
+      "kicker": "Zéro pitch",
+      "title": "4 idées reçues sur le réseau.",
+      "body": "Aucune ne passe **le premier kilomètre**.",
+      "photo": "f",
+      "cover": true
+    },
+    {
+      "kicker": "Idée reçue 01",
+      "title": "« Il te faut un pitch. »",
+      "body": "Personne ne te le demandera. **Zéro pitch**, c'est la règle.",
+      "photo": "b"
+    },
+    {
+      "kicker": "Idée reçue 02",
+      "title": "« Le réseau se fait en afterwork. »",
+      "body": "Ici, il se fait après **5 ou 10 km**, à ton rythme, à La Défense.",
+      "photo": "k"
+    },
+    {
+      "kicker": "Idée reçue 03",
+      "title": "« Il faut parler le premier. »",
+      "body": "À côté de quelqu'un qui court, tu n'as rien à prouver. **Tu respires, ça suffit.**",
+      "photo": "l"
+    },
+    {
+      "kicker": "Idée reçue 04",
+      "title": "« Il faut être bon coureur. »",
+      "body": "**Aucun niveau requis.** 5 ou 10 km, chacun à son rythme.",
+      "photo": "j"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Course et networking, entrepreneurs. **Écris-nous en message privé.**",
+      "photo": "f",
+      "cta": true
+    }
+  ],
+  "caption": "Légende inchangée : celle du post Metricool existant.",
+  "hashtags": [
+    "#runoninvest",
+    "#zeropitch",
+    "#entrepreneurs",
+    "#independants",
+    "#course"
+  ],
+  "note": "Refonte charte V3 du 24/11/2026 : mêmes textes que le visuel kit V2.1 déjà posé dans Metricool, photos du manifeste en N&B."
+}

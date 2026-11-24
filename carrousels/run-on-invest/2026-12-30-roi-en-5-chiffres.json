@@ -1,0 +1,57 @@
+{
+  "client": "run-on-invest",
+  "slug": "2026-12-30-roi-en-5-chiffres",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2026-12-30T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "slides": [
+    {
+      "kicker": "Fin d'année",
+      "title": "R.O.I. en 5 chiffres.",
+      "body": "Pas un bilan. **Le principe.**",
+      "photo": "b",
+      "cover": true
+    },
+    {
+      "kicker": "Chiffre 01",
+      "title": "5 ou 10 km.",
+      "body": "Ta distance, **ton rythme**. Aucun niveau requis.",
+      "photo": "l"
+    },
+    {
+      "kicker": "Chiffre 02",
+      "title": "0 pitch.",
+      "body": "Personne ne vend en montée. **C'est la règle.**",
+      "photo": "f"
+    },
+    {
+      "kicker": "Chiffre 03",
+      "title": "2 lieux.",
+      "body": "On court à **La Défense**. On parle à la **Plénitude Arena**.",
+      "photo": "k"
+    },
+    {
+      "kicker": "Chiffre 04",
+      "title": "3 règles.",
+      "body": "L'effort crée le lien. Zéro pitch. **La régularité paie.**",
+      "photo": "j"
+    },
+    {
+      "kicker": "Chiffre 05 · 1 signature",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "**Écris-nous en message privé** pour être prévenu.",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Légende inchangée : celle du post Metricool existant.",
+  "hashtags": [
+    "#runoninvest",
+    "#entrepreneurs",
+    "#independants",
+    "#course",
+    "#ladefense"
+  ],
+  "note": "Refonte charte V3 du 24/11/2026 : mêmes textes que le visuel kit V2.1 déjà posé dans Metricool, photos du manifeste en N&B."
+}
