@@ -1,0 +1,24 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories des 25, 27 et 30/11 en charte V3 (24/11/2026), mêmes textes que les cartes s7, s10 et s2 qu'elles remplacent. s7 = passerelle j en i2v neuf (kling3_0_turbo, job bf469b86), s10 = escalier f (job af03059e d'octobre, coupé à 80 images), s2 = arche k large (job bb691351). i2v neuf de b (job 4aae1a78) écarté : ses coureurs sont dans le bas du cadre, sous le voile du texte. N&B, calque story-photo, muet.",
+  "cartes": [
+    {
+      "cle": "s7",
+      "jour": "Un rendez-vous qui revient",
+      "phrase": "La régularité **paie**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "s10",
+      "jour": "Écris-nous en message privé",
+      "phrase": "Tu **viens** ?",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "s2",
+      "jour": "Une heure d'effort partagé",
+      "phrase": "Ni club. **Ni afterwork.**",
+      "registre": "ZÉRO PITCH"
+    }
+  ]
+}
