@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-02-17-au-vestiaire",
+  "archetype": "A1",
+  "pilier": "P2",
+  "date_time": "2027-02-17T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Zéro pitch : 4 phrases laissées au vestiaire",
+  "slides": [
+    {
+      "kicker": "Zéro pitch",
+      "title": "4 phrases qu'on laisse au vestiaire.",
+      "body": "Au départ comme à l'arrivée, **on ne les entendra pas**.",
+      "photo": "m2",
+      "cover": true
+    },
+    {
+      "kicker": "Phrase 01",
+      "title": "« Je peux te présenter mon offre ? »",
+      "body": "Non. **Présente-toi**, c'est déjà bien.",
+      "photo": "m3"
+    },
+    {
+      "kicker": "Phrase 02",
+      "title": "« Ta carte ? »",
+      "body": "Pas en short. **Le contact se donne s'il y a une suite.**",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Phrase 03",
+      "title": "« On se cale un call ? »",
+      "body": "Vous venez de courir ensemble. **C'était le call.**",
+      "photo": "m8"
+    },
+    {
+      "kicker": "Phrase 04",
+      "title": "« Tu connais quelqu'un qui aurait besoin de… »",
+      "body": "**Personne n'est un fichier.** Ici, on parle aux gens.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Zéro pitch. **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "Il y a des phrases qui ferment une conversation avant qu'elle commence. Chez R.O.I., on les laisse au vestiaire.\n\nPas d'offre présentée au départ, pas de carte demandée, pas de call calé à l'arrivée, personne traité comme un fichier.\n\nLaquelle as-tu déjà entendue dans une soirée réseau ? Dis-le en commentaire.\n\n#runoninvest #zeropitch #entrepreneurs #independants #course",
+  "hashtags": [
+    "#runoninvest",
+    "#zeropitch",
+    "#entrepreneurs",
+    "#independants",
+    "#course"
+  ],
+  "note": "Février 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

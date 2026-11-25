@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-02-10-ce-qu-on-y-gagne",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-02-10T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Ce qu'un indépendant gagne à courir à plusieurs",
+  "slides": [
+    {
+      "kicker": "Indépendants",
+      "title": "Courir à plusieurs : ce qu'on y gagne.",
+      "body": "**Rien à vendre**, quatre choses à prendre.",
+      "photo": "fe6",
+      "cover": true
+    },
+    {
+      "kicker": "Gain 01",
+      "title": "Un rendez-vous fixe.",
+      "body": "Dans une semaine sans horaires, **un repère qui ne bouge pas**.",
+      "photo": "m3"
+    },
+    {
+      "kicker": "Gain 02",
+      "title": "Ni clients, ni fournisseurs.",
+      "body": "Des gens qui n'attendent **rien de toi**. Ça repose.",
+      "photo": "m2"
+    },
+    {
+      "kicker": "Gain 03",
+      "title": "Des idées en route.",
+      "body": "Celles qui arrivent **au 4e km**, jamais devant l'écran.",
+      "photo": "m5"
+    },
+    {
+      "kicker": "Gain 04",
+      "title": "Une raison de sortir.",
+      "body": "Le bureau à la maison, c'est pratique. **Le dehors, c'est mieux.**",
+      "photo": "b"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Entrepreneurs et indépendants. **Écris-nous en message privé.**",
+      "photo": "f",
+      "cta": true
+    }
+  ],
+  "caption": "Quand on travaille seul, une sortie à plusieurs rapporte autre chose que des contacts.\n\nUn rendez-vous fixe dans une semaine sans horaires. Des gens qui ne sont ni clients ni fournisseurs. Des idées qui arrivent en courant. Et une vraie raison de sortir du bureau.\n\nLequel te parle le plus ? Dis-le en commentaire.\n\n#runoninvest #independants #entrepreneurs #course #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#independants",
+    "#entrepreneurs",
+    "#course",
+    "#ladefense"
+  ],
+  "note": "Février 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

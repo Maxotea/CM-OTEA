@@ -354,6 +354,23 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 - Piège : `post-photo.py` ne mesure pas la largeur du titre. Un mot long (« RECOMMENCER »,
   « CONVERSATIONS ») sort du cadre en 4:5 ; regarder la planche avant d'héberger.
 
+## Février 2027 préparé (25/11/2026, demande de Maxime)
+- 24 brouillons Instagram : 12 posts à 08:00 (lun, mer, ven du 01 au 26/02, carrousels le
+  mercredi) et 12 stories vidéo muettes à 12:00. Sources : `posts/run-on-invest/2027-02.json`,
+  `carrousels/run-on-invest/2027-02-*.json`, `posts/run-on-invest/stories-2027-02.json`.
+- Accroches : février 2027 tient en 4 semaines pile (lundi 1er au dimanche 28), un message de
+  moins une sortie de plus, I comme Invest (écouter), Saint-Valentin tournée vers le binôme de
+  course, mi-février, La Défense avant les bureaux, « fais court », les matins reviennent (le jour
+  se lève plus d'une heure plus tôt qu'au début de janvier). Carrousels : parler en courant, ce
+  qu'on gagne à courir à plusieurs, 4 phrases laissées au vestiaire, checklist de la première sortie.
+- Photos : 8 générées le 25/11, 4 retenues au manifeste (fe0, fe1, fe2, fe6). Écartées : profil
+  à moitié visible (3), coureurs sous le voile (4, 5), plan trop sombre (7). fe2 n'a pas la
+  « matière » requise en bas de cadre pour un carrousel : post seul uniquement.
+- Stories : 4 plans neufs animés (fe0, fe1, fe2, fe6), 8 réemplois de décembre et janvier à plus
+  de 14 jours.
+- Piège : un titre entre guillemets court (« Tu as une carte ? ») laisse « ? » seul à la ligne.
+  Le renderer coupe aussi sur l'espace insécable : raccourcir la phrase.
+
 ## Reste à faire
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
