@@ -565,6 +565,12 @@
       "type": "Story",
       "resultat": "publication programmée (version 438939958)",
       "post_id": 438939958
+    },
+    "2026-12-09T12:00:00|402271599": {
+      "quand": "2026-11-25T14:48:38",
+      "type": "Carrousel (8 visuels)",
+      "resultat": "publication programmée (version 441847038)",
+      "post_id": 441847038
     }
   }
 }
