@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-01-06-trois-lettres",
+  "archetype": "A1",
+  "pilier": "P2",
+  "date_time": "2027-01-06T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Épiphanie : le nom R.O.I. décodé lettre par lettre",
+  "slides": [
+    {
+      "kicker": "Épiphanie",
+      "title": "Aujourd'hui, on tire les rois.",
+      "body": "Nous, on s'appelle **R.O.I.** Voici pourquoi.",
+      "photo": "k",
+      "cover": true
+    },
+    {
+      "kicker": "R comme Run",
+      "title": "D'abord, on court.",
+      "body": "5 ou 10 km à La Défense, **à ton rythme**.",
+      "photo": "m0"
+    },
+    {
+      "kicker": "O comme On",
+      "title": "On, pas je.",
+      "body": "Tu cours **à côté de quelqu'un**, pas devant lui.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "I comme Invest",
+      "title": "Investir du temps.",
+      "body": "Pas de promesse d'affaires. **Du temps et de l'attention.**",
+      "photo": "m9"
+    },
+    {
+      "kicker": "Pas de couronne",
+      "title": "Ici, personne n'est roi.",
+      "body": "Pas de titre, pas de carte de visite. **Zéro pitch.**",
+      "photo": "m2"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Tu veux en être ? **Écris-nous en message privé.**",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Aujourd'hui, tout le monde cherche la fève. Nous, on a les rois dans notre nom.\n\nR comme Run : 5 ou 10 km à La Défense, à ton rythme. O comme On : on court à côté de quelqu'un, pas devant lui. I comme Invest : du temps et de l'attention, jamais une promesse d'affaires.\n\nEt à l'arrivée, personne ne porte de couronne.\n\nTu veux en être ? Écris-nous en message privé pour être prévenu.\n\n#runoninvest #epiphanie #course #entrepreneurs #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#epiphanie",
+    "#course",
+    "#entrepreneurs",
+    "#ladefense"
+  ],
+  "note": "Janvier 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

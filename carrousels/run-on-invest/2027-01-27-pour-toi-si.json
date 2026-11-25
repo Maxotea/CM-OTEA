@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-01-27-pour-toi-si",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-01-27T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Pour qui : 4 profils d'entrepreneurs et d'indépendants",
+  "slides": [
+    {
+      "kicker": "Pour qui ?",
+      "title": "R.O.I., c'est pour toi si…",
+      "body": "**Quatre profils**, un même départ.",
+      "photo": "m9",
+      "cover": true
+    },
+    {
+      "kicker": "Profil 01",
+      "title": "Tu reprends après des années.",
+      "body": "**5 km à ton rythme.** Personne ne regarde ton chrono.",
+      "photo": "m5"
+    },
+    {
+      "kicker": "Profil 02",
+      "title": "Tu cours déjà chaque semaine.",
+      "body": "Prends le 10 km. **Le temps d'échange est le même pour tous.**",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Profil 03",
+      "title": "Tu fuis les soirées réseau.",
+      "body": "Ici, **on court avant de parler**. Et personne ne pitche.",
+      "photo": "m3"
+    },
+    {
+      "kicker": "Profil 04",
+      "title": "Tu travailles seul toute la journée.",
+      "body": "Courir à côté de quelqu'un, **ça change une semaine**.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Entrepreneurs et indépendants. **Écris-nous en message privé.**",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Tu reprends après des années, tu cours déjà chaque semaine, tu fuis les soirées réseau ou tu travailles seul toute la journée.\n\nDans les quatre cas, le départ est le même : 5 ou 10 km à La Défense, à ton rythme. Puis un vrai temps d'échange à la Plénitude Arena.\n\nTu te reconnais dans lequel ? Dis-le en commentaire.\n\n#runoninvest #entrepreneurs #independants #course #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#entrepreneurs",
+    "#independants",
+    "#course",
+    "#ladefense"
+  ],
+  "note": "Janvier 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-01-20-rencontrer-sans-pitcher",
+  "archetype": "A1",
+  "pilier": "P2",
+  "date_time": "2027-01-20T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Rencontrer sans pitcher : 4 règles",
+  "slides": [
+    {
+      "kicker": "Zéro pitch",
+      "title": "Rencontrer sans pitcher : 4 règles.",
+      "body": "Ce qu'on applique **au départ comme à l'arrivée**.",
+      "photo": "m2",
+      "cover": true
+    },
+    {
+      "kicker": "Règle 01",
+      "title": "Pas de carte de visite au départ.",
+      "body": "Personne ne sait ce que tu fais. **C'est très bien comme ça.**",
+      "photo": "m9"
+    },
+    {
+      "kicker": "Règle 02",
+      "title": "Pose une question, pas ton offre.",
+      "body": "« Tu cours depuis longtemps ? » **ouvre plus de portes** qu'une présentation.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "Règle 03",
+      "title": "Écoute plus que tu ne parles.",
+      "body": "En courant, c'est facile : **tu manques de souffle**.",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Règle 04",
+      "title": "Laisse venir la suite.",
+      "body": "Si ça accroche, ça se verra **à la Plénitude Arena**. Sinon, tu as couru.",
+      "photo": "m8"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Zéro pitch. **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "Pas de carte de visite au départ. Une question plutôt qu'une offre. Écouter plus que parler. Laisser venir la suite.\n\nQuatre règles qu'on applique pendant la course et après, à la Plénitude Arena.\n\nLaquelle te coûte le plus ? Dis-le en commentaire.\n\n#runoninvest #zeropitch #entrepreneurs #independants #course",
+  "hashtags": [
+    "#runoninvest",
+    "#zeropitch",
+    "#entrepreneurs",
+    "#independants",
+    "#course"
+  ],
+  "note": "Janvier 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

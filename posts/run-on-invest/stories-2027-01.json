@@ -1,0 +1,84 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories de janvier 2027 (01/01 puis lun, mer, ven 12:00), créées le 25/11/2026 en charte V3, une par post du jour. Plans : photos Soul Cinema d'hiver générées le 25/11 animées en kling3_0_turbo, plus les plans de décembre réemployés à plus de 14 jours. N&B, calque story-photo, muet.",
+  "cartes": [
+    {
+      "cle": "j01",
+      "jour": "Bonne année",
+      "phrase": "Pas de résolution. **Une règle.**",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "j04",
+      "jour": "Rentrée",
+      "phrase": "Reprendre, pas **recommencer**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "j06",
+      "jour": "Épiphanie",
+      "phrase": "Ici, personne n'est **roi**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "j08",
+      "jour": "Vendredi",
+      "phrase": "Si tu as lâché, **reviens**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "j11",
+      "jour": "Les vœux",
+      "phrase": "Des vœux, **sans pitch**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "j13",
+      "jour": "Réflexe 01",
+      "phrase": "Prépare tes affaires **la veille**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "j15",
+      "jour": "Le froid",
+      "phrase": "Il passe mieux **à deux**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "j18",
+      "jour": "Blue Monday",
+      "phrase": "Le lundi gris ? **On sort.**",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "j20",
+      "jour": "Règle 02",
+      "phrase": "Une question, pas ton **offre**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "j22",
+      "jour": "Fin de semaine",
+      "phrase": "Combien de vraies **conversations** ?",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "j25",
+      "jour": "Quatre semaines",
+      "phrase": "Quatre sorties. **Janvier tenu.**",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "j27",
+      "jour": "Pour qui ?",
+      "phrase": "Tu fuis les soirées **réseau** ?",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "j29",
+      "jour": "Fin janvier",
+      "phrase": "L'habitude **reste**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    }
+  ]
+}

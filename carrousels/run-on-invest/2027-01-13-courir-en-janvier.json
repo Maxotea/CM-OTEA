@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-01-13-courir-en-janvier",
+  "archetype": "A1",
+  "pilier": "P3",
+  "date_time": "2027-01-13T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Courir en hiver sans lâcher : 4 réflexes simples",
+  "slides": [
+    {
+      "kicker": "La régularité paie",
+      "title": "Courir en janvier : 4 réflexes.",
+      "body": "Pour **ne pas lâcher** au premier matin froid.",
+      "photo": "m3",
+      "cover": true
+    },
+    {
+      "kicker": "Réflexe 01",
+      "title": "Prépare tes affaires la veille.",
+      "body": "Le matin, **tu enfiles, tu sors.** Pas le temps de négocier avec toi-même.",
+      "photo": "m5"
+    },
+    {
+      "kicker": "Réflexe 02",
+      "title": "Couvre la tête et les mains.",
+      "body": "Pas besoin de trois couches : **après dix minutes, tu as chaud.**",
+      "photo": "b"
+    },
+    {
+      "kicker": "Réflexe 03",
+      "title": "Fais-toi voir.",
+      "body": "En janvier, le jour se lève tard. **Un vêtement clair ou une lampe.**",
+      "photo": "m8"
+    },
+    {
+      "kicker": "Réflexe 04",
+      "title": "Pars doucement.",
+      "body": "Les premières minutes servent à **te réchauffer**, pas à faire un temps.",
+      "photo": "j"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "À deux, on sort plus souvent. **Écris-nous en message privé.**",
+      "photo": "f",
+      "cta": true
+    }
+  ],
+  "caption": "Janvier, c'est le mois où l'on reprend. C'est aussi celui où l'on lâche au premier matin froid.\n\nQuatre réflexes simples : préparer ses affaires la veille, couvrir la tête et les mains, se rendre visible, partir doucement.\n\nRien de technique, de quoi sortir une fois de plus.\n\nEnregistre ce carrousel et envoie-le à quelqu'un qui reprend.\n\n#runoninvest #regularite #course #entrepreneurs #hiver",
+  "hashtags": [
+    "#runoninvest",
+    "#regularite",
+    "#course",
+    "#entrepreneurs",
+    "#hiver"
+  ],
+  "note": "Janvier 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

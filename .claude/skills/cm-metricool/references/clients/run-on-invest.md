@@ -336,6 +336,24 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 - Leçon de mise en page : la story garde le haut (en-tête) et la moitié basse (texte) sous voile.
   Générer les plans avec le sujet entre 15 % et 50 % de la hauteur, ciel pas trop clair.
 
+## Janvier 2027 préparé (25/11/2026, demande de Maxime)
+- 25 brouillons Instagram vérifiés : 12 posts à 08:00 (lun, mer, ven du 04 au 29/01, carrousels le
+  mercredi) et 13 stories vidéo muettes à 12:00 (01/01 puis lun, mer, ven). Le post du 01/01 était
+  déjà en place. Sources : `posts/run-on-invest/2027-01.json` (légendes dans `caption`),
+  `carrousels/run-on-invest/2027-01-*.json`, `posts/run-on-invest/stories-2027-01.json`.
+- Accroches du mois : rentrée, Épiphanie (R.O.I. décodé lettre par lettre), deuxième vendredi de
+  janvier, vœux sans pitch, réflexes d'hiver, Blue Monday (18/01, présenté comme une invention de
+  pub), règles pour rencontrer sans pitcher, « c'est pour toi si ».
+- Fonds : les photos Soul Cinema des stories de décembre entrent au manifeste (m0, m1, m2, m3, m5,
+  m8, m9 ; 4 brume, 6 et 7 écartées) pour varier les posts.
+- Stories : 2 plans neufs animés (escalier à deux, job 0c7401ca, éclairci gamma 1,8 au montage ;
+  deux silhouettes à la rambarde, job 9e753173), les 11 autres réemploient les vidéos de décembre
+  à 14 jours d'écart au moins. 7 photos générées, 3 refusées (coureurs sous le voile, tours qui ne
+  ressemblent pas à La Défense), 2 refusées par le contrôle de lisibilité (bleu nuit uniforme : le
+  N&B auto-contrasté ne tient pas l'accent même au voile maximal). Environ 16 crédits.
+- Piège : `post-photo.py` ne mesure pas la largeur du titre. Un mot long (« RECOMMENCER »,
+  « CONVERSATIONS ») sort du cadre en 4:5 ; regarder la planche avant d'héberger.
+
 ## Reste à faire
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
