@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-02-03-parler-en-courant",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-02-03T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Parler en courant : 4 conseils",
+  "slides": [
+    {
+      "kicker": "L'effort crée le lien",
+      "title": "Parler en courant : 4 conseils.",
+      "body": "Pour que **la conversation tienne** autant que le souffle.",
+      "photo": "fe1",
+      "cover": true
+    },
+    {
+      "kicker": "Conseil 01",
+      "title": "Cale-toi sur son rythme.",
+      "body": "Pas l'inverse. **Le plus lent fixe l'allure**, toujours.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "Conseil 02",
+      "title": "Commence par la course.",
+      "body": "Le parcours, la météo, le rythme : **des sujets que tout le monde partage**.",
+      "photo": "fe0"
+    },
+    {
+      "kicker": "Conseil 03",
+      "title": "Laisse des silences.",
+      "body": "Quand ça souffle, on se tait. **Le silence fait partie de la sortie.**",
+      "photo": "m9"
+    },
+    {
+      "kicker": "Conseil 04",
+      "title": "Garde le reste pour après.",
+      "body": "Le métier, les projets : **à la Plénitude Arena**, une fois assis.",
+      "photo": "m2"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Tu veux en être ? **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "Courir à deux, c'est aussi parler à deux. Et ça ne se passe pas comme autour d'une table.\n\nQuatre conseils : te caler sur son rythme, commencer par la course, laisser des silences, garder le reste pour après.\n\nEnregistre ce carrousel pour ta prochaine sortie à plusieurs.\n\n#runoninvest #course #entrepreneurs #independants #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#ladefense"
+  ],
+  "note": "Février 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

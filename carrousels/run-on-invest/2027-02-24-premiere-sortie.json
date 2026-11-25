@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-02-24-premiere-sortie",
+  "archetype": "A1",
+  "pilier": "P3",
+  "date_time": "2027-02-24T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Première sortie à plusieurs : la checklist",
+  "slides": [
+    {
+      "kicker": "Première sortie",
+      "title": "Courir à plusieurs : la checklist.",
+      "body": "**Quatre points**, et tu es prêt.",
+      "photo": "m5",
+      "cover": true
+    },
+    {
+      "kicker": "Point 01",
+      "title": "Des chaussures déjà portées.",
+      "body": "Une première sortie n'est pas le moment **de les étrenner**.",
+      "photo": "fe1"
+    },
+    {
+      "kicker": "Point 02",
+      "title": "Ton rythme, pas le leur.",
+      "body": "5 km tranquilles valent mieux que **10 km en apnée**.",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Point 03",
+      "title": "Rien à vendre.",
+      "body": "Laisse l'offre au bureau. **Tu viens courir.**",
+      "photo": "fe6"
+    },
+    {
+      "kicker": "Point 04",
+      "title": "Une question en tête.",
+      "body": "« Qu'est-ce qui t'a fait venir ? » **marche à tous les coups.**",
+      "photo": "m9"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Prêt pour la première ? **Écris-nous en message privé.**",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Ta première sortie à plusieurs approche, ou tu y penses ? Quatre points suffisent.\n\nDes chaussures déjà portées. Ton rythme, pas celui des autres. Rien à vendre. Et une question en tête pour lancer la conversation.\n\nEnregistre ce carrousel et envoie-le à quelqu'un qui hésite.\n\n#runoninvest #course #entrepreneurs #independants #regularite",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#regularite"
+  ],
+  "note": "Février 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

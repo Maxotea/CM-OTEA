@@ -1,0 +1,78 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories de février 2027 (lun, mer, ven 12:00), créées le 25/11/2026 en charte V3, une par post du jour. Plans : photos Soul Cinema du 25/11 animées en kling3_0_turbo, plus des plans de décembre et janvier réemployés à plus de 14 jours. N&B, calque story-photo, muet.",
+  "cartes": [
+    {
+      "cle": "f01",
+      "jour": "Février",
+      "phrase": "4 semaines **pile**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "f03",
+      "jour": "Conseil 01",
+      "phrase": "Cale-toi sur **son rythme**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "f05",
+      "jour": "Cette semaine",
+      "phrase": "Un message de moins, **une sortie** de plus.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "f08",
+      "jour": "I comme Invest",
+      "phrase": "Écouter, c'est **investir**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "f10",
+      "jour": "Gain 03",
+      "phrase": "Les idées arrivent **au 4e km**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "f12",
+      "jour": "Le binôme",
+      "phrase": "Il court **à côté**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "f15",
+      "jour": "Mi-février",
+      "phrase": "Deux semaines. **Deux sorties ?**",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "f17",
+      "jour": "Zéro pitch",
+      "phrase": "« On se cale un call ? » **Non.**",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "f19",
+      "jour": "La Défense",
+      "phrase": "Avant les **bureaux**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "f22",
+      "jour": "Pas le temps ?",
+      "phrase": "Fais **court**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "f24",
+      "jour": "Première sortie",
+      "phrase": "Rien à **vendre**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "f26",
+      "jour": "Fin février",
+      "phrase": "Les matins **reviennent**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    }
+  ]
+}
