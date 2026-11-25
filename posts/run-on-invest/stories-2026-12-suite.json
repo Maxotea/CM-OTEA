@@ -1,0 +1,17 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories de décembre après le 04/12 (lun, mer, ven 12:00), créées le 24/11/2026 en charte V3. Chaque carte reprend l'idée du post du jour. Plans : photos Soul Cinema générées le 24/11 (aucune personne identifiable) animées en i2v kling3_0_turbo, plus les plans f, j, k déjà utilisés. N&B, calque story-photo, muet.",
+  "cartes": [
+    {"cle": "d07", "jour": "Zéro pitch", "phrase": "« Tu fais quoi ? » **attendra**.", "registre": "ZÉRO PITCH"},
+    {"cle": "d09", "jour": "Au 3e km", "phrase": "Plus personne ne joue un **rôle**.", "registre": "L'EFFORT CRÉE LE LIEN"},
+    {"cle": "d11", "jour": "Dimanche, Issy", "phrase": "La Corrida de Noël. Tu la **cours** ?", "registre": "L'EFFORT CRÉE LE LIEN"},
+    {"cle": "d14", "jour": "Courir d'abord", "phrase": "5 ou 10 km. **Zéro pitch.**", "registre": "ZÉRO PITCH"},
+    {"cle": "d16", "jour": "Erreur 03", "phrase": "Tout couper en **décembre**.", "registre": "LA RÉGULARITÉ PAIE"},
+    {"cle": "d18", "jour": "Vacances de Noël", "phrase": "Une sortie courte **suffit**.", "registre": "LA RÉGULARITÉ PAIE"},
+    {"cle": "d21", "jour": "Solstice d'hiver", "phrase": "Moins de lumière. Pas **seul**.", "registre": "L'EFFORT CRÉE LE LIEN"},
+    {"cle": "d23", "jour": "5 ou 10 km", "phrase": "Le bon, c'est celui qui te fait **revenir**.", "registre": "LA RÉGULARITÉ PAIE"},
+    {"cle": "d25", "jour": "Joyeux Noël", "phrase": "Sortie ou grasse **matinée** ?", "registre": "L'EFFORT CRÉE LE LIEN"},
+    {"cle": "d28", "jour": "Entre les fêtes", "phrase": "Parler sans rien **vendre**.", "registre": "ZÉRO PITCH"},
+    {"cle": "d30", "jour": "Fin d'année", "phrase": "Courir d'abord. **Parler ensuite.**", "registre": "ZÉRO PITCH"}
+  ]
+}
