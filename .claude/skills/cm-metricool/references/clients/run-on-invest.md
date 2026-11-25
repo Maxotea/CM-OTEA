@@ -326,8 +326,17 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
   du texte ; à réserver à une mise en page avec le texte en haut. Story du 27/11 sur l'escalier f,
   du 30/11 sur l'arche k.
 
+## Stories de décembre créées (24/11/2026, demande de Maxime)
+- 11 stories vidéo muettes en brouillon, lun/mer/ven 12:00 du 07 au 30/12, une par post du jour
+  (`posts/run-on-invest/stories-2026-12-suite.json`).
+- Plans : 10 photos Soul Cinema générées (prompt de la fiche, coureurs dans la moitié haute,
+  texte dessous), 9 animées en kling3_0_turbo. Écartées : plan 7 (logos inventés sur les sweats),
+  plan 6 brume (ciel blanc derrière l'en-tête, illisible, le N&B ré-étire tout assombrissement).
+  Réemplois : passerelle j (16/12), arche k (18/12), escalier f (30/12).
+- Leçon de mise en page : la story garde le haut (en-tête) et la moitié basse (texte) sous voile.
+  Générer les plans avec le sujet entre 15 % et 50 % de la hauteur, ciel pas trop clair.
+
 ## Reste à faire
-- Aucune story créée après le 04/12 : à fabriquer en vidéo (bloc VIDÉOS).
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.
 - Déposer `Archivo-SemiBold.ttf` (Google Fonts, OFL) dans `fonts/archivo/` pour les repères en 600.
