@@ -330,6 +330,272 @@
         ],
         "carrousel_a4": "slide 1"
       }
+    },
+    {
+      "cle": "m0",
+      "slug": "la-defense-m0",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180307_292662d4-b53e-4204-9d8e-f572b412027d.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180307_292662d4-b53e-4204-9d8e-f572b412027d.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "17d20dc2aa290580",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "292662d4-b53e-4204-9d8e-f572b412027d",
+      "sujet": "escalier monumental, trois coureurs en silhouette en haut des marches, contre-jour aube",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 86.9,
+      "detail": {
+        "haut": 5.9,
+        "milieu": 5.1,
+        "bas": 3.7
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m1",
+      "slug": "la-defense-m1",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180306_3dc21821-20ad-400c-9ccf-8e4b9a4fd378.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180306_3dc21821-20ad-400c-9ccf-8e4b9a4fd378.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "ddcb3acaa4c6c2a2",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "3dc21821-20ad-400c-9ccf-8e4b9a4fd378",
+      "sujet": "passerelle vitrée entre deux tours, petit groupe de coureurs en silhouette",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 83.8,
+      "detail": {
+        "haut": 6.3,
+        "milieu": 5.9,
+        "bas": 3.4
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m2",
+      "slug": "la-defense-m2",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180308_04919925-f653-47b0-88c3-cf5ca0a2333a.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180308_04919925-f653-47b0-88c3-cf5ca0a2333a.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "ff65abb3e6f7e38a",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "04919925-f653-47b0-88c3-cf5ca0a2333a",
+      "sujet": "parvis entre les tours, coureurs de dos au loin, soleil bas",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 55.7,
+      "detail": {
+        "haut": 5.8,
+        "milieu": 4.6,
+        "bas": 4.3
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m3",
+      "slug": "la-defense-m3",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180306_5072bc57-187f-40a8-8f44-f0a773bb3a69.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180306_5072bc57-187f-40a8-8f44-f0a773bb3a69.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "05cf7d8c3012fd56",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "5072bc57-187f-40a8-8f44-f0a773bb3a69",
+      "sujet": "rue de nuit, lampadaires, bureaux éclairés, coureur de dos",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 23.0,
+      "detail": {
+        "haut": 4.3,
+        "milieu": 3.6,
+        "bas": 3.1
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m5",
+      "slug": "la-defense-m5",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180310_e9c43380-0cfb-406d-a06b-36a7d814e42c.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180310_e9c43380-0cfb-406d-a06b-36a7d814e42c.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "ef8094df53785d29",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "e9c43380-0cfb-406d-a06b-36a7d814e42c",
+      "sujet": "pont et rambarde au lever du soleil, trois coureurs en silhouette",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 108.5,
+      "detail": {
+        "haut": 4.5,
+        "milieu": 5.7,
+        "bas": 4.5
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m8",
+      "slug": "la-defense-m8",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180307_bef144f6-7d24-41fa-9d68-5deb58b24d60.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180307_bef144f6-7d24-41fa-9d68-5deb58b24d60.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "69c07f2de9636ecc",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "bef144f6-7d24-41fa-9d68-5deb58b24d60",
+      "sujet": "couloir entre tours de verre, soleil au bout, groupe de coureurs minuscule",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 58.6,
+      "detail": {
+        "haut": 9.7,
+        "milieu": 6.8,
+        "bas": 3.3
+      },
+      "matiere": true
+    },
+    {
+      "cle": "m9",
+      "slug": "la-defense-m9",
+      "provenance": "ia",
+      "personne_identifiable": false,
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180310_d67d467e-56f4-4fd5-bc38-3bef959fb836.png",
+      "url_originale": "https://d8j0ntlcm91z4.cloudfront.net/user_2zae6klRfE97hlBWhyQP6j7d9cR/hf_20261124_180310_d67d467e-56f4-4fd5-bc38-3bef959fb836.png",
+      "type": "png",
+      "taille_source": [
+        1152,
+        2048
+      ],
+      "empreinte": "5877159eaa6a5c93",
+      "modele": "soul_cinematic",
+      "date_generation": "2026-11-24",
+      "higgsfield_job": "d67d467e-56f4-4fd5-bc38-3bef959fb836",
+      "sujet": "grand parvis, groupe de coureurs de dos vers les tours",
+      "credit": "génération IA Higgsfield du 24/11/2026 pour Run On Invest, aucun photographe",
+      "autorisation": "Maxime, 04/08/2026 : photos IA ultra réalistes autorisées sur ce seul compte, jamais une personne identifiable",
+      "controle_oeil": "24/11/2026, stories de décembre : coureurs de dos ou en silhouette, aucun visage, aucun lettrage",
+      "cadre_45": [
+        0,
+        304,
+        1152,
+        1744
+      ],
+      "decalage_916": 0.5,
+      "visage_45": [],
+      "visage_916": [],
+      "isAiGenerated": "à cocher sur chaque visuel (Q12)",
+      "luminance": 72.1,
+      "detail": {
+        "haut": 6.1,
+        "milieu": 5.7,
+        "bas": 4.7
+      },
+      "matiere": true
     }
   ],
   "_hors_rotation": {
