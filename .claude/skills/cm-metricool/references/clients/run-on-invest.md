@@ -371,6 +371,21 @@ Journaux complets : scratchpad de la session, `relance/` (état, exécution, ani
 - Piège : un titre entre guillemets court (« Tu as une carte ? ») laisse « ? » seul à la ligne.
   Le renderer coupe aussi sur l'espace insécable : raccourcir la phrase.
 
+## Mars 2027 préparé (25/11/2026, demande de Maxime)
+- 28 brouillons Instagram : 14 posts à 08:00 (lun, mer, ven du 01 au 31/03, 5 carrousels le
+  mercredi) et 14 stories vidéo muettes à 12:00. Sources : `posts/run-on-invest/2027-03.json`,
+  `carrousels/run-on-invest/2027-03-*.json`, `posts/run-on-invest/stories-2027-03.json`.
+- Repères vérifiés : printemps le samedi 20/03, Pâques et passage à l'heure d'été le dimanche
+  28/03 (post du lundi de Pâques 29/03), fin du premier trimestre le 31/03. Les brouillons des 29
+  et 31/03 sont créés en +02:00.
+- Photos : 12 générées le 25/11, 5 retenues au manifeste (ma1, ma4, ma8, ma9, ma11). Leçon : dire
+  « dans le tiers haut du cadre, vers 25 % de la hauteur », sinon le modèle pose les coureurs
+  vers 60 % et ils passent sous le voile. Écartée aussi : un panneau à fausses lettres (ma10).
+- Stories : 3 plans neufs animés (ma1 rampe, ma8 marches coupé à 60 images ralenti 1,6 car les
+  coureurs disparaissent ensuite, ma9 passerelle), 11 réemplois. ma4 animé refusé (le coureur sort
+  du cadre et un autre apparaît), ma11 et la rambarde n3 refusées pour le 22/03 par le contrôle de
+  lisibilité (ciel clair sous le registre).
+
 ## Reste à faire
 - Après le dépôt INPI : nouvel avatar Instagram et LinkedIn, nouveau logo sur les visuels et
   nouvelle signature (kit dans `~/CLAUDE CODE/run-on-invest/logo-cm/`), puis verser le kit ici.

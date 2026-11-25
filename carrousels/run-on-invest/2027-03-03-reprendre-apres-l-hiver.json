@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-03-03-reprendre-apres-l-hiver",
+  "archetype": "A1",
+  "pilier": "P3",
+  "date_time": "2027-03-03T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Reprendre après l'hiver en 4 étapes",
+  "slides": [
+    {
+      "kicker": "La régularité paie",
+      "title": "Tout arrêté cet hiver ? 4 étapes.",
+      "body": "Pour **reprendre sans te décourager**.",
+      "photo": "ma8",
+      "cover": true
+    },
+    {
+      "kicker": "Étape 01",
+      "title": "Recommence court.",
+      "body": "**20 minutes** suffisent pour la première sortie.",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Étape 02",
+      "title": "Une fois par semaine.",
+      "body": "Le même jour, **la même heure**. On augmente plus tard.",
+      "photo": "j"
+    },
+    {
+      "kicker": "Étape 03",
+      "title": "Trouve un binôme.",
+      "body": "Quand quelqu'un t'attend, **tu y vas**.",
+      "photo": "fe6"
+    },
+    {
+      "kicker": "Étape 04",
+      "title": "Note la suivante.",
+      "body": "Avant de rentrer, **fixe déjà la prochaine**.",
+      "photo": "m9"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Tu veux reprendre à plusieurs ? **Écris-nous en message privé.**",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "Tu as couru à l'automne, puis l'hiver a tout arrêté ? Ça arrive à presque tout le monde.\n\nQuatre étapes pour reprendre sans te décourager : recommencer court, une fois par semaine, avec un binôme, en notant déjà la sortie suivante.\n\nEnregistre ce carrousel pour ta première sortie de mars.\n\n#runoninvest #regularite #course #entrepreneurs #printemps",
+  "hashtags": [
+    "#runoninvest",
+    "#regularite",
+    "#course",
+    "#entrepreneurs",
+    "#printemps"
+  ],
+  "note": "Mars 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

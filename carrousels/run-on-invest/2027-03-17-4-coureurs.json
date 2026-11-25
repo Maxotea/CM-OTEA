@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-03-17-4-coureurs",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-03-17T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "4 coureurs que tu croiseras",
+  "slides": [
+    {
+      "kicker": "L'effort crée le lien",
+      "title": "4 coureurs que tu croiseras.",
+      "body": "Et **pourquoi on les aime** tous.",
+      "photo": "fe6",
+      "cover": true
+    },
+    {
+      "kicker": "Coureur 01",
+      "title": "Celui qui part trop vite.",
+      "body": "Tu le rattraperas au 3e km. **Il en rira avec toi.**",
+      "photo": "ma1"
+    },
+    {
+      "kicker": "Coureuse 02",
+      "title": "Celle qui parle tout le temps.",
+      "body": "Grâce à elle, **personne ne court seul**.",
+      "photo": "m9"
+    },
+    {
+      "kicker": "Coureur 03",
+      "title": "Celui qui ne dit rien.",
+      "body": "Il parlera **à l'arrivée**. Et ce sera le meilleur échange.",
+      "photo": "m0"
+    },
+    {
+      "kicker": "Coureuse 04",
+      "title": "Celle qui attend tout le monde.",
+      "body": "**Elle ralentit pour toi.** Tu t'en souviendras.",
+      "photo": "fe0"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Et toi, tu seras lequel ? **Écris-nous en message privé.**",
+      "photo": "f",
+      "cta": true
+    }
+  ],
+  "caption": "Dans une sortie à plusieurs, on croise toujours les mêmes profils. Celui qui part trop vite. Celle qui parle tout le temps. Celui qui ne dit rien avant l'arrivée. Celle qui ralentit pour attendre tout le monde.\n\nOn les aime tous. Chacun crée le lien à sa façon.\n\nEt toi, tu es lequel ? Dis-le en commentaire.\n\n#runoninvest #course #entrepreneurs #independants #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#ladefense"
+  ],
+  "note": "Mars 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}
