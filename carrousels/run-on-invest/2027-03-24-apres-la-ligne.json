@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-03-24-apres-la-ligne",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-03-24T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Après la sortie : 4 réflexes",
+  "slides": [
+    {
+      "kicker": "Après la sortie",
+      "title": "4 réflexes après la ligne.",
+      "body": "Ce que tu fais après **compte aussi**.",
+      "photo": "ma11",
+      "cover": true
+    },
+    {
+      "kicker": "Réflexe 01",
+      "title": "Ralentis à la fin.",
+      "body": "Finis **en trottinant**, pas en sprint.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "Réflexe 02",
+      "title": "Change de haut.",
+      "body": "Un t-shirt mouillé au printemps, **c'est vite froid**.",
+      "photo": "ma9"
+    },
+    {
+      "kicker": "Réflexe 03",
+      "title": "Bois un verre d'eau.",
+      "body": "Avant le café. **Toujours.**",
+      "photo": "m3"
+    },
+    {
+      "kicker": "Réflexe 04",
+      "title": "Retiens un prénom.",
+      "body": "Celui de la personne qui a couru **à côté de toi**.",
+      "photo": "ma4"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Le reste se passe à la Plénitude Arena. **Écris-nous en message privé.**",
+      "photo": "b",
+      "cta": true
+    }
+  ],
+  "caption": "La sortie ne s'arrête pas à la ligne. Quatre réflexes pour bien finir : ralentir sur les dernières minutes, changer de haut, boire un verre d'eau, et retenir un prénom.\n\nLe dernier est notre préféré. C'est souvent là que commence la suite.\n\nEnregistre ce carrousel pour ta prochaine sortie.\n\n#runoninvest #course #entrepreneurs #independants #regularite",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#regularite"
+  ],
+  "note": "Mars 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

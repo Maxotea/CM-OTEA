@@ -1,0 +1,90 @@
+{
+  "client": "run-on-invest",
+  "note": "Stories de mars 2027 (lun, mer, ven 12:00), créées le 25/11/2026 en charte V3, une par post du jour. Plans : photos Soul Cinema du 25/11 animées en kling3_0_turbo, plus des plans de janvier et février réemployés à plus de 14 jours. N&B, calque story-photo, muet.",
+  "cartes": [
+    {
+      "cle": "m01",
+      "jour": "Mars",
+      "phrase": "L'hiver est **derrière toi**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m03",
+      "jour": "Étape 01",
+      "phrase": "Recommence **court**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m05",
+      "jour": "Zéro pitch",
+      "phrase": "Des gens, pas des **contacts**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "m08",
+      "jour": "En montée",
+      "phrase": "Personne ne fait **semblant**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "m10",
+      "jour": "5 km",
+      "phrase": "30 à 40 **minutes**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "m12",
+      "jour": "Vendredi",
+      "phrase": "Note ta **prochaine sortie**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m15",
+      "jour": "Tu hésites ?",
+      "phrase": "Le premier pas : **un message**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "m17",
+      "jour": "Coureuse 04",
+      "phrase": "Elle ralentit **pour toi**.",
+      "registre": "L'EFFORT CRÉE LE LIEN"
+    },
+    {
+      "cle": "m19",
+      "jour": "Samedi",
+      "phrase": "C'est le **printemps**.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m22",
+      "jour": "Lundi",
+      "phrase": "Quand parle-t-on **vraiment** ?",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "m24",
+      "jour": "Réflexe 04",
+      "phrase": "Retiens un **prénom**.",
+      "registre": "ZÉRO PITCH"
+    },
+    {
+      "cle": "m26",
+      "jour": "Fin du trimestre",
+      "phrase": "Et ton **bilan** à toi ?",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m29",
+      "jour": "Heure d'été",
+      "phrase": "Une heure de **lumière** en plus.",
+      "registre": "LA RÉGULARITÉ PAIE"
+    },
+    {
+      "cle": "m31",
+      "jour": "R.O.I.",
+      "phrase": "3 règles. **Pas une de plus.**",
+      "registre": "ZÉRO PITCH"
+    }
+  ]
+}

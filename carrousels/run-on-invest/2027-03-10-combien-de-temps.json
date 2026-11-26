@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-03-10-combien-de-temps",
+  "archetype": "A1",
+  "pilier": "P1",
+  "date_time": "2027-03-10T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "5 ou 10 km : combien de temps ça prend",
+  "slides": [
+    {
+      "kicker": "5 ou 10 km",
+      "title": "Combien de temps ça prend ?",
+      "body": "**Moins que tu ne crois.**",
+      "photo": "m8",
+      "cover": true
+    },
+    {
+      "kicker": "5 km",
+      "title": "Entre 30 et 40 minutes.",
+      "body": "À allure tranquille, **en pouvant parler**.",
+      "photo": "m5"
+    },
+    {
+      "kicker": "10 km",
+      "title": "Autour d'une heure.",
+      "body": "Pour ceux qui courent déjà **chaque semaine**.",
+      "photo": "ma8"
+    },
+    {
+      "kicker": "Après la ligne",
+      "title": "Le même temps d'échange.",
+      "body": "5 ou 10 km, **tout le monde se retrouve** à la Plénitude Arena.",
+      "photo": "m2"
+    },
+    {
+      "kicker": "Le chrono",
+      "title": "Il ne compte pas.",
+      "body": "On court à ton rythme, **pas contre les autres**.",
+      "photo": "m3"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "5 ou 10 ? **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "5 ou 10 km, ça prend combien de temps ? Moins qu'une matinée de réunions.\n\nÀ allure tranquille, 5 km prennent entre 30 et 40 minutes, 10 km autour d'une heure. Et dans les deux cas, tout le monde se retrouve pour le même temps d'échange à la Plénitude Arena.\n\nTu pars sur 5 ou sur 10 ? Dis-le en commentaire.\n\n#runoninvest #course #entrepreneurs #independants #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#course",
+    "#entrepreneurs",
+    "#independants",
+    "#ladefense"
+  ],
+  "note": "Mars 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}

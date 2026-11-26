@@ -1,0 +1,58 @@
+{
+  "client": "run-on-invest",
+  "slug": "2027-03-31-trois-regles",
+  "archetype": "A1",
+  "pilier": "P2",
+  "date_time": "2027-03-31T08:00:00",
+  "cible": "Entrepreneurs et indépendants qui courent ou veulent s'y mettre, lassés des soirées réseau",
+  "sujet": "Les 3 règles de R.O.I.",
+  "slides": [
+    {
+      "kicker": "R.O.I.",
+      "title": "3 règles. Pas une de plus.",
+      "body": "Ce qui change **tout** par rapport à une soirée réseau.",
+      "photo": "ma8",
+      "cover": true
+    },
+    {
+      "kicker": "Règle 01",
+      "title": "L'effort crée le lien.",
+      "body": "On court **côte à côte** avant de parler.",
+      "photo": "m1"
+    },
+    {
+      "kicker": "Règle 02",
+      "title": "Zéro pitch.",
+      "body": "Personne ne vend. **Tout le monde écoute.**",
+      "photo": "fe1"
+    },
+    {
+      "kicker": "Règle 03",
+      "title": "La régularité paie.",
+      "body": "Une rencontre, c'est bien. **La revoir, c'est mieux.**",
+      "photo": "m8"
+    },
+    {
+      "kicker": "Le lieu",
+      "title": "La Défense, puis la Plénitude Arena.",
+      "body": "**5 ou 10 km** pour courir, un vrai temps pour parler.",
+      "photo": "m9"
+    },
+    {
+      "kicker": "La Défense",
+      "title": "Courir d'abord. Parler ensuite.",
+      "body": "Tu veux en être ? **Écris-nous en message privé.**",
+      "photo": "k",
+      "cta": true
+    }
+  ],
+  "caption": "Fin mars. Les saisons changent, nos règles non.\n\nL'effort crée le lien : on court côte à côte avant de parler. Zéro pitch : personne ne vend, tout le monde écoute. La régularité paie : une rencontre, c'est bien, la revoir, c'est mieux.\n\nOn court d'abord. On parle ensuite.\n\nTu veux en être ? Écris-nous en message privé pour être prévenu.\n\n#runoninvest #zeropitch #regularite #entrepreneurs #ladefense",
+  "hashtags": [
+    "#runoninvest",
+    "#zeropitch",
+    "#regularite",
+    "#entrepreneurs",
+    "#ladefense"
+  ],
+  "note": "Mars 2027, créé le 25/11/2026 en charte V3, photos du manifeste en N&B."
+}
