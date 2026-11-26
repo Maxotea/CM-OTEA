@@ -432,6 +432,10 @@ def couleurs(theme, opts):
         col["filet"] = base["accent"]
     if opts.get("souligne"):
         col["registre_actif"] = base["texte"]
+    if opts.get("accent_en_texte"):
+        col["phrase_accent"] = base["texte"]
+    if opts.get("souligne_en_texte") and "souligne" in col:
+        col["souligne"] = base["texte"]
     if opts.get("logo_couleur"):
         col["nom"] = opts["logo_couleur"]
     return base, col
@@ -527,6 +531,8 @@ def composer(photo, theme, carte, extra=None, decalage=0.5, visages=None, voile_
     logo, secours = charger_logo(st)
     opts = {"logo": logo, "souligne": bool(st.get("registre_souligne")), "logo_couleur": couleur_logo(logo)}
     fond = cadrer(photo, decalage, basse_definition)
+    if st.get("noir_et_blanc"):
+        fond = carrousel.noir_et_blanc(fond)
     base, col = couleurs(theme, opts)
     masq = masques(theme, carte, extra, opts)
     bande = controler_visages(masq, visages)
@@ -536,8 +542,19 @@ def composer(photo, theme, carte, extra=None, decalage=0.5, visages=None, voile_
     img, a_haut, a_bas, mes, manque = _voiler(fond, col, masq, base["voile"], bruit, voile_bas)
     # registre allumé à 4,5:1 : si l'accent n'y arrive pas même sous le voile maximal (grain
     # compris), il passe en couleur de texte, souligné de 3 px dans la couleur d'accent
-    if set(manque) == {"registre_actif"} and not opts["souligne"]:
-        opts["souligne"] = True
+    # Même logique pour les mots accentués de la phrase (charte V3 de R.O.I. : le Terracotta
+    # clair sur une photo très claire) : ils passent dans la couleur du texte.
+    # Le souligné lui-même, s'il ne tient pas 3:1, passe à son tour dans la couleur du texte.
+    replis = {"registre_actif": "souligne", "phrase_accent": "accent_en_texte",
+              "souligne": "souligne_en_texte"}
+    for _ in range(2):
+        if not manque or not set(manque) <= set(replis):
+            break
+        nouveaux = [replis[m] for m in manque if not opts.get(replis[m])]
+        if not nouveaux:
+            break
+        for cle in nouveaux:
+            opts[cle] = True
         base, col = couleurs(theme, opts)
         masq = masques(theme, carte, extra, opts)
         bande = controler_visages(masq, visages)

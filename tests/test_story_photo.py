@@ -155,8 +155,9 @@ def test_controle_des_frames_sous_le_voile_du_calque(rendu_sombre):
 
 
 def test_grain_mesure_et_registre_souligne_si_l_accent_ne_tient_pas():
-    """R.O.I. : grain 26 posé avant la mesure ; sur fond blanc, le Blaze ne tient pas 4,5:1 sur
-    le registre une fois le grain posé, l'élément allumé passe en Craie souligné de Blaze."""
+    """R.O.I. (charte V3) : grain 26 posé avant la mesure ; sur fond blanc, le Terracotta clair
+    ne tient pas 4,5:1 sur le registre une fois le grain posé : l'élément allumé passe en Craie
+    souligné de Terracotta, et les mots accentués de la phrase passent en Craie."""
     rendu = sp.composer(_uni(255), _theme("run-on-invest"), CARTE_ROI, visages=[])
     _toutes_les_cibles_tenues(rendu["mesures"])
     assert rendu["info"]["registre_souligne"] is True

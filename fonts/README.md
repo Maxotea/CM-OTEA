@@ -16,7 +16,10 @@ copiée telle quelle de `ofl/spacemono`.
 | `inter-display/` | `InterDisplay-Bold.ttf` | Inter, opsz 32, wght 700 | OTEA Production (phrase, titres) |
 | `archivo/` | `Archivo_Expanded-Black.ttf` | Archivo, wdth 125, wght 900 | Run On Invest (nom R.O.I., phrase, titres) |
 | `archivo/` | `Archivo-Regular.ttf` | Archivo, wdth 100, wght 400 | Run On Invest (corps des carrousels) |
-| `space-mono/` | `SpaceMono-Regular.ttf`, `SpaceMono-Bold.ttf` | statiques d'origine | Run On Invest (mention, registre, pied) |
+| `archivo/` | `Archivo-Medium.ttf` | Archivo, wdth 100, wght 500 | Run on Investment, charte V3 (texte) |
+| `archivo/` | `Archivo-SemiBold.ttf` | Archivo, wdth 100, wght 600 | Run on Investment, charte V3 (repères, registre et pied des stories) |
+| `archivo/` | `Archivo-Black.ttf` | Archivo, wdth 100, wght 900 | Run on Investment, charte V3 (réserve) |
+| `space-mono/` | `SpaceMono-Regular.ttf`, `SpaceMono-Bold.ttf` | statiques d'origine | Run On Invest, kit V2.1 seulement (retirée par la charte V3 du 19/11/2026) |
 | `fraunces/` | `Fraunces-SemiBold.ttf` | Fraunces, opsz 100, wght 600, SOFT 0, WONK 0 | Pierre Huiban (sous-titres du gabarit `monologue` de `pierre-reel-ralenti.py`) |
 | `fraunces/` | `Fraunces-Regular.ttf` | Fraunces, opsz 100, wght 400, SOFT 0, WONK 0 | Pierre Huiban (phrases du gabarit `reel` de `pierre-reel-ralenti.py`, à défaut d'une Fraunces-Regular dans `--polices`) |
 
@@ -36,3 +39,6 @@ listes de `scripts/themes.json`.
 
 Ne pas ajouter `Archivo_Expanded-Regular.ttf` : le corps R.O.I. est en Archivo 400 normal (kit
 V2.1), et sa présence ferait choisir l'Expanded Regular au corps des carrousels.
+
+Archivo 500, 600 et 900 (26/11/2026) : instances statiques servies par Google Fonts
+(`fonts.googleapis.com/css2?family=Archivo:wght@500|600|900`), même licence OFL.

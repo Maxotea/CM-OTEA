@@ -1,4 +1,54 @@
-# Run On Invest (R.O.I.) — fiche client (onboardé 03/08/2026)
+# Run on Investment (R.O.I.), fiche client (onboardé 03/08/2026)
+
+## 🎨 CHARTE V3 · logo déposé à l'INPI (validée le 19/11/2026)
+
+**Elle remplace le kit V2.1 du 03/08/2026 sur tous les canaux (Instagram ET LinkedIn).** Le
+nom officiel est **Run on Investment** (jamais « Run on Invest ») ; dans les textes on écrit
+« R.O.I. ». Marque figurative déposée à l'INPI par Elodie Pereira avec « RUN ON INVESTMENT »
+sous les lettres (version du 23/11/2026).
+
+- **Sources officielles** : `assets/run-on-invest/charte-v3/source/` (PDF de la charte, logo
+  vectoriel `ROI_logo_3points_NB.svg`, version déposée `ROI_logo_depose_INPI.jpg`). On ne
+  redessine jamais le logo : on recolore ces fichiers.
+- **Kit prêt à l'emploi** : `assets/run-on-invest/charte-v3/` (logos Encre, Craie, Terracotta,
+  symbole de la piste, avatars Instagram et LinkedIn, bannières LinkedIn page et profil,
+  gabarits feed, story, post LinkedIn, couvertures des stories à la une). Régénérer avec
+  `python3 scripts/roi-charte.py`.
+- **Logo** : un R, une piste d'athlétisme vue du ciel (trois couloirs), un I, trois points.
+  Trois couleurs possibles (Terracotta, Encre, Craie). Jamais déformé, jamais d'ombre, jamais
+  sur une photo sans voile. Sous 120 px de large, la piste devient pleine. Marge de protection :
+  la largeur du I.
+- **Couleurs** : Terracotta `#B5412B` (50 %, la couleur de la marque, en grands aplats) ·
+  Encre `#111111` (30 %) · Craie `#EFEDE8` (15 %) · Béton `#8C877E` (5 %). Sur fond Encre ou
+  photo voilée, Terracotta clair `#D9573C`. Texte Craie sur Terracotta, **jamais de texte
+  Encre sur Terracotta**.
+- **Typographie** : Archivo seule. Titres en Archivo Expanded Black, capitales, interlettrage
+  −3,5 %. Texte en Archivo 400/500. Repères (horaires, distances, lieux) en Archivo 600,
+  capitales espacées. **La Space Mono est retirée.**
+- **Photo** : noir et blanc contrasté, grain, contre-jour, silhouettes, gens de dos. La seule
+  couleur d'une image R.O.I. est le Terracotta. Avant la première édition : images générées,
+  aucune personne identifiable, mention « contenu IA » sur Instagram.
+- **Système** : les couloirs (la forme de la piste debout) servent de cadre aux photos ; trois
+  couloirs côte à côte disent courir, parler, investir.
+- **Ton** : signature en anglais *We run. We talk. We invest.* (piliers : l'effort crée le lien
+  · zéro pitch · la régularité paie), légendes en français, tutoiement, un emoji maximum, cinq
+  hashtags maximum.
+- **Moteurs du dépôt** : le thème `run-on-invest` de `scripts/themes.json` est passé en V3
+  (fond Encre, accent Terracotta clair, bouton Terracotta, réseaux Instagram et LinkedIn,
+  photos passées en noir et blanc par `noir_et_blanc`, logo officiel dans les stories,
+  pied « RUN ON INVESTMENT »). `scripts/roi-visuels.py` et `scripts/roi-photo-habillage.py`
+  restent en V2.1 pour l'historique : ne plus s'en servir pour un nouveau visuel.
+
+### Ce qu'on peut dire (charte, section 08)
+| Sujet | Statut |
+|---|---|
+| Lieu : course à La Défense, échange à la Plénitude Arena | publiable depuis le 04/08/2026 |
+| Dates, horaires, jauge, prix, fréquence, lien d'inscription | verrouillé, placeholder `[À CONFIRMER : …]` |
+| Partenaires en négociation (« Projet Foulée ») | rien tant que ce n'est pas signé et validé |
+| Nouveau logo et signature | **publiables** : le logo est déposé à l'INPI (23/11/2026) |
+
+> Tout ce qui suit sur la DA (Blaze, Écru, Space Mono, barre Blaze 8 px) décrit l'**ancien
+> kit V2.1** et n'est conservé que pour l'historique des brouillons déjà créés.
 
 ## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
 
@@ -26,7 +76,7 @@ posée dans Instagram. On continue de tout créer en brouillon.
 - **Interdits** : « networking premium », « écosystème », « disruptif », vocabulaire de club fermé, promesses de business, jargon sportif d'initié (VMA, seuil, fractionné), vouvoiement.
 - Exemple validé à imiter : « Samedi, 8h30. 5 ou 10 km. Puis un petit-déj où personne ne pitche. 30 places, c'est tout. »
 
-## DA (typographique par design — les cartes typo sont l'identité, pas un pis-aller)
+## DA du kit V2.1 (ANCIENNE, remplacée par la charte V3 ci-dessus)
 - Couleurs : Blaze `#FF4A17` (accent unique) · Encre `#111111` · Écru `#EDE7DD` (fond défaut) · Craie `#F7F4EF` · Béton `#8C877E` · Braise `#D93A0E` (rare). Équilibre 55 % Écru / 30 % Encre / 15 % Blaze.
 - 3 familles de visuels jamais mélangées : fond Écru / fond Encre / aplat Blaze.
 - Contraste : jamais de Blaze en petit corps sur Écru ; l'orange = aplat, gros titre ≥40 px, ou texte sur Encre.

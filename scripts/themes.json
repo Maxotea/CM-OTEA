@@ -281,15 +281,16 @@
   "run-on-invest": {
     "nom": "Run On Invest",
     "networks": [
-      "instagram"
+      "instagram",
+      "linkedin"
     ],
     "heure": "08:00",
-    "bg": "#EDE7DD",
-    "fg": "#111111",
+    "bg": "#111111",
+    "fg": "#EFEDE8",
     "muted": "#8C877E",
-    "accent": "#FF4A17",
-    "cta_bg": "#FF4A17",
-    "cta_fg": "#111111",
+    "accent": "#D9573C",
+    "cta_bg": "#B5412B",
+    "cta_fg": "#EFEDE8",
     "font_family": [
       "Archivo Expanded",
       "Archivo",
@@ -298,17 +299,18 @@
     ],
     "uppercase_titles": true,
     "rule": true,
-    "note": "Kit V2.1 : Blaze #FF4A17 (accent unique), Encre #111111, Écru #EDE7DD, Craie #F7F4EF, Béton #8C877E. Titres en Archivo Expanded Black (fonts/archivo/Archivo_Expanded-Black.ttf), corps en Archivo 400 normal (Archivo-Regular.ttf) : Archivo_Expanded-Regular est volontairement absent de fonts/. Seul compte autorisé aux photos IA (Maxime, 04/08/2026), JAMAIS de personne identifiable. Compte en brouillon : rien ne part sans validation explicite de Maxime.",
+    "note": "Charte V3, validée le 19/11/2026, logo déposé à l'INPI (version avec RUN ON INVESTMENT, 23/11/2026) : Terracotta #B5412B (couleur de la marque, grands aplats), Encre #111111, Craie #EFEDE8, Béton #8C877E ; Terracotta clair #D9573C seulement sur fond Encre ou sur photo voilée. Jamais de texte Encre sur Terracotta. Une seule typographie, Archivo : titres en Archivo Expanded Black (fonts/archivo/Archivo_Expanded-Black.ttf), texte en Archivo 400/500, repères en Archivo 600 (Archivo-SemiBold.ttf). La Space Mono du kit V2.1 est retirée. Photos en noir et blanc contrasté, la seule couleur est le Terracotta. Kit de marque : assets/run-on-invest/charte-v3/ (scripts/roi-charte.py). Images générées tant qu'aucune édition n'a eu lieu, JAMAIS de personne identifiable.",
     "fond": {
       "manifeste": "photos/run-on-invest.json",
       "cache": "medias/run-on-invest/fonds",
-      "texte": "#F7F4EF",
-      "muted": "#EDE7DD",
-      "accent": "#FF4A17",
+      "texte": "#EFEDE8",
+      "muted": "#EFEDE8",
+      "accent": "#D9573C",
       "voile": "#111111",
       "contraste_titre": 7.0,
       "contraste_corps": 4.5,
-      "_doc": "Photo IA ultra réaliste (La Défense au petit matin, coureurs de dos ou en plan large) sous la DA du kit. Manifeste : provenance ia, champ autorisation, personne_identifiable false vérifié à l'œil. Photo sur chaque slide, jamais d'aplat, jamais photo et aplat dans un même carrousel."
+      "_doc": "Photo générée (La Défense au petit matin, coureurs de dos ou en plan large), passée en noir et blanc contrasté sous un voile Encre, comme le demande la charte V3. Manifeste : provenance ia, champ autorisation, personne_identifiable false vérifié à l'œil. Photo sur chaque slide, jamais photo et aplat dans un même carrousel.",
+      "noir_et_blanc": true
     },
     "story": {
       "nom": "R.O.I.",
@@ -319,10 +321,10 @@
         "LA RÉGULARITÉ PAIE"
       ],
       "registre_source": "fiche run-on-invest.md, les 3 piliers",
-      "pied": "COURSE & NETWORKING · ENTREPRENEURS",
-      "pied_source": "descripteur verrouillé au logo ; le kit l'écrit avec un tiret cadratin, remplacé par un point médian",
-      "signature": "COURIR D'ABORD. PARLER ENSUITE.",
-      "signature_source": "fiche ; la légende garde « On court d'abord. On parle ensuite. »",
+      "pied": "RUN ON INVESTMENT",
+      "pied_source": "nom déplié sous le logo déposé à l'INPI (23/11/2026)",
+      "signature": "WE RUN. WE TALK. WE INVEST.",
+      "signature_source": "charte V3 du 19/11/2026 : la signature en anglais, les légendes en français",
       "casse_phrase": "upper",
       "polices": {
         "nom": [
@@ -332,10 +334,10 @@
           "Archivo Expanded Black"
         ],
         "label": [
-          "Space Mono Bold"
+          "Archivo SemiBold"
         ],
         "mono": [
-          "Space Mono Regular"
+          "Archivo SemiBold"
         ]
       },
       "tracking_nom": -0.8,
@@ -351,7 +353,13 @@
       "cache": "medias/run-on-invest/originaux",
       "photos_ia_autorisees": true,
       "photos_ia_source": "Maxime, 04/08/2026 : seul compte autorisé aux images IA, faute de banque photo ; jamais une personne identifiable",
-      "_doc": "R.O.I. en Archivo Expanded Black (tracking -0,8 px, les -3,5 % du kit à 24 px). Grain 26 posé avant la mesure. cache : originaux IA téléchargés depuis url_originale du manifeste."
+      "_doc": "R.O.I. en Archivo Expanded Black (tracking -0,8 px, les -3,5 % du kit à 24 px). Grain 26 posé avant la mesure. cache : originaux IA téléchargés depuis url_originale du manifeste.",
+      "noir_et_blanc": true,
+      "logo": {
+        "fichier": "assets/run-on-invest/charte-v3/logos/ROI-logo-craie.png",
+        "hauteur": 34,
+        "_doc": "logo officiel V3 (R, piste, I, trois points) recoloré en Craie par scripts/roi-charte.py depuis le SVG déposé"
+      }
     }
   }
 }

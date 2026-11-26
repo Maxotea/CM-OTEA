@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import credits  # noqa: E402
 
 try:
-    from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    from PIL import ImageOps, Image, ImageDraw, ImageFilter, ImageFont
 except ImportError:
     sys.exit("Pillow manquant : pip install pillow")
 
@@ -209,7 +209,18 @@ def charger_fond(conf, photo, slug):
     else:
         ch = int(lw * H / W)
         img = img.crop((0, (lh - ch) // 2, lw, (lh - ch) // 2 + ch))
-    return img.resize((W, H), Image.LANCZOS)
+    img = img.resize((W, H), Image.LANCZOS)
+    if conf.get("noir_et_blanc"):
+        img = noir_et_blanc(img)
+    return img
+
+
+def noir_et_blanc(img):
+    """Noir et blanc contrasté (charte V3 de Run on Investment : la seule couleur d'une image
+    est celle de la marque). Courbe en S douce ancrée sur le gris moyen."""
+    gris = ImageOps.autocontrast(ImageOps.grayscale(img), cutoff=1)
+    courbe = [round(255 * (3 * (i / 255) ** 2 - 2 * (i / 255) ** 3)) for i in range(256)]
+    return gris.point(courbe).convert("RGB")
 
 
 def poser_voile(img, boite, alpha, voile):

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Run On Invest — habillage typographique par-dessus une photo IA.
+"""⚠️ ANCIEN KIT V2.1 : remplacé le 19/11/2026 par la charte V3 (Terracotta, Archivo seule,
+photos en noir et blanc). Pour tout nouveau visuel : scripts/roi-charte.py et le thème
+run-on-invest de scripts/themes.json. Ce fichier reste pour l'historique.
+
+Run On Invest — habillage typographique par-dessus une photo IA.
 
 Complète `roi-visuels.py` (cartes 100 % typographiques). Ici la DA du kit V2.1
 est posée sur une photo IA ultra réaliste, autorisée par Maxime le 04/08/2026

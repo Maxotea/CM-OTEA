@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Visuels Run On Invest — DA typographique du kit V2.1.
+"""⚠️ ANCIEN KIT V2.1 : remplacé le 19/11/2026 par la charte V3 (Terracotta, Archivo seule,
+photos en noir et blanc). Pour tout nouveau visuel : scripts/roi-charte.py et le thème
+run-on-invest de scripts/themes.json. Ce fichier reste pour l'historique.
+
+Visuels Run On Invest — DA typographique du kit V2.1.
 
 ⚠️ RÈGLE DU 04/08/2026 : les stories partent MUETTES. `wav()` et le `-map 1:a`
    de `build()` sont conservés pour l'historique et pour d'éventuels formats
