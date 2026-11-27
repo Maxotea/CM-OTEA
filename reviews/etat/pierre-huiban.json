@@ -541,6 +541,78 @@
       "type": "Post",
       "resultat": "publication programmée (version 443185748)",
       "post_id": 443185748
+    },
+    "2026-11-29T06:00:00|443431642": {
+      "quand": "2026-11-27T00:43:24",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804078)",
+      "post_id": 443804078
+    },
+    "2026-11-30T06:00:00|443431668": {
+      "quand": "2026-11-27T00:43:25",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804084)",
+      "post_id": 443804084
+    },
+    "2026-11-28T09:00:00|443431704": {
+      "quand": "2026-11-27T00:43:26",
+      "type": "Post",
+      "resultat": "publication programmée (version 443804093)",
+      "post_id": 443804093
+    },
+    "2026-12-02T06:00:00|443431718": {
+      "quand": "2026-11-27T00:43:27",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804102)",
+      "post_id": 443804102
+    },
+    "2026-12-03T06:00:00|443431743": {
+      "quand": "2026-11-27T00:43:29",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804112)",
+      "post_id": 443804112
+    },
+    "2026-12-04T06:00:00|443431773": {
+      "quand": "2026-11-27T00:43:30",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804124)",
+      "post_id": 443804124
+    },
+    "2026-12-05T06:00:00|443431788": {
+      "quand": "2026-11-27T00:43:31",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804140)",
+      "post_id": 443804140
+    },
+    "2026-12-06T06:00:00|443431814": {
+      "quand": "2026-11-27T00:43:32",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804152)",
+      "post_id": 443804152
+    },
+    "2026-12-09T18:00:00|443431835": {
+      "quand": "2026-11-27T00:43:33",
+      "type": "Post",
+      "resultat": "publication programmée (version 443804173)",
+      "post_id": 443804173
+    },
+    "2026-11-27T06:00:00|443449264": {
+      "quand": "2026-11-27T00:43:34",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804192)",
+      "post_id": 443804192
+    },
+    "2026-11-28T06:00:00|443449302": {
+      "quand": "2026-11-27T00:43:35",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804203)",
+      "post_id": 443804203
+    },
+    "2026-12-01T06:00:00|443449328": {
+      "quand": "2026-11-27T00:43:36",
+      "type": "Story",
+      "resultat": "publication programmée (version 443804216)",
+      "post_id": 443804216
     }
   }
 }
