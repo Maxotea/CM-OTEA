@@ -100,6 +100,7 @@ posée dans Instagram. On continue de tout créer en brouillon.
 > Tout contenu doit le respecter à la lettre. Cette fiche n'en est que le résumé opérationnel.
 
 ## Identité
+- **Nom complet : Run On Investment** (sigle R.O.I.), confirmé par Maxime le 27/11/2026. « Run On Invest » est une erreur : ne plus l'écrire, sauf dans le handle Instagram @runoninvest, qui ne change pas. Le logo déposé à l'INPI porte « RUN ON INVESTMENT » sous les lettres, dans l'image (marque figurative, demande d'Elodie Pereira du 19/11/2026).
 - blogId Metricool : **6636615** (l'ancien « brand sans nom » de la passation — mystère résolu)
 - Réseaux : Instagram (@runoninvest) et page LinkedIn connectés ; plus rien sur LinkedIn depuis le 12/10/2026. Logo posé dans Metricool en août (ancien logo : à changer après le dépôt INPI).
 - Concept : course + rencontre **réservée aux entrepreneurs et indépendants** — 5 ou 10 km à son rythme, puis un vrai temps d'échange. Ni club de running, ni afterwork.
