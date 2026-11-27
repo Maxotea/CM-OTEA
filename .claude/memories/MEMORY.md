@@ -2,7 +2,7 @@
 
 - [Héberger photos réelles pour Metricool](hebergement-photos-reelles-metricool.md) : pipeline media_upload → PUT → media_confirm pour attacher de vraies photos (pas que de l'IA)
 - [Bulk stories Metricool](bulk-schedule-stories-metricool.md) : code action sur mesure : stories en masse, brouillon + média, heure Paris exacte (pas de bug +7h)
-- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish, sauf relève auto d'OTEA Production, Otea Filmakers (07/10), Pierre Huiban et Run On Invest (21/10)
+- [Autonomie décisions CM](autonomie-decisions-cm.md) : trancher sans demander, rendre compte à la fin ; MAIS toujours en brouillon, jamais d'autoPublish, sauf relève auto d'OTEA Production, Otea Filmakers (07/10), Run On Invest (21/10) ; Pierre Huiban en OFF total depuis le 26/11
 - [Charte Otea Production](otea-brand-identity.md) : Palette (#FF5800), police Forma DJR, monogramme koru, emplacements des assets
 - [Stories : vraies photos du client](stories-vraies-photos-sans-ia.md) : animer LEURS photos en i2v (méthode standard, tous comptes) ; images 100 % IA interdites sur un compte qui a des photos ; jamais le visage d'une personne réelle
 - [Story vidéo plein cadre](story-video-plein-cadre.md) : process validé par Maxime le 28/08/2026 : crop 9:16 PIL → i2v caméra verrouillée → plein cadre 1080×1920 → texte en overlay → muette → brouillon

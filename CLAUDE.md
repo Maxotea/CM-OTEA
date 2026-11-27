@@ -81,8 +81,9 @@ versionnées dans `.claude/memories/` pour survivre à tout changement de poste.
    jamais `autoPublish`). Maxime valide lui-même dans l'interface. Toute code
    action qui crée du contenu doit vérifier le `draft` après création.
    Exceptions : OTEA Production et Otea Filmakers (07/10/2026), dont Maxime
-   est le client, puis Pierre Huiban et Run On Invest (21/10/2026, décision
-   de Maxime : Pierre ne validait pas). Le contenu y est créé en brouillon,
+   est le client, puis Run On Invest (21/10/2026). Pierre Huiban, passé en
+   automatique le 21/10, est en OFF total depuis le 26/11/2026 : plus rien
+   ne se crée ni ne se publie sur son compte. Le contenu y est créé en brouillon,
    puis la relève GitHub le passe en publication automatique
    (`validation_auto`). Run On Invest porte `contenu_ia` : la mention
    « contenu IA » d'Instagram est cochée d'office.

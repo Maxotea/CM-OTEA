@@ -388,5 +388,5 @@ def test_dimensions_image_lit_un_fichier_local(tmp_path):
 
 def test_comptes_auto_hors_du_circuit_des_tableaux():
     auto = {c["slug"] for c in review.comptes_auto()}
-    assert auto == {"otea-production", "otea-filmakers", "pierre-huiban", "run-on-invest"}
+    assert auto == {"otea-production", "otea-filmakers", "run-on-invest"}  # Pierre Huiban en OFF total le 26/11/2026
     assert not auto & {c["slug"] for c in review.charger_comptes()}
