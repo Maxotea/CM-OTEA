@@ -16,6 +16,8 @@ Le user ne veut plus être interrompu par des questions pendant le travail de co
 
 **Seule exception accordée (07/10/2026) : OTEA Production et Otea Filmakers**, les deux comptes dont Maxime est lui-même le client (« tu peux considérer que c'est validé à chaque fois, car c'est moi », puis choix explicite « publication auto »). On continue de créer en brouillon ; c'est la relève GitHub (`scripts/review.py`, `validation_auto` dans `reviews/config.json`) qui passe en publication les brouillons des 14 jours à venir, avec les garde-fous de la review (média présent, pas de placeholder, pas de tiret cadratin dans une légende). Tous les autres comptes restent en brouillon strict.
 
+**⛔ Pierre Huiban en OFF total depuis le 26/11/2026** (Maxime : « ne fait rien sur le compte de Pierre », « on le met en OFF total ») : `validation_auto: false`, plus aucune production ni publication. Le paragraphe ci-dessous ne vaut plus que pour Run On Invest.
+
 **Extension du 21/10/2026 : Pierre Huiban et Run On Invest.** Maxime : « on va faire l'automatisation des postes avec Pierre parce qu'il ne les valide pas […] on va les publier », puis « Oui, passe R.O.I. en auto ». Même mécanique (`validation_auto: true`), mêmes garde-fous, plus deux nouveaux :
 - un **reel Instagram** sort du brouillon en **mode notification** (`draft:false`, `autoPublish:false`) : Metricool notifie Maxime à l'heure prévue, il pose la musique dans Instagram et publie ([[reels-musique-instagram]]) ;
 - une **image de feed hors 4:5 à 1.91:1** est retenue (Instagram la refuserait ou la rognerait).

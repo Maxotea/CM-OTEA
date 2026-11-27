@@ -1,5 +1,20 @@
 # Pierre Huiban — fiche d'onboarding
 
+> ## ⛔ OFF TOTAL — 26/11/2026
+>
+> Maxime : « ne fait rien sur le compte de Pierre », « on le met en OFF total ». Ne plus
+> produire, ne plus programmer, ne plus brancher de média, ne rien toucher sur son compte
+> Instagram (bio, épingles, archives compris). Publication automatique coupée
+> (`reviews/config.json` : `validation_auto: false`), récap et détection de médias coupés
+> (`recaps/clients-config.json`). Le 26/11, les posts armés dans Metricool ont été repassés
+> en brouillon (rien supprimé) ; le plan feed du même jour ne s'applique pas à ce compte.
+
+## Feed (audit du 26/11/2026)
+- Le plus solide des comptes. Les posts en collaboration (TEAM FPX, Julie, Christophe Poupet) ont
+  des couvertures qu'on ne choisit pas : la case TEAM FPX montre une autre athlète.
+- `scripts/themes.json` décrit encore « Pitch Black + Rouge Sang », remplacée par la DA « trois vies »
+  le 05/10 : à aligner avant le prochain carrousel passé par `carrousel.py`.
+
 ## ⚙️ PUBLICATION AUTOMATIQUE · 21/10/2026 (décision Maxime)
 
 « On va faire l'automatisation des postes avec Pierre parce qu'il ne les valide pas […]
