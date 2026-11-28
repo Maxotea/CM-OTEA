@@ -41,6 +41,11 @@ l'avoir relue.
 | `cm-metricool` | planifier, programmer, calendrier éditorial, événement du secteur, Metricool, un compte client |
 | `cm-meta-ads` | campagne, pub, sponsoriser ou booster un post, budget publicitaire, Ads Manager, audience, coût par prospect, ROAS |
 | `cm-hyrox` | client athlète HYROX ou hybride, Pierre Huiban, une course, dossier de sponsoring, offre « CM athlète » (importé de CM-BTOC le 19/10/2026) |
+| `video-en-code` | une animation, un habillage, un titre ou un graphique animé « en code », sans outil nommé : il choisit entre Remotion, HyperFrames, Motion Canvas et Manim (installés le 26/11/2026) |
+| `remotion-best-practices` | Remotion (habillage de reel, sous-titres animés, gabarits, rendu en série) |
+| `hyperframes`, `hyperframes-cli`, `hyperframes-registry` | HyperFrames (page HTML animée rendue en vidéo). Copies adaptées : pas de télémétrie, rendu en local, voir `.claude/skills/video-en-code/ORIGINE.md` |
+| `motion-canvas` | Motion Canvas (schéma ou explication pas à pas, calée sur une voix) |
+| `manim` | Manim (chiffres, courbes, formules animés) |
 
 Les six cadres SOCIAL MEDIA CEO (`smc-ceo-day`, `smc-client`, `smc-contenu`, `smc-kpi-review`,
 `smc-ops-finance`, `smc-veille`) ne sont plus des skills de ce dépôt depuis le 19/10/2026 : ils

@@ -14,3 +14,10 @@ o/*
 
 # fichiers de charte des clients (logos, polices), téléchargés sur le Mac
 projets/*/charte/
+
+# Projets de vidéo en code : dépendances et rendus hors de git
+video-code/**/node_modules/
+video-code/**/out/
+video-code/**/output/
+video-code/**/media/
+video-code/**/renders/
