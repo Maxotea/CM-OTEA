@@ -373,6 +373,12 @@
       "type": "Reel",
       "resultat": "notification programmée, musique à poser dans Instagram (version 442920722)",
       "post_id": 442920722
+    },
+    "2026-12-11T18:00:00|440581583": {
+      "quand": "2026-11-28T00:10:19",
+      "type": "Carrousel (5 visuels)",
+      "resultat": "publication programmée (version 445009675)",
+      "post_id": 445009675
     }
   }
 }
