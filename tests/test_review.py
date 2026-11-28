@@ -61,6 +61,8 @@ def test_reseaux_du_abrege_et_tolere_l_inconnu():
     ("Résultat : [À COMPLÉTER]", True),
     ("[STAT] % des golfeurs", True),
     ("un [lien] en minuscules n'est pas un placeholder", False),
+    ("Photos : [crédit du photographe]", True),
+    ("[Une phrase sur le voyage : à compléter]", True),
     ("aucun crochet ici", False),
     ("", False),
 ])
